@@ -1,0 +1,359 @@
+[
+  {
+    "id": "THY-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2, Physics > 'Why Do Balloons Fly?' (p. 2-2): buoyant force equals weight of displaced fluid; heated air less dense."
+  },
+  {
+    "id": "THY-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 Straight & Level Flight (p. 7-3: 'higher ambient temperature... require more fuel'); Ch. 3 Cold Weather Flying (p. 3-13: less fuel in cold weather); Ch. 2 Physics."
+  },
+  {
+    "id": "THY-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Performance Planning (p. 3-11: 'as a balloon gains altitude, it loses capacity'; Fig. 3-13 nomogram)."
+  },
+  {
+    "id": "THY-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Performance Planning (p. 3-11: density altitude affects lift capacity and heater performance, 4%/1,000 ft); FAA-H-8083-25C Pilot's Handbook of Aeronautical Knowledge Ch. 4 Density Altitude (p. 4-4)."
+  },
+  {
+    "id": "THY-005",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Performance Planning (p. 3-11: 4%/1,000 ft, 88% at 3,000 ft, 'due to the loss of the partial pressure of oxygen'); Ch. 2 Heater System (p. 2-8); Fig. 2-11 Propane Primer (tank pressure set by liquid temperature)."
+  },
+  {
+    "id": "THY-006",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Performance Planning (p. 3-10: useful lift = max allowable gross weight minus empty weight, includes fuel). Arithmetic checked: 1,600-590=1,010; 3x15x4.2=189; 1,010-189=821; 947=1,010-63 (one tank)."
+  },
+  {
+    "id": "THY-007",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 31.14(b)-(c) and 31.81(a)(1) (ecfr.gov: maximum weight is an operating limitation furnished in the flight manual/placard); 14 CFR 91.9(a); FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Performance Planning (p. 3-10)."
+  },
+  {
+    "id": "THY-008",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 31.81(a)(1),(b) and 31.49(e) (ecfr.gov: envelope temperature indicator marked with the limiting safe temperature of the envelope material); FAA-H-8083-11B Balloon Flying Handbook Glossary 'Limitations' (maximum envelope temperature) and Ch. 3 p. 3-13 (250 F max continuous for most balloons)."
+  },
+  {
+    "id": "THY-009",
+    "verdict": "fix",
+    "issue": "Keyed answer is sound but cannot be verified in any FAA handbook: the BFH never describes a temperature flag (its glossary covers only a 'temperature recorder' laminate). Manufacturer documents back it up; for example, a Kubicek service bulletin says the balloon may be flown until the temperature streamer drops, after which an envelope overheat inspection is required before further flight. Problems: (1) the ref 14 CFR 31.85(b)(2) names the required envelope temperature indicator, not a maximum-temperature device; 31.49(e) ('means to indicate the maximum envelope skin temperatures occurring') is the section that fits; (2) the stem gives the answer away by explaining that the flag is held by a fusible link; (3) the explanation still carries a 'CHECK:' drafting note.",
+    "suggested": "Change ref to '14 CFR 31.49(e); balloon flight manual / manufacturer maintenance manual (envelope overheat inspection)'. Reword stem to: 'During flight, the pilot notices that the envelope's temperature flag has dropped into the mouth. What does this indicate?' (drop 'held near the crown by a fusible link'). Keep answer 2. Remove the CHECK note from the explanation. Consider setting confidence to medium, since the source is a manufacturer manual, not FAA.",
+    "source": "14 CFR 31.49(e) and 31.85(b) (ecfr.gov); FAA-H-8083-11B Balloon Flying Handbook Glossary ('Temperature gauge', 'Temperature recorder'); Kubicek Balloons tempilabel service bulletin bb55 (kubicekballoons.com) for streamer-drop and overheat inspection."
+  },
+  {
+    "id": "THY-010",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 Straight & Level Flight (p. 7-3: 'For every altitude, there is an equilibrium temperature... 500 feet MSL... 1,000 feet MSL... excess temperature... to overcome inertia')."
+  },
+  {
+    "id": "THY-011",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Uncommanded (False) Lift > False Lift (pp. 6-19 to 6-20, Fig. 6-16)."
+  },
+  {
+    "id": "THY-012",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 False Heavy (Downward Lift) and Diminished Capacity (pp. 6-20 to 6-22: 'descending into a faster moving air mass... downward component'; 'add heat to slow the descent')."
+  },
+  {
+    "id": "THY-013",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Diminished Capacity (pp. 6-21 to 6-22: dish 'very dangerous to the low level flight of a fully loaded balloon'; heavily loaded burn adds only a small percentage of heat)."
+  },
+  {
+    "id": "THY-014",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Performance Planning/Fuel Planning (p. 6-4); Ch. 8 Some Basic Rules of Landing (p. 8-6: fuel for more approaches); Ch. 2 Instruments (p. 2-9: gauges do not read 0-100%). Arithmetic: 45 gal x 0.7 = 31.5 gal / 18 gph = 1.75 h."
+  },
+  {
+    "id": "THY-015",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 The Standard Atmosphere (p. 4-2: 15 C, 2 C per 1,000 ft); Ch. 4 Atmospheric Stability (dry adiabatic 3 C/1,000 ft); FAA-H-8083-25C Pilot's Handbook of Aeronautical Knowledge Ch. 12 (2 C / 3.5 F per 1,000 ft)."
+  },
+  {
+    "id": "THY-016",
+    "verdict": "fix",
+    "issue": "Keyed answer (descend) matches BFH Ch. 2 Physics ('some dark colored envelopes may gain heat from the sun'), but the BFH also says in Ch. 7 Straight & Level Flight that a 'sunny day' requires MORE fuel to hold level flight. A student who reads that could argue that shade lowers the heat demand, which points toward choice 0. The stem doesn't say why sunlight matters, and the ref (Ch. 2 'Why Do Balloons Fly?') is one paragraph off; the solar-gain sentence is in the next paragraph of the Physics section.",
+    "suggested": "Anchor the stem to the solar-gain mechanism, for example: 'A balloon with a dark envelope has been absorbing heat from bright sunshine while flying level. A large cloud drifts over and shades the envelope...'. Keep answer 2. Change ref to 'FAA-H-8083-11B Ch. 2, Physics (p. 2-3, para. on heat loss/solar gain)'.",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2 Physics (p. 2-3: dark envelopes may gain heat from the sun) vs Ch. 7 Straight & Level Flight (p. 7-3: 'sunny day all require more fuel')."
+  },
+  {
+    "id": "THY-017",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2 Physics (lift from heat differential); Ch. 4 Temperature Variation with Altitude (p. 4-4: inversion, temperature increases with height)."
+  },
+  {
+    "id": "THY-018",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 Rapid/Steep Descents (p. 7-6, Fig. 7-6: from 1,500 ft AGL, >500 fpm at Point B, standard burn 'as the air passing over the envelope fabric accelerates cooling'; long burn at Point C)."
+  },
+  {
+    "id": "WXT-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Weather, weather-related tips (p. 3-3: fly within first two hours after sunrise to avoid unstable conditions; late afternoon within an hour or two of sunset when thermals calm and winds decrease); Ch. 3 tips on wet envelopes."
+  },
+  {
+    "id": "WXT-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Temperature Variation with Altitude (p. 4-4); FAA-H-8083-28B Aviation Weather Handbook 5.8.3 Temperature Inversion ('surface-based inversion typically develops over land on clear nights when wind is light')."
+  },
+  {
+    "id": "WXT-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Weather Hazards > Wind Shear (calm cold valley air overlain by warmer moving air; narrow very turbulent layer; changes in lift); FAA-H-8083-28B Aviation Weather Handbook 19.2.3.1 Temperature Inversion."
+  },
+  {
+    "id": "WXT-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Types of Stability (absolute stability = lapse rate less than moist adiabatic rate); FAA-H-8083-28B Aviation Weather Handbook 13.3.1 Absolute Stability."
+  },
+  {
+    "id": "WXT-005",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Some Fog Types > Radiation fog (clear sky, narrow spread, wind less than 7 kt); FAA-H-8083-28B Aviation Weather Handbook 18.1.1.1.1 Radiation Fog."
+  },
+  {
+    "id": "WXT-006",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Some Fog Types > Advection fog ('may then persist during the day or with a wind speed of 10 to 15 knots'); steam fog definition same section; FAA-H-8083-28B Aviation Weather Handbook 18.1.1.1.2 Advection Fog."
+  },
+  {
+    "id": "WXT-007",
+    "verdict": "fix",
+    "issue": "Answer correct (BFH: fog most frequent when spread is less than 1.1 C; AWH: minimum surface temperature usually occurs shortly after sunrise). Two problems: (1) the ref 'Ch. 4 (Temperature Variations; Fog Formation)' points at a section that doesn't exist; the correct headings are 'Temperature/Dew Point Relationship' and 'Fog Formation'; (2) the explanation says the minimum temperature 'often comes up to an hour after sunrise', which no public source states; AWH says only 'shortly after sunrise'.",
+    "suggested": "Ref: 'FAA-H-8083-11B Ch. 4 (Temperature/Dew Point Relationship; Fog Formation); FAA-H-8083-28B Ch. 5 (diurnal temperature variation: minimum shortly after sunrise)'. Change the explanation to 'the day's minimum temperature usually occurs shortly after sunrise'.",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Fog Formation (p. 4-19/4-20: 'most frequent when the spread is less than 1.1 C'); FAA-H-8083-28B Aviation Weather Handbook Ch. 5 diurnal temperature section ('Minimum surface air temperature usually occurs shortly after sunrise')."
+  },
+  {
+    "id": "WXT-008",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Stages in Thunderstorm Development > Mature Stage ('formation of a downdraft and the beginning of surface rain... initiates the mature stage'); FAA-H-8083-28B Aviation Weather Handbook 22.3 Thunderstorm Cell Life Cycle."
+  },
+  {
+    "id": "WXT-009",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B Aviation Weather Handbook 19.2.1.1 Thunderstorms (gust front marked by line of dust, up to 15 mi ahead of precipitation) and 22.3; FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Dissipating Stage para. (first gust may exceed 75 kt, vary 180 deg); FAA-P-8740-34 'Powerlines and Thunderstorms: Balloon Safety Tips' (faa.gov PDF) 'Summer Safety' article (dust on horizon, gust front)."
+  },
+  {
+    "id": "WXT-010",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Cold Front (p. 4-9: during passage winds variable and gusty, temperature and dew point drop rapidly, pressure bottoms out then rises); Warm Front section for the distractor."
+  },
+  {
+    "id": "WXT-011",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Pressure Systems (high: clockwise, out and down, fewer clouds, light winds, early fog/haze possible) and Wind Patterns."
+  },
+  {
+    "id": "WXT-012",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Surface Friction (friction to ~2,000 ft AGL reduces Coriolis; flow crosses isobars 10 to more than 45 deg; above 2,000 ft parallel to isobars); FAA-H-8083-28B Aviation Weather Handbook 10.3.3 Friction Force."
+  },
+  {
+    "id": "WXT-013",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Convective Currents (sea breeze onshore by day, land breeze at night, Fig. 4-14); FAA-H-8083-28B Aviation Weather Handbook 10.6.1 to 10.6.3 (sea, land, lake breeze)."
+  },
+  {
+    "id": "WXT-014",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Katabatic Winds; Ch. 6 Balloon Placement & Wind Direction ('air usually flows downhill or down valley first thing in the morning'); Ch. 3 Mountain Flying (drainage winds); FAA-H-8083-28B Aviation Weather Handbook 10.6.4 Valley Breeze, 10.6.6 Mountain Breeze."
+  },
+  {
+    "id": "WXT-015",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-P-8740-34 'Powerlines and Thunderstorms: Balloon Safety Tips' (faa.gov PDF) article 'Summer Safety in the Storm and Thermal Season' ('a balloon's drift may be abruptly shifted in speed and direction... These are the first signs of thermal activity'); FAA-H-8083-11B Balloon Flying Handbook Ch. 4 Turbulence > Thermal (climb without heat) and Ch. 8 Thermal Flight."
+  },
+  {
+    "id": "OPS-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2 Fig. 2-11 Propane Primer (pressure depends on liquid temperature, not quantity, while vapor is present and no air); Appendix A Vapor Pressures of LP Gases."
+  },
+  {
+    "id": "OPS-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2 Fig. 2-11 Propane Primer ('popular misconception that propane is always at -44 F... the same temperature as the ambient air')."
+  },
+  {
+    "id": "OPS-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 3 Cold Weather Flying (p. 3-13: nitrogen via regulator to pressurize; vapor-feed pilot systems may be unreliable with nitrogen, use heat tapes/tank covers)."
+  },
+  {
+    "id": "OPS-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 The Standard Burn (p. 7-2: partially open valve not at full efficiency, unknown fraction of heat; partial-throttle flame wide and short; shorten time not amount; four 1-s burns less than one 4-s burn)."
+  },
+  {
+    "id": "OPS-005",
+    "verdict": "fix",
+    "issue": "Keyed answer is right, but no FAA source describes how it works. The BFH only names the systems: Fig. 2-7 labels a 'liquid fire jet/valve assembly', p. 2-8 says backup systems run at 'reduced efficiency' and carry proprietary names, and Ch. 6 Burner Check lists Whispervalve and Liquid Fire. The 'without passing it through the coil' mechanism is confirmed only by manufacturer manuals (Cameron burner flight manual supplement: the 'Commercial Liquid Fire' is 'a separate burner unit fitted with only liquid fuel jets'). The explanation still carries a 'CHECK:' drafting note.",
+    "suggested": "Keep answer 0. Change ref to 'FAA-H-8083-11B Ch. 2 (Heater System, Fig. 2-7; backup/bypass systems p. 2-8) and Ch. 6 (Burner Check); burner manufacturer flight manual supplement'. Remove the CHECK note. Optionally tie the stem to the BFH wording: 'What is true of the backup liquid-fire (whisper) valve fitted to many burners?'",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 2 Heater System (Fig. 2-7 labels; p. 2-8 backup systems 'reduced efficiency'); Ch. 6 Burner Check; Cameron Balloons 'Out of Production Burners' flight manual supplement (cameronballoons.co.uk) for liquid-only jets."
+  },
+  {
+    "id": "OPS-006",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 The Crew Briefing (p. 6-6: brief before each flight, less detail for experienced crew; four listed items; crew is pilot's representative)."
+  },
+  {
+    "id": "OPS-007",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 In Flight Emergencies > Loss/Malfunction of Pilot Light (p. 7-13/7-14: single burner, relight by piezo, striker or other source; crack the blast valve and light the stream; backup system; land as soon as practical)."
+  },
+  {
+    "id": "OPS-008",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 Fuel Leak (p. 7-14: shut off fuel source, snuff with gloved hand); Ch. 2 Miscellaneous Items > Fire extinguisher ('turning off a valve usually extinguishes the fire... better use of pilot time than fumbling for a fire extinguisher')."
+  },
+  {
+    "id": "OPS-009",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-P-8740-34 'Powerlines and Thunderstorms: Balloon Safety Tips' (faa.gov PDF) article 'A New Problem Emerges' (burn vs rip: 'ripping is a safer decision'; contact above the equator much less hazardous; fuel secured and pilot light extinguished before ground contact) and 'Powerline Safety' (contact at basket/cables: electrocution, severed cables, fuel rupture)."
+  },
+  {
+    "id": "OPS-010",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Launch Site > Location and Obstacles (p. 6-8: 'minimum of 100 feet of clearance for each knot of wind'); FAA-P-8740-34 'Powerlines and Thunderstorms: Balloon Safety Tips' (faa.gov PDF) 'Powerline Safety' (100 ft per knot; cross in an ascent with several hundred feet vertical clearance)."
+  },
+  {
+    "id": "OPS-011",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 8 Passenger Briefings & Management (pp. 8-10 to 8-12: face direction of travel, feet and knees together, knees bent, hold on tight; avoid 'brace'; one foot forward locks knee); Ch. 6 Passenger Briefing (p. 6-16)."
+  },
+  {
+    "id": "OPS-012",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 8 High-Wind Landing (p. 8-9: lowest safe altitude to a large field, near end of field, brief again, fuel valves off, lines drained, pilot lights off, deflation vent to control ground travel; 220 ft at 15 mph in 10 s)."
+  },
+  {
+    "id": "OPS-013",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Preflight Inspection Checklist (p. 6-2: manufacturer's maximum allowable damage) and The Inflation (p. 6-17: check envelope for disqualifying damage during cold inflation)."
+  },
+  {
+    "id": "OPS-014",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 7 Tethering/Mooring (p. 7-14: Part 91 applies; Part 101 is a 'popular misconception'; certificated pilot required; 'most demanding and stressful operation')."
+  },
+  {
+    "id": "OPS-015",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Balloon Flying Handbook Ch. 6 Landowner Relations (p. 6-23: never assume right to use private property; select another site or inquire of neighbors)."
+  },
+  {
+    "id": "DAC-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Recomputed with the specified method (PHAK FAA-H-8083-25C Ch. 11 Density Altitude, p. 11-3/11-4 and Density Altitude Charts, p. 11-20): PA = 2,600 + 205 = 2,805 ft; std temp = 15 - 1.98 x 2.805 = 9.4 C; DA = 2,805 + 120 x (32 - 9.4) = 5,512 ft, nearest choice 5,500 (index 1). Distractors check: 2,805 (PA only); 2,805 + 120 x 32 = 6,645."
+  },
+  {
+    "id": "DAC-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 4,800 - 348 = 4,452 ft; std temp = 15 - 1.98 x 4.452 = 6.2 C; DA = 4,452 + 120 x (-10 - 6.2) = 2,510 ft, nearest choice 2,500 (index 0). Distractors: 4,452 (PA only); 4,452 + 1,942 = 6,394 (sign error)."
+  },
+  {
+    "id": "DAC-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 7,200 + 392 = 7,592 ft; std temp = 15 - 1.98 x 7.592 = 0.0 C; DA = 7,592 + 120 x 25.0 = 10,596 ft, nearest choice 10,600 (index 2). Distractors: 7,592 (PA only); subtracting the correction gives PA 6,808 and DA about 9,626, i.e. 9,600."
+  }
+]

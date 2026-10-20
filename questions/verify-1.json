@@ -1,0 +1,345 @@
+[
+  {
+    "id": "REG-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.23(a)(2)(iii), (b)(4), (b)(5); 61.3(c)(2)(vi)(A)-(B) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); 87 FR 71218 DATES (Federal Register API): amendments to 61.23(a)(2)(iii) effective May 22, 2023"
+  },
+  {
+    "id": "REG-002",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct (61.23(b)(5) and 61.3(c)(2)(vi)(B) verified), but the explanation contains a drafting note to the reviewer: 'CHECK: this contradicts the brief's assumption ... verified ... on 2026-10-20.' That text would be shown to students.",
+    "suggested": "Delete the entire 'CHECK: ...' sentence from the explanation. Keep the rest unchanged. Optionally set confidence from 'check' to 'high'.",
+    "source": "14 CFR 61.23(b)(5); 61.3(c)(2)(vi)(B); 61.133(a)(2)(ii) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); 87 FR 71218 (Federal Register API, DATES: effective May 22, 2023)"
+  },
+  {
+    "id": "REG-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.23(d)(2)(i) and (d)(2)(iii) table (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.3(a)(1)(i), (a)(2), (c)(1); 61.51(i)(1) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-005",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.57(a)(1)(i)-(ii) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-006",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.56(c) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-007",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct per 61.51(a)(1)-(2), but choice C (155 characters) is almost three times as long and far more qualified than either distractor (55 and 62). Test-wise students can pick it by length alone.",
+    "suggested": "Shorten the key and lengthen the distractors to similar length, e.g. A: 'All flight time, including every passenger flight, whether or not it is for hire.' B: 'Only pilot-in-command time on flights conducted for compensation or hire.' C (key): 'Only time used to meet certificate, rating, flight review, or recent experience requirements.'",
+    "source": "14 CFR 61.51(a)(1)-(2), 61.51(i) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-008",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.129(h)(4)(i)(C), (h)(4)(ii)(C); 61.109(h)(2)(iii) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-009",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.133(b)(1)-(2) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-010",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct (61.133(a)(2)(ii)(D)). But the explanation dismisses B and C because they 'appear only in the airship paragraph.' 61.133(a)(2) opens with 'A person with a commercial pilot certificate with a lighter-than-air category rating may ... (i) For an airship,' which on its face covers this pilot's LTA category rating. The real reason B and C are wrong is that the pilot holds no airship class rating, so cannot act as PIC of an airship (61.31(d)(1)), and below-VFR-minimums authority is tied to the airship class rating (61.3(e)(4)).",
+    "suggested": "Rewrite the explanation's last sentence: 'Flight below VFR minimums and airship training are airship privileges (61.133(a)(2)(i)); they require an airship class rating (61.3(e)(4), 61.31(d)), which this pilot does not hold.' Add 61.3(e)(4) and 61.31(d) to ref.",
+    "source": "14 CFR 61.133(a)(2)(i)-(ii); 61.3(e)(4); 61.31(d)(1) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-011",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct (61.127(b)(8)(i) vs (b)(1)), but the stem gives it away: opening with 'Because commercial balloon pilots may give flight training' points straight to 'Fundamentals of instructing.'",
+    "suggested": "Reword the stem: 'Which area of operation appears in the 61.127 list for a commercial lighter-than-air balloon rating but not in the list for a commercial airplane single-engine rating?' Move the instructing-privilege rationale to the explanation.",
+    "source": "14 CFR 61.127(b)(1), (b)(8) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-012",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.17(a)(1)-(4) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); AIM (faa.gov aim_html, current basic w/ Change 3) 8-1-1 (Alcohol: '12 to 24 hours between bottle and throttle')"
+  },
+  {
+    "id": "REG-013",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.3(b)-(c) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); 49 CFR 830.15(a)"
+  },
+  {
+    "id": "REG-014",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.103(a); 91.151(a)-(b) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-015",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.107(a)(1)-(3) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-016",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.113(c)-(d) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-017",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.119(b)-(c) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-018",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.409(a)-(c) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-019",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 1.1 'Time in service'; 91.409(b) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-020",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.417(a)(1)-(2), (b)(1)-(2) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "REG-021",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.2 (aircraft accident; serious injury (2)), 830.5(a), 830.15(a) (eCFR title 49 current, up to date as of 2026-10-16)"
+  },
+  {
+    "id": "REG-022",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 31.85(a)-(c) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.155(a) table, Class G (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.155(a) table, Class E (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.129(c)(1); 91.131(a)(1); 91.215(b) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); AIM (faa.gov aim_html, current basic w/ Change 3) 3-2-5"
+  },
+  {
+    "id": "AIR-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.131(a)(1), (c)(2), (d); 91.215(b)(1), (b)(3), (d)(3); 91.225(d)(1), (e), (g)(2) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-005",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct per 91.215(b)(3). Two problems: (1) The explanation says 91.225(e) also requires staying 'outside Class A, B and C,' but 91.225(e)(1) says only 'Outside any Class B or Class C airspace area' (Class A appears only in 91.215(b)(3)(i)). (2) Length cue: the key (125 characters, ending with the regulation's 'whichever is lower') stands out against a 27-character distractor B.",
+    "suggested": "(1) Explanation: '91.215(b)(3) requires staying outside Class A, B and C airspace and below the lower of the Class B/C ceiling or 10,000 feet MSL; 91.225(e) sets the same limits for ADS-B Out (outside Class B and C, below the lower ceiling).' (2) Lengthen B, e.g. 'at or below 2,500 feet AGL, regardless of the Class B or C airspace overhead.'",
+    "source": "14 CFR 91.215(b)(2)-(3), (b)(5)(i); 91.225(d)(2), (d)(4), (e) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-006",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct per AIM 3-4-5. But the key (141 characters, two clauses that track the AIM's wording) is much longer and more qualified than B (83) and C (42), so it can be picked by length.",
+    "suggested": "Tighten the key and build up the distractors, e.g. A (key): 'No clearance is needed, but the pilot should get traffic advisories from the controlling agency.' B: 'Permission from the using agency is required, as for a restricted area.' C: 'VFR flight is prohibited while the MOA is active.'",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 3-4-5; 14 CFR 91.133(a) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16))"
+  },
+  {
+    "id": "AIR-007",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.137(a)(1), (b), (c)(4) (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); AIM (faa.gov aim_html, current basic w/ Change 3) 3-5-3 ('normally limited to within 2,000 feet above the surface and within a 3-nautical-mile radius')"
+  },
+  {
+    "id": "AIR-008",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 7-5-6 (paragraph number confirmed current: Ch. 7 Sec. 5 'Bird Hazards and Flight Over National Refuges, Parks, and Forests')"
+  },
+  {
+    "id": "AIR-009",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK FAA-H-8083-25C Ch. 16 'Variation' (p. 16-6); Ch. 8 magnetic compass variation example (east variation subtracted)"
+  },
+  {
+    "id": "AIR-010",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 3-5-2 (route identification: four digits = no segment above 1,500 ft AGL; VR flown under VFR; generally >250 kt)"
+  },
+  {
+    "id": "WXS-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 1.1 'Ceiling' (eCFR current text (point-in-time 2026-10-01; title 14 up to date as of 2026-10-16)); Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 24.4.3.9 and Table 24-5 (heights in hundreds of feet AGL; ceiling = lowest BKN/OVC). Decoded: FEW 3,000, BKN 4,500 (ceiling), OVC 25,000"
+  },
+  {
+    "id": "WXS-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 24.4.3.9, Table 24-4 note 1 (CLR = automated, no layers at or below 12,000 ft; SKC = manual; VV = indefinite ceiling)"
+  },
+  {
+    "id": "WXS-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.4.2.10.1 (FM group supersedes all prior conditions until the next FM). Decoded: 1700Z/20 to 0200Z/21 = 26014G24KT, so 1800Z = 260 deg at 14 kt gusting 24"
+  },
+  {
+    "id": "WXS-004",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct (9900 = light and variable, under 5 kt). But distractor A ('Calm wind; temperature not forecast') is half right: the 3,000-ft level never carries a temperature (AWH Table 27-1 shows 3,000 ft 9900 'Not forecast'). A distractor with a true clause that the key leaves out can pull informed students and invite a challenge.",
+    "suggested": "Make A wrong in every part, e.g. 'Calm wind with a temperature of 0 °C.' Or add the temperature fact to the key: 'Light and variable wind (less than 5 knots); no temperature forecast.'",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.2.1.1, 27.2.1.1.1 and Table 27-1 (MKC 3,000 ft '9900 Light and variable / Not forecast')"
+  },
+  {
+    "id": "WXS-005",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.2.1.1.1 (add 50 to direction and subtract 100 from speed for 100-199 kt; sign omitted above 24,000 ft). Decoded: 73-50 = 23 -> 230 deg, 19+100 = 119 kt, -60 C"
+  },
+  {
+    "id": "WXS-006",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.2.1.1 (no wind forecast within 1,500 ft of station elevation; no temperature within 2,500 ft). 6,000 is 700 ft above a 5,300-ft station, so blank; 9,000 is 3,700 ft above, so wind and temperature are given"
+  },
+  {
+    "id": "WXS-007",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.2.1.1.1 (direction referenced to true north, direction wind blows from). Decoded: 2715+08 = from 270 deg true at 15 kt, +8 C, so the balloon drifts toward 090 deg true"
+  },
+  {
+    "id": "WXS-008",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct per AWH 24.5.1.1.1. But the cited AIM 7-1-18 does not list the UUA criteria. It only shows 'UA or UUA - Routine or Urgent PIREP' in TBL 7-1-18 and refers readers to the AWH. That ref does not support the explanation.",
+    "suggested": "Change ref to 'FAA-H-8083-28B 24.5.1.1.1' (Urgent PIREPs). Drop AIM 7-1-18, or keep it only as a pointer for the report format.",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 24.5.1.1, 24.5.1.1.1; AIM (faa.gov aim_html, current basic w/ Change 3) 7-1-18 and TBL 7-1-18"
+  },
+  {
+    "id": "WXS-009",
+    "verdict": "fix",
+    "issue": "Keyed answer is correct. But the cited AWH 26.3.1.3 (AIRMET Issuance Criteria) lists the phenomena without naming Sierra, Tango or Zulu. The category definitions ('AIRMET Tango describes moderate turbulence, sustained surface winds of 30 kt or greater, and/or non-convective LLWS') are in 26.3.1.2. AIM 7-1-6 names Tango only in its Alaska/Hawaii examples. Also, the explanation's '30 knots or more' matches 26.3.1.2, while 26.3.1.3 and AIM 7-1-6 say 'greater than 30 kt.'",
+    "suggested": "Change ref to 'FAA-H-8083-28B 26.3.1.2, 26.3.1.3; AIM 7-1-6'. In the explanation, say 'sustained surface winds of 30 knots or greater (STG SFC WND)', or avoid an exact threshold.",
+    "source": "Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 26.3.1.2, 26.3.1.3; AIM (faa.gov aim_html, current basic w/ Change 3) 7-1-6 (AIRMET; CONUS hazard list; Alaska/Hawaii AIRMET Tango example)"
+  },
+  {
+    "id": "WXS-010",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 7-1-6 (Convective SIGMET criteria; SIGMET criteria incl. severe icing and dust storms <3 mi); Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 26.2.4.2.1-26.2.4.2.2 (special issuance: hail >= 3/4 in at surface)"
+  },
+  {
+    "id": "WXS-011",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 7-1-4 (GFA covers CONUS, 14 hours past to 15 hours future; 'designed to replace the legacy FA'); Aviation Weather Handbook FAA-H-8083-28B (signed April 2, 2026) 27.6 (FA now Alaska/Gulf/Caribbean only)"
+  },
+  {
+    "id": "WXS-012",
+    "verdict": "fix",
+    "issue": "Keyed answer (outlook) is correct on timing: the briefing is 11.5 hours before launch and AIM 7-1-5 says to request an Outlook Briefing whenever departure is six or more hours away. But the stem adds 'a pilot who has not yet reviewed any weather.' That is almost word for word the AIM's trigger for a Standard Briefing ('any time you are planning a flight and you have not received a previous briefing or have not received preliminary information through online resources'). An examiner could defend choice C on that wording.",
+    "suggested": "Remove the clause 'who has not yet reviewed any weather' from the stem, e.g. 'At 1900 the evening before a 0630 balloon launch, a pilot calls Flight Service to plan the flight. Which type of briefing should the pilot request?'",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 7-1-5 (Standard, Abbreviated, Outlook Briefing paragraphs)"
+  },
+  {
+    "id": "ADM-001",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Balloon Flying Handbook FAA-H-8083-11B Ch. 1 Fig. 1-5 (Anti-authority: 'Follow the rules. They are usually right.'); PHAK FAA-H-8083-25C Ch. 2 hazardous attitudes table"
+  },
+  {
+    "id": "ADM-002",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK FAA-H-8083-25C Ch. 2 'E = External Pressures' (p. 2-9: 'A passenger the pilot does not want to disappoint')"
+  },
+  {
+    "id": "ADM-003",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Balloon Flying Handbook FAA-H-8083-11B Ch. 9 'Hypemic Hypoxia' (carbon monoxide poisoning causes this type) and 'Histotoxic Hypoxia' (alcohol, drugs); AIM (faa.gov aim_html, current basic w/ Change 3) 8-1-4"
+  },
+  {
+    "id": "ADM-004",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, current basic w/ Change 3) 8-1-1 Medication ('The safest rule is not to fly as a crewmember while taking any medication, unless approved to do so by the FAA'; antihistamines named); 14 CFR 91.17(a)(3); Balloon Flying Handbook FAA-H-8083-11B Ch. 1 Fig. 1-6 I'M SAFE"
+  },
+  {
+    "id": "ADM-005",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Balloon Flying Handbook FAA-H-8083-11B Ch. 1 Fig. 1-5 (Resignation: 'I'm not helpless. I can make a difference.')"
+  }
+]

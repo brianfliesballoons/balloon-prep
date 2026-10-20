@@ -1,0 +1,980 @@
+[
+ {
+  "id": "THY-001",
+  "area": "THY",
+  "topic": "Buoyancy",
+  "stem": "What produces the lift that lets a hot air balloon rise?",
+  "choices": [
+   "The burner flame pushes the envelope upward in the same way a jet engine produces thrust.",
+   "Air inside the envelope is held at a much higher pressure than the outside air, which forces the envelope up.",
+   "It displaces outside air that weighs more than the heated air inside plus the balloon itself."
+  ],
+  "answer": 2,
+  "explanation": "The buoyant force equals the weight of the air the envelope displaces; heating makes the inside air less dense, so the displaced air outweighs the whole system. The envelope is open at the mouth, so its air is at nearly the same pressure as the outside air; lift comes from the density difference, not from pressure.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-002",
+  "area": "THY",
+  "topic": "Ambient temperature and lift",
+  "stem": "The same balloon, carrying the same load at the same altitude, flies on a 40°F morning and again on a 90°F morning. On the warmer morning, equilibrium requires",
+  "choices": [
+   "a higher envelope temperature, because warmer outside air is less dense.",
+   "a lower envelope temperature, because warm outside air helps the envelope rise.",
+   "the same envelope temperature, because lift depends only on how hot the envelope is."
+  ],
+  "answer": 0,
+  "explanation": "Lift depends on the density difference between the air inside and outside the envelope. Warmer outside air is less dense, so the envelope must be heated more, and more fuel burned, for the same lift; this is why cold-weather flights use less fuel.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Why Do Balloons Fly?); Ch. 3 (Cold Weather Flying); Ch. 7 (Straight & Level Flight)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-003",
+  "area": "THY",
+  "topic": "Lift and altitude",
+  "stem": "If envelope temperature is held constant, how does a balloon's gross lift change as it climbs?",
+  "choices": [
+   "It decreases, because the surrounding air becomes less dense.",
+   "It increases, because the outside air gets colder with altitude.",
+   "It stays the same, because the pressure inside and outside the envelope drops together."
+  ],
+  "answer": 0,
+  "explanation": "A balloon loses lifting capacity as it gains altitude because each cubic foot of displaced air weighs less. Colder air aloft helps slightly, but in a normal atmosphere the drop in density outweighs it, so more heat is needed to stay level higher up.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-004",
+  "area": "THY",
+  "topic": "Density altitude effects",
+  "stem": "How does a high density altitude affect a hot air balloon's performance?",
+  "choices": [
+   "It increases the lift available, because thin air lets the envelope expand further.",
+   "It reduces the lift available at a given envelope temperature and reduces burner output.",
+   "It affects only the accuracy of the altimeter, not the balloon's lift or its burner output."
+  ],
+  "answer": 1,
+  "explanation": "Density altitude affects a balloon in two ways: less lifting capacity and less burner output, about 4 percent per 1,000 feet. The envelope's volume is fixed, so thinner air simply means less weight of air displaced.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-25C Ch. 4 (Density Altitude)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-005",
+  "area": "THY",
+  "topic": "Burner output and altitude",
+  "stem": "Why does a balloon burner put out less heat at a high-elevation launch site than at sea level?",
+  "choices": [
+   "Propane boils at a lower temperature at altitude, so the coil cannot vaporize it.",
+   "Lower outside air pressure lowers the pressure in the fuel tanks.",
+   "Less oxygen is available for combustion in the thinner air."
+  ],
+  "answer": 2,
+  "explanation": "Burner performance drops about 4 percent per 1,000 feet because the partial pressure of oxygen is lower; at 3,000 feet a burner works at roughly 88 percent of its sea-level output. Tank pressure is set by the temperature of the liquid propane, not by outside air pressure.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Heater System; Fig. 2-11 Propane Primer); Ch. 3 (Performance Planning)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-006",
+  "area": "THY",
+  "topic": "Load calculation",
+  "stem": "A balloon's flight manual lists a maximum allowable gross weight of 1,600 pounds. Its empty weight (envelope, basket, burner, and empty tanks) is 590 pounds. It will carry three tanks holding 15 gallons of propane each, and propane weighs about 4.2 pounds per gallon. What is the maximum combined weight of the pilot and passengers?",
+  "choices": [
+   "821 pounds",
+   "947 pounds",
+   "1,010 pounds"
+  ],
+  "answer": 0,
+  "explanation": "Useful load is 1,600 − 590 = 1,010 pounds, and the fuel takes 3 × 15 × 4.2 = 189 pounds of it, leaving 821 pounds for the occupants. 1,010 pounds is the whole useful load, which forgets that fuel counts against it; 947 pounds counts the fuel in only one tank.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning: Maximum Allowable Gross Weight, Useful Lift)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-007",
+  "area": "THY",
+  "topic": "Maximum gross weight",
+  "stem": "On a cold morning, the performance chart shows the balloon could lift 1,700 pounds at the pilot's planned envelope temperature. The flight manual's maximum allowable gross weight is 1,500 pounds. Which statement is correct?",
+  "choices": [
+   "The balloon may weigh up to 1,700 pounds, because the chart reflects today's actual conditions.",
+   "The 1,500-pound limit applies only at standard temperature, so it may be exceeded whenever the air is colder than standard.",
+   "The balloon may not exceed 1,500 pounds, because maximum gross weight is an operating limitation."
+  ],
+  "answer": 2,
+  "explanation": "Maximum weight is set at type certification and appears as an operating limitation in the flight manual, and 14 CFR 91.9 requires compliance with it. Extra lift on a cold day is a margin (and saves fuel), not permission to load beyond the certificated maximum.",
+  "ref": "14 CFR 31.14 and 31.81; 14 CFR 91.9; FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-008",
+  "area": "THY",
+  "topic": "Envelope temperature limit",
+  "stem": "Where does a pilot find the maximum envelope temperature for a particular balloon?",
+  "choices": [
+   "In the operating limitations of that balloon's flight manual",
+   "In 14 CFR part 91, which sets one maximum temperature for all hot air balloons",
+   "On the burner data plate, since the limit is based on burner output"
+  ],
+  "answer": 0,
+  "explanation": "Envelope temperature limits depend on the fabric and design, so each manufacturer sets them as operating limitations in the flight manual; 250°F is a common maximum continuous temperature but is not universal. Part 91 sets no envelope temperature, and the burner rating has nothing to do with what the fabric can tolerate.",
+  "ref": "14 CFR 31.81; FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-009",
+  "area": "THY",
+  "topic": "Temperature flag",
+  "stem": "During flight, the pilot notices that the envelope's temperature flag has dropped into the mouth. What does this indicate?",
+  "choices": [
+   "The envelope temperature sensor has failed, so the gauge reading should be disregarded for the rest of the flight.",
+   "The balloon is approaching its maximum rate of climb, so the pilot should level off and stop burning.",
+   "The crown has exceeded the flag's release temperature; reduce heat and have the envelope inspected per the flight manual."
+  ],
+  "answer": 2,
+  "explanation": "The temperature flag (streamer) is a simple backup that releases at a set temperature, so a dropped flag means the crown has been overheated and the envelope needs an overheat inspection before further flight. It says nothing about the electronic sensor, which should be cross-checked, not ignored. CHECK: no FAA handbook describes the flag; the answer rests on manufacturer documents (e.g., Kubicek service bulletin bb55).",
+  "ref": "14 CFR 31.49(e); balloon flight manual / manufacturer maintenance manual (envelope overheat inspection)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "check",
+  "checked": "fixed"
+ },
+ {
+  "id": "THY-010",
+  "area": "THY",
+  "topic": "Equilibrium temperature",
+  "stem": "A balloon is flying level at 500 feet MSL. To climb to 1,000 feet MSL and hold that altitude, the pilot must",
+  "choices": [
+   "heat just long enough to start the climb, then return to the original envelope temperature.",
+   "add no heat, because once a balloon is at equilibrium it will hold whatever altitude it is moved to.",
+   "raise the envelope to a higher equilibrium temperature, with extra heat at first to start the climb."
+  ],
+  "answer": 2,
+  "explanation": "Every altitude has its own equilibrium temperature, and the higher altitude needs a higher one; extra heat is also needed at first to overcome the balloon's inertia. Returning to the old temperature would bring the balloon back down toward 500 feet.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight; Ascents & Descents)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-011",
+  "area": "THY",
+  "topic": "False lift",
+  "stem": "A balloon is brought to equilibrium on the ground in a 6-knot breeze. The crew releases it, and a few seconds after lift-off it starts to sink. What is the most likely cause?",
+  "choices": [
+   "The wind compressed the air inside the envelope after lift-off and made it denser.",
+   "Wind over the top was adding lift that vanished as the balloon accelerated to wind speed.",
+   "The inflation fan was shut off, so the envelope lost the air pressure that was holding it up."
+  ],
+  "answer": 1,
+  "explanation": "On the ground, air moving over the curved top creates a low-pressure area and real lift, called false lift because heat did not create it. Once the balloon moves with the air mass, that lift is gone, so a pilot launching from equilibrium in wind must add heat and keep a positive climb.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift; False Lift)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-012",
+  "area": "THY",
+  "topic": "False heavy and wind shear",
+  "stem": "Descending to land, a balloon drops out of light winds into a much faster surface wind layer. What should the pilot anticipate?",
+  "choices": [
+   "A faster descent, as airflow on the lower envelope pulls it down and distorts it; add heat promptly.",
+   "A slower descent, because wind across the top creates false lift, so the vent should be used to keep descending.",
+   "No change in vertical speed, because the faster wind affects only the balloon's ground speed."
+  ],
+  "answer": 0,
+  "explanation": "When the lower half of the envelope enters faster air, lift generated below the equator points downward (false heavy), and the shear can push in the side of the envelope and spill hot air (diminished capacity). Any false lift over the top is momentary and can mask the heat loss until the balloon drops sharply.",
+  "ref": "FAA-H-8083-11B Ch. 6 (False Heavy; Diminished Capacity)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-013",
+  "area": "THY",
+  "topic": "Diminished capacity",
+  "stem": "A strong wind shear makes the envelope 'dish' on final approach. This is most dangerous for",
+  "choices": [
+   "a lightly loaded balloon, because it has less hot air in the envelope to lose to the shear.",
+   "every balloon equally, because dishing changes only the shape of the envelope, not its heat.",
+   "a heavily loaded balloon, because heat is squeezed out and each burn replaces only a little of it."
+  ],
+  "answer": 2,
+  "explanation": "In a heavily loaded balloon the hot air reaches close to the mouth, so a dish pushes out lifting heat, and a standard burn adds only a small percentage of the heat required. In a lightly loaded balloon the heat is mostly redistributed inside the envelope, and each burn makes a bigger difference.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-014",
+  "area": "THY",
+  "topic": "Fuel planning",
+  "stem": "A balloon carries three tanks holding 15 gallons of propane each. At today's load and temperature it burns about 18 gallons per hour. The pilot's personal minimum is to land with at least 30 percent of the total fuel remaining. What is the longest flight the pilot should plan?",
+  "choices": [
+   "45 minutes",
+   "1 hour 45 minutes",
+   "2 hours 30 minutes"
+  ],
+  "answer": 1,
+  "explanation": "Total fuel is 45 gallons; holding 30 percent (13.5 gallons) in reserve leaves 31.5 gallons, and 31.5 ÷ 18 = 1.75 hours. Two and a half hours would burn every gallon, leaving nothing for a missed first approach, and balloon fuel gauges often do not read accurately across their full range.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Performance Planning/Fuel Planning); Ch. 8 (Some Basic Rules of Landing); Ch. 2 (Instruments)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-015",
+  "area": "THY",
+  "topic": "Standard lapse rate",
+  "stem": "In the standard atmosphere, what is the temperature at 6,000 feet MSL?",
+  "choices": [
+   "−3°C",
+   "3°C",
+   "9°C"
+  ],
+  "answer": 1,
+  "explanation": "Standard sea-level temperature is 15°C, decreasing about 2°C per 1,000 feet: 15 − 12 = 3°C (about 37°F). −3°C comes from using the dry adiabatic rate of 3°C per 1,000 feet, which describes a rising parcel of air, not the standard atmosphere.",
+  "ref": "FAA-H-8083-11B Ch. 4 (The Standard Atmosphere); FAA-H-8083-25C Ch. 12",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-016",
+  "area": "THY",
+  "topic": "Solar heating",
+  "stem": "A balloon with a dark envelope has been absorbing heat from bright sunshine while flying level. A large cloud drifts over and shades the envelope. If the pilot does not change the burn pattern, the balloon will most likely",
+  "choices": [
+   "climb, because the shaded air around the balloon becomes cooler and denser.",
+   "stay level, because sunlight warms only the outside of the fabric, not the air inside.",
+   "begin to descend, because the envelope stops gaining heat from the sun."
+  ],
+  "answer": 2,
+  "explanation": "Dark envelopes can gain heat from the sun, so part of the heat holding the balloon level was solar; once shaded, the envelope cools and the balloon sinks unless the pilot burns more. The surrounding air does not cool appreciably in the few minutes a cloud takes to pass.",
+  "ref": "FAA-H-8083-11B Ch. 2, Physics (dark envelopes may gain heat from the sun)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "THY-017",
+  "area": "THY",
+  "topic": "Inversion and lift",
+  "stem": "On a morning with a strong surface inversion, a balloon flying level just above the ground climbs into the much warmer air above the inversion. To hold altitude in the warmer layer, the pilot will need",
+  "choices": [
+   "a lower envelope temperature, because the warm layer reduces heat loss through the fabric.",
+   "a higher envelope temperature, because the warmer surrounding air provides less lift.",
+   "the same envelope temperature, because the balloon is still in the same air mass."
+  ],
+  "answer": 1,
+  "explanation": "Lift comes from the temperature difference between the envelope and the outside air, so climbing into warmer air shrinks that difference and takes more heat. Descending back into the cold air under the inversion has the opposite effect: extra lift that can make the balloon reluctant to come down.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Why Do Balloons Fly?); Ch. 4 (Temperature Variation with Altitude)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "THY-018",
+  "area": "THY",
+  "topic": "Cooling in a steep descent",
+  "stem": "During a steep descent begun at 1,500 feet AGL, the descent rate passes 500 feet per minute. Why should the pilot make a standard burn at this point even though the goal is to keep descending?",
+  "choices": [
+   "The burn keeps the parachute top from being forced open by air rushing past the envelope.",
+   "The burn keeps the pilot light from being blown out by air rushing up through the mouth.",
+   "Airflow past the envelope cools it fast, and the burn keeps enough heat in it to stay in control."
+  ],
+  "answer": 2,
+  "explanation": "In a fast descent, airflow over the fabric speeds up cooling; a standard burn keeps the envelope warm enough for control without stopping the descent. The longer burns that actually arrest the descent come later, about halfway between that point and the ground.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Rapid/Steep Descents)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-001",
+  "area": "WXT",
+  "topic": "Why balloons fly early",
+  "stem": "Why do balloonists usually fly within the first couple of hours after sunrise, or in the hour or two before sunset?",
+  "choices": [
+   "Air pressure is highest at those times of day, which greatly reduces the fuel a flight uses.",
+   "Dew on the envelope makes the fabric less porous, so the envelope holds its heat better.",
+   "Surface heating is weak, so thermals and instability are minimal and winds are usually light."
+  ],
+  "answer": 2,
+  "explanation": "Shortly after sunrise the ground has not heated enough to drive convection, and late in the day thermal effects are calming and winds usually decrease. Midday heating brings thermals and gusty, unstable air that is hazardous to balloons; a wet envelope is heavier and harder on the fabric, not better.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Weather)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-002",
+  "area": "WXT",
+  "topic": "Surface inversion",
+  "stem": "Under what conditions does a surface-based temperature inversion most often form?",
+  "choices": [
+   "On clear nights with light wind, as the ground radiates heat and cools the air next to it",
+   "On cloudy, windy nights, as warm air from aloft is mixed down to the surface by the wind",
+   "In the afternoon, as strong surface heating warms the lowest layer of air above the ground"
+  ],
+  "answer": 0,
+  "explanation": "On clear, calm nights the ground cools by radiation faster than the air above it, so temperature increases with height near the surface. Wind and cloud cover limit that cooling, and afternoon heating produces the opposite, a steep lapse rate.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude); FAA-H-8083-28B Ch. 5 (5.8.3 Temperature Inversion)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-003",
+  "area": "WXT",
+  "topic": "Wind shear at an inversion",
+  "stem": "On a clear, calm morning, a balloon climbs out of the cold surface air in a valley. What should the pilot be prepared for near the top of the inversion?",
+  "choices": [
+   "A gradual decrease in wind speed, since winds above an inversion are usually calm",
+   "An abrupt change in wind speed or direction, with turbulence and changes in lift",
+   "Fog forming at the top of the inversion as the balloon passes through it"
+  ],
+  "answer": 1,
+  "explanation": "Calm, cold air trapped near the ground is often overlain by faster-moving warmer air, with a narrow turbulent shear zone between them. A balloon climbing or descending through that zone can meet sudden wind changes as well as changes in lift.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Turbulence: Wind Shear); FAA-H-8083-28B Ch. 19 (19.2.3.1 Temperature Inversion)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-004",
+  "area": "WXT",
+  "topic": "Atmospheric stability",
+  "stem": "A layer of air in which the actual temperature lapse rate is less than the moist adiabatic lapse rate is",
+  "choices": [
+   "absolutely stable.",
+   "absolutely unstable.",
+   "conditionally unstable."
+  ],
+  "answer": 0,
+  "explanation": "When the air cools with height more slowly than even a saturated rising parcel would, any lifted parcel becomes colder than its surroundings and sinks back, whatever its moisture content. Conditional instability is a lapse rate between the moist and dry adiabatic rates; absolute instability is a lapse rate greater than the dry rate.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Types of Stability); FAA-H-8083-28B Ch. 13 (13.3 Stability Types)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-005",
+  "area": "WXT",
+  "topic": "Radiation fog",
+  "stem": "Which conditions favor radiation fog at a launch site?",
+  "choices": [
+   "Overcast skies, strong wind, and a large temperature–dew point spread",
+   "Warm, moist air blowing in over colder ground from a nearby ocean",
+   "Clear skies, light wind, and a small temperature–dew point spread"
+  ],
+  "answer": 2,
+  "explanation": "Radiation fog forms over land on clear nights when light wind and moist air let radiational cooling bring the temperature down to the dew point. Warm, moist air moving over a colder surface describes advection fog instead.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Fog: Radiation Fog); FAA-H-8083-28B Ch. 18 (18.1.1.1.1 Radiation Fog)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-006",
+  "area": "WXT",
+  "topic": "Advection fog",
+  "stem": "Which type of fog forms when warm, moist air moves over a colder surface, and can persist even with winds of 10 to 15 knots?",
+  "choices": [
+   "Radiation fog",
+   "Advection fog",
+   "Steam fog"
+  ],
+  "answer": 1,
+  "explanation": "Advection fog depends on moist air moving horizontally over colder ground or water, so it forms with moderate wind and may last all day. Radiation fog needs light wind and usually burns off after sunrise, and steam fog is cold air moving over warmer water.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Fog: Advection Fog); FAA-H-8083-28B Ch. 18 (18.1.1.1.2 Advection Fog)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-007",
+  "area": "WXT",
+  "topic": "Temperature–dew point spread",
+  "stem": "At 5:30 a.m. the launch site has clear skies, calm wind, a temperature of 9°C, and a dew point of 8°C. What should the pilot anticipate?",
+  "choices": [
+   "Fog may form around sunrise, since the temperature often keeps falling until just after sunup.",
+   "Clearing conditions, because the spread will widen as soon as the sky begins to lighten.",
+   "Thunderstorms by midmorning, because such a small spread shows very moist, unstable air."
+  ],
+  "answer": 0,
+  "explanation": "Fog is most frequent when the temperature–dew point spread is less than about 1°C (2°F), and the day's minimum temperature usually occurs shortly after sunrise, which is why fog sometimes forms just after the sun rises. A small spread shows moisture, not instability.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Temperature/Dew Point Relationship; Fog Formation); FAA-H-8083-28B Ch. 5 (diurnal temperature: minimum shortly after sunrise)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "WXT-008",
+  "area": "WXT",
+  "topic": "Thunderstorm life cycle",
+  "stem": "Which stage of a thunderstorm cell begins when precipitation starts falling and downdrafts develop beside the updrafts?",
+  "choices": [
+   "The cumulus stage",
+   "The mature stage",
+   "The dissipating stage"
+  ],
+  "answer": 1,
+  "explanation": "The cumulus stage is dominated by updrafts; the mature stage begins with falling rain and downdrafts alongside the updrafts, and its hazards peak late in this stage. In the dissipating stage, downdrafts take over the whole cell.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Stages in Thunderstorm Development); FAA-H-8083-28B Ch. 22 (22.3 Thunderstorm Cell Life Cycle)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-009",
+  "area": "WXT",
+  "topic": "Gust front",
+  "stem": "From the launch site, a pilot sees a thunderstorm about 12 miles away and a line of blowing dust moving across the fields well ahead of it. The dust most likely marks",
+  "choices": [
+   "a sea breeze front, which will bring steady, light onshore winds for the rest of the morning.",
+   "a dust devil, a small whirlwind that will die out within a few minutes.",
+   "the gust front, where the storm's downdraft spreads out in sudden, strong, shifting winds."
+  ],
+  "answer": 2,
+  "explanation": "The storm's cool downdraft spreads along the surface as a gust front that can run up to 15 miles ahead of the rain, often marked by a line of dust. First gusts can exceed 75 knots and shift as much as 180°, so the flight should be cancelled or ended.",
+  "ref": "FAA-H-8083-28B Ch. 19 (19.2.1.1 Thunderstorms) and Ch. 22 (22.3); FAA-H-8083-11B Ch. 4 (Thunderstorms)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-010",
+  "area": "WXT",
+  "topic": "Cold front passage",
+  "stem": "What weather should a pilot expect as a typical cold front passes?",
+  "choices": [
+   "Steady light winds, with temperature and dew point rising gradually through the day",
+   "Calm winds and fog, with pressure continuing to fall for several hours after passage",
+   "Gusty, shifting winds, a quick drop in temperature and dew point, then rising pressure"
+  ],
+  "answer": 2,
+  "explanation": "During cold front passage, winds become variable and gusty, temperature and dew point drop rapidly, and pressure bottoms out and then rises. A gradual rise in temperature and dew point is more typical of a warm front.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Types of Fronts)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-011",
+  "area": "WXT",
+  "topic": "High-pressure systems",
+  "stem": "In the Northern Hemisphere, what conditions are generally found near the center of a high-pressure system?",
+  "choices": [
+   "Light winds flowing clockwise and outward, with sinking air and generally good weather",
+   "Strong, gusty winds flowing counterclockwise and inward, with rising air at the center",
+   "Increasing clouds and precipitation as air converges toward the center and rises"
+  ],
+  "answer": 0,
+  "explanation": "Air in a high flows out and down and circulates clockwise in the Northern Hemisphere, bringing light winds and fewer clouds, though early morning fog or haze can still occur. Counterclockwise, converging, rising air describes a low.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Pressure Systems; Wind Patterns)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-012",
+  "area": "WXT",
+  "topic": "Surface friction",
+  "stem": "The surface wind at the launch site is from 180° at 5 knots, while the wind at 3,000 feet AGL is from 230° at 20 knots. What best explains the difference?",
+  "choices": [
+   "The Coriolis force is strongest near the ground, so it turns the surface wind well to the left of the wind aloft.",
+   "Friction slows the surface wind, weakening the Coriolis effect, so the wind turns across the isobars toward low pressure.",
+   "Wind above 2,000 feet blows across the isobars, while wind near the surface blows parallel to them."
+  ],
+  "answer": 1,
+  "explanation": "Friction acts up to about 2,000 feet AGL; slower wind means less Coriolis deflection, so surface wind blows across the isobars at 10° to more than 45° and backs (turns counterclockwise) from the wind aloft. Above the friction layer the wind blows roughly parallel to the isobars, so it is the surface wind, not the wind aloft, that crosses them.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Atmospheric Circulation: Surface Friction); FAA-H-8083-28B Ch. 10 (10.3.3 Friction Force)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-013",
+  "area": "WXT",
+  "topic": "Sea and lake breeze",
+  "stem": "A balloonist is flying near a large lake on a sunny morning. As the day warms, what local wind should be expected?",
+  "choices": [
+   "An offshore wind toward the water, as the land heats faster than the water",
+   "An onshore wind from the water, as the land heats faster than the water",
+   "Calm wind, since surface heating stops local circulations"
+  ],
+  "answer": 1,
+  "explanation": "Daytime heating warms the land more than the water, so air rises over land and cooler air flows in from the water (a sea or lake breeze). At night the pattern reverses into an offshore land breeze.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Convective Currents); FAA-H-8083-28B Ch. 10 (10.6.1–10.6.3)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-014",
+  "area": "WXT",
+  "topic": "Katabatic flow",
+  "stem": "At a launch site on the floor of a mountain valley shortly before sunrise, the surface wind is most likely",
+  "choices": [
+   "flowing up the slopes as the sun begins to warm the valley floor.",
+   "calm everywhere, because air that cold is too dense to move until the sun warms it.",
+   "flowing downslope and down the valley as cold air drains from higher ground."
+  ],
+  "answer": 2,
+  "explanation": "At night, air over the slopes cools faster than air over the valley and drains downhill (a katabatic or mountain breeze). Upslope (anabatic, valley breeze) flow develops in daytime once the sun heats the slopes; drainage winds can push an envelope out of position during inflation.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Katabatic Winds) and Ch. 3 (Mountain Flying); FAA-H-8083-28B Ch. 10 (10.6.4, 10.6.6)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXT-015",
+  "area": "WXT",
+  "topic": "Signs of thermals",
+  "stem": "Late in a morning flight, which is the best early sign that thermal activity is starting?",
+  "choices": [
+   "Smoke from chimneys rises a short distance and then spreads out flat in a thin layer.",
+   "Ground fog that had been patchy begins to thicken in the low areas along a river.",
+   "The balloon climbs with no added heat, and its drift abruptly changes speed or direction."
+  ],
+  "answer": 2,
+  "explanation": "A climb with no burner input, or sudden changes in drift and a curving track, are the first signs of convection and mean the flight should end soon. Smoke flattening under a layer and thickening fog are signs of stable air.",
+  "ref": "FAA-H-8083-11B Ch. 4 (Turbulence: thermals) and Ch. 8 (Thermal Flight); FAA-P-8740-34 (Summer Safety in the Storm and Thermal Season)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-001",
+  "area": "OPS",
+  "topic": "Tank pressure",
+  "stem": "Two identical balloon fuel tanks have been sitting side by side at the same temperature. One is 80 percent full and the other is 20 percent full. How do their pressures compare?",
+  "choices": [
+   "The fuller tank is higher, because more liquid propane produces more pressure.",
+   "About the same; tank pressure depends on the liquid's temperature, not the amount of fuel.",
+   "The emptier tank is higher, because it has more space for propane vapor to build up."
+  ],
+  "answer": 1,
+  "explanation": "As long as a tank holds both liquid and vapor and no air, its pressure is set by the liquid's temperature. That is why cold weather, not low fuel quantity, is what reduces burner pressure.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Fig. 2-11 Propane Primer; Appendix A)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-002",
+  "area": "OPS",
+  "topic": "Propane temperature",
+  "stem": "On a 60°F morning, what is the temperature of the liquid propane inside a balloon's fuel tank?",
+  "choices": [
+   "About −44°F, the boiling point of propane",
+   "About 60°F, the same as the surrounding air",
+   "About 32°F, because pressurized propane is held near freezing"
+  ],
+  "answer": 1,
+  "explanation": "A common misconception is that stored propane is always at −44°F; in fact it is at ambient temperature, kept liquid by the pressure in the tank. Propane turns cold only as it vaporizes, which is why a leaking fitting can frost over.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Fig. 2-11 Propane Primer)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-003",
+  "area": "OPS",
+  "topic": "Nitrogen pressurization",
+  "stem": "On a very cold morning, why might a pilot add nitrogen to the fuel tanks, following the flight manual?",
+  "choices": [
+   "To raise tank pressure for proper fuel flow, since cold propane has low vapor pressure",
+   "To warm the propane so that it vaporizes more readily as it passes through the coil",
+   "To make a vapor-fed pilot light burn more reliably in very cold temperatures"
+  ],
+  "answer": 0,
+  "explanation": "Cold propane produces less pressure, and an inert gas such as nitrogen, added through a regulator, makes up the difference. It does not warm the fuel, and in vapor-fed pilot systems nitrogen can make the pilot light unreliable, so those balloons often use heat tapes or tank heaters instead.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Cold Weather Flying)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-004",
+  "area": "OPS",
+  "topic": "Blast valve technique",
+  "stem": "When less heat is wanted, why should the pilot shorten the burn rather than open the blast valve only partway?",
+  "choices": [
+   "A partly open valve sends vapor instead of liquid to the coil, which can put out the pilot light.",
+   "A partly open valve gives a soft, wide flame of unknown output that is less efficient.",
+   "A partly open valve actually uses more fuel per second than a fully open one."
+  ],
+  "answer": 1,
+  "explanation": "Burners are designed to run with the blast valve fully open for short periods; a partial opening yields an unknown fraction of the heat and a flame that can scorch the mouth fabric. Burns should start and end briskly, and even then four 1-second burns give less heat than one 4-second burn.",
+  "ref": "FAA-H-8083-11B Ch. 7 (The Standard Burn)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-005",
+  "area": "OPS",
+  "topic": "Whisper (liquid-fire) valve",
+  "stem": "What is true of the backup liquid-fire (whisper) valve fitted to many balloon burners?",
+  "choices": [
+   "It burns liquid propane without passing it through the coil, giving a quieter, less efficient flame.",
+   "It burns propane vapor drawn from the top of the tank to keep the pilot light lit if the main valve fails.",
+   "It sends propane through the coil twice, which makes the flame hotter as well as quieter."
+  ],
+  "answer": 0,
+  "explanation": "The liquid-fire valve burns liquid propane without passing it through the coil, giving a softer, quieter, less efficient flame. Pilots use it near livestock and houses, and it doubles as a backup to the main blast valve. CHECK: the coil-bypass detail comes from manufacturer manuals (e.g., Cameron burner supplement); the FAA handbook only names the system and says backups run at reduced efficiency.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Heater System, Fig. 2-7; backup systems p. 2-8) and Ch. 6 (Burner Check); burner manufacturer flight manual supplement",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "check",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-006",
+  "area": "OPS",
+  "topic": "Crew briefing",
+  "stem": "Which items should a pilot cover in the crew briefing before every flight, even with an experienced crew?",
+  "choices": [
+   "Expected flight length and direction, inflation positions and duties, and duties after equilibrium",
+   "Only the radio channel and meeting point, since an experienced crew already knows its duties",
+   "The passengers' names and weights, plus the fuel quantity remaining in each of the tanks"
+  ],
+  "answer": 0,
+  "explanation": "The Balloon Flying Handbook lists these items for every flight; the briefing can be shorter for a regular crew, but it is never skipped. The crew is the pilot's representative on the ground, and the pilot remains responsible for the whole operation.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Crew Briefing)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-007",
+  "area": "OPS",
+  "topic": "Pilot light failure",
+  "stem": "In a single-burner balloon, the pilot light goes out in flight and does not relight with the piezo igniter. What is an appropriate next step?",
+  "choices": [
+   "Open the blast valve fully and let the hot coil reignite the flame on its own.",
+   "Relight it with a striker, or crack the blast valve slightly and light the fuel, then land soon.",
+   "Shut off all fuel and make a cold descent, since the burner cannot be used without a pilot light."
+  ],
+  "answer": 1,
+  "explanation": "With a single burner, the pilot should relight using another ignition source, or light a slightly cracked blast valve or the backup system, and land soon. Opening the valve fully with no flame only sprays unburned propane, and shutting everything down gives up the one control the pilot still has.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Loss/Malfunction of Pilot Light)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-008",
+  "area": "OPS",
+  "topic": "Fuel-leak fire",
+  "stem": "A small fire breaks out at a leaking fuel fitting in the basket during flight. What should the pilot do first?",
+  "choices": [
+   "Shut off the fuel supply to that fitting.",
+   "Reach for the onboard fire extinguisher before touching any valves.",
+   "Make a long burn to climb, so the airflow blows the fire out."
+  ],
+  "answer": 0,
+  "explanation": "Virtually all in-flight fuel leaks, and the fires they feed, are handled by shutting off the fuel source; a small flame at a fitting can then be smothered with a gloved hand. Basket extinguishers are small, and reaching for one first wastes time while the leak keeps feeding the fire.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Fuel Leak) and Ch. 2 (Miscellaneous Items: Fire extinguisher)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-009",
+  "area": "OPS",
+  "topic": "Unavoidable power line contact",
+  "stem": "Despite the pilot's efforts, contact with the power lines ahead now appears unavoidable. What is the best course of action?",
+  "choices": [
+   "Shut off fuel and pilot lights and vent to descend fast, so any contact is with the envelope, not the cables or basket.",
+   "Make a long burn to try to clear the wires, keeping the pilot lights burning in case a second burn is needed.",
+   "Hold level flight so the basket meets the wires first and the envelope is kept intact."
+  ],
+  "answer": 0,
+  "explanation": "Contact at the suspension cables or basket can sever the cables, rupture fuel lines, or electrocute occupants touching metal, while contact high on the envelope is far less hazardous. The FAA's balloon safety pamphlet calls venting the safer decision, because a pilot can rarely be certain that a climb will clear the wires.",
+  "ref": "FAA-P-8740-34 (Powerlines and Thunderstorms); balloon flight manual emergency procedures",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-010",
+  "area": "OPS",
+  "topic": "Launch site and obstacles",
+  "stem": "With a 6-knot surface wind blowing toward a power line, at least how far upwind of the line should the balloon be placed for launch?",
+  "choices": [
+   "60 feet",
+   "300 feet",
+   "600 feet"
+  ],
+  "answer": 2,
+  "explanation": "The guideline is at least 100 feet of clearance for each knot of wind, so 6 knots calls for 600 feet or more. This leaves time to climb well above the wires; the FAA's safety pamphlet also recommends crossing power lines while climbing, with several hundred feet of vertical clearance.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Launch Site: Location and Obstacles); FAA-P-8740-34",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-011",
+  "area": "OPS",
+  "topic": "Passenger landing position",
+  "stem": "In a normal pre-landing briefing, how should passengers be told to stand?",
+  "choices": [
+   "Facing sideways to the direction of travel, feet spread apart for balance, knees locked",
+   "Facing the direction of travel, feet and knees together, knees bent, holding on tightly",
+   "Facing the direction of travel, one foot in front of the other, braced against the basket wall"
+  ],
+  "answer": 1,
+  "explanation": "Feet together and knees bent let the legs act as springs in every direction, and facing forward avoids sideways strain on knees and hips. One foot forward tends to lock the front knee, and the word 'brace' is avoided because it suggests stiff, locked legs.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Passenger Briefings & Management); Ch. 6 (Passenger Briefing)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-012",
+  "area": "OPS",
+  "topic": "High-wind landing",
+  "stem": "Which procedure follows FAA guidance for a high-wind landing?",
+  "choices": [
+   "Approach the far end of the field so the crew has time to reach the balloon before it touches down.",
+   "Wait to brief the passengers until after touchdown, so they stay relaxed during the approach.",
+   "Approach the near end of a large field low, shut down the fuel once committed, and vent to control ground travel."
+  ],
+  "answer": 2,
+  "explanation": "The handbook calls for a low approach to the near end of a large field, a second passenger briefing, fuel valves off, lines drained, pilot lights out, and timely use of the deflation vent. At 15 mph a balloon covers about 220 feet in the 10 seconds it takes to respond to a burn, so landing long leaves little room for error.",
+  "ref": "FAA-H-8083-11B Ch. 8 (High-Wind Landing)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-013",
+  "area": "OPS",
+  "topic": "Envelope damage",
+  "stem": "During cold inflation, the pilot finds a small tear in the envelope fabric. The balloon may be flown only if",
+  "choices": [
+   "the damage is within the manufacturer's allowable damage limits in the flight manual.",
+   "the tear is below the equator, where the fabric carries the least stress in flight.",
+   "the tear is smaller than the pilot's hand and long burns are avoided for the flight."
+  ],
+  "answer": 0,
+  "explanation": "Each manufacturer publishes the maximum damage with which its balloon remains airworthy, and the pilot checks the envelope against those limits during the preflight inspection. Rules of thumb about a tear's size or location are no substitute for the flight manual.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Preflight Inspection Checklist; The Inflation)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-014",
+  "area": "OPS",
+  "topic": "Tethered flight",
+  "stem": "Which statement about tethering a type-certificated hot air balloon is correct?",
+  "choices": [
+   "It is conducted under 14 CFR part 101, so no pilot certificate is required to do it.",
+   "It requires a certificated pilot, follows 14 CFR part 91, and is often harder than free flight.",
+   "It is a low-workload operation, since the tether lines hold the balloon in one place."
+  ],
+  "answer": 1,
+  "explanation": "The handbook calls the belief that tethers fall under part 101 a popular misconception: part 91 applies, and a certificated pilot is required. Tethering puts loads on the balloon it was not designed to carry in free flight and can demand hours of precise flying in changing wind.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Tethering/Mooring)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-015",
+  "area": "OPS",
+  "topic": "Landowner relations",
+  "stem": "A pilot finds a good launch field on private property but cannot locate the landowner. What should the pilot do?",
+  "choices": [
+   "Pick another site, or ask neighbors how to reach the owner, rather than launching without permission.",
+   "Launch anyway and quickly, since a balloon launch does no lasting damage to a field.",
+   "Launch, then leave a business card on the gate so the landowner can call if there is a problem."
+  ],
+  "answer": 0,
+  "explanation": "A pilot and crew should never assume the right to use private property; doing so exposes everyone to trespass laws and harms relations with landowners. If no one can be found, the handbook advises choosing another site or asking neighbors.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Landowner Relations)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "DAC-001",
+  "area": "DAC",
+  "topic": "Density altitude, hot day",
+  "stem": "(Refer to the density altitude chart.) A launch site is at 2,600 feet MSL. The altimeter setting is 29.70 and the outside air temperature is 32°C (90°F). What is the approximate density altitude?",
+  "choices": [
+   "2,800 feet",
+   "5,500 feet",
+   "6,600 feet"
+  ],
+  "answer": 1,
+  "explanation": "Pressure altitude is 2,600 + 205 = 2,805 feet, where standard temperature is about 9°C; at 32°C the air is about 23° warmer than standard, which adds about 2,700 feet for a density altitude near 5,500 feet. 2,800 feet is only the pressure altitude, and 6,600 feet comes from multiplying the full 32°C by 120 instead of the difference from standard.",
+  "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": "density-altitude",
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "elev": 2600,
+  "alt": 29.7,
+  "oat": 32,
+  "checked": "confirmed"
+ },
+ {
+  "id": "DAC-002",
+  "area": "DAC",
+  "topic": "Density altitude, cold day",
+  "stem": "(Refer to the density altitude chart.) On a winter morning the launch site is at 4,800 feet MSL. The altimeter setting is 30.30 and the outside air temperature is −10°C (14°F). What is the approximate density altitude?",
+  "choices": [
+   "2,500 feet",
+   "4,500 feet",
+   "6,400 feet"
+  ],
+  "answer": 0,
+  "explanation": "Pressure altitude is 4,800 − 348 = 4,452 feet, where standard temperature is about 6°C; at −10°C the air is about 16° colder than standard, which subtracts about 1,900 feet, giving about 2,500 feet. 4,500 feet is the pressure altitude, and 6,400 feet adds the temperature correction instead of subtracting it.",
+  "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": "density-altitude",
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "elev": 4800,
+  "alt": 30.3,
+  "oat": -10,
+  "checked": "confirmed"
+ },
+ {
+  "id": "DAC-003",
+  "area": "DAC",
+  "topic": "Density altitude, mountain site",
+  "stem": "(Refer to the density altitude chart.) A mountain launch site is at 7,200 feet MSL. The altimeter setting is 29.50 and the outside air temperature is 25°C (77°F). What is the approximate density altitude?",
+  "choices": [
+   "7,600 feet",
+   "9,600 feet",
+   "10,600 feet"
+  ],
+  "answer": 2,
+  "explanation": "Pressure altitude is 7,200 + 392 = 7,592 feet, where standard temperature is about 0°C; at 25°C the air is about 25° warmer than standard, which adds about 3,000 feet for roughly 10,600 feet. 7,600 feet is the pressure altitude, and 9,600 feet results from subtracting the altimeter correction instead of adding it.",
+  "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+  "figure": "density-altitude",
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "elev": 7200,
+  "alt": 29.5,
+  "oat": 25,
+  "checked": "confirmed"
+ }
+]

@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: question card on the left, chart workbench on the right; stacked on phones. Chart colors echo an FAA figure: pale paper, green grid, red standard line. */
+/* Layout: one page per question. Question card left, chart workbench right when the question has a figure; a single centered column when it does not. */
 :root{
   --bg:#e9efec; --surface:#fbfcfa; --ink:#14263a; --muted:#566775; --line:#c6d2cd;
   --paper:#fdfefb; --grid:#d5e5dc; --grid-major:#a8c8b6; --pa:#2b4b60; --isa:#c62f28;
   --hl:#d98300; --user:#1d5ed4; --guide:#a1269a; --good:#1b7d4c; --bad:#bf3a2c;
-  --good-bg:#e2f3ea; --bad-bg:#f9e6e3; --chip:#e3ebe7;
+  --good-bg:#e2f3ea; --bad-bg:#f9e6e3; --chip:#e3ebe7; --flag:#d98300;
   --f-display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-num:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -22,53 +22,91 @@
   --bg:#0e161c; --surface:#15212a; --ink:#e4ecf1; --muted:#94a6b3; --line:#2a3b47;
   --paper:#101b22; --grid:#1b2f2c; --grid-major:#2c4a43; --pa:#a9c3d6; --isa:#ff6a5c;
   --hl:#ffb12e; --user:#6ea6ff; --guide:#e57ddc; --good:#4cc48b; --bad:#ff7d6e;
-  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; color-scheme:dark}}
+  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0e161c; --surface:#15212a; --ink:#e4ecf1; --muted:#94a6b3; --line:#2a3b47;
   --paper:#101b22; --grid:#1b2f2c; --grid-major:#2c4a43; --pa:#a9c3d6; --isa:#ff6a5c;
   --hl:#ffb12e; --user:#6ea6ff; --guide:#e57ddc; --good:#4cc48b; --bad:#ff7d6e;
-  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; color-scheme:dark}
+  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{background:var(--bg);margin:0}
 body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:14px 32px}
-.wrap{max-width:1180px;margin-inline:auto;display:flex;flex-direction:column;gap:16px}
+.wrap{max-width:1180px;margin-inline:auto;display:flex;flex-direction:column;gap:14px}
 header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px}
 .brand svg{width:30px;height:30px;flex:none}
 h1{font-family:var(--f-display);font-weight:700;font-size:1.65rem;letter-spacing:.01em;margin:0;line-height:1.1}
-.tag{font-family:var(--f-display);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-.lede{margin:0;color:var(--muted);max-width:68ch}
-.grid{display:grid;grid-template-columns:minmax(0,370px) minmax(0,1fr);gap:16px;align-items:start}
+h2{font-family:var(--f-display);font-weight:700;font-size:1.4rem;margin:0 0 6px;text-wrap:balance}
+.modes{display:flex;gap:4px;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:3px}
+.mode{font-family:var(--f-display);font-weight:600;font-size:.95rem;color:var(--ink);background:transparent;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+.mode[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{font-family:var(--f-display);font-weight:600;font-size:.88rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 11px;cursor:pointer}
+.chip span{color:var(--muted);font-family:var(--f-num);font-size:.78rem;margin-left:4px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip[aria-pressed="true"] span{color:var(--surface)}
+.grid{display:grid;grid-template-columns:minmax(0,390px) minmax(0,1fr);gap:16px;align-items:start}
+body.nofig .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 @media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
-.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.dots{display:flex;gap:6px}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--chip);border:1px solid var(--line)}
-.dot.cur{outline:2px solid var(--ink);outline-offset:1px}
-.dot.ok{background:var(--good);border-color:var(--good)} .dot.no{background:var(--bad);border-color:var(--bad)}
-.qtext{margin:12px 0 10px;font-size:1.04rem}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.navbtn{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
+.navbtn svg{width:14px;height:14px}
+.meta{font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.flagbtn{display:flex;align-items:center;gap:5px;font-family:var(--f-display);font-weight:600;font-size:.9rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
+.flagbtn svg{width:14px;height:14px}
+.flagbtn[aria-pressed="true"]{color:var(--flag);border-color:var(--flag)}
+.timer{font-family:var(--f-num);font-size:.85rem;color:var(--muted)}
+.navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:5px;margin-top:12px;max-height:46vh;overflow-y:auto;padding:2px}
+.nq{position:relative;font-family:var(--f-num);font-size:.8rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 0;cursor:pointer}
+.nq.ans{background:var(--chip);border-color:var(--muted)}
+.nq.ok{background:var(--good-bg);border-color:var(--good);color:var(--good)}
+.nq.no{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.nq.cur{outline:2px solid var(--ink);outline-offset:1px}
+.nq.fl::after{content:"";position:absolute;top:2px;right:2px;width:7px;height:7px;border-radius:50%;background:var(--flag)}
+.navlegend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--muted);margin-top:8px}
+.qtext{margin:10px 0 12px;font-size:1.06rem;white-space:pre-line}
 .qref{font-family:var(--f-display);font-weight:600;color:var(--muted);font-size:.9rem;letter-spacing:.02em}
 .given{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:4px}
 .given li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:4px 0}
 .given span:last-child{font-family:var(--f-num);font-variant-numeric:tabular-nums}
 .choices{display:grid;gap:8px}
-.choice{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
-.choice b{font-family:var(--f-display);font-size:1.05rem;width:1.2em}
-.choice .v{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.choice{display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+.choice b{font-family:var(--f-display);font-size:1.05rem;width:1.2em;flex:none}
 .choice:hover:not([disabled]){border-color:var(--ink)}
 .choice[disabled]{cursor:default}
+.choice.picked{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
 .choice.right{border-color:var(--good);background:var(--good-bg)}
 .choice.wrong{border-color:var(--bad);background:var(--bad-bg)}
-.fb{margin:12px 0 0;min-height:1.5em}
-.fb.ok{color:var(--good)} .fb.no{color:var(--bad)}
+.fb{margin:12px 0 0;display:grid;gap:6px}
+.fb .verdict{font-weight:700}
+.fb .verdict.ok{color:var(--good)} .fb .verdict.no{color:var(--bad)}
+.fb .refl{font-size:.88rem;color:var(--muted)}
 .row-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .btn{font-family:var(--f-display);font-weight:600;font-size:.98rem;letter-spacing:.02em;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:7px;padding:8px 14px;cursor:pointer}
 .btn:hover:not([disabled]){border-color:var(--ink)}
 .btn[disabled]{opacity:.45;cursor:default}
 .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
-.score{margin-top:12px;color:var(--muted);font-size:.9rem}
-button:focus-visible{outline:2px solid var(--user);outline-offset:2px}
+.small{color:var(--muted);font-size:.88rem;margin:10px 0 0}
+.kbd{font-family:var(--f-num);font-size:.78rem;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+button:focus-visible,textarea:focus-visible{outline:2px solid var(--user);outline-offset:2px}
+.grader{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:8px}
+.badge{display:inline-block;font-family:var(--f-display);font-weight:700;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid}
+.badge.check{color:var(--flag);border-color:var(--flag)} .badge.high{color:var(--good);border-color:var(--good)}
+.checknote{font-size:.9rem;color:var(--flag)}
+textarea{font:inherit;font-size:.92rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:8px;width:100%;min-height:64px;resize:vertical}
+.gbtn[aria-pressed="true"].okv{background:var(--good);border-color:var(--good);color:var(--surface)}
+.gbtn[aria-pressed="true"].fixv{background:var(--bad);border-color:var(--bad);color:var(--surface)}
+/* results */
+.results{max-width:760px;margin-inline:auto;width:100%}
+.big{font-family:var(--f-display);font-weight:700;font-size:3rem;line-height:1}
+.pass{color:var(--good)} .fail{color:var(--bad)}
+.areas{width:100%;border-collapse:collapse;margin-top:12px;font-size:.95rem}
+.areas td,.areas th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+.areas td:last-child,.areas th:last-child{text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.meter{height:6px;background:var(--chip);border-radius:3px;overflow:hidden;min-width:60px}
+.meter i{display:block;height:100%;background:var(--good)}
 /* chart workbench */
 .bench{display:flex;flex-direction:column;gap:10px;padding:12px}
 .tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -97,7 +135,7 @@ canvas.draw{cursor:crosshair}
 .trow.on{background:var(--hl);color:var(--paper)}
 .tbl .th{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);padding:0 6px 4px}
 footer{color:var(--muted);font-size:.85rem;max-width:80ch}
-/* full-screen chart */
+footer button{font:inherit;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0}
 body.max{overflow:hidden}
 body.max .bench{position:fixed;inset:0;z-index:20;border-radius:0;border:0;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 10px) 12px calc(env(safe-area-inset-bottom,0px) + 12px)}
 body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
@@ -105,32 +143,53 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 </style>
 </head>
 <body>
-
 <div class="wrap">
   <header>
     <div class="brand">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C9.4 2 5 7 5 12.6c0 5.2 5 9.3 8 12.4h6c3-3.1 8-7.2 8-12.4C27 7 22.6 2 16 2z" fill="var(--isa)"/><path d="M16 2c-3 0-5 5-5 10.6 0 5 2 9.4 2 12.4h6c0-3 2-7.4 2-12.4C21 7 19 2 16 2z" fill="var(--hl)"/><rect x="12.5" y="26" width="7" height="4.5" rx="1" fill="var(--pa)"/></svg>
       <h1>Balloon Written Prep</h1>
     </div>
-    <span class="tag">Prototype · density altitude</span>
+    <div class="modes" role="group" aria-label="Mode">
+      <button class="mode" id="mStudy" aria-pressed="true">Study</button>
+      <button class="mode" id="mTest" aria-pressed="false">Practice test</button>
+    </div>
   </header>
-  <p class="lede">Practice questions on a chart you can actually work: it stays sharp at any zoom, the axis numbers follow you, you can tap a line to highlight it, and you can draw straight lines right on it.</p>
 
-  <div class="grid">
-    <section class="card" aria-labelledby="qtitle">
-      <div class="qhead"><span id="qtitle">Question 1 of 4</span><div class="dots" id="dots"></div></div>
-      <p class="qtext"><span class="qref">(Refer to the density altitude chart.)</span> <span id="qbody"></span></p>
-      <ul class="given" id="given"></ul>
-      <div class="choices" id="choices"></div>
-      <p class="fb" id="fb" aria-live="polite"></p>
-      <div class="row-btns">
-        <button class="btn" id="how" disabled>Show me on the chart</button>
+  <div class="bar" id="filters" aria-label="Filter questions"></div>
+
+  <section class="card results" id="testStart" hidden>
+    <h2>Commercial balloon practice test</h2>
+    <p id="tsText" style="margin:0 0 6px"></p>
+    <p class="small">No answers are shown until you finish. Flag anything you want to come back to, and use the question grid to jump around. Your progress is saved on this device.</p>
+    <div class="row-btns"><button class="btn primary" id="tsGo">Start test</button><button class="btn" id="tsResume" hidden>Resume test in progress</button></div>
+  </section>
+
+  <section class="card results" id="results" hidden></section>
+
+  <div class="grid" id="main">
+    <section class="card" aria-label="Question">
+      <div class="qhead">
+        <button class="navbtn" id="navToggle" aria-expanded="false"><span id="qpos">1 of 1</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l5 5 5-5"/></svg></button>
+        <span class="timer" id="timer" hidden></span>
+        <button class="flagbtn" id="flag" aria-pressed="false"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h1.5v14H3zM5 2h8l-2 3 2 3H5z"/></svg>Flag</button>
       </div>
+      <div id="navPanel" hidden>
+        <div class="navgrid" id="navgrid"></div>
+        <div class="navlegend"><span>■ answered</span><span style="color:var(--good)">■ right</span><span style="color:var(--bad)">■ wrong</span><span style="color:var(--flag)">● flagged</span></div>
+      </div>
+      <div class="meta" id="meta"></div>
+      <p class="qtext"><span class="qref" id="qfig"></span><span id="qbody"></span></p>
+      <ul class="given" id="given" hidden></ul>
+      <div class="choices" id="choices"></div>
+      <div class="fb" id="fb" aria-live="polite"></div>
+      <div class="row-btns" id="howRow" hidden><button class="btn" id="how">Show me on the chart</button></div>
+      <div class="grader" id="grader" hidden></div>
       <div class="row-btns">
         <button class="btn" id="prev">Previous</button>
-        <button class="btn primary" id="next">Next question</button>
+        <button class="btn primary" id="next">Next</button>
+        <button class="btn" id="finish" hidden>Finish test</button>
       </div>
-      <p class="score" id="score"></p>
+      <p class="small" id="foot"></p>
     </section>
 
     <section class="card bench" id="bench" aria-label="Chart workbench">
@@ -174,11 +233,162 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
     </section>
   </div>
 
-  <footer>Prototype, October 2026. The chart is redrawn from the standard-atmosphere rule of thumb (density altitude ≈ pressure altitude + 120 ft for every °C above standard temperature), so it reads close to FAA Figure 8 but is not a copy of it. The questions are original practice questions, not FAA test questions.</footer>
+  <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is redrawn from the standard-atmosphere rule of thumb (about 120 ft for every °C above standard temperature), so it reads close to FAA Figure 8 but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
 </div>
 
 <script>
 (function(){
+// ---------- data ----------
+const FILES=['questions/pilot-1.json','questions/pilot-2.json'];
+const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
+const AREA=Object.fromEntries(AREAS);
+const BLUEPRINT={REG:22,AIR:10,WXS:12,ADM:5,THY:18,WXT:15,OPS:15,DAC:3};
+const BUILTIN=[
+ {id:'DAC-S01',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) You are planning a launch from a field at 4,500 ft MSL. Altimeter 30.10, temperature 30°C (86°F). What is the approximate density altitude?',choices:['4,300 ft','6,100 ft','7,200 ft'],answer:2,explanation:'Pressure altitude is 4,500 − 165 = 4,335 ft. Going up from 30°C to that line and across gives about 7,200 ft. 4,300 ft is only the pressure altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:4500,alt:30.10,oat:30,difficulty:2,confidence:'high'},
+ {id:'DAC-S02',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) Morning launch site near Temecula, elevation 1,200 ft MSL, altimeter 29.80, temperature 35°C (95°F). What is the approximate density altitude?',choices:['1,300 ft','4,000 ft','5,200 ft'],answer:1,explanation:'Pressure altitude is 1,200 + 112 = 1,312 ft. At 35°C that line reads about 4,000 ft. 1,300 ft is the pressure altitude, not the density altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:1200,alt:29.80,oat:35,difficulty:2,confidence:'high'},
+ {id:'DAC-S03',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A mountain launch site at 6,000 ft MSL, altimeter 29.50, temperature 20°C (68°F). What is the approximate density altitude?',choices:['8,500 ft','6,400 ft','9,800 ft'],answer:0,explanation:'Pressure altitude is 6,000 + 392 = 6,392 ft. At 20°C that line reads about 8,500 ft. 6,400 ft is the pressure altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:6000,alt:29.50,oat:20,difficulty:2,confidence:'high'},
+ {id:'DAC-S04',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A cold winter morning at a site 3,000 ft MSL, altimeter 30.40, temperature −5°C (23°F). What is the approximate density altitude?',choices:['3,600 ft','2,560 ft','800 ft'],answer:2,explanation:'Pressure altitude is 3,000 − 440 = 2,560 ft. It is about 15°C colder than standard, so density altitude drops to about 800 ft, well below the field elevation.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:3000,alt:30.40,oat:-5,difficulty:3,confidence:'high'},
+];
+let BANK=[];
+const byId={};
+const GRADE=location.hash==='#grade';
+
+// ---------- saved progress ----------
+const KEY='bwp-v1';
+let S={study:{},flags:{},test:null,grade:{}};
+try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw));}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+// ---------- view state ----------
+let mode='study',filter='ALL',list=[],pos=0,tick=null;
+const $=id=>document.getElementById(id);
+const L='ABC';
+const cur=()=>byId[list[pos]];
+const cleanExp=t=>GRADE?t:String(t||'').replace(/\s*CHECK:.*$/s,'');
+
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function buildTest(){const pool={};BANK.forEach(q=>(pool[q.area]=pool[q.area]||[]).push(q.id));Object.values(pool).forEach(shuffle);
+  if(BANK.length<=100)return shuffle(BANK.map(q=>q.id));
+  const pick=[];Object.entries(BLUEPRINT).forEach(([a,n])=>{pick.push(...(pool[a]||[]).splice(0,n));});
+  const rest=shuffle(Object.values(pool).flat());while(pick.length<100&&rest.length)pick.push(rest.pop());return shuffle(pick);}
+
+function studyList(){let qs=BANK;
+  if(filter==='FLAG')qs=qs.filter(q=>S.flags[q.id]);
+  else if(filter==='MISS')qs=qs.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer);
+  else if(filter==='NEW')qs=qs.filter(q=>S.study[q.id]===undefined);
+  else if(filter==='UNGRADED')qs=qs.filter(q=>!S.grade[q.id]);
+  else if(filter!=='ALL')qs=qs.filter(q=>q.area===filter);
+  return qs.map(q=>q.id);}
+
+// what the learner picked for a question in the current context
+function picked(id){if(mode==='study')return S.study[id];if(S.test)return S.test.answers[id];}
+function revealed(id){if(GRADE)return true;if(mode==='study')return S.study[id]!==undefined;return mode==='review';}
+
+// ---------- rendering ----------
+function renderFilters(){const f=$('filters');f.innerHTML='';if(mode!=='study'){f.hidden=true;return;}f.hidden=false;
+  const counts={};BANK.forEach(q=>counts[q.area]=(counts[q.area]||0)+1);
+  const opts=[['ALL','All',BANK.length],...AREAS.filter(([k])=>counts[k]).map(([k,n])=>[k,n,counts[k]]),['NEW','Not tried',BANK.filter(q=>S.study[q.id]===undefined).length],['MISS','Missed',BANK.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer).length],['FLAG','Flagged',BANK.filter(q=>S.flags[q.id]).length]];
+  if(GRADE)opts.push(['UNGRADED','Ungraded',BANK.filter(q=>!S.grade[q.id]).length]);
+  opts.forEach(([k,n,c])=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',String(filter===k));b.innerHTML=`${n}<span>${c}</span>`;b.onclick=()=>{filter=k;list=studyList();pos=0;renderAll();};f.appendChild(b);});
+  if(GRADE){const g=Object.values(S.grade);const b=document.createElement('button');b.className='chip';b.textContent=`Copy grading notes (${g.length} graded)`;b.onclick=copyNotes;f.appendChild(b);}
+}
+function renderNav(){const g=$('navgrid');g.innerHTML='';list.forEach((id,i)=>{const q=byId[id],p=picked(id),b=document.createElement('button');
+  let c='nq';if(p!==undefined)c+=(revealed(id)&&!GRADE)?(p===q.answer?' ok':' no'):' ans';if(S.flags[id])c+=' fl';if(i===pos)c+=' cur';
+  if(GRADE&&S.grade[id])c+=S.grade[id].v==='ok'?' ok':' no';
+  b.className=c;b.textContent=i+1;b.title=id;b.onclick=()=>go(i);g.appendChild(b);});}
+
+function renderQ(){
+  const q=cur();$('main').hidden=!q;if(!q){return;}
+  const fig=q.figure==='density-altitude';document.body.classList.toggle('nofig',!fig);$('bench').hidden=!fig;
+  $('qpos').textContent=`${pos+1} of ${list.length}`;
+  $('meta').textContent=`${q.id} · ${AREA[q.area]||q.area}${q.topic?' · '+q.topic:''}`;
+  $('qbody').textContent=q.stem;$('qfig').textContent='';
+  const g=$('given');if(fig&&q.elev!==undefined){g.hidden=false;g.innerHTML=`<li><span>Field elevation</span><span>${fmt(q.elev)} ft MSL</span></li><li><span>Altimeter setting</span><span>${(+q.alt).toFixed(2)} in Hg</span></li><li><span>Outside air temperature</span><span>${q.oat}°C (${toF(q.oat).toFixed(0)}°F)</span></li>`;}else g.hidden=true;
+  $('mini').textContent=fig&&q.elev!==undefined?`${q.id} · elev ${fmt(q.elev)} ft · altimeter ${(+q.alt).toFixed(2)} · OAT ${q.oat}°C (${toF(q.oat).toFixed(0)}°F)`:q.id;
+  const p=picked(q.id),rev=revealed(q.id),box=$('choices');box.innerHTML='';
+  q.choices.forEach((t,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML=`<b>${L[i]}</b><span></span>`;b.lastChild.textContent=t;
+    if(rev){b.disabled=mode!=='test'||GRADE?true:false;if(i===q.answer)b.classList.add('right');else if(i===p)b.classList.add('wrong');}
+    else if(i===p)b.classList.add('picked');
+    if(mode==='review'||(mode==='study'&&rev)||GRADE)b.disabled=true;
+    b.onclick=()=>answer(i);box.appendChild(b);});
+  const fb=$('fb');fb.innerHTML='';
+  if(rev){const ok=p===q.answer;
+    if(!GRADE){const v=document.createElement('div');v.className='verdict '+(p===undefined?'':ok?'ok':'no');v.textContent=p===undefined?`Not answered. The answer is ${L[q.answer]}.`:ok?'Correct.':`Not this time. The answer is ${L[q.answer]}.`;fb.appendChild(v);}
+    const e=document.createElement('div');e.textContent=cleanExp(q.explanation);fb.appendChild(e);
+    if(q.ref){const r=document.createElement('div');r.className='refl';r.textContent='Reference: '+q.ref;fb.appendChild(r);}}
+  $('howRow').hidden=!(fig&&q.elev!==undefined&&rev);
+  $('flag').setAttribute('aria-pressed',String(!!S.flags[q.id]));
+  $('prev').disabled=pos===0;$('next').disabled=pos>=list.length-1;
+  $('finish').hidden=mode!=='test';
+  $('timer').hidden=mode!=='test';
+  renderGrader(q);
+  const done=list.filter(id=>picked(id)!==undefined).length;
+  if(mode==='study'){const right=list.filter(id=>S.study[id]===byId[id].answer).length;$('foot').textContent=done?`${right} of ${done} right in this set.`:'Pick an answer to see the explanation.';}
+  else if(mode==='test')$('foot').textContent=`${done} of ${list.length} answered · ${list.filter(id=>S.flags[id]).length} flagged`;
+  else $('foot').textContent='Reviewing your test. Answers are locked.';
+  renderNav();
+  if(fig){marksKey=q.id;readoutIdle();req();}
+}
+function renderGrader(q){const el=$('grader');if(!GRADE){el.hidden=true;return;}el.hidden=false;const g=S.grade[q.id]||{};
+  const chk=/CHECK:(.*)$/s.exec(q.explanation||'');
+  el.innerHTML=`<div><span class="badge ${q.confidence==='check'?'check':'high'}">${q.confidence==='check'?'Writer unsure':'Writer verified'}</span> <span class="small">difficulty ${q.difficulty||'?'}</span></div>${chk?`<div class="checknote"></div>`:''}<div class="row-btns" style="margin-top:0"><button class="btn gbtn okv" id="gOk" aria-pressed="${g.v==='ok'}">Looks good</button><button class="btn gbtn fixv" id="gFix" aria-pressed="${g.v==='fix'}">Needs a fix</button></div><textarea id="gNote" placeholder="What needs fixing? (saved on this device)"></textarea>`;
+  if(chk)el.querySelector('.checknote').textContent='Check: '+chk[1].trim();
+  $('gNote').value=g.note||'';
+  const set=v=>{S.grade[q.id]={v,note:$('gNote').value};save();renderGrader(q);renderNav();renderFilters();};
+  $('gOk').onclick=()=>set('ok');$('gFix').onclick=()=>set('fix');
+  $('gNote').oninput=()=>{const x=S.grade[q.id]||{v:'fix'};x.note=$('gNote').value;S.grade[q.id]=x;save();};}
+function copyNotes(){const lines=[];BANK.forEach(q=>{const g=S.grade[q.id];if(g)lines.push(`${q.id}: ${g.v==='ok'?'OK':'FIX'}${g.note?' — '+g.note.replace(/\s+/g,' '):''}`);});
+  const text=lines.join('\n')||'No questions graded yet.';
+  const done=()=>{const b=[...document.querySelectorAll('.chip')].pop();if(b){b.textContent='Copied. Paste it to Claude.';}};
+  if(navigator.clipboard)navigator.clipboard.writeText(text).then(done,()=>fallbackCopy(text,done));else fallbackCopy(text,done);}
+function fallbackCopy(text,done){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}t.remove();}
+
+function answer(i){const q=cur();if(GRADE||mode==='review')return;
+  if(mode==='study'){if(S.study[q.id]!==undefined)return;S.study[q.id]=i;}
+  else if(mode==='test'){S.test.answers[q.id]=i;}
+  save();renderQ();if(mode==='study')renderFilters();}
+function go(i){if(i<0||i>=list.length)return;if(walk)endWalk();pos=i;selPA=null;cross=null;selRow=null;paintRows();renderQ();view={...FULL};req();
+  if(mode==='test'){S.test.pos=i;save();}
+  if(!$('navPanel').hidden&&window.innerWidth<860)$('navPanel').hidden=true,$('navToggle').setAttribute('aria-expanded','false');
+  window.scrollTo({top:Math.min(window.scrollY,$('main').offsetTop-8),behavior:'auto'});}
+
+function renderAll(){
+  $('mStudy').setAttribute('aria-pressed',String(mode==='study'));$('mTest').setAttribute('aria-pressed',String(mode!=='study'));
+  renderFilters();
+  const showStart=mode==='test'&&!S.test?.started;
+  $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
+  $('main').hidden=mode==='teststart'||mode==='results'||!list.length;
+  if(mode==='teststart'){const n=Math.min(100,BANK.length);$('tsText').textContent=`${n} questions drawn from the ${BANK.length}-question bank in the same mix of areas as the real test. You need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
+  if(mode==='results')renderResults();
+  if(!$('main').hidden)renderQ();
+  clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
+}
+function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=ids.filter(id=>T.answers[id]===byId[id]?.answer).length,pct=Math.round(right/ids.length*100),pass=pct>=70;
+  const by={};ids.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
+  const secs=Math.floor(((T.end||Date.now())-T.start)/1000);
+  el.innerHTML=`<h2>Practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':'Below the 70% passing score'} · ${Math.floor(secs/60)} min</p>
+   <table class="areas"><thead><tr><th>Area</th><th></th><th>Score</th></tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td></tr>`;}).join('')}</tbody></table>
+   <div class="row-btns"><button class="btn primary" id="rMiss">Review missed (${ids.length-right})</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button></div>`;
+  $('rMiss').onclick=()=>{list=ids.filter(id=>T.answers[id]!==byId[id]?.answer);pos=0;mode='review';renderAll();};
+  $('rAll').onclick=()=>{list=ids.slice();pos=0;mode='review';renderAll();};
+  $('rNew').onclick=()=>{mode='teststart';renderAll();};}
+
+$('mStudy').onclick=()=>{mode='study';list=studyList();pos=0;renderAll();};
+$('mTest').onclick=()=>{if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';renderAll();};
+$('tsGo').onclick=()=>{S.test={list:buildTest(),answers:{},start:Date.now(),pos:0,done:false};save();mode='test';list=S.test.list;pos=0;renderAll();};
+$('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
+$('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
+  if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
+  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();save();mode='results';renderAll();window.scrollTo(0,0);};
+$('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);
+$('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
+$('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));};
+$('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
+document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||$('main').hidden)return;const k=e.key.toLowerCase();
+  if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k));}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
+  else if(k==='escape'&&document.body.classList.contains('max'))toggleMax(false);});
+
+// ---------- chart (density altitude) ----------
 const TABLE=[[28.0,1824],[28.1,1727],[28.2,1630],[28.3,1533],[28.4,1436],[28.5,1340],[28.6,1244],[28.7,1148],[28.8,1053],[28.9,957],[29.0,863],[29.1,768],[29.2,673],[29.3,579],[29.4,485],[29.5,392],[29.6,298],[29.7,205],[29.8,112],[29.9,20],[29.92,0],[30.0,-73],[30.1,-165],[30.2,-257],[30.3,-348],[30.4,-440],[30.5,-531],[30.6,-622],[30.7,-712],[30.8,-803],[30.9,-893],[31.0,-983]];
 const isa=pa=>15-1.98*pa/1000;
 const DA=(pa,t)=>pa+120*(t-isa(pa));
@@ -187,22 +397,15 @@ const toF=c=>c*9/5+32;
 const fmt=n=>Math.round(n).toLocaleString('en-US');
 const r10=n=>Math.round(n/10)*10, r100=n=>Math.round(n/100)*100;
 const FULL={x0:-20,x1:45,y0:0,y1:15000};
-const QS=[
- {body:'You are planning a launch from a field at 4,500 ft MSL. What is the approximate density altitude?',elev:4500,alt:30.10,t:30,ch:[4300,6100,7200],ans:2},
- {body:'Morning launch site near Temecula, elevation 1,200 ft MSL, on a hot day. What is the approximate density altitude?',elev:1200,alt:29.80,t:35,ch:[1300,4000,5200],ans:1},
- {body:'A mountain launch site at 6,000 ft MSL. What is the approximate density altitude?',elev:6000,alt:29.50,t:20,ch:[8500,6400,9800],ans:0},
- {body:'A cold winter morning at a site 3,000 ft MSL. What is the approximate density altitude?',elev:3000,alt:30.40,t:-5,ch:[3600,2560,800],ans:2},
-];
-const L='ABC';
-const $=id=>document.getElementById(id);
 const cv=$('chart'),ctx=cv.getContext('2d');
 const M={l:58,r:12,t:30,b:40};
 let W=0,H=0,dpr=1,C={};
-let view={...FULL},mode='move',selPA=null,selRow=null,qi=0,cross=null,draft=null,gesture=null;
-const answers=[],marks=QS.map(()=>[]),undos=QS.map(()=>[]);
-let walk=null; // {steps,i}
+let view={...FULL},tmode='move',selPA=null,selRow=null,cross=null,draft=null,gesture=null,marksKey='';
+const marksBy={},undosBy={};
+const marksOf=()=>marksBy[marksKey]=marksBy[marksKey]||[];
+const undosOf=()=>undosBy[marksKey]=undosBy[marksKey]||[];
+let walk=null;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 function readColors(){const s=getComputedStyle(document.documentElement);['paper','grid','grid-major','pa','isa','hl','user','guide','ink','muted','surface'].forEach(k=>C[k]=s.getPropertyValue('--'+k).trim());}
 const pw=()=>W-M.l-M.r, ph=()=>H-M.t-M.b;
 const sx=x=>M.l+(x-view.x0)/(view.x1-view.x0)*pw();
@@ -212,36 +415,29 @@ const iy=py=>view.y0+(M.t+ph()-py)/ph()*(view.y1-view.y0);
 function nice(span,n){const raw=span/Math.max(n,1),p=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/p;return (f<1.5?1:f<3.5?2:f<7.5?5:10)*p;}
 const FONT=(w,s)=>`${w} ${s}px "Barlow Semi Condensed","Arial Narrow",sans-serif`;
 const MONO=s=>`500 ${s}px "IBM Plex Mono",ui-monospace,monospace`;
-
-function resize(){const r=cv.getBoundingClientRect();dpr=window.devicePixelRatio||1;W=r.width;H=r.height;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);draw();}
+function resize(){const r=cv.getBoundingClientRect();dpr=window.devicePixelRatio||1;W=r.width;H=r.height;if(!W)return;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);draw();}
 let pend=false;function req(){if(!pend){pend=true;requestAnimationFrame(()=>{pend=false;draw();});}}
-
 function seg(x1,y1,x2,y2){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
 function paLine(pa,color,w,dash){const a=view.x0-5,b=view.x1+5;ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);seg(sx(a),sy(DA(pa,a)),sx(b),sy(DA(pa,b)));ctx.setLineDash([]);}
-function lineLabel(text,yAt,frac,color,font){ // yAt(x) gives data y; label placed along visible part
-  const m=120,b=yAt(0);let xa=Math.max(view.x0,(view.y0-b)/m),xb=Math.min(view.x1,(view.y1-b)/m);
+function lineLabel(text,yAt,frac,color,font){const m=120,b=yAt(0);const xa=Math.max(view.x0,(view.y0-b)/m),xb=Math.min(view.x1,(view.y1-b)/m);
   if(!(xb>xa))return;const pA=[sx(xa),sy(yAt(xa))],pB=[sx(xb),sy(yAt(xb))];
   if(Math.hypot(pB[0]-pA[0],pB[1]-pA[1])<70)return;
   const px=pA[0]+(pB[0]-pA[0])*frac,py=pA[1]+(pB[1]-pA[1])*frac,ang=Math.atan2(pB[1]-pA[1],pB[0]-pA[0]);
   ctx.save();ctx.translate(px,py);ctx.rotate(ang);ctx.font=font;ctx.textAlign='center';ctx.textBaseline='middle';
-  ctx.lineWidth=4;ctx.strokeStyle=C.paper;ctx.lineJoin='round';ctx.strokeText(text,0,-1);ctx.fillStyle=color;ctx.fillText(text,0,-1);ctx.restore();
-}
+  ctx.lineWidth=4;ctx.strokeStyle=C.paper;ctx.lineJoin='round';ctx.strokeText(text,0,-1);ctx.fillStyle=color;ctx.fillText(text,0,-1);ctx.restore();}
 function pill(text,x,y,fg,bg,align){ctx.font=MONO(10.5);const w=ctx.measureText(text).width+10,h=16;let left=align==='right'?x-w:align==='center'?x-w/2:x;left=Math.max(2,Math.min(W-w-2,left));
   ctx.fillStyle=bg;ctx.beginPath();const r=4,t=y-h/2;ctx.moveTo(left+r,t);ctx.lineTo(left+w-r,t);ctx.quadraticCurveTo(left+w,t,left+w,t+r);ctx.lineTo(left+w,t+h-r);ctx.quadraticCurveTo(left+w,t+h,left+w-r,t+h);ctx.lineTo(left+r,t+h);ctx.quadraticCurveTo(left,t+h,left,t+h-r);ctx.lineTo(left,t+r);ctx.quadraticCurveTo(left,t,left+r,t);ctx.fill();
   ctx.fillStyle=fg;ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(text,left+5,y+.5);}
 function arrowHead(x,y,ang,color){ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-10*Math.cos(ang-.4),y-10*Math.sin(ang-.4));ctx.lineTo(x-10*Math.cos(ang+.4),y-10*Math.sin(ang+.4));ctx.closePath();ctx.fill();}
 const tempTxt=x=>`${x.toFixed(1)}°C · ${toF(x).toFixed(0)}°F`;
-
 function drawMark(m,color,pills){
   ctx.strokeStyle=color;ctx.lineWidth=m.k==='pen'?1.6:1.3;ctx.lineCap='round';
   if(m.k==='h'){seg(M.l,sy(m.y),M.l+pw(),sy(m.y));if(pills)pills.push(()=>{const y=sy(m.y);if(y>=M.t&&y<=M.t+ph())pill(fmt(r10(m.y))+' ft',M.l+2,y,C.surface,color,'right');});}
   else if(m.k==='v'){seg(sx(m.x),M.t,sx(m.x),M.t+ph());if(pills)pills.push(()=>{const x=sx(m.x);if(x>=M.l&&x<=M.l+pw())pill(tempTxt(m.x),x,M.t+ph()+12,C.surface,color,'center');});}
   else if(m.k==='seg'){seg(sx(m.a[0]),sy(m.a[1]),sx(m.b[0]),sy(m.b[1]));}
-  else if(m.k==='pen'){ctx.lineJoin='round';ctx.beginPath();m.pts.forEach((p,i)=>i?ctx.lineTo(sx(p[0]),sy(p[1])):ctx.moveTo(sx(p[0]),sy(p[1])));ctx.stroke();}
-}
-
+  else if(m.k==='pen'){ctx.lineJoin='round';ctx.beginPath();m.pts.forEach((p,i)=>i?ctx.lineTo(sx(p[0]),sy(p[1])):ctx.moveTo(sx(p[0]),sy(p[1])));ctx.stroke();}}
 function draw(){
-  if(!W)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  if(!W||$('bench').hidden)return;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
   const PW=pw(),PH=ph(),ov=walk?walk.steps[walk.i]:null,hlSet=new Set(ov?ov.hl:[]);if(selPA!==null)hlSet.add(selPA);
   ctx.fillStyle=C.paper;ctx.fillRect(0,0,W,H);
   ctx.save();ctx.beginPath();ctx.rect(M.l,M.t,PW,PH);ctx.clip();
@@ -249,29 +445,24 @@ function draw(){
   ctx.lineWidth=1;
   for(let i=Math.ceil(view.x0/xs);i*xs<=view.x1+1e-9;i++){ctx.strokeStyle=i%5===0?C['grid-major']:C.grid;seg(sx(i*xs)+.5,M.t,sx(i*xs)+.5,M.t+PH);}
   for(let i=Math.ceil(view.y0/ys);i*ys<=view.y1+1e-9;i++){ctx.strokeStyle=i%5===0?C['grid-major']:C.grid;seg(M.l,sy(i*ys)+.5,M.l+PW,sy(i*ys)+.5);}
-  // pressure altitude lines
   ctx.globalAlpha=hlSet.size?0.4:0.85;
   for(let pa=0;pa<=14000;pa+=1000)if(!hlSet.has(pa))paLine(pa,C.pa,1.4);
   ctx.globalAlpha=1;
-  // standard temperature
   ctx.strokeStyle=C.isa;ctx.lineWidth=2.2;seg(sx(isa(0)),sy(0),sx(isa(15000)),sy(15000));
   hlSet.forEach(pa=>paLine(pa,C.hl,3.4));
   const pills=[];
   if(ov)ov.ov.forEach(o=>{
     if(o.k==='pa'){paLine(o.pa,C.guide,2.4,[7,5]);}
     else if(o.k==='v'){ctx.strokeStyle=C.guide;ctx.lineWidth=2.6;ctx.setLineDash([7,5]);seg(sx(o.x),sy(FULL.y0)+40,sx(o.x),sy(o.y));ctx.setLineDash([]);arrowHead(sx(o.x),sy(o.y),-Math.PI/2,C.guide);ctx.fillStyle=C.guide;ctx.beginPath();ctx.arc(sx(o.x),sy(o.y),4.5,0,7);ctx.fill();pills.push(()=>{const x=sx(o.x);if(x>=M.l&&x<=M.l+PW)pill(tempTxt(o.x),x,M.t+PH+12,C.surface,C.guide,'center');});}
-    else if(o.k==='h'){ctx.strokeStyle=C.guide;ctx.lineWidth=2.6;ctx.setLineDash([7,5]);seg(sx(o.x),sy(o.y),M.l,sy(o.y));ctx.setLineDash([]);arrowHead(M.l+2,sy(o.y),Math.PI,C.guide);pills.push(()=>pill(fmt(r10(o.y))+' ft',M.l+2,sy(o.y),C.surface,C.guide,'right'));}
-  });
-  marks[qi].forEach(m=>drawMark(m,C.user,pills));
+    else if(o.k==='h'){ctx.strokeStyle=C.guide;ctx.lineWidth=2.6;ctx.setLineDash([7,5]);seg(sx(o.x),sy(o.y),M.l,sy(o.y));ctx.setLineDash([]);arrowHead(M.l+2,sy(o.y),Math.PI,C.guide);pills.push(()=>pill(fmt(r10(o.y))+' ft',M.l+2,sy(o.y),C.surface,C.guide,'right'));}});
+  marksOf().forEach(m=>drawMark(m,C.user,pills));
   if(draft){ctx.globalAlpha=.85;drawMark(draft,C.user,pills);ctx.globalAlpha=1;}
   if(cross){ctx.strokeStyle=C.ink;ctx.lineWidth=1;ctx.setLineDash([4,4]);const X=sx(cross.x),Y=sy(cross.y);seg(M.l,Y,M.l+PW,Y);seg(X,M.t,X,M.t+PH);ctx.setLineDash([]);ctx.fillStyle=C.ink;ctx.beginPath();ctx.arc(X,Y,3.5,0,7);ctx.fill();
     pills.push(()=>{pill(fmt(r10(cross.y))+' ft',M.l+2,Y,C.surface,C.ink,'right');pill(tempTxt(cross.x),X,M.t+PH+12,C.surface,C.ink,'center');});}
-  // line labels
   for(let pa=0;pa<=14000;pa+=1000){const on=hlSet.has(pa);lineLabel(pa?fmt(pa):'Sea level',x=>DA(pa,x),.8,on?C.hl:C.pa,on?FONT(700,14):FONT(600,12.5));}
   {const xa=Math.max(view.x0,isa(Math.min(view.y1,15000))),xb=Math.min(view.x1,isa(Math.max(view.y0,0)));
    if(xb>xa){const A=[sx(xb),sy((15-xb)/1.98*1000)],B=[sx(xa),sy((15-xa)/1.98*1000)];if(Math.hypot(B[0]-A[0],B[1]-A[1])>120){const px=A[0]+(B[0]-A[0])*.35,py=A[1]+(B[1]-A[1])*.35;let ang=Math.atan2(B[1]-A[1],B[0]-A[0]);if(Math.abs(ang)>Math.PI/2)ang+=Math.PI;ctx.save();ctx.translate(px,py);ctx.rotate(ang);ctx.font=FONT(600,12.5);ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineWidth=4;ctx.strokeStyle=C.paper;ctx.strokeText('Standard temperature',0,-9);ctx.fillStyle=C.isa;ctx.fillText('Standard temperature',0,-9);ctx.restore();}}}
   ctx.restore();
-  // axes (always pinned to the visible window)
   ctx.fillStyle=C.surface;ctx.fillRect(0,0,M.l,H);ctx.fillRect(0,M.t+PH,W,M.b);ctx.fillRect(0,0,W,M.t);ctx.fillRect(M.l+PW,0,M.r,H);
   ctx.strokeStyle=C.ink;ctx.lineWidth=1;ctx.strokeRect(M.l+.5,M.t+.5,PW-1,PH-1);
   ctx.font=MONO(11);ctx.fillStyle=C.ink;ctx.textBaseline='middle';ctx.textAlign='right';
@@ -284,12 +475,9 @@ function draw(){
   ctx.textBaseline='top';ctx.fillText('°C',6,M.t+PH+5);
   ctx.textAlign='center';ctx.textBaseline='bottom';ctx.fillText('OUTSIDE AIR TEMPERATURE',M.l+PW/2,H-3);
   ctx.save();ctx.translate(11,M.t+PH/2);ctx.rotate(-Math.PI/2);ctx.textBaseline='middle';ctx.fillText('DENSITY ALTITUDE (FT)',0,0);ctx.restore();
-  pills.forEach(f=>f());
-}
-
-// view control
+  pills.forEach(f=>f());}
 function clampView(v){const fx=FULL.x1-FULL.x0,fy=FULL.y1-FULL.y0;let w=v.x1-v.x0,h=v.y1-v.y0;
-  if(w>fx){w=fx}if(h>fy){h=fy}let x0=Math.min(Math.max(v.x0,FULL.x0),FULL.x1-w),y0=Math.min(Math.max(v.y0,FULL.y0),FULL.y1-h);return{x0,x1:x0+w,y0,y1:y0+h};}
+  if(w>fx){w=fx}if(h>fy){h=fy}const x0=Math.min(Math.max(v.x0,FULL.x0),FULL.x1-w),y0=Math.min(Math.max(v.y0,FULL.y0),FULL.y1-h);return{x0,x1:x0+w,y0,y1:y0+h};}
 function zoomAbout(v0,s,anchor,screen){const w0=v0.x1-v0.x0,h0=v0.y1-v0.y0;
   const sMax=Math.min((FULL.x1-FULL.x0)/w0,(FULL.y1-FULL.y0)/h0),sMin=Math.max(2/w0,250/h0);s=Math.min(sMax,Math.max(sMin,s));
   const w=w0*s,h=h0*s,x0=anchor.x-(screen.x-M.l)/pw()*w,y0=anchor.y-(M.t+ph()-screen.y)/ph()*h;return clampView({x0,x1:x0+w,y0,y1:y0+h});}
@@ -297,17 +485,15 @@ let anim=null;
 function animateTo(t){t=clampView(t);if(anim)cancelAnimationFrame(anim);if(reduce){view=t;req();return;}const f={...view},t0=performance.now();
   const step=n=>{let k=Math.min(1,(n-t0)/450);k=1-Math.pow(1-k,3);view={x0:f.x0+(t.x0-f.x0)*k,x1:f.x1+(t.x1-f.x1)*k,y0:f.y0+(t.y0-f.y0)*k,y1:f.y1+(t.y1-f.y1)*k};draw();if(k<1)anim=requestAnimationFrame(step);else anim=null;};anim=requestAnimationFrame(step);}
 const box=(cx,cy,w,h)=>({x0:cx-w/2,x1:cx+w/2,y0:cy-h/2,y1:cy+h/2});
-
-// pointer handling
 const ptrs=new Map();
 function pt(e){const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top,t:performance.now()};}
 function startPinch(){const[a,b]=[...ptrs.values()];const m={x:(a.x+b.x)/2,y:(a.y+b.y)/2};gesture={type:'pinch',d0:Math.hypot(a.x-b.x,a.y-b.y)||1,v0:{...view},anchor:{x:ix(m.x),y:iy(m.y)}};}
 cv.addEventListener('pointerdown',e=>{e.preventDefault();cv.setPointerCapture(e.pointerId);const p=pt(e);ptrs.set(e.pointerId,p);if(anim){cancelAnimationFrame(anim);anim=null;}
   if(ptrs.size===2){draft=null;startPinch();}
-  else if(ptrs.size===1){gesture={type:mode,start:p,v0:{...view},moved:0};if(mode==='pen')draft={k:'pen',pts:[[ix(p.x),iy(p.y)]]};if(mode==='cross')setCross(p);}
+  else if(ptrs.size===1){gesture={type:tmode,start:p,v0:{...view},moved:0};if(tmode==='pen')draft={k:'pen',pts:[[ix(p.x),iy(p.y)]]};if(tmode==='cross')setCross(p);}
   req();});
 cv.addEventListener('pointermove',e=>{const p=pt(e);
-  if(!ptrs.has(e.pointerId)){if(mode==='cross'&&e.pointerType==='mouse'){setCross(p);req();}return;}
+  if(!ptrs.has(e.pointerId)){if(tmode==='cross'&&e.pointerType==='mouse'){setCross(p);req();}return;}
   ptrs.set(e.pointerId,p);if(!gesture)return;
   if(gesture.type==='pinch'){if(ptrs.size<2)return;const[a,b]=[...ptrs.values()];const m={x:(a.x+b.x)/2,y:(a.y+b.y)/2};view=zoomAbout(gesture.v0,gesture.d0/(Math.hypot(a.x-b.x,a.y-b.y)||1),gesture.anchor,m);req();return;}
   const s=gesture.start,dx=p.x-s.x,dy=p.y-s.y;gesture.moved=Math.max(gesture.moved,Math.hypot(dx,dy));
@@ -318,15 +504,14 @@ cv.addEventListener('pointermove',e=>{const p=pt(e);
   else if(gesture.type==='cross')setCross(p);
   req();});
 function endPtr(e){if(!ptrs.has(e.pointerId))return;const p=pt(e);ptrs.delete(e.pointerId);
-  if(!gesture){return;}
+  if(!gesture)return;
   if(gesture.type==='pinch'||gesture.type==='wait'){gesture=ptrs.size?{type:'wait'}:null;return;}
   const g=gesture;gesture=null;
   if(g.type==='move'&&g.moved<8&&p.t-g.start.t<500)tapSelect(p);
-  if((g.type==='line'&&draft)||(g.type==='pen'&&draft&&draft.pts.length>1)){undos[qi].push(JSON.stringify(marks[qi]));marks[qi].push(draft);}
+  if((g.type==='line'&&draft)||(g.type==='pen'&&draft&&draft.pts.length>1)){undosOf().push(JSON.stringify(marksOf()));marksOf().push(draft);}
   draft=null;req();}
 cv.addEventListener('pointerup',endPtr);cv.addEventListener('pointercancel',endPtr);
 cv.addEventListener('wheel',e=>{e.preventDefault();const p=pt(e);view=zoomAbout(view,Math.exp(e.deltaY*0.0015),{x:ix(p.x),y:iy(p.y)},p);req();},{passive:false});
-
 function tapSelect(p){const x=ix(p.x),y=iy(p.y),r=Math.round(paFrom(y,x)/1000)*1000;
   if(r>=0&&r<=14000&&Math.abs(sy(DA(r,x))-p.y)<22){selPA=selPA===r?null:r;}else selPA=null;readoutIdle();}
 function setCross(p){const x=Math.min(view.x1,Math.max(view.x0,ix(p.x))),y=Math.min(view.y1,Math.max(view.y0,iy(p.y)));cross={x,y};
@@ -334,70 +519,50 @@ function setCross(p){const x=Math.min(view.x1,Math.max(view.x0,ix(p.x))),y=Math.
 function readoutIdle(){const bits=[];if(selPA!==null)bits.push(`Highlighted: ${selPA?fmt(selPA)+' ft':'sea level'} pressure altitude line`);
   if(selRow!==null){const[a,f]=TABLE[selRow];bits.push(`${a.toFixed(2)} in Hg → ${f>=0?'+':'−'}${fmt(Math.abs(f))} ft`);}
   $('readout').textContent=bits.join(' · ')||'Tap a diagonal line to highlight it. Switch to Read and drag to see exact values.';}
-
-// tools
 const HINTS={move:'Drag to move. Pinch or scroll to zoom. Tap a diagonal line to highlight it.',line:'Drag across the chart. Close to level or upright snaps straight and shows the axis value. Two fingers still zoom.',pen:'Draw freehand to circle or note things. Two fingers still zoom.',cross:'Drag to read exact temperature, density altitude and pressure altitude under your finger.'};
-function setMode(m){mode=m;document.querySelectorAll('.tool').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===m)));cv.classList.toggle('draw',m!=='move');$('hint').textContent=HINTS[m];if(m!=='cross'){cross=null;readoutIdle();}req();}
-document.querySelectorAll('.tool').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
-$('undo').onclick=()=>{if(undos[qi].length){marks[qi]=JSON.parse(undos[qi].pop());req();}};
-$('clear').onclick=()=>{if(marks[qi].length){undos[qi].push(JSON.stringify(marks[qi]));marks[qi]=[];req();}};
+function setTool(m){tmode=m;document.querySelectorAll('.tool').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===m)));cv.classList.toggle('draw',m!=='move');$('hint').textContent=HINTS[m];if(m!=='cross'){cross=null;readoutIdle();}req();}
+document.querySelectorAll('.tool').forEach(b=>b.addEventListener('click',()=>setTool(b.dataset.mode)));
+$('undo').onclick=()=>{const u=undosOf();if(u.length){marksBy[marksKey]=JSON.parse(u.pop());req();}};
+$('clear').onclick=()=>{if(marksOf().length){undosOf().push(JSON.stringify(marksOf()));marksBy[marksKey]=[];req();}};
 $('reset').onclick=()=>animateTo({...FULL});
 $('max').onclick=()=>toggleMax();
 function toggleMax(on){on=on===undefined?!document.body.classList.contains('max'):on;document.body.classList.toggle('max',on);$('max').textContent=on?'Exit full screen':'Full screen';$('mini').hidden=!on;requestAnimationFrame(resize);}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('max'))toggleMax(false);});
-
-// altimeter table
 TABLE.forEach(([a,f],i)=>{const li=document.createElement('li');const b=document.createElement('button');b.className='trow';b.id='row'+i;b.innerHTML=`<span>${a.toFixed(2)}</span><span>${f>0?'+':f<0?'−':''}${fmt(Math.abs(f))}</span>`;b.onclick=()=>{selRow=selRow===i?null:i;paintRows();readoutIdle();};li.appendChild(b);$('tbl').appendChild(li);});
 function paintRows(){TABLE.forEach((_,i)=>$('row'+i).classList.toggle('on',i===selRow));}
-
-// questions
-const factor=a=>TABLE.find(r=>Math.abs(r[0]-a)<1e-6)[1];
+const factor=a=>(TABLE.find(r=>Math.abs(r[0]-a)<1e-6)||[0,0])[1];
 const rowOf=a=>TABLE.findIndex(r=>Math.abs(r[0]-a)<1e-6);
 function fracWord(f){return f<.2?'just above the lower one':f<.42?'about a third of the way up':f<.6?'about halfway between':f<.8?'about two-thirds of the way up':'just below the upper one';}
-function buildSteps(q){const f=factor(q.alt),pa=q.elev+f,d=DA(pa,q.t),lo=Math.floor(pa/1000)*1000,hi=lo+1000,fr=(pa-lo)/1000;
+function buildSteps(q){const t=+q.oat,alt=+q.alt,f=factor(alt),pa=q.elev+f,d=DA(pa,t),lo=Math.floor(pa/1000)*1000,hi=lo+1000,fr=(pa-lo)/1000;
   const where=fr<.04?`right on the ${fmt(lo)} ft line`:`between the ${lo?fmt(lo)+' ft':'sea level'} and ${fmt(hi)} ft lines, ${fracWord(fr)}`;
-  const std=isa(pa),diff=q.t-std,v={k:'v',x:q.t,y:d},zoom=box(q.t,d,16,3800);
+  const std=isa(pa),diff=t-std,v={k:'v',x:t,y:d},zoom=box(t,d,16,3800),hl=[lo,hi].filter(x=>x<=14000);
   return[
-   {text:`Find ${q.alt.toFixed(2)} in the altimeter table below the chart. Its conversion factor is ${f>=0?'+':'−'}${fmt(Math.abs(f))} ft.`,row:rowOf(q.alt),hl:[],ov:[],view:{...FULL}},
-   {text:`Pressure altitude = field elevation + factor: ${fmt(q.elev)} ${f>=0?'+':'−'} ${fmt(Math.abs(f))} = ${fmt(pa)} ft. On the chart that is ${where}. The dashed line shows exactly where.`,row:rowOf(q.alt),hl:[lo,hi].filter(x=>x<=14000),ov:[{k:'pa',pa}],view:box(q.t,d,32,8000)},
-   {text:`Start at ${q.t}°C (${toF(q.t).toFixed(0)}°F) on the bottom scale and go straight up until you meet the ${fmt(pa)} ft line.`,row:null,hl:[lo,hi].filter(x=>x<=14000),ov:[{k:'pa',pa},v],view:zoom},
-   {text:`From that point go straight left to the density altitude scale: about ${fmt(r100(d))} ft, answer ${L[q.ans]}. Check: standard temperature at ${fmt(pa)} ft is about ${std.toFixed(0)}°C, so today is ${Math.abs(diff).toFixed(0)}° ${diff>=0?'warmer':'colder'} than standard. At 120 ft per degree that ${diff>=0?'adds':'takes off'} about ${fmt(r100(Math.abs(diff*120)))} ft.`,row:null,hl:[lo,hi].filter(x=>x<=14000),ov:[{k:'pa',pa},v,{k:'h',x:q.t,y:d}],view:zoom}];}
+   {text:`Find ${alt.toFixed(2)} in the altimeter table below the chart. Its conversion factor is ${f>=0?'+':'−'}${fmt(Math.abs(f))} ft.`,row:rowOf(alt),hl:[],ov:[],view:{...FULL}},
+   {text:`Pressure altitude = field elevation + factor: ${fmt(q.elev)} ${f>=0?'+':'−'} ${fmt(Math.abs(f))} = ${fmt(pa)} ft. On the chart that is ${where}. The dashed line shows exactly where.`,row:rowOf(alt),hl,ov:[{k:'pa',pa}],view:box(t,d,32,8000)},
+   {text:`Start at ${t}°C (${toF(t).toFixed(0)}°F) on the bottom scale and go straight up until you meet the ${fmt(pa)} ft line.`,row:null,hl,ov:[{k:'pa',pa},v],view:zoom},
+   {text:`From that point go straight left to the density altitude scale: about ${fmt(r100(d))} ft, answer ${L[q.answer]}. Check: standard temperature at ${fmt(pa)} ft is about ${std.toFixed(0)}°C, so it is ${Math.abs(diff).toFixed(0)}° ${diff>=0?'warmer':'colder'} than standard. At 120 ft per degree that ${diff>=0?'adds':'takes off'} about ${fmt(r100(Math.abs(diff*120)))} ft.`,row:null,hl,ov:[{k:'pa',pa},v,{k:'h',x:t,y:d}],view:zoom}];}
 function showStep(){const s=walk.steps[walk.i];$('wstep').textContent=`Step ${walk.i+1} of ${walk.steps.length}`;$('wtext').textContent=s.text;
   $('wprev').disabled=walk.i===0;$('wnext').textContent=walk.i===walk.steps.length-1?'Done':'Next step';selRow=s.row;paintRows();selPA=null;readoutIdle();animateTo(s.view);}
-function startWalk(){walk={steps:buildSteps(QS[qi]),i:0};$('walk').hidden=false;showStep();if(!document.body.classList.contains('max'))$('bench').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}
+function startWalk(){walk={steps:buildSteps(cur()),i:0};$('walk').hidden=false;showStep();if(!document.body.classList.contains('max')&&window.innerWidth<860)$('bench').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}
 function endWalk(){walk=null;$('walk').hidden=true;selRow=null;paintRows();readoutIdle();req();}
 $('how').onclick=startWalk;$('wclose').onclick=endWalk;
 $('wprev').onclick=()=>{if(walk.i>0){walk.i--;showStep();}};
 $('wnext').onclick=()=>{if(walk.i<walk.steps.length-1){walk.i++;showStep();}else endWalk();};
 
-function renderQ(){const q=QS[qi],a=answers[qi];
-  $('qtitle').textContent=`Question ${qi+1} of ${QS.length}`;$('qbody').textContent=q.body;
-  $('given').innerHTML=`<li><span>Field elevation</span><span>${fmt(q.elev)} ft MSL</span></li><li><span>Altimeter setting</span><span>${q.alt.toFixed(2)} in Hg</span></li><li><span>Outside air temperature</span><span>${q.t}°C (${toF(q.t).toFixed(0)}°F)</span></li>`;
-  $('mini').textContent=`Q${qi+1} · elev ${fmt(q.elev)} ft · altimeter ${q.alt.toFixed(2)} · OAT ${q.t}°C (${toF(q.t).toFixed(0)}°F)`;
-  const box=$('choices');box.innerHTML='';
-  q.ch.forEach((v,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML=`<b>${L[i]}</b><span class="v">${fmt(v)} ft</span>`;
-    if(a!==undefined){b.disabled=true;if(i===q.ans)b.classList.add('right');else if(i===a)b.classList.add('wrong');}
-    b.onclick=()=>{answers[qi]=i;renderQ();};box.appendChild(b);});
-  const fb=$('fb');
-  if(a===undefined){fb.textContent='';fb.className='fb';}
-  else if(a===q.ans){fb.textContent=`Correct. It works out to about ${fmt(r100(DA(q.elev+factor(q.alt),q.t)))} ft.`;fb.className='fb ok';}
-  else{fb.textContent=`Not this time. The answer is ${L[q.ans]}, about ${fmt(q.ch[q.ans])} ft. Use the walkthrough to see where it comes from.`;fb.className='fb no';}
-  $('how').disabled=a===undefined;$('prev').disabled=qi===0;$('next').textContent=qi===QS.length-1?'Start over':'Next question';
-  const dots=$('dots');dots.innerHTML='';QS.forEach((qq,i)=>{const d=document.createElement('span');d.className='dot'+(i===qi?' cur':'')+(answers[i]===undefined?'':answers[i]===qq.ans?' ok':' no');dots.appendChild(d);});
-  const done=answers.filter(x=>x!==undefined).length,right=QS.filter((qq,i)=>answers[i]===qq.ans).length;
-  $('score').textContent=done?`${right} of ${done} answered correctly`:'Answer to unlock the chart walkthrough.';
-}
-function goQ(i){if(walk)endWalk();qi=i;selPA=null;cross=null;renderQ();readoutIdle();animateTo({...FULL});}
-$('prev').onclick=()=>{if(qi>0)goQ(qi-1);};
-$('next').onclick=()=>{if(qi<QS.length-1)goQ(qi+1);else{answers.length=0;QS.forEach((_,i)=>{marks[i]=[];undos[i]=[];});goQ(0);}};
-
-// theme + boot
+// ---------- boot ----------
 readColors();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{readColors();req();});
 new MutationObserver(()=>{readColors();req();}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 new ResizeObserver(resize).observe(cv);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(req);
-setMode('move');renderQ();readoutIdle();
+setTool('move');
+Promise.all(FILES.map(f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():[]).catch(()=>[]))).then(sets=>{
+  const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
+  BANK=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
+  BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
+  BANK.forEach(q=>byId[q.id]=q);
+  if(S.test&&S.test.list.some(id=>!byId[id]))S.test=null;
+  list=studyList();renderAll();
+});
 })();
 </script>
 </body>

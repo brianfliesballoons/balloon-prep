@@ -1,0 +1,933 @@
+[
+ {
+  "id": "REG-001",
+  "area": "REG",
+  "topic": "Medical certificates",
+  "stem": "A commercial pilot with a lighter-than-air category and balloon class rating is hired to carry passengers on a sunrise ride. What is the minimum class of medical certificate the pilot must hold?",
+  "choices": [
+   "A third-class medical certificate.",
+   "A second-class medical certificate.",
+   "No medical certificate; balloon pilots self-certify their fitness."
+  ],
+  "answer": 1,
+  "explanation": "Since May 22, 2023, 14 CFR 61.23(a)(2)(iii) requires at least a second-class medical certificate to exercise commercial balloon privileges for compensation or hire. The old balloon exemption now covers only private privileges and flight training (61.3(c)(2)(vi)), so self-certification no longer applies to paid passenger flights.",
+  "ref": "14 CFR 61.23(a)(2)(iii); 14 CFR 61.3(c)(2)(vi)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-002",
+  "area": "REG",
+  "topic": "Medical certificates",
+  "stem": "A commercial balloon pilot who holds no medical certificate is paid to give flight training to a student seeking a private pilot certificate with a balloon rating. Is this permitted?",
+  "choices": [
+   "No; any balloon flight for compensation or hire requires at least a second-class medical certificate.",
+   "No; a third-class medical certificate is required to act as pilot in command while giving flight training.",
+   "Yes; no medical certificate is required when giving flight training in a balloon under 61.133(a)(2)(ii)."
+  ],
+  "answer": 2,
+  "explanation": "14 CFR 61.23(b)(5) and 61.3(c)(2)(vi)(B) exempt a commercial balloon pilot from holding a medical certificate while giving flight training under 61.133(a)(2)(ii). The FAA kept this exception in the same rule that imposed the second-class requirement for other paid balloon flights (87 FR 71218, effective May 22, 2023); carrying passengers or property for hire still requires a second-class medical.",
+  "ref": "14 CFR 61.23(b)(5); 14 CFR 61.3(c)(2)(vi)(B); 87 FR 71218 (Nov. 22, 2022)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-003",
+  "area": "REG",
+  "topic": "Medical certificate duration",
+  "stem": "A 45-year-old commercial balloon pilot passes a second-class medical examination on March 10, 2026. Through what date may the pilot use that certificate to carry passengers for hire?",
+  "choices": [
+   "March 10, 2027.",
+   "March 31, 2028.",
+   "March 31, 2027."
+  ],
+  "answer": 2,
+  "explanation": "Under 61.23(d)(2)(i), a second-class medical used for commercial privileges expires at the end of the last day of the 12th month after the month of the examination, at any age, which is March 31, 2027. March 31, 2028 is the 24-month duration for private-level privileges at age 40 or older, and the certificate never expires on the exam's day of the month.",
+  "ref": "14 CFR 61.23(d)(2)(i)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-004",
+  "area": "REG",
+  "topic": "Required pilot documents",
+  "stem": "When carrying passengers for hire, which documents must a commercial balloon pilot have in physical possession or readily accessible in the aircraft?",
+  "choices": [
+   "Pilot certificate, an acceptable photo identification, and a medical certificate.",
+   "Pilot certificate and pilot logbook.",
+   "Pilot certificate and medical certificate only."
+  ],
+  "answer": 0,
+  "explanation": "14 CFR 61.3(a)(1) and (a)(2) require the pilot certificate and a photo ID such as a driver's license or passport. 61.3(c)(1) adds the medical certificate whenever one is required, as it is for paid passenger flights. The logbook must be presented on reasonable request (61.51(i)) but need not be carried.",
+  "ref": "14 CFR 61.3(a)(1)-(2), 61.3(c)(1)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-005",
+  "area": "REG",
+  "topic": "Recent flight experience",
+  "stem": "To act as pilot in command of a balloon carrying passengers, a pilot must have made at least",
+  "choices": [
+   "one takeoff and one landing in a balloon within the preceding 90 days.",
+   "three takeoffs and three landings as sole manipulator of the controls in a balloon within the preceding 90 days.",
+   "three takeoffs and three landings in any lighter-than-air aircraft within the preceding 6 calendar months."
+  ],
+  "answer": 1,
+  "explanation": "61.57(a)(1) requires three takeoffs and three landings within the preceding 90 days, as sole manipulator of the controls, in an aircraft of the same category and class. A 6-calendar-month look-back belongs to instrument currency, and an airship is a different class from a balloon.",
+  "ref": "14 CFR 61.57(a)(1)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-006",
+  "area": "REG",
+  "topic": "Flight review",
+  "stem": "A balloon pilot's most recent flight review was completed on June 14, 2024. Without another review or a qualifying practical test, what is the last day the pilot may act as pilot in command?",
+  "choices": [
+   "June 30, 2026.",
+   "June 14, 2026.",
+   "June 30, 2025."
+  ],
+  "answer": 0,
+  "explanation": "61.56(c) requires a flight review since the beginning of the 24th calendar month before the month of the flight, so a review in June 2024 is good through the end of June 2026. Counting 24 months to the exact day (June 14) ignores the calendar-month rule.",
+  "ref": "14 CFR 61.56(c)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-007",
+  "area": "REG",
+  "topic": "Pilot logbooks",
+  "stem": "Which flight time is a balloon pilot required by regulation to log?",
+  "choices": [
+   "All flight time, including every passenger flight, whether or not it is for hire.",
+   "Only pilot-in-command time on flights conducted for compensation or hire.",
+   "Only time used to meet certificate, rating, flight review, or recent experience requirements."
+  ],
+  "answer": 2,
+  "explanation": "61.51(a) requires a record only of time used toward a certificate, rating or flight review and time used to meet recent flight experience requirements, such as the three takeoffs and landings of 61.57. Many pilots log every flight for insurance or employer reasons, but the regulation does not require it.",
+  "ref": "14 CFR 61.51(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-008",
+  "area": "REG",
+  "topic": "Commercial aeronautical experience",
+  "stem": "An applicant for a commercial pilot certificate with a balloon rating who trains in a hot air balloon must log at least one flight involving a controlled ascent to what height above the launch site?",
+  "choices": [
+   "2,000 feet.",
+   "3,000 feet.",
+   "5,000 feet."
+  ],
+  "answer": 1,
+  "explanation": "61.129(h)(4)(ii)(C) requires one controlled ascent to 3,000 feet above the launch site in a balloon with an airborne heater. 2,000 feet is the private pilot hot air requirement (61.109(h)(2)(iii)), and 5,000 feet is the commercial requirement for a gas balloon.",
+  "ref": "14 CFR 61.129(h)(4)(ii)(C); 14 CFR 61.109(h)(2)(iii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-009",
+  "area": "REG",
+  "topic": "Commercial pilot limitations",
+  "stem": "An applicant passes the commercial balloon practical test in a hot air balloon. What limitation will be placed on the certificate?",
+  "choices": [
+   "The carriage of passengers for hire on cross-country flights of more than 50 nautical miles or at night is prohibited.",
+   "Limited to flight training only until 50 hours of pilot-in-command time are logged.",
+   "Limited to balloons with an airborne heater."
+  ],
+  "answer": 2,
+  "explanation": "61.133(b)(2) restricts a pilot tested in a hot air balloon to balloons with an airborne heater; the limitation is removed after the required gas balloon experience and an instructor's logbook endorsement. The 50-nautical-mile and night passenger limitation in 61.133(b)(1) applies to airplane and powered-lift applicants without an instrument rating.",
+  "ref": "14 CFR 61.133(b)(1)-(2)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-010",
+  "area": "REG",
+  "topic": "Commercial pilot privileges",
+  "stem": "A commercial pilot with a lighter-than-air category and balloon class rating, but no flight instructor certificate, may",
+  "choices": [
+   "give the ground and flight training and the endorsement required for another pilot's flight review in a balloon.",
+   "act as pilot in command of a balloon in weather conditions less than the minimums prescribed for VFR flight.",
+   "give flight training in an airship toward an airship rating."
+  ],
+  "answer": 0,
+  "explanation": "61.133(a)(2)(ii)(D) authorizes commercial balloon pilots to give the training and endorsements required for a flight review, an operating privilege or recency of experience in balloons. Flight below VFR minimums and airship training are airship privileges (61.133(a)(2)(i)); they require an airship class rating (61.3(e)(4), 61.31(d)), which this pilot does not hold.",
+  "ref": "14 CFR 61.133(a)(2)(i)-(ii); 14 CFR 61.3(e)(4); 14 CFR 61.31(d)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-011",
+  "area": "REG",
+  "topic": "Commercial flight proficiency",
+  "stem": "Which area of operation appears in the 61.127 list for a commercial lighter-than-air balloon rating but not in the list for a commercial airplane single-engine rating?",
+  "choices": [
+   "Navigation.",
+   "Emergency operations.",
+   "Fundamentals of instructing."
+  ],
+  "answer": 2,
+  "explanation": "The balloon list in 61.127(b)(8) opens with fundamentals of instructing, technical subjects and a preflight lesson on a maneuver to be performed in flight, reflecting the instructing privileges of 61.133(a)(2)(ii). Navigation and emergency operations appear in both the balloon list and the airplane list in 61.127(b)(1). It is there because commercial balloon pilots may give flight training.",
+  "ref": "14 CFR 61.127(b)(1), 61.127(b)(8)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-012",
+  "area": "REG",
+  "topic": "Alcohol",
+  "stem": "A pilot finishes a glass of wine at 2300 and is scheduled to launch a passenger flight at 0630 the next morning. Under 14 CFR 91.17, what is the earliest time the pilot may act as a crewmember?",
+  "choices": [
+   "0630, provided the pilot's alcohol concentration is below 0.04.",
+   "0700, provided the pilot is not under the influence and the alcohol concentration is below 0.04.",
+   "1100, because the regulation requires 12 hours between drinking and flying."
+  ],
+  "answer": 1,
+  "explanation": "91.17(a) sets limits that all apply at once: no acting as a crewmember within 8 hours after any alcoholic beverage, while under the influence, or with an alcohol concentration of 0.04 or greater. Being under 0.04 at 0630 doesn't satisfy the 8-hour rule. The 12-to-24-hour interval is the AIM's recommendation, not a regulation.",
+  "ref": "14 CFR 91.17(a); AIM 8-1-1",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-013",
+  "area": "REG",
+  "topic": "PIC authority",
+  "stem": "During an in-flight emergency requiring immediate action, a balloon pilot deviates from a Part 91 rule. What must the pilot do afterward?",
+  "choices": [
+   "Send a written report of the deviation to the Administrator, if requested.",
+   "File a written report with the NTSB within 10 days.",
+   "Send a written report to the nearest FAA Flight Standards office within 48 hours."
+  ],
+  "answer": 0,
+  "explanation": "91.3(b) permits deviation from any Part 91 rule to the extent the emergency requires, and 91.3(c) requires a written report only on request of the Administrator. The 10-day NTSB report applies to accidents under 49 CFR 830.15, not to rule deviations.",
+  "ref": "14 CFR 91.3(b)-(c)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-014",
+  "area": "REG",
+  "topic": "Preflight action and fuel",
+  "stem": "Which statement about fuel planning for a VFR hot air balloon flight away from an airport is correct under Part 91?",
+  "choices": [
+   "The pilot must carry enough propane to fly to the first point of intended landing plus 30 minutes at normal cruise.",
+   "Part 91 sets no fixed propane reserve for balloons, but the pilot in command must become familiar with the fuel requirements for the flight.",
+   "The pilot must carry enough propane for 20 minutes of flight beyond the intended landing site."
+  ],
+  "answer": 1,
+  "explanation": "91.151 prescribes VFR fuel reserves only for airplanes (30 minutes day, 45 minutes night) and rotorcraft (20 minutes). For a flight not in the vicinity of an airport, 91.103(a) still requires the PIC to become familiar with weather, fuel requirements and alternatives, so the reserve is the pilot's own planned minimum.",
+  "ref": "14 CFR 91.103(a); 14 CFR 91.151",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-015",
+  "area": "REG",
+  "topic": "Safety belts",
+  "stem": "Before launching with passengers in a hot air balloon with a wicker basket, what does 14 CFR 91.107 require of the pilot regarding safety belts?",
+  "choices": [
+   "Brief each passenger on how to fasten and unfasten the safety belt.",
+   "Ensure each passenger has been notified to fasten the safety belt for takeoff and landing.",
+   "Nothing; 91.107 excepts free balloons that incorporate a basket or gondola."
+  ],
+  "answer": 2,
+  "explanation": "Each paragraph of 91.107(a) excepts a free balloon that incorporates a basket or gondola, so neither the belt briefing nor the fasten-belt notice applies. A thorough passenger briefing on landing position and handholds is still sound practice, but it is not a 91.107 requirement.",
+  "ref": "14 CFR 91.107(a)(1)-(3)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-016",
+  "area": "REG",
+  "topic": "Right-of-way",
+  "stem": "A hot air balloon and a glider are converging at approximately the same altitude. Which has the right-of-way?",
+  "choices": [
+   "The balloon.",
+   "The glider, because it has no engine and cannot climb without lift.",
+   "Whichever aircraft is to the other's right."
+  ],
+  "answer": 0,
+  "explanation": "91.113(d)(1) gives a balloon the right-of-way over any other category of aircraft; a glider has the right-of-way only over powered aircraft. The 'aircraft to the right' rule applies when both aircraft are of the same category, and an aircraft in distress has the right-of-way over all others, balloons included (91.113(c)).",
+  "ref": "14 CFR 91.113(c)-(d)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-017",
+  "area": "REG",
+  "topic": "Minimum safe altitudes",
+  "stem": "Except when necessary for takeoff or landing, what is the minimum altitude for a balloon flying over a congested area of a town?",
+  "choices": [
+   "500 feet above the surface.",
+   "1,000 feet above the highest obstacle within a horizontal radius of 1,000 feet of the aircraft.",
+   "1,000 feet above the highest obstacle within a horizontal radius of 2,000 feet of the aircraft."
+  ],
+  "answer": 2,
+  "explanation": "91.119(b) requires 1,000 feet above the highest obstacle within a 2,000-foot horizontal radius over any congested area or open-air assembly of persons. 500 feet above the surface is the rule over other than congested areas (91.119(c)).",
+  "ref": "14 CFR 91.119(b)-(c)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-018",
+  "area": "REG",
+  "topic": "Inspections",
+  "stem": "A commercial pilot carries paying passengers in a balloon she owns. Which inspections does 14 CFR 91.409 require?",
+  "choices": [
+   "An annual inspection within the preceding 12 calendar months only; the 100-hour inspection does not apply to balloons.",
+   "An annual inspection within the preceding 12 calendar months, and an annual or 100-hour inspection within the preceding 100 hours of time in service.",
+   "A 100-hour inspection within the preceding 100 hours of time in service, which takes the place of the annual inspection."
+  ],
+  "answer": 1,
+  "explanation": "91.409(a) requires an annual inspection for every aircraft, and 91.409(b) adds the 100-hour limit for any aircraft carrying a person other than a crewmember for hire, with no balloon exception. A 100-hour inspection can't substitute for the annual unless a person authorized to perform annuals does it and records it as an annual.",
+  "ref": "14 CFR 91.409(a)-(b)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-019",
+  "area": "REG",
+  "topic": "Definitions: time in service",
+  "stem": "When tracking hours toward a balloon's next 100-hour inspection, time in service is counted from",
+  "choices": [
+   "the start of cold inflation until the envelope is fully deflated.",
+   "the moment the balloon leaves the surface until it touches the surface at the next point of landing.",
+   "the first burner use of the day until the fuel system is shut down after landing."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 1.1 defines time in service, for maintenance records, as the time from the moment an aircraft leaves the surface of the earth until it touches it at the next point of landing. Inflation, standing burns and deflation on the ground don't count toward the 91.409(b) interval.",
+  "ref": "14 CFR 1.1 (Time in service); 14 CFR 91.409(b)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-020",
+  "area": "REG",
+  "topic": "Maintenance records",
+  "stem": "How long must a balloon's owner keep the record of a 100-hour inspection?",
+  "choices": [
+   "Until the work is repeated or superseded by other work, or for 1 year after the work is performed.",
+   "Permanently; the record transfers with the balloon when it is sold.",
+   "For 3 years after the work is performed."
+  ],
+  "answer": 0,
+  "explanation": "91.417(b)(1) covers inspection and maintenance records listed in 91.417(a)(1). The records that must be kept and transferred with the aircraft at sale are those in 91.417(a)(2), such as total time in service, life-limited parts status, current inspection status and airworthiness directive status.",
+  "ref": "14 CFR 91.417(a)-(b)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-021",
+  "area": "REG",
+  "topic": "Accident reporting",
+  "stem": "During a high-wind landing, a balloon passenger fractures an ankle. The balloon is undamaged. What does 49 CFR Part 830 require of the operator?",
+  "choices": [
+   "Immediate notification to the nearest NTSB office, followed by a written report on the NTSB form within 10 days.",
+   "Only a written NTSB report within 10 days, because the balloon received no substantial damage.",
+   "No NTSB report, unless the passenger is hospitalized for more than 48 hours."
+  ],
+  "answer": 0,
+  "explanation": "49 CFR 830.2 defines a fracture of any bone (except simple fractures of fingers, toes or nose) as a serious injury, which makes this an accident whatever the aircraft's condition. 830.5 requires immediate notification and 830.15(a) requires the report (NTSB Form 6120.1/2) within 10 days. Hospitalization for more than 48 hours is only one of several ways an injury qualifies as serious.",
+  "ref": "49 CFR 830.2, 830.5(a), 830.15(a)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-022",
+  "area": "REG",
+  "topic": "Balloon airworthiness: required equipment",
+  "stem": "Which item is NOT among the basic equipment that 14 CFR 31.85 requires for a hot air balloon?",
+  "choices": [
+   "A magnetic compass.",
+   "An envelope temperature indicator.",
+   "A rate of climb indicator."
+  ],
+  "answer": 0,
+  "explanation": "31.85 requires an altimeter and a rate of climb indicator for all balloons, plus a fuel quantity gauge and an envelope temperature indicator for hot air balloons. A compass is required only for captive gas balloons (31.85(c)).",
+  "ref": "14 CFR 31.85",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-001",
+  "area": "AIR",
+  "topic": "VFR weather minimums: Class G",
+  "stem": "A balloon is flying at 800 feet AGL in Class G airspace during the day. What are the minimum flight visibility and distance from clouds?",
+  "choices": [
+   "1 statute mile and clear of clouds.",
+   "3 statute miles; 500 feet below, 1,000 feet above, and 2,000 feet horizontal.",
+   "1 statute mile; 500 feet below, 1,000 feet above, and 2,000 feet horizontal."
+  ],
+  "answer": 0,
+  "explanation": "91.155(a) sets 1 statute mile and clear of clouds for day flight in Class G at or below 1,200 feet AGL for aircraft other than helicopters. The 1-mile, 500/1,000/2,000 minimum applies in Class G by day above 1,200 feet AGL and below 10,000 feet MSL.",
+  "ref": "14 CFR 91.155(a)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-002",
+  "area": "AIR",
+  "topic": "VFR weather minimums: Class E",
+  "stem": "A balloon is climbing through 4,500 feet MSL in Class E airspace. What VFR weather minimums apply?",
+  "choices": [
+   "1 statute mile and clear of clouds.",
+   "5 statute miles; 1,000 feet below, 1,000 feet above, and 1 statute mile horizontal.",
+   "3 statute miles; 500 feet below, 1,000 feet above, and 2,000 feet horizontal."
+  ],
+  "answer": 2,
+  "explanation": "91.155(a) requires 3 statute miles and 500 feet below, 1,000 feet above and 2,000 feet horizontal from clouds in Class E below 10,000 feet MSL. The 5-mile, 1,000/1,000/1-mile minimum applies in Class E at or above 10,000 feet MSL.",
+  "ref": "14 CFR 91.155(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-003",
+  "area": "AIR",
+  "topic": "Class D airspace",
+  "stem": "Before a balloon drifts into Class D airspace, the pilot must",
+  "choices": [
+   "receive an explicit ATC clearance to enter.",
+   "establish two-way radio communications with the ATC facility providing air traffic services.",
+   "have an operating transponder with altitude reporting."
+  ],
+  "answer": 1,
+  "explanation": "91.129(c)(1) requires two-way radio communications with the ATC facility before entering Class D and maintained while inside. An explicit clearance is the Class B requirement (91.131(a)(1)), and Class D carries no general transponder requirement under 91.215.",
+  "ref": "14 CFR 91.129(c)(1); AIM 3-2-5",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-004",
+  "area": "AIR",
+  "topic": "Class B equipment",
+  "stem": "A balloon with no electrical system, transponder, or ADS-B Out needs to cross a corner of Class B airspace. Which statement is correct?",
+  "choices": [
+   "Balloons are exempt from Class B equipment requirements, so only an ATC clearance is needed.",
+   "An ATC authorization for the missing equipment must be requested at least 1 hour before the operation, in addition to a clearance to enter.",
+   "The flight is prohibited; ATC cannot authorize a deviation from Class B equipment requirements."
+  ],
+  "answer": 1,
+  "explanation": "The balloon exceptions in 91.215(b)(3) and 91.225(e) apply only outside Class B and Class C airspace. For an aircraft not equipped with a transponder or ADS-B Out, 91.215(d)(3) and 91.225(g)(2) require the deviation request at least 1 hour in advance, and 91.131(a)(1) and (c)(2) still require a clearance and an operable two-way radio.",
+  "ref": "14 CFR 91.131(a)(1), (c)(2); 14 CFR 91.215(b)(3), (d)(3); 14 CFR 91.225(e), (g)(2)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-005",
+  "area": "AIR",
+  "topic": "Mode C veil: balloon exception",
+  "stem": "Within 30 NM of a Class B primary airport listed in Appendix D (the Mode C veil), a balloon not certificated with an engine-driven electrical system may operate without a transponder or ADS-B Out if it stays",
+  "choices": [
+   "outside Class B airspace and below 10,000 feet MSL, regardless of the Class B ceiling.",
+   "at or below 2,500 feet AGL, regardless of the Class B or C airspace overhead.",
+   "outside Class A, B, and C airspace and below the ceiling of the Class B or C airspace or 10,000 feet MSL, whichever is lower."
+  ],
+  "answer": 2,
+  "explanation": "91.215(b)(3) requires staying outside Class A, B and C airspace and below the lower of the Class B/C ceiling or 10,000 feet MSL; 91.225(e) sets the same limits for ADS-B Out (outside Class B and C, below the lower ceiling). The 2,500-foot AGL figure comes from the separate at-or-above-10,000-feet-MSL rule, where balloons are also excepted.",
+  "ref": "14 CFR 91.215(b)(3); 14 CFR 91.225(e)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "AIR-006",
+  "area": "AIR",
+  "topic": "Special use airspace",
+  "stem": "A balloon pilot plans to fly VFR through an active Military Operations Area (MOA). Which statement is correct?",
+  "choices": [
+   "No clearance is needed, but the pilot should get traffic advisories from the controlling agency.",
+   "Permission from the using agency is required, as for a restricted area.",
+   "VFR flight is prohibited while the MOA is active."
+  ],
+  "answer": 0,
+  "explanation": "AIM 3-4-5: MOAs separate military training from IFR traffic; VFR pilots may enter but should use extreme caution and contact the controlling agency for traffic advisories. Permission from the using or controlling agency is the rule for restricted and prohibited areas (91.133(a)).",
+  "ref": "AIM 3-4-5; 14 CFR 91.133(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "AIR-007",
+  "area": "AIR",
+  "topic": "Temporary flight restrictions",
+  "stem": "A NOTAM establishes a temporary flight restriction under 14 CFR 91.137(a)(1) around a chemical spill near a planned landing area. Who may operate in the area?",
+  "choices": [
+   "Any aircraft remaining at least 1,000 feet above the surface.",
+   "Any VFR aircraft whose pilot has notified the nearest Flight Service Station.",
+   "Only aircraft participating in hazard relief under the direction of the official in charge of on-scene emergency response."
+  ],
+  "answer": 2,
+  "explanation": "91.137(b) limits an (a)(1) TFR to aircraft participating in hazard relief under the direction of the official in charge on scene. AIM 3-5-3 notes such areas are normally within 2,000 feet above the surface and a 3-NM radius, but the NOTAM defines the actual dimensions, so a balloon must plan around it, not over it.",
+  "ref": "14 CFR 91.137(a)(1), (b); AIM 3-5-3",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-008",
+  "area": "AIR",
+  "topic": "Wildlife refuges and parks",
+  "stem": "A planned balloon flight path crosses a National Wildlife Refuge charted on the sectional. What altitude does the AIM request pilots maintain over it?",
+  "choices": [
+   "At least 2,000 feet above the surface.",
+   "At least 1,000 feet above the surface.",
+   "At least 500 feet above the surface."
+  ],
+  "answer": 0,
+  "explanation": "AIM 7-5-6 requests a minimum of 2,000 feet above the surface of National Wildlife Refuges, National Park Service areas and Forest Service wilderness areas. It is a request rather than a Part 91 rule, though some charted areas also have federal statutory restrictions.",
+  "ref": "AIM 7-5-6",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-009",
+  "area": "AIR",
+  "topic": "Magnetic variation",
+  "stem": "The true course from the launch site to a planned landing field is 090°. The sectional shows an isogonic line of 10° E. What is the magnetic course?",
+  "choices": [
+   "100°.",
+   "080°.",
+   "090°, because courses measured on a sectional chart are already magnetic."
+  ],
+  "answer": 1,
+  "explanation": "East variation is subtracted when converting true to magnetic ('east is least'), so 090° minus 10° gives 080°. Adding is correct only for west variation, and courses measured against a sectional's lines of longitude are true, not magnetic.",
+  "ref": "FAA-H-8083-25C Ch. 16 (Variation)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "AIR-010",
+  "area": "AIR",
+  "topic": "Military training routes",
+  "stem": "A sectional shows VR1257 crossing a planned balloon flight area. What does the four-digit route number indicate?",
+  "choices": [
+   "The route is flown under IFR regardless of weather.",
+   "The route has at least one segment above 1,500 feet AGL.",
+   "The route has no segment above 1,500 feet AGL."
+  ],
+  "answer": 2,
+  "explanation": "AIM 3-5-2: MTRs with no segment above 1,500 feet AGL are identified by four digits; routes with one or more segments above 1,500 feet AGL use three. VR routes are flown under VFR, generally at speeds above 250 knots, so a balloon near one should expect fast, low military traffic.",
+  "ref": "AIM 3-5-2",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-001",
+  "area": "WXS",
+  "topic": "METAR: ceiling",
+  "stem": "METAR KXYZ 201253Z 33008KT 10SM FEW030 BKN045 OVC250 08/M03 A3012\nWhat is the ceiling?",
+  "choices": [
+   "3,000 feet AGL.",
+   "4,500 feet AGL.",
+   "25,000 feet AGL."
+  ],
+  "answer": 1,
+  "explanation": "A ceiling is the lowest layer reported as broken or overcast (14 CFR 1.1), so FEW030 doesn't count and BKN045 is the ceiling. METAR cloud heights are in hundreds of feet above ground level.",
+  "ref": "14 CFR 1.1 (Ceiling); FAA-H-8083-28B 24.4.3.9",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-002",
+  "area": "WXS",
+  "topic": "METAR: sky condition",
+  "stem": "METAR KXYZ 201150Z AUTO 00000KT 4SM BR CLR 09/08 A3001 RMK AO2\nWhat does CLR mean in this report?",
+  "choices": [
+   "The automated system detected no clouds at or below 12,000 feet.",
+   "A human observer reported no clouds anywhere in the sky.",
+   "Clouds are present, but their height could not be determined."
+  ],
+  "answer": 0,
+  "explanation": "Automated stations use CLR when no layers are detected at or below 12,000 feet, so higher clouds may still be present. SKC is used when a human observer reports no layers; an indefinite ceiling is coded as vertical visibility (VV), not CLR.",
+  "ref": "FAA-H-8083-28B 24.4.3.9, Table 24-4",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-003",
+  "area": "WXS",
+  "topic": "TAF: change groups",
+  "stem": "TAF KXYZ 201130Z 2012/2112 VRB04KT P6SM SKC\n     FM201700 26014G24KT P6SM SCT060\n     FM210200 22006KT P6SM SKC\nWhat surface wind is forecast at 1800Z on the 20th?",
+  "choices": [
+   "Variable at 4 knots.",
+   "220° at 6 knots.",
+   "260° at 14 knots, gusts to 24 knots."
+  ],
+  "answer": 2,
+  "explanation": "An FM group replaces all earlier forecast conditions from its start time until the next FM group, so from 1700Z on the 20th until 0200Z on the 21st the forecast wind is 26014G24KT. The variable 4-knot wind applies only before 1700Z.",
+  "ref": "FAA-H-8083-28B 27.4.2.10.1",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-004",
+  "area": "WXS",
+  "topic": "Winds aloft (FB): light and variable",
+  "stem": "FT  3000    6000\nXYZ 9900 2108+11\nWhat is forecast at 3,000 feet?",
+  "choices": [
+   "Calm wind with a temperature of 0°C.",
+   "Light and variable wind, less than 5 knots.",
+   "No forecast, because the level is within 1,500 feet of the station elevation."
+  ],
+  "answer": 1,
+  "explanation": "In the FB, 9900 means light and variable, with wind speed less than 5 knots. A level within 1,500 feet of the station's elevation is left blank rather than coded 9900, and 9900 does not mean calm.",
+  "ref": "FAA-H-8083-28B 27.2.1.1, 27.2.1.1.1",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "WXS-005",
+  "area": "WXS",
+  "topic": "Winds aloft (FB): 100+ knot encoding",
+  "stem": "FT   39000\nXYZ 731960\nDecode the 39,000-foot forecast.",
+  "choices": [
+   "230° at 119 knots, -60 °C.",
+   "230° at 19 knots, -60 °C.",
+   "230° at 119 knots, +60 °C."
+  ],
+  "answer": 0,
+  "explanation": "A direction code over 36 means 50 was added to the direction and 100 subtracted from the speed: 73 - 50 = 23 (230°) and 19 + 100 = 119 knots. Above 24,000 feet the sign is omitted because temperatures are always negative, so 60 is -60 °C.",
+  "ref": "FAA-H-8083-28B 27.2.1.1.1",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-006",
+  "area": "WXS",
+  "topic": "Winds aloft (FB): omitted levels",
+  "stem": "The FB station XYZ is at 5,300 feet MSL.\nFT  3000    6000    9000   12000\nXYZ                 2415+05 2620-02\nWhy is no forecast shown for the 6,000-foot level?",
+  "choices": [
+   "Winds at that level are light and variable.",
+   "The forecast is missing and should be replaced with a PIREP.",
+   "Wind forecasts are not issued for levels within 1,500 feet of the station elevation."
+  ],
+  "answer": 2,
+  "explanation": "Wind forecasts are not issued for altitudes within 1,500 feet of a location's elevation, and 6,000 feet is only 700 feet above this station. Light and variable winds would be coded 9900, not left blank; temperatures are likewise omitted within 2,500 feet of the station.",
+  "ref": "FAA-H-8083-28B 27.2.1.1",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-007",
+  "area": "WXS",
+  "topic": "Winds aloft (FB): balloon track",
+  "stem": "FT  3000    6000    9000\nXYZ 2309 2715+08 3022+02\nA balloon levels off at 6,000 feet MSL near XYZ. If the forecast is accurate, the balloon will drift toward approximately",
+  "choices": [
+   "270° true at 15 knots.",
+   "090° true at 15 knots.",
+   "090° magnetic at 15 knots."
+  ],
+  "answer": 1,
+  "explanation": "FB winds give the direction the wind blows from, referenced to true north: 2715 is from 270° at 15 knots. A balloon moving with that air travels toward 090° true.",
+  "ref": "FAA-H-8083-28B 27.2.1.1.1",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-008",
+  "area": "WXS",
+  "topic": "PIREPs",
+  "stem": "Which pilot report would be transmitted as an urgent PIREP (UUA)?",
+  "choices": [
+   "Moderate turbulence below 3,000 feet.",
+   "Light rime icing in clouds.",
+   "Severe turbulence at 4,000 feet."
+  ],
+  "answer": 2,
+  "explanation": "Urgent PIREPs cover tornadoes, funnel clouds and waterspouts; severe or extreme turbulence; severe icing; hail; low-level wind shear within 2,000 feet of the surface; and volcanic ash. Moderate turbulence and light icing are reported as routine (UA) PIREPs.",
+  "ref": "FAA-H-8083-28B 24.5.1.1.1",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "WXS-009",
+  "area": "WXS",
+  "topic": "AIRMETs",
+  "stem": "A balloon pilot wants advisories for moderate turbulence, strong sustained surface winds, and non-convective low-level wind shear across the planned flight area. Which product covers all three?",
+  "choices": [
+   "AIRMET Tango.",
+   "AIRMET Sierra.",
+   "Convective SIGMET."
+  ],
+  "answer": 0,
+  "explanation": "AIRMET Tango covers moderate turbulence, strong sustained surface winds (about 30 knots) and non-convective low-level wind shear. AIRMET Sierra covers IFR conditions and mountain obscuration, and a Convective SIGMET addresses thunderstorm hazards.",
+  "ref": "FAA-H-8083-28B 26.3.1.2, 26.3.1.3; AIM 7-1-6",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "WXS-010",
+  "area": "WXS",
+  "topic": "Convective SIGMETs",
+  "stem": "Which condition meets the criteria for a Convective SIGMET in the conterminous United States?",
+  "choices": [
+   "Severe icing not associated with thunderstorms.",
+   "Thunderstorms producing hail at the surface of 3/4 inch or more in diameter.",
+   "Widespread dust storms lowering surface visibility below 3 miles."
+  ],
+  "answer": 1,
+  "explanation": "Convective SIGMETs are issued for severe thunderstorms (surface winds of 50 knots or more, surface hail of 3/4 inch or more, or tornadoes), embedded thunderstorms, lines of thunderstorms, and heavy-precipitation thunderstorms covering at least 40 percent of a large area. Severe icing and widespread dust storms are criteria for a non-convective SIGMET.",
+  "ref": "AIM 7-1-6; FAA-H-8083-28B 26.2.4.2",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-011",
+  "area": "WXS",
+  "topic": "Graphical Forecasts for Aviation",
+  "stem": "Which product replaced the legacy text Area Forecast (FA) for the contiguous United States?",
+  "choices": [
+   "The Terminal Aerodrome Forecast (TAF).",
+   "The Winds and Temperatures Aloft Forecast (FB).",
+   "The Graphical Forecasts for Aviation (GFA)."
+  ],
+  "answer": 2,
+  "explanation": "AIM 7-1-4 describes the GFA as the digital and graphical product designed to replace the legacy FA. It shows observations from the past 14 hours and forecasts up to 15 hours ahead for clouds, flight category, precipitation, thunderstorms, icing, turbulence and winds. A TAF covers only the area around one airport, and the FB gives winds and temperatures aloft.",
+  "ref": "AIM 7-1-4",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "WXS-012",
+  "area": "WXS",
+  "topic": "Preflight briefings",
+  "stem": "At 1900 the evening before a 0630 balloon launch, a pilot calls Flight Service to plan the flight. Which type of briefing should the pilot request?",
+  "choices": [
+   "An outlook briefing.",
+   "An abbreviated briefing.",
+   "A standard briefing."
+  ],
+  "answer": 0,
+  "explanation": "AIM 7-1-5 says to request an outlook briefing when the proposed departure is 6 or more hours away; it is for planning only. The pilot should then get a standard briefing (or an abbreviated briefing to update) before launch, which includes adverse conditions, current conditions, forecasts, winds aloft and NOTAMs.",
+  "ref": "AIM 7-1-5",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "ADM-001",
+  "area": "ADM",
+  "topic": "Hazardous attitudes",
+  "stem": "A pilot thinks, 'That airspace rule is pointless out here; nobody will ever know.' Which antidote should the pilot apply?",
+  "choices": [
+   "Follow the rules. They are usually right.",
+   "It could happen to me.",
+   "Not so fast. Think first."
+  ],
+  "answer": 0,
+  "explanation": "Resenting rules and regulations is the anti-authority attitude, and its antidote is 'Follow the rules. They are usually right.' 'It could happen to me' answers invulnerability, and 'Not so fast. Think first' answers impulsivity.",
+  "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "ADM-002",
+  "area": "ADM",
+  "topic": "Risk management: PAVE",
+  "stem": "Passengers who booked a sunrise flight as a birthday surprise are leaving town tomorrow, and they urge the pilot to launch despite building surface winds. In the PAVE checklist, the pressure to fly falls under",
+  "choices": [
+   "Pilot.",
+   "enVironment.",
+   "External pressures."
+  ],
+  "answer": 2,
+  "explanation": "The PHAK lists 'a passenger the pilot does not want to disappoint' among the external pressures that push a pilot to complete a flight at the expense of safety. The building winds themselves are an environment hazard; the urge to fly in them anyway is the external pressure.",
+  "ref": "FAA-H-8083-25C Ch. 2 (PAVE Checklist)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "ADM-003",
+  "area": "ADM",
+  "topic": "Hypoxia: carbon monoxide",
+  "stem": "During a long cold-morning inflation in a sheltered spot, the pilot stands downwind of the inflator fan's gasoline engine and later feels a headache and drowsiness in flight. Which type of hypoxia is most likely?",
+  "choices": [
+   "Hypoxic hypoxia.",
+   "Hypemic hypoxia.",
+   "Histotoxic hypoxia."
+  ],
+  "answer": 1,
+  "explanation": "Carbon monoxide from engine exhaust binds to hemoglobin so the blood cannot carry enough oxygen, which the Balloon Flying Handbook classifies as hypemic hypoxia. Histotoxic hypoxia is the cells' inability to use oxygen (alcohol, drugs), and hypoxic hypoxia comes from the low partial pressure of oxygen at altitude.",
+  "ref": "FAA-H-8083-11B Ch. 9 (Hypoxia); AIM 8-1-4",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "ADM-004",
+  "area": "ADM",
+  "topic": "Fitness for flight: medication",
+  "stem": "A pilot with a head cold takes an over-the-counter antihistamine before a morning passenger flight. According to the AIM, what is the safest course?",
+  "choices": [
+   "Do not fly as a crewmember while taking the medication unless the FAA has approved its use.",
+   "Fly if the label does not warn against operating machinery.",
+   "Fly once 8 hours have passed since the last dose, as with alcohol."
+  ],
+  "answer": 0,
+  "explanation": "AIM 8-1-1 says the safest rule is not to fly as a crewmember while taking any medication unless the FAA has approved it, and 91.17(a)(3) prohibits flying while using any drug that affects the faculties contrary to safety. Illness and Medication are the first two items of the I'M SAFE checklist; the 8-hour figure is the alcohol rule and doesn't apply to medication.",
+  "ref": "AIM 8-1-1; 14 CFR 91.17(a)(3); FAA-H-8083-11B Ch. 1 (Fig. 1-6)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "ADM-005",
+  "area": "ADM",
+  "topic": "Hazardous attitudes",
+  "stem": "After a fast landing drags the basket through a fence, a pilot says, 'Nothing I do matters once the wind picks up; it's all luck.' Which hazardous attitude is this, and what is its antidote?",
+  "choices": [
+   "Invulnerability; 'It could happen to me.'",
+   "Macho; 'Taking chances is foolish.'",
+   "Resignation; 'I'm not helpless. I can make a difference.'"
+  ],
+  "answer": 2,
+  "explanation": "Believing one's own actions make no difference to the outcome is resignation, and its antidote is 'I'm not helpless. I can make a difference.' Invulnerability is the belief that an accident can't happen to you, and macho is taking risks to impress others.",
+  "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ }
+]
