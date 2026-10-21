@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ADM-801",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Managing External Pressures ('the single most important key to risk management because it is the one risk factor category that can cause a pilot to ignore all the other risk factors... figure into a majority of accidents')"
+  },
+  {
+    "id": "ADM-802",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Managing External Pressures (bullet 'Manage passengers' expectations')"
+  },
+  {
+    "id": "ADM-803",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 1 Risk elements, Balloon bullet (sparse landing areas, swampland, wind decreasing, sunset half an hour away); Ch. 8 Some Basic Rules of Landing"
+  },
+  {
+    "id": "ADM-804",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 1 Fig. 1-6 I'M SAFE CHECKLIST ('Eating—Am I adequately nourished?'); FAA-H-8083-25C Ch. 2 IMSAFE item 6 'Emotion'. Stem names the BFH and the figure."
+  },
+  {
+    "id": "ADM-805",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 TEAM (Transfer, Eliminate, Accept, Mitigate); FAA-H-8083-11B Ch. 1 perform risk management list"
+  },
+  {
+    "id": "ADM-806",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Fig. 2-5 example (occasional x catastrophic = high risk; 'must either not fly or fly only after finding ways to mitigate, eliminate, or control the risk'; 'Occasional—an event will probably occur sometime')"
+  },
+  {
+    "id": "ADM-807",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 The 5 Ps Check ('the easiest point to cancel a flight due to bad weather is before the pilot and passengers walk out the door'; second easiest just prior to takeoff)"
+  },
+  {
+    "id": "ADM-808",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Fig. 2-4 Resignation ('go along with unreasonable requests just to be a nice guy'; antidote 'I'm not helpless. I can make a difference.'). Adjacent to ADM-005 (different scenario cue), not a duplicate."
+  },
+  {
+    "id": "ADM-809",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 1 Fig. 1-5; FAA-H-8083-25C Ch. 2 Fig. 2-4 (Macho: 'Taking chances is foolish'). ADM-303 asks attitude+antidote pair; this asks only the antidote from a different cue."
+  },
+  {
+    "id": "ADM-810",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Operational Pitfalls ('Getting behind the aircraft... A constant state of surprise at what happens next')"
+  },
+  {
+    "id": "ADM-811",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Operational Pitfalls (Operating without adequate fuel reserves); FAA-H-8083-11B Ch. 8 Some Basic Rules of Landing"
+  },
+  {
+    "id": "ADM-812",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Workload Management ('The first effect of high workload is that the pilot may be working harder but accomplishing less')"
+  },
+  {
+    "id": "ADM-813",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 ('prepare for high workload periods during times of low workload'); FAA-H-8083-11B Ch. 8 Passenger Briefings & Management (briefing given again as soon as the decision to land is made)"
+  },
+  {
+    "id": "ADM-814",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Number of Crewmembers ('If inflation requires more crew than usual, due to the windy conditions, consideration should be given to canceling the flight')"
+  },
+  {
+    "id": "ADM-815",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 Internal Resources ('One of the most underutilized resources may be the person in the right seat... watching for traffic'); FAA-H-8083-11B Ch. 1 Fig. 1-10 (passenger Pat alerts Dave to powerlines)"
+  },
+  {
+    "id": "ADM-816",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Direction ('GPS units break or fall overboard, and batteries fail'; sight picture); FAA-H-8083-25C Ch. 2 ('At no time is the moving map meant to substitute for a VFR sectional')"
+  },
+  {
+    "id": "ADM-817",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Use of Instruments ('cover the instrument pack with a spare glove or a hand')"
+  },
+  {
+    "id": "ADM-818",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (15-kt AFM crosswind vs 10-kt experience = personal limitation; 'legal' vs 'smart'); FAA-H-8083-11B Ch. 3 Weather (flight manual maximum launch winds and personal limitations)"
+  },
+  {
+    "id": "ADM-819",
+    "verdict": "fixed",
+    "issue": "The cold-circulation fact is in Ch. 9 Stagnant Hypoxia itself ('Cold temperatures can also reduce circulation and decrease the blood supplied to extremities'); the extra Ch. 3 (Cold Weather Flying) ref does not say it.",
+    "suggested": "Ref trimmed to Ch. 9; explanation unchanged.",
+    "source": "FAA-H-8083-11B Ch. 9 (Stagnant Hypoxia; Histotoxic Hypoxia; Hypemic Hypoxia)"
+  },
+  {
+    "id": "ADM-820",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 9 Hypemic Hypoxia ('restoring the lost hemoglobin can take several weeks')"
+  },
+  {
+    "id": "ADM-821",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 9 Hypoxic Hypoxia ('the percentage of atmospheric oxygen remains constant, but a reduced number of oxygen molecules enter the lungs')"
+  },
+  {
+    "id": "ADM-822",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 9 ('time of useful consciousness describes the maximum time the pilot has to make rational, life-saving decisions... without supplemental oxygen'); 14 CFR 91.211(a)"
+  },
+  {
+    "id": "ADM-823",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 8-1 (faa.gov) 8-1-3 ('the oxygen regulator should immediately be set to deliver 100 percent oxygen, and then the system checked')"
+  },
+  {
+    "id": "ADM-824",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 8-1 (faa.gov) 8-1-2 (CO from smoking: tissues already as at 'a cabin pressure altitude of several thousand feet'); 8-1-6 (dark adaptation impaired by CO from smoking)"
+  },
+  {
+    "id": "ADM-825",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 8-1 (faa.gov) 8-1-5 ('atmospheric haze the illusion of being at a greater distance from the runway'); FAA-H-8083-25C Ch. 17 Haze"
+  },
+  {
+    "id": "ADM-826",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 9 Night Vision ('Deficiencies in vitamins A and C... carbon monoxide poisoning, smoking, alcohol, certain drugs, and a lack of oxygen')"
+  },
+  {
+    "id": "ADM-827",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 17 Dehydration and Heatstroke (1.5 quart deficit / 2 percent; 'thirst mechanism arrives too late and is turned off too easily'; caffeine and alcohol diuretics)"
+  },
+  {
+    "id": "ADM-828",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 9 Drugs (OTC analgesics usually not restricted; 'flying is almost always precluded while using prescription analgesics, such as... codeine'); AIM 8-1-1"
+  },
+  {
+    "id": "ADM-829",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 8-1 (faa.gov) 8-1-2 ('The recommended wait time before going to flight altitudes above 8,000 feet is at least 24 hours after any SCUBA dive'). Adjacent to ADM-340 (12-hour case), not a duplicate."
+  },
+  {
+    "id": "ADM-830",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 8-1 (faa.gov) 8-1-2 ('At cabin pressure altitudes above 15,000 feet, the periphery of the visual field grays out to a point where only central vision remains')"
+  },
+  {
+    "id": "OPS-801",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 'Hold On Tight' in Two Places ('probably the least followed of the landing instructions')"
+  },
+  {
+    "id": "OPS-802",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Types of Flight ('Instructional flights require the crew follow the direction of the instructor... not take over any portion'; competitions: relieve the pilot)"
+  },
+  {
+    "id": "OPS-803",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Number of Crewmembers ('recommended minimum crew for the vehicle is two'; optimum inflation crew four)"
+  },
+  {
+    "id": "OPS-804",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 Stay in the Basket ('A typical response is for the passenger to place one foot in front of the other and lock the knee'). Adjacent to OPS-735 ('brace'), not a duplicate."
+  },
+  {
+    "id": "OPS-805",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Passenger Briefing ('Prior to inflation... first briefing'); Ch. 8 ('given again as soon as the pilot has decided to land')"
+  },
+  {
+    "id": "OPS-806",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Launch ('not to touch any control lines, take care of their possessions, stay within the confines of the basket, and, above all, to obey the PIC'); 14 CFR 91.107(a)(2)-(3) (free balloon with basket or gondola excepted)"
+  },
+  {
+    "id": "OPS-807",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Passenger Briefing ('In larger balloons, which usually have compartmentalized baskets, some pilots encourage the passengers to face away... Either procedure is acceptable')"
+  },
+  {
+    "id": "OPS-808",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 ('Some balloon ride companies send an agreement... Passengers are asked to sign a statement')"
+  },
+  {
+    "id": "OPS-809",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Landowner Relations ('During the launch phase... select launch sites that avoid flight paths and landings around sensitive areas, such as livestock, expensive crops, nature preserves')"
+  },
+  {
+    "id": "OPS-810",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Minimum Safe Altitude Requirements ('it is always a good idea to stay at least 1,000 feet away from domestic animals'); 14 CFR 91.119(c); AIM 7-5 (2,000 ft over refuges). Figure confirmed: 1,000 ft."
+  },
+  {
+    "id": "OPS-811",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Identification of Animal Populations ('A long windowless building with fans on the ends and atop the roof usually indicates a poultry production facility'; burner blast panic, mass suffocation)"
+  },
+  {
+    "id": "OPS-812",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 ('Livestock breaking out... demands immediate attention... either find the farmer or take steps to contain or protect the livestock')"
+  },
+  {
+    "id": "OPS-813",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 3 ('most pibals rise at an average rate of 300 feet per minute... after 30 seconds... approximately 150 feet'); 1.5 min x 300 = 450 ft (recomputed)"
+  },
+  {
+    "id": "OPS-814",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 3 ('The difference between these two extremes is called steerage')"
+  },
+  {
+    "id": "OPS-815",
+    "verdict": "fixed",
+    "issue": "Timing recomputed: 350 fpm x 1 min = 350 ft below 700 ft release = 350 ft AGL; distractors 700 (release height) and 1,050 (fall added) are the intended mistakes. Explanation said 91.15 allows the drop 'because they create no hazard'; the rule's test is reasonable precautions against injury or damage.",
+    "suggested": "Reworded the 91.15 sentence to the rule's own condition.",
+    "source": "FAA-H-8083-11B Ch. 7 (Winds Below: tissue balls 'fall at about 350 fpm'); 14 CFR 91.15"
+  },
+  {
+    "id": "OPS-816",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 Landowner Relations ('the pilot should always be polite... It is better to listen than to end up in court')"
+  },
+  {
+    "id": "OPS-817",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 ('If no one can be found, it may be necessary to carry the balloon and lift it over the fence. Do not cut or knock down fences'). Adjacent to OPS-420 (first step: find the landowner), not a duplicate."
+  },
+  {
+    "id": "OPS-818",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 3 The Ground Crew ('A crew chief... oversees all ground operations, under the direction of the pilot, directs other crew members, and speaks on behalf of the pilot when meeting landowners')"
+  },
+  {
+    "id": "OPS-819",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 ('Crew can confirm the quality of a landing site... livestock gathered under a tree, standing water, a newly planted crop')"
+  },
+  {
+    "id": "OPS-820",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 ('A good rule during the first half of the planned flight is to leapfrog ahead of the balloon')"
+  },
+  {
+    "id": "OPS-821",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 ('park it so the entire vehicle is visible to the balloon pilot')"
+  },
+  {
+    "id": "OPS-822",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Launch ('ask a crewmember to step back from the balloon to check that it is clear above'; 'Climbing at a slow rate is the best way to avoid running into balloons above')"
+  },
+  {
+    "id": "OPS-823",
+    "verdict": "fixed",
+    "issue": "Fact confirmed: BFH Ch. 6 Launch says 'There is an unwritten rule in ballooning (not regulatory) that the balloon below has the right of way (due to lack of visibility above)', and Fig. 6-15. Kept for Brian's teaching call as instructed.",
+    "suggested": "Added a trailing CHECK sentence for Brian's teaching call; no other change.",
+    "source": "FAA-H-8083-11B Ch. 6 (Launch, para. 19646; Fig. 6-15)"
+  },
+  {
+    "id": "OPS-824",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 Packing ('a final check of the landing site... A final check with the landowner is usually appropriate. After a quick thank you')"
+  },
+  {
+    "id": "OPS-825",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 8 Aircraft Log Books ('There are some pilots who do not... record aircraft time conducted while on tether. This is an incorrect practice'); 14 CFR 91.417"
+  },
+  {
+    "id": "WXT-801",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 and FAA-H-8083-25C Ch. 12 (5.4°F and 1°F per 1,000 ft, convergence 4.4°F); FAA-H-8083-28B (2026) 12.2 (3°C and 0.5°C)"
+  },
+  {
+    "id": "WXT-802",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 6.4 ('It is possible to change an air parcel's relative humidity without changing its water vapor content'); 6.6"
+  },
+  {
+    "id": "WXT-803",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 11.2.1; FAA-H-8083-11B Ch. 4 Air Masses"
+  },
+  {
+    "id": "WXT-804",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 ('An air mass passing over a warmer surface will be warmed from below... unstable air mass with good surface visibility. Moist, unstable air causes cumulus clouds, localized showers, and turbulence'); AWH 11.2.2"
+  },
+  {
+    "id": "WXT-805",
+    "verdict": "fixed",
+    "issue": "Last explanation sentence ('depends on both speed and latitude, not on latitude alone') rebutted a distractor that does not exist; the real distractor 2 ('acts the same regardless of speed') went unanswered. AWH ref pointed to 10.5 (Surface Wind) instead of 10.3.2 (Coriolis Force).",
+    "suggested": "Rewrote the last sentence to rebut distractors 0 and 2; ref to AWH 10.3.2.",
+    "source": "FAA-H-8083-11B Ch. 4 (Coriolis Force: 'zero with calm winds and increases in magnitude as wind speed increases'); FAA-H-8083-28B (2026) 10.3.2 ('directly proportional to wind speed')"
+  },
+  {
+    "id": "WXT-806",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 ('Air above 2,000 feet above the ground normally flows parallel to the isobars'); FAA-H-8083-28B (2026) 10.4"
+  },
+  {
+    "id": "WXT-807",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 10.5 ('about 10° over water, increasing to as high as 45° over rugged terrain'); FAA-H-8083-11B Ch. 4 (10° over the ocean to more than 45°)"
+  },
+  {
+    "id": "WXT-808",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 The Jet Stream ('General weather patterns... are related closely to the position, strength, and orientation of the jet stream'); Ch. 3 ('attention should be paid to the location and movement of pressure systems and the jet stream')"
+  },
+  {
+    "id": "WXT-809",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 12 Dew and Frost ('On cool, clear, calm nights...'); FAA-H-8083-28B (2026) 21.4.3"
+  },
+  {
+    "id": "WXT-810",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 3 Weather ('Flying in precipitation is a bad practice... heavier... without exceeding temperature limitations'; precipitation makes atmosphere unstable)"
+  },
+  {
+    "id": "WXT-811",
+    "verdict": "fixed",
+    "issue": "CHECK resolved. The AWH names Santa Ana winds only in its TAF LLWS list; the NWS Glossary defines the Santa Ana as strong, hot winds that descend to the coast from inland deserts, and AWH 12.2 gives the compression warming and falling relative humidity of descending air. Ref 16.2.3 (mountain waves) dropped.",
+    "suggested": "Removed the CHECK sentence; cited the NWS Glossary; confidence medium -> high.",
+    "source": "NWS Glossary 'Santa Ana Wind' (https://forecast.weather.gov/glossary.php?word=santa+ana): 'In southern California, a weather condition in which strong, hot, dust-bearing winds descend to the Pacific Coast around Los Angeles from inland desert regions.'; FAA-H-8083-28B (2026) 12.2 (descending parcel warms about 3°C per 1,000 ft, RH decreases); 27.4.2.9.4 (Santa Ana winds as an LLWS source)"
+  },
+  {
+    "id": "WXT-812",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 16.2.6.3.1 (interface between surface types, clear skies and light winds)"
+  },
+  {
+    "id": "WXT-813",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 16.2.6.3.1 (60 mph or greater; not all visible; 'should not fly through them and should scan takeoff and landing areas'); FAA-H-8083-11B Ch. 8 Thermal Flight"
+  },
+  {
+    "id": "WXT-814",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (2026) 10.3.3 ('both strong winds and rough terrain extend the friction layer to higher altitudes')"
+  },
+  {
+    "id": "WXT-815",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 3 Weather ('A balloon should not be launched in the face of a squall line, or during a tornado warning or watch')"
+  },
+  {
+    "id": "AIR-801",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Land Features (Terrain) and Obstructions ('Widely spaced contours represent gentle slopes, while closely spaced contours represent steep slopes'; basic contours 500')"
+  },
+  {
+    "id": "AIR-802",
+    "verdict": "fixed",
+    "issue": "Stem used a 'T over 15' label the writer composed; the Chart Users' Guide legend shows the T ceiling only as T over SFC.",
+    "suggested": "Stem and explanation changed to the guide's own example: magenta T above SFC.",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) p.16 (Class C: 'A ceiling value of T indicates the ceiling is to, but not including, the floor of the overlying Class B airspace', legend T over SFC) and p.52 (Airspace Information legend)"
+  },
+  {
+    "id": "AIR-803",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) ('Wind turbine obstruction lights are located on top of the nacelle (generator) at the hub... 200-300' below the rotating blade tips')"
+  },
+  {
+    "id": "AIR-804",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) ('in high-density areas like city complexes, only the highest obstacle is represented on the chart using the group obstacle symbol'; legend 'At least two in group')"
+  },
+  {
+    "id": "AIR-805",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Airports ('The elevation of an airport is the highest point on the usable portion of the landing areas')"
+  },
+  {
+    "id": "AIR-806",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Airports ('shown to the nearest 100', using 70 as the rounding point; a runway 8070' in length is charted as 81')"
+  },
+  {
+    "id": "AIR-807",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Airport data legend ('Lighting limitations exist; refer to Chart Supplement'; 'When lighting is lacking, the respective character is replaced by a dash')"
+  },
+  {
+    "id": "AIR-808",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Radio Aids to Navigation ('Compass Rose is reference oriented to magnetic north')"
+  },
+  {
+    "id": "AIR-809",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Radio Aids legend ('Underline indicates no voice on this frequency'; 'Crosshatch indicates Shutdown status'; NAVAID used to define Class B)"
+  },
+  {
+    "id": "AIR-810",
+    "verdict": "fixed",
+    "issue": "Stem used a '100 over +45' label the writer composed; the Chart Users' Guide gives the + rule only in words and shows no charted example of it.",
+    "suggested": "Stem now describes the label in the guide's own terms: a floor figure of 45 preceded by a plus sign (+), ceiling 100.",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) p.16 and p.52 legend ('Floors extending \"upward from above\" a certain altitude are preceded by a (+). Operations at and below these altitudes are outside of Class B Airspace.')"
+  },
+  {
+    "id": "AIR-811",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 3-5-6 (not part 71, primary airport Class D, 'participation is voluntary'); FAA Aeronautical Chart Users' Guide (effective 9 July 2026) (TRSAs 'symbolized by a screened black outline', sector altitudes in solid black)"
+  },
+  {
+    "id": "AIR-812",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Airports legend ('UNVERIFIED - A landing area available but warranting more than ordinary precaution')"
+  },
+  {
+    "id": "AIR-813",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 3-4-1 (permanent SUA charted with hours of operation, altitudes, controlling agency; temporary areas via NOTAM); FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Chart Tabulations (Prohibited, Restricted and Warning Areas listed; Alert Areas and MOAs tabulated; altitude, time of use, controlling agency)"
+  },
+  {
+    "id": "AIR-814",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) Airports legend ('RESTRICTED OR PRIVATE - (Soft surfaced runway, or hard surfaced runway less than 1500' in length.) Non-public use having landmark value')"
+  },
+  {
+    "id": "AIR-815",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026) ('Route width varies for each MTR and can extend several miles on either side of the charted MTR centerline'; FLIP AP/1B); AIM 3-5-2"
+  },
+  {
+    "id": "THY-801",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Ascents ('a second burn is within a few seconds... the average balloon starts a slow climb. Three consecutive burns results in a faster climb')"
+  },
+  {
+    "id": "THY-802",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Ascents ('An ascent of 200 to 300 fpm is slow enough to detect wind changes... Above 500 fpm...')"
+  },
+  {
+    "id": "THY-803",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Ascents ('launch and climb at a slow speed (100 to 200 fpm) to make an early decision regarding which direction to fly'); Ch. 6 Launch"
+  },
+  {
+    "id": "THY-804",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Rapid/Steep Descents ('A 700 fpm descent started at 3,000 feet AGL is not necessarily rapid; however, if started at 300 feet AGL, it is rapid and may be critical')"
+  },
+  {
+    "id": "THY-805",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Rapid/Steep Descents (long, twice-standard burn at halfway point; 'Immediately upon sensing a reaction... stop the burn'); 6 to 15 s response"
+  },
+  {
+    "id": "THY-806",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 2 Why Do Balloons Fly? ('leaking through the fabric, seams, and deflation port. Heat is also lost by radiation')"
+  },
+  {
+    "id": "THY-807",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Diminished Capacity ('removes the boundary layer on its surface and greatly increases heat lost by conduction'). Adjacent to THY-535 (relative wind arithmetic) and THY-538 (false lift masking); not a duplicate."
+  },
+  {
+    "id": "THY-808",
+    "verdict": "fixed",
+    "issue": "Duplicate: tested the same fact the same way as THY-013 (dishing is worse for a heavily loaded balloon because heat is squeezed out).",
+    "suggested": "Rewritten to the adjacent facts in the same BFH passage: the lost heat steepens the approach, and the pilot must replace the loss AND add more to stop the sink.",
+    "source": "FAA-H-8083-11B Ch. 6 (Diminished Capacity, paras. 19669-19670: 'not only must the heat loss be replaced to make the balloon neutrally buoyant, but more must be added to stop any downward momentum'; 'Heat loss can change the slope of the approach and, pilot unaware, make it steeper')"
+  },
+  {
+    "id": "THY-809",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 6 Diminished Capacity ('Some pilots intentionally create a situation of diminished capacity when making a high performance descent... in the presence of strong wind shears, this technique can prove disastrous')"
+  },
+  {
+    "id": "THY-810",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 Descents ('time the vent openings... manufacturer's limitation on how long the vent may be open. Use the vent sparingly')"
+  },
+  {
+    "id": "THY-811",
+    "verdict": "fixed",
+    "issue": "Arithmetic correct (4/40 = 0.1; 202 x 0.1 = 20.2 gal/h; 10 = 1/20, 50 = 1/4). The 202 gal/h figure is in the Ch. 7 Standard Burn text (18.5 million / 91,600 = 201.96), not Fig. 7-1; ref cited Fig. 7-1, whose BTU figure has a known error.",
+    "suggested": "Ref changed to the Standard Burn text and the Ch. 2 Propane Primer; Fig. 7-1 removed.",
+    "source": "FAA-H-8083-11B Ch. 7 (The Standard Burn: 'the average burner (an 18.5 million BTU rating) consumes approximately 202 gallons of fuel per hour'); Ch. 2 Propane Primer (91,600 BTU/gal). Recomputed with python."
+  },
+  {
+    "id": "THY-812",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 The Standard Burn ('four 1-second burns do not produce as much heat as one 4-second burn')"
+  },
+  {
+    "id": "THY-813",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 The Standard Burn ('does not mean a burn that is standard between pilots... make all burns exactly the same')"
+  },
+  {
+    "id": "THY-814",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 7 (6 to 15 s response). Recomputed: 600 fpm = 10 ft/s x 10 s = 100 ft; 60 = 6 ft/s; 600 = one minute."
+  },
+  {
+    "id": "THY-815",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 1 Human Resources ('Added weight or hands on allows a pilot to choose a smaller landing site'); Ch. 8 Ground Assistance ('Adding weight to slow, stop, or stabilize the basket')"
+  }
+]

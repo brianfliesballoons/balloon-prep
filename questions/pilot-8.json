@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "ADM-801",
+    "area": "ADM",
+    "topic": "External pressures: why they matter most",
+    "stem": "According to the PHAK, why is managing external pressures called the single most important key to risk management?",
+    "choices": [
+      "They are the only risk factor a pilot can measure in an objective way.",
+      "They can lead a pilot to ignore every other risk factor.",
+      "They are the main cause of the mechanical failures that lead to accidents."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK says external pressure is the one risk factor category that can cause a pilot to ignore all the others; it puts time pressure on the pilot and figures into a majority of accidents. External pressures are hard to measure, not easy, and they are about people and schedules, not mechanical failures.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Managing External Pressures)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-802",
+    "area": "ADM",
+    "topic": "External pressures: managing passenger expectations",
+    "stem": "A ride operator often feels pushed to launch in marginal wind because passengers traveled a long way for their flight. Which practice best follows the PHAK's advice on managing external pressures?",
+    "choices": [
+      "Tell passengers when they book that weather cancels many flights and that rebooking is normal.",
+      "Offer a shorter flight instead of a cancellation whenever the forecast looks marginal.",
+      "Launch first, then judge the wind once the balloon is airborne and the passengers have settled."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK's tools for external pressure are personal procedures, managing passengers' expectations and being ready to accept delays, so telling passengers up front makes a cancellation expected rather than a letdown. Launching to decide later throws away the easy go/no-go point, and a shorter flight still exposes everyone to the same launch and landing winds.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Managing External Pressures)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-803",
+    "area": "ADM",
+    "topic": "Landing options running out",
+    "stem": "On an evening flight, the balloon is drifting toward miles of swamp with few landing areas. The wind is dropping and sunset is about 30 minutes away. One good field lies just ahead. What is the best decision?",
+    "choices": [
+      "Hold altitude and wait for the wind to carry the balloon back toward open country.",
+      "Land in the field ahead while a good option is still available.",
+      "Climb to look for a faster wind that may carry the balloon across the swamp before dark."
+    ],
+    "answer": 1,
+    "explanation": "The Balloon Flying Handbook uses this situation (sparse landing areas, a dying wind and sunset half an hour away) to show the pilot weighing whether to continue; every minute of flight shrinks the options. A faster wind aloft or a wind shift may never come, and either gamble could leave the balloon over the swamp at dusk with less fuel and no field.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Risk Management, Fig. 1-8); Ch. 8 (Some Basic Rules of Landing)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-804",
+    "area": "ADM",
+    "topic": "I'M SAFE: the final E",
+    "stem": "In the Balloon Flying Handbook's I'M SAFE checklist (Figure 1-6), what does the final E ask the pilot?",
+    "choices": [
+      "Am I adequately nourished?",
+      "Is the environment within my personal limits?",
+      "Is my equipment airworthy and fueled?"
+    ],
+    "answer": 0,
+    "explanation": "Figure 1-6 ends with Eating: am I adequately nourished? The PHAK's IMSAFE version uses Emotion for the last letter, so both are worth knowing. Equipment and environment matter, but they belong to the balloon and environment risk elements, not to the pilot's personal fitness checklist.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-6); FAA-H-8083-25C Ch. 2 (IMSAFE)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-805",
+    "area": "ADM",
+    "topic": "TEAM: mitigate",
+    "stem": "A light breeze is forecast to build during the morning. The pilot still launches but adds two extra crew, plans a shorter flight and picks a large landing field near the launch area. In the TEAM choice list, this is",
+    "choices": [
+      "Eliminate.",
+      "Transfer.",
+      "Mitigate."
+    ],
+    "answer": 2,
+    "explanation": "Mitigate means reducing a risk the pilot has decided to accept, which is what extra crew, a shorter flight and a large field do. Eliminate would remove the hazard altogether, such as by canceling, and Transfer would hand the decision to someone else, such as a more experienced pilot.",
+    "ref": "FAA-H-8083-25C Ch. 2 (TEAM Checklist); FAA-H-8083-11B Ch. 1 (Risk Management)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-806",
+    "area": "ADM",
+    "topic": "Risk matrix: acting on a high rating",
+    "stem": "Using a risk matrix, a pilot rates the chance of landing in winds above her personal limit as occasional and the outcome as catastrophic. According to the PHAK, what should she do?",
+    "choices": [
+      "Not fly, or fly only after finding ways to mitigate, eliminate or control the risk.",
+      "Fly, as long as an experienced crew member agrees with the decision to launch.",
+      "Fly, because 'occasional' means the event will probably not happen on any given day."
+    ],
+    "answer": 0,
+    "explanation": "In the PHAK's Figure 2-5 example, an occasional likelihood with a catastrophic severity falls in the high-risk area, so the pilot must either not fly or fly only after finding ways to mitigate, eliminate or control the risk. 'Occasional' means the event will probably occur sometime, and a second opinion changes neither the likelihood nor the severity.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Risk; Fig. 2-5)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-807",
+    "area": "ADM",
+    "topic": "5P check: the easiest time to cancel",
+    "stem": "The PHAK's 5P check names key decision points. For a balloon flight, when is the easiest time to cancel for weather?",
+    "choices": [
+      "After cold inflation, when the crew can see how the envelope handles the wind",
+      "Just after lift-off, once the pilot can feel how strong the winds aloft are",
+      "During preflight planning, before anyone heads out to the launch site"
+    ],
+    "answer": 2,
+    "explanation": "The PHAK says the easiest point to cancel for bad weather is before the pilot and passengers head out, while all the information is at hand; the second easiest is just before takeoff. Once the envelope is inflated or the balloon is airborne, the people and effort involved make canceling harder, and a balloon cannot simply fly back to its launch site.",
+    "ref": "FAA-H-8083-25C Ch. 2 (The 5 Ps Check)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-808",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: resignation",
+    "stem": "A passenger keeps begging the pilot to dip the basket into a lake for a 'splash and dash.' The pilot thinks, 'It's their flight. What can I do?' and starts down. Which hazardous attitude is this?",
+    "choices": [
+      "Resignation",
+      "Impulsivity",
+      "Macho"
+    ],
+    "answer": 0,
+    "explanation": "The PHAK describes the resigned pilot as one who feels he can't make a difference and may go along with unreasonable requests just to be a 'nice guy'; the antidote is 'I'm not helpless. I can make a difference.' Impulsivity is acting before thinking, and macho is taking chances to impress others, and neither is what drives this pilot.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Hazardous Attitudes, Fig. 2-4); FAA-H-8083-11B Ch. 1 (Fig. 1-5)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-809",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: macho antidote",
+    "stem": "A commercial pilot hopes to impress a ride company's owner, who is watching, by landing in a backyard barely bigger than the basket. What antidote does the FAA give for this attitude?",
+    "choices": [
+      "Follow the rules. They are usually right.",
+      "Taking chances is foolish.",
+      "Not so fast. Think first."
+    ],
+    "answer": 1,
+    "explanation": "Trying to prove oneself or impress others is the macho attitude, and its antidote is 'Taking chances is foolish.' 'Follow the rules. They are usually right' answers anti-authority, and 'Not so fast. Think first' answers impulsivity.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2 (Fig. 2-4)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-810",
+    "area": "ADM",
+    "topic": "Operational pitfalls: getting behind the aircraft",
+    "stem": "A student keeps reacting late on a flight: each descent catches her by surprise, and she burns hard only after the balloon is already sinking fast. Which operational pitfall does this describe?",
+    "choices": [
+      "Scud running under low clouds",
+      "Getting behind the aircraft",
+      "Peer pressure from other pilots"
+    ],
+    "answer": 1,
+    "explanation": "The PHAK says getting behind the aircraft comes from letting events control the pilot's actions, and a constant state of surprise at what happens next is its mark. Peer pressure is deciding on emotion in response to other pilots, and scud running is flying low to keep the ground in sight in poor weather.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-811",
+    "area": "ADM",
+    "topic": "Operational pitfalls: fuel reserves",
+    "stem": "Paying passengers ask for 'just ten more minutes,' and the pilot keeps flying until the tanks are below the reserve he planned, then starts hunting for a field. Which operational pitfall is this?",
+    "choices": [
+      "Operating without adequate fuel reserves",
+      "Duck-under syndrome",
+      "Loss of positional or situational awareness"
+    ],
+    "answer": 0,
+    "explanation": "The PHAK lists operating without adequate fuel reserves as a pitfall, usually caused by overconfidence or poor planning; the Balloon Flying Handbook adds that a pilot should plan the landing early enough that fuel is never a distraction. Loss of positional or situational awareness means not knowing where the aircraft is or what is happening, and duck-under syndrome is descending below minimums on an instrument approach.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15); FAA-H-8083-11B Ch. 8 (Some Basic Rules of Landing)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-812",
+    "area": "ADM",
+    "topic": "Workload: the first effect",
+    "stem": "According to the PHAK, what is the first effect of high workload on a pilot?",
+    "choices": [
+      "The pilot stops taking in information from any source.",
+      "The pilot works harder but accomplishes less.",
+      "The pilot makes faster decisions with fewer errors."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK says the first effect of high workload is working harder but accomplishing less; as it grows, attention narrows to one item, and only at task saturation does the pilot stop taking in input from various sources. Faster and more accurate decisions are the opposite of what overload produces.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Workload Management)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-813",
+    "area": "ADM",
+    "topic": "Workload: planning ahead for landing",
+    "stem": "Landing is the busiest part of a balloon flight. Which habit best follows FAA workload-management advice?",
+    "choices": [
+      "Leave the fuel and field decisions to the crew, so the pilot can concentrate on flying.",
+      "Save the passenger briefing for the final descent, so it is fresh in everyone's mind.",
+      "Brief passengers and pick likely fields during the quiet middle of the flight."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK says to prepare for high-workload periods during times of low workload, and the Balloon Flying Handbook lists the many tasks around touchdown and says to plan the landing early, then repeat the briefing once the decision to land is made. Saving everything for the final descent stacks tasks into the busiest moment, and fuel and field choices stay with the pilot in command.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Workload Management); FAA-H-8083-11B Ch. 8 (Passenger Briefings & Management; Crew Responsibilities)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-814",
+    "area": "ADM",
+    "topic": "Crew needs as a go/no-go cue",
+    "stem": "On a breezy morning, it takes more crew than usual just to hold the envelope during inflation. What does the Balloon Flying Handbook suggest?",
+    "choices": [
+      "Add crew until the inflation is under control, then launch as planned.",
+      "Consider canceling, since the landing may be just as windy.",
+      "Launch quickly, before the wind has a chance to build any further."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says that if inflation needs more crew than usual because of wind, the pilot should consider canceling: the balloon may get airborne, but flying outside one's comfort zone and facing a windy landing can impair concentration. More hands may get the envelope up but do nothing for the landing, and rushing the launch adds risk.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Number of Crewmembers)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-815",
+    "area": "ADM",
+    "topic": "SRM: passengers as a resource",
+    "stem": "The PHAK calls passengers one of the most underused resources a single pilot has. Which use of a balloon passenger fits that advice?",
+    "choices": [
+      "Asking a passenger to watch for power lines and other balloons",
+      "Letting a passenger run the blast valve so the pilot can look for traffic",
+      "Having a passenger choose the landing field so the pilot can fly the approach"
+    ],
+    "answer": 0,
+    "explanation": "The PHAK says the pilot in command can ask passengers to help with tasks such as watching for traffic, and in the Balloon Flying Handbook's OODA example a passenger warns the pilot of power lines on approach. Handing a passenger the burner or the landing decision gives away control and judgment that belong to the pilot.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Internal Resources); FAA-H-8083-11B Ch. 1 (The OODA Loop, Fig. 1-10)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-816",
+    "area": "ADM",
+    "topic": "GPS and automation complacency",
+    "stem": "A pilot navigates only with a phone app's moving map and has never practiced finding the balloon's track any other way. What does FAA guidance say about this?",
+    "choices": [
+      "It is fine for balloon flight, since a phone's GPS is more accurate than any chart.",
+      "GPS units can fail, so also carry a chart and know the sight-picture method.",
+      "It is acceptable as long as the app's map database is kept up to date."
+    ],
+    "answer": 1,
+    "explanation": "The Balloon Flying Handbook notes that GPS units break or fall overboard and batteries fail, so pilots should know the 'old-school' sight-picture method; the PHAK warns that a moving map is never meant to replace a sectional and that over-reliance on automation erodes basic skills. Accuracy and a current database are no help once the device stops working.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Direction); FAA-H-8083-25C Ch. 2 (Automation)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-817",
+    "area": "ADM",
+    "topic": "Situational awareness: instrument fixation",
+    "stem": "During training, a student watches the altimeter and variometer so closely that she misses a power line ahead. What does the Balloon Flying Handbook say an instructor may do?",
+    "choices": [
+      "Add a second variometer so that she can cross-check her readings faster",
+      "Cover the instrument pack with a glove or a hand to break the habit",
+      "Have her fly higher, where obstacles on the ground no longer matter"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says some beginners fixate on the instruments and forget to scan outside, and an instructor may cover the instrument pack with a spare glove or a hand to break that habit; instruments must never distract from obstacle avoidance. More instruments deepen the fixation, and flying higher only avoids the lesson.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Use of Instruments)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-818",
+    "area": "ADM",
+    "topic": "Personal minimums: legal versus smart",
+    "stem": "A balloon's flight manual allows launches in surface winds up to 15 knots, but the pilot has never flown in more than 8 knots. According to FAA guidance, how should she treat the 8-knot figure?",
+    "choices": [
+      "As her personal limit until more training gives her experience in stronger wind",
+      "As irrelevant, since the flight manual's 15-knot figure is the standard that counts",
+      "As a target to exceed on her next passenger flight, so she can gain experience"
+    ],
+    "answer": 0,
+    "explanation": "The PHAK's example is the same idea with crosswinds: the flight manual figure is not the pilot's limit, and her own experience level is her personal limit until more training extends it, the difference between what is legal and what is smart. The Balloon Flying Handbook says manual limits and personal limits both apply, and stretching one's experience on a passenger flight is backwards.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Mitigating Risk); FAA-H-8083-11B Ch. 3 (Weather)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-819",
+    "area": "ADM",
+    "topic": "Hypoxia: stagnant",
+    "stem": "On a long winter flight, a pilot's fingers grow numb and clumsy on the blast valve because the cold has cut down blood flow to her hands. Which type of hypoxia does this describe?",
+    "choices": [
+      "Stagnant",
+      "Histotoxic",
+      "Hypemic"
+    ],
+    "answer": 0,
+    "explanation": "Stagnant hypoxia happens when oxygen-rich blood isn't moving to the tissues, and the Balloon Flying Handbook notes that cold can reduce circulation to the extremities. Hypemic hypoxia is blood that can't carry enough oxygen, as with carbon monoxide, and histotoxic hypoxia is cells that can't use it, as with alcohol.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Stagnant Hypoxia)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-820",
+    "area": "ADM",
+    "topic": "Hypoxia: blood donation",
+    "stem": "A pilot donated blood two days before a high-altitude balloon flight and feels fine on the ground. What does the Balloon Flying Handbook say?",
+    "choices": [
+      "Blood volume and hemoglobin both recover within 24 hours, so there is no added risk.",
+      "Restoring the lost hemoglobin can take several weeks, so hypemic hypoxia is a risk.",
+      "A donation matters only for pilots who plan to fly above 18,000 feet MSL."
+    ],
+    "answer": 1,
+    "explanation": "The handbook lists blood donation as a cause of hypemic hypoxia: blood volume normalizes quickly, but restoring the lost hemoglobin can take several weeks, and an effect that seems slight on the ground can be a risk in flight. The 24-hour idea confuses volume with hemoglobin, and the risk isn't limited to very high altitudes.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Hypemic Hypoxia); FAA-H-8083-25C Ch. 17 (Hypemic Hypoxia)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-821",
+    "area": "ADM",
+    "topic": "Hypoxia: why altitude starves the body",
+    "stem": "Why does a balloon pilot get less oxygen with each breath at 13,000 feet than at sea level?",
+    "choices": [
+      "The percentage is the same, but lower pressure means fewer molecules per breath.",
+      "The colder air at altitude keeps oxygen from passing from the lungs into the blood.",
+      "The air at altitude contains a smaller percentage of oxygen than air at sea level."
+    ],
+    "answer": 0,
+    "explanation": "As an unpressurized aircraft climbs, the percentage of oxygen in the air stays constant, but the lower pressure means fewer oxygen molecules enter the lungs and pass into the blood; this is hypoxic hypoxia. The percentage itself does not fall, and cold air is not the cause.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Hypoxic Hypoxia); FAA-H-8083-25C Ch. 17 (Hypoxic Hypoxia)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-822",
+    "area": "ADM",
+    "topic": "Time of useful consciousness",
+    "stem": "What does the term 'time of useful consciousness' mean?",
+    "choices": [
+      "The most time a pilot has to act sensibly at an altitude without added oxygen",
+      "The longest a pilot may legally stay above 12,500 feet MSL without using oxygen",
+      "How long it takes to recover full alertness after descending to a lower altitude"
+    ],
+    "answer": 0,
+    "explanation": "The Balloon Flying Handbook and PHAK define it as the maximum time the pilot has to make rational, life-saving decisions and carry them out at a given altitude without supplemental oxygen, and it shrinks rapidly above 10,000 feet. The legal oxygen rule in 91.211 (more than 30 minutes between 12,500 and 14,000 feet MSL) is a separate matter, and recovery time after descent is a different idea.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Symptoms of Hypoxia); FAA-H-8083-25C Ch. 17 (Fig. 17-1); 14 CFR 91.211(a)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-823",
+    "area": "ADM",
+    "topic": "Hyperventilation on oxygen",
+    "stem": "On a high-altitude flight using supplemental oxygen, a pilot feels light-headed with tingling fingers. According to the AIM, what should the pilot do first?",
+    "choices": [
+      "Breathe into a paper bag right away, since the cause must be hyperventilation.",
+      "Shut the oxygen off for a moment so carbon dioxide can build back up in the blood.",
+      "Set the regulator to deliver 100 percent oxygen and check that the system is working."
+    ],
+    "answer": 2,
+    "explanation": "AIM 8-1-3 says the early symptoms of hyperventilation and hypoxia are similar and can occur together, so a pilot on oxygen should immediately set the regulator to 100 percent and check the system before turning to the rate and depth of breathing. Assuming hyperventilation could leave real hypoxia untreated, and shutting off oxygen at altitude makes hypoxia worse.",
+    "ref": "AIM 8-1-3; FAA-H-8083-11B Ch. 9 (Hyperventilation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-824",
+    "area": "ADM",
+    "topic": "Carbon monoxide from smoking",
+    "stem": "According to the AIM, how can heavy smoking affect a pilot before the balloon even leaves the ground?",
+    "choices": [
+      "Smoking affects only night vision and has no effect on a pilot's tolerance of altitude.",
+      "Carbon monoxide can leave tissues as short of oxygen as at several thousand feet.",
+      "Nicotine raises the blood's oxygen level, which delays the onset of hypoxia at altitude."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-2 says carbon monoxide from smoking can cut the blood's oxygen-carrying capacity so much that tissues already get the oxygen they would get at a cabin altitude of several thousand feet. Nicotine does not raise oxygen levels, and while AIM 8-1-6 says smoking also impairs dark adaptation, its carbon monoxide adds to hypoxia at any altitude.",
+    "ref": "AIM 8-1-2 (Hypoxia); AIM 8-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-825",
+    "area": "ADM",
+    "topic": "Illusions: haze",
+    "stem": "Approaching a landing field through thick morning haze, what illusion should the pilot be ready for?",
+    "choices": [
+      "The balloon may seem to be climbing while it is holding level.",
+      "The field and obstacles may seem closer than they really are.",
+      "The field and obstacles may seem farther away than they really are."
+    ],
+    "answer": 2,
+    "explanation": "AIM 8-1-5 and the PHAK say atmospheric haze can create the illusion of being at a greater distance, so a field or a power line can be nearer than it looks. 'Closer' is the reverse of the haze illusion, and a false sense of climbing is a different, motion-based illusion.",
+    "ref": "AIM 8-1-5; FAA-H-8083-25C Ch. 17 (Haze)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-826",
+    "area": "ADM",
+    "topic": "Night vision: what degrades it",
+    "stem": "Which group of factors does the Balloon Flying Handbook say can reduce a pilot's ability to see in the dark?",
+    "choices": [
+      "Low vitamin A or C, smoking, alcohol and lack of oxygen",
+      "Looking 5 to 10 degrees off center and blinking often",
+      "Too much vitamin C, cold air and a large breakfast"
+    ],
+    "answer": 0,
+    "explanation": "The handbook says deficiencies in vitamins A and C reduce night visual acuity, and carbon monoxide, smoking, alcohol, certain drugs and lack of oxygen can greatly decrease night vision. A shortage of these vitamins, not an excess, is the problem, and looking 5 to 10 degrees off center is the technique that improves night vision.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Night Vision)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-827",
+    "area": "ADM",
+    "topic": "Dehydration: the thirst trap",
+    "stem": "On a long, hot summer flight, a pilot plans to drink only when thirsty. Why does the PHAK call that a poor plan?",
+    "choices": [
+      "Thirst comes only after a real fluid loss, and a sip turns it off too easily.",
+      "Drinking water during flight raises the chance of hyperventilation at altitude.",
+      "Thirst is a reliable early warning, but water should be avoided before landing."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK says most people feel thirsty only after about a 1.5-quart deficit (2 percent of body weight), and a little fluid shuts the thirst mechanism off; the advice is to drink at frequent intervals whether thirsty or not and to limit caffeine and alcohol, which are diuretics. Water has nothing to do with hyperventilation, and thirst is not a reliable early warning.",
+    "ref": "FAA-H-8083-25C Ch. 17 (Dehydration and Heatstroke); FAA-H-8083-11B Ch. 9 (Dehydration & Heatstroke)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-828",
+    "area": "ADM",
+    "topic": "Medication: pain relievers",
+    "stem": "According to the Balloon Flying Handbook, which pain medication is most likely to keep a pilot from flying?",
+    "choices": [
+      "A normal dose of ibuprofen for a sore back",
+      "A normal dose of acetaminophen for a headache",
+      "A prescription painkiller containing codeine"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says over-the-counter analgesics such as aspirin, acetaminophen and ibuprofen have few side effects at the correct dose and usually don't restrict flying, but prescription analgesics such as those with codeine or oxycodone almost always rule it out because of confusion, dizziness and vision problems. The condition being treated still matters, and the AIM's safest rule is not to fly on any medication unless the FAA approves it.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Drugs); AIM 8-1-1 (Medication)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-829",
+    "area": "ADM",
+    "topic": "Scuba diving: flights above 8,000 feet",
+    "stem": "A pilot makes a recreational dive that did not require a controlled ascent, then plans a mountain balloon flight that will climb to 10,500 feet MSL. According to the AIM, how long should the pilot wait after the dive?",
+    "choices": [
+      "At least 48 hours",
+      "At least 24 hours",
+      "At least 12 hours"
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-2 recommends waiting at least 24 hours after any scuba dive before flying above 8,000 feet. The 12-hour figure applies only to flights up to 8,000 feet after a dive that did not require a controlled ascent, and the AIM gives no 48-hour standard.",
+    "ref": "AIM 8-1-2 (Decompression Sickness After Scuba Diving)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-830",
+    "area": "ADM",
+    "topic": "Hypoxia: vision above 15,000 feet",
+    "stem": "According to the AIM, what happens to a pilot's vision at cabin pressure altitudes above 15,000 feet without supplemental oxygen?",
+    "choices": [
+      "Distant objects blur first, while side vision stays sharp and clear.",
+      "The edges of the visual field gray out, leaving only central vision.",
+      "Night vision suffers, but daytime vision stays normal until about 25,000 feet."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-2 says that above 15,000 feet the periphery of the visual field grays out until only central vision remains (tunnel vision), and performance can seriously deteriorate within 15 minutes at 15,000 feet. Daytime vision is affected well below 25,000 feet, and it is side vision, not distant vision, that goes first.",
+    "ref": "AIM 8-1-2 (Hypoxia)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-801",
+    "area": "OPS",
+    "topic": "Landing briefing: the least-followed instruction",
+    "stem": "According to the Balloon Flying Handbook, which landing instruction is probably the least followed by passengers?",
+    "choices": [
+      "Keep your feet and knees together",
+      "Face the direction of travel",
+      "Hold on tight"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says 'hold on tight' in two places is probably the least followed, because the flight has been gentle and passengers aren't ready for the jolt of a balloon weighing thousands of pounds meeting the ground; the pilot should point out the correct places to hold and hold on firmly too. Facing forward and keeping feet and knees together are also briefed, but the handbook singles out holding on.",
+    "ref": "FAA-H-8083-11B Ch. 8 ('Hold On Tight' in Two Places)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-802",
+    "area": "OPS",
+    "topic": "Crew on an instructional flight",
+    "stem": "On an instructional flight, how does the Balloon Flying Handbook want the ground crew to work?",
+    "choices": [
+      "Follow the instructor's lead and let the student do the tasks.",
+      "Take over the routine tasks, so the student can concentrate only on the burner.",
+      "Direct the student themselves, since an experienced crew knows the balloon best."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says that on instructional flights the crew follows the instructor's direction so the student can see and take part as much as possible, and must not take over any portion of the operation and deny the student the chance to learn. Relieving the pilot of routine tasks is the handbook's advice for competition flights, not training, and the instructor, not the crew, directs the student.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Types of Flight)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-803",
+    "area": "OPS",
+    "topic": "Chase vehicle crew size",
+    "stem": "What does the Balloon Flying Handbook give as the recommended minimum crew for the chase vehicle?",
+    "choices": [
+      "One, so the vehicle stays light and quick on back roads",
+      "Two: one to drive and one to navigate and spot the balloon",
+      "Four, the same number as the optimum inflation crew"
+    ],
+    "answer": 1,
+    "explanation": "The handbook recommends a minimum of two in the chase vehicle, one driving and the other navigating and serving as a balloon spotter, and calls this perhaps the safest method; too many people in the vehicle can distract the driver. Four is the handbook's optimum inflation crew for a sport balloon, which is a different job.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Number of Crewmembers); Ch. 3 (The Ground Crew)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-804",
+    "area": "OPS",
+    "topic": "Passenger management: the typical mistake",
+    "stem": "According to the Balloon Flying Handbook, what is a typical passenger mistake at touchdown, even after a good briefing?",
+    "choices": [
+      "Sitting down on the basket floor just before contact",
+      "Placing one foot in front of the other and locking the knee",
+      "Crouching so low that they cannot see the landing"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says passengers may forget what they were told once the basket touches down, and a typical response is one foot forward with the knee locked, an unstable position that risks knee injury. The pilot should watch them, call out 'feet together,' 'knees bent' and 'hold on tight,' and model the stance. The other two are not the error the handbook describes.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Stay in the Basket)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-805",
+    "area": "OPS",
+    "topic": "Passenger briefing: timing",
+    "stem": "When does the Balloon Flying Handbook say the pilot should first brief passengers on landing behavior, and when should it be repeated?",
+    "choices": [
+      "Before inflation, and again as soon as the pilot decides to land",
+      "Only once, during the final approach, so it is fresh in their minds",
+      "Only at booking, through the written agreement the passengers sign"
+    ],
+    "answer": 0,
+    "explanation": "The handbook has the pilot give passengers their first briefing on flight and landing behavior before inflation, then reinforce it and give it again as soon as the decision to land is made. A single briefing on final comes at the busiest moment, and a signed agreement, which some companies use, supplements the briefings but does not replace them.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Passenger Briefing); Ch. 8 (Passenger Briefings & Management)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-806",
+    "area": "OPS",
+    "topic": "Passenger briefing: behavior in the basket",
+    "stem": "As passengers board just before launch, which in-basket instructions does the Balloon Flying Handbook have the pilot give?",
+    "choices": [
+      "Don't touch control lines, secure belongings, stay inside the basket, obey the pilot.",
+      "Help with the burner if asked, and lean out over the side to watch for obstacles below.",
+      "Fasten your seat belts, keep your hands inside, and remain seated until after the landing."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says to brief passengers again when they board: don't touch any control lines, take care of their possessions, stay within the confines of the basket, and above all obey the pilot in command. Balloon baskets normally have no passenger seats or belts, and 14 CFR 91.107(a) excepts a free balloon with a basket or gondola from the safety-belt rules, so a seat-belt briefing doesn't apply; passengers never run the burner or lean out.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Launch); 14 CFR 91.107(a)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-807",
+    "area": "OPS",
+    "topic": "Landing stance: facing away",
+    "stem": "In a large balloon with a compartmented basket, a pilot briefs passengers to face away from the direction of flight for landing. What does the Balloon Flying Handbook say about this?",
+    "choices": [
+      "It is required in any basket that carries more than four passengers.",
+      "It is acceptable if briefed before flight and again before landing.",
+      "It is never acceptable; passengers must always face the direction of travel."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says facing the direction of flight is the generally accepted stance, but in larger balloons with compartmented baskets some pilots have passengers face away; either is acceptable as long as it is briefed before flight and reinforced before landing. No rule ties the stance to the number of passengers.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Passenger Briefing); Ch. 8 (Face the Direction of Travel)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-808",
+    "area": "OPS",
+    "topic": "Ride operations: advance passenger agreements",
+    "stem": "Some ride companies send passengers a written agreement before the flight. According to the Balloon Flying Handbook, what does it typically include?",
+    "choices": [
+      "A waiver that replaces the pilot's preflight and landing briefings entirely",
+      "A promise of a set flight length, in case the winds turn out to be light",
+      "The landing procedure, signed to show they have read and understood it"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says some ride companies send an agreement ahead of time that includes the landing instructions and asks passengers to sign that they have reviewed and understand them; many pilots also demonstrate the landing stance on the ground. It adds to the briefings rather than replacing them, and weather, not paperwork, sets how long a balloon flight lasts.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Passenger Briefings & Management)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-809",
+    "area": "OPS",
+    "topic": "Landowner relations at launch",
+    "stem": "How does the Balloon Flying Handbook suggest a pilot build good landowner relations before the balloon even leaves the ground?",
+    "choices": [
+      "Plan to land on the largest farm nearby, since large farms expect balloons.",
+      "Launch from private land without asking first, since a launch does no lasting damage.",
+      "Pick launch sites whose likely flight paths avoid livestock, crops and preserves."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says the launch phase is the easy place to build landowner relations: pick launch sites that avoid flight paths and landings near sensitive areas such as livestock, expensive crops and nature preserves. It also says never to assume the right to use private property, and no landowner should be assumed to welcome a balloon.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Landowner Relations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-810",
+    "area": "OPS",
+    "topic": "Livestock: how far to stay away",
+    "stem": "The regulations don't mention livestock, but what distance does the Balloon Flying Handbook suggest a conscientious pilot keep from domestic animals?",
+    "choices": [
+      "At least 1,000 feet",
+      "At least 2,000 feet, the same as over a wildlife refuge",
+      "At least 500 feet, the same as from a vehicle"
+    ],
+    "answer": 0,
+    "explanation": "The handbook treats domestic animals as property and notes that poultry, pigs, horses and cows can all be spooked by a balloon, so a conscientious pilot includes livestock in the 1,000-foot rule and stays at least 1,000 feet away. Five hundred feet is the 91.119(c) distance from persons, vessels, vehicles and structures, and 2,000 feet above the surface is the AIM's request over refuges and parks.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Minimum Safe Altitude Requirements); 14 CFR 91.119(c)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-811",
+    "area": "OPS",
+    "topic": "Livestock: recognizing a poultry house",
+    "stem": "Along the flight path is a long, windowless building with fans on the ends and on the roof. What does the Balloon Flying Handbook say it probably is, and why does it matter?",
+    "choices": [
+      "A grain dryer; its fans can push a strong updraft into the balloon's path.",
+      "A storage shed; it is empty, so it is a good landmark to fly low over.",
+      "A poultry house; a sudden burner blast can panic thousands of birds inside."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says a long windowless building with fans on the ends and roof usually means a poultry facility, where tens of thousands of birds can be startled by a burner blast and crowd so tightly that many are injured or suffocate; pilots should keep well clear. It is not a grain dryer, and no building is a reason to fly low, since 91.119 still applies.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Landowner Relations: Identification of Animal Populations)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-812",
+    "area": "OPS",
+    "topic": "Livestock: animals that break out",
+    "stem": "As the balloon passes, cattle push through a fence onto a road. What does the Balloon Flying Handbook say the chase crew should do?",
+    "choices": [
+      "Keep chasing the balloon and report the loose cattle to the sheriff after landing",
+      "Leave the area quickly so the landowner does not connect the balloon to it",
+      "Find the farmer, or safely contain or protect the cattle"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says livestock breaking out as the balloon flies by demands immediate attention, since animals on a road are a serious traffic hazard; the crew should either find the farmer or take steps to contain or protect the livestock without endangering themselves. Driving on or leaving ignores a hazard the flight helped create and damages landowner relations.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Landowner Relations: Identification of Animal Populations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-813",
+    "area": "OPS",
+    "topic": "Flight planning: pibal height",
+    "stem": "Using the Balloon Flying Handbook's assumed rise rate for an average pibal, about how high is a pibal 1 minute 30 seconds after release?",
+    "choices": [
+      "About 600 feet AGL",
+      "About 450 feet AGL",
+      "About 300 feet AGL"
+    ],
+    "answer": 1,
+    "explanation": "The handbook assumes most pibals rise about 300 feet per minute, so a pibal is about 150 feet up at 30 seconds, 300 feet at 1 minute and 450 feet at 1 minute 30 seconds. Three hundred feet is the 1-minute height, and 600 feet would take 2 minutes.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Navigation; Appendix B)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-814",
+    "area": "OPS",
+    "topic": "Flight planning: steerage",
+    "stem": "A pilot plots the surface wind and the winds aloft from a pibal and draws both tracks on a map from the launch site. What does the Balloon Flying Handbook call the spread between the two lines?",
+    "choices": [
+      "Steerage",
+      "Drift",
+      "Variation"
+    ],
+    "answer": 0,
+    "explanation": "The handbook says the plot forms a V starting at the launch site, with its legs at the extremes of the plotted winds, and the difference between the extremes is called steerage: flying higher tracks near the winds-aloft leg, contour flying near the surface leg, and changing altitude lets the pilot fly down the middle. Variation is the angle between true and magnetic north, and drift is not the handbook's term for this spread.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Navigation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-815",
+    "area": "OPS",
+    "topic": "Winds below: timing a tissue ball",
+    "stem": "Flying level at 700 feet AGL, a pilot drops a rolled tissue ball, which falls about 350 feet per minute. It turns sharply left about 1 minute after release. About where does the wind change?",
+    "choices": [
+      "About 700 feet AGL",
+      "About 1,050 feet AGL",
+      "About 350 feet AGL"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says tissue balls fall about 350 feet per minute, and timing the fall lets the pilot estimate where the wind changes: after 1 minute the ball has dropped about 350 feet, so the change is near 700 − 350 = 350 feet AGL. Seven hundred feet is the release height, and 1,050 feet adds the fall instead of subtracting it. 14 CFR 91.15 allows dropping an object like this when reasonable precautions are taken to avoid injury or damage.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Winds Below); 14 CFR 91.15",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "OPS-816",
+    "area": "OPS",
+    "topic": "Law enforcement at the landing site",
+    "stem": "After landing, a sheriff's deputy arrives and insists, wrongly, that the balloon broke a law by landing in the field. What does the Balloon Flying Handbook advise?",
+    "choices": [
+      "Stay polite and listen, even if the officer is mistaken about aviation law.",
+      "Explain firmly that federal aviation law overrides the officer's authority.",
+      "Pack up quickly and leave before the situation has a chance to escalate."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says officers may simply be curious or may think a law was broken; the pilot should always be polite, since most emergency responders know little about federal aviation law, and even when they are wrong there is no point antagonizing them, because it is better to listen than to end up in court. Arguing or leaving only makes the situation worse.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Landowner Relations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-817",
+    "area": "OPS",
+    "topic": "Recovery: no one to open the gate",
+    "stem": "A balloon lands behind a locked gate, and the crew can't find the landowner or anyone else to let them in. What does the Balloon Flying Handbook say?",
+    "choices": [
+      "Drive the chase vehicle in, since a balloon landing makes entry legal.",
+      "Cut the fence, repair it afterward, and leave a note for the owner to find.",
+      "Carry the balloon out and lift it over the fence, without cutting it."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says that if no one can be found, it may be necessary to carry the balloon and lift it over the fence; don't cut or knock down fences, which is probably trespassing, and in some places even carrying fence-cutting tools can be treated as having burglary tools. Trespass is often easy for the crew and vehicle even where it is hard for the balloon, so a landing gives no right to drive in.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Landowner Relations)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-818",
+    "area": "OPS",
+    "topic": "Crew management: the crew chief",
+    "stem": "According to the Balloon Flying Handbook, what is the role of a designated crew chief?",
+    "choices": [
+      "To act as a second pilot and take over the burner during a difficult or windy landing",
+      "To run ground operations for the pilot and speak for the pilot with landowners",
+      "To make the final go/no-go decision whenever the pilot is busy briefing the passengers"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says a crew chief should be named early to avoid conflicts: this person oversees all ground operations under the pilot's direction, directs the other crew and speaks for the pilot when meeting landowners. The go/no-go decision stays with the pilot in command, and ground crew have no FAA standing to fly the balloon.",
+    "ref": "FAA-H-8083-11B Ch. 3 (The Ground Crew)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-819",
+    "area": "OPS",
+    "topic": "Crew confirming a landing site",
+    "stem": "Why does the Balloon Flying Handbook say crew on the ground can help confirm a landing site before the pilot commits to it?",
+    "choices": [
+      "They can approve the site legally on the pilot's behalf, as FAA-recognized members of the crew.",
+      "They can measure the size of the field, which the pilot must then report to the FAA after landing.",
+      "They can spot hidden problems, such as standing water or livestock under trees."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says that from a distance a pilot may miss what rules a site out, such as livestock under a tree, standing water, a newly planted crop or another balloon deflating, and that crew can confirm the site, ask the landowner and report surface winds. Ground crew have no legal status under 14 CFR, and there is no field-size report.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Crew Responsibilities); Ch. 3 (The Ground Crew)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-820",
+    "area": "OPS",
+    "topic": "Chase: leapfrogging",
+    "stem": "During the first half of a planned flight, what chase technique does the Balloon Flying Handbook recommend?",
+    "choices": [
+      "Drive to the forecast landing area and wait there for the balloon.",
+      "Stay directly under the balloon at all times, even off paved roads.",
+      "Leapfrog ahead of the balloon, let it catch up, and repeat."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says a good rule for the first half of the flight is to leapfrog ahead of the balloon, let it catch up and repeat, checking maps for the flight path, likely landing areas and routes. Staying under it would mean leaving public roads, which crews should stay on, and waiting at a forecast spot ignores changing winds.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Inflight Crew Management; Crew Behavior)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-821",
+    "area": "OPS",
+    "topic": "Chase: crew behavior",
+    "stem": "Which chase crew practice does the Balloon Flying Handbook recommend?",
+    "choices": [
+      "Drive fast to stay close, which shows the pilot the crew is keeping up.",
+      "When stopped, park so the whole vehicle is visible to the pilot.",
+      "Cut across private fields whenever the roads go the wrong direction."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says the pilot needs to know the crew is nearby, so when the vehicle stops, park it where the whole vehicle can be seen from the balloon; drive legally and politely, stay on public paved roads and obey no-trespassing signs. Speeding creates a false sense of emergency, and a crew stopped by police is no help, while vehicle trespass laws are strict.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Crew Behavior)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-822",
+    "area": "OPS",
+    "topic": "Mass launch: balloons overhead",
+    "stem": "At a mass launch, several balloons are already airborne overhead. Before lifting off, what does the Balloon Flying Handbook suggest?",
+    "choices": [
+      "Make a long burn for a fast climb, so the balloon gets above the others quickly.",
+      "Wait until every balloon already in the air has landed before launching.",
+      "Have a crew member step back to confirm it is clear above, then climb slowly."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says that when other balloons are launching from the same area, a crew member should step back to check that it is clear above, and that a slow climb is the best way to avoid running into balloons above, since the pilot can't see up through the envelope. A fast climb leaves the higher balloon no time to move, and waiting for every balloon to land isn't the handbook's advice.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Launch)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-823",
+    "area": "OPS",
+    "topic": "Balloons stacked one above another",
+    "stem": "Ballooning has an unwritten custom, not found in the regulations, about two balloons flying one above the other. What is it?",
+    "choices": [
+      "The lower balloon has the right-of-way, because its pilot can't see above.",
+      "The larger balloon has the right-of-way, because it has more momentum.",
+      "The higher balloon has the right-of-way, because a descent is harder to stop."
+    ],
+    "answer": 0,
+    "explanation": "The Balloon Flying Handbook describes an unwritten, non-regulatory rule that the balloon below has the right-of-way because of its pilot's lack of visibility above; even so, the higher balloon needs time to climb away, so both pilots must stay alert. Neither height nor envelope size sets the custom, and the right-of-way rules of 91.113 still apply. CHECK: Brian teaching call: confirm this is how he teaches stacked balloons (lower balloon has right-of-way by custom, higher balloon climbs away).",
+    "ref": "FAA-H-8083-11B Ch. 6 (Launch); 14 CFR 91.113",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "OPS-824",
+    "area": "OPS",
+    "topic": "Recovery: leaving the landing site",
+    "stem": "After the balloon is packed and loaded, what final steps does the Balloon Flying Handbook describe at the landing site?",
+    "choices": [
+      "Leave right away, so the crew does not take up more of the landowner's time.",
+      "Mark the field on the map as approved for future landings without asking again.",
+      "Check that nothing was left behind, then thank the landowner."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says that once everything is loaded, a final check of the landing site makes sure no loose items are left, and a final check with the landowner and a quick thank-you is usually appropriate. Leaving without a word misses a chance to build goodwill, and one permission is not standing approval for future landings.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Packing the Balloon; Landowner Relations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "OPS-825",
+    "area": "OPS",
+    "topic": "Logging: tethered time",
+    "stem": "A balloon spends 2 hours inflated on a tether at a fair. How should that time be handled in the balloon's maintenance records?",
+    "choices": [
+      "Record half of it, since the burner runs less than in free flight.",
+      "Leave it out, since a tethered balloon is not in free flight.",
+      "Record it, since all inflated time counts toward inspection times."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says some pilots wrongly leave out tether time: a tethered balloon is in flight configuration under Part 91, and all inflated time of a certificated balloon should be entered in the maintenance records so inspection times are met. Balloon flight time runs from first becoming buoyant until deflation, and there is no half-credit method.",
+    "ref": "FAA-H-8083-11B Ch. 8 (Aircraft Log Books); 14 CFR 91.417",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-801",
+    "area": "WXT",
+    "topic": "Cloud base: where the 4.4°F comes from",
+    "stem": "The cloud-base rule of thumb divides the temperature–dew point spread by 4.4°F per 1,000 feet. Where does the 4.4 come from?",
+    "choices": [
+      "Rising unsaturated air cools about 5.4°F per 1,000 feet while its dew point falls about 1°F.",
+      "The standard lapse rate of about 3.5°F per 1,000 feet, plus a humidity correction of 0.9°F.",
+      "Saturated air cools about 4.4°F per 1,000 feet once the cloud has begun to form."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK and Balloon Flying Handbook say lifted unsaturated air cools 5.4°F per 1,000 feet and its dew point drops about 1°F per 1,000 feet, so the two converge at about 4.4°F per 1,000 feet (the Aviation Weather Handbook gives the Celsius version, 3°C and 0.5°C). The standard lapse rate describes the average atmosphere, not a rising parcel, and the moist rate applies only above the cloud base.",
+    "ref": "FAA-H-8083-25C Ch. 12 (Temperature/Dew Point Relationship); FAA-H-8083-11B Ch. 4 (Temperature/Dew Point Relationship); FAA-H-8083-28B 12.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-802",
+    "area": "WXT",
+    "topic": "Relative humidity overnight",
+    "stem": "Overnight, the temperature falls from 20°C to 12°C while the dew point stays at 10°C. What happens to the relative humidity?",
+    "choices": [
+      "It stays the same, because no moisture has been added to the air.",
+      "It rises, because the spread narrows while the moisture stays the same.",
+      "It falls, because colder air holds on to its moisture more tightly."
+    ],
+    "answer": 1,
+    "explanation": "The Aviation Weather Handbook explains that relative humidity can change without any change in water vapor: as temperature falls toward a steady dew point, the spread narrows and relative humidity rises, reaching 100 percent when they meet. That is why the spread, not the dew point alone, is the fog warning.",
+    "ref": "FAA-H-8083-28B 6.4; 6.6",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-803",
+    "area": "WXT",
+    "topic": "Air mass labels",
+    "stem": "An air mass labeled mT on a weather map formed over",
+    "choices": [
+      "warm tropical water, so it is warm and moist.",
+      "a cold continent, so it is cold and dry.",
+      "arctic ice, so it is extremely cold and deep."
+    ],
+    "answer": 0,
+    "explanation": "In the air mass code, m means maritime (moist, formed over water) and T means tropical (warm), so mT air is warm and moist. Cold and dry is continental polar (cP), and extremely cold and deep is arctic (A).",
+    "ref": "FAA-H-8083-28B 11.2.1; FAA-H-8083-11B Ch. 4 (Air Masses)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-804",
+    "area": "WXT",
+    "topic": "Air masses: visibility and stability",
+    "stem": "Which air mass typically gives good surface visibility along with cumulus clouds and bumpy air?",
+    "choices": [
+      "One warmed from below as it moves over a warmer surface",
+      "One that has stagnated for days under a strong high",
+      "One cooled from below as it moves over a colder surface"
+    ],
+    "answer": 0,
+    "explanation": "The Balloon Flying Handbook says an air mass passing over a warmer surface is warmed from below, convective currents form and it becomes unstable, with good surface visibility; moist unstable air brings cumulus, showers and turbulence. Air cooled from below becomes stable and traps moisture, smoke and dust under an inversion, giving poor visibility, low stratus and fog, and air sinking under a strong high is also stable, often hazy.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Air Masses: Characteristics); FAA-H-8083-28B 11.2.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-805",
+    "area": "WXT",
+    "topic": "Coriolis force and wind speed",
+    "stem": "How does the Coriolis force depend on wind speed?",
+    "choices": [
+      "It is strongest in light winds and fades as the wind speeds up.",
+      "It is zero in calm air and grows stronger as the wind speeds up.",
+      "It acts the same on all moving air, regardless of its speed."
+    ],
+    "answer": 1,
+    "explanation": "The Balloon Flying Handbook says Coriolis force is zero with calm winds and increases as wind speed increases; the Aviation Weather Handbook adds that at a given latitude it is directly proportional to wind speed, so doubling the wind doubles it. That is why surface friction, by slowing the wind, weakens Coriolis and lets surface wind cross the isobars toward low pressure. It is not strongest in light winds, and it does not act equally on all moving air.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Coriolis Force); FAA-H-8083-28B 10.3.2",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-806",
+    "area": "WXT",
+    "topic": "Wind above the friction layer",
+    "stem": "Above roughly 2,000 feet AGL, where surface friction has little effect, how does the wind usually blow relative to the isobars?",
+    "choices": [
+      "Straight across them, from high toward low pressure",
+      "At about 45° across them, toward high pressure",
+      "Roughly parallel to them"
+    ],
+    "answer": 2,
+    "explanation": "The Balloon Flying Handbook says friction slows the wind up to an average of about 2,000 feet AGL, and above that the air normally flows parallel to the isobars, where Coriolis balances the pressure gradient (the Aviation Weather Handbook calls this the geostrophic wind). Flow straight across the isobars would happen only without Coriolis, and surface winds cross toward low pressure, not high.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Surface Friction); FAA-H-8083-28B 10.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-807",
+    "area": "WXT",
+    "topic": "Surface wind angle: water versus rough terrain",
+    "stem": "Two launch sites sit under the same pressure pattern: one on a broad lake shore with the wind off the water, the other in rugged hills. Where does the surface wind cross the isobars at the larger angle?",
+    "choices": [
+      "In the rugged hills, up to about 45°, compared with about 10° over water",
+      "Over the water, about 45°, because the smooth surface lets the wind turn freely",
+      "Neither; the angle is the same because the pressure gradient is the same"
+    ],
+    "answer": 0,
+    "explanation": "The Aviation Weather Handbook and Balloon Flying Handbook say the surface wind crosses the isobars at about 10° over water, increasing to 45° or more over rugged terrain, because more friction slows the wind more and weakens Coriolis more. The same pressure gradient doesn't give the same angle when the friction differs.",
+    "ref": "FAA-H-8083-28B 10.5; FAA-H-8083-11B Ch. 4 (Surface Friction)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-808",
+    "area": "WXT",
+    "topic": "Jet stream and multi-day planning",
+    "stem": "Why does the Balloon Flying Handbook tell balloon pilots to watch the jet stream when studying the weather in the days before a flight?",
+    "choices": [
+      "The jet stream marks the areas where morning fog is most likely to form.",
+      "The jet stream often dips to the surface around dawn and sets the launch winds.",
+      "General weather patterns are closely tied to its position and strength."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says general weather patterns are closely related to the position, strength and orientation of the jet stream, and its preflight planning chapter tells pilots to watch pressure systems, fronts and the jet stream in the days before a flight. The jet stream is a high-altitude wind, not a dawn surface wind (a low-level jet is a separate feature), and it doesn't mark fog.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Weather); Ch. 4 (The Jet Stream)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-809",
+    "area": "WXT",
+    "topic": "Frost",
+    "stem": "On a clear, calm night, frost forms on the balloon trailer when",
+    "choices": [
+      "rain falling from a warmer layer above freezes on contact with the cold trailer.",
+      "fog droplets blow onto the trailer while its surface is still above freezing.",
+      "the surface cools the air below its dew point and the temperature is below freezing."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK explains that on cool, clear, calm nights, surfaces can chill the air touching them below its dew point; the moisture deposits as dew, or as frost if the temperature is below freezing. Rain freezing on contact is freezing rain, which forms clear ice, and droplets on a surface above freezing stay liquid.",
+    "ref": "FAA-H-8083-25C Ch. 12 (Dew and Frost); FAA-H-8083-28B 21.4.3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-810",
+    "area": "WXT",
+    "topic": "Precipitation and icing on the balloon",
+    "stem": "Light freezing drizzle and wet snow begin falling just before a planned winter launch. Why does the Balloon Flying Handbook call flying in precipitation a bad practice?",
+    "choices": [
+      "Water and ice add weight, so holding altitude may need more heat than the limit allows.",
+      "Ice forming on the burner coils makes the burner put out far more heat than normal.",
+      "Wet fabric holds heat better, so the balloon is likely to climb out of control quickly."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says rain or any frozen precipitation makes the balloon wet and heavier, often to the point that it can't hold altitude without exceeding the envelope's temperature limits, and heating wet fabric can degrade its coatings; precipitation also tends to make the air more unstable, with downdrafts, gusts, hail and lightning. Ice doesn't boost burner output, and wet fabric doesn't make the balloon climb.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Weather)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-811",
+    "area": "WXT",
+    "topic": "Santa Ana and other downslope winds",
+    "stem": "In Southern California, a strong Santa Ana wind flows from the high deserts down toward the coast. Why is it warm and very dry when it arrives?",
+    "choices": [
+      "It picks up heat and moisture from the ocean before reaching the coast.",
+      "The air warms by compression as it descends, which lowers its relative humidity.",
+      "Friction with the mountains heats the air, and dust soaks up its moisture."
+    ],
+    "answer": 1,
+    "explanation": "The National Weather Service describes the Santa Ana as strong, hot winds that descend to the coast from the inland desert regions. The Aviation Weather Handbook explains why it arrives so warm and dry: descending air is compressed and warms about 3°C per 1,000 feet while its relative humidity falls, and it lists Santa Ana winds as a source of low-level wind shear. A Santa Ana blows from the land toward the sea, so it hasn't crossed the ocean, and friction isn't what warms it. Strong, gusty offshore winds like these are a reason to stay on the ground.",
+    "ref": "NWS Glossary (Santa Ana Wind); FAA-H-8083-28B 12.2; 27.4.2.9.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-812",
+    "area": "WXT",
+    "topic": "Dust devils: where and when",
+    "stem": "Where and when are dust devils most likely to form?",
+    "choices": [
+      "Under overcast skies just after sunrise, over fields still wet from overnight dew",
+      "In strong, gusty winds right behind a cold front, over large lakes and open water",
+      "Under clear skies and light wind, where strong heating meets pavement and dirt"
+    ],
+    "answer": 2,
+    "explanation": "The Aviation Weather Handbook says dust devils form where the surface is strongly heated, usually at the boundary between surface types such as asphalt and dirt or irrigated fields and dirt roads, typically under clear skies and light winds, when the ground heats the air far more than the air just above it. An overcast dawn over wet ground gives little heating, and the handbook doesn't describe strong postfrontal winds over water as the setting.",
+    "ref": "FAA-H-8083-28B 16.2.6.3.1",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-813",
+    "area": "WXT",
+    "topic": "Dust devils: the hazard",
+    "stem": "On a late-morning approach, the pilot spots a dust devil crossing the edge of the landing field. What does FAA weather guidance advise?",
+    "choices": [
+      "Land beside it, since its rising air will soften the balloon's touchdown.",
+      "Avoid it; big ones can have 60 mph winds, and some show little dust.",
+      "Fly through it low, since dust devils are too small to affect a balloon much."
+    ],
+    "answer": 1,
+    "explanation": "The Aviation Weather Handbook says winds in larger dust devils can reach 60 mph or more, strong ones can damage small structures, not all are easy to see, and pilots should not fly through them and should scan takeoff and landing areas. A dust devil can lift, spin and drop a balloon near the ground, so it makes a landing harder to control, not softer.",
+    "ref": "FAA-H-8083-28B 16.2.6.3.1; FAA-H-8083-11B Ch. 8 (Thermal Flight)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-814",
+    "area": "WXT",
+    "topic": "Depth of the friction layer",
+    "stem": "Which conditions extend the friction layer, where the ground slows the wind, to higher altitudes?",
+    "choices": [
+      "Strong wind over rough terrain",
+      "Calm air under a strong surface inversion",
+      "Light wind over smooth, flat terrain"
+    ],
+    "answer": 0,
+    "explanation": "The Aviation Weather Handbook says the ground's frictional drag normally becomes insignificant above the lowest few thousand feet, but strong winds and rough terrain extend the friction layer to higher altitudes. Light wind over smooth ground keeps it shallow, and a strong surface inversion cuts the calm surface air off from the faster flow above.",
+    "ref": "FAA-H-8083-28B 10.3.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-815",
+    "area": "WXT",
+    "topic": "Tornado watch on a calm morning",
+    "stem": "The sky at the launch field looks calm and clear, but the area is under a tornado watch for later in the day. What does the Balloon Flying Handbook say?",
+    "choices": [
+      "Don't launch; a balloon should not fly during a tornado watch or warning.",
+      "Launch, but plan to land before any storm comes within about 5 miles.",
+      "Launch, since a watch only means that storms are possible, not that they are coming."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says balloons do not fly in significant or unstable weather, and a balloon should not be launched in the face of a squall line or during a tornado watch or warning. A watch does mean conditions are favorable rather than certain, but the handbook treats it as a no-go, and a storm's gust front can run many miles ahead of it.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Weather); Ch. 4 (Thunderstorms)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-801",
+    "area": "AIR",
+    "topic": "Sectional: contour lines",
+    "stem": "Planning a flight over hilly country, a pilot sees contour lines bunched tightly on one side of a valley and widely spaced on the other. What does this show?",
+    "choices": [
+      "The tightly spaced side has more charted obstacles standing on it.",
+      "The tightly spaced side is steep; the other side slopes gently.",
+      "The tightly spaced side is higher, no matter how steep either side is."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide says contour lines join points of equal elevation (basic contours are 500 feet apart on sectionals), and closely spaced contours mean steep slopes while widely spaced contours mean gentle ones. Spacing shows steepness; the contour values show height, and contours have nothing to do with obstacles. Steep valley sides matter to a balloon pilot for drainage winds and landing options.",
+    "ref": "FAA Chart Users' Guide (Land Features (Terrain) and Obstructions)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-802",
+    "area": "AIR",
+    "topic": "Sectional: Class C ceiling 'T'",
+    "stem": "Near a Class C airport that lies under a Class B, one Class C sector is labeled with a magenta T above SFC. What does the T mean?",
+    "choices": [
+      "The sector is part-time and active only while the control tower is open.",
+      "The sector's ceiling is 10,000 feet MSL, the top of the Mode C veil.",
+      "The Class C goes up to, but not including, the floor of the Class B above it."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide says a Class C ceiling value of T means the ceiling extends to, but not including, the floor of the overlying Class B airspace; SFC below it means this sector begins at the surface. Part-time Class C is shown by a separate note, and the Mode C veil has nothing to do with the label.",
+    "ref": "FAA Chart Users' Guide (Controlled Airspace: Class C)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-803",
+    "area": "AIR",
+    "topic": "Sectional: wind turbine lighting",
+    "stem": "A balloon is flying near a charted wind farm before sunrise. What does the Chart Users' Guide warn about the turbines' lights?",
+    "choices": [
+      "They sit at the hub, which can be 200 to 300 feet below the blade tips.",
+      "They are switched on only while the turbine blades are turning.",
+      "They mark the blade tips, so the highest light is the top of the obstacle."
+    ],
+    "answer": 0,
+    "explanation": "The Chart Users' Guide reminds pilots that turbine blades and tips are not lighted; the obstruction lights sit on top of the nacelle at the hub, which can be 200 to 300 feet below the rotating blade tips. Clearing the light does not mean clearing the turbine, and the lights don't depend on the blades turning.",
+    "ref": "FAA Chart Users' Guide (Land Features (Terrain) and Obstructions)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-804",
+    "area": "AIR",
+    "topic": "Sectional: group obstruction",
+    "stem": "Near a city, a sectional shows a single group obstruction symbol with one set of elevation figures. What does it mean?",
+    "choices": [
+      "There is one obstacle, with its lights flashing in a group pattern.",
+      "Several obstacles stand there, and the figures give the highest one.",
+      "Several obstacles stand there, all of exactly the same height."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide says that in high-density areas such as city complexes, only the highest obstacle is shown, using the group obstacle symbol (at least two obstacles), to keep the chart readable. Other, lower obstacles may stand nearby; the symbol doesn't describe a light pattern, and the obstacles need not be the same height.",
+    "ref": "FAA Chart Users' Guide (Land Features (Terrain) and Obstructions; VFR Symbology: Obstructions)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-805",
+    "area": "AIR",
+    "topic": "Airport data: elevation",
+    "stem": "The elevation figure in a sectional airport data block refers to which point?",
+    "choices": [
+      "The elevation measured at the base of the control tower",
+      "The average elevation across the whole airport property",
+      "The highest point on the usable landing areas"
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide defines airport elevation as the highest point on the usable portion of the landing areas. It isn't an average for the property, and it isn't measured at a building.",
+    "ref": "FAA Chart Users' Guide (Airports)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-806",
+    "area": "AIR",
+    "topic": "Airport data: runway length",
+    "stem": "In a sectional airport data block, a runway length of 38 means the longest runway is about",
+    "choices": [
+      "3,800 feet long",
+      "38 feet wide",
+      "380 meters long"
+    ],
+    "answer": 0,
+    "explanation": "The Chart Users' Guide shows the length of the longest runway in hundreds of feet, rounded using 70 as the rounding point (8,070 feet is charted as 81 and 8,069 feet as 80), and the usable length may be less. The data block doesn't give width, and lengths are in feet, not meters.",
+    "ref": "FAA Chart Users' Guide (Airports)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-807",
+    "area": "AIR",
+    "topic": "Airport data: lighting with an asterisk",
+    "stem": "In an airport data block, the letter L is preceded by an asterisk (*L). What does the asterisk tell the pilot?",
+    "choices": [
+      "There is a rotating beacon but no runway edge lighting.",
+      "There are lighting limitations; check the Chart Supplement.",
+      "Runway lights operate from sunset to sunrise without limits."
+    ],
+    "answer": 1,
+    "explanation": "In the Chart Users' Guide, L alone means runway lighting operates from sunset to sunrise, while *L means limitations exist, such as part-time, on-request or pilot-controlled lighting, so the pilot consults the Chart Supplement. A dash means no runway edge lights, and the airport beacon has its own symbol.",
+    "ref": "FAA Chart Users' Guide (Airports)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-808",
+    "area": "AIR",
+    "topic": "VOR compass rose",
+    "stem": "The compass rose printed around a VOR on a sectional is oriented to",
+    "choices": [
+      "true north, like the chart's meridians.",
+      "the direction of the nearest runway.",
+      "magnetic north."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide says the compass rose is oriented to magnetic north, so bearings and radials read from it are magnetic. The chart's meridians run to true north, so a course measured against a meridian still needs variation applied, and runway direction plays no part in the rose.",
+    "ref": "FAA Chart Users' Guide (Radio Aids to Navigation; VFR Symbology)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-809",
+    "area": "AIR",
+    "topic": "NAVAID box: underlined frequency",
+    "stem": "In a VOR information box on a sectional, the frequency is underlined. What does the underline mean?",
+    "choices": [
+      "The VOR is used to define nearby Class B airspace.",
+      "The VOR has been shut down and is out of service.",
+      "There is no voice transmission on that frequency."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide legend says an underline means no voice on that frequency, so the pilot can't hear voice broadcasts or talk on it. A shut-down NAVAID is shown with crosshatching, and NAVAIDs used to define Class B airspace have their own depiction.",
+    "ref": "FAA Chart Users' Guide (VFR Symbology: Radio Aids to Navigation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-810",
+    "area": "AIR",
+    "topic": "Sectional: Class B floor with a plus sign",
+    "stem": "On a sectional, a Class B sector shows a ceiling of 100 and a floor figure of 45 preceded by a plus sign (+). A balloon drifts beneath it at exactly 4,500 feet MSL. Is it inside the Class B?",
+    "choices": [
+      "Yes; the floor is 4,500 feet MSL, so a balloon at 4,500 feet is inside it.",
+      "No; the + means the floor begins above 4,500 feet, so 4,500 itself is outside.",
+      "Yes; the + means the sector extends all the way down to the surface."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide says Class B floors that extend 'upward from above' a certain altitude are preceded by a +, and operations at and below that altitude are outside the Class B. Without the +, a floor of 45 would put a balloon at 4,500 feet inside; the + never means the sector reaches the surface.",
+    "ref": "FAA Chart Users' Guide (Controlled Airspace: Class B)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-811",
+    "area": "AIR",
+    "topic": "Terminal radar service areas",
+    "stem": "A sectional shows a screened black outline, with sector altitudes in black, around a busy airport: a terminal radar service area (TRSA). What does the AIM say about it for a VFR balloon pilot?",
+    "choices": [
+      "It is closed to VFR aircraft whenever the approach control radar is operating.",
+      "It is Class C airspace, so two-way radio contact is needed before entering any part.",
+      "Participation is voluntary, though pilots are encouraged to contact approach control."
+    ],
+    "answer": 2,
+    "explanation": "AIM 3-5-6 says TRSAs aren't one of the airspace classes and have no Part 91 operating rules: the primary airport becomes Class D, the rest overlies Class E, and VFR participation in TRSA service is voluntary but encouraged. The Class D around the primary airport still needs radio contact, and nothing closes a TRSA to VFR traffic.",
+    "ref": "AIM 3-5-6; FAA Chart Users' Guide (Other Airspace Areas: TRSA)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-812",
+    "area": "AIR",
+    "topic": "Sectional: unverified landing area",
+    "stem": "A landing area near the planned track is charted with the 'unverified' airport symbol. According to the Chart Users' Guide, what does that mean?",
+    "choices": [
+      "It is a private field that may never be used, even in an emergency.",
+      "It is available but calls for more than ordinary caution.",
+      "It is permanently closed and is shown only as a landmark for pilots."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide says an unverified landing area is available but warrants more than ordinary precaution because of a lack of current information on field conditions, or information showing unusual operating limitations. Closed fields are charted as abandoned, for landmark value, and private fields are charted as non-public use.",
+    "ref": "FAA Chart Users' Guide (VFR Symbology: Airports)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-813",
+    "area": "AIR",
+    "topic": "Special use airspace: times and altitudes",
+    "stem": "Where on a sectional can a pilot find the times of use, altitudes and controlling agency for a charted restricted area?",
+    "choices": [
+      "In the special use airspace tabulation printed on the chart",
+      "In the data block of the nearest airport with a control tower",
+      "Nowhere on the chart; only the area's NOTAM lists its times"
+    ],
+    "answer": 0,
+    "explanation": "AIM 3-4-1 says permanent special use airspace is charted with its hours, altitudes and controlling agency, and the Chart Users' Guide says prohibited, restricted and warning areas are listed in a tabulation on the chart, with alert areas and MOAs in their own list. Temporary restricted areas and temporary MOAs are not charted, so NOTAMs are still needed, and airport data blocks hold no special use airspace information.",
+    "ref": "AIM 3-4-1; FAA Chart Users' Guide (Chart Tabulations)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-814",
+    "area": "AIR",
+    "topic": "Sectional: private airports",
+    "stem": "Why does a sectional show some restricted or private airports that the public may not use?",
+    "choices": [
+      "To show that fuel and repair services are available at those fields",
+      "For their landmark value, as fields that pilots can see from the air",
+      "To mark them as emergency landing sites that are open to all aircraft"
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide charts restricted or private airports (with soft runways or hard runways under 1,500 feet) as non-public use having landmark value. Being charted doesn't open them to the public, and the symbol says nothing about services. A balloon pilot who wants to launch or land at one still needs the owner's permission.",
+    "ref": "FAA Chart Users' Guide (VFR Symbology: Airports)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-815",
+    "area": "AIR",
+    "topic": "Military training routes: route width",
+    "stem": "A balloon's planned track passes 2 NM from the charted centerline of a VR military training route. Is the balloon clear of the route?",
+    "choices": [
+      "Yes; every military route is exactly 1 NM wide on each side of its centerline.",
+      "Yes; the route is only as wide as the line that is printed on the sectional chart.",
+      "Not necessarily; a route can extend several miles either side of its centerline."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide says MTR route width varies and can extend several miles on either side of the charted centerline, with details in the DoD's FLIP AP/1B. The printed line is only the centerline, and there's no standard 1 NM width. Low-level military aircraft are fast, so the pilot should check route status and keep a sharp lookout.",
+    "ref": "FAA Chart Users' Guide (Other Airspace Areas: Military Training Routes); AIM 3-5-2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-801",
+    "area": "THY",
+    "topic": "Starting a climb from level flight",
+    "stem": "A pilot holds level flight with one standard burn every 35 seconds. According to the Balloon Flying Handbook, what happens if the pilot makes a second standard burn a few seconds after the first instead of waiting?",
+    "choices": [
+      "Nothing changes, because the second burn only replaces heat lost while waiting.",
+      "The balloon starts a slow climb; three burns in a row would climb faster.",
+      "The balloon climbs at its maximum rate until the pilot opens the vent."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says that from a level-flight rhythm, two consecutive standard burns add enough extra heat for a slow climb and three in a row give a faster climb; the pilot then returns to the level rhythm to hold that rate. The extra burn is surplus heat, not replacement, and one extra burn doesn't produce a maximum-rate climb.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-802",
+    "area": "THY",
+    "topic": "Climb rate for finding wind layers",
+    "stem": "A pilot wants to find a wind layer that will turn the balloon toward a target. Which climb rate does the Balloon Flying Handbook describe as slow enough to detect wind changes at different altitudes?",
+    "choices": [
+      "200 to 300 feet per minute",
+      "500 to 700 feet per minute",
+      "About 1,000 feet per minute"
+    ],
+    "answer": 0,
+    "explanation": "The handbook says an ascent of 200 to 300 feet per minute is slow enough to detect wind changes, while above 500 feet per minute the balloon can pass through small, narrow wind bands or slight direction changes without the pilot noticing. The faster rates save time but skip right past the layers the pilot is looking for.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-803",
+    "area": "THY",
+    "topic": "Climb rate after launch",
+    "stem": "Leaving a launch field with no downwind obstacles nearby, why does the Balloon Flying Handbook prefer a slow climb of about 100 to 200 feet per minute?",
+    "choices": [
+      "It lets the pilot sense the wind direction early and decide which way to fly.",
+      "It burns the least fuel of any climb, which matters most early in a flight.",
+      "It keeps the balloon low for longer, below the 91.119 minimum altitudes."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says to launch and climb slowly, 100 to 200 feet per minute, to make an early decision about direction; with nothing to clear downwind, a slow ascent tests the wind and detects subtle changes, and it is also the best way to avoid balloons above. Fuel economy isn't the stated reason, and 91.119 allows lower flight only as needed for takeoff and landing, so lingering low isn't a goal.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents); Ch. 6 (Launch)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-804",
+    "area": "THY",
+    "topic": "Rapid descents are relative",
+    "stem": "Which statement about a 700-foot-per-minute descent agrees with the Balloon Flying Handbook?",
+    "choices": [
+      "It is a rapid descent from any height and should never be flown on purpose.",
+      "It is a normal descent from any height for an average-size balloon.",
+      "Not rapid from 3,000 feet AGL, but rapid and possibly critical from 300 feet."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says a rapid or steep descent is relative: 700 feet per minute started at 3,000 feet AGL is not necessarily rapid, but started at 300 feet it is rapid and may be critical, so rapid descents need plenty of height and distance from obstacles. What matters is the rate compared with the height left to stop it, given the balloon's slow response.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Rapid/Steep Descents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-805",
+    "area": "THY",
+    "topic": "Recovering from a steep descent",
+    "stem": "Recovering from a steep descent, a pilot makes a long burn about halfway to the ground. As soon as the balloon starts to respond, what does the Balloon Flying Handbook say to do?",
+    "choices": [
+      "Stop burning, since the heat already added will keep slowing the balloon.",
+      "Keep burning until the descent has completely stopped, then add one more.",
+      "Vent briefly so that the balloon keeps descending until the last moment."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says to make a long (twice standard) burn at the halfway point, burn again if there is no reaction, and stop immediately on sensing a reaction, letting the balloon descend to its pullout so the deceleration stops it just above the desired altitude. Because the balloon responds 6 to 15 seconds after a burn, burning until the descent stops piles on heat that will carry it into a climb, and venting now works against the recovery.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Rapid/Steep Descents; Contour Flying Techniques)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-806",
+    "area": "THY",
+    "topic": "How the envelope loses heat",
+    "stem": "Which set lists the ways the Balloon Flying Handbook says a hot air balloon envelope loses heat?",
+    "choices": [
+      "Leakage through the fabric, seams and deflation port, plus radiation",
+      "Only through the vent, which is why a sealed balloon needs no burns",
+      "Only through the mouth, since hot air can't pass through coated fabric"
+    ],
+    "answer": 0,
+    "explanation": "The handbook says hot air is constantly lost from the top of the envelope by leaking through the fabric, seams and deflation port, and heat is also lost by radiation; only the newest fabrics are nearly airtight, some grow more porous with age, and some colors radiate heat faster than others. With so many paths for heat to escape, level flight always needs regular burns.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-807",
+    "area": "THY",
+    "topic": "Wind shear and heat loss",
+    "stem": "A balloon descends abruptly from a 25 mph wind layer into a 10 mph surface wind. Besides denting the envelope, what does the sudden airflow do, according to the Balloon Flying Handbook?",
+    "choices": [
+      "It warms the envelope through friction, so less burning is needed.",
+      "It strips the boundary layer from the fabric and greatly increases heat loss.",
+      "It presses the fabric pores closed, so the envelope holds its heat longer."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says an abrupt drop into slower air feels like going from no wind to a strong wind across the envelope, which removes the boundary layer on the fabric and greatly increases heat lost by conduction while distorting the envelope into a dish, which is very dangerous low down in a fully loaded balloon. The airflow doesn't usefully warm the envelope or seal it; it cools it.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-808",
+    "area": "THY",
+    "topic": "Diminished capacity: effect on the approach",
+    "stem": "In strong wind shear on final approach, a heavily loaded balloon dishes and loses lifting heat. According to the Balloon Flying Handbook, what does this do to the approach, and how much heat must the pilot add?",
+    "choices": [
+      "It flattens the approach; add only enough heat to replace what was lost.",
+      "It steepens the approach; replace the lost heat and add more to stop the sink.",
+      "It leaves the slope unchanged; keep the normal burn rhythm all the way down."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says heat lost to a dish can change the slope of the approach and, without the pilot noticing, make it steeper; the stronger the shear, the greater the change. The lost heat must be replaced to make the balloon neutrally buoyant again, and more must be added to stop the downward momentum. Replacing only the loss leaves the balloon still sinking, and the normal rhythm ignores heat that is already gone.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-809",
+    "area": "THY",
+    "topic": "Deliberately distorting the envelope",
+    "stem": "Some pilots deliberately distort the envelope for a high-performance descent. What does the Balloon Flying Handbook say about this technique?",
+    "choices": [
+      "It can work in light or steady winds but can prove disastrous in strong wind shear.",
+      "It is the recommended way to bring a balloon down for a high-wind landing.",
+      "It has no real effect on lift, because the envelope's volume stays the same."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says some pilots intentionally create diminished capacity for a high-performance descent; in low or stable wind conditions it can be done successfully, but in strong wind shear it can prove disastrous. It is not a high-wind landing method, and distortion does reduce the envelope's capacity and push hot air out of the mouth.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-810",
+    "area": "THY",
+    "topic": "Using the vent to change altitude",
+    "stem": "According to the Balloon Flying Handbook, how should a pilot use the parachute vent to change altitude in normal flight?",
+    "choices": [
+      "Freely, since venting saves fuel compared with waiting for the balloon to cool",
+      "Held open for as long as it takes to reach the new altitude, however long that is",
+      "Sparingly and timed, within the manufacturer's limit on how long it may stay open"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says to calibrate and time vent openings, to use the vent sparingly rather than in place of patience unless a rapid altitude change is needed, and notes that parachute vents usually carry a manufacturer's limit on how long they may be open, which can be disastrous to exceed. Venting dumps heat the burner must later replace, so it costs fuel rather than saving it.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents; Descents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-811",
+    "area": "THY",
+    "topic": "Burn rhythm and fuel flow",
+    "stem": "The Balloon Flying Handbook works out that an average 18.5-million-BTU burner held open continuously would burn about 202 gallons of propane per hour. If a pilot holds level flight with one 4-second burn every 40 seconds, about how much propane is used per hour?",
+    "choices": [
+      "About 10 gallons",
+      "About 50 gallons",
+      "About 20 gallons"
+    ],
+    "answer": 2,
+    "explanation": "The burner is open 4 seconds out of every 40, one tenth of the time, so the fuel flow is about 202 × 0.1 ≈ 20 gallons per hour. Ten gallons would mean the valve was open only a twentieth of the time, and 50 gallons would mean a quarter of the time. Real burners and days vary, so the flight manual and the pilot's own records guide actual fuel planning.",
+    "ref": "FAA-H-8083-11B Ch. 7 (The Standard Burn); Ch. 2 (Propane Primer)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-812",
+    "area": "THY",
+    "topic": "Short bursts versus one full burn",
+    "stem": "A pilot wants the heat of one standard burn but splits it into four 1-second bursts. Compared with one 4-second burn, what does the Balloon Flying Handbook say?",
+    "choices": [
+      "The four bursts add more heat, because each one starts at full pressure.",
+      "The four bursts add less heat, because of the burner's design and inefficiency.",
+      "The four bursts add the same heat, only spread out more smoothly."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says that because of burner design and the inefficiency of a valve that is only partly open, four 1-second burns do not produce as much heat as one 4-second burn; if less than a full burn is wanted, shorten the time the valve is open, not how far it opens. Short bursts are therefore not a one-for-one substitute for a full burn.",
+    "ref": "FAA-H-8083-11B Ch. 7 (The Standard Burn)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-813",
+    "area": "THY",
+    "topic": "The purpose of the standard burn",
+    "stem": "What is the purpose of the Balloon Flying Handbook's 'standard burn'?",
+    "choices": [
+      "To meet a manufacturer's rule that every burn must last exactly four seconds",
+      "To set one burn length that all pilots use, so their flying can be compared",
+      "To make each of the pilot's own burns identical, so their effect is predictable"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says the standard burn, four seconds, calibrates heat input so the pilot can plan in numbers of burns; it doesn't mean a burn that is standard between pilots, but each pilot opening and closing the valve the same way and making every burn exactly the same. It is a training method, not a manufacturer's rule.",
+    "ref": "FAA-H-8083-11B Ch. 7 (The Standard Burn)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-814",
+    "area": "THY",
+    "topic": "Response lag in a descent",
+    "stem": "A balloon is descending at 600 feet per minute when the pilot burns to stop the descent. If the balloon takes about 10 seconds to respond, about how much altitude will it lose before the burn has any effect?",
+    "choices": [
+      "About 60 feet",
+      "About 600 feet",
+      "About 100 feet"
+    ],
+    "answer": 2,
+    "explanation": "Six hundred feet per minute is 10 feet per second, so 10 seconds of lag costs about 100 feet before the burn even begins to act, and more while the descent is being slowed. Sixty feet assumes 6 feet per second, and 600 feet treats 10 seconds as a full minute. This is why the Balloon Flying Handbook ties descent rate to height above the ground and stresses the 6 to 15 second response time.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents; Descents, Fig. 7-5)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-815",
+    "area": "THY",
+    "topic": "Crew weight at landing",
+    "stem": "At landing, crew members grab the basket and add their weight ('hands on'). According to the Balloon Flying Handbook, how does this help the pilot?",
+    "choices": [
+      "It lets the pilot leave the burner running while the envelope is deflated.",
+      "It slows or steadies the basket and lets the pilot use a smaller field.",
+      "It means the pilot no longer has to shut off the fuel before deflating."
+    ],
+    "answer": 1,
+    "explanation": "The handbook lists adding weight to slow, stop or stabilize the basket among the ways ground crew help at landing, and says added weight or 'hands on' can let a pilot choose a smaller landing site or avoid obstacles, since it cuts the balloon's net lift at once. It changes nothing about shutting off the fuel and pilot lights before deflation.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Human Resources); Ch. 8 (Ground Assistance)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  }
+]
