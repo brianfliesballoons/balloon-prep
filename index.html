@@ -304,7 +304,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .rbody .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0}
 .rbody .box{display:block;flex:initial;width:auto;height:auto;border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}  /* .box is also the Learn checkbox; reset it here */
 @media (max-width:640px){.rbody .cols,.r1top,.vfr{grid-template-columns:minmax(0,1fr)!important}.rbody .grid3{grid-template-columns:minmax(0,1fr)}}
-.tile{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:30px;height:30px;border-radius:7px;font-family:var(--f-display);font-weight:700;font-size:1.05rem;vertical-align:middle;flex:none}
+.atile{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:30px;height:30px;border-radius:7px;font-family:var(--f-display);font-weight:700;font-size:1.05rem;vertical-align:middle;flex:none}
 .tA{background:#3b3f45;color:#fff}.tB{background:#1d5ed4;color:#fff}.tC{background:#8a2b5c;color:#fff}
 .tD{background:#fff;color:#1d5ed4;border:2.5px dashed #1d5ed4}.tE{background:linear-gradient(#e7c3d6,#fff);color:#8a2b5c;border:2px solid #8a2b5c}.tG{background:#fff;color:#14263a;border:2px solid #8b9894}
 .r1top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:center}
@@ -321,7 +321,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .cg{width:96px;height:64px;color:var(--ink);display:block}.cg text{font:10px var(--f-num);fill:currentColor}.cg text.b{font:700 11px var(--f-body)}
 .entry{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 8px}
 .entry>div{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;font-size:.8rem;line-height:1.25}
-.entry .tile{width:34px;height:34px;font-size:1.2rem}
+.entry .atile{width:34px;height:34px;font-size:1.2rem}
 @media (max-width:640px){.entry{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .cls{display:grid;gap:10px}.cls>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .cls dl{display:grid;grid-template-columns:120px 1fr;gap:2px 10px;margin:8px 0 0;font-size:.9rem}.cls dt{color:var(--muted)}.cls dd{margin:0;font-weight:700}
@@ -1054,7 +1054,7 @@ const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>
 let REFS=null,RV={v:'home'};
 const EDITION='Edition Oct 2026';
 const RGROUPS=[['rules','Rules and airspace'],['charts','Charts and weather'],['flying','Flying and the checkride']];
-const TILE=k=>`<span class="tile t${k}" role="img" aria-label="Class ${k}">${k}</span>`;
+const TILE=k=>`<span class="atile t${k}" role="img" aria-label="Class ${k}">${k}</span>`;
 const CLOUD='<path d="M30 34 a8 8 0 0 1 4-14 a11 11 0 0 1 20-3 a9 9 0 0 1 10 17 z" fill="var(--surface)" stroke="currentColor" stroke-width="1.6"/>';
 const cg=(t,b,sd,l)=>`<svg class="cg" viewBox="0 0 96 64" role="img" aria-label="${l}">${CLOUD}<path d="M47 15V5M44 8l3-4 3 4" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="56" y="9">${t}</text><path d="M47 36v12M44 45l3 4 3-4" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="52" y="50">${b}</text><path d="M26 26H4M7 23l-4 3 4 3M68 26h24M89 23l4 3-4 3" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="48" y="62" text-anchor="middle">${sd} side</text></svg>`;
 const G152=cg('1,000','500','2,000','500 feet below, 1,000 above, 2,000 horizontal'),GBIG=cg('1,000','1,000','1 SM','1,000 feet below, 1,000 above, 1 statute mile horizontal');
