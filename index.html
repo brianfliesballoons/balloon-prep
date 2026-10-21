@@ -129,12 +129,13 @@ textarea{font:inherit;font-size:.92rem;color:var(--ink);background:var(--paper);
 .meter{height:6px;background:var(--chip);border-radius:3px;overflow:hidden;min-width:60px}
 .meter i{display:block;height:100%;background:var(--good)}
 /* chart workbench */
-.bench{display:flex;flex-direction:column;gap:10px;padding:12px}
+.bench{display:flex;flex-direction:column;gap:10px;padding:12px;scroll-margin-top:calc(var(--hh,60px) + 8px)}
 .tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:3px}
 .tool{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:.95rem;color:var(--ink);background:transparent;border:0;border-radius:6px;padding:6px 10px;cursor:pointer}
 .tool svg{width:17px;height:17px;flex:none}
-@media (max-width:560px){.tools{gap:4px}.tool{padding:4px 7px;font-size:.84rem;gap:4px}.tool svg{width:14px;height:14px}.tools .btn{padding:4px 8px;font-size:.84rem}.hint{font-size:.8rem}}
+@media (max-width:560px){.tools{gap:6px}.tools .seg{flex:1 1 100%}.tool{flex:1;justify-content:center;padding:4px 6px;font-size:.88rem;gap:5px}.tool svg{width:16px;height:16px}.tools .spacer{display:none}.tools .btn{flex:1 1 auto;padding:4px 8px;font-size:.88rem}.hint{font-size:.8rem}}
+@media (max-width:560px),(pointer:coarse){.tool,.tools .btn{min-height:44px}}
 .tool[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
 .spacer{flex:1}
 .hint{margin:0;color:var(--muted);font-size:.88rem}
@@ -158,8 +159,10 @@ canvas.draw{cursor:crosshair}
 footer{color:var(--muted);font-size:.85rem;max-width:80ch}
 footer button{font:inherit;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0}
 body.max{overflow:hidden}
-body.max .bench{position:fixed;inset:0;z-index:20;border-radius:0;border:0;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 10px) 12px calc(env(safe-area-inset-bottom,0px) + 12px)}
+body.max .bench{position:fixed;inset:0;z-index:40;border-radius:0;border:0;overflow-y:auto;overscroll-behavior:contain;padding:calc(env(safe-area-inset-top,0px) + 10px) calc(env(safe-area-inset-right,0px) + 12px) calc(env(safe-area-inset-bottom,0px) + 12px) calc(env(safe-area-inset-left,0px) + 12px)}
+body.max .bench>*{flex-shrink:0}
 body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
+@media (max-width:560px){body.max .canvas-wrap{height:calc(100dvh - 330px)}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 /* learn */
 .chipc{align-self:flex-start;font-family:var(--f-num);font-size:.8rem;background:var(--chip);border-radius:999px;padding:3px 10px}
@@ -808,7 +811,8 @@ $('undo').onclick=()=>{const u=undosOf();if(u.length){marksBy[marksKey]=JSON.par
 $('clear').onclick=()=>{if(marksOf().length){undosOf().push(JSON.stringify(marksOf()));marksBy[marksKey]=[];req();}};
 $('reset').onclick=()=>animateTo({...FULL});
 $('max').onclick=()=>toggleMax();
-function toggleMax(on){on=on===undefined?!document.body.classList.contains('max'):on;document.body.classList.toggle('max',on);$('max').textContent=on?'Exit full screen':'Full screen';$('mini').hidden=!on;requestAnimationFrame(resize);}
+let maxY=0;
+function toggleMax(on){on=on===undefined?!document.body.classList.contains('max'):on;const was=document.body.classList.contains('max');if(on&&!was)maxY=window.scrollY;document.body.classList.toggle('max',on);$('max').textContent=on?'Exit full screen':'Full screen';$('mini').hidden=!on;if(on)$('bench').scrollTop=0;else if(was)window.scrollTo(0,maxY);requestAnimationFrame(resize);}
 TABLE.forEach(([a,f],i)=>{const li=document.createElement('li');const b=document.createElement('button');b.className='trow';b.id='row'+i;b.innerHTML=`<span>${a.toFixed(2)}</span><span>${f>0?'+':f<0?'−':''}${fmt(Math.abs(f))}</span>`;b.onclick=()=>{selRow=selRow===i?null:i;paintRows();readoutIdle();};li.appendChild(b);$('tbl').appendChild(li);});
 function paintRows(){TABLE.forEach((_,i)=>$('row'+i).classList.toggle('on',i===selRow));}
 const factor=a=>(TABLE.find(r=>Math.abs(r[0]-a)<1e-6)||[0,0])[1];
@@ -979,7 +983,7 @@ function goLearn(g){const [k,a]=g.split(/:(.*)/);
   else if(k==='resume'){mode=a;}
   else if(k==='hub'){mode='learn';LV={v:'hub',code:a,tab:'wait'};}
   else if(k==='newclass'){mode='learn';LV={v:'newclass'};}
-  renderAll();window.scrollTo(0,0);}
+  renderAll();window.scrollTo(0,0);if(k==='chart'&&window.innerWidth<860&&!$('bench').hidden)$('bench').scrollIntoView({block:'start'});}
 $('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[data-ans],[data-basic],[data-act]');if(!t)return;
   if(t.dataset.act){qaAct(t);return;}
   if(t.dataset.go){goLearn(t.dataset.go);return;}
