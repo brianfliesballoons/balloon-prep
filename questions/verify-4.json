@@ -1,0 +1,702 @@
+[
+  {
+    "id": "REG-401",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.2 (Aircraft accident; Serious injury (2)); 830.5 (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-402",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.2 (Serious injury (5)); 830.5 (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-403",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.2 (Substantial damage); 830.5(a)(1)-(12) (eCFR current text (title 49 up to date as of 2026-10-19)); 14 CFR part 43 appendix A (c)(7) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-404",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.5(a)(6); 830.15(a) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-405",
+    "verdict": "fix",
+    "issue": "Keyed answer matches the plain text: 830.5(a)(5) lists 'aircraft collision in flight' with no damage or injury threshold. No NTSB interpretation specific to balloon envelope-to-basket contact was found. The only historical NTSB balloon midair reports found (e.g. CHI87LA167) involved fabric damage, so they do not settle the no-damage case.",
+    "suggested": "Key kept. CHECK sentence rewritten to record what was searched and hand the practice question to Brian; confidence stays 'check'. (Applied in pilot-4.json.)",
+    "source": "49 CFR 830.2 (Incident); 830.5(a)(5) (eCFR current text (title 49 up to date as of 2026-10-19)); NTSB report CHI87LA167 (1987 balloon midair, fabric damage); web search 2026-10-20 found no balloon-specific NTSB interpretation"
+  },
+  {
+    "id": "REG-406",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.5(a)(4); 830.15(a) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-407",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.5(b); 830.15(a) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-408",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.6(a)-(i) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-409",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "49 CFR 830.10(b)(1)-(3) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-410",
+    "verdict": "fix",
+    "issue": "Key correct (830.10(c)). The key was the only choice with a hedge ('if possible'), and it was the shortest.",
+    "suggested": "Key lengthened slightly; distractor B given the same 'if possible' hedge so the qualifier no longer marks the answer. (Applied in pilot-4.json.)",
+    "source": "49 CFR 830.10(a), (c), (d) (eCFR current text (title 49 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-411",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.133(b)(2)(i)-(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-412",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.133(a)(2)(ii)(A)-(C); 61.5(c)(1) (no lighter-than-air flight instructor rating) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-413",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation said 'the only paid balloon exception is giving flight training', but 61.23(b)(9)-(10) also excuse examiners and applicants on balloon practical tests, so 'only' overstated it.",
+    "suggested": "Reworded to 'The exception that matters here is giving flight training (61.23(b)(5))'. (Applied in pilot-4.json.)",
+    "source": "14 CFR 61.23(a)(2)(iii), (b)(5), (b)(9)-(10); 61.133(a)(1)(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-414",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.23(b)(4); 61.3(c)(2)(vi)(A) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-415",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.23(a)(2)(iii), (b)(5), (d)(2) table; 61.3(c)(2)(vi)(B) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-416",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.3(c)(2)(i)-(ii); 61.23(b)(1)(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-417",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.57(a)(1)-(2); 61.56(h) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-418",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.57(a)-(b); 91.209(a)(1) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-419",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.56(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-420",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.56(c), (d)(1) (eCFR current text (title 14 up to date as of 2026-10-19)); calendar-month count worked by hand: March 2025 test current through March 31, 2027"
+  },
+  {
+    "id": "REG-421",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.56(c)(1); 61.57(a)(1)(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-422",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.51(a), (b)(1)-(3) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-423",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.51(d), (e)(1)(i); 61.129(h)(4)(ii)(B); 61.123(h) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-424",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.3(l)(1)-(4) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-425",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.60 (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-426",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.83(a)-(b); 61.103(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-427",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.87(n), (p)(4) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-428",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.89(a)(1); 61.87(a) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-429",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.103(a)-(b); 61.83(b) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-430",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.109(h)(1)-(2); 61.129(h)(4)(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-431",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.123(a), (h); 61.23(a)(2)(iii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-432",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.129(h)(1)-(4) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-433",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 61.129(h)(4)(ii)(A)-(C); 61.109(h)(2)(ii) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-434",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.7(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 In Flight Emergencies, Fuel Leak"
+  },
+  {
+    "id": "REG-435",
+    "verdict": "fix",
+    "issue": "Key correct. The writer's CHECK asked whether 91.9(a) reaches balloons when it names an 'Airplane or Rotorcraft Flight Manual'. It does: 91.9(a) applies to any 'civil aircraft', and its words 'or as otherwise prescribed by the certificating authority' cover a balloon's part 31 limitations. 31.81(b) requires them to be furnished in a Balloon Flight Manual or placard. The explanation also cited 31.81(a)(1) as if it named envelope temperature; it names only 'each operating limitation, including the maximum weight'.",
+    "suggested": "CHECK removed, explanation reworded to cite 31.81 accurately, ref changed to '14 CFR 91.9(a); 14 CFR 31.81', confidence set to high. (Applied in pilot-4.json.)",
+    "source": "14 CFR 91.9(a)-(b); 31.81(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Performance Planning (250°F max continuous operating temperature for most balloons)"
+  },
+  {
+    "id": "REG-436",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.119(b)-(c) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Minimum Safe Altitude Requirements, Fig. 7-9 (1,000-foot diameter hemisphere)"
+  },
+  {
+    "id": "REG-437",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.203(a)-(b); 91.417 (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Aircraft Documents"
+  },
+  {
+    "id": "REG-438",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.205(a); 1.1 (Balloon); 31.85(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Instruments"
+  },
+  {
+    "id": "REG-439",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.207(a), (f)(3) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-440",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.209(a)(1), (b); 1.1 (Night) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-441",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.211(a)(1)-(3) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-25C Ch. 7 Oxygen Systems"
+  },
+  {
+    "id": "REG-442",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.409(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 100-Hour Inspection"
+  },
+  {
+    "id": "REG-443",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.417(a)(2)(v), (b)(2) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-444",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 39.3, 39.7; 91.403(a) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-445",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 43.3(g); part 43 appendix A (c)(7) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-446",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 43.3(g), 43.7(f), 43.9(a)(1)-(4); part 43 appendix A (c)(25) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-447",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR part 43 appendix A (c)(27); 43.7(f) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "REG-448",
+    "verdict": "fix",
+    "issue": "Key correct. Current 91.147(a), last amended at 89 FR 33108 (Apr. 26, 2024, which added the part 5 SMS item), limits 'Operator' to airplanes, powered-lift and rotorcraft. 136.1(c) excludes balloons, and 120.1(a) reaches only operators 'as defined in 14 CFR 91.147'. Federal Register API searches (FAA rules and proposed rules since 2023-01-01 for balloon + drug/alcohol, balloon tour, commercial balloon, and '91.147') found no rule adding balloons; the only 2026 item naming 91.147 is a petition for a weight-shift sightseeing exemption (2026-19562). The CHECK's unsourced claim that 'the NTSB has recommended drug and alcohol testing for commercial balloon operators' could not be verified. The key also left out 'nonstop', a defining element of a 91.147 Operator.",
+    "suggested": "CHECK removed (resolved). The unverified NTSB claim is dropped. The key now reads 'A nonstop sightseeing operator for hire in an airplane, powered-lift or rotorcraft.' Distractors reworded to similar length. Confidence set to high. (Applied in pilot-4.json.)",
+    "source": "14 CFR 91.147(a)-(b) (Amdt. 91-374, 89 FR 33108); 136.1(c); 120.1(a); 91.146(b) (eCFR current text (title 14 up to date as of 2026-10-19)); Federal Register API searches 2026-10-20 (FAA RULE/PRORULE since 2023-01-01; '91.147' since 2024-05-01)"
+  },
+  {
+    "id": "REG-449",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.13(a); 91.3; 91.103 (eCFR current text (title 14 up to date as of 2026-10-19)); FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Contour Flying Cautions (buzzing 'is illegal and can be hazardous')"
+  },
+  {
+    "id": "REG-450",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.103(a)-(b) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "OPS-401",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Inflation (minimum about 75 percent cold air); Inflator Fan Placement (tighter mouth)"
+  },
+  {
+    "id": "OPS-402",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Inflation (mouth held wide and tall, crew face away from burner, eye contact)"
+  },
+  {
+    "id": "OPS-403",
+    "verdict": "fix",
+    "issue": "Key correct. The stem asked 'why' with no source, and the coil-warming distractor is ruled out only as 'not the handbook's reason', so the stem needed to name the handbook.",
+    "suggested": "Stem now opens 'According to the Balloon Flying Handbook,'. (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Inflation (short first burn; fan one-half to two-thirds; 2-3 s pauses)"
+  },
+  {
+    "id": "OPS-404",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Inflator Fan Placement, Fig. 6-14"
+  },
+  {
+    "id": "OPS-405",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Envelope, Fig. 2-3; 14 CFR part 43 appendix A (c)(7)"
+  },
+  {
+    "id": "OPS-406",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Crown Line; The Crew Briefing (never wrap a line around hand, arm or body)"
+  },
+  {
+    "id": "OPS-407",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Performance Planning, Fig. 3-13 (250°F)"
+  },
+  {
+    "id": "OPS-408",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Crown Line, Fig. 6-6 caption; breakaway tie for lines tied to the basket"
+  },
+  {
+    "id": "OPS-409",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Safety Restraint/Quick-Release; Ch. 2 Quick/Safety Release"
+  },
+  {
+    "id": "OPS-410",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 The Inflation (standing but not ready: deflate); False Lift"
+  },
+  {
+    "id": "OPS-411",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Burner Check (NOTE on parallel-plumbed tanks)"
+  },
+  {
+    "id": "OPS-412",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 6 Burner and Fuel System). The key was the only hedged choice ('Possible corrosion...'); both distractors were absolute.",
+    "suggested": "Distractor A now carries a hedge too ('may need to be torqued down hard'). (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Burner and Fuel System; Ch. 3 Cold Weather Flying"
+  },
+  {
+    "id": "OPS-413",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Instrument Checks, Fig. 6-10; 14 CFR 91.121 (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "OPS-414",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Layout; Spread Layout"
+  },
+  {
+    "id": "OPS-415",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 6 Instrument Checks, attaching the envelope). Distractor A ('carabiner closed by hand rather than with a tool') was wrong only on manufacturer practice the handbook does not address; some suspension hardware, such as quick links, is specified to be tightened with a tool.",
+    "suggested": "Distractor A replaced with a plainly normal condition ('A cable that hangs slack on the ground until the envelope is inflated.') and the explanation updated to match. (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Instrument Checks (attaching the envelope)"
+  },
+  {
+    "id": "OPS-416",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Prelaunch Check; Burner Check; 14 CFR 31.85"
+  },
+  {
+    "id": "OPS-417",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 6 Launch (fast ascent only to avoid obstacles or adverse wind; 20° above neutral buoyancy; floating the top)"
+  },
+  {
+    "id": "OPS-418",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Packing the Balloon"
+  },
+  {
+    "id": "OPS-419",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Packing the Balloon (flap toward the balloon on rocky ground)"
+  },
+  {
+    "id": "OPS-420",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Landowner Relations"
+  },
+  {
+    "id": "OPS-421",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Introduction; Landing Considerations"
+  },
+  {
+    "id": "OPS-422",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Obstacles and Approach Angles (three safe choices; third preferable)"
+  },
+  {
+    "id": "OPS-423",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Some Basic Rules of Landing"
+  },
+  {
+    "id": "OPS-424",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Stand in the Appropriate Area of the Basket"
+  },
+  {
+    "id": "OPS-425",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 High-Wind Landing (5 mph = 73 ft, 15 mph = 220 ft in 10 s); arithmetic 10 mph = 14.67 ft/s"
+  },
+  {
+    "id": "OPS-426",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Minimum Safe Altitude Requirements; 14 CFR 91.119(a) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "OPS-427",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 7 Contour Flying Techniques, Fig. 7-10). The key was the only hedged choice ('may not have enough clearance').",
+    "suggested": "Distractor B softened to 'should clear' so the hedge no longer marks the key. (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Contour Flying Techniques, Fig. 7-10"
+  },
+  {
+    "id": "OPS-428",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Ascents, Fig. 7-4"
+  },
+  {
+    "id": "OPS-429",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Descents, Fig. 7-5"
+  },
+  {
+    "id": "OPS-430",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 7 Tethering/Mooring, Fig. 7-12 (two or three tether lines minimum)"
+  },
+  {
+    "id": "OPS-431",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Water Landings; FAA-S-8081-18A (Nov. 2023) Area of Operation X, Task C"
+  },
+  {
+    "id": "OPS-432",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Water Landings"
+  },
+  {
+    "id": "OPS-433",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Mountain Flying; Ch. 6 Burner Check (pony tanks strongly discouraged); FAA-S-8081-18A Area of Operation X, Task B"
+  },
+  {
+    "id": "OPS-434",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Thermal Flight; FAA-S-8081-18A Area of Operation X, Task D"
+  },
+  {
+    "id": "OPS-435",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Cold Weather Flying (bleed off via fixed liquid level gauge if rise over 30°)"
+  },
+  {
+    "id": "OPS-436",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 3 Cold Weather Flying). The key was the only hedged choice ('may shrink').",
+    "suggested": "Distractor B given a matching hedge ('may stiffen'). (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Cold Weather Flying (seals/O-rings; 50 feet); Ch. 2 Heater System (4 percent per 1,000 feet)"
+  },
+  {
+    "id": "OPS-437",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 3 Mountain Flying). The key was the only hedged choice ('may fail').",
+    "suggested": "Key reworded to the handbook's own plain wording ('will not work well'). (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Mountain Flying"
+  },
+  {
+    "id": "OPS-438",
+    "verdict": "fix",
+    "issue": "Key correct (PHAK 25C Ch. 17 Dark Adaptation: rods about 30 minutes; a bright light can completely destroy night adaptation). The key was the only hedged choice.",
+    "suggested": "Distractor A given a matching hedge ('may be lost'). (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-25C Ch. 17 Dark Adaptation"
+  },
+  {
+    "id": "OPS-439",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 7 Oxygen Systems; 14 CFR 91.211(a) (eCFR current text (title 14 up to date as of 2026-10-19))"
+  },
+  {
+    "id": "OPS-440",
+    "verdict": "fix",
+    "issue": "Key correct (Ch. 3 Performance Planning: 4 percent per 1,000 feet, 88 percent at 3,000 feet). The stem's 'figure for heater performance loss' could be read as a numbered handbook Figure, but the handbook gives the rate only in text.",
+    "suggested": "'figure' changed to 'rate' in the stem. (Applied in pilot-4.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 3 Performance Planning; Ch. 2 Heater System"
+  },
+  {
+    "id": "OPS-441",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Instruments; Fuel Tanks"
+  },
+  {
+    "id": "OPS-442",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Instruments; Ch. 6 Prelaunch Check"
+  },
+  {
+    "id": "OPS-443",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Instruments (variometer = rate of climb indicator; pyrometer); Ch. 7 Contour Flying Techniques (instrument lag)"
+  },
+  {
+    "id": "OPS-444",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Appendix A Vapor Pressures of LP Gases (0°F = 25, 60°F = 93, 90°F = 150 psi); Ch. 3 Cold Weather Flying"
+  },
+  {
+    "id": "OPS-445",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Fuel Tanks (80 percent; relief valve 375 psi)"
+  },
+  {
+    "id": "OPS-446",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Heater System, Fig. 2-8"
+  },
+  {
+    "id": "OPS-447",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Fig. 2-11 Propane Primer"
+  },
+  {
+    "id": "OPS-448",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 2 Fig. 2-11 Propane Primer"
+  },
+  {
+    "id": "OPS-449",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Refueling"
+  },
+  {
+    "id": "OPS-450",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs, pdftotext, 2026-10-20) Ch. 8 Refueling"
+  }
+]

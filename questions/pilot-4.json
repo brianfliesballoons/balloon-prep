@@ -1,0 +1,1902 @@
+[
+ {
+  "id": "REG-401",
+  "area": "REG",
+  "topic": "NTSB: when an accident can occur",
+  "stem": "After a normal landing, the pilot and all three passengers have climbed out of the basket. During deflation, a crewmember's arm is broken when the basket tips onto it. Under 49 CFR 830.2, is this an aircraft accident?",
+  "choices": [
+   "Yes, but it needs only a written report within 10 days, because the balloon itself was not damaged.",
+   "Yes; any broken bone during a balloon operation is an accident that needs immediate notification to the NTSB.",
+   "No; the definition covers only the time from boarding for flight until everyone aboard has disembarked."
+  ],
+  "answer": 2,
+  "explanation": "830.2 defines an aircraft accident as an occurrence between the time any person boards with the intention of flight and the time all such persons have disembarked, in which someone is killed or seriously injured or the aircraft is substantially damaged. Everyone had already left the basket, so this injury falls outside that window, even though a fracture is a serious injury. Part 830 also has no 'report only' category for an accident: an accident always needs immediate notification and the 10-day report.",
+  "ref": "49 CFR 830.2 (Aircraft accident; Serious injury)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-402",
+  "area": "REG",
+  "topic": "NTSB: serious injury (burns)",
+  "stem": "In flight, a passenger's forearm touches the hot burner can, causing a second-degree burn that covers well under 1 percent of the body. No one else is hurt and the balloon is undamaged. Under 49 CFR 830.2, how is the injury classified?",
+  "choices": [
+   "As a serious injury, because it is a second-degree burn.",
+   "As a serious injury only if it keeps the passenger in hospital over 48 hours.",
+   "As a minor injury, because it covers less than 5 percent of the body."
+  ],
+  "answer": 0,
+  "explanation": "830.2 lists, as a serious injury, any injury that involves second- or third-degree burns, or any burns affecting more than 5 percent of the body surface. The 5 percent test is for burns of any degree; a second- or third-degree burn qualifies whatever its size. Hospitalization for more than 48 hours is a separate, independent test, not a requirement for every serious injury. So this flight was an accident, which requires immediate notification under 830.5.",
+  "ref": "49 CFR 830.2 (Serious injury (5)); 49 CFR 830.5",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-403",
+  "area": "REG",
+  "topic": "NTSB: substantial damage",
+  "stem": "A balloon brushes a tree on landing. No one is hurt, and the post-flight check finds several small punctures in the envelope fabric, all within the manufacturer's repair limits. How does 49 CFR Part 830 treat this event?",
+  "choices": [
+   "Not as an accident, because small punctured holes in fabric are not substantial damage.",
+   "As an accident, because the envelope was damaged while people were on board.",
+   "As a serious incident, because any envelope damage in flight needs immediate notification."
+  ],
+  "answer": 0,
+  "explanation": "830.2 defines substantial damage as damage that adversely affects structural strength, performance or flight characteristics and would normally need major repair or replacement, and it expressly excludes small punctured holes in the skin or fabric. With no serious injury and no substantial damage, there is no accident. Envelope damage is not on the 830.5(a) serious-incident list either, and small envelope repairs can even be preventive maintenance under part 43, appendix A.",
+  "ref": "49 CFR 830.2 (Substantial damage); 49 CFR 830.5(a); 14 CFR part 43, appendix A (c)(7)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-404",
+  "area": "REG",
+  "topic": "NTSB: property damage over $25,000",
+  "stem": "On approach, a balloon's basket breaks a distribution power line. No one is injured and the balloon has only minor scrapes, but the utility estimates $40,000 to repair the line. What does 49 CFR Part 830 require of the operator?",
+  "choices": [
+   "A written report within 10 days; no immediate notification is needed for an incident.",
+   "Immediate notification to the NTSB; a written report is needed only if the NTSB asks for one.",
+   "Nothing, because there was no serious injury to anyone and no substantial damage to the balloon."
+  ],
+  "answer": 1,
+  "explanation": "830.5(a)(6) lists damage to property other than the aircraft estimated to exceed $25,000 (repair cost, or fair market value if a total loss, whichever is less) as a serious incident that requires immediate notification. Because it is an incident and not an accident, 830.15(a) requires the written report only when an authorized NTSB representative requests it. The 'nothing' answer forgets the incident list, and the 10-day answer reverses which step is mandatory.",
+  "ref": "49 CFR 830.5(a)(6); 49 CFR 830.15(a)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-405",
+  "area": "REG",
+  "topic": "NTSB: collision in flight",
+  "stem": "During a mass ascension, a climbing balloon's envelope bumps the basket of a balloon above it. Both land normally with no injuries and no substantial damage. Under 49 CFR 830.5, what is required?",
+  "choices": [
+   "Notification only to the event director, who passes it on to the FAA within 10 days.",
+   "No notification, because neither balloon was substantially damaged and no one was injured.",
+   "Immediate notification, because a collision in flight is a listed serious incident."
+  ],
+  "answer": 2,
+  "explanation": "830.5(a)(5) lists aircraft collision in flight as an incident requiring immediate notification by the most expeditious means available, whether or not there was damage or injury. Lack of injury or substantial damage only means it is not an accident. Part 830 places the duty on the operator, and the notice goes to the NTSB, not to an event official. CHECK: 830.5(a)(5) sets no damage threshold, and no NTSB guidance specific to brief balloon-to-balloon contact was found (eCFR, Federal Register and web searches, 2026-10-20); Brian to confirm the keyed answer matches how such contacts are treated in practice.",
+  "ref": "49 CFR 830.5(a)(5); 49 CFR 830.2 (Incident)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "check",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-406",
+  "area": "REG",
+  "topic": "NTSB: in-flight fire",
+  "stem": "A small fire at a leaking fuel fitting is put out in flight by closing the tank valve. No one is hurt and the only damage is a scorched hose cover. What does 49 CFR Part 830 require?",
+  "choices": [
+   "No report, because the fire was put out and caused no injury or substantial damage.",
+   "A written report within 10 days, because any fire on board counts as an accident.",
+   "Immediate notification, because an in-flight fire is a listed serious incident."
+  ],
+  "answer": 2,
+  "explanation": "830.5(a)(4) lists in-flight fire as a serious incident requiring immediate notification. It is not an accident, because no one was seriously injured and the damage was not substantial, so under 830.15(a) a written report is filed only if the NTSB requests it. Putting the fire out does not remove the notification requirement.",
+  "ref": "49 CFR 830.5(a)(4); 49 CFR 830.15(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-407",
+  "area": "REG",
+  "topic": "NTSB: overdue aircraft",
+  "stem": "A balloon on a long-distance flight is overdue and believed to have been in an accident. The operator notified the NTSB at once, but the balloon is still missing. Under 49 CFR 830.15, when is the written report due?",
+  "choices": [
+   "Within 48 hours after the NTSB is notified.",
+   "After 7 days, if the balloon is still missing.",
+   "Within 10 days after the balloon is found."
+  ],
+  "answer": 1,
+  "explanation": "830.5(b) requires immediate notification when an aircraft is overdue and believed to have been in an accident. 830.15(a) then requires the report on the NTSB form (6120.1) within 10 days after an accident, or after 7 days if an overdue aircraft is still missing. Waiting until the balloon is found is not the rule, and Part 830 sets no 48-hour report.",
+  "ref": "49 CFR 830.5(b); 49 CFR 830.15(a)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-408",
+  "area": "REG",
+  "topic": "NTSB: content of the notification",
+  "stem": "When notifying the NTSB of a balloon accident, which information does 49 CFR 830.6 list for the notification, if it is available?",
+  "choices": [
+   "The number of persons aboard, the number killed, and the number seriously injured.",
+   "The insurer's name and an estimate of the cost of repairing the balloon.",
+   "The pilot's total flight hours and the date of the pilot's most recent flight review."
+  ],
+  "answer": 0,
+  "explanation": "830.6 lists: aircraft type, nationality and registration; owner and operator; the pilot in command's name; date and time; last departure point and intended landing point; position relative to an easily defined geographical point; persons aboard, killed and seriously injured; nature of the accident, the weather and the known extent of damage; and any dangerous articles carried. Pilot experience, insurer and repair cost are not on the notification list.",
+  "ref": "49 CFR 830.6",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-409",
+  "area": "REG",
+  "topic": "NTSB: moving wreckage",
+  "stem": "After a balloon accident, the basket and envelope lie across a busy county road. Before the NTSB takes custody, the wreckage may be disturbed or moved",
+  "choices": [
+   "only after an FAA inspector at the scene has given the operator verbal approval to move the wreckage.",
+   "only to remove injured or trapped people, protect it from further damage, or protect the public.",
+   "at any time, once the pilot has photographed it and all the passengers have left the scene."
+  ],
+  "answer": 1,
+  "explanation": "830.10(b) allows wreckage to be disturbed or moved before the Board takes custody only as needed to remove persons injured or trapped, protect the wreckage from further damage, or protect the public from injury. Clearing it from a busy road fits the last reason. The rule does not depend on FAA approval, and taking photographs does not by itself permit packing the balloon away.",
+  "ref": "49 CFR 830.10(b)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-410",
+  "area": "REG",
+  "topic": "NTSB: records after moving wreckage",
+  "stem": "Wreckage from a balloon accident had to be moved before the NTSB arrived. What does 49 CFR 830.10 require?",
+  "choices": [
+   "Make sketches, notes and photographs of its original position, if possible.",
+   "Put the wreckage back in its original position, if possible, before the investigator arrives.",
+   "Send the balloon's maintenance records to the nearest FAA office within 10 days."
+  ],
+  "answer": 0,
+  "explanation": "830.10(c) requires sketches, descriptive notes and photographs, if possible, of the original positions and condition of the wreckage and any significant impact marks. 830.10(a) and (d) make the operator preserve the aircraft's records and keep all records about the accident until the Board says otherwise, so they stay with the operator, not with the FAA. Putting wreckage back would disturb it a second time.",
+  "ref": "49 CFR 830.10(a), (c), (d)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-411",
+  "area": "REG",
+  "topic": "Commercial limitation: removing it",
+  "stem": "A commercial pilot's certificate carries the limitation restricting its privileges to a balloon with an airborne heater. What does 14 CFR 61.133 require to remove it?",
+  "choices": [
+   "The required aeronautical experience in a gas balloon and an instructor's logbook endorsement.",
+   "Ten more hours as pilot in command of any balloon after the certificate was issued.",
+   "A new practical test with an examiner in a gas balloon, plus the gas balloon knowledge test."
+  ],
+  "answer": 0,
+  "explanation": "61.133(b)(2)(ii) removes the airborne-heater limitation when the pilot obtains the required aeronautical experience in a gas balloon and receives a logbook endorsement from an authorized instructor attesting to that experience and to the ability to operate a gas balloon. No new practical or knowledge test is required, and more hot air time does not count toward gas balloon experience.",
+  "ref": "14 CFR 61.133(b)(2)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-412",
+  "area": "REG",
+  "topic": "Commercial privileges: solo endorsement",
+  "stem": "A commercial balloon pilot who holds no flight instructor certificate has trained a student in a hot air balloon. May this pilot endorse the student's logbook for solo flight?",
+  "choices": [
+   "Yes, but only after a designated pilot examiner has countersigned the endorsement.",
+   "No; only a certificated flight instructor may endorse a student pilot for a first solo flight.",
+   "Yes; 61.133 lets a commercial balloon pilot endorse a logbook for solo privileges in a balloon."
+  ],
+  "answer": 2,
+  "explanation": "61.133(a)(2)(ii) lets a commercial pilot with a lighter-than-air balloon rating give training for a certificate or rating, endorse an applicant for a balloon certificate, and endorse a logbook for solo operating privileges in a balloon. The FAA issues no flight instructor rating for balloons (61.5(c)), so this privilege comes with the commercial certificate itself. No examiner countersignature is required.",
+  "ref": "14 CFR 61.133(a)(2)(ii)(A)-(C); 14 CFR 61.5(c)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-413",
+  "area": "REG",
+  "topic": "Medical: paid flight with no passengers",
+  "stem": "A company pays a commercial balloon pilot to fly its logo balloon over a fair. The pilot will be the only person aboard. Which medical certificate does 14 CFR 61.23 require?",
+  "choices": [
+   "At least a second-class medical certificate.",
+   "None, because no passengers or property are carried for hire.",
+   "At least a third-class medical certificate."
+  ],
+  "answer": 0,
+  "explanation": "61.23(a)(2)(iii) requires at least a second-class medical when exercising the privileges of a commercial certificate with a balloon class rating for compensation or hire. Acting as pilot in command for hire is a commercial privilege under 61.133(a)(1)(ii) even with no one else aboard. The exception that matters here is giving flight training (61.23(b)(5)), and a third-class medical does not meet the commercial requirement.",
+  "ref": "14 CFR 61.23(a)(2)(iii), (b)(5); 14 CFR 61.133(a)(1)(ii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-414",
+  "area": "REG",
+  "topic": "Medical: private flight by a commercial pilot",
+  "stem": "A commercial balloon pilot whose medical certificate has expired takes two friends on a flight. Nobody pays anything or shares any cost. What medical certificate is required?",
+  "choices": [
+   "A third-class medical, because the pilot is carrying passengers.",
+   "None; no medical is required to exercise private privileges in a balloon.",
+   "A second-class medical, because the pilot holds a commercial certificate."
+  ],
+  "answer": 1,
+  "explanation": "61.23(b)(4) and 61.3(c)(2)(vi)(A) excuse a pilot with a balloon class rating from holding a medical certificate while exercising private pilot privileges in a balloon. Holding a commercial certificate does not oblige the pilot to use it; the second-class requirement applies only when commercial balloon privileges are used for compensation or hire. Carrying passengers alone does not trigger any medical requirement in a balloon.",
+  "ref": "14 CFR 61.23(b)(4); 14 CFR 61.3(c)(2)(vi)(A)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-415",
+  "area": "REG",
+  "topic": "Medical: after the 12-month limit",
+  "stem": "A commercial balloon pilot's second-class medical certificate has passed its 12-month limit for commercial privileges. Which paid flight may the pilot still conduct?",
+  "choices": [
+   "A sunrise ride for paying passengers, if the pilot feels fit to fly.",
+   "Flight training for a student working toward a balloon rating.",
+   "A paid passenger ride, since the certificate runs 24 months after age 40."
+  ],
+  "answer": 1,
+  "explanation": "61.23(b)(5) and 61.3(c)(2)(vi)(B) require no medical certificate when a commercial balloon pilot gives flight training under 61.133(a)(2)(ii). Carrying passengers for hire needs a second-class medical (61.23(a)(2)(iii)), and under 61.23(d) a second-class used for commercial privileges lasts 12 calendar months at any age; the 24-month figure applies only to lower-level privileges at age 40 or older. Feeling fit does not substitute for the certificate.",
+  "ref": "14 CFR 61.23(a)(2)(iii), (b)(5), (d); 14 CFR 61.3(c)(2)(vi)(B)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-416",
+  "area": "REG",
+  "topic": "Medical: student pilot in a balloon",
+  "stem": "A 15-year-old student pilot is training for a private pilot certificate with a balloon rating. Which medical certificate must the student hold to fly solo?",
+  "choices": [
+   "None; a student seeking a balloon rating is exempt from holding one.",
+   "A U.S. driver's license, used in place of a medical certificate.",
+   "A third-class medical certificate, issued before the first solo flight."
+  ],
+  "answer": 0,
+  "explanation": "61.3(c)(2)(i) excuses a person exercising student pilot privileges while seeking a balloon class rating from holding a medical certificate. The driver's-license alternative in 61.3(c)(2)(ii) is for students seeking sport pilot privileges in aircraft other than gliders or balloons. A third-class medical is the usual requirement for airplane students, not balloon students.",
+  "ref": "14 CFR 61.3(c)(2)(i)-(ii)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-417",
+  "area": "REG",
+  "topic": "Recent experience: regaining currency",
+  "stem": "A commercial balloon pilot has not flown in 4 months and has a paying passenger flight next week. How can the pilot meet 14 CFR 61.57(a) before then?",
+  "choices": [
+   "Make three takeoffs and landings as sole manipulator, with no passengers aboard.",
+   "Complete a flight review, which takes the place of the takeoffs and landings.",
+   "Fly the passenger flight as planned, since one landing with them aboard restores currency."
+  ],
+  "answer": 0,
+  "explanation": "61.57(a)(1) requires three takeoffs and three landings within the preceding 90 days, as sole manipulator, in the same category and class, before carrying persons. 61.57(a)(2) lets a pilot who is not current act as pilot in command to regain currency under day VFR with no persons or property aboard other than those needed for the flight. A flight review (61.56) is a separate requirement; the instructor may combine the two, but the review alone does not supply the three takeoffs and landings.",
+  "ref": "14 CFR 61.57(a)(1)-(2); 14 CFR 61.56(h)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-418",
+  "area": "REG",
+  "topic": "Recent experience: predawn launch",
+  "stem": "Sunrise is at 0640. A commercial balloon pilot plans to launch with passengers at 0610. Which recent flight experience does 14 CFR 61.57 require?",
+  "choices": [
+   "Three takeoffs and landings in 90 days; the night rule does not apply then.",
+   "Three takeoffs and landings within the preceding 6 calendar months.",
+   "Three full-stop takeoffs and landings at night within the preceding 90 days."
+  ],
+  "answer": 0,
+  "explanation": "61.57(b) applies only to flights carrying persons between 1 hour after sunset and 1 hour before sunrise. A 0610 launch is 30 minutes before sunrise, outside that period, so only the 61.57(a) daytime requirement applies. The 6-calendar-month look-back belongs to instrument currency. Note that a separate rule, 91.209, still requires lighted position lights before sunrise.",
+  "ref": "14 CFR 61.57(a)-(b); 14 CFR 91.209(a)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-419",
+  "area": "REG",
+  "topic": "Flight review: minimum content",
+  "stem": "Which combination meets the minimum content of a flight review under 14 CFR 61.56(a) for a balloon pilot?",
+  "choices": [
+   "Three instructional flights to a set altitude and a review of the balloon's flight manual.",
+   "2 hours of ground training covering parts 61 and 91, with no flight required for balloons.",
+   "1 hour of flight training and 1 hour of ground training, including a review of part 91 rules."
+  ],
+  "answer": 2,
+  "explanation": "61.56(a) requires at least 1 hour of flight training and 1 hour of ground training, including a review of the current part 91 general operating and flight rules and the maneuvers and procedures the reviewer considers necessary. The three-flight substitute in 61.56(b) is for glider pilots only, and no regulation lets a balloon pilot skip the flight portion.",
+  "ref": "14 CFR 61.56(a)-(b)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-420",
+  "area": "REG",
+  "topic": "Flight review: practical test substitutes",
+  "stem": "A private balloon pilot passes the commercial balloon practical test on March 3, 2025, and has had no flight review since. Without further training, through what date may the pilot act as pilot in command?",
+  "choices": [
+   "March 3, 2027.",
+   "March 31, 2027.",
+   "March 31, 2026."
+  ],
+  "answer": 1,
+  "explanation": "61.56(d)(1) says a pilot who has passed a practical test for a pilot certificate or rating within the review period need not accomplish a flight review. The period in 61.56(c) runs from the beginning of the 24th calendar month before the month of the flight, so a March 2025 test is good through the end of March 2027. Counting to the exact day ignores the calendar-month rule, and 12 months is not the flight review interval.",
+  "ref": "14 CFR 61.56(c), (d)(1)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-421",
+  "area": "REG",
+  "topic": "Flight review: in another category",
+  "stem": "A pilot holds a commercial certificate with airplane single-engine land and balloon ratings. Her only flight review in the last 24 months was in an airplane. May she act as pilot in command of a balloon?",
+  "choices": [
+   "Yes, but only on balloon flights that carry no passengers for hire.",
+   "Yes; a flight review in any aircraft for which she is rated satisfies 61.56.",
+   "No; she needs a separate flight review in a balloon, a different category."
+  ],
+  "answer": 1,
+  "explanation": "61.56(c)(1) requires a flight review 'given in an aircraft for which that pilot is rated'; it does not have to be in the category being flown. Recent experience is different: the 61.57 takeoffs and landings must be in the same category and class, so she still needs three balloon takeoffs and landings within 90 days to carry passengers. The flight review rule makes no distinction for flights for hire.",
+  "ref": "14 CFR 61.56(c)(1); 14 CFR 61.57(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-422",
+  "area": "REG",
+  "topic": "Logbooks: required entries",
+  "stem": "A balloon pilot logs a flight to count toward recent flight experience. Which item does 14 CFR 61.51(b) NOT require in the entry?",
+  "choices": [
+   "The names of the passengers carried.",
+   "The type and identification of the aircraft.",
+   "Where the flight departed and arrived."
+  ],
+  "answer": 0,
+  "explanation": "61.51(b)(1) requires the date, total flight time, the locations where the aircraft departed and arrived, and the type and identification of the aircraft, plus the type of pilot experience and the conditions of flight. Passenger names are not a required entry, though many ride operators keep them in separate records.",
+  "ref": "14 CFR 61.51(b)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-423",
+  "area": "REG",
+  "topic": "Logbooks: solo time",
+  "stem": "A commercial balloon applicant is making one of the solo flights 61.129(h) requires. The applicant's spouse, who is not a pilot, rides along. How may the applicant log this flight?",
+  "choices": [
+   "As solo time, because the applicant was the only pilot aboard.",
+   "As pilot-in-command time, but not as solo time.",
+   "As solo time, as long as the spouse never touched the controls."
+  ],
+  "answer": 1,
+  "explanation": "61.51(d) allows solo flight time to be logged only when the pilot is the sole occupant of the aircraft (the only exception is a student acting as pilot in command of an airship that requires more than one pilot). A rated private pilot who is sole manipulator may log the flight as pilot-in-command time under 61.51(e)(1)(i), but it will not count as one of the required solo flights.",
+  "ref": "14 CFR 61.51(d), (e)(1)(i); 14 CFR 61.129(h)(4)(ii)(B)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-424",
+  "area": "REG",
+  "topic": "Certificate inspection",
+  "stem": "After a balloon lands in a field, both the landowner and a county sheriff's deputy ask to see the pilot's certificate. Under 14 CFR 61.3(l), the pilot must present it, with photo ID, to",
+  "choices": [
+   "both of them, since anyone affected by the landing may ask to see it.",
+   "the deputy, since any law enforcement officer may ask to see it.",
+   "neither of them, since only an FAA inspector may ask to inspect it."
+  ],
+  "answer": 1,
+  "explanation": "61.3(l) requires a certificate holder to present the certificate and photo ID on request from the Administrator, an authorized NTSB representative, any federal, state, or local law enforcement officer, or an authorized TSA representative. A landowner is not on that list, although showing it as a courtesy may help landowner relations. The FAA is only one of the four.",
+  "ref": "14 CFR 61.3(l)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-425",
+  "area": "REG",
+  "topic": "Change of address",
+  "stem": "A commercial balloon pilot moves to a new permanent mailing address. Under 14 CFR 61.60, how long may the pilot keep exercising certificate privileges without notifying the FAA Airman Certification Branch in writing?",
+  "choices": [
+   "30 days.",
+   "60 days.",
+   "90 days."
+  ],
+  "answer": 0,
+  "explanation": "61.60 says a certificate holder who changes permanent mailing address may not exercise the certificate's privileges after 30 days from the change unless the FAA Airman Certification Branch has been notified in writing. If the new mailing address is a post office box, the pilot must also give a current residential address.",
+  "ref": "14 CFR 61.60",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-426",
+  "area": "REG",
+  "topic": "Student pilot: minimum age",
+  "stem": "What is the minimum age to be eligible for a student pilot certificate for the operation of a balloon?",
+  "choices": [
+   "14 years.",
+   "16 years.",
+   "17 years."
+  ],
+  "answer": 0,
+  "explanation": "61.83(b) sets the minimum student pilot age at 14 for a glider or balloon. 16 is the student minimum for other aircraft (61.83(a)) and also the minimum for a private balloon certificate (61.103(b)); 17 is the private minimum for aircraft other than gliders and balloons.",
+  "ref": "14 CFR 61.83(a)-(b); 14 CFR 61.103(a)-(b)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-427",
+  "area": "REG",
+  "topic": "Student pilot: solo endorsement currency",
+  "stem": "A student pilot's solo endorsement for a specific make and model of balloon was given 100 days ago and has not been updated. May the student fly solo today?",
+  "choices": [
+   "No; it must be from an instructor who gave the training within the last 90 days.",
+   "Yes; a solo endorsement remains valid until the student takes the private practical test.",
+   "Yes, as long as the student has flown solo at least once in the last 90 days."
+  ],
+  "answer": 0,
+  "explanation": "61.87(n) prohibits solo flight unless the student has an endorsement for the specific make and model from an instructor who gave the training within the 90 days preceding the flight, and 61.87(p)(4) keeps solo privileges current only if an instructor updates the logbook every 90 days. Recent solo flights do not extend the endorsement, and it does not run until the checkride.",
+  "ref": "14 CFR 61.87(n), (p)(4)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-428",
+  "area": "REG",
+  "topic": "Student pilot: passengers",
+  "stem": "A student pilot with a current solo endorsement for a hot air balloon wants to take a friend along on a practice flight. Under 14 CFR 61.89, this is",
+  "choices": [
+   "permitted, if the friend signs a waiver and pays no part of the cost of the flight.",
+   "permitted, if the friend also holds at least a student pilot certificate.",
+   "not permitted; a student pilot may not act as pilot in command with a passenger."
+  ],
+  "answer": 2,
+  "explanation": "61.89(a)(1) prohibits a student pilot from acting as pilot in command of an aircraft carrying a passenger, with no exception for waivers, cost sharing or another student aboard. The flight would also no longer be solo under 61.87(a), because the student would not be the sole occupant.",
+  "ref": "14 CFR 61.89(a)(1); 14 CFR 61.87(a)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-429",
+  "area": "REG",
+  "topic": "Private pilot: minimum age",
+  "stem": "What is the minimum age to be eligible for a private pilot certificate with a lighter-than-air category and balloon class rating?",
+  "choices": [
+   "14 years.",
+   "16 years.",
+   "17 years."
+  ],
+  "answer": 1,
+  "explanation": "61.103(b) sets 16 as the minimum age for a private certificate with a glider or balloon rating; 61.103(a) sets 17 for other ratings. Fourteen is the minimum age for a balloon student pilot certificate (61.83(b)), not the private certificate.",
+  "ref": "14 CFR 61.103(a)-(b); 14 CFR 61.83(b)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-430",
+  "area": "REG",
+  "topic": "Private aeronautical experience (hot air)",
+  "stem": "An applicant for a private pilot certificate trains in a hot air balloon. Under 14 CFR 61.109(h)(2), the required flight training must include at least",
+  "choices": [
+   "one solo flight and two flights of 2 hours each with an authorized instructor.",
+   "one solo flight and one controlled ascent to 2,000 feet above the launch site.",
+   "two solo flights and one controlled ascent to 3,000 feet above the launch site."
+  ],
+  "answer": 1,
+  "explanation": "61.109(h) requires 10 hours of flight training with at least six training flights; for a balloon with an airborne heater, (h)(2) adds two 1-hour training flights within 2 calendar months before the test, one solo flight, and one controlled ascent to 2,000 feet above the launch site. Two solo flights and a 3,000-foot ascent are the commercial hot air requirements (61.129(h)(4)(ii)); two 2-hour flights are the gas balloon requirement.",
+  "ref": "14 CFR 61.109(h)(1)-(2); 14 CFR 61.129(h)(4)(ii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-431",
+  "area": "REG",
+  "topic": "Commercial eligibility",
+  "stem": "Which pair of requirements does 14 CFR 61.123 set for an applicant for a commercial pilot certificate with a balloon rating?",
+  "choices": [
+   "Be at least 18 years of age and hold at least a private pilot certificate.",
+   "Be at least 18 years of age and hold a second-class medical certificate.",
+   "Be at least 16 years of age and hold at least a student pilot certificate."
+  ],
+  "answer": 0,
+  "explanation": "61.123(a) sets a minimum age of 18, and 61.123(h) requires the applicant to hold at least a private pilot certificate (or meet 61.73). A medical certificate is not an eligibility requirement; once certificated, the pilot needs a second-class medical only to fly for compensation or hire other than flight training (61.23).",
+  "ref": "14 CFR 61.123(a), (h); 14 CFR 61.23(a)(2)(iii)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-432",
+  "area": "REG",
+  "topic": "Commercial aeronautical experience: totals",
+  "stem": "Under 14 CFR 61.129(h), how much flight time as a pilot must an applicant for a commercial pilot certificate with a balloon rating log?",
+  "choices": [
+   "50 hours, including at least 35 hours as pilot in command of a balloon.",
+   "35 hours, including 20 hours in balloons and 10 flights in balloons.",
+   "20 hours, including 10 hours of flight training in balloons."
+  ],
+  "answer": 1,
+  "explanation": "61.129(h) requires at least 35 hours of flight time as a pilot, including 20 hours in balloons, 10 flights in balloons, two flights as pilot in command, and 10 hours of flight training with at least 10 training flights. The 20 and 10 figures are parts of that total, not the total itself, and there is no 35-hour pilot-in-command requirement.",
+  "ref": "14 CFR 61.129(h)(1)-(4)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-433",
+  "area": "REG",
+  "topic": "Commercial aeronautical experience: solo flights",
+  "stem": "How many solo flights in a balloon with an airborne heater must an applicant for a commercial balloon certificate log under 14 CFR 61.129(h)(4)(ii)?",
+  "choices": [
+   "One.",
+   "Two.",
+   "Ten."
+  ],
+  "answer": 1,
+  "explanation": "61.129(h)(4)(ii)(B) requires two solo flights in a balloon with an airborne heater, along with two 1-hour training flights in the 2 calendar months before the test and one controlled ascent to 3,000 feet. One solo flight is the private requirement (61.109(h)(2)(ii)), and 10 is the number of training flights and of flights in balloons.",
+  "ref": "14 CFR 61.129(h)(4)(ii); 14 CFR 61.109(h)(2)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-434",
+  "area": "REG",
+  "topic": "Airworthiness in flight (91.7)",
+  "stem": "Partway through a passenger flight, the pilot finds a fuel hose fitting leaking propane, and it cannot be stopped at the fitting. Under 14 CFR 91.7(b), the pilot must",
+  "choices": [
+   "continue as planned, since the balloon was airworthy when it launched.",
+   "discontinue the flight, since an unairworthy mechanical condition has occurred.",
+   "finish the flight, then make a maintenance record entry before the next one."
+  ],
+  "answer": 1,
+  "explanation": "91.7(b) makes the pilot in command responsible for determining whether the aircraft is in condition for safe flight and requires the pilot to discontinue the flight when unairworthy mechanical, electrical, or structural conditions occur. Being airworthy at launch does not cover a defect that develops later. In practice the pilot shuts off the tank feeding the leak and lands as soon as practical.",
+  "ref": "14 CFR 91.7(a)-(b); FAA-H-8083-11B Ch. 7 (Fuel Leak)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-435",
+  "area": "REG",
+  "topic": "Flight manual limitations (91.9)",
+  "stem": "A balloon's flight manual gives a maximum envelope temperature. On a hot, heavy day the pilot plans to exceed it briefly during the climb out. Which regulation does this violate?",
+  "choices": [
+   "Only 14 CFR 91.13, and only if the envelope is damaged as a result.",
+   "14 CFR 91.9, which requires operating within the flight manual's limits.",
+   "None, as brief excursions over the limit are allowed when the balloon is heavy."
+  ],
+  "answer": 1,
+  "explanation": "91.9(a) prohibits operating a civil aircraft without complying with the operating limitations in its approved flight manual, markings and placards, or as otherwise prescribed by the certificating authority. For a balloon, 14 CFR 31.81 requires each operating limitation to be established and furnished in a Balloon Flight Manual or on a placard, and the maximum envelope temperature is one of them. No rule permits a brief excursion for a heavy load; the fix is a lighter load or a cooler day. The violation exists whether or not damage results.",
+  "ref": "14 CFR 91.9(a); 14 CFR 31.81",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-436",
+  "area": "REG",
+  "topic": "Minimum altitudes: sparsely populated area",
+  "stem": "A balloon crossing open farmland, not intending to land, approaches an isolated farmhouse. Under 14 CFR 91.119(c), how close may it pass to the house?",
+  "choices": [
+   "No closer than 500 feet in any direction.",
+   "Any distance, if it does not pass overhead.",
+   "No lower than 1,000 feet above the roof."
+  ],
+  "answer": 0,
+  "explanation": "Over sparsely populated areas, 91.119(c) says the aircraft may not be operated closer than 500 feet to any person, vessel, vehicle, or structure, so the 500 feet is a distance in any direction, not just height. The 1,000-foot rule applies over congested areas and open-air assemblies (91.119(b)). The handbook pictures it as a 1,000-foot-wide clear hemisphere over the building.",
+  "ref": "14 CFR 91.119(c); FAA-H-8083-11B Ch. 7 (Minimum Safe Altitude Requirements, Fig. 7-9)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-437",
+  "area": "REG",
+  "topic": "Required documents: display",
+  "stem": "Which aircraft document must be displayed in a balloon so that it is legible to the passengers or crew?",
+  "choices": [
+   "The registration certificate.",
+   "The airworthiness certificate.",
+   "The latest annual inspection record."
+  ],
+  "answer": 1,
+  "explanation": "91.203(b) requires the airworthiness certificate to be displayed at the cabin or cockpit entrance so that it is legible to passengers or crew. The registration certificate must be aboard (91.203(a)(2)) but need not be displayed. Inspection records are kept by the owner under 91.417, not carried in the basket.",
+  "ref": "14 CFR 91.203(a)-(b); 14 CFR 91.417; FAA-H-8083-11B Ch. 2 (Aircraft Documents)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-438",
+  "area": "REG",
+  "topic": "Instrument rule (91.205) and balloons",
+  "stem": "Why doesn't 14 CFR 91.205 set the required instrument list for a hot air balloon?",
+  "choices": [
+   "It covers only powered aircraft; part 31 and the type design set a balloon's instruments.",
+   "It exempts balloons in day VFR, so their instruments are required only at night.",
+   "It applies only to flights for hire, so balloon flights not for hire need no instruments."
+  ],
+  "answer": 0,
+  "explanation": "91.205(a) applies to powered civil aircraft with standard airworthiness certificates, and 14 CFR 1.1 defines a balloon as not engine driven. A balloon's required instruments come from its type design under 14 CFR 31.85: an altimeter, a rate of climb indicator, and, for a hot air balloon, a fuel quantity gauge and an envelope temperature indicator, whatever the purpose of the flight. 91.205 contains no day-VFR balloon exemption.",
+  "ref": "14 CFR 91.205(a); 14 CFR 1.1 (Balloon); 14 CFR 31.85",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-439",
+  "area": "REG",
+  "topic": "Emergency locator transmitter",
+  "stem": "A balloon operator carries passengers for hire. Does 14 CFR 91.207 require the balloon to carry an emergency locator transmitter?",
+  "choices": [
+   "Yes; any aircraft carrying passengers for hire must have an automatic ELT.",
+   "Yes, but only on flights more than 50 nautical miles from the launch site.",
+   "No; 91.207 applies only to airplanes, so a balloon need not carry one."
+  ],
+  "answer": 2,
+  "explanation": "91.207(a) applies to U.S.-registered civil airplanes, so a balloon is not required to carry an ELT, whether or not it flies for hire. The 50-nautical-mile figure is one of the 91.207(f) exceptions for airplanes on local training flights, not a balloon rule.",
+  "ref": "14 CFR 91.207(a), (f)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-440",
+  "area": "REG",
+  "topic": "Aircraft lights before sunrise",
+  "stem": "Sunrise is at 0640. A balloon with passengers lifts off at 0610. What does 14 CFR 91.209 require?",
+  "choices": [
+   "An anticollision light only, since balloons need no position lights.",
+   "Lighted position lights, because the flight is before sunrise.",
+   "Nothing, because the flight is within morning civil twilight."
+  ],
+  "answer": 1,
+  "explanation": "91.209(a)(1) prohibits operating an aircraft from sunset to sunrise unless it has lighted position lights. Civil twilight matters for the 14 CFR 1.1 definition of night used in logging and currency, not for 91.209. The anticollision light rule (91.209(b)) applies only to aircraft equipped with that system, and nothing in 91.209 exempts balloons.",
+  "ref": "14 CFR 91.209(a)-(b); 14 CFR 1.1 (Night)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-441",
+  "area": "REG",
+  "topic": "Supplemental oxygen",
+  "stem": "A balloon with one pilot and one passenger climbs to 14,500 feet MSL and stays there for 20 minutes. Under 14 CFR 91.211, what is required while it is above 14,000 feet?",
+  "choices": [
+   "Both occupants must use oxygen, because a passenger is above 12,500 feet.",
+   "Nothing, because the time above 14,000 feet is less than 30 minutes.",
+   "The pilot must use oxygen; it need not be provided to the passenger."
+  ],
+  "answer": 2,
+  "explanation": "91.211(a)(2) requires the required flight crew to use supplemental oxygen for the entire time above 14,000 feet MSL. The 30-minute allowance applies only between 12,500 and 14,000 feet (91.211(a)(1)), and passengers must be provided with oxygen only above 15,000 feet (91.211(a)(3)). For a balloon the required crew is the pilot.",
+  "ref": "14 CFR 91.211(a)(1)-(3)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-442",
+  "area": "REG",
+  "topic": "Inspections: instruction for hire",
+  "stem": "A commercial balloon pilot gives paid flight training in a balloon the pilot owns and provides. No passengers are carried for hire. Which inspections does 14 CFR 91.409 require?",
+  "choices": [
+   "Only an annual inspection, since no passengers fly for hire.",
+   "Only a 100-hour inspection, which replaces the annual.",
+   "An annual, plus a 100-hour (or annual) within every 100 hours."
+  ],
+  "answer": 2,
+  "explanation": "91.409(a) requires an annual inspection for every aircraft. 91.409(b) adds the 100-hour limit both for carrying any person other than a crewmember for hire and for giving flight instruction for hire in an aircraft the instructor provides, so paid training in the pilot's own balloon triggers it. A 100-hour inspection replaces the annual only if a person authorized to do annuals performs it and records it as an annual.",
+  "ref": "14 CFR 91.409(a)-(b); FAA-H-8083-11B Ch. 2 (100-Hour Inspection)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-443",
+  "area": "REG",
+  "topic": "Maintenance records: AD status",
+  "stem": "A balloon's burner is subject to a recurring airworthiness directive. Under 14 CFR 91.417(a)(2)(v), the owner's record of AD status must include",
+  "choices": [
+   "the AD number and revision date, method of compliance, and next due time.",
+   "only the date of first compliance and the mechanic's signature.",
+   "a copy of the AD itself, with no further entries after the first compliance."
+  ],
+  "answer": 0,
+  "explanation": "91.417(a)(2)(v) requires the current status of applicable ADs, including for each the method of compliance, the AD number and revision date, and, for a recurring AD, the time and date the next action is required. These records are kept and transferred with the aircraft when it is sold (91.417(b)(2)). A recurring AD needs a fresh entry every time it is done.",
+  "ref": "14 CFR 91.417(a)(2)(v), (b)(2)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-444",
+  "area": "REG",
+  "topic": "Airworthiness directives: legal effect",
+  "stem": "An owner learns that an airworthiness directive applies to his balloon's fuel tanks, and its compliance time has passed. Which statement is correct?",
+  "choices": [
+   "Operating the balloon before complying with the AD violates 14 CFR part 39.",
+   "The mechanic who did the last annual is responsible, so the owner may still fly.",
+   "ADs are advisory for privately flown balloons, so he may fly until the annual."
+  ],
+  "answer": 0,
+  "explanation": "39.3 defines ADs as legally enforceable rules that apply to aircraft and appliances, and 39.7 makes anyone who operates a product that does not meet an applicable AD in violation. 91.403(a) puts the primary responsibility for airworthiness, including part 39 compliance, on the owner or operator, not the mechanic. ADs bind private and commercial operators alike.",
+  "ref": "14 CFR 39.3, 39.7; 14 CFR 91.403(a)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-445",
+  "area": "REG",
+  "topic": "Preventive maintenance: envelope repairs",
+  "stem": "Which envelope repair may a pilot who owns the balloon perform as preventive maintenance under 14 CFR part 43?",
+  "choices": [
+   "Replacing a damaged vertical load tape, as long as the manufacturer's manual is followed.",
+   "Replacing a complete envelope panel, if the repair is checked at the next annual.",
+   "A small fabric repair, per the manufacturer's instructions, needing no load tape work."
+  ],
+  "answer": 2,
+  "explanation": "43.3(g) lets a certificated pilot perform preventive maintenance on an aircraft the pilot owns or operates that is not used under part 121, 129 or 135. Part 43, appendix A (c)(7), includes small fabric repairs to balloon envelopes, as defined in and done per the manufacturer's instructions, that do not require load tape repair or replacement. Load tape work and panel replacement fall outside preventive maintenance and go to a qualified repair station or mechanic.",
+  "ref": "14 CFR 43.3(g); 14 CFR part 43, appendix A (c)(7)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-446",
+  "area": "REG",
+  "topic": "Preventive maintenance: return to service",
+  "stem": "A private balloon pilot cleans the burner's pilot and main nozzles, per the manufacturer's instructions, on a balloon she owns. What else does part 43 require?",
+  "choices": [
+   "An inspection of the work by an A&P mechanic before the balloon flies again.",
+   "Nothing, since preventive maintenance done by a pilot need not be recorded.",
+   "A record entry, signed by her, approving the work for return to service."
+  ],
+  "answer": 2,
+  "explanation": "Cleaning balloon burner pilot and main nozzles is preventive maintenance (part 43, appendix A (c)(25)). 43.7(f) lets a person holding at least a private pilot certificate approve the aircraft for return to service after preventive maintenance under 43.3(g), and 43.9(a) requires an entry with a description of the work, the date, and the signature, certificate number and kind of certificate of the person approving it. No mechanic's inspection is required.",
+  "ref": "14 CFR 43.3(g), 43.7(f), 43.9(a); 14 CFR part 43, appendix A (c)(25)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-447",
+  "area": "REG",
+  "topic": "Preventive maintenance: interchanging components",
+  "stem": "A pilot wants to fly his envelope with a friend's basket and burner. Under 14 CFR part 43, appendix A, he may do this interchange himself as preventive maintenance only if",
+  "choices": [
+   "an A&P mechanic is present to supervise the change and sign the record afterward.",
+   "both balloons come from the same manufacturer and have envelopes of a similar size.",
+   "the basket and burner are listed as interchangeable in the type certificate data."
+  ],
+  "answer": 2,
+  "explanation": "Appendix A (c)(27) allows the interchange of balloon baskets and burners on envelopes when they are designated as interchangeable in the balloon type certificate data and are specifically designed for quick removal and installation. Same brand or similar size is not the test. Because it is preventive maintenance, the pilot can approve it for return to service himself (43.7(f)).",
+  "ref": "14 CFR part 43, appendix A (c)(27); 14 CFR 43.7(f)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-448",
+  "area": "REG",
+  "topic": "Letters of Authorization and drug testing (91.147)",
+  "stem": "As 14 CFR 91.147 is currently written, which operator must hold a Letter of Authorization and register a part 120 drug and alcohol testing program?",
+  "choices": [
+   "Any pilot who flies passengers at a charity fundraising event, in any kind of aircraft.",
+   "A hot air balloon ride company that carries paying passengers on local sunrise flights.",
+   "A nonstop sightseeing operator for hire in an airplane, powered-lift or rotorcraft."
+  ],
+  "answer": 2,
+  "explanation": "91.147(a) defines the Operator as one conducting nonstop passenger-carrying flights for compensation or hire in an airplane, powered-lift, or rotorcraft that begin and end at the same airport within 25 statute miles; 91.147(b) then requires part 136 subpart A compliance, a part 120 program and a Letter of Authorization. Balloons are not in that definition, and part 136 subpart A states that it does not apply to balloons (136.1(c)). Charitable event flights under 91.146 are expressly exempt from part 120 and are also limited to airplanes, powered-lift and rotorcraft.",
+  "ref": "14 CFR 91.147(a)-(b); 14 CFR 120.1(a); 14 CFR 136.1(c); 14 CFR 91.146(b)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-449",
+  "area": "REG",
+  "topic": "Careless or reckless operation",
+  "stem": "A pilot drops to 50 feet to wave at a backyard party, then climbs away. Apart from 91.119, which regulation does this most likely violate?",
+  "choices": [
+   "14 CFR 91.103, because the low pass was not planned before the flight.",
+   "14 CFR 91.3, by deviating from a rule when there was no emergency.",
+   "14 CFR 91.13, careless or reckless operation that endangers others."
+  ],
+  "answer": 2,
+  "explanation": "91.13(a) prohibits operating an aircraft in a careless or reckless manner so as to endanger the life or property of another. The handbook calls flying low over a gathering to give people a thrill 'buzzing', which is illegal and can be hazardous. 91.3 gives the pilot authority to deviate in an emergency; it is not itself the rule broken. 91.103 concerns preflight information, not maneuvers flown in flight.",
+  "ref": "14 CFR 91.13(a); 14 CFR 91.119(b); FAA-H-8083-11B Ch. 7 (Contour Flying Cautions)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-450",
+  "area": "REG",
+  "topic": "Preflight action (91.103)",
+  "stem": "Before a balloon flight that will not be in the vicinity of an airport, 14 CFR 91.103 requires the pilot in command to become familiar with",
+  "choices": [
+   "the names and weights of all passengers, written on a manifest left with the ground crew.",
+   "weather and forecasts, fuel requirements, and alternatives if the flight cannot be completed.",
+   "runway lengths and takeoff distance data for the public-use airport closest to the launch site."
+  ],
+  "answer": 1,
+  "explanation": "91.103(a) requires, for a flight not in the vicinity of an airport, weather reports and forecasts, fuel requirements, alternatives available if the planned flight cannot be completed, and any known ATC traffic delays. The runway information in 91.103(b) concerns airports of intended use, which a field launch does not involve. Part 91 requires no passenger manifest, though weights matter for the pilot's own load calculation.",
+  "ref": "14 CFR 91.103(a)-(b)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-401",
+  "area": "OPS",
+  "topic": "Cold inflation: how full",
+  "stem": "During cold inflation with the fan, at a minimum how full of ambient air does the Balloon Flying Handbook say the envelope should be before the pilot begins hot inflation?",
+  "choices": [
+   "About 25 percent, enough to lift the mouth.",
+   "About 50 percent, so the burner does the rest.",
+   "About 75 percent, and fuller is better."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says to inflate as full as possible, and at a minimum to about 75 percent full of cold air. A well-packed envelope gives a tighter mouth, which keeps fabric away from the flame, and a round, tight envelope is less affected by a light wind. Starting the burner with a quarter- or half-full envelope invites burned fabric at the mouth.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Inflator Fan Placement; The Inflation)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-402",
+  "area": "OPS",
+  "topic": "Hot inflation: mouth crew",
+  "stem": "As hot inflation begins, what should the two crewmembers holding the envelope mouth be doing?",
+  "choices": [
+   "Standing clear of the mouth until the envelope rises, to stay away from the flame.",
+   "Holding the mouth partly closed while facing the burner, so they can watch the flame.",
+   "Holding the mouth as wide and tall as possible while facing away from the burner."
+  ],
+  "answer": 2,
+  "explanation": "The handbook has the mouth crew hold the mouth open as wide and tall as possible to keep fabric away from the flame, facing away from the burner. Before the first burn the pilot makes eye contact with each of them to confirm they are ready. A partly closed mouth puts fabric in the flame path, and letting go of the mouth before the envelope stands up leaves it to sag into the flame.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Inflation)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-403",
+  "area": "OPS",
+  "topic": "Hot inflation: the first burn",
+  "stem": "According to the Balloon Flying Handbook, why should the first burn of a hot inflation be a short one?",
+  "choices": [
+   "To confirm the flame direction and crew readiness, limiting damage if they flinch.",
+   "To warm the coil, because a cold coil sends unvaporized liquid into the mouth.",
+   "To test the fan, which must be kept at full throttle until the envelope stands."
+  ],
+  "answer": 0,
+  "explanation": "The handbook says the first burn should be short to confirm the flame's direction and the mouth crew's readiness; if they are startled and drop the fabric, a short burn prevents or limits damage. Inflation then continues with standard burns and 2 to 3 second pauses. The fan is throttled back to about one-half or two-thirds before hot inflation, not held at full throttle, and coil warm-up is not the handbook's reason.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Inflation)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-404",
+  "area": "OPS",
+  "topic": "Inflation fan placement",
+  "stem": "The crew pins short strips of tape around the lower edge of the mouth and runs the fan with the mouth held open. Several strips flutter back out of the mouth. What does this show?",
+  "choices": [
+   "The envelope holds enough cold air for the pilot to begin burning.",
+   "Air is coming back out of the envelope, so the fan should be repositioned.",
+   "The fan is well placed, since the tape shows strong airflow at the mouth."
+  ],
+  "answer": 1,
+  "explanation": "The handbook describes this test: if every strip points into the envelope, the fan is well placed; strips fluttering back out mean air is entering and then escaping, so the fan should be adjusted to seal the throat. The fan sits to the side of the basket, aimed into the mouth and far enough back to seal it. The test is done without the burner, and it says nothing about how full the envelope is.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Inflator Fan Placement, Fig. 6-14)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-405",
+  "area": "OPS",
+  "topic": "Envelope structure: load tapes",
+  "stem": "In a hot air balloon envelope, what carries the basket's load up to the top of the envelope?",
+  "choices": [
+   "The load tapes, which run up the gores to the load ring at the top center.",
+   "The deflation panel, which is pulled tight against the port by the load.",
+   "The fabric panels, which are sewn together so that they share the load evenly."
+  ],
+  "answer": 0,
+  "explanation": "The handbook describes cables (galvanized, stainless steel or Kevlar) that transfer the basket load to sewn-in horizontal and vertical load tapes, which run continuously to the load ring at the top center of the envelope. The fabric gores fill the spaces between tapes and hold the hot air; they are not the main load path. That is why small fabric repairs can be preventive maintenance while load tape repairs cannot.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Envelope, Fig. 2-3); 14 CFR part 43, appendix A (c)(7)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-406",
+  "area": "OPS",
+  "topic": "Crown line technique",
+  "stem": "During hot inflation, what is the correct technique for the crewmember on the crown line?",
+  "choices": [
+   "Tie the line to the chase vehicle so the envelope cannot rise until the pilot is ready.",
+   "Wrap the line once around a gloved hand and hold the top down until the envelope is upright.",
+   "Lean away and use body weight, letting the line draw them toward the basket as it rises."
+  ],
+  "answer": 2,
+  "explanation": "The handbook has the crown line crewmember hold the end of the line, lean away from the envelope, and use body weight to steady it, letting the line pull them toward the basket as the envelope rises and releasing tension slowly once it is vertical. The sample crew briefing warns never to wrap a line around a hand, arm, or body. Tying the top to a vehicle prevents a controlled stand-up rather than steadying it.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Crown Line; The Crew Briefing)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-407",
+  "area": "OPS",
+  "topic": "Envelope temperature limit and ceiling",
+  "stem": "With a given load on a given day, what sets the highest altitude a hot air balloon can reach?",
+  "choices": [
+   "The altitude where the temperature needed for equilibrium reaches the envelope's limit.",
+   "The altitude where the burner's fuel pressure falls below the minimum the pilot light needs.",
+   "The altitude where the tank pressure equals the pressure of the outside air."
+  ],
+  "answer": 0,
+  "explanation": "Gross lift falls as the balloon climbs, so each higher altitude needs a hotter envelope. The handbook's performance chart finds the maximum altitude by extending the line to the maximum envelope temperature (250°F, the maximum continuous operating temperature for most balloons). Your own balloon's limit is whatever its flight manual states. Tank pressure depends on propane temperature, not altitude, and is far above outside air pressure.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning, Fig. 3-13)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-408",
+  "area": "OPS",
+  "topic": "Double crown lines",
+  "stem": "A pilot expects gusty winds during an evening glow and decides to use two crown lines. How should they be arranged for the best stability?",
+  "choices": [
+   "Side by side directly downwind of the envelope, so both crew pull in the same direction.",
+   "Forming an angle of 90° or more, with the crew walking them directly upwind on stand-up.",
+   "One tied to the basket and the other held directly upwind of the top of the envelope."
+  ],
+  "answer": 1,
+  "explanation": "The handbook's Figure 6-6 says double crown lines forming a 90° or wider angle give the greatest inflation stability, provided the crew walk them directly upwind on stand-up. Lines held side by side add no sideways control. A line tied to the basket forms a large loop that can snag; the handbook says such a line needs a light breakaway tie.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Crown Line, Fig. 6-6)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-409",
+  "area": "OPS",
+  "topic": "Quick-release restraint",
+  "stem": "How should the quick-release (safety restraint) line be rigged for inflation?",
+  "choices": [
+   "With several feet of slack, so the balloon can move in gusts without a sudden load.",
+   "To any convenient point on the burner frame, as long as the knot itself is secure.",
+   "With little or no slack, attached by the method the balloon manufacturer specifies."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says the restraint should be secured with little or no slack, to prevent damage or injury if it breaks or releases early, and tied off by the method each manufacturer specifies. Slack lets the balloon build up speed and then shock-load the line. Baskets, suspensions, load plates and burner supports have been destroyed by improper tie-off.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Safety Restraint/Quick-Release); Ch. 2 (Quick/Safety Release)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-410",
+  "area": "OPS",
+  "topic": "Standing but not ready to fly",
+  "stem": "Just after inflation, a balloon is upright but well short of equilibrium when a gust starts pushing it across the field. What should the pilot do?",
+  "choices": [
+   "Keep burning while the ground crew drags the basket back into its position.",
+   "Launch at once with a long burn, since the wind will add false lift.",
+   "Deflate the balloon, since it is not close enough to equilibrium to fly."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says a balloon that is standing but not ready to fly leaves the pilot only one option if it starts to move horizontally: deflate. Only when the balloon is 5 or 10 seconds of heat from lifting off does the pilot have the choice of deflating or launching. False lift from wind vanishes once the balloon moves with the air, and crew trying to hold a moving balloon on the ground risk injury.",
+  "ref": "FAA-H-8083-11B Ch. 6 (The Inflation; Uncommanded (False) Lift)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-411",
+  "area": "OPS",
+  "topic": "Burner check: parallel tanks",
+  "stem": "A single-burner balloon has three tanks plumbed into a common fuel line (in parallel). During the burner check, how should the tanks be opened?",
+  "choices": [
+   "Two at a time, keeping the third closed as a reserve.",
+   "One at a time, closing each before opening the next.",
+   "All three at once, to check the full system pressure."
+  ],
+  "answer": 1,
+  "explanation": "The handbook's example checks each tank in turn, closing the first before opening the second, then tests the backup system. It warns that all tanks in a parallel-plumbed system should never be open at once, because a fuel leak or ruptured hose would then be fed by every tank; it calls this an extremely hazardous practice. Two open tanks still double the fuel feeding a leak.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Burner Check)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-412",
+  "area": "OPS",
+  "topic": "Fuel fittings",
+  "stem": "While connecting the fuel hoses, a pilot finds a fitting will not stop leaking until it is forced tight with a wrench. What does this most likely indicate?",
+  "choices": [
+   "Normal wear; fuel fittings may need to be torqued down hard to seal.",
+   "Possible corrosion or a damaged flange seal, which should be looked at.",
+   "Cold weather, since fittings always need more torque on winter mornings."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says a good fitting usually seals with little more than finger-tight force, and anything more may indicate corrosion or a damaged flange seal. It also recommends the correct open-end wrench over an adjustable one, which wears the fittings. Cold can make seals and O-rings shrink or turn brittle, but the answer to a cold-weather leak is inspection and repair, not extra torque.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Burner and Fuel System); Ch. 3 (Cold Weather Flying)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-413",
+  "area": "OPS",
+  "topic": "Setting the altimeter",
+  "stem": "No altimeter setting is available at a remote inland launch field. How should the pilot set the altimeter?",
+  "choices": [
+   "To zero, so it shows height above the field.",
+   "To 29.92, so it shows pressure altitude.",
+   "To the elevation of the launch field."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says to set the altimeter to the barometric pressure from the weather briefing, or, in its absence, to the field elevation. Setting zero is appropriate only when flying from an ocean beach, where field elevation is zero; otherwise the altimeter would not show MSL altitude, which the pilot needs to avoid airspace problems. 29.92 is the standard setting at and above 18,000 feet MSL.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Instrument Checks); 14 CFR 91.121",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-414",
+  "area": "OPS",
+  "topic": "Spread layout",
+  "stem": "When spreading an envelope on the ground for cold inflation, how should the crew handle it?",
+  "choices": [
+   "Drag the bag across the field so the envelope unrolls behind it.",
+   "Hold the load tapes and flap them gently to float the fabric into shape.",
+   "Pull on the fabric between the load tapes to smooth out any wrinkles first."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says to handle only the load tapes, because pulling on the fabric can damage it; holding a load tape and flapping gently traps a bubble of air that floats the fabric instead of dragging it. It also warns not to drag the envelope bag along the ground, since many holes and tears come from sharp objects met that way.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Layout; Spread Layout)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-415",
+  "area": "OPS",
+  "topic": "Suspension cable inspection",
+  "stem": "While attaching the envelope to the basket, which suspension cable finding should the pilot correct before flight?",
+  "choices": [
+   "A cable that hangs slack on the ground until the envelope is inflated.",
+   "A cable coiled loosely in the envelope bag since the previous flight.",
+   "A cable that is twisted or kinked, or is missing part of its sheathing."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says cables should not be twisted and should be free of damage, kinks, loose wires, or missing sheathing (found on Kevlar cables), and that the attachment hardware be checked for security once the envelope is attached. Loose coiling in the bag is normal storage, and cables lie slack until the envelope is inflated and takes up the load.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Instrument Checks, attaching the envelope)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-416",
+  "area": "OPS",
+  "topic": "Prelaunch check",
+  "stem": "After the balloon is inflated and upright, which item belongs in the prelaunch check described in the Balloon Flying Handbook?",
+  "choices": [
+   "Switch from the inflation tank to the tank that will be used first in flight.",
+   "Open every fuel tank so that the burner has full pressure for the climb out.",
+   "Turn off the envelope temperature gauge to save its battery for landing."
+  ],
+  "answer": 0,
+  "explanation": "The handbook's prelaunch check includes shutting off the tank used for inflation and opening the one to be used first in flight, stowing loose equipment, activating the top cap to release its tabs, setting the altimeter, checking the temperature system, turning on radios, noting the inflation time and checking fuel quantity. Opening every tank is the parallel-plumbing hazard, and the temperature gauge is a required instrument to watch in flight.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Prelaunch Check); 14 CFR 31.85",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-417",
+  "area": "OPS",
+  "topic": "Fast ascent: floating the top",
+  "stem": "A pilot heats well beyond equilibrium and calls 'weight off' for a very fast climb out of a small field. What is the hazard the Balloon Flying Handbook calls 'floating the top'?",
+  "choices": [
+   "The crown line floats up into the burner flame and burns through a few seconds after launch.",
+   "The envelope rises ahead of the basket, tilting the burner flame into the mouth fabric.",
+   "Air pressure from the rapid climb pushes the top cap down, causing an uncontrolled descent."
+  ],
+  "answer": 2,
+  "explanation": "The handbook describes floating the top as air pressure created by an excessive climb pushing the top cap of the balloon down, causing an out-of-control descent; maximum climb rates are in the flight manual's operating limitations. A fast ascent is used only to clear ground obstacles or pass quickly through an adverse wind, and only when it is clear above. The handbook suggests about 20° above the neutral buoyancy temperature as a starting point.",
+  "ref": "FAA-H-8083-11B Ch. 6 (Launch)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-418",
+  "area": "OPS",
+  "topic": "Deflation sequence",
+  "stem": "After landing, in what order should the pilot begin the deflation?",
+  "choices": [
+   "Shut off pilot lights and tanks and vent the lines, then open the deflation port.",
+   "Open the deflation port first, then shut off the fuel once the envelope is on the ground.",
+   "Let the crown line crew pull the envelope over, then shut off the fuel system."
+  ],
+  "answer": 0,
+  "explanation": "The handbook has the pilot turn off the pilot light and the main fuel valves on the tanks and vent the fuel system first; once there is no risk of fire, the vent line is pulled to start the deflation. The crown line crewmember moves downwind and pulls to guide the envelope, and the handbook notes it is virtually impossible to lay a balloon down against the wind. Leaving fuel live while fabric collapses around the burner risks a fire.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Packing the Balloon)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-419",
+  "area": "OPS",
+  "topic": "Packing the envelope bag",
+  "stem": "A pilot usually lays out on rocky, stubble-covered fields. How does the Balloon Flying Handbook suggest packing the envelope into its bag?",
+  "choices": [
+   "Crown line first, so that it comes out of the bag ahead of the rest of the envelope.",
+   "With the bag's flap toward the balloon, so the envelope slides over it at layout.",
+   "With the bag's flap away from the balloon, the usual choice for rough ground."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says that with rocks, stubble and other sharp objects at the layout site, it is accepted practice to pack with the flap facing toward the balloon, so on the next layout the envelope passes over the flap before touching the ground. Flap away is normal for smooth, grassy fields. The crown line is secured in a separate bag or folded down the length of the envelope to prevent tangling.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Packing the Balloon)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-420",
+  "area": "OPS",
+  "topic": "Recovery behind a locked gate",
+  "stem": "A balloon lands in a pasture behind a locked gate. What should the crew do first?",
+  "choices": [
+   "Cut the fence wire at a corner post and repair it after the recovery.",
+   "Drive in through the next open gate, since the landing created a need.",
+   "Try to find the landowner or resident and ask permission to enter."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says the crew should first try to find the landowner or resident to get permission to enter; if no one can be found, it may be necessary to carry the balloon and lift it over the fence. Cutting or knocking down fences is probably trespassing, and in some places even carrying fence-cutting tools can be treated as possessing burglary tools. The crew should always get permission before a vehicle enters private property.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Landowner Relations)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-421",
+  "area": "OPS",
+  "topic": "Landing site priorities",
+  "stem": "In order of importance, what three considerations does the Balloon Flying Handbook give for choosing a landing site?",
+  "choices": [
+   "Safety of passengers and people on the ground, landowner relations, ease of recovery.",
+   "Landowner relations, safety of passengers and people on the ground, ease of recovery.",
+   "Ease of recovery, landowner relations, safety of passengers and people on the ground."
+  ],
+  "answer": 0,
+  "explanation": "The handbook lists them in this order: the safety of passengers and of persons and property on the ground, then landowner relations, then ease of recovery. It also says accessibility and possible damage to the balloon never override preventing injury to the occupants. A convenient road-side field is worth nothing if the approach is unsafe.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Landing Considerations; Introduction)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-422",
+  "area": "OPS",
+  "topic": "Approach over an obstacle",
+  "stem": "A row of trees lies between the balloon and a good landing field. Which approach does the Balloon Flying Handbook call preferable?",
+  "choices": [
+   "Descend toward the field and clear the treetops by only a few feet to save landing room.",
+   "Stay high, clear the trees by a wide margin, and drop steeply into the field.",
+   "Fly low toward the trees, clear them with plenty of room while ascending, then land."
+  ],
+  "answer": 2,
+  "explanation": "Of the three safe choices the handbook lists, dropping in from altitude is the most difficult, rejecting the site is the most conservative, and flying low to the obstacle and clearing it with plenty of room is preferable. Flying low lets the pilot check the surface wind, and clearing an obstacle while ascending is always the safest option. Aiming to miss the trees by a few feet invites overcontrol and a landing long or hard.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Obstacles and Approach Angles)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-423",
+  "area": "OPS",
+  "topic": "Choosing among landing fields",
+  "stem": "Several suitable landing fields lie one after another along the balloon's track. Which one should the pilot plan to use?",
+  "choices": [
+   "The last one, to give the passengers the longest flight.",
+   "The middle one, because the surface wind is most certain there.",
+   "The first one, saving the others in case of a miscalculation."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says that when several sites lie in a row along the path, the pilot should take the first one and save the others for a miscalculation, because unless a 180° turn is available, every site behind the balloon is lost. Aiming for the middle site is the advice when three sites lie side by side across the track, to allow for an error in the surface wind estimate.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Some Basic Rules of Landing)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-424",
+  "area": "OPS",
+  "topic": "High-wind landing: where passengers stand",
+  "stem": "Where does the Balloon Flying Handbook say passengers should stand in the basket for a high-wind landing?",
+  "choices": [
+   "In the front, so they fall a shorter distance if the basket tips over.",
+   "In the center, so their weight helps keep the basket upright.",
+   "In the rear, so the leading edge lifts and the basket slides along."
+  ],
+  "answer": 0,
+  "explanation": "For a high-wind landing the handbook places passengers in the front of the basket: if it tips, they fall a shorter distance within the basket and are not pitched forward. Standing in the rear is the normal-landing advice, because it lifts the leading edge so the basket slides and loses speed before tipping. The landing posture itself stays the same: facing the direction of travel, feet and knees together, knees bent, holding on.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Stand in the Appropriate Area of the Basket)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-425",
+  "area": "OPS",
+  "topic": "High-wind landing: reaction distance",
+  "stem": "A balloon takes about 10 seconds to respond to a burn. At a ground speed of 10 mph, about how far does it travel across the ground during that delay?",
+  "choices": [
+   "About 50 feet.",
+   "About 100 feet.",
+   "About 150 feet."
+  ],
+  "answer": 2,
+  "explanation": "10 mph is about 14.7 feet per second (10 x 5,280 / 3,600), so 10 seconds covers about 147 feet. The handbook gives the same calculation at 5 mph (about 73 feet) and 15 mph (about 220 feet) to show why options shrink quickly in a high-wind landing. 50 feet is roughly the 3.4 mph case, and 100 feet roughly 7 mph.",
+  "ref": "FAA-H-8083-11B Ch. 8 (High-Wind Landing)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-426",
+  "area": "OPS",
+  "topic": "Contour flying over obstacles",
+  "stem": "When contour flying toward a line of trees, how do most instructors teach crossing the obstacle?",
+  "choices": [
+   "While descending slightly, to stay close to the trees and save fuel.",
+   "In level flight, holding a constant height above the treetops.",
+   "While climbing, leaving room to coast over it if the burner fails."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says descending over an obstacle gives the greatest chance to misjudge clearance, level flight reduces the danger, and climbing minimizes it, so most instructors teach climbing when approaching an obstacle to leave room to coast over in case of a burner malfunction. This fits 91.119(a), which requires an altitude allowing an emergency landing without undue hazard if a power unit fails.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Minimum Safe Altitude Requirements); 14 CFR 91.119(a)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-427",
+  "area": "OPS",
+  "topic": "Sight picture near power lines",
+  "stem": "Approaching power lines at low altitude, the pilot sees the wires moving up in his field of view against the background. What does this indicate?",
+  "choices": [
+   "The balloon is descending toward them and may not have enough clearance.",
+   "The balloon is climbing and should clear the wires with room to spare.",
+   "The balloon is level, and the wires only seem to move because of wind."
+  ],
+  "answer": 0,
+  "explanation": "The handbook explains that if the wires move up in the pilot's field of vision, or stay stationary, the balloon is descending in a way that may put the occupants at risk; if they move down, the balloon is level or climbing and able to clear them. The pilot should face the direction of travel and rely on these sight pictures rather than the instruments, which lag at low altitude.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Contour Flying Techniques, Fig. 7-10)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-428",
+  "area": "OPS",
+  "topic": "Leveling off from a climb",
+  "stem": "A balloon is climbing toward an altitude 300 feet above it. Under the Balloon Flying Handbook's rule of thumb, what is the most its climb rate should be now?",
+  "choices": [
+   "100 feet per minute.",
+   "300 feet per minute.",
+   "600 feet per minute."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says that for a smooth transition the rate of ascent should not exceed the distance to the new altitude: 300 feet below means no more than 300 fpm, slowing to about 100 fpm at 100 feet below so the balloon coasts up and rounds out. 100 fpm now would be slower than needed, and 600 fpm would overshoot or force a vent, and each manufacturer limits how long the vent may be held open.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Ascents, Fig. 7-4)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-429",
+  "area": "OPS",
+  "topic": "Descent: the classic flare",
+  "stem": "Using the Balloon Flying Handbook's 'classic flare' method, a pilot descending through 400 feet AGL should be descending at no more than about",
+  "choices": [
+   "200 feet per minute.",
+   "400 feet per minute.",
+   "800 feet per minute."
+  ],
+  "answer": 1,
+  "explanation": "The handbook's classic flare matches the vertical speed indicator to the altimeter: 500 fpm from 500 feet AGL, 400 fpm from 400 feet AGL, and so on, slowing to about 100 fpm before rounding out with one or two standard burns. Below 200 feet the pilot should stop using instruments and look out for obstacles, especially power lines.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Descents, Fig. 7-5)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-430",
+  "area": "OPS",
+  "topic": "Tethering methods",
+  "stem": "Which tethering setup does the Balloon Flying Handbook describe as preferable in windier conditions?",
+  "choices": [
+   "Three lines, tied to the burner frame and staked downwind.",
+   "Six lines: bridles from the envelope plus laterals tied to them.",
+   "One line to the basket, so the balloon can weathervane freely."
+  ],
+  "answer": 1,
+  "explanation": "In the handbook's six-line method, three vertical bridles run from the top of the balloon to the top of the basket's superstructure and three laterals attach to the bridles; it is preferable in windier conditions because it keeps the balloon upright within a small area. In the three-line method, laterals attach at the top of the basket to the suspension so loads bypass the basket superstructure, not to the burner frame. The handbook calls for at least two or three tether lines, securely attached.",
+  "ref": "FAA-H-8083-11B Ch. 7 (Tethering/Mooring, Fig. 7-12)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-431",
+  "area": "OPS",
+  "topic": "Water landing briefing",
+  "stem": "A balloon is about to land in a lake. What should the pre-landing briefing tell the passengers?",
+  "choices": [
+   "Hold on to the fuel tanks, because the tanks sink while the basket stays afloat.",
+   "Stay inside the basket until it settles, then swim away from it and the envelope.",
+   "Get clear of the basket in case it inverts, and keep a firm grip on it as a float."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says that in a ditching, passengers should get clear of the basket in case it inverts because of where the tanks are placed, and keep a strong grip on it because it becomes a flotation device. A deflated envelope sinks because it is heavier than water, while the fuel tanks float even when full, so the advice about tanks sinking has it backward.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Water Landings); FAA-S-8081-18A Area of Operation X (Emergency Operations)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-432",
+  "area": "OPS",
+  "topic": "River landing",
+  "stem": "A balloon comes down in the middle of a wide river and is being dragged downstream by the current. What is generally the best course for the occupants?",
+  "choices": [
+   "Climb out onto the envelope fabric, which floats and is easier to hold.",
+   "Swim for the nearest bank at once, before the envelope fills with water.",
+   "Stay with the basket, unless it is near the bank and they swim well."
+  ],
+  "answer": 2,
+  "explanation": "The handbook says that on a river the balloon may be dragged downstream, and staying with the basket is generally best unless it has landed close to the bank and those aboard are strong swimmers. The basket is the flotation device; a deflated envelope sinks and can trap or tangle a swimmer.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Water Landings)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-433",
+  "area": "OPS",
+  "topic": "Survival gear for mountain flights",
+  "stem": "Before a long flight over mountainous terrain, which extra provisions does the Balloon Flying Handbook suggest carrying in the basket?",
+  "choices": [
+   "An extra fuel tank, temporarily plumbed into the burner for the descent.",
+   "A tether kit, to hold the balloon in place in a valley.",
+   "Water, warm clothing, a strobe, a compass and a light shelter."
+  ],
+  "answer": 2,
+  "explanation": "The handbook suggests water, additional warm clothing or a sleeping bag, a strobe, a radio, a compass, a lightweight shelter and good maps, because the crew may take a long time to find a balloon in mountain terrain. It strongly discourages temporarily plumbed extra (pony) tanks, and a tether kit does nothing for survival after an outlanding.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Mountain Flying); Ch. 6 (Burner Check, inflation tanks); FAA-S-8081-18A Area of Operation X",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-434",
+  "area": "OPS",
+  "topic": "Thermal flight",
+  "stem": "Late in a morning flight, a balloon is caught in a thermal and climbs without any burner input. What does the Balloon Flying Handbook recommend?",
+  "choices": [
+   "Stop burning and let the envelope cool so that it cancels out the climb.",
+   "Vent to stay low, so the balloon does not ride the thermal upward.",
+   "Keep the envelope at or above equilibrium temperature and wait it out."
+  ],
+  "answer": 2,
+  "explanation": "The handbook gives two rules: keep flying the balloon, holding the envelope at or above the temperature noted at equilibrium because it is cooling faster than normal, and remember that 'altitude is your friend'. Thermals are short-lived and usually release the balloon higher up. Venting or letting it cool can drop the balloon out of the thermal into the sinking air around it without enough height to recover.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Thermal Flight); FAA-S-8081-18A Area of Operation X",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-435",
+  "area": "OPS",
+  "topic": "Nitrogen pressurization: canceled flight",
+  "stem": "A pilot pressurizes the fuel tanks with nitrogen on a cold morning, then cancels the flight. The temperature is expected to rise more than 30° before the next flight. What should the pilot do?",
+  "choices": [
+   "Bleed off the extra pressure through the fixed liquid level gauge.",
+   "Leave the tanks alone, since the relief valve will vent any excess.",
+   "Add more nitrogen, so the pressure stays even as the propane warms."
+  ],
+  "answer": 0,
+  "explanation": "The handbook says that if the flight is canceled after pressurization and the temperature is expected to rise more than 30°, the pressure must be bled off using the fixed liquid level gauge. As the propane warms, its own vapor pressure rises on top of the nitrogen. Relying on the relief valve means venting propane, which is a hazard, and adding nitrogen makes the problem worse.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Cold Weather Flying)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-436",
+  "area": "OPS",
+  "topic": "Cold weather equipment concerns",
+  "stem": "Which equipment concern does the Balloon Flying Handbook raise for cold-weather flying?",
+  "choices": [
+   "Seals and O-rings may shrink or turn brittle, so check closely for propane leaks.",
+   "The fabric may stiffen in the cold, so the maximum envelope temperature is lowered.",
+   "Burners lose 4 percent of their output for every 10°F drop in air temperature."
+  ],
+  "answer": 0,
+  "explanation": "The handbook warns that seals and O-rings may shrink or become brittle in cold weather and cause leaks, so the equipment preflight needs extra care; it also says tank heaters must not be used within 50 feet of an open flame. The envelope limit does not change with the weather. The 4 percent figure is the burner output loss per 1,000 feet of altitude, not per 10°F of temperature.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Cold Weather Flying); Ch. 2 (Heater System)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-437",
+  "area": "OPS",
+  "topic": "Mountain flying: communications",
+  "stem": "Why does the Balloon Flying Handbook suggest a 'lost balloon' phone contact that both pilot and crew can call during mountain flights?",
+  "choices": [
+   "Mountain flights require a flight plan, and the contact closes it after landing.",
+   "FCC rules forbid two-way radio use between a balloon and its crew in the mountains.",
+   "Most balloon radios work by line of sight and will not work well in mountain terrain."
+  ],
+  "answer": 2,
+  "explanation": "The handbook notes that most radios used by balloonists are line of sight and may not work in hilly or mountainous terrain, and cell coverage may be poor, so a common contact (a person at home, or a voicemail box) helps pilot and crew find each other. No FCC rule bans crew radios in the mountains, and no flight plan is required for a balloon flight.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Mountain Flying)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-438",
+  "area": "OPS",
+  "topic": "Night vision during a predawn inflation",
+  "stem": "During a predawn inflation, the pilot looks straight at the burner flame for several seconds. What effect does the Pilot's Handbook of Aeronautical Knowledge describe?",
+  "choices": [
+   "Color vision may be lost for a minute or two; night vision is unaffected.",
+   "Night adaptation may be lost; the rods need about 30 minutes to readapt.",
+   "Nothing lasting, since the eyes readapt to the dark within a few seconds."
+  ],
+  "answer": 1,
+  "explanation": "The PHAK says the rods can take about 30 minutes to fully adapt to darkness and that a bright light can completely destroy night adaptation, leaving night vision badly compromised while the process repeats. The cones adapt quickly, but they are not what a pilot relies on in the dark. Avoid looking at the flame, and use off-center viewing to pick out dim objects such as unlit wires.",
+  "ref": "FAA-H-8083-25C Ch. 17 (Dark Adaptation; Night Vision Protection)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-439",
+  "area": "OPS",
+  "topic": "High-altitude flight: oxygen",
+  "stem": "The regulations first require supplemental oxygen above 12,500 feet MSL. For best protection, above what altitude does the PHAK encourage pilots to use oxygen during the day?",
+  "choices": [
+   "5,000 feet.",
+   "10,000 feet.",
+   "14,000 feet."
+  ],
+  "answer": 1,
+  "explanation": "The PHAK encourages supplemental oxygen above 10,000 feet cabin altitude during the day and above 5,000 feet at night, because some people feel the effects of reduced oxygen well below the regulatory altitudes. 14,000 feet is where 91.211(a)(2) requires the crew to use oxygen at all times, which is a legal minimum, not a recommendation.",
+  "ref": "FAA-H-8083-25C Ch. 7 (Oxygen Systems); 14 CFR 91.211(a)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-440",
+  "area": "OPS",
+  "topic": "High-altitude flight: burner output",
+  "stem": "Using the Balloon Flying Handbook's rate of heater performance loss with altitude, about what share of its sea level output will a burner deliver at 5,000 feet on a standard day?",
+  "choices": [
+   "About 60 percent.",
+   "About 80 percent.",
+   "About 95 percent."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says heater performance falls about 4 percent per 1,000 feet of altitude, because the partial pressure of oxygen needed for combustion drops. At 5,000 feet that is a 20 percent loss, leaving about 80 percent. The envelope also lifts less as the air thins, so a mountain flight needs a lighter load and more fuel.",
+  "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); Ch. 2 (Heater System)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "OPS-441",
+  "area": "OPS",
+  "topic": "Fuel quantity gauges",
+  "stem": "Why should a pilot be careful about trusting the float-type fuel quantity gauges on balloon tanks when planning fuel?",
+  "choices": [
+   "They are mechanical, can be inaccurate, and often don't read 0 to 100 percent.",
+   "They read accurately only while the tank pressure stays above about 100 psi.",
+   "They show 80 percent full until the tank is almost completely empty of liquid."
+  ],
+  "answer": 0,
+  "explanation": "The handbook says the float gauges are mechanical, sometimes inaccurate, and in most configurations do not read from 0 to 100 percent, so this must be allowed for in flight planning. Their reading depends on the float, not on tank pressure. The 80 percent mark relates to the fixed maximum liquid level gauge used when filling, not to how the float gauge reads in flight.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Instruments; Fuel Tanks)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-442",
+  "area": "OPS",
+  "topic": "Envelope temperature systems",
+  "stem": "A balloon uses a wireless envelope temperature system, with the sensor at the top of the envelope sending to a receiver in the basket. What does the Balloon Flying Handbook say can degrade its signal?",
+  "choices": [
+   "Dew on the envelope, which shorts out the sensor at the crown.",
+   "Radio interference, or the burner's hot plume between sensor and basket.",
+   "Flight above 5,000 feet, where the thinner air cannot carry the signal."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says wireless systems send the temperature signal by radio or infrared, which removes the wire in the envelope, but they have reliability issues because radio interference or the burner's thermal plume can degrade the signal. Air density does not stop radio signals at balloon altitudes, and the handbook does not name dew as a problem. The temperature reading is one of the items in the prelaunch check.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Instruments); Ch. 6 (Prelaunch Check)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-443",
+  "area": "OPS",
+  "topic": "Variometer",
+  "stem": "A balloon is descending and the pilot burns to level off. Which instrument gives the earliest indication that the descent is slowing?",
+  "choices": [
+   "The variometer.",
+   "The altimeter.",
+   "The pyrometer."
+  ],
+  "answer": 0,
+  "explanation": "The variometer (rate of climb indicator) shows the rate and trend of vertical motion, so it shows a descent slowing before the altimeter shows much change in height. The pyrometer shows envelope temperature rising after the burn, not what the balloon is doing vertically. Even so, the handbook notes mechanical instruments lag several seconds, so at low altitude the pilot also watches outside references.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Instruments); Ch. 7 (Descents; Use of Instruments)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-444",
+  "area": "OPS",
+  "topic": "Propane pressure and temperature",
+  "stem": "Using the vapor pressure table in the Balloon Flying Handbook (Appendix A), about what pressure will a propane tank hold when the propane is at 0°F?",
+  "choices": [
+   "About 25 psi.",
+   "About 93 psi.",
+   "About 150 psi."
+  ],
+  "answer": 0,
+  "explanation": "Appendix A gives propane vapor pressure as about 25 psi at 0°F, 93 psi at 60°F and 150 psi at 90°F. Tank pressure depends on the liquid's temperature, so very cold mornings can leave too little pressure for proper burner operation. That is why manufacturers may call for nitrogen pressurization or tank heating, following the flight manual.",
+  "ref": "FAA-H-8083-11B Appendix A (Vapor Pressures of LP Gases); Ch. 3 (Cold Weather Flying)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-445",
+  "area": "OPS",
+  "topic": "Filling to the fixed liquid level",
+  "stem": "During refueling, the tank's fixed maximum liquid level gauge (spit valve) begins to spit liquid. About how full is the tank?",
+  "choices": [
+   "About 80 percent.",
+   "About 95 percent.",
+   "About 100 percent."
+  ],
+  "answer": 0,
+  "explanation": "The handbook says the fixed maximum liquid level gauge shows that the tank is filled to its maximum design quantity, 80 percent of its total capacity. The remaining space holds vapor, which matters because liquid propane is practically incompressible and expands as it warms. If pressure ever exceeds the tank's design limit, the pressure relief valve opens (the handbook cites about 375 psi as normal).",
+  "ref": "FAA-H-8083-11B Ch. 2 (Fuel Tanks; Propane Primer)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-446",
+  "area": "OPS",
+  "topic": "Liquid and vapor fuel supply",
+  "stem": "In a balloon with a vapor pilot light system, how does propane reach the main burner and the pilot light?",
+  "choices": [
+   "The burner takes liquid via the dip tube; the pilot light, regulated vapor.",
+   "Both draw liquid from the bottom of the tank through the dip tube.",
+   "Both take vapor from the top of the tank, which the coil heats further."
+  ],
+  "answer": 0,
+  "explanation": "The handbook says liquid propane is drawn from the bottom of the tank through a withdrawal (dip) tube on the liquid valve and fed to the burner, where the coil vaporizes it. In a vapor pilot system, a second hose takes vapor from the pilot light valve on top of the tank through a regulator. In a liquid pilot system, by contrast, liquid is diverted at the burner and passes through a vapor converter and regulator.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Heater System, Fig. 2-8; Fuel Tanks)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-447",
+  "area": "OPS",
+  "topic": "Butane-propane mixtures",
+  "stem": "A pilot refuels from a supplier who has blended butane into the propane. What should the pilot expect?",
+  "choices": [
+   "No change, since butane and propane boil at about the same point.",
+   "A more yellow, sooty flame and less pressure at a given temperature.",
+   "A hotter, bluer flame and more pressure on cold mornings."
+  ],
+  "answer": 1,
+  "explanation": "The handbook's propane primer says a butane-propane mixture produces a more yellow, sooty flame, may tend to go out when the blast valve is pulled, and gives less pressure for a given temperature. Butane boils at about 32°F compared with propane's -44°F, which is why propane is preferred for balloons.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Fig. 2-11 Propane Primer)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-448",
+  "area": "OPS",
+  "topic": "Propane vapor hazards",
+  "stem": "Why does the Balloon Flying Handbook say that propane tanks should never be stored in an enclosed area?",
+  "choices": [
+   "Propane vapor is lighter than air and gathers at the ceiling, near the light fixtures.",
+   "Propane vapor is heavier than air and collects in low places, where it can explode.",
+   "Tanks stored indoors slowly lose pressure and must be refilled before the next flight."
+  ],
+  "answer": 1,
+  "explanation": "The handbook says propane vapor is heavier than air, collects in low areas, and in concentration is an explosive hazard; tanks should never be stored in an enclosed area or near a heater or anything with a pilot light. An odorant (ethyl mercaptan) is added so that even small leaks can be smelled. Storage indoors does not drain tank pressure.",
+  "ref": "FAA-H-8083-11B Ch. 2 (Fig. 2-11 Propane Primer)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-449",
+  "area": "OPS",
+  "topic": "Refueling sequence",
+  "stem": "During refueling, the tank's fixed liquid level gauge begins to spit liquid. In the general sequence the Balloon Flying Handbook gives, what does the pilot close first?",
+  "choices": [
+   "The supply line from the propane source.",
+   "The fixed liquid level gauge.",
+   "The main tank valve."
+  ],
+  "answer": 2,
+  "explanation": "The handbook's general sequence is: shut off the main tank valve first, then close the spit valve, then close the main supply line, and then bleed the lines. Closing the spit valve or supply first would leave the tank still taking fuel past the full mark. This is a generalized description, and the balloon's own flight manual procedure always governs.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Refueling)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "OPS-450",
+  "area": "OPS",
+  "topic": "Refueling safety",
+  "stem": "Which practice follows the Balloon Flying Handbook's refueling safety rules?",
+  "choices": [
+   "Move the basket into open air and disable the strikers before refueling.",
+   "Refuel from inside the basket, so the pilot can watch every gauge closely.",
+   "Leave the chase vehicle running, so its battery stays charged."
+  ],
+  "answer": 0,
+  "explanation": "The handbook's rules include no smoking, never refueling from inside the basket, disabling strikers and turning off phones, shutting off the chase vehicle (and any RV water heater pilot lights), wearing gloves, and never refueling inside a closed trailer or van, moving the basket to open air because propane vapor is heavier than air. A running engine is an ignition source.",
+  "ref": "FAA-H-8083-11B Ch. 8 (Refueling)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ }
+]
