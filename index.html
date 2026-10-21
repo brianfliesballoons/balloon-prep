@@ -328,6 +328,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
         <button class="btn" id="finish" hidden>Finish test</button>
       </div>
       <p class="small" id="foot"></p>
+      <button class="linkb" id="redo" hidden>Clear my answers in this set</button>
     </section>
 
     <section class="card bench" id="bench" aria-label="Chart workbench">
@@ -466,6 +467,7 @@ function renderQ(){
   renderGrader(q);
   const done=list.filter(id=>picked(id)!==undefined).length;
   if(mode==='study'){const right=list.filter(id=>S.study[id]===byId[id].answer).length;$('foot').textContent=done?`${right} of ${done} right in this set.`:'Pick an answer to see the explanation.';}
+  const rd=$('redo');rd.hidden=!(mode==='study'&&!GRADE&&done);if(rd.dataset.armed!=='1')rd.textContent=`Clear my ${done} answer${done===1?'':'s'} in this set and try again`;
   else if(mode==='due'){const left=dueIds().length;$('foot').textContent=left?`Review: ${left} still due today.`:'Review done for today. Nice work.';}
   else if(mode==='test')$('foot').textContent=`${done} of ${list.length} answered · ${list.filter(id=>S.flags[id]).length} flagged`;
   else $('foot').textContent='Reviewing your test. Answers are locked.';
@@ -491,7 +493,7 @@ function answer(i){const q=cur();if(GRADE||mode==='review')return;
   else if(mode==='due'){if(dueAns[q.id]!==undefined)return;dueAns[q.id]=i;sched(q.id,i===q.answer);}
   else if(mode==='test'){S.test.answers[q.id]=i;}
   save();renderQ();if(mode==='study')renderFilters();}
-function go(i){if(i<0||i>=list.length)return;if(walk)endWalk();pos=i;selPA=null;cross=null;selRow=null;paintRows();renderQ();view={...FULL};req();
+function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)endWalk();pos=i;selPA=null;cross=null;selRow=null;paintRows();renderQ();view={...FULL};req();
   if(mode==='test'){S.test.pos=i;save();}
   if(!$('navPanel').hidden&&window.innerWidth<860)$('navPanel').hidden=true,$('navToggle').setAttribute('aria-expanded','false');
   window.scrollTo({top:Math.min(window.scrollY,$('main').offsetTop-8),behavior:'auto'});}
@@ -530,6 +532,9 @@ $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefin
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));};
+// Start one study set over: clears only this set's study answers; flags, tests and the review queue stay.
+$('redo').onclick=()=>{const b=$('redo');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to clear them. Flags, tests and your review queue stay.';return;}
+  b.dataset.armed='';list.forEach(id=>delete S.study[id]);save();pos=0;renderAll();};  // keep the same list, so a cleared Missed set can be redone
 $('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},hubs:S.hubs,cls:S.cls,exam:S.exam};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
 document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'||$('main').hidden)return;const k=e.key.toLowerCase();
   if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k));}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
