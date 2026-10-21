@@ -1,0 +1,429 @@
+[
+  {
+    "id": "AIR-901",
+    "verdict": "fixed",
+    "issue": "Distractor 'About 270 true' is defensible wherever variation is near zero, so the key was not the only defensible answer.",
+    "suggested": "Added 'where the magnetic variation is 12 east' to the stem; explanation now gives the true track (about 282).",
+    "source": "AIM 2-3-3 Runway Designators; AIM 4-3-6 (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html, chap4_section_3.html)"
+  },
+  {
+    "id": "AIR-902",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-3; AIM 4-3-6 example 'magnetic azimuth of 87 degrees ... designation would be 9' (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html)"
+  },
+  {
+    "id": "AIR-903",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-2 Marking Colors (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html)"
+  },
+  {
+    "id": "AIR-904",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-3 Displaced Threshold; FAA-H-8083-25C Ch. 14 (faa.gov PDF) Displaced Threshold"
+  },
+  {
+    "id": "AIR-905",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-3 Relocation of a Threshold (NOTAM example 10/28 W 900 CLSD); FAA-H-8083-25C Ch. 14 (faa.gov PDF) Relocated Runway Threshold ('not available ... for takeoff or landing, but it is available for taxi')"
+  },
+  {
+    "id": "AIR-906",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-3 Chevrons; FAA-H-8083-25C Ch. 14 (faa.gov PDF) Relocated Runway Threshold"
+  },
+  {
+    "id": "AIR-907",
+    "verdict": "fixed",
+    "issue": "Last explanation sentence 'No marking means daylight only' read as a false rule.",
+    "suggested": "Reworded: 'There is no runway marking for daylight only.'",
+    "source": "AIM 2-3-6 permanently/temporarily closed runways (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_3.html)"
+  },
+  {
+    "id": "AIR-908",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-5 Runway Holding Position Markings ('solid lines are always on the side where the aircraft must hold')"
+  },
+  {
+    "id": "AIR-909",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-5 ('not clear of the runway until all parts ... have crossed'); AIM 2-3-9 Runway Boundary Sign"
+  },
+  {
+    "id": "AIR-910",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-5 Holding Position Markings for ILS; AIM 2-3-8 ILS Critical Area Holding Position Sign"
+  },
+  {
+    "id": "AIR-911",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-8 Mandatory Instruction Signs; 2-3-9; 2-3-10; 2-3-11"
+  },
+  {
+    "id": "AIR-912",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-9 Taxiway Location Sign; 2-3-10; 2-3-5 (taxiway/taxiway holding marking, single dashed line)"
+  },
+  {
+    "id": "AIR-913",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-11 Destination Signs (FUEL listed); AIM 2-3-12"
+  },
+  {
+    "id": "AIR-914",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-13 Runway Distance Remaining Signs"
+  },
+  {
+    "id": "AIR-915",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-8 Runway Holding Position Sign ('15-33' example)"
+  },
+  {
+    "id": "AIR-916",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-4 Taxiway Edge Markings (continuous vs dashed)"
+  },
+  {
+    "id": "AIR-917",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-3-6 Nonmovement Area Boundary Markings; Vehicle Roadway Markings (white)"
+  },
+  {
+    "id": "AIR-918",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-10 Taxiway Lights; AIM 2-1-4; AIM 2-1-5 (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_1.html)"
+  },
+  {
+    "id": "AIR-919",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-4 Runway Edge Light Systems"
+  },
+  {
+    "id": "AIR-920",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-4 Runway Edge Light Systems (end lights green outward, red toward runway)"
+  },
+  {
+    "id": "AIR-921",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-9 Airport/Heliport Beacons; FAA-H-8083-25C Ch. 14 (faa.gov PDF) Airport Beacon"
+  },
+  {
+    "id": "AIR-922",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-9; 14 CFR 91.155(c)-(d) (https://www.ecfr.gov/current/title-14/section-91.155)"
+  },
+  {
+    "id": "AIR-923",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-8 and its Radio Control System table; FAA-H-8083-25C Ch. 14 (faa.gov PDF) Figure 14-34"
+  },
+  {
+    "id": "AIR-924",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-8 (15 minutes from most recent activation; REIL exception)"
+  },
+  {
+    "id": "AIR-925",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-3 REIL; AIM 2-1-5 TDZL; AIM 2-1-4/2-3-6"
+  },
+  {
+    "id": "AIR-926",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 VASI text and 2-Bar VASI figure (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/images/aim0201_fig17_recovered.svg, rendered and read: on path = far bar red, near bar white); FAA-H-8083-25C Ch. 14 (faa.gov PDF) Figure 14-29"
+  },
+  {
+    "id": "AIR-927",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 2-Bar VASI figure (below path = both bars red; above = both white)"
+  },
+  {
+    "id": "AIR-928",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 PAPI figure (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/images/aim0201_fig20_recovered.svg, rendered: 4W >3.5, 3W1R 3.2, 2W2R 3.0, 1W3R 2.8, 4R <2.5); FAA-H-8083-25C Ch. 14 (faa.gov PDF) Figure 14-30"
+  },
+  {
+    "id": "AIR-929",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 PAPI figure; PHAK Figure 14-30"
+  },
+  {
+    "id": "AIR-930",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 Tri-color Systems text + figure (amber above, green on, red below; dark amber in green-to-red transition); FAA-H-8083-25C Ch. 14 (faa.gov PDF) VASI text ('should not mistake this area for an above the glidepath indication')"
+  },
+  {
+    "id": "AIR-931",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 Pulsating Systems text + figure (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/images/aim0201_Auto4.png: pulsating white above, steady white or alternating red/white on, steady red slightly below, pulsating red below); PHAK Ch. 14"
+  },
+  {
+    "id": "AIR-932",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 2-1-2 VASI (+/-10 deg, 4 NM; 20+ miles at night) and PAPI (3.4 NM)"
+  },
+  {
+    "id": "AIR-933",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-4 wind direction indicator; PHAK Ch. 14 Wind Direction Indicators"
+  },
+  {
+    "id": "AIR-934",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-4 Landing direction indicator (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html); PHAK Ch. 14 Traffic Patterns"
+  },
+  {
+    "id": "AIR-935",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-4 (tee may be manually aligned); PHAK Ch. 14 Wind Direction Indicators ('should also look at the wind sock')"
+  },
+  {
+    "id": "AIR-936",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK Ch. 14 Wind Direction Indicators ('extends out straighter in strong winds and tends to move back and forth when the wind is gusting')"
+  },
+  {
+    "id": "AIR-937",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-4 Traffic pattern indicators; PHAK Figure 14-38"
+  },
+  {
+    "id": "AIR-938",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-4 ('mentally enlarge the indicator'); geometry worked: base east of RWY 36, base-to-final and downwind-to-base turns both right"
+  },
+  {
+    "id": "AIR-939",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-3 (RP, *RP, NOTE 3 full-time towers); FAA Aeronautical Chart Users' Guide (eff. 9 Jul 2026) airport data, 'RP for right pattern'"
+  },
+  {
+    "id": "AIR-940",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-3 (propeller 1,000 AGL; large/turbine 1,500; helicopters 500)"
+  },
+  {
+    "id": "AIR-941",
+    "verdict": "confirmed",
+    "issue": "Verified: current AIM 4-3-3 says 'Enter pattern in level flight, abeam the midpoint of the runway' (no 45 deg); PHAK Ch. 14 states the 45-deg midfield entry and 'entries ... while descending should be avoided'. PHAK-first ref is right, no change.",
+    "suggested": "",
+    "source": "PHAK Ch. 14 Nontowered Airport (preferred entry 45 deg to downwind at midfield; cross midfield 500 ft above, descend ~2 miles out) and Clearing Procedures ('entries into traffic patterns while descending should be avoided'); current AIM 4-3-3 FIG key says 'Enter pattern in level flight, abeam the midpoint' with no 45-deg wording, so PHAK is the right primary cite"
+  },
+  {
+    "id": "AIR-942",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-3-2 traffic pattern terminology"
+  },
+  {
+    "id": "AIR-943",
+    "verdict": "confirmed",
+    "issue": "Verified: 91.126(b)(1) names 'each pilot of a powered fixed-wing aircraft', (b)(2) 'any other powered aircraft'; 1.1 defines a balloon as not engine driven. Key correct, no change.",
+    "suggested": "",
+    "source": "14 CFR 91.126(b)(1)-(2) text (https://www.ecfr.gov/current/title-14/section-91.126): (b)(1) 'Each pilot of a powered fixed-wing aircraft must make all turns to the left', (b)(2) 'any other powered aircraft must avoid the flow'; 14 CFR 1.1 'Balloon means a lighter-than-air aircraft that is not engine driven'; AIM 4-3-3 en route alertness"
+  },
+  {
+    "id": "AIR-944",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.113(g) (https://www.ecfr.gov/current/title-14/section-91.113); AIM 4-3-4"
+  },
+  {
+    "id": "AIR-945",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 5 Class D Airspace ('less disruption by landing well short of the airport ... common courtesy and common sense'); 14 CFR 91.129(c)"
+  },
+  {
+    "id": "AIR-946",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-1-9 and TBL 4-1-1 ('Tower or FSS not in operation: Self-announce on CTAF'; MULTICOM 122.9 only with no tower/FSS/UNICOM) (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html); PHAK Figure 14-1"
+  },
+  {
+    "id": "AIR-947",
+    "verdict": "fixed",
+    "issue": "Distractor 'automated station that broadcasts weather on a loop' overlaps the AIM 4-1-9 'automated UNICOM' systems that give automated weather.",
+    "suggested": "Replaced with 'An FAA flight service station that gives weather briefings.' (UNICOM is nongovernment).",
+    "source": "PHAK Ch. 14 Nontowered Airport (UNICOM definition); AIM 4-1-9 (automated UNICOM)"
+  },
+  {
+    "id": "AIR-948",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-1-13 ('notify controllers on initial contact ... by repeating the alphabetical code word')"
+  },
+  {
+    "id": "AIR-949",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 4-1-13 NOTE ('absence of a sky condition or ceiling and/or visibility ... indicates ... 5,000 feet or above and visibility of 5 miles or more')"
+  },
+  {
+    "id": "AIR-950",
+    "verdict": "fixed",
+    "issue": "Distractor 'About 5 miles out' is the BFH's own figure for a balloon's first call (Ch. 5), so a balloon student could defend it.",
+    "suggested": "Replaced with 'About 3 miles out.'; explanation names the BFH 5-mile figure and why the stem asks for the AIM's.",
+    "source": "AIM 4-3-2 ('Initial callup should be made about 15 miles from the airport'); 14 CFR 91.129(c)(1); FAA-H-8083-11B Ch. 5 ('first radio call ... five statute miles')"
+  },
+  {
+    "id": "AIR-951",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.126(d) (https://www.ecfr.gov/current/title-14/section-91.126); AIM 4-3-2 (towered airports without Class D)"
+  },
+  {
+    "id": "AIR-952",
+    "verdict": "fixed",
+    "issue": "Explanation cited 91.129(d)(2) alone, but the stem's airport could be in Class G.",
+    "suggested": "Explanation and ref now cite 91.129(d)(2) (Class D) and 91.126(d) (Class G).",
+    "source": "14 CFR 91.125 table (https://www.ecfr.gov/current/title-14/section-91.125); AIM 4-3-13 table; 14 CFR 91.129(d)(2); 14 CFR 91.126(d)"
+  },
+  {
+    "id": "AIR-953",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.125 table; AIM 4-3-13 table"
+  },
+  {
+    "id": "AIR-954",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-4 Vortex Behavior ('from the moment it rotates on takeoff to touchdown') (https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_4.html); PHAK Ch. 14 Vortex Behavior"
+  },
+  {
+    "id": "AIR-955",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-3 Vortex Strength ('HEAVY, CLEAN, and SLOW'); PHAK Ch. 14 Vortex Strength"
+  },
+  {
+    "id": "AIR-956",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-4 (sink several hundred fpm); AIM 7-4-5 (avoid below and behind)"
+  },
+  {
+    "id": "AIR-957",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-4 (lateral 2-3 kt near ground; crosswind slows upwind vortex, speeds downwind vortex)"
+  },
+  {
+    "id": "AIR-958",
+    "verdict": "fixed",
+    "issue": "Writer's CHECK: the AIM's 2-minute interval is written for aircraft taking off or landing on the runway.",
+    "suggested": "Stem reworded to ask what interval the AIM gives for a takeoff after a larger aircraft's low approach, with the balloon launch as context; explanation frames 2 minutes as a minimum for a slow-climbing balloon. CHECK removed, confidence high. Brian may still want a pilot's note on whether he waits longer.",
+    "source": "AIM 7-4-6 'Departing or landing after a larger aircraft executing a low approach, missed approach, or touch-and-go landing ... at least 2 minutes'"
+  },
+  {
+    "id": "AIR-959",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-7 Helicopters (three rotor diameters)"
+  },
+  {
+    "id": "AIR-960",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM 7-4-6 ('WHETHER OR NOT A WARNING OR INFORMATION HAS BEEN GIVEN ...'); AIM 7-4-5; AIM 7-4-8"
+  },
+  {
+    "id": "LESSON",
+    "verdict": "fixed",
+    "issue": "lessons/drafts/lesson-air-airports.json: key set matches existing topics (topic: title/area/minutes/deeper/lesson; lesson: idea/widget/body/example/basics/sources; basics items title/body/alt; deeper link keys phak/aim/supp all exist in lessons.json links). Facts checked against AIM 2-1, 2-3, 4-1, 4-3, 7-4, PHAK Ch. 14, BFH Ch. 5, 14 CFR 91.125/126/129. Three fixes: (1) yellow runway edge lights also 'or half the runway if less' (AIM 2-1-4); (2) wake sentence said a quartering tailwind carries vortices off the runway; AIM 7-4-4 says a crosswind moves the downwind vortex sideways and a tailwind moves vortices forward into the touchdown zone, so reworded; (3) example set a 6:30 launch before a 6:40 sunrise (a pre-sunrise launch brings in 91.209 lighting, which the example never addresses and Brian has ruled on) and named pilot-controlled lighting the example never used; now 'just after sunrise', PCL dropped.",
+    "suggested": "When merging: add topic id 'air-airports' to lessons.json topics and to a group (likely 'Airspace and navigation'); all 60 map-pilot-9 entries point to it. 'supp' deeper link is accurate: the Commercial Pilot testing supplement (covers CBH) has airport sign Figures 51 and 56-65.",
+    "source": "AIM chap2_section_1/3, chap4_section_1/3, chap7_section_4 (faa.gov, fetched 2026-10-21); FAA-H-8083-25C Ch. 14; FAA-H-8083-11B Ch. 5; https://www.faa.gov/sites/faa.gov/files/training_testing/testing/supplements/commercial_akts.pdf"
+  }
+]

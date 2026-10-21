@@ -17,6 +17,7 @@
     "air-charts",
     "air-nav",
     "air-notam",
+    "air-airports",
     "air-radio"
    ]
   },
@@ -2115,6 +2116,92 @@
      "FAA-H-8083-11B Ch. 9 (Hypoxia types; Hyperventilation; Alcohol; Dehydration: first noticeable effect is fatigue; Night Vision: 5° to 10° off center, close one eye during a burn)",
      "AIM 8-1-4, 8-1-5 (spatial disorientation; autokinesis), 8-1-6 (dark adaptation: 30 minutes)",
      "14 CFR 91.17(a)(3) (drugs affecting faculties)"
+    ]
+   }
+  },
+  "air-airports": {
+   "title": "Airports and airport operations",
+   "area": "AIR",
+   "minutes": 8,
+   "deeper": [
+    [
+     "phak",
+     "Chapter 14: Airport operations"
+    ],
+    [
+     "aim",
+     "Chapters 2, 4-3 and 7-4: lights, markings, patterns, wake turbulence"
+    ],
+    [
+     "supp",
+     "Commercial testing supplement: airport sign figures"
+    ]
+   ],
+   "lesson": {
+    "idea": "**An airport speaks in colors, shapes and lights.** Learn the code once (white for runways, yellow for taxiways and hold lines, red for stop) and you can read any field from the basket, even when nobody answers on the radio.",
+    "widget": null,
+    "body": [
+     "**Markings and signs.** A runway number is its magnetic direction to the nearest 10°: Runway 27 points about 270° magnetic, read from the approach end. Runway markings are **white**; taxiway, holding position and closed-area markings are **yellow**, even on a runway. White arrows up to a white bar mark a **displaced threshold**: usable for takeoff, and for landing from the other direction. **Yellow chevrons** mean the pavement can't be used at all, and **yellow crosses** mean closed. At a hold line, the side with the **solid lines** stops. Signs: **red with white** is mandatory (a runway or critical area entrance), **black with yellow** says where you are, **yellow with black** says which way to go.",
+     "**Lights.** Runway edges are white (yellow over the last 2,000 feet, or half the runway if less, on an instrument runway), runway ends show green to landing aircraft and red to departing ones, and taxiway edges are blue. A beacon flashing white and green is a civil land airport; two quick whites between greens is military. A beacon on in daylight inside a surface area often means a ceiling under 1,000 feet or visibility under 3 miles, but nothing requires it, so check the weather. For pilot-controlled lighting, key the mike 7 times within 5 seconds; the lights stay on 15 minutes. **Glide slope lights:** on a two-bar VASI, far bar red and near bar white is on path, all white is high, all red is low. On a PAPI, two white and two red is on path; more white is higher, more red is lower.",
+     "**Wind, patterns and radio.** A wind sock's large end points into the wind. A tetrahedron's small end shows the landing direction, and it must not be used for wind. Patterns are left-hand unless the sectional shows **RP** or the segmented circle's pattern indicators say otherwise. Airplanes fly them at about **1,000 feet AGL** and join at 45° to the downwind leg at midfield, exactly where a drifting balloon may be. At a nontowered field, use the CTAF within 10 miles. At a towered one, call about 15 miles out and have two-way contact before entering Class D (or before 4 NM and up to 2,500 feet AGL at a tower in Class G). With a failed radio, steady green means cleared to land, and flashing green means return for landing.",
+     "**Wake turbulence.** Every wing sheds two counter-rotating vortices from rotation to touchdown, strongest when the airplane is heavy, clean and slow. They sink several hundred feet per minute, and near the ground they spread sideways at 2 to 3 knots, so a light crosswind can carry the downwind one off the runway, and a light quartering tailwind calls for the most caution. A balloon can't dodge: stay out from below and behind airplane paths, wait at least 2 minutes after a larger airplane's low approach or touch-and-go, give a hovering helicopter three rotor diameters, and land well short of a busy airport."
+    ],
+    "example": {
+     "setup": "You plan a launch just after sunrise from the grass north of Runway 9/27 at Oak Valley, a nontowered airport. The wind sock's large end points west.",
+     "steps": [
+      [
+       "The wind.",
+       "Large end into the wind: the wind is from the west. You'll drift east, and airplanes will use Runway 27, landing toward the west into the wind."
+      ],
+      [
+       "Who you'll meet.",
+       "Their final approach to Runway 27 comes in from the east, just south of your drift line. Look for landing traffic, and don't hang just below their glide path, where vortices sink."
+      ],
+      [
+       "What to say.",
+       "On the CTAF: “Oak Valley traffic, balloon four four one seven Bravo, launching from the grass north of Runway 27, drifting east just north of the Runway 27 final, Oak Valley.” Keep listening until you're 10 miles away."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "White, yellow, red",
+      "body": "Runway paint is white. Taxiway paint and hold lines are yellow. Red signs mean stop and get permission first.",
+      "alt": "Like road paint: white for the road, yellow for lines you don't cross casually, red for stop."
+     },
+     {
+      "title": "Runway numbers are compass directions",
+      "body": "Add a zero: Runway 27 points about 270° magnetic, and the same strip is Runway 9 from the other end.",
+      "alt": "The number is the way you face when you land on it."
+     },
+     {
+      "title": "Red over white",
+      "body": "On a VASI, red over white means on the glide path; all white is too high and all red too low. On a PAPI, two of each is just right.",
+      "alt": "Red over white, you're all right."
+     },
+     {
+      "title": "Airplanes leave invisible whirlpools",
+      "body": "Every wing sheds two spinning vortices that sink behind it and drift with the wind. A balloon can't steer around them, so stay out from under and behind airplane paths.",
+      "alt": "Like the wake behind a boat, but invisible and sinking."
+     }
+    ],
+    "sources": [
+     "AIM 2-1-2 (VASI, PAPI, tri-color, pulsating)",
+     "AIM 2-1-4, 2-1-8, 2-1-9, 2-1-10 (runway and taxiway lights, pilot control of lighting, beacons)",
+     "AIM 2-3-2 through 2-3-13 (markings and signs)",
+     "AIM 4-1-9 (CTAF, TBL 4-1-1)",
+     "AIM 4-1-13 (ATIS)",
+     "AIM 4-3-2, 4-3-3, 4-3-4 (towered operations, traffic patterns, segmented circle)",
+     "AIM 4-3-13 (TBL 4-3-1, light gun signals)",
+     "AIM 7-4 (Wake Turbulence)",
+     "FAA-H-8083-25C Ch. 14 (Airport Operations)",
+     "FAA-H-8083-11B Ch. 5 (Class D Airspace)",
+     "14 CFR 91.113(g)",
+     "14 CFR 91.125",
+     "14 CFR 91.126(b), (d)",
+     "14 CFR 91.129(c)",
+     "14 CFR 91.155(c)-(d)",
+     "FAA Chart Users' Guide (Right Traffic Patterns; airport beacon)"
     ]
    }
   }

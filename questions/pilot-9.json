@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "AIR-901",
+    "area": "AIR",
+    "topic": "Runway numbers: drift along a runway",
+    "stem": "Just after launching from the grass beside an airport where the magnetic variation is 12° east, a balloon drifts straight along Runway 27, from the end where the 27 is painted toward the far end. About what track is the balloon making?",
+    "choices": [
+      "About 270° true.",
+      "About 090° magnetic.",
+      "About 270° magnetic."
+    ],
+    "answer": 2,
+    "explanation": "Runway numbers are read from the approach direction and are the nearest one-tenth of the runway's magnetic azimuth, so moving from the 27 end toward the far end is a track of about 270° magnetic. With 12° east variation the true track is about 282°, so 270° true is wrong. About 090° is the reciprocal, the direction of Runway 9 at the other end.",
+    "ref": "AIM 2-3-3 (Runway Designators); AIM 4-3-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-902",
+    "area": "AIR",
+    "topic": "Runway numbers: rounding",
+    "stem": "A runway centerline has a magnetic azimuth of 076°. How will that end of the runway be numbered?",
+    "choices": [
+      "Runway 8.",
+      "Runway 7.",
+      "Runway 26."
+    ],
+    "answer": 0,
+    "explanation": "The runway number is the whole number nearest one-tenth of the magnetic azimuth: 7.6 rounds to 8, just as the AIM's example of 87° becomes Runway 9. Runway 7 comes from dropping the last digit instead of rounding. Runway 26 is the opposite end, whose azimuth is 256°.",
+    "ref": "AIM 2-3-3 (Runway Designators); AIM 4-3-6",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-903",
+    "area": "AIR",
+    "topic": "Marking colors",
+    "stem": "Where one runway crosses another, holding position markings are painted across the runway pavement. What color are they?",
+    "choices": [
+      "White, like all other runway markings.",
+      "Red, like the mandatory holding position signs.",
+      "Yellow, like every holding position marking."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-2: runway markings are white, but markings for taxiways, closed and hazardous areas, and holding positions are yellow, even when they lie on a runway. White applies to the runway's own markings such as numbers and centerline. Red is the background of the mandatory sign beside the marking, not the color of the painted lines.",
+    "ref": "AIM 2-3-2 (Marking Colors); AIM 2-3-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-904",
+    "area": "AIR",
+    "topic": "Displaced threshold",
+    "stem": "A runway has a displaced threshold: white arrows run along the centerline up to a wide white threshold bar. How may the pavement behind the bar be used?",
+    "choices": [
+      "For takeoffs either way, and landings from the opposite direction.",
+      "For taxiing only; no takeoffs or landings in either direction.",
+      "For landings either way, but not for any takeoffs."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-3-3: the portion behind a displaced threshold is available for takeoffs in either direction and for landings from the opposite direction; only landing in the arrows' direction may not touch down there. Taxi-only use describes the closed part of a relocated threshold, which is a different marking. Landing over the arrows short of the bar is exactly what the displacement prohibits.",
+    "ref": "AIM 2-3-3 (Displaced Threshold); FAA-H-8083-25C Ch. 14 (Displaced Threshold)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-905",
+    "area": "AIR",
+    "topic": "Relocated threshold",
+    "stem": "A NOTAM reads 10/28 W 900 CLSD, and a ten-foot-wide white bar is painted across the runway 900 feet in from its west end, the Runway 10 end. How does this affect Runway 28?",
+    "choices": [
+      "Runway 28 is unaffected; only Runway 10 loses any length.",
+      "Runway 28 may still roll out onto the closed 900 feet.",
+      "Runway 28 loses length too: the closed part is its far end."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-3: relocating a threshold closes a set portion of the approach end of one runway and also shortens the opposite-direction runway; the AIM uses this very NOTAM as its example. Unlike a displaced threshold, the closed part of a relocated threshold is not available for takeoff or landing in either direction (the PHAK notes it may still be used to taxi). So neither 'unaffected' nor 'roll out onto it' is right.",
+    "ref": "AIM 2-3-3 (Relocation of a Threshold); FAA-H-8083-25C Ch. 14 (Relocated Runway Threshold)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-906",
+    "area": "AIR",
+    "topic": "Chevrons",
+    "stem": "Large yellow chevrons are painted on paved area in line with the end of a runway. What do they mean?",
+    "choices": [
+      "It may be used for takeoff, but not for landing.",
+      "It may be used for taxiing, but not for landing.",
+      "It is unusable for landing, takeoff and taxiing."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-3: yellow chevrons mark pavement aligned with the runway, such as a blast pad or stopway, that is unusable for landing, takeoff and taxiing. Takeoff use belongs to the area behind a displaced threshold, which is marked with white arrows instead. Taxi-only use describes the closed part of a relocated threshold, not chevrons.",
+    "ref": "AIM 2-3-3 (Chevrons; FIG 2-3-7)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-907",
+    "area": "AIR",
+    "topic": "Closed runway markings",
+    "stem": "From the air, a balloon pilot sees yellow crosses at each end of a runway and every 1,000 feet along it, and its numbers and threshold markings have been removed. What does this show?",
+    "choices": [
+      "The runway is closed for the day only.",
+      "The runway is permanently closed.",
+      "The runway is open, but in daylight only."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-3-6: a permanently closed runway has its lights disconnected, its threshold, designation and touchdown markings obliterated, and yellow crosses at each end and at 1,000-foot intervals. A temporarily closed runway has crosses only at each end, or a raised lighted yellow cross, and may show no marking at all, which is why NOTAMs and ATIS must be checked. There is no runway marking for 'daylight only'.",
+    "ref": "AIM 2-3-6 (Closed Runways and Taxiways; FIG 2-3-22)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-908",
+    "area": "AIR",
+    "topic": "Holding position marking: which side holds",
+    "stem": "Runway holding position markings are four yellow lines across a taxiway, two solid and two dashed. How do they apply?",
+    "choices": [
+      "An aircraft on the dashed-line side must stop there before leaving.",
+      "Aircraft on either side must stop; the solid lines face the tower.",
+      "An aircraft on the solid-line side must stop there before the runway."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-5: the solid lines are always on the side where the aircraft must hold, so an aircraft approaching the runway on the solid side stops there. An aircraft leaving the runway meets the dashed side first and keeps going until it has crossed the whole marking. The marking's orientation has nothing to do with the tower's location.",
+    "ref": "AIM 2-3-5 (Runway Holding Position Markings)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-909",
+    "area": "AIR",
+    "topic": "Clear of the runway",
+    "stem": "After landing, when is an aircraft considered clear of the runway?",
+    "choices": [
+      "When its main wheels have rolled off the runway pavement.",
+      "When all of it has crossed the holding position marking.",
+      "When it has passed the first taxiway location sign."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-3-5: an aircraft exiting a runway is not clear until all parts of it have crossed the applicable holding position marking; the yellow runway boundary sign facing the runway is a cue for that point. Wheels off the pavement can still leave the tail inside the runway safety area. A location sign only names the taxiway the aircraft is on.",
+    "ref": "AIM 2-3-5; AIM 2-3-9 (Runway Boundary Sign)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-910",
+    "area": "AIR",
+    "topic": "ILS critical area holding position",
+    "stem": "On a taxiway, a pilot sees a red sign with white letters reading ILS, beside a yellow marking of two solid lines joined by pairs of crossbars, like a ladder. What does it mean?",
+    "choices": [
+      "Hold there when told to, and don't cross it without an ATC clearance.",
+      "It marks an ILS antenna; taxi past it unless a NOTAM says otherwise.",
+      "It is the runway holding position; cross only once cleared for takeoff."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-3-5 and 2-3-8: this is the holding position for the ILS critical area. When ATC says to hold short of it, no part of the aircraft may extend beyond the marking, and a pilot approaching it must not cross without a clearance. It is a mandatory marking, not an advisory one, and it is separate from the runway holding position, which uses two solid and two dashed lines.",
+    "ref": "AIM 2-3-5 (Holding Position Markings for ILS); AIM 2-3-8 (ILS Critical Area Holding Position Sign)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-911",
+    "area": "AIR",
+    "topic": "Mandatory instruction signs",
+    "stem": "What do airport signs with a red background and a white inscription denote?",
+    "choices": [
+      "A runway or critical area entrance, or an area aircraft may not enter.",
+      "Which taxiway or runway the aircraft is on, to confirm its position.",
+      "Which way to turn to reach a destination elsewhere on the airport."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-3-8: mandatory instruction signs are red with white letters and mark an entrance to a runway or critical area, or a place aircraft are prohibited from entering, such as the No Entry sign. Location signs, which say where you are, are black with yellow letters. Direction and destination signs, which say where to turn, are yellow with black letters.",
+    "ref": "AIM 2-3-8; AIM 2-3-9; AIM 2-3-10; AIM 2-3-11",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-912",
+    "area": "AIR",
+    "topic": "Location signs",
+    "stem": "A sign has a black background, a yellow letter B and a yellow border. What does it tell the pilot?",
+    "choices": [
+      "Turn ahead to reach Taxiway B.",
+      "Hold short of Taxiway B ahead.",
+      "The aircraft is on Taxiway B."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-9: a taxiway location sign is black with a yellow inscription and border and names the taxiway the aircraft is on. A sign pointing the way to Taxiway B would be a direction sign, yellow with black letters and an arrow. Holding short of a taxiway is an ATC instruction tied to a dashed yellow line across the taxiway, not to this sign.",
+    "ref": "AIM 2-3-9 (Taxiway Location Sign); AIM 2-3-10; AIM 2-3-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-913",
+    "area": "AIR",
+    "topic": "Destination signs",
+    "stem": "A yellow sign with black letters reads FUEL, with an arrow pointing left. What kind of sign is it?",
+    "choices": [
+      "An information sign, warning that fuel trucks use this area.",
+      "A destination sign, showing the taxi route to the fuel area.",
+      "A mandatory sign, closing this area to aircraft without fuel."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-3-11: destination signs are yellow with black letters, always carry an arrow, and show a taxi route to a place on the airport; FUEL is one of the AIM's listed legends. Information signs are also yellow and black but give facts such as radio frequencies or noise abatement, without a route arrow. Mandatory signs are red with white letters.",
+    "ref": "AIM 2-3-11 (Destination Signs); AIM 2-3-12",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-914",
+    "area": "AIR",
+    "topic": "Runway distance remaining sign",
+    "stem": "Beside a runway, a sign with a black background shows a white numeral 3. What does it mean?",
+    "choices": [
+      "About 3,000 feet of runway remain.",
+      "The runway is 3,000 feet long in all.",
+      "Taxiway 3 is the next exit ahead."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-3-13: runway distance remaining signs are black with a white numeral giving the landing runway left, in thousands of feet; the sign showing 1 sits at least 950 feet from the end. They count down along the runway, so they don't state its total length. Taxiways are named with letters, and their location signs are black with yellow letters.",
+    "ref": "AIM 2-3-13 (Runway Distance Remaining Signs)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-915",
+    "area": "AIR",
+    "topic": "Runway holding position sign: 15-33",
+    "stem": "At a taxiway's holding position, a red sign with white letters reads 15-33. What does the order of the numbers tell the pilot?",
+    "choices": [
+      "Runway 15's threshold lies to the left and Runway 33's to the right.",
+      "Two separate runways cross ahead: 15 to the left and 33 to the right.",
+      "Runway 15 is in use for takeoffs and Runway 33 for landings today."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-3-8: the numbers on a runway holding position sign are arranged to match the thresholds, so 15-33 means the Runway 15 threshold is to the left and the Runway 33 threshold is to the right. 15 and 33 are the two ends of one runway, not two runways. The sign never says which end is in use; ATIS or ATC does.",
+    "ref": "AIM 2-3-8 (Runway Holding Position Sign; FIG 2-3-24)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-916",
+    "area": "AIR",
+    "topic": "Taxiway edge markings",
+    "stem": "A taxiway edge is marked with a continuous double yellow line. What does it say about the pavement beyond the line?",
+    "choices": [
+      "It is an apron that aircraft may freely use.",
+      "It is a runway, so crossing needs a clearance.",
+      "It is not meant for aircraft, such as a shoulder."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-3-4: a continuous double yellow edge line separates the taxiway from a shoulder or other paved surface not intended for aircraft. Where the neighboring pavement is meant for aircraft, such as an apron, the edge is a dashed double yellow line instead. Runway entrances are marked by holding position markings, not edge lines.",
+    "ref": "AIM 2-3-4 (Taxiway Edge Markings; FIG 2-3-9)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-917",
+    "area": "AIR",
+    "topic": "Movement and nonmovement areas",
+    "stem": "A balloon crew sets up for inflation on the ramp of a towered airport, near a yellow boundary of one solid line and one dashed line. What does the boundary mark?",
+    "choices": [
+      "The solid side is the movement area, under ATC control.",
+      "The dashed side is the movement area, under ATC control.",
+      "Both sides are ramp; the lines guide fuel trucks only."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-3-6: nonmovement area boundary markings show the edge of the movement area, the area under ATC. The solid line is on the nonmovement side and the dashed line is on the movement side, so the crew should stay on the solid-line side unless cleared. The lines are not a vehicle roadway, which is marked with white lines.",
+    "ref": "AIM 2-3-6 (Nonmovement Area Boundary Markings; Vehicle Roadway Markings)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-918",
+    "area": "AIR",
+    "topic": "Taxiway lights",
+    "stem": "At night, an airport shows rows of blue lights along the taxiway edges and a line of green lights down the middle. What are they?",
+    "choices": [
+      "Taxiway edge lights (blue) and taxiway centerline lights (green).",
+      "Runway edge lights (blue) and runway centerline lights (green).",
+      "Threshold lights (blue) and runway end lights (green)."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-1-10: taxiway edge lights are blue, and taxiway centerline lights are steady green. Runway edge lights are white (yellow over the last part of instrument runways), and runway centerline lights are white, then alternating red and white, then red near the end. Threshold lights show green to landing aircraft; no runway light is blue.",
+    "ref": "AIM 2-1-10 (Taxiway Lights); AIM 2-1-4; AIM 2-1-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-919",
+    "area": "AIR",
+    "topic": "Runway edge lights: the caution zone",
+    "stem": "On an instrument runway, the white edge lights turn yellow near the far end. What does the yellow mark?",
+    "choices": [
+      "The start of a displaced threshold area unusable for landing.",
+      "A caution zone: the last 2,000 feet or half the runway, if less.",
+      "A closed section of runway beyond which no landing is allowed."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-1-4: runway edge lights are white, except that on instrument runways yellow replaces white on the last 2,000 feet or half the runway length, whichever is less, as a caution zone for landings. A displaced threshold is shown by markings, not yellow edge lights. A closed section would be unlighted and marked with yellow crosses.",
+    "ref": "AIM 2-1-4 (Runway Edge Light Systems)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-920",
+    "area": "AIR",
+    "topic": "Runway end lights",
+    "stem": "The lights across the end of a runway show two colors. What does each aircraft see?",
+    "choices": [
+      "Green toward a landing aircraft; red toward one taking off.",
+      "Red toward a landing aircraft; green toward one taking off.",
+      "White to both, with yellow added toward one taking off."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-1-4: the lights marking each end of the runway emit green outward, so landing aircraft see the threshold in green, and red toward the runway, so a departing aircraft sees the end of the runway in red. The reversed pair has the meanings backward. White and yellow are runway edge colors, not end lights.",
+    "ref": "AIM 2-1-4 (Runway Edge Light Systems)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-921",
+    "area": "AIR",
+    "topic": "Airport beacon colors",
+    "stem": "At dusk, a balloon pilot sees an airport beacon flashing alternately green and white, with two quick white flashes between each green. What kind of airport is it?",
+    "choices": [
+      "A civil land airport.",
+      "A military airport.",
+      "A lighted heliport."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-1-9: military airport beacons flash white and green like civil land airports, but are told apart by the dual-peaked (two quick) white flashes between the greens. A civil land airport flashes single white and green, a water airport white and yellow, and a heliport green, yellow and white.",
+    "ref": "AIM 2-1-9 (Airport/Heliport Beacons); FAA-H-8083-25C Ch. 14 (Airport Beacon)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-922",
+    "area": "AIR",
+    "topic": "Airport beacon in daylight",
+    "stem": "A balloon crew sets up at sunrise inside the Class E surface area of a nearby airport and sees its rotating beacon still on in daylight. What should the pilot conclude?",
+    "choices": [
+      "It means nothing, because daytime beacons are run only by timers and photocells.",
+      "It proves IFR conditions exist, because a daytime beacon is required in IFR weather.",
+      "It often means a ceiling under 1,000 feet or visibility under 3 miles; check the weather."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-1-9: in a Class B, C, D or E surface area, a beacon on in daylight often indicates ground visibility under 3 miles and/or a ceiling under 1,000 feet, but there is no regulatory requirement for daylight operation, so it proves nothing by itself. Under 91.155(c) and (d), VFR flight under a ceiling below 1,000 feet, or a takeoff with less than 3 miles visibility, is not allowed in that surface area. So the pilot should get the official weather before launching.",
+    "ref": "AIM 2-1-9; 14 CFR 91.155(c)-(d)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-923",
+    "area": "AIR",
+    "topic": "Pilot-controlled lighting: how to key",
+    "stem": "Before a predawn launch from a nontowered airport with pilot-controlled lighting, the pilot wants the lights at full brightness. How does the AIM say to key the microphone on the published frequency?",
+    "choices": [
+      "3 times within 5 seconds.",
+      "7 times within 5 seconds.",
+      "5 times within 10 seconds."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-1-8: keying the mike 7 times within 5 seconds gives the highest intensity available, and the AIM suggests always keying 7 times first, then stepping down if wanted. Keying 5 times gives medium or lower intensity, and 3 times the lowest. Every step uses a 5-second window, not 10.",
+    "ref": "AIM 2-1-8 (Pilot Control of Airport Lighting; TBL 2-1-3); FAA-H-8083-25C Ch. 14 (Figure 14-34)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-924",
+    "area": "AIR",
+    "topic": "Pilot-controlled lighting: how long",
+    "stem": "Once radio-controlled airport lights are turned on, how long do they stay lit?",
+    "choices": [
+      "15 minutes from the most recent activation.",
+      "30 minutes from the first activation.",
+      "Until the pilot keys the mike 3 times."
+    ],
+    "answer": 0,
+    "explanation": "AIM 2-1-8: all lighting stays on for 15 minutes from the most recent time it was activated, so keying again restarts the period. It may not be turned off early, except for 1-step and 2-step REILs. Keying 3 times sets the lowest intensity (or turns REILs off); it does not turn the runway lights off.",
+    "ref": "AIM 2-1-8 (Pilot Control of Airport Lighting)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-925",
+    "area": "AIR",
+    "topic": "Runway end identifier lights",
+    "stem": "At night, a pair of synchronized flashing lights stands one on each side of a runway threshold. What are they for?",
+    "choices": [
+      "Showing that the runway is closed and must not be used for landing.",
+      "Marking the touchdown zone, starting at the runway threshold.",
+      "Quick, positive identification of the approach end of that runway."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-1-3: runway end identifier lights (REIL) are a pair of synchronized flashing lights beside the threshold, used to identify the approach end of a runway, especially among other lights or in poor visibility. A closed runway is shown by yellow crosses or a lighted yellow cross. Touchdown zone lights are steady white bars in the runway pavement, starting 100 feet past the threshold.",
+    "ref": "AIM 2-1-3 (REIL); AIM 2-1-5 (Touchdown Zone Lights); AIM 2-3-6",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-926",
+    "area": "AIR",
+    "topic": "Two-bar VASI: reading the bars",
+    "stem": "On final to a runway with a two-bar VASI, a pilot sees the far bar red and the near bar white. Where is the aircraft?",
+    "choices": [
+      "Above the glide path.",
+      "Below the glide path.",
+      "On the glide path."
+    ],
+    "answer": 2,
+    "explanation": "Each VASI light unit sends white in the upper part of its beam and red in the lower part. On the glide path the pilot is above the near bar's beam split and below the far bar's, so the far bar shows red and the near bar white. Both bars white means above the glide path, and both red means below it.",
+    "ref": "AIM 2-1-2 (VASI; FIG 2-1-2); FAA-H-8083-25C Ch. 14 (Figure 14-29)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-927",
+    "area": "AIR",
+    "topic": "Two-bar VASI: all red",
+    "stem": "Both bars of a two-bar VASI appear red to a pilot on final. What does it mean?",
+    "choices": [
+      "Below the glide path.",
+      "On the glide path.",
+      "Above the glide path."
+    ],
+    "answer": 0,
+    "explanation": "Seeing the red, lower part of both beams means the aircraft is below the glide path, the indication that calls for a correction. On the glide path the far bar is red and the near bar white. Above the glide path both bars appear white.",
+    "ref": "AIM 2-1-2 (VASI; FIG 2-1-2); FAA-H-8083-25C Ch. 14 (Figure 14-29)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-928",
+    "area": "AIR",
+    "topic": "PAPI: on glide path",
+    "stem": "A PAPI is a single row of four lights beside the runway. Which indication shows a normal 3° glide path?",
+    "choices": [
+      "Three white lights and one red light.",
+      "Four white lights and no red lights.",
+      "Two white lights and two red lights."
+    ],
+    "answer": 2,
+    "explanation": "On a typical 3° PAPI, two white and two red mean on the glide path. Three white and one red mean slightly high (about 3.2°), and four white mean high (more than 3.5°). One white and three red mean slightly low (about 2.8°), and four red mean low (less than 2.5°).",
+    "ref": "AIM 2-1-2 (PAPI; FIG 2-1-5); FAA-H-8083-25C Ch. 14 (Figure 14-30)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-929",
+    "area": "AIR",
+    "topic": "PAPI: four red",
+    "stem": "All four PAPI lights appear red. What does it mean on a typical 3° installation?",
+    "choices": [
+      "Slightly low: about 2.8°.",
+      "Slightly high: about 3.2°.",
+      "Low: below about 2.5°."
+    ],
+    "answer": 2,
+    "explanation": "Four red lights mean low, under about 2.5°. One white and three red is the slightly low (about 2.8°) indication, and three white and one red is slightly high (about 3.2°). Two of each is on the glide path.",
+    "ref": "AIM 2-1-2 (PAPI; FIG 2-1-5); FAA-H-8083-25C Ch. 14 (Figure 14-30)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-930",
+    "area": "AIR",
+    "topic": "Tri-color VASI: dark amber",
+    "stem": "A tri-color visual approach slope indicator is a single light. Descending from the green indication, a pilot sees a dark amber color just before the light turns red. What does the dark amber mean?",
+    "choices": [
+      "The aircraft has drifted back above the glide path again.",
+      "It is a normal transition from on the glide path to below it.",
+      "The light has failed and should no longer be used."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-1-2: a tri-color system shows red below the glide path, green on it and amber above it, and when an aircraft descends from green to red the pilot may see a dark amber during the transition. The PHAK warns not to mistake that dark amber for the above-glide-path indication. It is not a failure signal.",
+    "ref": "AIM 2-1-2 (Tri-color Systems); FAA-H-8083-25C Ch. 14 (Figure 14-31)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-931",
+    "area": "AIR",
+    "topic": "Pulsating VASI",
+    "stem": "A pulsating visual approach slope indicator shows a pulsating white light. Where is the aircraft?",
+    "choices": [
+      "On the glide path.",
+      "Slightly below the glide path.",
+      "Above the glide path."
+    ],
+    "answer": 2,
+    "explanation": "AIM 2-1-2: on a pulsating system, pulsating white means above the glide path. On the glide path the light is steady white (or alternating red and white), slightly below it is steady red, and further below the red begins to pulsate. The pulse rate increases the farther the aircraft is from the glide path.",
+    "ref": "AIM 2-1-2 (Pulsating Systems); FAA-H-8083-25C Ch. 14 (Pulsating VASIs)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-932",
+    "area": "AIR",
+    "topic": "VASI: obstruction clearance",
+    "stem": "Within what area does a VASI's visual glide path provide safe obstruction clearance?",
+    "choices": [
+      "Within 30° of the extended runway centerline, out to 10 NM.",
+      "Within 10° of the extended runway centerline, out to 4 NM.",
+      "Anywhere the lights are visible, up to 20 miles at night."
+    ],
+    "answer": 1,
+    "explanation": "AIM 2-1-2: a VASI provides safe obstruction clearance within plus or minus 10° of the extended runway centerline and out to 4 NM from the threshold, and descent on it should not start until the aircraft is aligned with the runway. The lights can be seen up to 20 miles or more at night, but being able to see them promises no clearance that far out. A PAPI's clearance area reaches 3.4 NM.",
+    "ref": "AIM 2-1-2 (VASI; PAPI); FAA-H-8083-25C Ch. 14 (VASI)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-933",
+    "area": "AIR",
+    "topic": "Wind sock: wind direction",
+    "stem": "Before launching from an airport, a balloon crew checks the wind sock. Its large end points west, and the sock is about half extended. Which way should the balloon drift just after liftoff?",
+    "choices": [
+      "Toward the east, because the wind is from the west.",
+      "Toward the west, because the sock points downwind.",
+      "It can't be told; a wind sock shows only wind speed."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-3-4: the large end of a wind cone or wind sock points into the wind, so a large end pointing west means a west wind, and the balloon drifts east near the surface. The sock's small end, not its large end, points downwind. A sock shows both direction and, by how far it extends, an idea of strength; winds aloft may still differ.",
+    "ref": "AIM 4-3-4 (Wind Direction Indicator); FAA-H-8083-25C Ch. 14 (Wind Direction Indicators)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-934",
+    "area": "AIR",
+    "topic": "Tetrahedron",
+    "stem": "A tetrahedron sits in the middle of the segmented circle at a nontowered airport. What does it show, and how should a pilot use it?",
+    "choices": [
+      "Its small end points into the wind; use it as the main wind source.",
+      "Its small end points the landing direction; don't use it for wind.",
+      "Its large end points the landing direction; it also shows wind speed."
+    ],
+    "answer": 1,
+    "explanation": "AIM 4-3-4: a tetrahedron is a landing direction indicator whose small end points in the direction of landing, and pilots are cautioned against using it for any other purpose, including wind direction. In light or calm wind it may not even match the calm-wind runway. At a towered airport it applies only when the tower is closed.",
+    "ref": "AIM 4-3-4 (Landing Direction Indicator); FAA-H-8083-25C Ch. 14 (Traffic Patterns)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-935",
+    "area": "AIR",
+    "topic": "Wind tee versus wind sock",
+    "stem": "At an airport with both a wind tee and a wind sock, the tee's cross bar points north while the sock's large end points northwest. What is the best explanation?",
+    "choices": [
+      "The sock lags behind wind shifts, so the tee shows the real wind.",
+      "The tee may be set by hand to the runway in use; trust the sock.",
+      "The tee shows the wind at pattern altitude; the sock, the surface."
+    ],
+    "answer": 1,
+    "explanation": "AIM 4-3-4: where a wind sock is collocated with a wind tee, the tee may be manually aligned with the runway in use to show the landing direction. The PHAK adds that because a tee or tetrahedron can be set by hand, the pilot should also look at the wind sock. Both devices sit at the surface; neither measures wind aloft.",
+    "ref": "AIM 4-3-4; FAA-H-8083-25C Ch. 14 (Wind Direction Indicators)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-936",
+    "area": "AIR",
+    "topic": "Wind sock: gusts",
+    "stem": "Watching an airport wind sock before launch, a pilot sees it swing back and forth, stretching out and then drooping every few seconds. What does that suggest?",
+    "choices": [
+      "The wind is steady and light.",
+      "The wind is calm at the surface.",
+      "The wind is gusting."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK says the wind sock is a good source of information because it shows direction and lets the pilot estimate speed and gust factor: it extends straighter in strong wind and tends to move back and forth when the wind is gusting. A steady light wind leaves it partly extended and still. A calm wind leaves it hanging limp.",
+    "ref": "FAA-H-8083-25C Ch. 14 (Wind Direction Indicators)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-937",
+    "area": "AIR",
+    "topic": "Segmented circle: traffic pattern indicators",
+    "stem": "In a segmented circle, short traffic pattern indicators are set at right angles to the landing strip indicators. What do they show?",
+    "choices": [
+      "The direction of turns, where traffic differs from a left pattern.",
+      "The direction of calm-wind takeoffs and landings for each runway.",
+      "The wind direction whenever the wind sock is out of service."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-3-4: traffic pattern indicators are installed in pairs with the landing strip indicators and show the direction of turns when there is a variation from the normal left traffic pattern. The landing strip indicators show the runway alignment, and the tetrahedron, if installed, shows the landing direction. Wind comes from the wind cone, sock or tee, never from pattern indicators.",
+    "ref": "AIM 4-3-4 (Traffic Pattern Indicators); FAA-H-8083-25C Ch. 14 (Figure 14-38)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-938",
+    "area": "AIR",
+    "topic": "Segmented circle: reading right traffic",
+    "stem": "At a nontowered airport, the segmented circle's traffic pattern indicator for landing Runway 36 extends to the east from the south (approach) end of the landing strip indicator. Which pattern is flown for Runway 36?",
+    "choices": [
+      "A left-hand pattern, flown on the east side.",
+      "A left-hand pattern, flown on the west side.",
+      "A right-hand pattern, flown on the east side."
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-3-4 says to mentally enlarge the indicator for the runway in use: base and final then appear. Here base is on the east side, so the downwind leg runs south on the east side, and every turn toward final is to the right. A left-hand pattern for Runway 36 would lie west of the runway.",
+    "ref": "AIM 4-3-4 (Segmented circle); FAA-H-8083-25C Ch. 14 (Figure 14-38)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-939",
+    "area": "AIR",
+    "topic": "Right traffic on the sectional",
+    "stem": "A sectional airport data block for a nontowered airport ends with RP 16, 34. What does it mean?",
+    "choices": [
+      "Runways 16 and 34 are restricted to private use.",
+      "Runways 16 and 34 use right-hand traffic patterns.",
+      "Runways 16 and 34 have pilot-controlled lighting."
+    ],
+    "answer": 1,
+    "explanation": "AIM 4-3-3 and the Chart Users' Guide: right traffic patterns are shown with RP followed by the runway numbers; all other turns are to the left. An asterisk, *RP, sends the pilot to the Chart Supplement for special conditions, and right patterns are not shown at airports with full-time towers. Private use and pilot-controlled lighting have their own symbols.",
+    "ref": "AIM 4-3-3; FAA Chart Users' Guide (VFR Terms: Right Traffic Patterns)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-940",
+    "area": "AIR",
+    "topic": "Traffic pattern altitude",
+    "stem": "A balloon will drift across a nontowered airport that has no published pattern altitude. At about what height does the AIM recommend that propeller airplanes fly its traffic pattern?",
+    "choices": [
+      "1,500 feet AGL.",
+      "500 feet AGL.",
+      "1,000 feet AGL."
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-3-3: propeller-driven aircraft enter the pattern at 1,000 feet AGL unless another altitude is published. 1,500 feet AGL is for large and turbine aircraft, and 500 feet AGL is the helicopter pattern. A balloon crossing at about 1,000 feet AGL is right at pattern altitude, so it should announce on the CTAF and keep looking.",
+    "ref": "AIM 4-3-3 (Traffic Patterns); FAA-H-8083-25C Ch. 14 (Traffic Patterns)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-941",
+    "area": "AIR",
+    "topic": "Traffic pattern entry",
+    "stem": "A balloon pilot drifting past a nontowered airport wants to know where arriving airplanes will appear. According to the PHAK, how do airplanes preferably enter the pattern from the downwind side?",
+    "choices": [
+      "Straight in on a long final, descending to land.",
+      "At 45° to the downwind leg, joining at midfield.",
+      "Over midfield, spiraling down to pattern altitude."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK says nontowered patterns are always entered at pattern altitude, and the preferred entry from the downwind side is on a course 45° to the downwind leg, joining at midfield. Straight-in approaches are allowed but are not the standard entry and must not disrupt the flow. Aircraft coming from the other side cross midfield at least 500 feet above pattern altitude, descend well clear, then turn to the 45° entry; descending entries should be avoided.",
+    "ref": "FAA-H-8083-25C Ch. 14 (Nontowered Airport; Figure 14-2; Clearing Procedures); AIM 4-3-3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-942",
+    "area": "AIR",
+    "topic": "Traffic pattern legs",
+    "stem": "An airplane is flying parallel to the landing runway, in the direction opposite to landing. Which leg of the traffic pattern is it on?",
+    "choices": [
+      "The downwind leg.",
+      "The base leg.",
+      "The crosswind leg."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-3-2: the downwind leg is a flight path parallel to the landing runway in the opposite direction of landing. The base leg is at right angles to the runway off its approach end, and the crosswind leg is at right angles off its takeoff end.",
+    "ref": "AIM 4-3-2 (FIG 4-3-1, components of a traffic pattern)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-943",
+    "area": "AIR",
+    "topic": "91.126: direction of turns",
+    "stem": "In Class G airspace, 14 CFR 91.126 requires left turns when approaching to land at an airport without an operating tower, unless markings show right turns. Whom does that turn requirement name?",
+    "choices": [
+      "Pilots of all aircraft, balloons included.",
+      "Only pilots of large or turbine aircraft.",
+      "Pilots of powered fixed-wing aircraft."
+    ],
+    "answer": 2,
+    "explanation": "91.126(b)(1) applies the left-turn rule to powered fixed-wing aircraft, and (b)(2) tells pilots of other powered aircraft to avoid their flow. A balloon is not engine driven (14 CFR 1.1), so neither paragraph names it, though the AIM asks en route pilots to stay alert for and avoid pattern traffic. Nothing in the rule limits it to large or turbine aircraft.",
+    "ref": "14 CFR 91.126(b); 14 CFR 1.1 (Balloon); AIM 4-3-3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-944",
+    "area": "AIR",
+    "topic": "Right-of-way when landing",
+    "stem": "Two airplanes are approaching an airport to land. Under 14 CFR 91.113, which has the right-of-way?",
+    "choices": [
+      "The lower one, but it may not cut in front of one on final.",
+      "The higher one, since it has farther to descend to land.",
+      "The faster one, since it will reach the runway soonest."
+    ],
+    "answer": 0,
+    "explanation": "91.113(g): when two or more aircraft are approaching an airport to land, the aircraft at the lower altitude has the right-of-way, but it may not use that to cut in front of or overtake an aircraft on final. An aircraft on final or landing also has the right-of-way over other aircraft in flight or on the surface. Altitude to lose and speed earn no right-of-way.",
+    "ref": "14 CFR 91.113(g); AIM 4-3-4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-945",
+    "area": "AIR",
+    "topic": "Landing near an airport",
+    "stem": "A balloon is drifting toward an airport in Class D airspace, and the pilot plans to land soon. What does the Balloon Flying Handbook advise?",
+    "choices": [
+      "Land on the airport, since balloons have the right-of-way.",
+      "Land well short of the airport, as courtesy and common sense.",
+      "Cross the airport low, since right-of-way protects the balloon."
+    ],
+    "answer": 1,
+    "explanation": "The BFH notes that balloons do have the right-of-way over powered aircraft under 91.113, but says pilots near an airport should use discretion and would cause less disruption by landing well short of it, calling this common courtesy and common sense. Right-of-way does not make landing on the airport, or crossing it low, the better choice. In Class D the balloon also needs two-way radio contact before entering (91.129).",
+    "ref": "FAA-H-8083-11B Ch. 5 (Class D Airspace); 14 CFR 91.113; 14 CFR 91.129(c)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-946",
+    "area": "AIR",
+    "topic": "CTAF when the tower is closed",
+    "stem": "A balloon launches at dawn near an airport whose part-time tower has not opened yet. On which frequency should the pilot self-announce near that airport?",
+    "choices": [
+      "MULTICOM 122.9, since the tower is not operating.",
+      "The ground control frequency, until the tower opens.",
+      "The airport's CTAF, which may be the tower frequency."
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-1-9: when the tower is not in operation, pilots self-announce on the CTAF, which may be a UNICOM, MULTICOM, FSS or tower frequency and is listed in the Chart Supplement. MULTICOM 122.9 is for airports with no tower, FSS or UNICOM. Ground control handles taxi traffic only while the tower is open.",
+    "ref": "AIM 4-1-9 (TBL 4-1-1); FAA-H-8083-25C Ch. 14 (Figure 14-1)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-947",
+    "area": "AIR",
+    "topic": "UNICOM",
+    "stem": "What is a UNICOM station?",
+    "choices": [
+      "An FAA facility that separates traffic at airports without a tower.",
+      "A nongovernment radio station that may give wind and runway information.",
+      "An FAA flight service station that gives weather briefings."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK describes UNICOM as a nongovernment air/ground radio station at public-use airports without a tower or FSS; on request it may give weather, wind direction, the recommended runway or other information. No one separates traffic at a nontowered airport; pilots self-announce and see and avoid. Flight service is an FAA service, and UNICOM is not part of it.",
+    "ref": "FAA-H-8083-25C Ch. 14 (Nontowered Airport; Figure 14-1); AIM 4-1-9",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-948",
+    "area": "AIR",
+    "topic": "ATIS: initial contact",
+    "stem": "Before calling the tower to drift through its Class D airspace, a balloon pilot listens to the ATIS, which ends 'advise on initial contact you have information Kilo.' What should the pilot do on first contact?",
+    "choices": [
+      "Say that information Kilo was received.",
+      "Read back the full ATIS weather report.",
+      "Ask the tower to repeat the ATIS weather."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-1-13: pilots should tell the controller on initial contact that they have the ATIS by repeating its code word, and the controller may then omit those items. ATIS exists to relieve frequency congestion, so reading the weather back or asking for it again defeats its purpose.",
+    "ref": "AIM 4-1-13 (ATIS); FAA-H-8083-25C Ch. 14 (ATIS)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-949",
+    "area": "AIR",
+    "topic": "ATIS: no sky or visibility given",
+    "stem": "An ATIS gives the wind, temperature and altimeter but says nothing about sky condition or visibility. What may the pilot assume?",
+    "choices": [
+      "Ceiling 3,000 feet or above and visibility 3 miles or more.",
+      "Ceiling 5,000 feet or above and visibility 5 miles or more.",
+      "Nothing; the sky report is missing and must be requested."
+    ],
+    "answer": 1,
+    "explanation": "AIM 4-1-13: ceiling, sky condition, visibility and obstructions to vision may be left out of the ATIS when the ceiling is above 5,000 feet and the visibility is more than 5 miles, and their absence means 5,000 and 5 or better. 3,000 and 3 is not the ATIS standard. The omission is deliberate, not a missing report.",
+    "ref": "AIM 4-1-13 (ATIS, NOTE)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-950",
+    "area": "AIR",
+    "topic": "Initial call to a tower",
+    "stem": "According to the AIM, about how far from a towered airport should a pilot make the initial call-up?",
+    "choices": [
+      "About 15 miles out.",
+      "About 3 miles out.",
+      "At the Class D boundary."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-3-2: initial callup should be made about 15 miles from the airport. 91.129(c) requires two-way radio communications to be established before entering Class D, so waiting until the boundary, or until 3 miles out (inside a typical Class D), is too late. The BFH notes a balloon's first call is often made about 5 statute miles out, but that is not the AIM's figure.",
+    "ref": "AIM 4-3-2; 14 CFR 91.129(c)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-951",
+    "area": "AIR",
+    "topic": "Towered airport without Class D",
+    "stem": "A balloon drifts toward an airport in Class G airspace that has an operating control tower but no Class D surface area. Under 14 CFR 91.126(d), when must two-way radio contact with the tower be established?",
+    "choices": [
+      "Only if the pilot intends to land at or take off from that airport.",
+      "Before 4 NM from the airport, up to and including 2,500 feet AGL.",
+      "Before 10 NM from the airport, at any altitude below 10,000 feet."
+    ],
+    "answer": 1,
+    "explanation": "91.126(d) applies to anyone operating to, from, through or on an airport with an operating tower in Class G, and requires contact before 4 NM, up to and including 2,500 feet AGL; so passing through counts, not just landing. The AIM notes that some towered airports have no Class D because they lack weather reporting. Ten miles is the AIM's CTAF guidance for nontowered airports, not this rule.",
+    "ref": "14 CFR 91.126(d); AIM 4-3-2",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-952",
+    "area": "AIR",
+    "topic": "Light gun: steady green in flight",
+    "stem": "A balloon with a failed radio is approaching a towered airport where the pilot hopes to land. The tower aims a steady green light at the balloon. What does it mean?",
+    "choices": [
+      "Return for landing; wait for another signal.",
+      "Cleared to land.",
+      "Cleared to pass through, but not to land."
+    ],
+    "answer": 1,
+    "explanation": "91.125 and AIM 4-3-13: steady green to an aircraft in flight means cleared to land, the clearance a pilot with a failed radio needs before landing at a towered airport (91.129(d)(2) in Class D, 91.126(d) in Class G). 'Return for landing' is flashing green, which is followed by steady green at the proper time. There is no light signal that grants a transit.",
+    "ref": "14 CFR 91.125; AIM 4-3-13 (TBL 4-3-1); 14 CFR 91.129(d)(2); 14 CFR 91.126(d)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-953",
+    "area": "AIR",
+    "topic": "Light gun: flashing green in flight",
+    "stem": "A balloon with a failed radio drifts toward a towered airport, and the tower flashes a green light at it. What does the signal mean in flight?",
+    "choices": [
+      "Return for landing; a steady green will follow.",
+      "Cleared to taxi clear of the runway in use.",
+      "Cleared to land now on the runway in use."
+    ],
+    "answer": 0,
+    "explanation": "91.125: flashing green to an aircraft in flight means return for landing, to be followed by steady green at the proper time. Flashing green to an aircraft on the ground means cleared to taxi, and 'taxi clear of the runway in use' is the ground meaning of flashing red. Cleared to land is steady green.",
+    "ref": "14 CFR 91.125; AIM 4-3-13 (TBL 4-3-1)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-954",
+    "area": "AIR",
+    "topic": "Wake turbulence: when it starts",
+    "stem": "During a departure, when does an airplane begin to generate wingtip vortices?",
+    "choices": [
+      "When it rotates and the wings start making lift.",
+      "When it starts its takeoff roll at full power.",
+      "When it reaches its climb speed after takeoff."
+    ],
+    "answer": 0,
+    "explanation": "AIM 7-4-4: trailing vortices are a by-product of wing lift, so an aircraft generates them from the moment it rotates on takeoff until it touches down; pilots should note the rotation point of a departing aircraft. Engine power during the takeoff roll makes jet blast or prop wash, not wingtip vortices. Vortices already exist well before climb speed.",
+    "ref": "AIM 7-4-4 (Vortex Behavior); FAA-H-8083-25C Ch. 14 (Vortex Behavior)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-955",
+    "area": "AIR",
+    "topic": "Wake turbulence: strongest vortices",
+    "stem": "Which condition makes an aircraft's wake vortices strongest?",
+    "choices": [
+      "Light, clean and fast.",
+      "Heavy, flaps down and fast.",
+      "Heavy, clean and slow."
+    ],
+    "answer": 2,
+    "explanation": "AIM 7-4-3: vortex strength increases with operating weight and with a decrease in speed, and a 'dirty' configuration (flaps and gear extended) hastens wake decay, so the strongest wake comes from an aircraft that is heavy, clean and slow. A light, fast aircraft makes a weaker wake, and extended flaps weaken it further.",
+    "ref": "AIM 7-4-3 (Vortex Strength); FAA-H-8083-25C Ch. 14 (Vortex Strength)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-956",
+    "area": "AIR",
+    "topic": "Wake turbulence below the flight path",
+    "stem": "A balloon is drifting about 600 feet below and behind the climb path of a large jet that just departed a nearby airport. Why is this position hazardous?",
+    "choices": [
+      "The vortices stay at the jet's altitude until they break up.",
+      "The vortices sink several hundred feet per minute toward it.",
+      "Only jet blast is a hazard, and it cannot reach 600 feet down."
+    ],
+    "answer": 1,
+    "explanation": "AIM 7-4-4: vortices from larger aircraft sink at several hundred feet per minute, slowing and weakening with time and distance, so the area below and behind the generating aircraft is where they go. AIM 7-4-5 says to avoid that area, especially at low altitude, where even a momentary encounter could be catastrophic. Jet blast is a hazard behind the engines near the ground, but it is the wingtip vortices that descend; a balloon can't climb or turn away quickly, so it should not drift under such a path.",
+    "ref": "AIM 7-4-4; AIM 7-4-5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-957",
+    "area": "AIR",
+    "topic": "Wake turbulence near the ground",
+    "stem": "A balloon is about to land in a field beside a runway a minute after a large airplane landed there. A light crosswind of about 3 knots blows from the runway toward the field. What does the AIM say about the airplane's vortices?",
+    "choices": [
+      "They ended at touchdown, so the air over the field is now clear.",
+      "The crosswind holds both of them over the runway, away from the field.",
+      "The downwind vortex can drift sideways off the runway toward the field."
+    ],
+    "answer": 2,
+    "explanation": "AIM 7-4-4: vortices that sink within 100 to 200 feet of the ground spread sideways at 2 or 3 knots, and a crosswind slows the upwind vortex while speeding the downwind one; a light quartering tailwind calls for maximum caution. Touchdown only ends the making of new vortices; the ones already shed remain for a time. The crosswind moves the downwind vortex toward the field, not away from it.",
+    "ref": "AIM 7-4-4 (Vortex Behavior); FAA-H-8083-25C Ch. 14 (Vortex Behavior)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-958",
+    "area": "AIR",
+    "topic": "Wake turbulence: waiting after a low approach",
+    "stem": "A balloon crew is ready to launch from the grass beside a runway just after a larger airplane makes a low approach over that runway and goes around. The AIM gives a minimum interval before a takeoff after such an approach. What is it?",
+    "choices": [
+      "At least 2 minutes.",
+      "At least 30 seconds.",
+      "At least 10 minutes."
+    ],
+    "answer": 0,
+    "explanation": "AIM 7-4-6: because vortices settle and move sideways near the ground, the hazard may linger along the runway after a larger aircraft's low approach, missed approach or touch-and-go, so ensure at least 2 minutes have passed before taking off or landing, especially in a light quartering wind. Thirty seconds is far short of it, and 10 minutes is not the AIM figure. Treat 2 minutes as a minimum: a balloon rising slowly beside the runway can't climb or turn away from a vortex.",
+    "ref": "AIM 7-4-6 (Departing or landing after a larger aircraft executing a low approach)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-959",
+    "area": "AIR",
+    "topic": "Helicopter rotor wash",
+    "stem": "A balloon stands inflated on an airport ramp when a helicopter begins a slow hover taxi nearby. How far does the AIM say small aircraft should stay from a helicopter in a slow hover taxi or stationary hover?",
+    "choices": [
+      "At least three rotor diameters.",
+      "At least one rotor diameter.",
+      "At least 100 feet in all cases."
+    ],
+    "answer": 0,
+    "explanation": "AIM 7-4-7: a hovering or slow hover-taxiing helicopter's downwash produces high-velocity outwash vortices out to about three rotor diameters, so small aircraft should avoid operating within three rotor diameters. One diameter is well inside that outwash, and the AIM gives no fixed distance in feet. An inflated envelope catches outwash easily, so the crew should ask for more room.",
+    "ref": "AIM 7-4-7 (Helicopters)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-960",
+    "area": "AIR",
+    "topic": "Wake turbulence: who is responsible",
+    "stem": "A tower controller tells a balloon pilot about a departing jet and adds 'caution, wake turbulence.' Who is responsible for avoiding the jet's wake?",
+    "choices": [
+      "The controller, once that wake caution has been issued.",
+      "The balloon pilot, whether or not a caution was given.",
+      "The jet's pilot, by changing the departure path."
+    ],
+    "answer": 1,
+    "explanation": "AIM 7-4-6: whether or not a warning or information has been given, the pilot is expected to adjust operations and flight path as needed to avoid serious wake encounters. The controller's caution is information, not separation. Pilots of larger aircraft are asked to minimize vortex exposure when possible, but that does not move the responsibility off the following pilot.",
+    "ref": "AIM 7-4-6 (Vortex Avoidance Procedures); AIM 7-4-5; AIM 7-4-8",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  }
+]
