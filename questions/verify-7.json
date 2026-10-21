@@ -1,0 +1,702 @@
+[
+  {
+    "id": "OPS-701",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Propane Primer: preferred over butane, -44 °F vs 32 °F, higher vapor pressure"
+  },
+  {
+    "id": "OPS-702",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 (fuel connection check: 'sniff test' at tank and burner); Ch. 2 odorant"
+  },
+  {
+    "id": "OPS-703",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Propane Primer: 6,800 times the liquid volume"
+  },
+  {
+    "id": "OPS-704",
+    "verdict": "fixed",
+    "issue": "Key and the 150 psi figure are correct (Appendix A: 150 psi at 90 °F). The explanation's claim that 240 psi is 'well within the range a tank is built to hold' had no FAA source.",
+    "suggested": "Explanation now says only that 240 psi is not the handbook's setting.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Fuel Tanks: relief valve normally 375 psi; Appendix A: 150 psi at 90 °F"
+  },
+  {
+    "id": "OPS-705",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Heater System: coil with no fuel flow may be damaged by overheating"
+  },
+  {
+    "id": "OPS-706",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6: inflation ('pony') tanks, no manufacturer's procedure, strongly discouraged"
+  },
+  {
+    "id": "OPS-707",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Burner Check: rally practice may violate the operations manual, best avoided"
+  },
+  {
+    "id": "OPS-708",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Cold Weather Flying: not within 50 ft of open flame, pilot-light appliance, or closed unventilated area"
+  },
+  {
+    "id": "OPS-709",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Cold Weather Flying: vapor feed pilot systems and nitrogen"
+  },
+  {
+    "id": "OPS-710",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Support Equipment: fueling adapter"
+  },
+  {
+    "id": "OPS-711",
+    "verdict": "fixed",
+    "issue": "Distractor and explanation relied on Velcro tabs resealing the parachute; the BFH never mentions Velcro tabs, so the 'tabs are released before flight' claim was unsourced.",
+    "suggested": "New distractor: a full pull is needed to reseal. Explanation rests on the Ch. 2 Physics and Envelope text.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Physics (vent reseals by upward pressure) and Envelope (partial parachute opening is the normal cooling method)"
+  },
+  {
+    "id": "OPS-712",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Envelope: turning vents"
+  },
+  {
+    "id": "OPS-713",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Selecting a New or Used Balloon: 300-400 hours"
+  },
+  {
+    "id": "OPS-714",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Special Shape Balloons: appendages under 10%, weight, rotation"
+  },
+  {
+    "id": "OPS-715",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Figure 2-16 (AX8 77,682-105,930 cu ft) and Figure 2-17 (90K = AX8)"
+  },
+  {
+    "id": "OPS-716",
+    "verdict": "confirmed",
+    "issue": "Confirmed; also verified the distractors are the handbook's own advantages of smaller balloons.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 Advantages of Balloon Sizes"
+  },
+  {
+    "id": "OPS-717",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Weather tips: never dry a wet balloon by heating to equilibrium"
+  },
+  {
+    "id": "OPS-718",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Contour Flying (instrument lag) and Descents (below 200 ft)"
+  },
+  {
+    "id": "OPS-719",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Figure 6-2 Simple wind observations"
+  },
+  {
+    "id": "OPS-720",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Weather Brief: rippling ~8 mph, bubbles 10-12 mph"
+  },
+  {
+    "id": "OPS-721",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Weather Brief: pibal actions that mean cancel"
+  },
+  {
+    "id": "OPS-722",
+    "verdict": "fixed",
+    "issue": "Explanation claimed extra weight shortens how high and how long a pibal can be followed; not in the BFH.",
+    "suggested": "Explanation now gives only the handbook's reason (different ascent rates show low-level winds).",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Weather Brief: three pibals, helium plus breaths, different ascent rates"
+  },
+  {
+    "id": "OPS-723",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Number of Crewmembers: optimum four"
+  },
+  {
+    "id": "OPS-724",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Direction of Flight"
+  },
+  {
+    "id": "OPS-725",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 The Crown Line: light breakaway tie"
+  },
+  {
+    "id": "OPS-726",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Launch: arms over the side, ~20° above equilibrium, 'weight off'"
+  },
+  {
+    "id": "OPS-727",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Tethering/Mooring: twice, preferably three times"
+  },
+  {
+    "id": "OPS-728",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Tethering/Mooring safety tips (any one line may fail; inspect both ends)"
+  },
+  {
+    "id": "OPS-729",
+    "verdict": "confirmed",
+    "issue": "Confirmed; adjacent to OPS-423 (fields in a row: take the first), not a duplicate.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Some Basic Rules of Landing: aim for the middle of three"
+  },
+  {
+    "id": "OPS-730",
+    "verdict": "confirmed",
+    "issue": "Confirmed; adjacent to OPS-421 (order of importance), tests the handbook's separate 'safe, legal, polite' test.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Some Basic Rules of Landing: 'safe, legal, polite'"
+  },
+  {
+    "id": "OPS-731",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Some Basic Rules of Landing; 14 CFR 91.151 (airplanes and rotorcraft only)"
+  },
+  {
+    "id": "OPS-732",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Step-Down Approach"
+  },
+  {
+    "id": "OPS-733",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Figures 8-5, 8-6 (about ten feet above the silo, short vent)"
+  },
+  {
+    "id": "OPS-734",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Stand in the Appropriate Area of the Basket"
+  },
+  {
+    "id": "OPS-735",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Place Feet and Knees Together ('avoid using the word brace')"
+  },
+  {
+    "id": "OPS-736",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Stay in the Basket (200-pound passenger)"
+  },
+  {
+    "id": "OPS-737",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 High-Wind Landing"
+  },
+  {
+    "id": "OPS-738",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Contour Flying Techniques"
+  },
+  {
+    "id": "OPS-739",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Loss/Malfunction of Vent or Deflation Line"
+  },
+  {
+    "id": "OPS-740",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Loss/Malfunction of Pilot Light (dual burner)"
+  },
+  {
+    "id": "OPS-741",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was the longest and most technical choice (86 vs 64/75 chars).",
+    "suggested": "Key shortened, distractors lengthened; same fact.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Loss/Malfunction of Pilot Light (usual causes)"
+  },
+  {
+    "id": "OPS-742",
+    "verdict": "fixed",
+    "issue": "Explanation's 'depends on someone untrained' was editorial.",
+    "suggested": "Now tied to the handbook: a read-aloud checklist is still reading during the emergency.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 Emergency Checklist; Ch. 7 (checklist not appropriate in flight)"
+  },
+  {
+    "id": "OPS-743",
+    "verdict": "fixed",
+    "issue": "Explanation said fires 'generally start from fuel leaks'; the BFH only covers small fires at a leaking fitting under that heading.",
+    "suggested": "Reworded to match the handbook.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 In Flight Emergencies (three categories); Fuel Leak"
+  },
+  {
+    "id": "OPS-744",
+    "verdict": "confirmed",
+    "issue": "Confirmed. Map changed ops-night to adm-aero: it is a vision question from the same AIM paragraph as ADM-333, which is mapped adm-aero.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 8-1-6 Vision Under Dim and Bright Illumination"
+  },
+  {
+    "id": "OPS-745",
+    "verdict": "confirmed",
+    "issue": "Confirmed. Map changed ops-night to adm-aero for the same reason as OPS-744.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 8-1-6 Vision Under Dim and Bright Illumination"
+  },
+  {
+    "id": "OPS-746",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 8-1-8 Lights On; eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.209(a)"
+  },
+  {
+    "id": "OPS-747",
+    "verdict": "fixed",
+    "issue": "Duplicate: WXT-001 (pilot-2) already tests 'fly within two hours of sunrise or an hour or two before sunset, as thermals calm and winds drop'. Also mapped to ops-night, which teaches lights and oxygen.",
+    "suggested": "Rewritten to the adjacent Ch. 6 fact: winds may stay gusty during an evening glow until well after sunset. Remapped to wx-stability.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 6 The Crown Line (winds decrease as sunset approaches; glow winds may stay gusty well after sunset)"
+  },
+  {
+    "id": "OPS-748",
+    "verdict": "fixed",
+    "issue": "Giveaway: key 72 chars vs a 43-char distractor.",
+    "suggested": "Choices rebalanced; same fact.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 8 Water Landings"
+  },
+  {
+    "id": "OPS-749",
+    "verdict": "fixed",
+    "issue": "Ref cited Mountain Flying, which says nothing about clothing; explanation's 'burner heat is intermittent' line was unsourced. Map ops-water (water landing) did not fit.",
+    "suggested": "Ref trimmed to Cold Weather Flying; explanation uses the handbook's hypothermia/frostbite warning. Remapped to adm-aero.",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Cold Weather Flying (clothing, static, hypothermia)"
+  },
+  {
+    "id": "OPS-750",
+    "verdict": "confirmed",
+    "issue": "Confirmed. Map changed ops-water to thy-lift (cold air means less fuel to hold altitude); no cold-weather topic exists.",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Cold Weather Flying (advantages and disadvantages; seals and O-rings)"
+  },
+  {
+    "id": "REG-701",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 45.21(b), (c); 45.29(b)(2)"
+  },
+  {
+    "id": "REG-702",
+    "verdict": "fixed",
+    "issue": "Duplicate: REG-423 (pilot-4) tests 'sole manipulator with others aboard logs PIC, not solo' the same way.",
+    "suggested": "Rewritten to the adjacent rule 61.51(e)(4): a soloing student logs solo and PIC time.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.51(d), (e)(4), (h)"
+  },
+  {
+    "id": "REG-703",
+    "verdict": "fixed",
+    "issue": "Writer's CHECK: the 'certificate expiration date or recent experience end date' item has no clear meaning for a commercial balloon pilot instructing under 61.133 with no instructor certificate.",
+    "suggested": "Stem now asks which of the listed items the entry must include; the key lists only description, length, signature and certificate number, which every instructor has. The date item is quoted in the explanation without claiming how it applies. CHECK removed; confidence high.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.51(h)(2); 61.133(a)(2)(ii)"
+  },
+  {
+    "id": "REG-704",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.56(c), (d), (e)"
+  },
+  {
+    "id": "REG-705",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.56(c), (g)"
+  },
+  {
+    "id": "REG-706",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.89(a)(6), (a)(8); 91.155(a)"
+  },
+  {
+    "id": "REG-707",
+    "verdict": "fixed",
+    "issue": "Explanation said 'free propane is itself a form of compensation', an interpretation rather than rule text.",
+    "suggested": "Key now rests on 61.89(a)(4) wording alone ('in furtherance of a business'), whether or not the propane counts as compensation.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.89(a)(1)-(4), (a)(8)"
+  },
+  {
+    "id": "REG-708",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.87(b)"
+  },
+  {
+    "id": "REG-709",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 61.87(k); 61.89(a)(1)"
+  },
+  {
+    "id": "REG-710",
+    "verdict": "fixed",
+    "issue": "Duplicate: ADM-317 (pilot-3) tests 91.3(a) final authority the same way (another person vs the PIC). 91.3(b)/(c) is also already covered by REG-013.",
+    "suggested": "Rewritten to the adjacent 91.403(a): the owner or operator is primarily responsible for airworthiness and AD compliance. Remapped reg-ops to reg-airworthy.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.403(a); 91.7(b)"
+  },
+  {
+    "id": "REG-711",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.17(c)(1)"
+  },
+  {
+    "id": "REG-712",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.113(c), (d)"
+  },
+  {
+    "id": "REG-713",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.15; FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Winds Below (tissue ball, toy balloon, shaving cream)"
+  },
+  {
+    "id": "REG-714",
+    "verdict": "confirmed",
+    "issue": "Confirmed; adjacent to REG-017 (the rule's number), this tests the handbook's 'within 2,000 ft of a housing tract' reading.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.119(b), (c); FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 7 Minimum Safe Altitude Requirements (housing tract: above 1,000 ft AGL or 2,000 ft away; case law on subdivisions)"
+  },
+  {
+    "id": "REG-715",
+    "verdict": "confirmed",
+    "issue": "Confirmed; adjacent to REG-436 (500 ft in any direction from a farmhouse), this one tests the open-water exception to 500 ft AGL.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.119(a)-(c)"
+  },
+  {
+    "id": "REG-716",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 47.31(c)(1)-(3); 91.203(a)(2)"
+  },
+  {
+    "id": "REG-717",
+    "verdict": "fixed",
+    "issue": "Fact verified: 47.40(a) is seven years after the last day of the month of issue (2022 amendment); BFH Ch. 2 still says three years. Key wording 'ending the last day of the month it was issued' was imprecise.",
+    "suggested": "Key reworded to 'counted from the end of the month it was issued'; ref adds the outdated BFH passage.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 47.40(a), (b) (Amdt. 47-33, 87 FR 71218, Nov. 22, 2022); 47.41(a); FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 2 (still says three years)"
+  },
+  {
+    "id": "REG-718",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 47.41(a)(2), (b)(2), (b)(3)"
+  },
+  {
+    "id": "REG-719",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 45.27(c), (d)"
+  },
+  {
+    "id": "REG-720",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 45.29(b)(1)(i), (b)(2), (h)"
+  },
+  {
+    "id": "REG-721",
+    "verdict": "fixed",
+    "issue": "The 91.409(b) 10-hour en-route allowance is real, but 'en route to reach a place where the inspection can be done' reads oddly for a balloon, and it is unclear whether paying passengers may ride during the overrun.",
+    "suggested": "Replaced with a sounder 91.409 question: a 100-hour by a person not authorized for annuals, not entered as an annual, cannot replace an overdue annual (91.409(a) last sentence).",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.409(a) (last sentence on substitution), (b)"
+  },
+  {
+    "id": "REG-722",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.417(a)(2), (b)(1), (b)(2)"
+  },
+  {
+    "id": "REG-723",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was the longest choice.",
+    "suggested": "Key shortened; same fact.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 49 CFR 830.5(a)(2); 830.15(a)"
+  },
+  {
+    "id": "REG-724",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 49 CFR 830.10(d)"
+  },
+  {
+    "id": "REG-725",
+    "verdict": "fixed",
+    "issue": "Stem said 'NTSB Form 6120.1'; 830.15(a) names Board Form 6120.1/2.",
+    "suggested": "Stem now says Form 6120.1/2, as the rule does.",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 49 CFR 830.15(a), (b)"
+  },
+  {
+    "id": "AIR-701",
+    "verdict": "confirmed",
+    "issue": "Confirmed; adjacent to AIR-001 (Class G at or below 1,200 AGL) and AIR-002 (Class E).",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.155(a) table"
+  },
+  {
+    "id": "AIR-702",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.155(a); FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 5 Class B Airspace"
+  },
+  {
+    "id": "AIR-703",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.131(a)(1), 91.215(b)(3), 91.225(e); FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 5 Class B ('perfectly legal' under the lateral limits)"
+  },
+  {
+    "id": "AIR-704",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-4-3 (incl. NOTE: temporary restricted areas are not charted)"
+  },
+  {
+    "id": "AIR-705",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-4-4; FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 5 Warning Areas"
+  },
+  {
+    "id": "AIR-706",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-4-6"
+  },
+  {
+    "id": "AIR-707",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-4-7"
+  },
+  {
+    "id": "AIR-708",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-4-2; FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 5 Prohibited Areas (P plus a number)"
+  },
+  {
+    "id": "AIR-709",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "eCFR current text, fetched 2026-10-20 (ecfr.gov renderer API) 14 CFR 91.137(a)(3), (d)"
+  },
+  {
+    "id": "AIR-710",
+    "verdict": "fixed",
+    "issue": "Explanation's 'there is no canceling pointer' was unsourced phrasing.",
+    "suggested": "Now quotes AIM 5-1-3 on when a NOTAM is cancelled.",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 5-1-3 (Pointer NOTAMs; NOTAM cancellation)"
+  },
+  {
+    "id": "AIR-711",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 7-5-6"
+  },
+  {
+    "id": "AIR-712",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 7-5-6 NOTE (AC 91-36 definition of surface)"
+  },
+  {
+    "id": "AIR-713",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 3-5-4"
+  },
+  {
+    "id": "AIR-714",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026), VFR Terms and Symbols: obstacles over 200 ft AGL, 299 ft in yellow city tint"
+  },
+  {
+    "id": "AIR-715",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026): UC = under construction or reported, unverified"
+  },
+  {
+    "id": "AIR-716",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide (effective 9 July 2026): Miscellaneous Activity Areas"
+  },
+  {
+    "id": "AIR-717",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (Pilotage; Dead Reckoning)"
+  },
+  {
+    "id": "AIR-718",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 and Glossary (Longitude); arithmetic checked"
+  },
+  {
+    "id": "AIR-719",
+    "verdict": "confirmed",
+    "issue": "Confirmed; reverse direction of AIR-318/AIR-315 (true to magnetic), not a duplicate.",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (east is least, west is best); FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 3 Navigation (true vs magnetic north); arithmetic checked"
+  },
+  {
+    "id": "AIR-720",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (1 knot = 1 NM/h, factor 1.15); recomputed: 4/1.15/9 h = 23.2 min, 4/9 h = 26.7, 4.6/9 h = 30.7"
+  },
+  {
+    "id": "AIR-721",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (factor 1.15); recomputed: 10 mph / 1.15 = 8.7 kt"
+  },
+  {
+    "id": "AIR-722",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 5-1-3 (GPS NOTAMs: UNREL)"
+  },
+  {
+    "id": "AIR-723",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 8-1-8 Determining Relative Altitude"
+  },
+  {
+    "id": "AIR-724",
+    "verdict": "confirmed",
+    "issue": "Confirmed; asks why (fovea) where AIR-358 asks which technique.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 8-1-6 Scanning (200° arc, fovea, 10° steps, 1 second)"
+  },
+  {
+    "id": "AIR-725",
+    "verdict": "confirmed",
+    "issue": "Key, distractors and ref checked against the source; no change needed.",
+    "suggested": "",
+    "source": "AIM (faa.gov/air_traffic/publications/atpubs/aim_html, fetched 2026-10-20) 4-3-13 TBL 4-3-1; FAA-H-8083-11B (faa.gov, text extracted 2026-10-20) Ch. 5 Figure 5-18 and Class D call-up advice"
+  }
+]

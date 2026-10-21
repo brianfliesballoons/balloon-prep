@@ -378,10 +378,10 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 <script>
 (function(){
 // ---------- data ----------
-const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json'];
+const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json'];
 const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
 const AREA=Object.fromEntries(AREAS);
-const BLUEPRINT={REG:22,AIR:10,WXS:12,ADM:5,THY:18,WXT:15,OPS:15,DAC:3};
+const BLUEPRINT={REG:18,AIR:14,WXS:12,ADM:10,THY:14,WXT:12,OPS:16,DAC:4};  // FAA publishes no CBH weights; spread across the 61.125(b) areas
 const BUILTIN=[
  {id:'DAC-S01',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) You are planning a launch from a field at 4,500 ft MSL. Altimeter 30.10, temperature 30°C (86°F). What is the approximate density altitude?',choices:['4,300 ft','6,100 ft','7,200 ft'],answer:2,explanation:'Pressure altitude is 4,500 − 165 = 4,335 ft. Going up from 30°C to that line and across gives about 7,200 ft. 4,300 ft is only the pressure altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:4500,alt:30.10,oat:30,difficulty:2,confidence:'high'},
  {id:'DAC-S02',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) Morning launch site near Temecula, elevation 1,200 ft MSL, altimeter 29.80, temperature 35°C (95°F). What is the approximate density altitude?',choices:['1,300 ft','4,000 ft','5,200 ft'],answer:1,explanation:'Pressure altitude is 1,200 + 112 = 1,312 ft. At 35°C that line reads about 4,000 ft. 1,300 ft is the pressure altitude, not the density altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:1200,alt:29.80,oat:35,difficulty:2,confidence:'high'},
@@ -505,7 +505,7 @@ function renderAll(){
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
   $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||!list.length;
-  if(mode==='teststart'){const n=Math.min(100,BANK.length);$('tsText').textContent=`${n} questions drawn from the ${BANK.length}-question bank in the same mix of areas as the real test. You need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
+  if(mode==='teststart'){const n=Math.min(100,BANK.length);$('tsText').textContent=`${n} questions drawn from the ${BANK.length}-question bank, spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
