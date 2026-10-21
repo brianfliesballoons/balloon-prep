@@ -13,7 +13,7 @@
   --bg:#e9efec; --surface:#fbfcfa; --ink:#14263a; --muted:#566775; --line:#c6d2cd;
   --paper:#fdfefb; --grid:#d5e5dc; --grid-major:#a8c8b6; --pa:#2b4b60; --isa:#c62f28;
   --hl:#d98300; --user:#1d5ed4; --guide:#a1269a; --good:#1b7d4c; --bad:#bf3a2c;
-  --good-bg:#e2f3ea; --bad-bg:#f9e6e3; --chip:#e3ebe7; --flag:#d98300;
+  --good-bg:#e2f3ea; --bad-bg:#f9e6e3; --chip:#e3ebe7; --flag:#d98300; --flag-ink:#a35f00;
   --f-display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-num:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -22,12 +22,12 @@
   --bg:#0e161c; --surface:#15212a; --ink:#e4ecf1; --muted:#94a6b3; --line:#2a3b47;
   --paper:#101b22; --grid:#1b2f2c; --grid-major:#2c4a43; --pa:#a9c3d6; --isa:#ff6a5c;
   --hl:#ffb12e; --user:#6ea6ff; --guide:#e57ddc; --good:#4cc48b; --bad:#ff7d6e;
-  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; color-scheme:dark}}
+  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; --flag-ink:#ffb12e; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0e161c; --surface:#15212a; --ink:#e4ecf1; --muted:#94a6b3; --line:#2a3b47;
   --paper:#101b22; --grid:#1b2f2c; --grid-major:#2c4a43; --pa:#a9c3d6; --isa:#ff6a5c;
   --hl:#ffb12e; --user:#6ea6ff; --guide:#e57ddc; --good:#4cc48b; --bad:#ff7d6e;
-  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; color-scheme:dark}
+  --good-bg:#16302a; --bad-bg:#3a1f1d; --chip:#1d2c36; --flag:#ffb12e; --flag-ink:#ffb12e; color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{background:var(--bg);margin:0}
@@ -62,16 +62,31 @@ body.nofig .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 .meta{font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 .flagbtn{display:flex;align-items:center;gap:5px;font-family:var(--f-display);font-weight:600;font-size:.9rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
 .flagbtn svg{width:14px;height:14px}
-.flagbtn[aria-pressed="true"]{color:var(--flag);border-color:var(--flag)}
+.flagbtn[aria-pressed="true"]{color:var(--flag-ink);border-color:var(--flag-ink)}
 .timer{font-family:var(--f-num);font-size:.85rem;color:var(--muted)}
 .navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:5px;margin-top:12px;max-height:46vh;overflow-y:auto;padding:2px}
 .nq{position:relative;font-family:var(--f-num);font-size:.8rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 0;cursor:pointer}
 .nq.ans{background:var(--chip);border-color:var(--muted)}
-.nq.ok{background:var(--good-bg);border-color:var(--good);color:var(--good)}
-.nq.no{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.nq.ok{background:var(--good-bg);border-color:var(--good);color:var(--ink)}
+.nq.no{background:var(--bad-bg);border-color:var(--bad);color:var(--ink)}
+.nq.ok::before,.nq.no::before{position:absolute;top:1px;left:3px;font-size:.68rem;line-height:1;font-weight:700}
+.nq.ok::before{content:"\2713"} .nq.no::before{content:"\2715"}
 .nq.cur{outline:2px solid var(--ink);outline-offset:1px}
 .nq.fl::after{content:"";position:absolute;top:2px;right:2px;width:7px;height:7px;border-radius:50%;background:var(--flag)}
 .navlegend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--muted);margin-top:8px}
+.navlegend .nl-ok{color:var(--good)} .navlegend .nl-no{color:var(--bad)} .navlegend .nl-fl{color:var(--flag-ink)}
+/* shuffle is a setting, not a filter, so it reads differently from the selected filter chip */
+.chip.shufchip{display:inline-flex;align-items:center;gap:5px}
+.chip.shufchip svg{width:14px;height:14px;flex:none}
+.chip.shufchip[aria-pressed="true"]{background:var(--user);border-color:var(--user);color:var(--surface)}
+/* phones (and landscape phones): one sideways-scrolling row of filter chips, and 44 px study controls */
+@media (max-width:640px),(max-height:500px){
+  #filters{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:16px;margin-inline:-16px;padding:2px 16px;scrollbar-width:none;overscroll-behavior-x:contain}
+  #filters::-webkit-scrollbar{display:none}
+  #filters .chip{flex:none;scroll-snap-align:start;min-height:44px;white-space:nowrap}
+  header .mode,.navbtn,.flagbtn{min-height:44px}
+  .nq{min-height:44px}
+}
 .qtext{margin:10px 0 12px;font-size:1.06rem;white-space:pre-line}
 .qref{font-family:var(--f-display);font-weight:600;color:var(--muted);font-size:.9rem;letter-spacing:.02em}
 .given{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:4px}
@@ -405,7 +420,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
       </div>
       <div id="navPanel" hidden>
         <div class="navgrid" id="navgrid"></div>
-        <div class="navlegend"><span>■ answered</span><span style="color:var(--good)">■ right</span><span style="color:var(--bad)">■ wrong</span><span style="color:var(--flag)">● flagged</span></div>
+        <div class="navlegend"><span>■ answered</span><span class="nl-ok">✓ right</span><span class="nl-no">✕ wrong</span><span class="nl-fl">● flagged</span></div>
       </div>
       <div class="meta" id="meta"></div>
       <p class="qtext"><span class="qref" id="qfig"></span><span id="qbody"></span></p>
@@ -513,25 +528,38 @@ function studyList(){let qs=BANK;
   else if(filter.startsWith('T:'))qs=qs.filter(q=>MAP[q.id]===filter.slice(2));
   else if(filter.startsWith('K:'))qs=qs.filter(q=>kindOf(q.id)===filter.slice(2));
   else if(filter!=='ALL')qs=qs.filter(q=>q.area===filter);
+  if(SPOS().sh){const k={};qs.forEach(q=>k[q.id]=spHash(SPOS().seed+':'+q.id));return qs.map(q=>q.id).sort((a,b)=>k[a]-k[b]);}
   return qs.map(q=>q.id);}
+// Study remembers its filter, shuffle and the question you were on, by id (so it survives bank changes): S.spos={f,sh,seed,at:{filter:id}}
+const SPOS=()=>S.spos||(S.spos={f:'ALL',sh:false,seed:0,at:{}});
+// shuffled order is a hash of a saved seed and the question id, so it is the same after a reload and in every filtered set
+function spHash(t){let h=2166136261;for(let i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function studyAt(){const i=list.indexOf((SPOS().at||{})[filter]);return i<0?0:i;}
+function studyResume(){const a=SPOS();filter=a.f||'ALL';if(filter==='UNGRADED'&&!GRADE)filter='ALL';list=studyList();if(!list.length){filter='ALL';list=studyList();}pos=studyAt();}
+function toggleShuffle(){const a=SPOS(),id=list[pos];a.sh=!a.sh;if(a.sh)a.seed=Math.floor(Math.random()*1e9);list=studyList();pos=Math.max(0,list.indexOf(id));save();renderAll();}
 
 // what the learner picked for a question in the current context
 function picked(id){if(mode==='due')return dueAns[id];if(mode==='study')return S.study[id];if(S.test)return S.test.answers[id];}
 function revealed(id){if(GRADE)return true;if(mode==='due')return dueAns[id]!==undefined;if(mode==='study')return S.study[id]!==undefined;return mode==='review';}
 
 // ---------- rendering ----------
-function renderFilters(){const f=$('filters');f.innerHTML='';if(mode!=='study'){f.hidden=true;return;}f.hidden=false;
+function renderFilters(){const f=$('filters'),sl=f.scrollLeft;f.innerHTML='';if(mode!=='study'){f.hidden=true;return;}f.hidden=false;
+  {const b=document.createElement('button');b.className='chip shufchip';b.setAttribute('aria-pressed',String(!!SPOS().sh));b.title='Study the questions in a random order (saved on this device)';
+   b.innerHTML='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 4h3c3 0 5 8 8 8h3M1 12h3c1.3 0 2.3-1.4 3.2-3M9 6.5C9.8 5.2 10.8 4 12 4h3M13 2l2 2-2 2M13 10l2 2-2 2"/></svg>Shuffle';b.onclick=toggleShuffle;f.appendChild(b);}
   const counts={};BANK.forEach(q=>counts[q.area]=(counts[q.area]||0)+1);
   const opts=[['ALL','All',BANK.length],...AREAS.filter(([k])=>counts[k]).map(([k,n])=>[k,n,counts[k]]),...Object.entries(KINDS).map(([k,n])=>['K:'+k,n,BANK.filter(q=>kindOf(q.id)===k).length]).filter(o=>o[2]),['NEW','Not tried',BANK.filter(q=>S.study[q.id]===undefined).length],['MISS','Missed',BANK.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer).length],['FLAG','Flagged',BANK.filter(q=>S.flags[q.id]).length]];
   if(filter.startsWith('T:')&&LES.topics[filter.slice(2)])opts.unshift([filter,LES.topics[filter.slice(2)].title,BANK.filter(q=>MAP[q.id]===filter.slice(2)).length]);
   if(GRADE)opts.push(['UNGRADED','Ungraded',BANK.filter(q=>!(S.grade[q.id]&&S.grade[q.id].v)).length]);
-  opts.forEach(([k,n,c])=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',String(filter===k));b.innerHTML=`${n}<span>${c}</span>`;b.onclick=()=>{filter=k;list=studyList();pos=0;renderAll();};f.appendChild(b);});
+  opts.forEach(([k,n,c])=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',String(filter===k));b.innerHTML=`${n}<span>${c}</span>`;b.onclick=()=>{filter=k;list=studyList();pos=studyAt();renderAll();};f.appendChild(b);});
   if(GRADE){const g=Object.values(S.grade);const b=document.createElement('button');b.className='chip';b.textContent=`Copy grading notes (${g.length} graded)`;b.onclick=copyNotes;f.appendChild(b);}
+  f.scrollLeft=sl;const on=f.querySelector('.chip[aria-pressed="true"]:not(.shufchip)');
+  if(on&&f.scrollWidth>f.clientWidth){const fr=f.getBoundingClientRect(),r=on.getBoundingClientRect();if(r.left<fr.left+16||r.right>fr.right-16)f.scrollLeft+=r.left-fr.left-(fr.width-r.width)/2;}
 }
 function renderNav(){const g=$('navgrid');g.innerHTML='';list.forEach((id,i)=>{const q=byId[id],p=picked(id),b=document.createElement('button');
   let c='nq';if(p!==undefined)c+=(revealed(id)&&!GRADE)?(p===q.answer?' ok':' no'):' ans';if(S.flags[id])c+=' fl';if(i===pos)c+=' cur';
   if(GRADE&&S.grade[id]&&S.grade[id].v)c+=S.grade[id].v==='ok'?' ok':' no';
-  b.className=c;b.textContent=i+1;b.title=id;b.onclick=()=>go(i);g.appendChild(b);});}
+  b.className=c;b.textContent=i+1;b.title=id;b.onclick=()=>go(i);g.appendChild(b);});navCenter();}
+function navCenter(){const g=$('navgrid'),b=g.querySelector('.cur');if(!b||$('navPanel').hidden)return;const gr=g.getBoundingClientRect(),br=b.getBoundingClientRect();g.scrollTop+=br.top-gr.top-(g.clientHeight-br.height)/2;}
 
 function renderQ(){
   const q=cur();$('main').hidden=!q;if(!q){return;}
@@ -560,6 +588,7 @@ function renderQ(){
   $('finish').hidden=mode!=='test';
   $('timer').hidden=mode!=='test';
   renderGrader(q);
+  if(mode==='study'){const a=SPOS();a.at=a.at||{};if(a.f!==filter||a.at[filter]!==q.id){a.f=filter;a.at[filter]=q.id;save();}}
   const done=list.filter(id=>picked(id)!==undefined).length;
   let dueEnd=false;
   if(GRADE&&mode==='study')$('foot').textContent='Grader mode: the answer and explanation are always shown.';
@@ -623,7 +652,7 @@ function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=i
   $('rNew').onclick=()=>{mode='teststart';renderAll();};}
 
 $('mLearn').onclick=()=>goLearn(LV.v==='home'?'home':LV.v==='plan'?'plan':'home');
-$('mStudy').onclick=()=>{mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=0;renderAll();};
+$('mStudy').onclick=()=>{mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=studyAt();renderAll();};
 $('mTest').onclick=()=>{if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';renderAll();};
 $('tsGo').onclick=()=>{S.test={list:buildTest(),answers:{},start:Date.now(),pos:0,done:false};save();mode='test';list=S.test.list;pos=0;renderAll();};
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
@@ -632,7 +661,7 @@ $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefin
   $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();S.test.list.forEach(id=>{if(S.test.answers[id]!==byId[id]?.answer)sched(id,false);});save();mode='results';renderAll();window.scrollTo(0,0);};
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
-$('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));};
+$('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));navCenter();};
 // Start one study set over: clears only this set's study answers; flags, tests and the review queue stay.
 $('redo').onclick=()=>{const b=$('redo');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to clear them. Flags, tests and your review queue stay.';return;}
   b.dataset.armed='';list.forEach(id=>delete S.study[id]);save();pos=0;renderAll();};  // keep the same list, so a cleared Missed set can be redone
@@ -1139,7 +1168,7 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
   BANK.forEach(q=>{byId[q.id]=q;const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});
   if(S.test&&S.test.list.some(id=>!byId[id]))S.test=null;
-  list=studyList();const hs=location.hash;
+  studyResume();const hs=location.hash;
   if(hs==='#learn')mode='learn';
   else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
   else if(hs.startsWith('#print=')){mode='ref';const w=hs.slice(7);const go=()=>printRef(w);REFS===null&&w!=='airspace'&&w!=='legend'?getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];go();}):setTimeout(go,0);}
