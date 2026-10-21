@@ -134,7 +134,70 @@
      "bfh",
      "Chapter 1: Introduction to balloon flight training"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**A commercial certificate is what lets you fly for pay.** In a balloon it also lets you teach, and it has its own age, experience and test requirements.",
+    "widget": null,
+    "body": [
+     "Balloon certificates come in three steps: **student** at 14, **private** at 16, and **commercial** at 18, which also needs at least a private certificate. A student may not carry a passenger or fly for hire, and flies solo only with an instructor's endorsement for that make and model, updated every 90 days.",
+     "A commercial balloon rating needs at least **35 hours** as a pilot, including 20 hours and 10 flights in balloons and 2 flights as pilot in command. Hot air training must include 10 hours with an instructor (at least 10 flights), two 1-hour flights in the 2 calendar months before the test month, **two solo flights**, and a controlled ascent to **3,000 feet** above the launch site. The private rating needs one solo and an ascent to 2,000 feet.",
+     "A commercial pilot may carry persons or property for compensation or hire. In balloons the same certificate lets you train students, endorse them for solo and for their certificate, and give flight reviews, with no flight instructor certificate. Test in a hot air balloon and you are limited to *balloons with an airborne heater*, until gas balloon experience and an instructor's endorsement remove the limit.",
+     "Carry your pilot certificate and a photo ID, plus a medical when the flight needs one, and show them to the FAA, the NTSB, the TSA or any law enforcement officer who asks. Report a new mailing address in writing within 30 days. You must log only time used for a certificate, a rating, a flight review or recent experience."
+    ],
+    "example": {
+     "setup": "Lena is 17, with a private balloon certificate and 26 hours as pilot in hot air balloons over 23 flights. A ride company wants to hire her as soon as it is legal.",
+     "steps": [
+      [
+       "Age.",
+       "The commercial certificate needs age 18, so nothing happens before her birthday."
+      ],
+      [
+       "Hours and flights.",
+       "She needs 35 hours, so 9 more. Her balloon hours and flights are covered; she still needs 2 flights as pilot in command, 10 hours of instruction, the two 1-hour test-prep flights, two solos and the 3,000-foot ascent."
+      ],
+      [
+       "So the answer.",
+       "Turn 18, finish the list, pass both tests. To fly paying passengers she also needs a second-class medical."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Like a driver's license",
+      "body": "A learner's permit comes before a driver's license. Pilot certificates work the same way: student, then private, then commercial.",
+      "alt": "Three keys: practice flights, flights with friends, flights for pay."
+     },
+     {
+      "title": "Each step has an age",
+      "body": "Balloon student at 14, private pilot at 16, commercial pilot at 18. Each step also needs more logged flying and a test.",
+      "alt": "Fourteen to learn, sixteen to share, eighteen to be paid."
+     },
+     {
+      "title": "Commercial means paid",
+      "body": "The commercial certificate lets you carry people or property for pay. In balloons it also lets you teach and give flight reviews.",
+      "alt": "A private pilot takes friends for free. A commercial pilot can sell the ride and train the next pilot."
+     },
+     {
+      "title": "Carry the papers",
+      "body": "Bring your pilot certificate and a photo ID, plus a medical when needed. The FAA or a police officer can ask to see them.",
+      "alt": "Like your driver's license whenever you drive."
+     }
+    ],
+    "sources": [
+     "14 CFR 61.83(b)",
+     "14 CFR 61.103(b)",
+     "14 CFR 61.123(a), (h)",
+     "14 CFR 61.89(a)(1)-(4)",
+     "14 CFR 61.87(n), (p)(4)",
+     "14 CFR 61.109(h)(2)",
+     "14 CFR 61.129(h)(1)-(4)",
+     "14 CFR 61.133(a)(1), (a)(2)(ii), (b)(2)",
+     "14 CFR 61.3(a)(1)-(2), (c)(1), (l)",
+     "14 CFR 61.60",
+     "14 CFR 61.51(a)",
+     "14 CFR 61.23(a)(2)(iii)"
+    ]
+   }
   },
   "reg-medical": {
    "title": "Medical and currency",
@@ -149,7 +212,68 @@
      "p61",
      "61.56 flight review and 61.57 recent experience"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Being paid is what brings in the medical.** Paid commercial balloon flights need at least a second-class medical, unless the paid work is flight training. Flying privately in a balloon needs none.",
+    "widget": null,
+    "body": [
+     "Since May 22, 2023, using commercial balloon privileges for compensation or hire needs at least a **second-class** medical, even on a paid flight with nobody else aboard. No medical is needed for a balloon student, for private privileges, or for giving flight training in balloons. For paid flights the second-class lasts to the end of the 12th month after the exam month, at any age.",
+     "To act as pilot in command at all, you need a **flight review** since the start of the 24th calendar month before this one: at least 1 hour of flight and 1 hour of ground training, including Part 91. One in any aircraft you're rated in counts, and so does passing a practical test for a certificate or rating.",
+     "To carry passengers you need **three takeoffs and three landings** in a balloon within the preceding 90 days, as sole manipulator of the controls; from 1 hour after sunset to 1 hour before sunrise, three to a full stop in that same period. Not current? Fly by day with no passengers.",
+     "No one may act as a crewmember within 8 hours of drinking alcohol, while under the influence, or at an alcohol concentration of 0.04 or more. Except in an emergency, you may not carry a passenger who appears intoxicated."
+    ],
+    "example": {
+     "setup": "October 20, 2026. Dana has a paid passenger flight on October 30. Her second-class exam was September 22, 2025, her flight review November 12, 2024, and her last three landings in June 2026.",
+     "steps": [
+      [
+       "Medical.",
+       "End of the 12th month after the exam month: September 30, 2026. Expired for paid flights."
+      ],
+      [
+       "Flight review.",
+       "Good through the end of the 24th calendar month: November 30, 2026. Fine for now."
+      ],
+      [
+       "Recent experience.",
+       "90 days before October 30 reaches back only to early August, so June doesn't count."
+      ],
+      [
+       "So the answer.",
+       "New second-class exam, and three takeoffs and landings without passengers before the ride. Flight review before December."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Some jobs need a health check",
+      "body": "Truck drivers need a doctor's OK that ordinary drivers don't. Balloon pilots are similar: the medical is tied to flying for pay.",
+      "alt": "A work permit for paid rides. Friends for free, or teaching, needs none."
+     },
+     {
+      "title": "The medical runs out",
+      "body": "A second-class medical covers paid balloon flights for 12 months, counted to the end of the month.",
+      "alt": "Exam in May, good for paid flights through the end of May next year."
+     },
+     {
+      "title": "A checkup every two years",
+      "body": "Every 24 calendar months you fly and talk with an instructor, at least an hour of each. That's the flight review.",
+      "alt": "Like a dental checkup: you may feel fine, but someone looks on a schedule."
+     },
+     {
+      "title": "Practice before passengers",
+      "body": "Passengers need three takeoffs and landings in the last 90 days. Out of practice? Fly without passengers first.",
+      "alt": "A musician warms up before the audience arrives."
+     }
+    ],
+    "sources": [
+     "14 CFR 61.23(a)(2)(iii), (b)(1), (b)(4), (b)(5)",
+     "14 CFR 61.23(d)(2)(i)",
+     "87 FR 71218 (Nov. 22, 2022), effective date May 22, 2023",
+     "14 CFR 61.56(a), (c), (d)",
+     "14 CFR 61.57(a)(1)-(2), (b)(1)",
+     "14 CFR 91.17(a)-(b)"
+    ]
+   }
   },
   "reg-airworthy": {
    "title": "Airworthiness and documents",
@@ -164,7 +288,79 @@
      "bfh",
      "Chapter 2: Aircraft documents and maintenance"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**The pilot decides whether the balloon is fit to fly; the owner keeps it legal.** That means current inspections, records that prove them, and the right papers aboard.",
+    "widget": null,
+    "body": [
+     "The balloon must carry its **airworthiness certificate**, displayed legibly to passengers or crew, and its registration certificate, now good for 7 years. Fly within the flight manual's limits, markings and placards. Part 31 sets a hot air balloon's instruments: altimeter, rate-of-climb indicator, fuel quantity gauge and envelope temperature indicator. The Part 91 instrument list (powered aircraft) and ELT rule (airplanes) don't apply.",
+     "Every balloon needs an **annual inspection** within the preceding 12 calendar months. Carrying anyone but crew for hire, or giving paid instruction in a balloon you provide, also needs an annual or 100-hour within the preceding **100 hours of time in service** (liftoff to the next touchdown). You may run up to 10 hours over only to reach the inspection, and that time counts toward the next 100.",
+     "The owner or operator is primarily responsible for airworthiness, including **airworthiness directives**: flying a balloon out of compliance with an applicable AD is a violation. Maintenance and inspection records are kept until the work is repeated or superseded, or for 1 year. Total time, inspection status and AD status (number, revision date, method of compliance, next due time) go with the balloon when it's sold.",
+     "A pilot who owns or operates the balloon may do **preventive maintenance**, and with at least a private certificate sign it off: small envelope fabric repairs needing no load tape work, cleaning burner pilot and main nozzles, and swapping baskets and burners listed as interchangeable in the type certificate data. And if an unairworthy condition shows up in flight, the pilot in command must discontinue the flight."
+    ],
+    "example": {
+     "setup": "You fly paying passengers in your own balloon. Its annual was signed off March 15, 2026, at 412.0 hours. On February 20, 2027, it shows 509.5 hours. Tomorrow's flights take 2.0 hours, next weekend's 3.0.",
+     "steps": [
+      [
+       "Which inspections.",
+       "Passengers for hire, so both: an annual, and an annual or 100-hour every 100 hours."
+      ],
+      [
+       "The annual.",
+       "Good through March 31, 2027. Current."
+      ],
+      [
+       "The 100 hours.",
+       "509.5 − 412.0 = 97.5 used, 2.5 left. Tomorrow fits; next weekend doesn't."
+      ],
+      [
+       "So the answer.",
+       "Inspect before next weekend. The 10-hour allowance is for getting to the inspection, not for more rides."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Machines need checkups",
+      "body": "You service a car on a schedule and stop driving if the brakes fail. Balloons too, except the schedule is set by law.",
+      "alt": "The owner books the checkups; the pilot says no if something is wrong."
+     },
+     {
+      "title": "Papers ride along",
+      "body": "The airworthiness certificate must be aboard where passengers or crew can read it, and the registration certificate too.",
+      "alt": "Like the registration in a car's glove box."
+     },
+     {
+      "title": "Yearly, plus every 100 hours if paid",
+      "body": "Every balloon needs an annual inspection. Flying passengers for hire adds one every 100 hours.",
+      "alt": "A taxi works harder than a family car, so it gets checked more often."
+     },
+     {
+      "title": "Small fixes you can do",
+      "body": "An owner-pilot may do simple jobs like small fabric repairs or cleaning burner nozzles, then record and sign the work.",
+      "alt": "Like changing your own wiper blades: allowed, done the maker's way and written down."
+     }
+    ],
+    "sources": [
+     "14 CFR 91.203(a)-(b)",
+     "14 CFR 91.9(a)",
+     "14 CFR 31.85",
+     "14 CFR 91.205(a)",
+     "14 CFR 91.207(a)",
+     "14 CFR 91.409(a)-(b)",
+     "14 CFR 1.1 (Time in service)",
+     "14 CFR 91.403(a)",
+     "14 CFR 39.7",
+     "14 CFR 91.417(a)-(b)",
+     "14 CFR 43.3(g)",
+     "14 CFR 43.7(f)",
+     "14 CFR 43.9(a)",
+     "14 CFR part 43, appendix A (c)(7), (c)(25), (c)(27)",
+     "14 CFR 91.7(a)-(b)",
+     "FAA-H-8083-11B Ch. 2 (Aircraft Documents; Balloon Inspections)",
+     "14 CFR 47.40(a)"
+    ]
+   }
   },
   "reg-ops": {
    "title": "Operating rules",
@@ -179,7 +375,70 @@
      "s91209",
      "Lights from sunset to sunrise"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**You are the final authority on the flight, and the flight rules still bind you.** Part 91 sets your preflight duties, right-of-way, minimum altitudes and lights, with a few exceptions written for balloons.",
+    "widget": null,
+    "body": [
+     "The pilot in command is the final authority on the flight. In an emergency you may deviate from any Part 91 rule as far as needed, then send a written report if the FAA asks. Before a flight away from an airport, become familiar with the weather and forecasts, your fuel requirements, and your alternatives. Part 91's fixed fuel reserves are written for airplanes and rotorcraft, so the propane reserve is your call.",
+     "**Right-of-way.** A balloon has it over every other category of aircraft, and an aircraft in distress over all traffic. When two balloons converge at about the same altitude, the one on the other's right has it. Keep looking anyway: the other pilot may never see you.",
+     "**Minimum altitudes**, except for takeoff and landing: over a congested area or an open-air crowd, 1,000 feet above the highest obstacle within 2,000 feet. Elsewhere, 500 feet above the surface, and over open water or sparsely populated areas, no closer than 500 feet to any person, vessel, vehicle or structure. Never fly in a careless or reckless way.",
+     "**Lights.** From sunset to sunrise you need lighted position lights, so a launch before official sunrise needs them. Keep the three nights apart: lights run sunset to sunrise, night VFR minimums use civil twilight, and night currency runs 1 hour after sunset to 1 hour before sunrise. A basket balloon is excepted from the 91.107 seat belt rules, and the 91.147 Letter of Authorization, as written, covers airplane, powered-lift and rotorcraft operators."
+    ],
+    "example": {
+     "setup": "Your balloon drifts over the edge of a small town. The tallest structure within 2,000 feet of your path is a 140-foot water tower. Beyond the town are open fields with a few farm buildings.",
+     "steps": [
+      [
+       "Which rule.",
+       "A town is a congested area: the 1,000-foot rule, not the 500-foot one."
+      ],
+      [
+       "What it requires.",
+       "140 + 1,000 = at least 1,140 feet above the ground at the tower."
+      ],
+      [
+       "Past the town.",
+       "Over sparse fields, keep 500 feet from any person, vehicle, vessel or structure, farm buildings included. The landing exception covers the landing itself, not a low cruise."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Rules of the road",
+      "body": "Drivers share rules about who goes first and how close is too close. Pilots have the same kind of rules, in Part 91.",
+      "alt": "Part 91 is the driver's handbook of the sky."
+     },
+     {
+      "title": "Balloons go first",
+      "body": "A balloon can't steer around traffic, so every other kind of aircraft gives way to it. You still keep watching.",
+      "alt": "A pedestrian in a crosswalk has the right-of-way and still looks both ways."
+     },
+     {
+      "title": "Keep your distance from people",
+      "body": "Over towns and crowds, 1,000 feet above the tallest thing nearby. Over open country, 500 feet from people, vehicles and buildings.",
+      "alt": "A 500-foot bubble around every house, car and person. Don't pop it unless you're landing."
+     },
+     {
+      "title": "Lights from sunset to sunrise",
+      "body": "Before sunrise and after sunset, the balloon must show lighted position lights.",
+      "alt": "Like headlights at dusk: if the sun isn't up, the lights are on."
+     }
+    ],
+    "sources": [
+     "14 CFR 91.3(a)-(c)",
+     "14 CFR 91.103(a)",
+     "14 CFR 91.151(a)-(b)",
+     "14 CFR 91.113(b)-(d)",
+     "14 CFR 91.119(b)-(c)",
+     "14 CFR 91.13(a)",
+     "14 CFR 91.209(a)",
+     "14 CFR 1.1 (Night)",
+     "14 CFR 91.155(a)",
+     "14 CFR 61.57(b)(1)",
+     "14 CFR 91.107(a)(1)-(3)",
+     "14 CFR 91.147(a)-(b)"
+    ]
+   }
   },
   "reg-ntsb": {
    "title": "NTSB accident reporting",
@@ -190,7 +449,64 @@
      "p830",
      "830.2 definitions, 830.5 immediate notification"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**An accident means death, serious injury or substantial damage, between boarding and everyone getting off.** Accidents, and a short list of serious incidents, mean an immediate call to the NTSB.",
+    "widget": null,
+    "body": [
+     "Part 830 is the National Transportation Safety Board's reporting rule. An **aircraft accident** happens between the time anyone boards with the intention of flight and the time everyone has gotten off, and involves a death, a serious injury, or substantial damage to the aircraft.",
+     "A **serious injury** means more than 48 hours in hospital starting within 7 days; a broken bone (except simple fractures of fingers, toes or nose); severe bleeding or nerve, muscle or tendon damage; an internal organ injury; or any second- or third-degree burn, or burns over more than 5% of the body. **Substantial damage** harms structural strength, performance or flight characteristics and would normally need major repair or replacement; small punctured holes in fabric don't count.",
+     "Notify the nearest NTSB office **immediately** after an accident, and after these incidents even if no one is hurt: a flight control failure, a required crewmember unable to do the job, an **in-flight fire**, a **collision in flight**, damage to other property estimated over **$25,000**, or an overdue aircraft believed to be in an accident. Include the number aboard, killed and seriously injured.",
+     "After an accident, file the written report (NTSB Form 6120.1/2) within **10 days**, or after 7 days if an overdue aircraft is still missing; for an incident, only if the NTSB asks. Until the Board takes custody, move wreckage only to free injured or trapped people, protect it from more damage, or protect the public, and sketch, note and photograph where it lay if you can."
+    ],
+    "example": {
+     "setup": "A gusty landing tips the basket, which drags 30 feet with everyone aboard. One passenger gets stitches for a cut hand and goes home; another has a simple fracture of a little finger. The envelope has scuffs within the manufacturer's limits.",
+     "steps": [
+      [
+       "Serious injury?",
+       "No. Stitches with no hospital stay aren't on the list, and a simple finger fracture is excluded."
+      ],
+      [
+       "Damage or a listed incident?",
+       "No substantial damage, and no fire, collision in flight, or property damage over $25,000."
+      ],
+      [
+       "So the answer.",
+       "No notification required. Had a passenger broken an ankle, that is a serious injury: an accident, so notify the NTSB at once and file the report within 10 days."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Something went wrong",
+      "body": "After a car crash, certain people have to be told. In aviation, the NTSB must hear about accidents and some serious close calls.",
+      "alt": "Part 830 says who calls the NTSB, when, and what to tell them."
+     },
+     {
+      "title": "Three things make an accident",
+      "body": "Someone dies, someone is seriously injured, or the aircraft is substantially damaged, between boarding and everyone getting off.",
+      "alt": "A bruise or a scuffed basket is not an accident. A broken leg is."
+     },
+     {
+      "title": "Some close calls count too",
+      "body": "A fire in flight, a collision in flight, or over $25,000 of damage to someone else's property must be reported even if no one is hurt.",
+      "alt": "Close calls serious enough that investigators want to hear right away."
+     },
+     {
+      "title": "Call first, write later, touch little",
+      "body": "Notify right away, file the written report within 10 days for an accident, and leave the wreckage alone unless people need protecting.",
+      "alt": "Help the injured, keep people safe, take photos, leave the rest."
+     }
+    ],
+    "sources": [
+     "49 CFR 830.1",
+     "49 CFR 830.2 (Aircraft accident; Serious injury; Substantial damage)",
+     "49 CFR 830.5(a)(1)-(6), (b)",
+     "49 CFR 830.6",
+     "49 CFR 830.10(a)-(d)",
+     "49 CFR 830.15(a) (Board Form 6120.1/2)"
+    ]
+   }
   },
   "air-classes": {
    "title": "Airspace classes",
@@ -209,7 +525,82 @@
      "phak",
      "Chapter 15: Airspace"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Know the airspace class and you know the price of entry.** Each class sets what you need before you go in and how much space to keep from clouds.",
+    "widget": null,
+    "body": [
+     "**Class A**, 18,000 feet MSL to FL600, is IFR only. **Class B**, around the busiest airports from the surface to about 10,000 feet MSL, needs an ATC clearance. **Class C** (a 5 NM core from the surface and a 10 NM shelf from 1,200 feet, up to 4,000 feet above the airport) and **Class D** (usually up to 2,500 feet above a towered airport) need two-way radio contact before entry. **Class E** is the other controlled airspace: from the surface, from 700 or 1,200 feet AGL, or from 14,500 feet MSL. **Class G** is the rest.",
+     "**VFR minimums.** Class G at or below 1,200 feet AGL by day: 1 statute mile, clear of clouds. Class C, D and E below 10,000 MSL, and that low Class G at night: 3 miles, 500 below, 1,000 above, 2,000 horizontal. Class B: 3 miles, clear of clouds. Class E at or above 10,000 MSL: 5 miles, 1,000 below and above, 1 mile horizontal. In an airport's surface area you also need a 1,000-foot ceiling and 3 miles to launch or land, unless ATC grants special VFR: clear of clouds, 1 mile, and for a balloon, only between sunrise and sunset.",
+     "**Transponders.** A balloon with no engine-driven electrical system may fly in the 30 NM Mode C veil without a transponder or ADS-B Out if it stays outside Class A, B and C and below their ceiling or 10,000 MSL, whichever is lower; it is also excepted at and above 10,000 MSL. Inside Class B or C, or over them up to 10,000 feet, it needs ATC authorization, requested at least 1 hour ahead.",
+     "**Special use airspace.** Prohibited areas are off-limits; restricted areas need the controlling agency's permission. An active MOA needs no clearance, but use extreme caution and get traffic advisories from the controlling agency. On a military training route, get its status from Flight Service and keep looking; four-digit routes stay at or below 1,500 feet AGL. TFRs come by NOTAM, and over national parks and wildlife refuges pilots are asked to stay 2,000 feet above the surface."
+    ],
+    "example": {
+     "setup": "Morning launch from a field in Class G, inside a shaded magenta band: Class E begins at 700 feet AGL. Visibility 4 miles; scattered cumulus based near 3,000 feet AGL.",
+     "steps": [
+      [
+       "Below 700 feet.",
+       "Class G by day: 1 mile and clear of clouds. Easy."
+      ],
+      [
+       "Above 700 feet.",
+       "Class E below 10,000 MSL: 3 miles, and 500 below, 1,000 above, 2,000 horizontal. 4 miles still works."
+      ],
+      [
+       "The cloud limit.",
+       "Stay at or below about 2,500 feet AGL, and 2,000 feet sideways from any cloud you pass."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "The sky has rooms",
+      "body": "Picture the sky as a building. Some rooms are open to anyone, some need you to knock first, and some need a key.",
+      "alt": "A hotel: the lobby is open, guest floors need a key card, the kitchen is staff only."
+     },
+     {
+      "title": "Letters name the rooms",
+      "body": "Classes A to E are controlled; G is not. Around busy airports you need a clearance (Class B) or radio contact (C and D) first.",
+      "alt": "B: a clearance. C and D: talking with ATC. E and G: usually just fly in."
+     },
+     {
+      "title": "Keep space from clouds",
+      "body": "Other aircraft can fly inside clouds. Keeping 500 feet below, 1,000 above and 2,000 sideways gives you both time to see each other.",
+      "alt": "A cloud can hide an airplane until the last second."
+     },
+     {
+      "title": "Higher means bigger numbers",
+      "body": "At 10,000 feet MSL and above, the minimums grow to 5 miles, 1,000 feet above and below, and a mile sideways.",
+      "alt": "Low and slow, smaller numbers. Up high, bigger ones."
+     }
+    ],
+    "sources": [
+     "AIM 3-2-2",
+     "AIM 3-2-3",
+     "AIM 3-2-4",
+     "AIM 3-2-5",
+     "AIM 3-2-6",
+     "AIM 3-3-1",
+     "14 CFR 71.71",
+     "14 CFR 91.131(a)(1)",
+     "14 CFR 91.130(c)(1)",
+     "14 CFR 91.129(c)",
+     "14 CFR 91.135",
+     "14 CFR 91.155(a), (c)-(d)",
+     "14 CFR 91.157(a)-(b)",
+     "14 CFR 91.215(b)(2)-(5), (d)(3)",
+     "14 CFR 91.225(e)",
+     "14 CFR 91.133(a)",
+     "AIM 3-4-2",
+     "AIM 3-4-3",
+     "AIM 3-4-5",
+     "AIM 3-5-2",
+     "14 CFR 91.137",
+     "AIM 7-5-6",
+     "AIM 3-4-5 (MOA: contact the controlling agency for traffic advisories)",
+     "AIM 3-5-2 (MTR: four-digit routes; status from Flight Service)"
+    ]
+   }
   },
   "air-charts": {
    "title": "Sectional chart symbols",
@@ -224,7 +615,67 @@
      "phak",
      "Chapter 16: Navigation"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**On a sectional, color and line style carry the meaning.** Blue or magenta, solid or dashed, shaded bands and small numbers tell you where airspace begins and ends and how tall things are.",
+    "widget": null,
+    "body": [
+     "**Airspace.** Class B sectors are labeled in solid blue figures and Class C in solid magenta, as ceiling over floor in hundreds of feet MSL; a Class C ceiling of T means up to the floor of the Class B above. Class D is a blue dashed line, and a minus sign before its ceiling means up to, but not including, that altitude. A magenta dashed line marks a Class E surface area. A shaded magenta band means Class E starts at 700 feet AGL on the shaded side; a shaded blue band marks where a higher floor, usually 1,200 feet AGL, meets Class G.",
+     "**Airports.** Towered airports are blue; all others magenta. A star after the tower frequency means part-time, with hours in the Chart Supplement. A thin solid magenta circle labeled MODE C & ADS-B OUT 30 NM outlines the veil around a Class B airport.",
+     "**Obstacles and terrain.** An obstacle shows the MSL elevation of its top, with its height above ground in parentheses. The **Maximum Elevation Figure** in each quadrangle (30 minutes of latitude by 30 of longitude) covers the highest terrain or obstacle in it, plus an allowance, rounded up to the next 100 feet: a large 4 and a small 7 mean 4,700 feet MSL.",
+     "**Special use airspace.** Prohibited, restricted and warning areas are outlined in blue; MOAs and alert areas in magenta. Most TFRs never appear on the chart, so a sectional never replaces a NOTAM check."
+    ],
+    "example": {
+     "setup": "You'll cruise at 2,500 feet MSL. Your track crosses a quadrangle with an MEF of large 2, small 9, passes a tower charted 2140 over (390), then runs under a magenta Class C shelf labeled 58 over 30.",
+     "steps": [
+      [
+       "The MEF.",
+       "The highest thing in the quadrangle, plus an allowance, comes to 2,900 feet MSL. It may stand above your cruise, so find it on the chart."
+      ],
+      [
+       "The tower.",
+       "Top 2,140 MSL, 390 feet tall. At 2,500 you'd clear it by only 360 feet, less than the 500 feet you keep from structures. Climb or pass to one side."
+      ],
+      [
+       "The shelf.",
+       "3,000 to 5,800 feet MSL. At 2,500 you're under it; a climb past 3,000 takes you in."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "A road map for the sky",
+      "body": "A road map shows highways, towns and city limits. A sectional shows airports, airspace and obstacles the same way.",
+      "alt": "A hiking map with invisible walls drawn on it."
+     },
+     {
+      "title": "Two colors, two families",
+      "body": "Towered airports are blue, the rest magenta. For airspace, Class B and D are blue, Class C and E magenta.",
+      "alt": "Learn it as pairs: B and D blue, C and E magenta."
+     },
+     {
+      "title": "Dashed, solid, shaded",
+      "body": "Dashed lines mark airspace starting at the ground around an airport: blue for D, magenta for E. Shaded bands show where Class E starts above the ground.",
+      "alt": "A dashed line is a fence from the ground up. A shaded band is a ceiling over Class G."
+     },
+     {
+      "title": "Numbers tell heights",
+      "body": "Obstacles show the top above sea level, with height above ground in parentheses. Airspace shows ceiling over floor, in hundreds of feet.",
+      "alt": "45 over 20 means 2,000 up to 4,500 feet MSL."
+     }
+    ],
+    "sources": [
+     "FAA Chart Users' Guide (VFR Terms and Symbols: Controlled Airspace, Class B, C, D, E)",
+     "FAA Chart Users' Guide (Airports; Airport Data)",
+     "FAA Chart Users' Guide (Other Airspace Areas: Mode C)",
+     "FAA Chart Users' Guide (Obstructions; Maximum Elevation Figure; Contour lines)",
+     "FAA Chart Users' Guide (Special Use Airspace; TFR)",
+     "AIM 3-2-5",
+     "AIM 3-2-6",
+     "14 CFR 91.119(c)",
+     "FAA Chart Users' Guide (Mode C & ADS-B Out 30 NM label; MEF calculation)"
+    ]
+   }
   },
   "air-nav": {
    "title": "Compass and dead reckoning",
@@ -239,7 +690,70 @@
      "bfh",
      "Chapter 3: Preflight planning, navigation"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**A balloon goes where the wind goes, so navigation is wind direction, speed and time.** Get the direction in the right north, true or magnetic, and the rest is arithmetic.",
+    "widget": null,
+    "body": [
+     "Charts are drawn to **true north**; a compass points to magnetic north. The angle between them is **variation**, printed on the sectional as isogonic lines: it changes from place to place but is the same on every heading. From true to magnetic, subtract east variation and add west (“east is least, west is best”). **Deviation** is a different error, caused by magnetic fields near the compass, such as steel tanks or radios in the basket.",
+     "Winds aloft forecasts give direction from true north; ATIS, ASOS and AWOS voice broadcasts give it from magnetic north. Wind is named for where it comes **from**, so a balloon in a 270° wind drifts toward 090°. Your GPS ground track shows where you're going, so the wind at that altitude comes from the opposite direction.",
+     "**Dead reckoning** is distance = ground speed × time, with minutes divided by 60 to get hours. A sectional's scale is 1:500,000, about 6.86 NM per inch, and each minute of latitude is 1 NM. Fuel sets your range: usable flying time, minus your reserve, times ground speed.",
+     "A VOR radial is a magnetic line running *out* from the station, so on the 180° radial you are south of it. VOR signals are line-of-sight, so a low balloon may not receive one. Handheld GPS units have no RAIM alerting, so cross-check their position against the ground."
+    ],
+    "example": {
+     "setup": "Winds aloft at 3,000 feet: 3014. Local variation is 12° E. A good landing field lies 7 NM downwind, and you burn about 18 gallons an hour.",
+     "steps": [
+      [
+       "Which way.",
+       "3014 is from 300° true at 14 knots, so you drift toward 120° true."
+      ],
+      [
+       "Magnetic.",
+       "East is least: 120 − 12 = 108° magnetic on your hand compass."
+      ],
+      [
+       "How long.",
+       "7 NM ÷ 14 knots = 0.5 hour, about 30 minutes."
+      ],
+      [
+       "Fuel.",
+       "30 minutes at 18 gallons an hour is about 9 gallons, before any reserve."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "A leaf on a river",
+      "body": "A balloon can't steer. It goes with the air, and you choose a direction by choosing the altitude whose wind goes your way.",
+      "alt": "Different heights are different lanes of traffic."
+     },
+     {
+      "title": "Two norths",
+      "body": "Maps point to the true North Pole. A compass points to the magnetic pole, which is somewhere else. The difference, variation, is printed on the chart.",
+      "alt": "Two clocks in different time zones: both right, but convert before you compare."
+     },
+     {
+      "title": "Distance is speed times time",
+      "body": "Drive 60 miles an hour for half an hour and you go 30 miles. Drift at 10 knots for half an hour and you go 5 nautical miles.",
+      "alt": "How fast, for how long? Multiply."
+     },
+     {
+      "title": "Check against the ground",
+      "body": "Match roads, rivers and towns below to the chart. Use GPS too, but trust it when it agrees with what you see.",
+      "alt": "Like checking the phone's map against the street sign."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-25C Ch. 16 (Variation; Deviation; Basic Calculations; Sectional Charts; VOR)",
+     "FAA-H-8083-25C Ch. 8 (Magnetic Compass Induced Errors)",
+     "FAA-H-8083-28B Ch. 3 (Wind Information table: true vs magnetic)",
+     "FAA-H-8083-28B 27.2.1.1.1 (FB text format)",
+     "AIM 1-1-3",
+     "AIM 1-1-17 (VFR Operations: RAIM)",
+     "FAA-H-8083-11B Ch. 4 (Atmospheric Circulation: balloons steer by wind layers)",
+     "FAA-H-8083-25C Ch. 16 (one minute of latitude = 1 NM)"
+    ]
+   }
   },
   "air-notam": {
    "title": "NOTAMs and the Chart Supplement",
@@ -254,7 +768,66 @@
      "phak",
      "Chapter 16: Navigation"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Charts are printed ahead of time; NOTAMs tell you what has changed since.** Check them before every flight, and check the Chart Supplement for each airport near your path.",
+    "widget": null,
+    "body": [
+     "A NOTAM carries time-critical information that is temporary, or that hasn't reached the charts yet. It is cancelled when the condition returns to normal or the information is printed on the chart, and it may be issued up to 7 days before an activity. Get them online through FAA NOTAM Search, or from Flight Service.",
+     "**NOTAM (D)s** cover navigation aids, public-use airports, runways and lighting, and airspace activity such as special use airspace, pyrotechnics and drones. **FDC NOTAMs** carry regulatory information, including **temporary flight restrictions**, chart amendments and laser activity. Don't stop at the airport next to your field: the AIM says to check NOTAMs for the whole ARTCC area too, where SUA, TFRs and GPS outages show up.",
+     "Most TFRs never appear on the sectional, so a clear chart proves nothing. NOTAM times are UTC (Zulu): from Pacific Standard Time add 8 hours, from Pacific Daylight add 7.",
+     "The **Chart Supplement** is the FAA's airport directory, reissued every 56 days. It lists airports, navaids, frequencies and weather sources, plus each part-time tower's hours and what its airspace becomes when the tower is closed (“other times CLASS E” or “CLASS G”)."
+    ],
+    "example": {
+     "setup": "You plan a 7:00 a.m. PDT launch tomorrow 6 miles from Hillcrest, an airport with a part-time tower. Your drift passes a fairground.",
+     "steps": [
+      [
+       "Where to look.",
+       "FAA NOTAM Search or Flight Service, for Hillcrest and the whole ARTCC area."
+      ],
+      [
+       "Times.",
+       "7:00 a.m. PDT is 1400Z. A fireworks NOTAM for 0300Z to 0500Z tomorrow is 8 to 10 p.m. local tonight, so it doesn't touch your flight."
+      ],
+      [
+       "The airport.",
+       "The Chart Supplement says the tower opens at 0800 local, “other times CLASS E.” If your field is inside that surface area, you need a 1,000-foot ceiling and 3 miles to launch at 7:00."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Detour signs for the sky",
+      "body": "A road map printed last year won't show this week's road work. NOTAMs are the detour signs.",
+      "alt": "The chart is the map; NOTAMs are the news."
+     },
+     {
+      "title": "Look them up every time",
+      "body": "Check FAA NOTAM Search or Flight Service before each flight, for the whole area you might drift through.",
+      "alt": "Every flight, like the weather."
+     },
+     {
+      "title": "Some are law",
+      "body": "FDC NOTAMs, including temporary flight restrictions, are regulatory. Fly into an active TFR and you've broken a rule, even if the chart looked clear.",
+      "alt": "A “no entry” sign that exists only in the NOTAM."
+     },
+     {
+      "title": "The airport directory",
+      "body": "The Chart Supplement lists each airport's frequencies, tower hours, and the airspace when the tower is closed.",
+      "alt": "The chart shows where. The Chart Supplement tells how and when."
+     }
+    ],
+    "sources": [
+     "AIM 5-1-3 (General; Preflight; ARTCC NOTAMs; GPS NOTAMs; NOTAM Classification)",
+     "14 CFR 91.103",
+     "AIM 3-5-3",
+     "AIM 4-2-12 (UTC; TBL 4-2-12)",
+     "AIM 9-1-5 (Chart Supplement)",
+     "AIM 3-2-5 (part-time Class D)",
+     "14 CFR 91.155(c)-(d)",
+     "FAA Chart Users' Guide (TFR depiction)"
+    ]
+   }
   },
   "air-radio": {
    "title": "Radio and collision avoidance",
@@ -273,7 +846,74 @@
      "aim8",
      "Vision and scanning"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Talk briefly, listen often, and keep looking outside.** The radio announces you and gets you into airspace, but most traffic is found by eye.",
+    "widget": null,
+    "body": [
+     "Within about 10 miles of an airport without an operating tower, monitor and talk on the **CTAF**; with no tower, FSS or UNICOM, self-announce on **MULTICOM, 122.9**. The FCC lists 123.3 and 123.5 for uses that include hot air balloons (not advisory service), and many balloonists use them to reach chase crew. Every frequency is shared: idle chatter can block someone's emergency call, and using an aviation radio like a telephone or CB is prohibited.",
+     "A self-announcement says who you're calling, who you are, where you are, your altitude and what you'll do, then the airport name again. “Traffic in the area, please advise” is not a recognized call. Below 18,000 feet, say the thousands digits, then the hundreds: 12,500 is “one two thousand five hundred.” Times are UTC: add 7 hours to Pacific Daylight Time.",
+     "Class C and D need two-way radio contact before entry. If the controller answers with your call sign, even with “standby,” you have it; “Aircraft calling, standby” means you don't, so stay out. If the radio fails, watch the tower's light gun. In flight: steady green, cleared to land; flashing green, return for landing; steady red, give way and continue circling; flashing red, airport unsafe, do not land.",
+     "Scan in short, regular eye movements of no more than 10°, looking at each patch of sky for at least 1 second. An aircraft that holds still in your view but grows larger is on a collision course."
+    ],
+    "example": {
+     "setup": "Your balloon, N4417B, is 8 miles northwest of nontowered Pine Valley at 1,200 feet MSL, drifting southeast to pass south of the field. Your crew keeps calling you on the CTAF.",
+     "steps": [
+      [
+       "Which frequency.",
+       "Within about 10 miles, the CTAF. At 8 miles you should already be on it."
+      ],
+      [
+       "What to say.",
+       "“Pine Valley traffic, balloon four four one seven Bravo, eight miles northwest, one thousand two hundred, drifting southeast, will pass south of the field, no landing, Pine Valley.”"
+      ],
+      [
+       "The crew.",
+       "Move crew talk to 123.3 or 123.5 and keep it short. The airport frequency is for traffic."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "A shared channel",
+      "body": "Everyone on a frequency hears everyone else, like walkie-talkies at a crowded campground. One long chat blocks it for all.",
+      "alt": "Short and clear, then let go of the button."
+     },
+     {
+      "title": "Who, where, what",
+      "body": "Every call says who you're talking to, who you are, where you are, and what you'll do.",
+      "alt": "Like calling out at an intersection: “Blue car, Main Street, turning left.”"
+     },
+     {
+      "title": "Lights when the radio quits",
+      "body": "If your radio fails, the tower can signal with a light gun. Green is good, steady red means give way, flashing red means don't land.",
+      "alt": "Traffic lights, aimed at you from the tower."
+     },
+     {
+      "title": "Eyes beat ears",
+      "body": "Many aircraft never call on the radio. Move your eyes in small steps and hold each one for a second.",
+      "alt": "Something that doesn't move in your view but keeps growing is coming straight at you."
+     }
+    ],
+    "sources": [
+     "AIM 4-1-9 (TBL 4-1-1; Self-Announce Position and/or Intentions)",
+     "AIM 4-1-11 (TBL 4-1-2, FCC frequencies)",
+     "FAA-H-8083-11B Ch. 5 (Radio Communications)",
+     "AIM 4-2-9",
+     "AIM 4-2-12",
+     "AIM 3-2-4",
+     "AIM 3-2-5",
+     "14 CFR 91.129(c)",
+     "14 CFR 91.130(c)",
+     "14 CFR 91.125",
+     "AIM 4-3-13 (TBL 4-3-13)",
+     "AIM 8-1-6",
+     "AIM 8-1-8 (Collision Course Targets)",
+     "14 CFR 91.113(b)",
+     "AIM 4-1-11 (TBL 4-1-11, other FCC frequency usage)",
+     "FAA-H-8083-11B Ch. 7 (Use of a VHF Radio: 123.3/123.5 for chase crew)"
+    ]
+   }
   },
   "wx-stability": {
    "title": "Stability and thermals",
@@ -288,7 +928,63 @@
      "bfh",
      "Chapter 4: Weather theory and reports"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Stable air resists rising; unstable air helps it rise.** Balloons fly early and late because that's when the low air is most stable, before the sun builds thermals.",
+    "widget": null,
+    "body": [
+     "Air temperature usually falls as you climb; the standard atmosphere uses about 2 °C per 1,000 feet. A rising bubble of dry air cools at 3 °C per 1,000 feet (the dry adiabatic rate); once saturated and making cloud, more slowly, about 1.1 to 2.8 °C (the moist rate).",
+     "**Stability** asks what a lifted bubble does next. If it ends up colder than the air around it, it sinks back: stable. If warmer, it keeps rising, like your balloon: unstable. Air is **absolutely stable** when the real lapse rate is less than the moist rate (inversions included), **absolutely unstable** when it's more than the dry rate, and **conditionally unstable** in between.",
+     "Stable air brings layer clouds or none, smooth air, and often haze trapped low. Unstable air brings cumulus, showers, turbulence and good visibility. The sun destabilizes low air by heating the ground unevenly, plowed fields, sand and rock fastest, so balloons fly within about two hours after sunrise, or in the hour or two before sunset.",
+     "A **thermal** is a rising column of heated air with sinking air around it. Signs: dust devils, a climb you didn't burn for, sudden changes in speed or direction. Caught in one, keep the envelope at or above level-flight temperature, don't vent to force a descent, and wait: thermals are short-lived and usually spit the balloon out higher."
+    ],
+    "example": {
+     "setup": "At 6 a.m. it's 9 °C at the surface and 12 °C at 1,000 feet AGL. By 10 a.m. the surface is forecast at 21 °C, with 1,000 feet near 17 °C.",
+     "steps": [
+      [
+       "At 6 a.m.",
+       "Warmer aloft: an inversion. Absolutely stable, good for flying."
+      ],
+      [
+       "At 10 a.m.",
+       "21 down to 17 in 1,000 feet is 4°, more than the dry rate of 3°: absolutely unstable."
+      ],
+      [
+       "So the plan.",
+       "Thermals are coming. Fly early and be on the ground before the surface heats up."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Hot air rises",
+      "body": "Smoke over a campfire, steam off a cup, your own balloon: warm air is lighter than the cooler air around it, so it goes up.",
+      "alt": "Heat the air inside your envelope and it lifts."
+     },
+     {
+      "title": "Air moves in bubbles",
+      "body": "Picture a bubble of air pushed upward. It cools as it rises. What matters is whether it ends up warmer or cooler than its neighbors.",
+      "alt": "A tiny balloon with no burner."
+     },
+     {
+      "title": "Stable settles, unstable runs",
+      "body": "If the lifted bubble is cooler than its neighbors, it sinks back: stable. If it's warmer, it keeps climbing: unstable.",
+      "alt": "A marble in a bowl rolls back. A marble on top of a ball rolls away."
+     },
+     {
+      "title": "The sun stirs the pot",
+      "body": "Early morning, the ground is cool and the air calm. As the sun heats the ground, warm bubbles start rising: thermals.",
+      "alt": "A pot on the stove: quiet, then bubbling as the bottom gets hot."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 4 (The Standard Atmosphere; Types of Stability; Effects of Stable & Unstable Air; Air Masses; Turbulence: Thermal)",
+     "FAA-H-8083-28B 13.2-13.3 (dry and moist adiabatic rates; stability types)",
+     "FAA-H-8083-11B Ch. 3 (Weather: fly within two hours after sunrise or before sunset)",
+     "FAA-H-8083-11B Ch. 8 (Thermal Flight)",
+     "FAA-H-8083-11B Ch. 4 (moist adiabatic rate 1.1 to 2.8 °C per 1,000 ft)"
+    ]
+   }
   },
   "wx-fog": {
    "title": "Fog and inversions",
@@ -303,7 +999,65 @@
      "phak",
      "Chapter 12: Weather theory"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Fog is a cloud on the ground, made when air cools to its dew point.** When the temperature–dew point spread is small and still closing on a clear, calm night, expect fog by sunrise.",
+    "widget": null,
+    "body": [
+     "Fog is a cloud that begins within 50 feet of the ground. It forms when the air cools to its **dew point**, or when moisture is added until it saturates. Watch the temperature–dew point spread: fog rarely forms when it's more than about 2 °C (4 °F), and is most frequent under about 1 °C.",
+     "**Radiation fog** forms over land on clear nights with light wind, as the ground chills the air touching it, and is often densest around sunrise. **Advection fog** forms when moist air moves over a colder surface, often along coasts, and holds in winds up to about 15 knots. **Upslope fog** forms as moist, stable air cools climbing sloping ground, even under cloudy skies. Cold air draining into valleys at night makes valley fog.",
+     "An **inversion** is a layer where temperature rises with height. A surface inversion forms on clear nights with light wind, as the ground radiates its heat away. It works like a lid, trapping fog, haze and smoke, and usually mixes out as the sun heats the morning. Climbing out of it, expect a sudden change in wind speed or direction, turbulence, and less lift in the warmer air above."
+    ],
+    "example": {
+     "setup": "8 p.m. the evening before a flight from a river-valley field: 16 °C, dew point 9 °C, clear, wind 3 knots. Forecast dawn low: 8 °C.",
+     "steps": [
+      [
+       "Now.",
+       "A 7° spread. No fog yet."
+      ],
+      [
+       "Overnight.",
+       "Clear and calm means strong cooling, while the dew point changes only a few degrees. A low of 8 °C closes the spread to about zero, and cold air pooling in the valley makes it likelier still."
+      ],
+      [
+       "So the plan.",
+       "Expect fog around sunrise. Check the spread before dawn, and have a higher launch site in mind or plan to wait for it to burn off."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Breath on a cold window",
+      "body": "Breathe on a cold window and it fogs up. Cool the air enough and it can't hold all its water, so tiny droplets appear.",
+      "alt": "A glass of ice water on a summer day gets wet outside."
+     },
+     {
+      "title": "Dew point is the fog line",
+      "body": "The dew point is the temperature at which the air is full of water vapor. Cool the air to it and dew or fog forms.",
+      "alt": "When temperature and dew point are nearly equal, look out."
+     },
+     {
+      "title": "Clear nights get cold",
+      "body": "Clouds act like a blanket. On a clear, calm night the ground loses its heat to the sky, and the air touching it cools most.",
+      "alt": "Frost on the car after a clear night, not after a cloudy one."
+     },
+     {
+      "title": "A lid of warm air",
+      "body": "Sometimes the air gets warmer as you go up. That warm layer is a lid: fog, smoke and cold air stay trapped under it until the sun mixes things up.",
+      "alt": "Climb through the lid and the wind can change all at once."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 4 (Fog; Fog Formation; Radiation, Advection and Valley Fog; Steam Fog)",
+     "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude: inversions)",
+     "FAA-H-8083-28B 18.1.1 (fog types; spread over 2 °C; radiation, advection, upslope fog)",
+     "FAA-H-8083-28B 5.8.3 (Temperature Inversion)",
+     "FAA-H-8083-28B 19.2.3.1 (wind shear across inversions)",
+     "FAA-H-8083-11B Ch. 2 (Why Do Balloons Fly?: warmer outside air gives less lift)",
+     "FAA-H-8083-11B Ch. 4 (Fog: spread over 2.2 °C rare, under 1.1 °C most frequent)",
+     "FAA-H-8083-28B 18.1.1.1.2 (advection fog deepens with wind up to about 15 kt)"
+    ]
+   }
   },
   "wx-fronts": {
    "title": "Fronts and wind",
@@ -318,7 +1072,66 @@
      "phak",
      "Chapter 12: Weather theory"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Air masses take turns, and the boundary between them brings the change.** For a balloon pilot, fronts, storms and local breezes all come down to one thing: the wind is about to change.",
+    "widget": null,
+    "body": [
+     "A **front** is the boundary between two air masses; pressure usually falls as it approaches and rises after it passes. A **cold front** pushes under warmer air like a snowplow, typically at 25 to 30 mph and sometimes up to 60, bringing towering cumulus, showers or thunderstorms, gusty shifting winds and a quick drop in temperature and dew point, then clearing and rising pressure. A **warm front** moves slower, typically 10 to 25 mph, as warm air slides up over the cold, spreading layer clouds, fog and poor visibility well ahead of it.",
+     "In the Northern Hemisphere, wind flows clockwise and outward around a **high**, usually with light wind and fair weather, and counterclockwise and inward around a **low**, with clouds and gusts. Near the ground, friction slows the wind and weakens the Coriolis force, so surface wind crosses the isobars toward low pressure; above about 2,000 feet AGL friction fades, so expect speed and direction to change as you climb.",
+     "A thunderstorm cell has three stages: **cumulus** (updrafts), **mature** (begins as rain reaches the ground and downdrafts form beside the updrafts; the most dangerous stage), and **dissipating** (downdrafts take over). The downdraft spreads out as a **gust front**, often marked by blowing dust, up to 15 miles ahead of the rain.",
+     "By day land heats faster than water, so a **sea breeze** blows onshore; at night a land breeze blows offshore. Slopes do the same: upslope by day, cold air draining downslope at night."
+    ],
+    "example": {
+     "setup": "Morning at an inland launch site: wind south-southwest at 6 knots, pressure falling, a high dew point, towering cumulus to the northwest. A cold front is about 45 miles northwest, moving southeast.",
+     "steps": [
+      [
+       "Timing.",
+       "At 25 to 30 mph, 45 miles is about 1½ to 2 hours. A fast front at 60 mph: 45 minutes."
+      ],
+      [
+       "What it brings.",
+       "Gusty, shifting winds, possible storms, and a gust front that can run 15 miles ahead of the rain."
+      ],
+      [
+       "So the answer.",
+       "Don't launch. A balloon can't outrun the front, and landing in gusty, shifting wind is what you most want to avoid."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Big bodies of air",
+      "body": "Weather comes in huge bodies of air, each with its own temperature and moisture: some cold and dry, some warm and humid.",
+      "alt": "Open the door between an air-conditioned room and a steamy one: the change happens in the doorway."
+     },
+     {
+      "title": "A front is where they meet",
+      "body": "Cold air pushing in shoves under the warm air like a snowplow. Warm air moving in slides up and over the cold.",
+      "alt": "Cold fronts: fast and rough. Warm fronts: slow, wide, gray and damp."
+     },
+     {
+      "title": "Highs and lows spin",
+      "body": "North of the equator, air spins clockwise out of a high and counterclockwise into a low. Highs usually bring calm; lows bring clouds and wind.",
+      "alt": "High: light winds, clear skies. Low: clouds, gusts, rain."
+     },
+     {
+      "title": "The ground makes breezes",
+      "body": "By day, land heats faster than water, so cooler air from the lake or sea flows onto shore. At night it reverses. Hills do the same: up by day, down at night.",
+      "alt": "Hot sand, cool water: that difference drives the breeze."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 4 (Types of Fronts: cold, warm, stationary, occluded)",
+     "FAA-H-8083-28B 11.3 (Fronts)",
+     "FAA-H-8083-11B Ch. 4 (Pressure Systems; Atmospheric Circulation: Surface Friction)",
+     "FAA-H-8083-11B Ch. 4 (Stages in Thunderstorm Development)",
+     "FAA-H-8083-28B 22.3 (Thunderstorm Cell Life Cycle)",
+     "FAA-H-8083-28B Ch. 19 (gust front up to 15 mi ahead; dust line)",
+     "FAA-H-8083-11B Ch. 4 (Convective Currents: sea and land breeze; Anabatic and Katabatic Winds)",
+     "FAA-H-8083-11B Ch. 4 (Mature Stage: begins with downdraft and surface rain)"
+    ]
+   }
   },
   "wx-reports": {
    "title": "Reports: METAR and TAF",
