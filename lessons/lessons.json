@@ -1146,7 +1146,66 @@
      "phak",
      "Chapter 13: Aviation weather services"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**A METAR is the weather now; a TAF is the weather expected.** Read them one group at a time.",
+    "widget": null,
+    "body": [
+     "A **METAR** reads left to right: station, day and time in UTC (Z), wind, visibility, weather, sky, temperature/dewpoint, altimeter, remarks. Wind is the direction it blows *from*, in degrees **true**, then knots; G means gusts, VRB a light variable wind. (Spoken ATIS, ASOS and AWOS broadcasts give magnetic direction.) Visibility is in statute miles.",
+     "Sky cover is FEW (1/8 to 2/8), SCT (3/8 to 4/8), BKN (5/8 to 7/8) or OVC (8/8), with the base in hundreds of feet **above ground**. The **ceiling** is the lowest broken or overcast layer. CLR comes from an automated station that found no clouds at or below 12,000 feet; SKC means an observer saw none. M before a temperature means minus. A small temperature-dewpoint spread warns of fog.",
+     "A **TAF** forecasts one airport, usually for 24 hours. An **FM** group replaces everything before it from its start time. A **TEMPO** group is a temporary change that is more likely than not, lasting an hour or less each time and, all together, less than half of the TEMPO period. An **urgent PIREP** (UUA) reports hazards like severe turbulence, severe icing, hail or low-level wind shear; the rest are routine (UA)."
+    ],
+    "example": {
+     "setup": "Local time is UTC minus 7. Before a sunrise flight you read: METAR KABC 141352Z 15004KT 5SM BR SCT008 BKN025 09/08 A3005. The TAF's next line is FM141600 23012G20KT P6SM SCT050.",
+     "steps": [
+      [
+       "141352Z 15004KT 5SM BR.",
+       "The 14th at 1352 UTC, 6:52 a.m. local. Wind from 150° true at 4 knots. Visibility 5 miles in mist (BR is reported only from 5/8 to under 7 miles)."
+      ],
+      [
+       "SCT008 BKN025.",
+       "Scattered cloud at 800 feet AGL, broken at 2,500. The broken layer is the ceiling: 2,500 feet."
+      ],
+      [
+       "09/08 A3005.",
+       "Temperature 9 °C, dewpoint 8 °C: only 1° apart, so fog could form. Altimeter 30.05."
+      ],
+      [
+       "FM141600 23012G20KT.",
+       "From 1600Z, 9 a.m. local, wind from 230° at 12 gusting 20 knots."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "A report is a code",
+      "body": "Weather reports use short codes so they fit on one line. Each group always sits in the same place.",
+      "alt": "Like a scoreboard: once you know which box is which, you read it at a glance."
+     },
+     {
+      "title": "Wind comes early",
+      "body": "Three digits say where the wind blows from, two say its speed in knots. 27010KT is from the west at 10 knots.",
+      "alt": "A weathervane points to where the wind comes from. Your balloon drifts the opposite way."
+     },
+     {
+      "title": "Clouds and the ceiling",
+      "body": "FEW, SCT, BKN and OVC say how much sky is covered. The number after is the cloud base in hundreds of feet above the ground. The first BKN or OVC layer is the ceiling.",
+      "alt": "Cut the sky into eight slices like a pizza. Cloud over five or more slices makes a ceiling."
+     },
+     {
+      "title": "The TAF looks ahead",
+      "body": "A TAF uses the same codes for the hours ahead. FM means: from this time on, expect this instead.",
+      "alt": "The METAR is a photo of right now. The TAF is the plan for the day, and each FM starts a new chapter."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-28B 24.4.3 (METAR wind, gusts, VRB, sky condition Table 24-4, temperature/dewpoint, altimeter)",
+     "FAA-H-8083-28B Ch. 3 wind-reference table (true in METARs; magnetic in ATIS, ASOS and AWOS broadcasts)",
+     "FAA-H-8083-28B 27.4 (TAF: 24/30-hour periods, FM and TEMPO groups, P6SM)",
+     "FAA-H-8083-28B 24.5.1.1 (urgent and routine PIREPs)",
+     "14 CFR 1.1 (Ceiling)"
+    ]
+   }
   },
   "wx-forecasts": {
    "title": "Forecasts and advisories",
@@ -1161,7 +1220,68 @@
      "phak",
      "Chapter 13: Aviation weather services"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Winds aloft are your steering chart.** The FB forecast shows where each altitude will carry you, and AIRMETs and SIGMETs mark what to stay out of.",
+    "widget": null,
+    "body": [
+     "The **FB winds and temperatures aloft** forecast gives levels of 3,000, 6,000, 9,000 feet and up. Each code is DDff+TT: direction in tens of degrees **true**, the direction the wind blows *from*; speed in knots; temperature in °C. **9900** means light and variable, under 5 knots. No wind is forecast within 1,500 feet of the station's elevation and no temperature within 2,500 feet, so those boxes stay blank. Speeds of 100 knots or more add 50 to the direction (7315 is 230° at 115 knots); above 24,000 feet the minus sign is dropped.",
+     "**AIRMETs** warn of moderate hazards: **Sierra** for IFR and mountain obscuration, **Tango** for moderate turbulence, sustained surface winds over 30 knots and non-convective low-level wind shear, **Zulu** for moderate icing and freezing levels. **SIGMETs** cover severe hazards such as severe turbulence, severe icing and volcanic ash. A **Convective SIGMET** covers thunderstorms, including severe ones: a tornado, surface hail of 3/4 inch or more, or gusts of 50 knots or more.",
+     "The **Graphical Forecasts for Aviation (GFA)** replaced the old text area forecast. Ask Flight Service for an **outlook** briefing 6 or more hours ahead, a **standard** one if you have had none, and an **abbreviated** one to update."
+    ],
+    "example": {
+     "setup": "The FB station near your launch field sits at 800 feet. It reads: FT 3000 6000, then ABC 0807 3114+12. You plan an hour-long flight.",
+     "steps": [
+      [
+       "Decode 3,000 feet.",
+       "0807: from 080° true at 7 knots. No temperature, because 3,000 is within 2,500 feet of the station."
+      ],
+      [
+       "Turn it into a track.",
+       "Air from 080° carries you toward 260° at 7 knots: about 8 statute miles in the hour."
+      ],
+      [
+       "Decode 6,000 feet.",
+       "3114+12: from 310° at 14 knots, plus 12 °C. Up there you'd head toward 130° at twice the speed."
+      ],
+      [
+       "Choose a layer.",
+       "The two layers carry you 130° apart. Pick the one heading toward good fields, plotted from true north."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Wind changes with height",
+      "body": "The wind near the ground often differs from the wind a few thousand feet up, in speed and direction.",
+      "alt": "Like lanes on a highway moving at different speeds. Change altitude and you change lanes."
+     },
+     {
+      "title": "You go where the air goes",
+      "body": "A balloon has no steering wheel. You steer by choosing the height whose wind goes where you want.",
+      "alt": "A leaf on a river goes where the current takes it. Your only choice is which current to ride."
+     },
+     {
+      "title": "Reading the code",
+      "body": "In four digits, the first two are the direction the wind comes from (add a zero) and the last two are the speed. 2715 is from 270°, the west, at 15 knots.",
+      "alt": "Wind from the west pushes you east: turn the direction around 180°."
+     },
+     {
+      "title": "Advisories say where not to go",
+      "body": "AIRMETs flag moderate hazards like turbulence and strong surface wind. SIGMETs and Convective SIGMETs flag severe ones, like thunderstorms.",
+      "alt": "Road signs: an AIRMET says rough road; a Convective SIGMET says closed."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-28B 27.2.1.1 (FB: no winds within 1,500 ft, no temperatures within 2,500 ft of station elevation)",
+     "FAA-H-8083-28B 27.2.1.1.1 and Table 27-1 (DDff+TT, true direction, 9900, add-50 rule, sign omitted above 24,000 ft)",
+     "FAA-H-8083-28B 26.3 (AIRMETs: Sierra, Tango, Zulu)",
+     "FAA-H-8083-28B 26.2.4.1.1, 26.2.4.2, 26.2.4.2.1-26.2.4.2.2 (SIGMET and Convective SIGMET criteria)",
+     "AIM 7-1-4 (GFA replaces the legacy FA)",
+     "AIM 7-1-5 (standard, abbreviated and outlook briefings)",
+     "FAA-H-8083-11B Ch. 3 (Navigation: directional control through differing wind directions at different altitudes)"
+    ]
+   }
   },
   "thy-lift": {
    "title": "Buoyancy and lift",
@@ -1172,7 +1292,66 @@
      "bfh",
      "Chapter 2: why balloons fly"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**A balloon rises when the air it pushes aside outweighs the whole balloon.** What sets your lift is the temperature difference between the envelope and the air around it.",
+    "widget": null,
+    "body": [
+     "Heat makes the envelope air expand and thin out. The buoyant force equals the weight of the outside air the envelope displaces; when that is more than the balloon, its load and its hot air, you rise. The bigger the inside-outside difference, the more lift, so cold mornings lift more and burn less fuel.",
+     "Every altitude has its own **equilibrium temperature**. Higher air is thinner, so a climb needs a hotter envelope to hold the new level, plus extra heat at first to get the balloon moving. A dark envelope can gain heat from the sun and lose it when a cloud shades it. In a fast descent, air rushing past the fabric speeds its cooling, so a standard burn keeps enough heat in it to stay in control.",
+     "Moving air makes lift that heat did not. On the ground, wind over the top creates low pressure and **false lift**; it vanishes as the balloon speeds up to the wind, so launching at bare equilibrium in a breeze can mean sinking right after lift-off. **False heavy** is the reverse: descending into a faster layer pulls the lower envelope down. A shear can also push in the side of the envelope and squeeze hot air out of the mouth (**diminished capacity**)."
+    ],
+    "example": {
+     "setup": "40 °F at the surface, 52 °F above an inversion at 700 feet AGL. You climb from 300 to 1,200 feet AGL.",
+     "steps": [
+      [
+       "Starting the climb.",
+       "1,200 feet needs a hotter envelope than 300 feet, plus a little extra to start moving."
+      ],
+      [
+       "Through the inversion.",
+       "The air outside warms by 12°, shrinking your temperature difference. Expect to burn more often to stay level."
+      ],
+      [
+       "Sun on dark panels.",
+       "Under some conditions a dark envelope gains heat from the sun. If a cloud shades it, that heat stops: expect a sink unless you burn more."
+      ],
+      [
+       "Back under the inversion.",
+       "The colder air widens the difference again, and the extra lift can stall your descent. Start down early."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Hot air is lighter",
+      "body": "Heating air makes it spread out, so a cubic foot of hot air weighs less than a cubic foot of cool air.",
+      "alt": "That is why the top of a room is warmer than the floor."
+     },
+     {
+      "title": "Pushing air aside",
+      "body": "The envelope is huge. The outside air it pushes aside weighs more than the balloon and everything in it, so the balloon is pushed up.",
+      "alt": "A cork held under water pops up because the water it pushes aside weighs more than the cork."
+     },
+     {
+      "title": "The difference does the work",
+      "body": "What counts is how much hotter the inside is than the outside. A cold morning gives a big difference cheaply.",
+      "alt": "On a 30 °F morning a little heat lifts you easily; on a 90 °F afternoon it takes far more."
+     },
+     {
+      "title": "Moving air can fool you",
+      "body": "Wind over the top of a balloon on the ground adds lift that disappears once you fly with the wind. That surprise is false lift.",
+      "alt": "Like a kite: it climbs in rushing wind and drops when you run downwind with it."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?; dark envelopes may gain heat from the sun)",
+     "FAA-H-8083-11B Ch. 3 (Performance Planning: lifting capacity falls with altitude; Cold Weather Flying: less fuel consumption)",
+     "FAA-H-8083-11B Ch. 7 (Straight & Level Flight: an equilibrium temperature for every altitude; Descents: fast descents accelerate cooling)",
+     "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift; False Heavy; Diminished Capacity)",
+     "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude: inversions)"
+    ]
+   }
   },
   "thy-da": {
    "title": "Density altitude",
@@ -1305,7 +1484,64 @@
      "bfh",
      "Chapter 2: Heater system and fuel tanks"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Tank pressure comes from the propane's temperature, not from how much is left.** Cold fuel means low pressure and a weak flame.",
+    "widget": null,
+    "body": [
+     "In the tank, propane is the same temperature as the air around it; −44 °F is only its boiling point in open air. With liquid and vapor present and no air, pressure depends only on the liquid's temperature: about 25 psi at 0 °F, 93 at 60 °F and 150 at 90 °F. A butane blend gives less pressure and a yellow, sooty flame.",
+     "On very cold mornings many manufacturers recommend adding **nitrogen** through a regulator, as the flight manual directs. It raises pressure without warming the fuel, and vapor pilot systems may not tolerate it. If the flight is cancelled and the temperature will rise more than 30°, bleed the extra pressure off through the fixed liquid level gauge. Cold can also shrink seals and O-rings into leaks.",
+     "The **fixed maximum liquid level gauge** (spit valve) marks the 80 percent fill. Float gauges are mechanical, can be wrong and often don't read 0 to 100 percent, so plan a reserve. Burn with the blast valve fully open in short burns, not cracked. Check parallel-plumbed tanks **one at a time**, never all open at once.",
+     "Propane vapor is heavier than air and pools in low places. Refuel in open air, never from inside the basket or a closed trailer, with no smoking, strikers disabled and the chase vehicle off. When the spit valve spits, close the main tank valve first."
+    ],
+    "example": {
+     "setup": "Your tanks spent the night in an open trailer at 20 °F. Your flight manual allows nitrogen.",
+     "steps": [
+      [
+       "Expect low pressure.",
+       "The handbook's table gives propane about 42 psi at 20 °F, against 93 at 60 °F. Full or half-full makes no difference."
+      ],
+      [
+       "Raise it.",
+       "Add nitrogen through its regulator as the flight manual says. Pressure rises; the fuel stays cold."
+      ],
+      [
+       "Flight cancelled.",
+       "The afternoon will reach 55 °F, a 35° rise. That is over 30°, so bleed the extra pressure through the fixed liquid level gauge."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Liquid under pressure",
+      "body": "In the tank, propane stays liquid because its own vapor presses down on it.",
+      "alt": "Like soda in a sealed bottle: the fizz stays in while the cap holds."
+     },
+     {
+      "title": "Warm fuel pushes harder",
+      "body": "The warmer the propane, the higher the pressure. On a freezing morning it may be too low for a strong flame.",
+      "alt": "Like a can of spray paint: on a cold day it sputters, on a warm day it sprays hard."
+     },
+     {
+      "title": "Quantity doesn't set pressure",
+      "body": "A nearly empty tank and a nearly full one at the same temperature have the same pressure. The fuel gauge, not pressure, tells you what's left.",
+      "alt": "The thermometer sets the pressure; the fuel level sets how long you can fly."
+     },
+     {
+      "title": "Vapor runs downhill",
+      "body": "Leaked propane vapor is heavier than air, so it settles in low spots where a spark can light it. Refuel outdoors.",
+      "alt": "Picture spilled water running downhill and pooling. Leaked vapor does the same along the ground."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 2 (Heater System; Fig. 2-8 fuel system; Fuel Tanks: 80 percent fixed liquid level gauge; Fig. 2-11 Propane Primer; Instruments: float gauges)",
+     "FAA-H-8083-11B Appendix A (Vapor Pressures of LP Gases: 0 °F 25, 20 °F 42, 60 °F 93, 90 °F 150 psi)",
+     "FAA-H-8083-11B Ch. 3 (Cold Weather Flying: nitrogen, 30° bleed-off, vapor pilot systems, seals and O-rings)",
+     "FAA-H-8083-11B Ch. 6 (Burner Check: parallel tanks one at a time)",
+     "FAA-H-8083-11B Ch. 7 (The Standard Burn: blast valve fully open)",
+     "FAA-H-8083-11B Ch. 8 (Refueling: sequence and safety rules)"
+    ]
+   }
   },
   "sys-envelope": {
    "title": "Envelope and instruments",
@@ -1316,7 +1552,69 @@
      "bfh",
      "Chapter 2: Envelope and instruments"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**The load tapes, not the fabric, carry the weight.** Know what each part of the envelope does, read your instruments, and keep the envelope under its temperature limit.",
+    "widget": null,
+    "body": [
+     "The envelope is ripstop nylon or Dacron panels sewn in vertical rows called **gores**. Horizontal and vertical **load tapes** are sewn in and run to a **load ring** at the top center; steel or Kevlar cables carry the basket's load up to the tapes. The **mouth** has a fire-resistant skirt. At the top, the **deflation port** is covered by a panel such as a parachute top; partly opening a parachute is the normal way to cool and descend.",
+     "Part 31 requires an **altimeter**, a **rate of climb indicator** (variometer), a **fuel quantity gauge** and an **envelope temperature indicator** (pyrometer), and (31.49(e)) a way to show the pilot the envelope's maximum skin temperature during operation, marked with the fabric's limiting safe temperature. The variometer shows a climb or descent starting or stopping before the altimeter shows much change. Set the altimeter to the briefed setting, or to field elevation if you have none. A wireless temperature link can lose its signal to radio interference or the burner's hot plume.",
+     "Maximum envelope temperature is an **operating limitation in the flight manual**. The handbook calls 250 °F the maximum continuous temperature for most balloons, but your manual's number is the one that counts. If a temperature recorder (heat-sensitive dots that turn black for good) or a temperature flag shows the limit was passed, reduce heat and have the envelope inspected as the manufacturer directs before it flies again."
+    ],
+    "example": {
+     "setup": "At layout you walk the envelope from mouth to top before inflation.",
+     "steps": [
+      [
+       "Mouth and skirt.",
+       "Look for scorching on the skirt and lower fabric."
+      ],
+      [
+       "Tapes and cables.",
+       "Follow the load tapes to the cables. Cables must be free of twists, kinks, loose wires or missing sheathing."
+      ],
+      [
+       "Gores.",
+       "Compare any tear with the allowable damage limits in the flight manual."
+      ],
+      [
+       "Top.",
+       "Check the parachute or deflation panel and its line, and that the temperature sensor is fitted and reads correctly."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "A bag of hot air",
+      "body": "The envelope is the big fabric balloon. Its only job is to hold heated air.",
+      "alt": "Like a paper lantern: the paper doesn't lift anything, the warm air inside does."
+     },
+     {
+      "title": "Tapes carry the load",
+      "body": "Strong straps called load tapes run up the seams to a ring at the top. The basket hangs from them, so the thin fabric between carries little weight.",
+      "alt": "Like the ribs of an umbrella: the ribs give the strength, the cloth fills the gaps."
+     },
+     {
+      "title": "Three main instruments",
+      "body": "The altimeter says how high you are. The variometer says whether you're going up or down, and how fast. The pyrometer says how hot the top of the envelope is.",
+      "alt": "Where you are, where you're heading, and how hard the balloon is working."
+     },
+     {
+      "title": "Mind the limit",
+      "body": "Too much heat weakens the fabric. The flight manual gives the hottest the envelope may run; stay below it.",
+      "alt": "Like an oven dish rated to a temperature: the label is there for a reason."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 2 (Envelope, Fig. 2-3: gores, load tapes, load ring, cables, skirt, deflation port; Instruments: wireless temperature systems)",
+     "14 CFR 31.85 (altimeter, rate of climb indicator, fuel quantity gauge, envelope temperature indicator)",
+     "14 CFR 31.49(d)-(e) (controlled release of hot air; indicator of maximum envelope skin temperature)",
+     "FAA-H-8083-11B Ch. 3 (Performance Planning: 250 °F maximum continuous for most balloons)",
+     "FAA-H-8083-11B Ch. 6 (Preflight inspection: maximum allowable damage; Instrument Checks: altimeter setting; cables)",
+     "FAA-H-8083-11B Ch. 7 (Descents and Use of Instruments: variometer)",
+     "FAA-H-8083-11B Glossary (Limitations; Overtemp; Temperature recorder)",
+     "Temperature flag inspection: manufacturer documents (as for THY-009), not an FAA handbook"
+    ]
+   }
   },
   "ops-launch": {
    "title": "Inflation and launch",
@@ -1327,7 +1625,63 @@
      "bfh",
      "Chapter 6: Layout to launch"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**A safe launch is decided on the ground.** Leave room downwind, brief the crew every time, inflate full and steady, and leave only when the balloon is ready to fly.",
+    "widget": null,
+    "body": [
+     "Pick a large open site and place the balloon well upwind of obstacles, allowing at least **100 feet for each knot of wind**. Brief the crew before every flight: expected flight length and direction, positions and duties during inflation, and duties once the balloon reaches equilibrium. Rig the quick-release with little or no slack, the way the manufacturer specifies.",
+     "Spread the envelope by handling the **load tapes**, not the fabric. Fan it to at least about **75 percent** full of cold air; fuller is better, keeping fabric away from the flame. Tape strips at the mouth that flutter outward mean the fan needs moving. The mouth crew holds the mouth wide and tall, facing away from the burner. Make eye contact, then make the first burn **short** to check the flame and the crew. The crown line crew leans back and uses body weight.",
+     "Upright, run the prelaunch check, including switching from the inflation tank to the first flight tank. If a standing balloon well short of equilibrium starts moving, **deflate**. Only when it is 5 or 10 seconds of heat from lifting off do you have the choice of launching instead. Climbing far too fast can **float the top**: air pressure pushes the top cap down and the balloon descends out of control."
+    ],
+    "example": {
+     "setup": "An 8-knot surface wind blows toward a power line. Your crew of three has never worked your balloon.",
+     "steps": [
+      [
+       "Place it.",
+       "8 knots × 100 feet: set up at least 800 feet upwind of the line. More is better."
+      ],
+      [
+       "Brief it.",
+       "Flight length and direction, each person's inflation job, and what happens after equilibrium."
+      ],
+      [
+       "Inflate it.",
+       "Fan to at least 75 percent, mouth crew wide and facing away, eye contact, then one short burn."
+      ],
+      [
+       "Leave cleanly.",
+       "If a gust shoves the basket while you're far from equilibrium, deflate. Within 5 or 10 seconds of heat from lift-off you may launch instead: add heat for the false lift you'll lose and climb over the line with room to spare."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Pick the right spot",
+      "body": "Launch from a big open field, far upwind of wires, trees and buildings.",
+      "alt": "Like a runway: the faster you move, the longer the clear stretch you need."
+     },
+     {
+      "title": "Cold air first",
+      "body": "A fan blows outside air into the envelope until it's mostly full. Only then do you start heating.",
+      "alt": "Like shaking out a sleeping bag before you climb in: get the shape first, then the warmth."
+     },
+     {
+      "title": "Heat it upright",
+      "body": "Short burns warm the air inside. The envelope rises off the ground and stands over the basket while the crew steadies it.",
+      "alt": "Like bread rising in the oven: heat makes it swell until it stands on its own."
+     },
+     {
+      "title": "Go only when ready",
+      "body": "The balloon should be close to floating on its own before you leave. If it slides across the field before that, let the air out.",
+      "alt": "Like a car rolling before the engine starts: you brake, you don't hope."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 6 (The Crew Briefing; Launch Site: 100 ft per knot; Layout; Inflator Fan Placement, Fig. 6-14; The Crown Line; Safety Restraint/Quick-Release; The Inflation; Prelaunch Check; Launch: floating the top; Uncommanded (False) Lift)",
+     "FAA-P-8740-34 (Powerlines and Thunderstorms: 100 ft of separation per knot of wind)"
+    ]
+   }
   },
   "ops-landing": {
    "title": "Approach and landing",
@@ -1342,7 +1696,64 @@
      "bfh",
      "Chapter 7: Tethering and mooring"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Most balloon accidents happen at landing, so plan it early.** Take the first good field, come down at a controlled rate, and brief passengers so their legs act as springs.",
+    "widget": null,
+    "body": [
+     "Landings make up over 90 percent of balloon accidents. Choose a site in this order: **safety** of passengers and of people and property on the ground, then **landowner relations**, then **ease of recovery**. When several fields lie along your track, take the **first** and save the rest for a miscalculation. Get permission before entering private land.",
+     "In the classic flare, match descent rate to height: no faster than 500 fpm from 500 feet AGL, 400 from 400, slowing to about 100 fpm and rounding out with a standard burn or two. Below 200 feet, look outside, not at instruments. Cross obstacles climbing, so you can coast over if the burner fails. Watch wires against the background: if they rise in your view or hold still, you're descending toward them; if they sink, you'll clear.",
+     "Brief passengers: right place in the basket, face the direction of travel, feet and knees together with knees bent, hold on in two places, stay in the basket. Don't say \"brace.\" Normally everyone stands at the rear; for a high-wind landing, at the front. In high wind, approach the near end of a big field low, brief again, shut off fuel, drain lines, put out pilot lights and vent in time. Tethering a certificated balloon falls under Part 91 and needs a certificated pilot."
+    ],
+    "example": {
+     "setup": "You're 400 feet up at 12 mph ground speed. Three fields line your track; wires run along the near edge of the first.",
+     "steps": [
+      [
+       "Take the first field.",
+       "You can't turn back, so commit to the first field and keep the others as backups."
+      ],
+      [
+       "Watch the wires.",
+       "As you descend, the wires should sink against the background. If they rise or stand still, add heat now."
+      ],
+      [
+       "Plan for lag.",
+       "12 mph is about 17.6 feet per second, so a 10-second burn response covers about 175 feet."
+      ],
+      [
+       "Brief and flare.",
+       "Passengers face forward, feet and knees together, knees bent, holding on. Slow to about 100 fpm, eyes outside below 200 feet."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Plan the landing from the start",
+      "body": "Early on, look ahead along your path for open fields without wires.",
+      "alt": "Like a freeway exit: you watch for it miles ahead."
+     },
+     {
+      "title": "Take the first good field",
+      "body": "A balloon can't turn around. Every field you pass is gone, so the first good one is your best bet.",
+      "alt": "Like a train: once you pass a station, you can't back up to it."
+     },
+     {
+      "title": "Slow down near the ground",
+      "body": "Ease your descent as you get lower so you meet the ground gently. Close to the ground, eyes outside.",
+      "alt": "Like coasting a bicycle to a stop sign: ease off well before the line."
+     },
+     {
+      "title": "Legs like springs",
+      "body": "Passengers face forward, feet and knees together, knees bent, holding on. Bent knees soak up the bump.",
+      "alt": "Like landing from a jump: you bend your knees without thinking."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 1 (Risk Assessment Analysis: landings over 90 percent of balloon accidents)",
+     "FAA-H-8083-11B Ch. 8 (Landing Considerations; Some Basic Rules of Landing; Obstacles and Approach Angles; High-Wind Landing: 10-second response, 73 ft at 5 mph, 220 ft at 15 mph; Passenger Briefings & Management; Landowner Relations)",
+     "FAA-H-8083-11B Ch. 7 (Descents, Fig. 7-5: classic flare; Minimum Safe Altitude Requirements: crossing obstacles; Contour Flying Techniques, Fig. 7-10: wires against the background; Tethering/Mooring)"
+    ]
+   }
   },
   "ops-emerg": {
    "title": "Emergencies",
@@ -1353,7 +1764,65 @@
      "bfh",
      "Chapter 7: In-flight emergencies"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Fly the balloon first, then fix the problem.** Almost every balloon emergency is a lost vent line, a pilot light out, or a fuel leak, and each has a simple first move.",
+    "widget": null,
+    "body": [
+     "The handbook groups nearly all balloon emergencies into three kinds. **Lost vent or deflation line**: only the burner controls your descent, so stay low and land in the largest area you can, ready for rebound and drag. **Pilot light out**: with two burners, fly on the other. With one, relight with the igniter or a striker; failing that, crack the blast valve (or the backup valve) slightly and light that stream, then land as soon as practical. **Fuel leak**: shut off the fuel source. A small fire at a fitting can then be snuffed with a gloved hand.",
+     "Keep control first; check the checklist or flight manual once the situation is in hand. In an in-flight emergency, the pilot in command may deviate from any rule as far as the emergency requires (91.3(b)), and may be asked for a written report.",
+     "**Power lines** are generally seen as ballooning's greatest danger. Contact at the basket or cables can electrocute occupants, cut cables or burst fuel lines; contact above the envelope's equator is far less hazardous. If contact can't be avoided, shut off fuel and pilot lights and vent (the FAA pamphlet's word is rip) to come down fast, so the envelope, not the basket, meets the wires. Before flight, fly a torn envelope only if the damage is within the manufacturer's allowable limits."
+    ],
+    "example": {
+     "setup": "Halfway through a flight in a dual-burner balloon, you hear a hiss and see frost spreading on the left burner's hose fitting.",
+     "steps": [
+      [
+       "Keep flying.",
+       "Check height and vertical speed first. Minor problems grow fast when the pilot stops flying the balloon."
+      ],
+      [
+       "Shut off the source.",
+       "Close the tank valve feeding that hose. Once the little fuel left in the hose is gone, the leak stops."
+      ],
+      [
+       "Use what works.",
+       "Fly on the right burner and its tank, and confirm it burns normally."
+      ],
+      [
+       "Land, then read.",
+       "Pick a good field and land soon. Afterward, review your flight manual's procedure."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Stay in control",
+      "body": "Whatever goes wrong, keep watching your height and keep flying the balloon.",
+      "alt": "A driver with a flat tire holds the wheel steady first, then pulls over."
+     },
+     {
+      "title": "Most problems have one fix",
+      "body": "A leak: turn off the fuel feeding it. Pilot light out: relight it. Vent line lost: use only the burner and land in a big field.",
+      "alt": "At home, if you smell gas, you turn off the valve before anything else."
+     },
+     {
+      "title": "Wires are the big danger",
+      "body": "Power lines are the worst hazard in ballooning. Stay far from them, and cross them climbing with plenty of room.",
+      "alt": "Treat every wire as live and every pole as a warning sign."
+     },
+     {
+      "title": "If you must touch, touch high",
+      "body": "If hitting wires can't be avoided, shut off the fuel and come down fast so the top of the envelope meets them, not the basket.",
+      "alt": "Better the fabric than the people. An envelope can be repaired."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 7 (In Flight Emergencies; Loss/Malfunction of Vent or Deflation Line; Loss/Malfunction of Pilot Light; Fuel Leak)",
+     "14 CFR 91.3(b)-(c)",
+     "FAA-P-8740-34 (Powerlines and Thunderstorms: contact above the equator less hazardous; secure fuel and pilot light; venting the safer decision)",
+     "FAA-H-8083-11B Ch. 6 (preflight: manufacturer's maximum allowable damage)"
+    ]
+   }
   },
   "ops-night": {
    "title": "Night and high altitude",
@@ -1368,7 +1837,66 @@
      "aim8",
      "Hypoxia and oxygen"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**From sunset to sunrise, a balloon needs lighted position lights.** High flights add oxygen rules: the higher you go, the sooner you must use it.",
+    "widget": null,
+    "body": [
+     "Under 14 CFR 91.209, no one may operate an aircraft between **sunset and sunrise** without lighted position lights, so a launch before official sunrise needs them. If the balloon has an anticollision light system, it must be lit too, unless the pilot judges it safer off.",
+     "Supplemental oxygen (91.211) applies to the required crew, which in a balloon is the pilot. Above 12,500 feet MSL up to and including 14,000, use oxygen for any time there beyond **30 minutes**. Above 14,000, use it **the whole time**. Above 15,000, **every occupant** must be provided with oxygen. Hypoxia starts below the legal limits, so the AIM encourages oxygen above 10,000 feet by day and above 5,000 feet at night.",
+     "Altitude also costs performance. The envelope lifts less in thinner air, and the burner loses about **4 percent of its output per 1,000 feet**, running at about 88 percent at 3,000 feet, because there is less oxygen for combustion. Plan more fuel and a lighter load for a high flight."
+    ],
+    "example": {
+     "setup": "You launch 20 minutes before official sunrise with one passenger. You spend 50 minutes between 12,600 and 13,800 feet MSL, then 10 minutes at 14,300.",
+     "steps": [
+      [
+       "Before sunrise.",
+       "Position lights lit from launch until official sunrise."
+      ],
+      [
+       "12,600 to 13,800 feet.",
+       "The first 30 minutes need no oxygen; you use it for the remaining 20."
+      ],
+      [
+       "14,300 feet.",
+       "Above 14,000 you use oxygen the entire 10 minutes."
+      ],
+      [
+       "Your passenger.",
+       "You never pass 15,000, so oxygen need not be provided. With the AIM urging it above 10,000 by day, offering it is still the safer choice."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Dark means lights",
+      "body": "Between sunset and sunrise, a balloon must show lighted position lights so others can see it.",
+      "alt": "Like riding a bike at night: you need a light even if you can see fine, because others need to see you."
+     },
+     {
+      "title": "Thin air, less oxygen",
+      "body": "High up, each breath brings in less oxygen. Your thinking suffers first, often before you notice.",
+      "alt": "Like a candle in a jar: it dims as the oxygen runs low, with no alarm."
+     },
+     {
+      "title": "A three-step ladder",
+      "body": "Above 12,500 feet: oxygen after 30 minutes. Above 14,000: the pilot uses it all the time. Above 15,000: everyone aboard gets it.",
+      "alt": "Each rung up the ladder makes the rule stricter."
+     },
+     {
+      "title": "The balloon feels it too",
+      "body": "As you climb, the burner makes less heat and the envelope lifts less. High flights need more fuel and less weight.",
+      "alt": "Like a car at a mountain pass: the engine feels weaker because the air is thinner."
+     }
+    ],
+    "sources": [
+     "14 CFR 91.209(a)(1), (b)",
+     "14 CFR 91.211(a)(1)-(3)",
+     "AIM 8-1-2 (supplemental oxygen encouraged above 10,000 ft by day and 5,000 ft at night)",
+     "FAA-H-8083-11B Ch. 3 (Performance Planning: lift falls with altitude; heater loses 4 percent per 1,000 ft, 88 percent at 3,000 ft)",
+     "FAA-H-8083-11B Ch. 2 (Heater System: power loss with altitude)"
+    ]
+   }
   },
   "ops-water": {
    "title": "Water landing and survival",
@@ -1379,7 +1907,64 @@
      "bfh",
      "Chapter 8: Water landings"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**In a water landing, the basket is your float.** Get clear of it in case it turns over, then hold on to it, because a deflated envelope sinks.",
+    "widget": null,
+    "body": [
+     "A water landing changes the passenger briefing. Tell passengers to **get clear of the basket** in case it inverts because of where the fuel tanks sit, then **keep a strong grip on it**, because it becomes a flotation device. Fuel tanks float even when full. A deflated envelope sinks, because it is heavier than water. If the envelope holds some air, the basket may rest on its side for a while; how it finally settles is hard to predict.",
+     "On a river, the current may drag the balloon downstream. Generally **stay with the basket**, unless you have landed close to the bank and everyone aboard swims well.",
+     "Plan for a long wait over any remote ground. For long mountain flights the handbook suggests water, extra warm clothing or a sleeping bag, a strobe, a radio, a compass, a lightweight shelter and good maps, since the crew may take a long time to find you. Balloon radios are mostly line of sight, so set a \"lost balloon\" phone contact that pilot and crew can both call."
+    ],
+    "example": {
+     "setup": "Late in a flight, the surface wind carries you toward a wide reservoir. Fuel is getting low, and the near shore is trees and wires.",
+     "steps": [
+      [
+       "Try to avoid it.",
+       "Look for a field short of the water, or change altitude to find a wind that turns you."
+      ],
+      [
+       "Brief early.",
+       "Tell passengers: once we're down, get clear of the basket in case it tips, then hold on to it. It floats."
+      ],
+      [
+       "On the water.",
+       "Expect the envelope to sink once deflated while the tanks and basket float. Keep everyone with the basket."
+      ],
+      [
+       "If it were a river.",
+       "Stay with the basket as the current carries it, unless the bank is close and everyone swims well."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Avoid water if you can",
+      "body": "The best water landing is the one you never make. Watch where the wind is taking you and land short of big water.",
+      "alt": "Like a hiker checking the map for a river before the trail runs into it."
+     },
+     {
+      "title": "The basket floats",
+      "body": "The basket and the fuel tanks float, so the basket is the thing to hold on to.",
+      "alt": "Picture a big wooden crate tossed in a lake: it bobs. Hang on to it like a pool float."
+     },
+     {
+      "title": "Clear first, then hold on",
+      "body": "The basket can flip over in the water. Get out from under it, then grab its side.",
+      "alt": "Like a canoe that's rolling: get clear first, then hold the edge."
+     },
+     {
+      "title": "The envelope sinks",
+      "body": "Once the air is out, the fabric is heavier than water and goes down. Let it go and stay with the basket.",
+      "alt": "A wet bedsheet doesn't float; it sinks and drapes over whatever it touches."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 8 (Water Landings)",
+     "FAA-H-8083-11B Ch. 3 (Mountain Flying: line-of-sight radios, lost-balloon contact, suggested provisions)",
+     "FAA-H-8083-11B Ch. 3 (Navigation: directional control through differing wind directions at different altitudes)"
+    ]
+   }
   },
   "adm-judgment": {
    "title": "Judgment and hazardous attitudes",
@@ -1390,7 +1975,64 @@
      "phak",
      "Chapter 2: Aeronautical decision-making"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Good judgment is a skill you can learn.** Spot the hazardous attitude, name it, and answer it with its antidote before it makes the decision for you.",
+    "widget": null,
+    "body": [
+     "The handbook estimates 90 percent of balloon accidents are human-factors related. Learn the five **hazardous attitudes** and their antidotes: **anti-authority** (resenting rules): *Follow the rules. They are usually right.* **Impulsivity** (acting without thinking): *Not so fast. Think first.* **Invulnerability** (it won't happen to me): *It could happen to me.* **Macho** (taking risks to impress): *Taking chances is foolish.* **Resignation** (what I do won't matter): *I'm not helpless. I can make a difference.* Recognize the thought, label it hazardous, then say the antidote.",
+     "**PAVE** finds hazards: Pilot, Aircraft, enVironment, External pressures (like a passenger you don't want to disappoint). The handbook's four risk elements are pilot, aircraft, environment and the **operation**, the flight's purpose. In **3P**, you Perceive the hazards, Process them (CARE: Consequences, Alternatives, Reality, External factors) and Perform (TEAM: Transfer, Eliminate, Accept, Mitigate). Telling yourself it will \"probably\" be fine means it's time for a reality check. A risk matrix weighs **likelihood** against **severity**.",
+     "For changes in flight, use **DECIDE** (Detect, Estimate, Choose, Identify, Do, Evaluate) or the **OODA** loop (Observe, Orient, Decide, Act). Beware **get-there-itis** and **peer pressure**. Your crew often sees rain or wind changes first, but the pilot in command is the final authority (91.3). Hand over control in three steps: \"You have the flight controls.\" \"I have the flight controls.\" \"You have the flight controls.\""
+    ],
+    "example": {
+     "setup": "A group booked for sunrise flies home tomorrow. The TAF shows gusts building by 9 a.m., and another pilot jokes that real pilots launch anyway.",
+     "steps": [
+      [
+       "Perceive with PAVE.",
+       "Environment: building gusts. External pressures: the group's deadline and the joke."
+      ],
+      [
+       "Name the attitude.",
+       "Launching to prove yourself would be macho. Antidote: taking chances is foolish."
+      ],
+      [
+       "Process with CARE, then TEAM.",
+       "A gusty landing could injure someone. Mitigate by landing well before 9 a.m., or eliminate the risk by not flying."
+      ],
+      [
+       "Decide and check.",
+       "The decision is yours as pilot in command. Afterward, evaluate how it worked out."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Choices cause most accidents",
+      "body": "Most balloon accidents come from people's decisions, not broken parts. How you think is safety equipment.",
+      "alt": "A car with perfect brakes still crashes if the driver decides to speed."
+     },
+     {
+      "title": "Five risky ways of thinking",
+      "body": "Resenting rules, rushing, feeling untouchable, showing off and giving up. Each pushes you toward a bad choice.",
+      "alt": "Think of them as five voices. Learn to recognize each one when it speaks."
+     },
+     {
+      "title": "Each has a reply",
+      "body": "Memorize the answer for each: Follow the rules. They are usually right. Not so fast. Think first. It could happen to me. Taking chances is foolish. I'm not helpless. I can make a difference.",
+      "alt": "Like a ready reply to a pushy salesperson: you don't have to think, you just say it."
+     },
+     {
+      "title": "Notice, think, act, check",
+      "body": "Notice what changed, weigh your options, do the best one, then check that it worked.",
+      "alt": "Like cooking: taste, adjust the seasoning, taste again."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 1 (Aeronautical Decision-Making: 90 percent human factors; Hazardous Attitudes & Antidotes, Fig. 1-5; Risk Management, Fig. 1-8; DECIDE Model, Fig. 1-9; OODA Loop; Single-Pilot Resource Management; Positive Transfer of Controls)",
+     "FAA-H-8083-25C Ch. 2 (PAVE Checklist; 3P Model; CARE and TEAM Checklists; Risk Matrix; Operational Pitfalls)",
+     "14 CFR 91.3(a)"
+    ]
+   }
   },
   "adm-aero": {
    "title": "Aeromedical",
@@ -1409,7 +2051,68 @@
      "phak",
      "Chapter 17: Aeromedical factors"
     ]
-   ]
+   ],
+   "lesson": {
+    "idea": "**Your body is part of the aircraft, and it has limits too.** Check yourself before every flight.",
+    "widget": null,
+    "body": [
+     "Before each flight run **I'M SAFE**: Illness, Medication, Stress, Alcohol, Fatigue, and an E that FAA books disagree on: the Balloon Flying Handbook says *Eating*, the AIM and PHAK say *Emotion*. The AIM's safest rule is not to fly on any medication unless the FAA approves it; for any new medication, the PHAK says to wait at least 48 hours after the first dose to rule out side effects. Flying while using any drug that affects your faculties contrary to safety is prohibited (91.17(a)(3)). Alcohol: no flying within 8 hours, while under the influence, or at 0.04 or more (91.17); the AIM advises 12 to 24 hours, and a hangover means you're still impaired. The first noticeable sign of dehydration is fatigue.",
+     "**Hypoxia** has four kinds: **hypoxic** (thin air at altitude), **hypemic** (blood can't carry oxygen, as with carbon monoxide), **stagnant** (blood not flowing) and **histotoxic** (cells can't use it, as with alcohol). Carbon monoxide comes from internal combustion engines, such as the inflator fan and chase vehicle; it binds to hemoglobin about 200 times more easily than oxygen and takes up to 48 hours to clear. **Hyperventilation** from fright brings light-headedness and tingling; slow the breathing or talk aloud.",
+     "Full **dark adaptation** takes at least 30 minutes, and a bright light like the burner flame undoes it in seconds; close one eye when you burn. Look 5° to 10° off center at a dim object. A light stared at in the dark seems to move (**autokinesis**). In fog, trust instruments and fixed ground references, not your body."
+    ],
+    "example": {
+     "setup": "Festival morning, launch at 6:30 a.m. You had a beer at 9 p.m., took your first dose of a new allergy pill last night, and will inflate in a sheltered corner beside gasoline fans.",
+     "steps": [
+      [
+       "Alcohol.",
+       "9 1/2 hours meets the 8-hour rule if you're under 0.04 and unimpaired, but it is short of the AIM's 12 to 24 hours."
+      ],
+      [
+       "Medication.",
+       "A first dose last night is inside the PHAK's recommended 48-hour wait, and the AIM's safest rule is no medication without FAA approval. Following that advice, you don't fly today."
+      ],
+      [
+       "Carbon monoxide.",
+       "Whoever flies should stand upwind of fan exhaust: CO causes hypemic hypoxia."
+      ],
+      [
+       "Decision.",
+       "Today you crew instead of fly."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Check yourself like the balloon",
+      "body": "Before flying, run I'M SAFE: are you ill, on medication, stressed, drinking, tired, or underfed or upset?",
+      "alt": "You'd never fly with a cracked fuel hose. A tired or sick pilot is a cracked part too."
+     },
+     {
+      "title": "Your brain needs oxygen",
+      "body": "Too little oxygen, from height, bad air or alcohol, slows your thinking before you feel anything.",
+      "alt": "Like a phone on low battery: still working, just slower and buggier."
+     },
+     {
+      "title": "Engines make an invisible gas",
+      "body": "Fans and vehicles give off carbon monoxide, which you can't see or smell. Stay upwind of exhaust.",
+      "alt": "Like idling a car in a closed garage: the danger gives no warning."
+     },
+     {
+      "title": "Eyes need time in the dark",
+      "body": "Your eyes take about half an hour to adjust to darkness, and one bright flash resets them.",
+      "alt": "Walk into a dark theater and you see nothing, then slowly the seats appear. One bright phone screen and you start over."
+     }
+    ],
+    "sources": [
+     "FAA-H-8083-11B Ch. 1 (Fig. 1-6 I'M SAFE checklist: Eating)",
+     "AIM 8-1-1 (Medication; Alcohol: 8 hours, 12 to 24 hours; Emotion)",
+     "14 CFR 91.17(a)",
+     "FAA-H-8083-25C Ch. 17 (Carbon Monoxide Poisoning: all internal combustion engines, 200 times, 48 hours; IMSAFE: wait 48 hours after a new medication)",
+     "FAA-H-8083-11B Ch. 9 (Hypoxia types; Hyperventilation; Alcohol; Dehydration: first noticeable effect is fatigue; Night Vision: 5° to 10° off center, close one eye during a burn)",
+     "AIM 8-1-4, 8-1-5 (spatial disorientation; autokinesis), 8-1-6 (dark adaptation: 30 minutes)",
+     "14 CFR 91.17(a)(3) (drugs affecting faculties)"
+    ]
+   }
   }
  }
 }

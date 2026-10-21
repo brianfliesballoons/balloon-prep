@@ -770,7 +770,7 @@
    "Convective SIGMET."
   ],
   "answer": 0,
-  "explanation": "AIRMET Tango covers moderate turbulence, strong sustained surface winds (about 30 knots) and non-convective low-level wind shear. AIRMET Sierra covers IFR conditions and mountain obscuration, and a Convective SIGMET addresses thunderstorm hazards.",
+  "explanation": "AIRMET Tango covers moderate turbulence, strong sustained surface winds (over 30 knots) and non-convective low-level wind shear. AIRMET Sierra covers IFR conditions and mountain obscuration, and a Convective SIGMET addresses thunderstorm hazards.",
   "ref": "FAA-H-8083-28B 26.3.1.2, 26.3.1.3; AIM 7-1-6",
   "figure": null,
   "difficulty": 2,
