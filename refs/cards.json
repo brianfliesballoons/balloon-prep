@@ -1,0 +1,187 @@
+[
+ {
+  "n": 2,
+  "id": "pilot",
+  "group": "rules",
+  "title": "Commercial balloon pilot",
+  "sub": "Privileges, the heater limit, medical, currency, logging instruction",
+  "html": "<h3>What the certificate lets you do</h3><ul><li><b>Fly for hire:</b> act as pilot in command carrying persons or property for compensation or hire (61.133(a)(1)).</li><li><b>Teach in balloons with no CFI certificate:</b> give flight and ground training toward a certificate or rating, endorse for the balloon certificate and for solo, and give the training and endorsements for a flight review or recency (61.133(a)(2)(ii); 61.3(d)(3)(i)).</li></ul><div class=\"call\"><b>Logging a lesson you give:</b> endorse the student's logbook legibly with a description of the training, the length of the lesson, your signature, your certificate number, and \"certificate expiration date or recent experience end date\" (61.51(h)(2)). A commercial pilot certificate has no expiration date (61.19(c)). <i>Instructor's practice:</i> name, commercial LTA certificate number, signature, date and notes on the lesson.</div><h3>The airborne-heater limit (61.133(b))</h3><table><thead><tr><th scope=\"col\">Checkride in</th><th scope=\"col\">Certificate is limited to</th><th scope=\"col\">Limit removed by</th></tr></thead><tbody><tr><td>Hot air balloon</td><td>Balloon with airborne heater</td><td>Gas balloon experience + instructor endorsement</td></tr><tr><td>Gas balloon</td><td>Gas balloon</td><td>Hot air experience + instructor endorsement</td></tr></tbody></table><h3>Medical (61.23)</h3><div class=\"grid3\"><div class=\"box\"><b>Flying for hire</b><br><span class=\"big\">2nd class</span><br>Or 1st. Valid to the end of the <b>12th month</b> after the exam month, at any age</div><div class=\"box\"><b>Giving flight training</b><br><span class=\"big\">None</span><br>61.23(b)(5)</div><div class=\"box\"><b>Private privileges, student, or a balloon checkride</b><br><span class=\"big\">None</span><br>61.23(b)(1), (4), (10)</div></div><p><small>The medical requirement for paid balloon flying took effect May 22, 2023.</small></p><h3>Staying current</h3><table><tbody><tr><th scope=\"row\">Flight review</th><td>Since the start of the <b>24th calendar month</b> before this one: at least 1 h of flight and 1 h of ground training, including Part 91. A passed practical test counts (61.56).</td></tr><tr><th scope=\"row\">Passengers</th><td><b>3 takeoffs and 3 landings</b> in a balloon within the preceding <b>90 days</b>, as sole manipulator (61.57(a)).</td></tr><tr><th scope=\"row\">Passengers at night</th><td>The same, to a full stop, between 1 h after sunset and 1 h before sunrise (61.57(b)).</td></tr></tbody></table><h3>Carry and show</h3><p>Pilot certificate, photo ID and, when the flight needs one, your medical, on you or readily accessible. Show them on request to the FAA, the NTSB, the TSA or any law enforcement officer (61.3). Report a new permanent mailing address in writing within <b>30 days</b> (61.60).</p><p><small>To earn it: age 18; at least a private pilot certificate; 35 h as a pilot, including 20 h and 10 flights in balloons, 2 flights as PIC and 10 h of instruction (10+ flights) with two 1-h test-prep flights in the 2 calendar months before the test month, 2 solo flights and a controlled ascent to 3,000 ft above the launch site (61.123(a), (h); 61.129(h)).</small></p>",
+  "sources": [
+   "14 CFR 61.3",
+   "14 CFR 61.19(c)",
+   "14 CFR 61.23",
+   "14 CFR 61.51(h)",
+   "14 CFR 61.56",
+   "14 CFR 61.57",
+   "14 CFR 61.60",
+   "14 CFR 61.123",
+   "14 CFR 61.129(h)",
+   "14 CFR 61.133",
+   "Final rule 87 FR 71218 (Nov. 22, 2022), FR Doc. 2022-25288"
+  ]
+ },
+ {
+  "n": 3,
+  "id": "balloon",
+  "group": "rules",
+  "title": "The balloon itself",
+  "sub": "Papers aboard, required instruments, inspections, what doesn't apply",
+  "html": "<h3>Aboard every flight</h3><ul><li><b>Airworthiness certificate</b>, displayed at the entrance where passengers or crew can read it (91.203(a)(1), (b)).</li><li><b>Registration certificate.</b> It expires 7 years after the last day of the month it was issued (91.203(a)(2); 47.40).</li><li><b>Operating limitations</b> in the Balloon Flight Manual or on a placard the pilot can see, and you fly within them (31.81(b); 91.9).</li></ul><h3>Required instruments (31.85)</h3><div class=\"grid3\"><div class=\"box\"><b>Every balloon</b><br>Altimeter<br>Rate-of-climb indicator</div><div class=\"box\"><b>Hot air adds</b><br>Fuel quantity gauge (each fuel cell)<br>Envelope temperature indicator</div><div class=\"box\"><b>Captive gas adds</b><br>Compass</div></div><h3>Inspections (91.409)</h3><table><thead><tr><th scope=\"col\">Inspection</th><th scope=\"col\">Needed when</th><th scope=\"col\">Interval</th></tr></thead><tbody><tr><td><b>Annual</b></td><td>Every flight</td><td>Within the preceding <b>12 calendar months</b></td></tr><tr><td><b>100-hour</b> (an annual also satisfies it)</td><td>Carrying anyone other than crew for hire, or giving flight instruction for hire in a balloon you provide</td><td>Within the preceding <b>100 h</b> time in service. Up to 10 h over only to reach the inspection, and those hours count toward the next 100.</td></tr></tbody></table><h3>Who answers for what</h3><ul><li><b>Owner or operator:</b> keeps the balloon airworthy, including airworthiness directives (91.403(a)), and keeps records of the work, its date, and the signature and certificate number of whoever approved return to service; total time; inspection status; and each AD's number, revision date, method of compliance and next due time (91.417).</li><li><b>Pilot in command:</b> decides it is in condition for safe flight, and ends the flight if it becomes unairworthy (91.7).</li><li><b>Preventive maintenance a pilot may do</b> on a balloon the pilot owns or operates (43.3(g); a sport pilot only on a light-sport category aircraft): small envelope fabric repairs not needing load tape repair or replacement, per the manufacturer; cleaning burner pilot and main nozzles; swapping baskets and burners the type certificate data lists as interchangeable (Part 43 App. A).</li></ul><h3>Airplane rules that do not apply</h3><table><tbody><tr><th scope=\"row\">91.205 instruments</th><td>Powered aircraft only</td></tr><tr><th scope=\"row\">91.207 ELT</th><td>Airplanes only</td></tr><tr><th scope=\"row\">91.151 fuel reserve</th><td>Airplanes and rotorcraft only. Plan propane under 91.103 and your flight manual.</td></tr><tr><th scope=\"row\">91.107 belt briefing and use</th><td>A free balloon with a basket or gondola is excepted</td></tr><tr><th scope=\"row\">91.215 and 91.225</th><td>Only partly: see the radio card</td></tr></tbody></table>",
+  "sources": [
+   "14 CFR 31.81",
+   "14 CFR 31.85",
+   "14 CFR 43.3(g)",
+   "14 CFR Part 43 Appendix A(c)",
+   "14 CFR 47.40",
+   "14 CFR 91.7",
+   "14 CFR 91.9",
+   "14 CFR 91.107",
+   "14 CFR 91.151",
+   "14 CFR 91.203",
+   "14 CFR 91.205",
+   "14 CFR 91.207",
+   "14 CFR 91.403",
+   "14 CFR 91.409",
+   "14 CFR 91.417"
+  ]
+ },
+ {
+  "n": 6,
+  "id": "rules",
+  "group": "rules",
+  "title": "Operating rules",
+  "sub": "Authority, right-of-way, minimum altitudes, alcohol, lights",
+  "html": "<h3>The pilot in command</h3><ul><li>Final authority for the flight. In an in-flight emergency needing immediate action, deviate from any Part 91 rule as far as needed, and send a written report if the FAA asks (91.3).</li><li>Before a flight not in the vicinity of an airport, know the weather reports and forecasts, fuel requirements, and alternatives if the flight can't be completed (91.103).</li><li>No careless or reckless operation that endangers life or property (91.13). Drop nothing that creates a hazard; dropping is allowed with reasonable precautions against injury or damage (91.15).</li></ul><h3>Right-of-way (91.113)</h3><table><tbody><tr><th scope=\"row\">Aircraft in distress</th><td>Over all other traffic</td></tr><tr><th scope=\"row\">Balloon</th><td>Over any other category of aircraft</td></tr><tr><th scope=\"row\">Two balloons converging at about the same altitude</th><td>The one on the other's right</td></tr><tr><th scope=\"row\">Overtaking</th><td>The one being overtaken has it</td></tr></tbody></table><p><small>Right-of-way never ends the duty to see and avoid. The pilot giving way may not pass over, under or ahead unless well clear (91.113(b)).</small></p><div class=\"call\"><b>By custom, not regulation: the lower balloon has the right-of-way.</b> The pilot below can't see you through the envelope. Treat it as seriously as a written rule, and before a steep climb confirm with your crew or other pilots that it is clear above you.</div><h3>Minimum altitudes (91.119)</h3><p>Except when necessary for takeoff or landing:</p><div class=\"grid3\"><div class=\"box\"><b>Anywhere</b><br>High enough for an emergency landing without undue hazard to people or property below</div><div class=\"box\"><b>Congested area or open-air crowd</b><br><span class=\"big\">1,000 ft</span><br>above the highest obstacle within 2,000 ft horizontally</div><div class=\"box\"><b>Elsewhere</b><br><span class=\"big\">500 ft</span><br>above the surface. Over open water or sparsely populated areas: no closer than 500 ft to any person, vessel, vehicle or structure.</div></div><p><small>No balloon exception: 91.119(d) covers only helicopters, powered parachutes and weight-shift-control aircraft.</small></p><h3>Also</h3><ul><li><b>Alcohol and drugs (91.17):</b> no acting as a crewmember within <b>8 h</b> of a drink, while under the influence, at <b>0.04</b> alcohol concentration or more, or on a drug that impairs. Except in an emergency, carry no one who appears intoxicated.</li><li><b>Near other aircraft (91.111):</b> never close enough to create a collision hazard. Formation flight only by arrangement with each pilot, and never with passengers for hire.</li><li><b>Lights (91.209):</b> lighted position lights from sunset to sunrise.</li></ul>",
+  "sources": [
+   "14 CFR 91.3",
+   "14 CFR 91.13",
+   "14 CFR 91.15",
+   "14 CFR 91.17",
+   "14 CFR 91.103",
+   "14 CFR 91.111",
+   "14 CFR 91.113",
+   "14 CFR 91.119",
+   "14 CFR 91.209",
+   "FAA-H-8083-11B Ch. 7 (minimum altitudes)"
+  ]
+ },
+ {
+  "n": 7,
+  "id": "ntsb",
+  "group": "rules",
+  "title": "NTSB Part 830",
+  "sub": "What counts as an accident, what to report at once, and deadlines",
+  "html": "<h3>Is it an accident? (830.2)</h3><p>An occurrence between the time anyone boards <i>with the intention of flight</i> and the time everyone has gotten off, in which anyone suffers <b>death or serious injury</b>, or the aircraft receives <b>substantial damage</b>.</p><div class=\"cols\"><div class=\"box\"><b>Serious injury</b><ul><li>Hospital for more than 48 h, starting within 7 days of the injury</li><li>Any broken bone, except simple fractures of fingers, toes or nose</li><li>Severe bleeding, or nerve, muscle or tendon damage</li><li>Any internal organ involved</li><li>Second- or third-degree burns, or burns over more than 5% of the body</li></ul></div><div class=\"box\"><b>Substantial damage</b><p>Damage or failure that harms structural strength, performance or flight characteristics and would normally need major repair or replacement of the part.</p><p>Not substantial: small punctured holes in the skin or fabric, among other listed minor damage.</p></div></div><h3>Notify the NTSB immediately (830.5)</h3><p>After any accident, and after any of these listed incidents even if no one is hurt:</p><ul><li>Flight control system malfunction or failure</li><li>A required flight crewmember unable to perform normal duties because of injury or illness</li><li>In-flight fire</li><li>Aircraft collision in flight</li><li>Damage to property other than the aircraft estimated over <b>$25,000</b> (repair, or fair market value if a total loss, whichever is less)</li><li>An overdue aircraft believed to have been in an accident</li></ul><p><small>The rest of the 830.5 list covers turbine engines, propellers, rotors, large multiengine aircraft, cockpit displays, collision-avoidance alerts and air carriers.</small></p><div class=\"call\">NTSB Response Operations Center: <span class=\"big\">844-373-9922</span> or 202-314-6290</div><h3>What to tell them (830.6)</h3><p>Aircraft type, nationality and registration · owner and operator · pilot in command · date and time · last departure point and intended landing · position from an easily defined point · number aboard, killed and seriously injured · nature of the accident, weather and damage, so far as known · any explosives, radioactive or other dangerous articles aboard.</p><h3>After the call</h3><table><tbody><tr><th scope=\"row\">Wreckage (830.10)</th><td>Don't move it until the NTSB takes custody, except to free injured or trapped people, protect it from further damage, or protect the public. If you must move it, sketch, note and photograph where it lay. Keep all records.</td></tr><tr><th scope=\"row\">Written report (830.15)</th><td>NTSB Form 6120.1/2 within <b>10 days</b> of an accident, or after <b>7 days</b> if an overdue aircraft is still missing. For a listed incident, only if the NTSB asks. Each crewmember able to do so attaches a statement.</td></tr></tbody></table>",
+  "sources": [
+   "49 CFR 830.2",
+   "49 CFR 830.5",
+   "49 CFR 830.6",
+   "49 CFR 830.10",
+   "49 CFR 830.15"
+  ]
+ },
+ {
+  "n": 4,
+  "id": "wx",
+  "group": "charts",
+  "title": "Weather decoder",
+  "sub": "METAR, weather codes, sky cover, TAF groups, FB winds aloft, PIREP",
+  "html": "<h3>A METAR, group by group (example)</h3><p><b>METAR KCRQ 211455Z 00000KT 5SM BR FEW008 BKN015 14/13 A3001 RMK AO2 SLP163 T01390128</b></p><table><thead><tr><th scope=\"col\">Code</th><th scope=\"col\">Means</th></tr></thead><tbody><tr><td>METAR KCRQ 211455Z</td><td>Routine report (SPECI special), station, 21st at 1455 UTC; AUTO automated, COR corrected</td></tr><tr><td>00000KT</td><td>Calm. Otherwise direction from, <b>true</b>, then knots; G = gust, VRB = variable</td></tr><tr><td>5SM BR</td><td>Visibility 5 statute miles in mist (5/8 to under 7 SM; FG below 5/8)</td></tr><tr><td>FEW008 BKN015</td><td>Few at 800 ft; broken at 1,500 ft AGL, the ceiling</td></tr><tr><td>14/13 A3001</td><td>Temperature/dewpoint °C (M = minus); altimeter 30.01 inHg</td></tr><tr><td>RMK AO2 SLP163 T01390128</td><td>Automated station with a precipitation discriminator; sea-level pressure 1016.3 mb; 13.9/12.8 °C</td></tr></tbody></table><p><small>Also in remarks: PK WND peak wind · WSHFT wind shift (FROPA: frontal passage) · PRESRR / PRESFR pressure rising / falling rapidly.</small></p><div class=\"cols\"><div class=\"box\"><b>Present weather</b><br><b>−</b> light, <b>+</b> heavy, none moderate; <b>VC</b> 5–10 SM away<br><b>MI</b> shallow <b>PR</b> partial <b>BC</b> patches <b>DR</b> low drifting <b>BL</b> blowing <b>SH</b> showers <b>TS</b> thunderstorm <b>FZ</b> freezing<br><b>DZ</b> drizzle <b>RA</b> rain <b>SN</b> snow <b>SG</b> snow grains <b>IC</b> ice crystals <b>PL</b> ice pellets <b>GR</b> hail <b>GS</b> snow pellets <b>UP</b> unknown<br><b>BR</b> mist <b>FG</b> fog <b>FU</b> smoke <b>VA</b> volcanic ash <b>DU</b> dust <b>SA</b> sand <b>HZ</b> haze <b>PY</b> spray<br><b>PO</b> dust/sand whirls <b>SQ</b> squalls <b>FC</b> funnel cloud (+FC tornado or waterspout) <b>SS</b> sandstorm <b>DS</b> dust storm</div><div class=\"box\"><b>Sky cover</b><br><b>SKC</b> or <b>CLR</b> clear (CLR: automated, nothing at or below 12,000 ft)<br><b>FEW</b> 1/8–2/8 · <b>SCT</b> 3/8–4/8<br><b>BKN</b> 5/8–7/8 · <b>OVC</b> 8/8<br><b>VV</b> vertical visibility into an obscuration<br>Ceiling: the lowest BKN or OVC layer, or VV. Heights in hundreds of feet AGL.</div></div><h3>TAF change groups</h3><table><tbody><tr><td>FM211800</td><td>From the 21st, 1800Z: a complete new forecast replaces all before it</td></tr><tr><td>TEMPO 2112/2115</td><td>Temporary: over 50% likely, each 1 h or less, under half the period in all</td></tr><tr><td>PROB30 2123/2201</td><td>30% chance of thunderstorms or precipitation</td></tr><tr><td>WS020/27055KT</td><td>Wind shear up to 2,000 ft AGL; wind there 270° at 55 kt</td></tr></tbody></table><p><small>P6SM = more than 6 SM. BECMG appears in military and international TAFs, not NWS TAFs.</small></p><div class=\"cols\"><div class=\"box\"><b>Winds and temps aloft (FB), example</b><br><b>FT 3000 6000 12000 34000<br>SAN 0507 2611+12 2824-01 781550</b><br>0507: 050° at 7 kt, no temp at 3,000 ft<br>2611+12: 260° at 11 kt, +12 °C · 2824-01: 280° at 24 kt, −1 °C<br>781550: direction over 50 means 100+ kt: 280° at 115 kt, −50 °C (no sign above 24,000)<br>9900: light and variable, under 5 kt<br><small>None within 1,500 ft of station elevation for wind, 2,500 ft for temperature.</small></div><div class=\"box\"><b>True or magnetic?</b><br>METAR, TAF and FB winds: <b>true</b>.<br>ATIS, ASOS/AWOS voice, the tower, and PIREP /WV: <b>magnetic</b>.<br><b>PIREP order</b><br>Station · UA, or UUA if urgent · /OV where · /TM time UTC · /FL altitude MSL · /TP type · /SK sky · /WX weather · /TA temp · /WV wind · /TB turbulence · /IC icing · /RM remarks</div></div>",
+  "sources": [
+   "FAA-H-8083-28B Ch. 24 (Fig. 24-1, Tables 24-3, 24-4, Fig. 24-5)",
+   "FAA-H-8083-28B Ch. 27 (Tables 27-1, 27-3; FB and TAF sections)",
+   "AIM 7-1-10",
+   "AIM 7-1-18 (PIREP element code chart)",
+   "AIM 7-1-28 and 7-1-29 (NWS TAFs exclude BECMG)",
+   "AIM 4-2-10"
+  ]
+ },
+ {
+  "n": 8,
+  "id": "da",
+  "group": "charts",
+  "title": "Density altitude and lift",
+  "sub": "Pressure altitude, standard temperature, density altitude, worksheet",
+  "html": "<h3>Three steps</h3><div class=\"grid3\"><div class=\"box\"><b>1 · Pressure altitude</b><br>PA = elevation + (29.92 − altimeter) × 1,000</div><div class=\"box\"><b>2 · Standard temperature</b><br>ISA = 15 °C − 2 °C per 1,000 ft of PA</div><div class=\"box\"><b>3 · Density altitude</b><br>DA ≈ PA + 120 × (OAT − ISA)</div></div><h3>Worked example</h3><p>Field elevation 1,400 ft, altimeter 29.82, OAT 30 °C.</p><table><tbody><tr><th scope=\"row\">Pressure altitude</th><td>1,400 + (29.92 − 29.82) × 1,000 = 1,400 + 100 = <b>1,500 ft</b></td></tr><tr><th scope=\"row\">Standard temperature</th><td>15 − 2 × 1.5 = <b>12 °C</b></td></tr><tr><th scope=\"row\">Density altitude</th><td>1,500 + 120 × (30 − 12) = 1,500 + 2,160 = <b>3,660 ft</b></td></tr></tbody></table><div class=\"call\"><span class=\"big\">3,660 ft</span><br>The balloon performs as if the field were 2,260 ft higher.</div><h3>What it does to lift</h3><ul><li>Buoyancy equals the weight of the air the envelope displaces. Heating the air inside makes it less dense, so the balloon rises when it weighs less than the air it pushes aside.</li><li>High elevation, low pressure, high temperature and high humidity all mean thinner air and less lift at the same envelope temperature: more heat for the same load, more fuel, less margin under the envelope's limit.</li><li>Rough rule: 1,000 cubic feet of heated air lifts about 20 lb.</li><li>Burner performance drops about 4% per 1,000 ft.</li><li>Maximum gross weight is in your flight manual; its performance chart reads lift from ambient temperature, envelope temperature and pressure altitude.</li></ul><h3>Worksheet</h3><table><thead><tr><th scope=\"col\">Step</th><th scope=\"col\">Flight 1</th><th scope=\"col\">Flight 2</th></tr></thead><tbody><tr><td>Field elevation (ft)</td><td></td><td></td></tr><tr><td>Altimeter setting (inHg)</td><td></td><td></td></tr><tr><td>(29.92 − altimeter) × 1,000</td><td></td><td></td></tr><tr><td><b>Pressure altitude</b></td><td></td><td></td></tr><tr><td>ISA = 15 − 2 × (PA ÷ 1,000)</td><td></td><td></td></tr><tr><td>OAT (°C)</td><td></td><td></td></tr><tr><td>(OAT − ISA) × 120</td><td></td><td></td></tr><tr><td><b>Density altitude</b></td><td></td><td></td></tr></tbody></table><p><small>The 120 ft per °C step is a common rule of thumb, an approximation. For PA 10,000 ft at 20 °C it gives 13,000 ft; the Aviation Weather Handbook's computed answer is 12,700 ft. A flight computer or the app's chart is closer.</small></p>",
+  "sources": [
+   "FAA-H-8083-25C Ch. 4 (standard atmosphere, pressure and density altitude)",
+   "FAA-H-8083-11B Ch. 2 (buoyancy)",
+   "FAA-H-8083-11B Ch. 3 (performance planning)",
+   "FAA-H-8083-28B Ch. 8 (density altitude example)"
+  ]
+ },
+ {
+  "n": 9,
+  "id": "radio",
+  "group": "flying",
+  "title": "Radio, light signals, transponder",
+  "sub": "Tower light gun, squawk codes, balloon exemptions, calling ATC",
+  "html": "<h3>Tower light signals (AIM 4-3-13)</h3><table><thead><tr><th scope=\"col\">Signal</th><th scope=\"col\">Aircraft in flight</th><th scope=\"col\">Aircraft on the ground</th></tr></thead><tbody><tr><th scope=\"row\">Steady green</th><td>Cleared to land</td><td>Cleared for takeoff</td></tr><tr><th scope=\"row\">Flashing green</th><td>Return for landing (steady green follows)</td><td>Cleared to taxi</td></tr><tr><th scope=\"row\">Steady red</th><td>Give way to other aircraft and continue circling</td><td>Stop</td></tr><tr><th scope=\"row\">Flashing red</th><td>Airport unsafe, do not land</td><td>Taxi clear of the runway in use</td></tr><tr><th scope=\"row\">Flashing white</th><td>Not applicable</td><td>Return to starting point on airport</td></tr><tr><th scope=\"row\">Alternating red and green</th><td>Exercise extreme caution</td><td>Exercise extreme caution</td></tr></tbody></table><p><small>Vehicles and people: steady green go · steady red stop · flashing red clear the taxiway or runway · flashing white return to starting point.</small></p><h3>Where a balloon needs what</h3><table><thead><tr><th scope=\"col\">Airspace</th><th scope=\"col\">Transponder and ADS-B Out</th><th scope=\"col\">Radio</th></tr></thead><tbody><tr><td><span class=\"tile tA\">A</span> <span class=\"tile tB\">B</span> <span class=\"tile tC\">C</span></td><td>Required unless ATC authorizes</td><td>B: ATC clearance first. C: two-way contact before entering.</td></tr><tr><td>Above a B or C ceiling, inside its limits, to 10,000 MSL</td><td>Required: no balloon exemption</td><td></td></tr><tr><td>Mode C veil (30 NM of a listed Class B airport)</td><td>Exempt outside A, B, C and below the lower of the B or C ceiling or 10,000 MSL</td><td></td></tr><tr><td>At and above 10,000 MSL, 48 states, not within 2,500 ft AGL</td><td>Exempt</td><td></td></tr><tr><td><span class=\"tile tD\">D</span></td><td>Not required (91.215, 91.225)</td><td>Two-way contact before entering</td></tr></tbody></table><p><small>Exempt: balloons and aircraft certificated without an engine-driven electrical system (91.215(b)(3), (b)(5); 91.225(e)). Unequipped: request a deviation 1 h ahead. Contact is established when ATC answers with your call sign. Class D radio failure, VFR: land if basic VFR, tower in sight, cleared to land (91.129(d)(2)).</small></p><div class=\"cols\"><div class=\"box\"><b>Squawk</b><br><span class=\"big\">1200</span> VFR · <span class=\"big\">7500</span> hijack<br><span class=\"big\">7600</span> lost radio · <span class=\"big\">7700</span> emergency</div><div class=\"box\"><b>Calling</b><br>Facility, call sign, position, request: <i>\"Palomar Tower, Balloon One Two Three Alfa Bravo, five miles east…\"</i> Say the type and drop the N. <b>MAYDAY</b> ×3 distress, <b>PAN-PAN</b> ×3 urgency; emergency frequency <b>121.5</b>.</div></div><p><small>Alfa Bravo Charlie Delta Echo Foxtrot Golf Hotel India Juliett Kilo Lima Mike November Oscar Papa Quebec Romeo Sierra Tango Uniform Victor Whiskey Xray Yankee Zulu · 3 \"tree\" · 4 \"fow-er\" · 5 \"fife\" · 9 \"niner\"</small></p>",
+  "sources": [
+   "AIM 4-3-13",
+   "AIM 4-1-20",
+   "AIM 6-2-2",
+   "AIM 6-3-1",
+   "AIM 6-3-4",
+   "AIM 6-4-2",
+   "AIM 4-2-3",
+   "AIM 4-2-4",
+   "AIM 4-2-7",
+   "AIM 3-2-4",
+   "AIM 3-2-5",
+   "14 CFR 91.125",
+   "14 CFR 91.129",
+   "14 CFR 91.130",
+   "14 CFR 91.131",
+   "14 CFR 91.215",
+   "14 CFR 91.225"
+  ]
+ },
+ {
+  "n": 10,
+  "id": "preflight",
+  "group": "flying",
+  "title": "Preflight, crew and passengers",
+  "sub": "Go/no-go, launch site, crew briefing, passenger briefing, pre-launch",
+  "html": "<h3>Before you go (91.103; PTS Area III)</h3><ul><li>Weather reports and forecasts, PIREPs, SIGMETs and G-AIRMETs; hazards to balloon flight; a go/no-go decision.</li><li>Fuel requirements, and alternatives if the flight can't be completed.</li><li>A course plotted from winds aloft; airspace, obstructions and terrain; landing areas; NOTAMs.</li><li>Operating weight, maximum load, fuel quantity and endurance; envelope temperatures, including never-exceed and maximum continuous.</li></ul><h3>Launch site (PTS V.A)</h3><p>Size and surface · access and obstacles · surface wind and winds aloft · obstacles nearby · landing areas downwind · a suitable time for the conditions.</p><h3>Crew briefing (PTS V.B)</h3><ul><li>Designate a crew chief if appropriate, and give each crewmember their duties.</li><li>Brief layout and assembly, tie-off, inflation, in flight, landing, recovery and emergency procedures.</li><li>Agree on a common means of communication: hand signals and/or two-way radio.</li><li>Tell them the expected direction of flight and time aloft. Check that all equipment is on board.</li></ul><h3>Layout, inspection, inflation (PTS V.C–E)</h3><p>Fuel system secure, leak-free, correct pressure · cables and lines attached per the flight manual · inspect basket, envelope, suspension and handling lines, vent or deflation system, burner, fuel system, instruments · tie off as the manufacturer specifies · vent/deflation lines positioned and secured.</p><h3>Passenger briefing (BFH Ch. 6, 8)</h3><p>Give it before inflation and again once you decide to land:</p><ol><li><b>Stand where shown</b>: usually the rear of the basket; the front in a high-wind landing.</li><li><b>Face the direction of travel</b> (or away from it, if that is what you briefed).</li><li><b>Feet and knees together, knees bent.</b> Avoid the word \"brace\": legs stay springy.</li><li><b>Hold on tight, in two places.</b></li><li><b>Stay in the basket</b> until the pilot says to get out.</li></ol><div class=\"call\">No seat-belt briefing is required in a basket balloon (91.107(a)). Except in an emergency, carry no one who appears intoxicated (91.17(b)).</div><h3>Pre-launch check (PTS V.F–G)</h3><p>Loose items secured · wind, temperatures and obstructions reviewed · final instrument check · vent/deflation lines secured · final coordination with crew, including signals and emergency procedures · bring the balloon to equilibrium · no conflict with traffic, above and around.</p>",
+  "sources": [
+   "14 CFR 91.17",
+   "14 CFR 91.103",
+   "14 CFR 91.107",
+   "FAA-S-8081-18A Areas III and V",
+   "FAA-H-8083-11B Ch. 6 (passenger briefing)",
+   "FAA-H-8083-11B Ch. 8 (passenger briefings and management)"
+  ]
+ },
+ {
+  "n": 11,
+  "id": "emerg",
+  "group": "flying",
+  "title": "Emergencies and propane",
+  "sub": "First moves for balloon emergencies; propane facts and refueling",
+  "html": "<div class=\"call\"><b>Fly the balloon first.</b> Resolve the situation, then check the flight manual or checklist. In an emergency you may deviate from Part 91 as far as needed (91.3(b)). Your flight manual's procedure governs.</div><h3>First moves (BFH Ch. 7–8)</h3><table><tbody><tr><th scope=\"row\">Vent or deflation line lost</th><td>Only the burner controls descent. Stay low, land in the largest area you can, expect rebound and drag in wind; a poorer field may be worth it to avoid power lines.</td></tr><tr><th scope=\"row\">Pilot light out</th><td>Two burners: fly on the other; try a relight using both. One burner: igniter or striker; else crack the blast valve slightly and light the stream, or use the backup system. Land as soon as practical.</td></tr><tr><th scope=\"row\">Fuel leak or fire at a fitting</th><td>Shut off the fuel source. A small fire at a fitting: shut off, then snuff it with a gloved hand.</td></tr><tr><th scope=\"row\">Thermal</th><td>Keep the envelope at least at its equilibrium temperature; don't vent to descend. It usually releases you higher.</td></tr><tr><th scope=\"row\">High-wind landing</th><td>Lowest safe altitude to a large field, deflation line clear. Committed: brief passengers, fuel valves off, drain lines, pilot lights off. At 15 mph you cover 220 ft in the 10 s a burn takes to work.</td></tr><tr><th scope=\"row\">Water landing</th><td>Passengers clear of the basket in case it inverts; hold on to it, it floats. A deflated envelope sinks; tanks float.</td></tr><tr><th scope=\"row\">Power lines</th><td>Watch for them on every approach. If contact can't be avoided, follow your flight manual.</td></tr></tbody></table><p><small>The checkride also asks about blast valve failure, fuel exhaustion and your emergency and survival gear (PTS Area X): answer from your flight manual.</small></p><h3>Propane (BFH Ch. 2, App. A)</h3><div class=\"cols\"><ul><li>Boils at −44 °F (butane 32 °F), but in the tank it is at the outside air temperature.</li><li>Vapor is heavier than air and pools low; the odorant is ethyl mercaptan.</li><li>Escaped liquid makes about 6,800 times its volume of combustible mixture.</li><li>The fixed maximum liquid level gauge marks 80% full; the relief valve normally opens near 375 psi.</li></ul><table><thead><tr><th scope=\"col\">°F</th><th scope=\"col\">psi</th></tr></thead><tbody><tr><td>0</td><td>25</td></tr><tr><td>20</td><td>42</td></tr><tr><td>40</td><td>65</td></tr><tr><td>60</td><td>93</td></tr><tr><td>80</td><td>128</td></tr><tr><td>100</td><td>177</td></tr></tbody></table></div><p><b>Cold mornings:</b> add nitrogen through a regulator if the flight manual allows; vapor-feed pilot systems may not tolerate it. Cancelled, with a rise of more than 30° coming? Bleed the pressure through the fixed liquid level gauge.</p><p><b>Refueling:</b> open air, never from inside the basket or a closed trailer or van · no smoking · strikers disabled · chase vehicle off · gloves. When the spit valve spits: main tank valve, then spit valve, then supply line, then bleed the lines.</p>",
+  "sources": [
+   "14 CFR 91.3",
+   "FAA-H-8083-11B Ch. 2 (fuel tanks, propane primer)",
+   "FAA-H-8083-11B Ch. 3 (cold weather operations)",
+   "FAA-H-8083-11B Ch. 7 (in-flight emergencies)",
+   "FAA-H-8083-11B Ch. 8 (thermals, high-wind and water landings, refueling)",
+   "FAA-H-8083-11B Appendix A",
+   "FAA-S-8081-18A Areas X and XI"
+  ]
+ },
+ {
+  "n": 12,
+  "id": "checkride",
+  "group": "flying",
+  "title": "Checkride day",
+  "sub": "Prerequisites, what to bring, the 11 areas and what they ask",
+  "html": "<h3>Before you can test (61.39)</h3><p>Knowledge test passed within the <b>24 calendar months</b> before the test month · age 18 and the experience · instructor endorsement: trained within the <b>2 calendar months</b> before the month of application, ready, and weak knowledge-test areas reviewed · signed application.</p><h3>Bring (PTS checklist)</h3><div class=\"cols\"><div class=\"box\"><b>For the balloon:</b> airworthiness and registration certificates · operating limitations · maintenance records showing inspections and AD compliance · balloon flight manual.<br><b>Equipment:</b> the PTS, a current chart, computer and plotter, flight log, current AIM.</div><div class=\"box\"><b>For you:</b> photo and signature ID · pilot certificate · medical certificate or statement (the PTS lists it; 61.23(b)(10) needs none for a balloon checkride) · FAA Form 8710-1 with your instructor's signature · knowledge test report · logbook with endorsements · Form 8060-5 if retesting · approved school graduation certificate, if any · examiner's fee.</div></div><h3>Areas of operation (FAA-S-8081-18A)</h3><table><thead><tr><th scope=\"col\">Area</th><th scope=\"col\">What they ask</th></tr></thead><tbody><tr><th scope=\"row\">I Fundamentals of instructing</th><td>Learning and teaching; instructor responsibilities (always) plus at least one other task</td></tr><tr><th scope=\"row\">II Technical subjects</th><td>Aeromedical factors, scanning, principles of flight and false lift, Parts 1, 61, 91 and 830, airspace, the logbook entries and endorsements you will give</td></tr><tr><th scope=\"row\">III Preflight preparation</th><td>Certificates, medical and inspections; weather and go/no-go; a planned maximum-duration flight with real-time weather; performance; systems</td></tr><tr><th scope=\"row\">IV Preflight lesson</th><td>Teach one maneuver from Areas VII–XI as you would to a learner</td></tr><tr><th scope=\"row\">V Preflight procedures</th><td>Launch site, crew briefing, layout, inspection, inflation, basket management, pre-launch check</td></tr><tr><th scope=\"row\">VI Airport operations</th><td>Frequencies, phraseology, ATC clearances</td></tr><tr><th scope=\"row\">VII Launches and landings</th><td>Normal and over-obstacle launches; normal and steep approaches; normal and high-wind landings. Over-obstacle launch and high-wind landing go oral if conditions don't allow.</td></tr><tr><th scope=\"row\">VIII Performance maneuvers</th><td>Ascents, level flight, descents, rapid ascent and descent, contour flying, obstacle avoidance, tethering, winter and mountain flying</td></tr><tr><th scope=\"row\">IX Navigation</th><td>Airspace, landmarks against the chart, position, fuel, flight duration</td></tr><tr><th scope=\"row\">X Emergency operations</th><td>Malfunctions, emergency and survival gear, water landing, thermals</td></tr><tr><th scope=\"row\">XI Postflight</th><td>Recovery with the landowner, deflation and pack-up, refueling and propane</td></tr></tbody></table>",
+  "sources": [
+   "14 CFR 61.39",
+   "14 CFR 61.23(b)(10)",
+   "FAA-S-8081-18A (Nov. 2023), Applicant's Practical Test Checklist (Balloon)",
+   "FAA-S-8081-18A Section 1, Areas of Operation I–XI"
+  ]
+ }
+]

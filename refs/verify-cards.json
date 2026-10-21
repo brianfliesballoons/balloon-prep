@@ -1,0 +1,186 @@
+[
+ {
+  "card": "pilot",
+  "claim": "Logging a lesson you give: what 61.51(h)(2) requires",
+  "verdict": "fixed",
+  "old": "endorse the student's logbook with a description of the training, its length, your signature and your certificate number (61.51(h)(2)).",
+  "new": "endorse the student's logbook legibly with a description of the training, the length of the lesson, your signature, your certificate number, and \"certificate expiration date or recent experience end date\" (61.51(h)(2)). A commercial pilot certificate has no expiration date (61.19(c)).",
+  "source": "14 CFR 61.51(h)(2)(i)-(ii): 'Be endorsed in a legible manner by the authorized instructor; and Include a description of the training given, the length of the training lesson, and the authorized instructor's signature, certificate number, and certificate expiration date or recent experience end date, consistent with the requirements of § 61.197.' 14 CFR 61.19(c)(1): a pilot certificate is issued without an expiration date. eCFR as of 2026-10-19. Brian's 'instructor's practice' line left unchanged."
+ },
+ {
+  "card": "pilot",
+  "claim": "Medical class for flying for hire",
+  "verdict": "fixed",
+  "old": "<span class=\"big\">2nd class</span><br>Valid to the end",
+  "new": "<span class=\"big\">2nd class</span><br>Or 1st. Valid to the end",
+  "source": "14 CFR 61.23(a)(2)(iii): 'at least a second class medical certificate'; 61.23(d)(1)(iii) and (d)(2)(i): first or second class, any age, commercial privileges expire at the end of the 12th month after the exam month."
+ },
+ {
+  "card": "pilot",
+  "claim": "Eligibility summary omitted the private pilot certificate prerequisite",
+  "verdict": "fixed",
+  "old": "<small>To earn it: age 18; 35 h ... (61.123, 61.129(h))",
+  "new": "<small>To earn it: age 18; at least a private pilot certificate; 35 h ... (61.123(a), (h); 61.129(h))",
+  "source": "14 CFR 61.123(h): 'Hold at least a private pilot certificate issued under this part or meet the requirements of § 61.73'."
+ },
+ {
+  "card": "pilot",
+  "claim": "Federal Register citation for the commercial-balloon medical rule",
+  "verdict": "fixed",
+  "old": "Final rule 87 FR 71236 (Nov. 22, 2022), FR Doc. 2022-25288",
+  "new": "Final rule 87 FR 71218 (Nov. 22, 2022), FR Doc. 2022-25288",
+  "source": "federalregister.gov API, document 2022-25288: citation '87 FR 71218', published 2022-11-22; DATES: amendments to 61.3(c)(2)(vi) and 61.23(a)(2), (b)(3)-(5), (d) effective May 22, 2023 (page 71236 is a page inside the rule, not its start). 61.19(c) added to the card's sources."
+ },
+ {
+  "card": "pilot",
+  "claim": "All other statements: 61.133(a)(1), (a)(2)(ii); 61.3(d)(3)(i); airborne-heater limit table 61.133(b)(2)-(3); medical none for training 61.23(b)(5), private/student/balloon checkride 61.23(b)(1),(4),(10); May 22, 2023 effective date; flight review 61.56(a),(c),(d); 3 takeoffs and landings in 90 days 61.57(a), night to a full stop 61.57(b); carry and show 61.3(a),(c),(l); 30-day address 61.60; experience 61.129(h)(1)-(4)(ii)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR Title 14 Part 61 (up to date as of 2026-10-19); 87 FR 71218."
+ },
+ {
+  "card": "balloon",
+  "claim": "Preventive maintenance by sport pilots",
+  "verdict": "fixed",
+  "old": "(43.3(g); not sport pilots)",
+  "new": "(43.3(g); a sport pilot only on a light-sport category aircraft)",
+  "source": "14 CFR 43.3(g): 'The holder of a sport pilot certificate may perform preventive maintenance on an aircraft owned or operated by that pilot and issued a special airworthiness certificate in the light-sport category.'"
+ },
+ {
+  "card": "balloon",
+  "claim": "All other statements: documents 91.203(a)(1),(a)(2),(b); registration 7 years 47.40(a); operating limitations 31.81(b), 91.9; instruments 31.85(a)-(c); annual and 100-hour incl. 10-h overrun 91.409(a),(b); 91.403(a); records 91.417(a); PIC 91.7(b); Part 43 App. A(c)(7),(25),(27); 91.205 powered aircraft only, 91.207 airplanes only, 91.151 airplanes/rotorcraft, 91.107(a) basket balloon excepted",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR Title 14 Parts 31, 43, 47, 91 (as of 2026-10-19)."
+ },
+ {
+  "card": "rules",
+  "claim": "All statements: 91.3(a)-(c); 91.103(a); 91.13(a); 91.15; 91.113(b),(c),(d)(1),(d) same-category converging, (f); 91.119(a)-(d) incl. no balloon exception; 91.17(a)(1),(4),(b); 91.111(a)-(c); 91.209(a)(1); BFH 11B Ch. 7 'Minimum Safe Altitude Requirements' says 91.119 applies to balloons. Lower-balloon custom kept as Brian's ruling.",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR Title 14 Part 91 (as of 2026-10-19); FAA-H-8083-11B Ch. 7."
+ },
+ {
+  "card": "ntsb",
+  "claim": "All statements: accident, serious injury and substantial damage definitions 830.2; immediate-notification list incl. $25,000 property damage and overdue aircraft 830.5(a),(b); ROC numbers 844-373-9922 / 202-314-6290 (830.5 footnote 1); 830.6(a)-(i); wreckage 830.10(b)-(d); Form 6120.1/2 within 10 days, 7 days for overdue, incidents only on request, crewmember statement 830.15(a)-(b). No festival-touch framing on the card.",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR Title 49 Part 830 (as of 2026-10-19)."
+ },
+ {
+  "card": "wx",
+  "claim": "AO2 decode",
+  "verdict": "fixed",
+  "old": "Automated, precipitation sensor;",
+  "new": "Automated station with a precipitation discriminator;",
+  "source": "FAA-H-8083-28B 24.4.3.13.3: 'automated stations with a precipitation discriminator are identified as AO2'; AIM 7-1-10. AO1 stations also have precipitation sensing but no discriminator."
+ },
+ {
+  "card": "wx",
+  "claim": "+FC meaning",
+  "verdict": "fixed",
+  "old": "<b>FC</b> funnel cloud (+FC tornado)",
+  "new": "<b>FC</b> funnel cloud (+FC tornado or waterspout)",
+  "source": "FAA-H-8083-28B Table 24-3 note 4: 'Tornadoes and waterspouts are coded as +FC.'"
+ },
+ {
+  "card": "wx",
+  "claim": "PIREP element order",
+  "verdict": "fixed",
+  "old": "<b>PIREP order</b><br>UA, or UUA if urgent",
+  "new": "<b>PIREP order</b><br>Station · UA, or UUA if urgent",
+  "source": "AIM TBL 7-1-18 PIREP Element Code Chart: element 1 is the 3-letter station identifier, then UA/UUA, /OV, /TM, /FL, /TP, /SK, /WX, /TA, /WV ('Direction in degrees magnetic north'), /TB, /IC, /RM."
+ },
+ {
+  "card": "wx",
+  "claim": "BECMG is not used in NWS TAFs (open item)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "AIM 7-1-28: 'NWS TAFs exclude BECMG groups'; AIM 7-1-29: 'The NWS does not use BECMG in the TAF.' AWH 28B 27.4.2.10 lists only FM, TEMPO and PROB as NWS change indicators and shows BECMG only in joint-use (military) TAFs. AIM 7-1-18, 7-1-28/29 added to the card's sources."
+ },
+ {
+  "card": "wx",
+  "claim": "FB: no wind within 1,500 ft and no temperature within 2,500 ft of station elevation (open item)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-H-8083-28B 27.2.1.1: 'Wind forecasts are not issued for altitudes within 1,500 ft of a location's elevation. Temperature forecasts are not issued for altitudes within 2,500 ft of a location's elevation.'"
+ },
+ {
+  "card": "wx",
+  "claim": "Decodes recomputed: 00000KT calm; 5SM BR (mist 5/8 to <7 SM, FG <5/8); FEW008 / BKN015 ceiling 1,500 AGL; 14/13; A3001 = 30.01 inHg; SLP163 = 1016.3 hPa (consistent with A3001: 30.01 x 33.864 = 1016.3); T01390128 = 13.9/12.8 °C (rounds to 14/13); FB 0507 = 050° 7 kt no temp; 2611+12; 2824-01; 781550 = 280° 115 kt -50 °C; 9900 light and variable; TEMPO >50%, <=1 h each, <half the period; PROB30 30% thunderstorm/precip; FM complete new forecast; WS020/27055KT; P6SM; VC 5-10 SM; sky cover fractions; CLR at or below 12,000 ft; PK WND, WSHFT/FROPA, PRESRR/PRESFR; METAR/TAF/FB true, ATIS/ASOS/AWOS voice magnetic (AIM 7-1-10), tower magnetic (AIM 4-2-10)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-H-8083-28B Ch. 18.1.2, 24.4.3 (Tables 24-3, 24-4), 24.4.3.13.21, 27.2.1, 27.4.2.10 and LLWS format; AIM 7-1-10, 7-1-28, 4-2-10."
+ },
+ {
+  "card": "da",
+  "claim": "'about 120 ft per °C' density-altitude step (open item)",
+  "verdict": "unsourced",
+  "old": "The 120 ft per °C step is an approximation.",
+  "new": "The 120 ft per °C step is a common rule of thumb, an approximation.",
+  "source": "No FAA source found that states it. Searched FAA-H-8083-25C, FAA-H-8083-28B (incl. Appendix C, which uses a chart only), FAA-H-8083-11B, and FAA-P-8740-02 'Density Altitude' (faasafety.gov copy). P-8740-02's 'Density Altitude Rule-of-Thumb Chart' is in °F and implies roughly 103-115 ft per °C, so 120 slightly overstates it. Kept labelled as a rule of thumb; the card's own AWH comparison (13,000 vs 12,700 ft) shows the size of the error. No citation added."
+ },
+ {
+  "card": "da",
+  "claim": "Worked example and the rest: PA 1,400 + 100 = 1,500; ISA 15 - 3 = 12 °C; DA 1,500 + 2,160 = 3,660; 3,660 - 1,400 = 2,260; AWH example PA 10,000 at 20 °C = 12,700 (rule gives 10,000 + 120 x 25 = 13,000); ISA 15 °C and 2 °C/1,000 ft and ~1 inHg per 1,000 ft (PHAK Ch. 4); high humidity raises DA (PHAK Ch. 4); buoyancy (BFH Ch. 2); 1,000 cu ft lifts ~20 lb, heater -4%/1,000 ft, performance chart (BFH Ch. 3)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-H-8083-25C Ch. 4; FAA-H-8083-28B 8.4.1.5; FAA-H-8083-11B Ch. 2 and Ch. 3 (Fig. 3-13)."
+ },
+ {
+  "card": "radio",
+  "claim": "Class D radio failure citation",
+  "verdict": "fixed",
+  "old": "cleared to land (91.129(d)).",
+  "new": "cleared to land (91.129(d)(2)).",
+  "source": "14 CFR 91.129(d)(2)(i)-(iii): VFR radio failure, land if at or above basic VFR minimums, visual contact with the tower, and a clearance to land."
+ },
+ {
+  "card": "radio",
+  "claim": "All other statements: light-gun table incl. vehicles (AIM 4-3-13; 91.125); transponder and ADS-B by airspace and the balloon exemptions 91.215(b)(1)-(5), (d)(3), 91.225(a),(d),(e), deviation 1 h ahead; Class B clearance 91.131(a)(1); Class C/D two-way contact 91.130(c), 91.129(c), contact established when ATC answers with your call sign (AIM 3-2-4); squawk 1200/7500/7600/7700 (AIM 4-1-20, 6-3-4, 6-4-2, 6-2-2); MAYDAY/PAN-PAN x3 and 121.5 (AIM 6-3-1); call-up format and dropping the N when the type is stated (AIM 4-2-3, 4-2-4); phonetic alphabet and 'tree, fow-er, fife, niner' (AIM 4-2-7)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR Title 14 Part 91 (as of 2026-10-19); AIM (faa.gov HTML, fetched 2026-10-21)."
+ },
+ {
+  "card": "preflight",
+  "claim": "All statements: 91.103(a); PTS Area III Tasks B-D; V.A launch site; V.B crew briefing; V.C-E layout, inspection, inflation; V.F-G basket management and pre-launch; tie-off per the flight manual (BFH Ch. 6); passenger briefing before inflation and again before landing, rear of basket, front in high-wind landing, face the direction of travel or as briefed, feet and knees together with knees bent, avoid 'brace', hold on in two places, stay in the basket (BFH Ch. 6 'Passenger Briefing', Ch. 8 'Passenger Briefings & Management'); 91.107(a); 91.17(b)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-S-8081-18A (Nov. 2023) Section 1 Areas III and V; FAA-H-8083-11B Ch. 6 and 8; eCFR Part 91."
+ },
+ {
+  "card": "emerg",
+  "claim": "All statements: 91.3(b); vent/deflation line loss, pilot light out (dual and single burner), fuel leak and gloved-hand snuffing (BFH Ch. 7 'In Flight Emergencies'); thermal rules (BFH Ch. 8 'Thermal Flight'); high-wind landing steps and 15 mph = 220 ft in 10 s (22 ft/s x 10) (BFH Ch. 8); water landing (BFH Ch. 8); PTS Area X tasks A-D; propane -44 °F / butane 32 °F, ambient tank temperature, heavier than air, ethyl mercaptan, 6,800x, 80% fixed liquid level gauge, 375 psi relief (BFH Ch. 2); pressure table 0/20/40/60/80/100 °F = 25/42/65/93/128/177 psi (BFH Appendix A); nitrogen, vapor-feed pilots, bleed if rise >30° (BFH Ch. 3); refueling rules and valve sequence (BFH Ch. 8). Power-line line kept per Brian's ruling.",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-H-8083-11B Ch. 2, 3, 7, 8 and Appendix A (faa.gov PDFs fetched 2026-10-21); FAA-S-8081-18A Area X."
+ },
+ {
+  "card": "checkride",
+  "claim": "Medical at the checkride: PTS checklist vs 61.23(b)(10) (open item)",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "FAA-S-8081-18A Applicant's Practical Test Checklist (Balloon) lists 'Current and Appropriate Medical Certificate or Statement'; 14 CFR 61.23(b)(10): no medical certificate is required 'When taking a practical test or a proficiency check for a certificate, rating, authorization or operating privilege conducted in a glider, balloon, flight simulator, or flight training device'. The card states both correctly."
+ },
+ {
+  "card": "checkride",
+  "claim": "All other statements: 61.39(a)(1)(i), (a)(6)(i)-(iii), (a)(7); PTS checklist items (aircraft documents, maintenance records, personal equipment, personal records incl. AKTR, 8710-1, 8060-5, graduation certificate, fee); Area I note (Task F plus at least one other); Areas II-XI task lists incl. oral evaluation of launch over obstacle and high-wind landing",
+  "verdict": "confirmed",
+  "old": "",
+  "new": "",
+  "source": "eCFR 14 CFR 61.39 (as of 2026-10-19); FAA-S-8081-18A (Nov. 2023), faa.gov commercial_lta_pts_18.pdf."
+ }
+]

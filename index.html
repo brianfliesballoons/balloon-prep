@@ -276,6 +276,78 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .repl a{color:var(--muted)}
 .done-chip{align-self:flex-start;display:flex;align-items:center;gap:6px;font-weight:700;color:var(--good)}
 .done-chip svg{width:18px;height:18px}
+
+/* ---------- quick reference ---------- */
+.ref{display:flex;flex-direction:column;gap:14px;max-width:920px;margin:0 auto 24px;width:100%}
+.ref h2{font-family:var(--f-display);font-size:1.9rem;line-height:1.05;margin:0}
+.rgrp{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.rgrp h3{font-family:var(--f-display);font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0;padding:12px 16px 6px}
+.rrow{display:flex;align-items:center;gap:12px;width:100%;min-height:60px;padding:8px 16px;border:0;border-top:1px solid var(--line);background:none;color:var(--ink);text-align:left;font:inherit;cursor:pointer}
+.rrow .rn{width:28px;height:28px;border-radius:6px;border:1.5px solid var(--pa);display:flex;align-items:center;justify-content:center;font-family:var(--f-num);font-size:.8rem;flex:none}
+.rrow b{display:block;font-size:1.02rem;line-height:1.25}.rrow small{color:var(--muted);font-size:.86rem;line-height:1.35}
+.rtop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;line-height:1.5}
+.rbody h3{font-family:var(--f-display);font-size:1.2rem;margin:16px 0 6px}
+.rbody h3:first-child{margin-top:0}
+.rbody p{margin:6px 0}.rbody ul,.rbody ol{margin:6px 0;padding-left:1.3em}
+.rbody table{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0}
+.rbody th,.rbody td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+.rbody thead th{background:var(--chip);font-family:var(--f-display);font-size:.98rem}
+.rbody .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rbody .call{background:var(--chip);border-radius:10px;padding:8px 12px;margin:10px 0}
+.rbody .big{font-family:var(--f-num);font-size:1.6em;line-height:1}
+.rbody .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0}
+.rbody .box{border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+@media (max-width:640px){.rbody .cols,.r1top,.vfr{grid-template-columns:minmax(0,1fr)!important}.rbody .grid3{grid-template-columns:minmax(0,1fr)}}
+.tile{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:30px;height:30px;border-radius:7px;font-family:var(--f-display);font-weight:700;font-size:1.05rem;vertical-align:middle;flex:none}
+.tA{background:#3b3f45;color:#fff}.tB{background:#1d5ed4;color:#fff}.tC{background:#8a2b5c;color:#fff}
+.tD{background:#fff;color:#1d5ed4;border:2.5px dashed #1d5ed4}.tE{background:linear-gradient(#e7c3d6,#fff);color:#8a2b5c;border:2px solid #8a2b5c}.tG{background:#fff;color:#14263a;border:2px solid #8b9894}
+.r1top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:center}
+.r1top figure{margin:0}.xs{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px}
+.r1top figcaption,.rcap{font-size:.82rem;color:var(--muted);margin-top:4px}
+.memo{display:flex;gap:12px;align-items:center;border:2px solid var(--ink);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.memo .big{font-size:2.1rem}
+.vfr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vfr>div{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vrow{display:grid;grid-template-columns:70px minmax(0,1fr) 46px 96px;gap:6px;align-items:center;padding:4px 8px;border-top:1px solid var(--line);font-size:.86rem;line-height:1.25}
+.vrow:first-child{border-top:0}.vt{display:flex;gap:3px}
+.vv{text-align:center}.vv span{font-family:var(--f-num);font-size:1.4rem;line-height:1}.vv small{font-size:.7rem;margin-left:2px}
+.va{background:#3b3f45;color:#fff}.ifr{font-weight:700}
+.cg{width:96px;height:64px;color:var(--ink);display:block}.cg text{font:10px var(--f-num);fill:currentColor}.cg text.b{font:700 11px var(--f-body)}
+.entry{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 8px}
+.entry>div{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;font-size:.8rem;line-height:1.25}
+.entry .tile{width:34px;height:34px;font-size:1.2rem}
+@media (max-width:640px){.entry{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cls{display:grid;gap:10px}.cls>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.cls dl{display:grid;grid-template-columns:120px 1fr;gap:2px 10px;margin:8px 0 0;font-size:.9rem}.cls dt{color:var(--muted)}.cls dd{margin:0;font-weight:700}
+.sym{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center;min-height:46px;border-top:1px solid var(--line);padding:6px 0;font-size:.92rem;line-height:1.35}
+.sym svg{width:64px;height:auto}
+.legimg{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.rfoot{font-size:.8rem;color:var(--muted)}
+#refPrint{display:none}
+@media print{
+  @page{size:letter;margin:.38in}
+  html.printing,html.printing body,html.printing .wrap{background:#fff!important}
+  html.printing .wrap{padding:0!important;margin:0!important;max-width:none!important}
+  #refPrint .cg{width:78px;height:52px}
+  #refPrint .vrow{padding:1px 6px;grid-template-columns:62px minmax(0,1fr) 40px 78px}
+  #refPrint .vv span{font-size:1.2rem}
+  #refPrint .rbody h3{margin:8px 0 4px;font-size:15px}
+  #refPrint .memo .big{font-size:1.7rem}
+  #refPrint .entry{padding:6px}
+  #refPrint .rbody p{margin:3px 0}
+  #refPrint .syms{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+  #refPrint .sym{min-height:0;padding:3px 0;font-size:10.5px}
+  html.printing .wrap>*:not(#refPrint){display:none!important}
+  html.printing #refPrint{display:block!important;--surface:#fff;--ink:#111;--muted:#444;--line:#888;--chip:#ececec;--pa:#111;color:#111;background:#fff;font-size:11.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #refPrint .rpage{break-after:page;display:flex;flex-direction:column;gap:5px}
+  #refPrint .rpage:last-child{break-after:auto}
+  #refPrint .scr{display:none!important}
+  #refPrint .phead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #111;padding-bottom:4px}
+  #refPrint .phead h2{font-family:var(--f-display);font-size:26px;margin:0}
+  #refPrint .pfoot{border-top:1.5px solid #111;padding-top:4px;font-size:9.5px;display:flex;justify-content:space-between;gap:12px}
+  #refPrint .rbody table,#refPrint .vrow,#refPrint .box,#refPrint .call,#refPrint figure{break-inside:avoid}
+}
 </style>
 </head>
 <body>
@@ -289,12 +361,16 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
       <button class="mode" id="mStudy" aria-pressed="true">Study</button>
       <button class="mode" id="mTest" aria-pressed="false">Practice test</button>
       <button class="mode" id="mLearn" aria-pressed="false">Learn</button>
+      <button class="mode" id="mRef" aria-pressed="false">Reference</button>
     </div>
   </header>
 
   <div class="bar" id="filters" aria-label="Filter questions"></div>
 
   <section class="learn" id="learn" hidden aria-live="polite"></section>
+
+  <section class="ref" id="ref" hidden></section>
+  <div id="refPrint" aria-hidden="true"></div>
 
   <section class="card results" id="testStart" hidden>
     <h2>Commercial balloon practice test</h2>
@@ -503,12 +579,13 @@ function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)
   window.scrollTo({top:Math.min(window.scrollY,$('main').offsetTop-8),behavior:'auto'});}
 
 function renderAll(){
-  const lrn=mode==='learn'||mode==='due';$('mStudy').setAttribute('aria-pressed',String(mode==='study'));$('mTest').setAttribute('aria-pressed',String(mode!=='study'&&!lrn));$('mLearn').setAttribute('aria-pressed',String(lrn));
+  const lrn=mode==='learn'||mode==='due';$('mStudy').setAttribute('aria-pressed',String(mode==='study'));$('mTest').setAttribute('aria-pressed',String(mode!=='study'&&mode!=='ref'&&!lrn));$('mRef').setAttribute('aria-pressed',String(mode==='ref'));
+  $('ref').hidden=mode!=='ref';if(mode==='ref')renderRef();$('mLearn').setAttribute('aria-pressed',String(lrn));
   $('learn').hidden=mode!=='learn';if(mode==='learn')renderLearn();
   renderFilters();
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
-  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||!list.length;
+  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||!list.length;
   if(mode==='teststart'){const nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(100,nt);$('tsText').textContent=`${n} questions drawn from the ${nt} test-style questions in the bank (bonus and field questions stay in Study), spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
@@ -957,6 +1034,79 @@ new ResizeObserver(resize).observe(cv);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(req);
 setTool('move');
 const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+
+// ---------- quick reference (cards 1 and 5 are built here; the rest come from refs/cards.json) ----------
+let REFS=null,RV={v:'home'};
+const EDITION='Edition Oct 2026';
+const RGROUPS=[['rules','Rules and airspace'],['charts','Charts and weather'],['flying','Flying and the checkride']];
+const TILE=k=>`<span class="tile t${k}" role="img" aria-label="Class ${k}">${k}</span>`;
+const CLOUD='<path d="M30 34 a8 8 0 0 1 4-14 a11 11 0 0 1 20-3 a9 9 0 0 1 10 17 z" fill="var(--surface)" stroke="currentColor" stroke-width="1.6"/>';
+const cg=(t,b,sd,l)=>`<svg class="cg" viewBox="0 0 96 64" role="img" aria-label="${l}">${CLOUD}<path d="M47 15V5M44 8l3-4 3 4" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="56" y="9">${t}</text><path d="M47 36v12M44 45l3 4 3-4" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="52" y="50">${b}</text><path d="M26 26H4M7 23l-4 3 4 3M68 26h24M89 23l4 3-4 3" stroke="currentColor" stroke-width="1.4" fill="none"/><text x="48" y="62" text-anchor="middle">${sd} side</text></svg>`;
+const G152=cg('1,000','500','2,000','500 feet below, 1,000 above, 2,000 horizontal'),GBIG=cg('1,000','1,000','1 SM','1,000 feet below, 1,000 above, 1 statute mile horizontal');
+const GCLR=`<svg class="cg" viewBox="0 0 96 64" role="img" aria-label="Clear of clouds">${CLOUD}<text x="48" y="58" text-anchor="middle" class="b">Clear of clouds</text></svg>`;
+const XSEC=`<svg viewBox="0 0 420 250" class="xs" role="img" aria-label="Side view of airspace, not to scale. Class A from 18,000 feet MSL to FL600. Class E fills the sky below it, starting at 1,200 feet AGL, or 700 feet near some airports, or the surface. Class G lies under the Class E floor. Class B is an upside-down wedding cake from the surface to 10,000 MSL around a major airport. Class C has a core from the surface and a shelf from 1,200 AGL to 4,000 AGL. Class D is a dashed cylinder from the surface to about 2,500 AGL around a towered airport. Class E to the surface surrounds a nontowered airport with an instrument approach."> <defs> <linearGradient id="e7" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9a9c3"/><stop offset="1" stop-color="#d9a9c3" stop-opacity="0"/></linearGradient> </defs> <rect x="0" y="0" width="420" height="250" fill="#ffffff"/> <rect x="40" y="10" width="380" height="26" fill="#3b3f45"/> <text x="230" y="27" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Atkinson Hyperlegible,sans-serif">A · IFR only</text> <rect x="40" y="36" width="380" height="182" fill="#f6e9f0"/> <text x="404" y="56" text-anchor="end" font-size="13" font-weight="700" fill="#8a2b5c" font-family="Atkinson Hyperlegible,sans-serif">E</text> <rect x="40" y="200" width="380" height="30" fill="#ffffff"/> <line x1="40" y1="200" x2="420" y2="200" stroke="#8a2b5c" stroke-width="1" stroke-dasharray="3 3"/> <text x="183" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="#14263a" font-family="Atkinson Hyperlegible,sans-serif">G</text> <rect x="344" y="200" width="76" height="12" fill="#f6e9f0"/> <line x1="344" y1="212" x2="420" y2="212" stroke="#8a2b5c" stroke-width="1" stroke-dasharray="3 3"/> <path d="M60 70 H190 V115 H170 V160 H145 V230 H105 V160 H80 V115 H60 Z" fill="#1d5ed4" fill-opacity=".22" stroke="#1d5ed4" stroke-width="2.5"/> <text x="125" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#1d5ed4" font-family="Barlow Semi Condensed,sans-serif">B</text> <path d="M205 150 H275 V200 H258 V230 H222 V200 H205 Z" fill="#8a2b5c" fill-opacity=".22" stroke="#8a2b5c" stroke-width="2.5"/> <text x="240" y="178" text-anchor="middle" font-size="18" font-weight="700" fill="#8a2b5c" font-family="Barlow Semi Condensed,sans-serif">C</text> <rect x="300" y="178" width="44" height="52" fill="#1d5ed4" fill-opacity=".08" stroke="#1d5ed4" stroke-width="2" stroke-dasharray="6 4"/> <text x="322" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#1d5ed4" font-family="Barlow Semi Condensed,sans-serif">D</text> <rect x="364" y="200" width="36" height="30" fill="#f6e9f0" stroke="#8a2b5c" stroke-width="2" stroke-dasharray="6 4"/> <text x="382" y="221" text-anchor="middle" font-size="13" font-weight="700" fill="#8a2b5c" font-family="Barlow Semi Condensed,sans-serif">E</text> <rect x="0" y="230" width="420" height="20" fill="#8c7b5f"/> <g font-size="10" fill="#14263a" font-family="IBM Plex Mono,monospace"> <text x="2" y="14">FL600</text><text x="2" y="40">18,000</text><text x="2" y="74">10,000</text><text x="2" y="153">4,000 AGL</text><text x="2" y="182">2,500 AGL</text><text x="2" y="204">1,200 AGL</text> </g> <text x="354" y="210" text-anchor="middle" font-size="9" fill="#8a2b5c" font-family="IBM Plex Mono,monospace">700</text> <text x="210" y="244" text-anchor="middle" font-size="10" fill="#ffffff" font-family="Atkinson Hyperlegible,sans-serif">Not to scale</text> </svg>`;
+const VFR=[['A','18,000 MSL to FL600','—','<span class="ifr">IFR only</span>'],['B','Any altitude','3',GCLR],['CD','Any altitude','3',G152],['E','Below 10,000 MSL','3',G152],['E','At or above 10,000 MSL','5',GBIG],
+  ['G','<b>Day</b>, 1,200 AGL or less','1',GCLR],['G','<b>Night</b>, 1,200 AGL or less','3',G152],['G','<b>Day</b>, above 1,200 AGL, below 10,000 MSL','1',G152],['G','<b>Night</b>, above 1,200 AGL, below 10,000 MSL','3',G152],['G','Above 1,200 AGL, at or above 10,000 MSL','5',GBIG]];
+const vrow=([k,w,v,g])=>`<div class="vrow${k==='A'?' va':''}"><div class="vt">${[...k].map(TILE).join('')}</div><div>${w}</div><div class="vv"><span>${v}</span>${v==='—'?'':'<small>SM</small>'}</div>${g}</div>`;
+const STD='500 below, 1,000 above, 2,000 horizontal';
+const CLS=[['A','18,000 MSL up to FL600','IFR only, with an ATC clearance','Instrument rating','No VFR','No VFR','No','Not for a VFR balloon flight.'],
+  ['B','Busiest airports, usually surface to 10,000 MSL','ATC clearance before entering','Private; student or sport pilot with an endorsement','3 SM','Clear of clouds','In the surface area, with a clearance','A transponder and ADS-B Out are required inside, unless ATC authorizes otherwise.'],
+  ['C','Surface to 4,000 AGL: 5 NM core, 10 NM shelf','Two-way radio contact established','Student','3 SM',STD,'In the surface area, with a clearance','Radio contact before entering; transponder and ADS-B Out required inside, unless ATC authorizes otherwise.'],
+  ['D','Towered airports, surface to about 2,500 AGL','Two-way radio contact established','Student','3 SM',STD,'In the surface area, with a clearance','The easiest plan: land well short of the airport.'],
+  ['E','Controlled airspace that is not A to D','None for VFR','Student','3 SM below 10,000 MSL; 5 SM at or above',STD+' below 10,000 MSL; 1,000 below, 1,000 above, 1 SM horizontal at or above','In a surface area, with a clearance','Most balloon flights climb into it. Know your local floor: surface, 700 or 1,200 AGL.'],
+  ['G','Uncontrolled, below the Class E floor','None','Student','Day 1 SM, night 3 SM (5 SM above 1,200 AGL at or above 10,000 MSL)','Day at 1,200 AGL or less: clear of clouds; above 1,200 AGL at or above 10,000 MSL: 1,000 below, 1,000 above, 1 SM horizontal; otherwise '+STD,'Not applicable','Where most launches happen.']];
+const ENTRY=[['A','IFR, ATC clearance','Instrument rating'],['B','ATC clearance','Private; student or sport pilot with endorsement'],['C','Two-way radio contact','Student'],['D','Two-way radio contact','Student'],['E','None for VFR','Student'],['G','None','Student']];
+function card1(){return `<div class="r1top"><figure>${XSEC}<figcaption>Colors match the sectional chart: B solid blue, C magenta, D dashed blue, E magenta shading.</figcaption></figure>
+<div><div class="memo"><span class="big">3·152</span><span>3 SM visibility; <b>1</b>,000 above, <b>5</b>00 below, <b>2</b>,000 to the side. Class C, D, E below 10,000 MSL, and G at night.</span></div>
+<p><b>Special VFR:</b> 1 SM and clear of clouds, with an ATC clearance, in a surface area below 10,000 MSL; by day unless instrument rated and IFR equipped. NO SVFR on a chart bars it for fixed-wing aircraft only.</p>
+<p><b>In a surface area:</b> no VFR beneath a ceiling lower than 1,000 ft, and ground visibility must be at least 3 SM to take off, land or enter the pattern (flight visibility if none is reported). Special VFR is the exception.</p>
+<p><b>Right-of-way:</b> a balloon has it over all other categories of aircraft; an aircraft in distress has it over all.</p></div></div>
+<h3>VFR weather minimums</h3><div class="vfr"><div>${VFR.slice(0,5).map(vrow).join('')}</div><div>${VFR.slice(5).map(vrow).join('')}</div></div>
+<h3>To enter, and who may</h3><div class="entry">${ENTRY.map(([k,a,b])=>`<div>${TILE(k)}<b>${a}</b><span>${b}</span></div>`).join('')}</div>
+<div class="call"><b>In a balloon:</b> Class B and C, and the airspace above them up to 10,000 MSL, need a transponder and ADS-B Out unless ATC authorizes otherwise; a balloon is not exempt there. A balloon needs neither in the 30 NM Mode C veil if it stays outside Class A, B and C and below the B or C ceiling or 10,000 MSL, whichever is lower, nor in Class E at or above 10,000 MSL (91.215(b)(3) and (b)(5), 91.225(e)). Land well short of Class D airports.</div>
+<div class="scr"><h3>Each class in detail</h3><div class="cls">${CLS.map(([k,w,e,c,v,cl,sv,b])=>`<div><div style="display:flex;gap:10px;align-items:center">${TILE(k)}<b>Class ${k}</b><span class="rcap" style="margin:0">${w}</span></div><dl><dt>To enter</dt><dd>${e}</dd><dt>Pilot certificate</dt><dd>${c}</dd><dt>Visibility</dt><dd>${v}</dd><dt>Cloud clearance</dt><dd>${cl}</dd><dt>Special VFR</dt><dd>${sv}</dd><dt>In a balloon</dt><dd>${b}</dd></dl></div>`).join('')}</div>
+<h3>The FAA's airspace profile</h3><figure style="margin:0"><img class="legimg" src="refs/img/phak-fig15-1-airspace-profile.png" alt="FAA airspace profile drawing: Class A above 18,000 MSL, Class B, C and D around airports, Class E floors at 700 and 1,200 AGL, Class G below." loading="lazy"><figcaption class="rcap">FAA, Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25C), Figure 15-1.</figcaption></figure></div>`;}
+const SYM=[['<path d="M32 4 L24 30 M32 4 L40 30 M26 24 L38 24" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="32" cy="32" r="2.5" fill="currentColor"/>','36','<b>Obstruction</b> above 200 and below 1,000 ft AGL (above 299 ft in urban areas). One 1,000 ft AGL or higher gets a taller symbol.'],
+  [null,null,'<span style="font-family:var(--f-num)">2049<br>(1149)</span>','<b>Top is 2,049 ft MSL</b>; the number in parentheses is its height above ground (1,149 ft AGL).'],
+  ['<path d="M2 14 H14 M22 14 H42 M50 14 H62" stroke="currentColor" stroke-width="1.6"/><path d="M15 18 L18 3 L21 18 M15.5 8 H20.5 M16.5 13 L19.5 17 M19.5 13 L16.5 17 M43 18 L46 3 L49 18 M43.5 8 H48.5 M44.5 13 L47.5 17 M47.5 13 L44.5 17" stroke="currentColor" stroke-width="1.2" fill="none"/>','20','<b>Power transmission line:</b> a line broken by small tower symbols. A line with cross ticks is a railroad.'],
+  ['<path d="M2 6 H62" stroke="#1d5ed4" stroke-width="6"/>','12','<b>Class B:</b> solid blue band.'],
+  ['<path d="M2 6 H62" stroke="#8a2b5c" stroke-width="6"/>','12','<b>Class C:</b> solid magenta band.'],
+  ['<path d="M2 6 H62" stroke="#1d5ed4" stroke-width="2.5" stroke-dasharray="9 5"/>','12','<b>Class D:</b> dashed blue line. A boxed number like [25] is its ceiling in hundreds of feet MSL.'],
+  ['<path d="M2 6 H62" stroke="#8a2b5c" stroke-width="2.5" stroke-dasharray="9 5"/>','12','<b>Class E to the surface:</b> dashed magenta line.'],
+  ['<rect x="2" y="2" width="60" height="16" fill="url(#rmv)"/>','20','<b>Class E from 700 ft AGL:</b> magenta shading, fading toward the inside.'],
+  ['<rect x="2" y="2" width="60" height="16" fill="url(#rbv)"/>','20','<b>Class E from 1,200 ft AGL or higher</b>, next to Class G: blue shading.'],
+  [null,null,'<span style="font-family:var(--f-num);font-size:1.4rem;color:#1d5ed4">○ <span style="color:#8a2b5c">○</span></span>','<b>Airport colors:</b> blue airports have a control tower; magenta ones do not.']];
+function card5(){const defs='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rmv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a2b5c" stop-opacity=".9"/><stop offset="1" stop-color="#8a2b5c" stop-opacity="0"/></linearGradient><linearGradient id="rbv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d5ed4" stop-opacity=".9"/><stop offset="1" stop-color="#1d5ed4" stop-opacity="0"/></linearGradient></defs></svg>';
+  return `${defs}<h3>The legend on your test</h3><p>This is the legend page in the FAA testing supplement for the commercial test. Tap it to open it full size and zoom.</p>
+<a href="refs/img/sectional-legend-8080-1E.png" target="_blank" rel="noopener"><img class="legimg" src="refs/img/sectional-legend-8080-1E.png" alt="Sectional Aeronautical Chart legend from the FAA commercial testing supplement: airports, airport data, airspace, topographic information, radio aids, communication boxes, obstructions and miscellaneous symbols."></a>
+<div class="rcap">FAA-CT-8080-1E, Legend 1 (2018).</div>
+<div class="call"><b>Changed since 2018:</b> the Airport/Facility Directory is now the Chart Supplement, and a real chart's isogonic lines follow the current five-year magnetic variation model. The test still uses this page.</div>
+<h3>Symbols a balloon pilot reads most</h3><div class="syms">${SYM.map(([g,h,a,b])=>g?`<div class="sym"><svg viewBox="0 0 64 ${h}" aria-hidden="true">${g}</svg><div>${a}</div></div>`:`<div class="sym"><div style="text-align:center">${a}</div><div>${b}</div></div>`).join('')}</div>`;}
+const BUILT=[{n:1,id:'airspace',group:'rules',title:'Airspace at a glance',sub:'Classes A to G, VFR minimums, entry rules, balloon notes',html:card1,sources:['14 CFR 91.113(c)–(d)','91.126–91.135','91.155','91.157','61.95','91.215','91.225','AIM 3-2','PHAK FAA-H-8083-25C Ch. 15']},
+  {n:5,id:'legend',group:'charts',title:'Sectional chart legend',sub:'The legend on your test, plus the symbols balloon pilots read',html:card5,sources:['FAA-CT-8080-1E Legend 1','FAA Aeronautical Chart Users’ Guide (Jul 2026)']}];
+const allCards=()=>[...BUILT,...(REFS||[])].sort((a,b)=>a.n-b.n);
+const cardHTML=c=>typeof c.html==='function'?c.html():c.html;
+function renderRef(){const el=$('ref');
+  if(REFS===null){REFS=[];getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];if(mode==='ref')renderRef();});}
+  const cards=allCards();
+  if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};}else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
+    else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><button class="btn" data-print="${c.id}">Print this card</button></div>
+<div><div class="eyebrow">Card ${c.n}</div><h2>${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
+<p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);return;}}
+  el.innerHTML=`<div><h2>Quick reference</h2><p class="mut" style="margin:4px 0 0">Pocket cards built from FAA sources. Read them here, or print them for your oral and your flight bag.</p></div>
+<div class="rcard" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>Print the whole set</b><div class="mut sm">${cards.length} cards, one per Letter page</div></div><button class="btn primary" data-print="all">Print all</button></div>
+${RGROUPS.filter(([g])=>cards.some(c=>c.group===g)).map(([g,name])=>`<section class="rgrp"><h3>${name}</h3>${cards.filter(c=>c.group===g).map(c=>`<button class="rrow" data-ref="${c.id}"><span class="rn">${c.n}</span><span style="flex:1"><b>${esc(c.title)}</b><small>${esc(c.sub)}</small></span><span aria-hidden="true">›</span></button>`).join('')}</section>`).join('')}
+<p class="rfoot" style="text-align:center">${EDITION} · every card names its FAA source · study aid, not for navigation</p>`;}
+function printRef(which){const cards=allCards().filter(c=>which==='all'||c.id===which);
+  $('refPrint').innerHTML=cards.map(c=>`<section class="rpage"><div class="phead"><div><div style="font:600 10px var(--f-display);letter-spacing:.08em;text-transform:uppercase">Balloon Written Prep · Card ${c.n}</div><h2>${esc(c.title)}</h2></div><div style="font:10px var(--f-num);text-align:right">${EDITION}</div></div>
+<div class="rbody">${cardHTML(c)}</div><div class="pfoot"><span>Sources: ${esc(c.sources.join(', '))}. Original card, not an FAA document. Study aid, not for navigation.</span><span style="white-space:nowrap">brianfliesballoons.github.io/balloon-prep</span></div></section>`).join('');
+  document.documentElement.classList.add('printing');const done=()=>{document.documentElement.classList.remove('printing');removeEventListener('afterprint',done);};addEventListener('afterprint',done);
+  const imgs=[...$('refPrint').querySelectorAll('img')];Promise.all(imgs.map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r;}))).then(()=>{if(!/HeadlessChrome/.test(navigator.userAgent))print();});}  // headless Chrome renders the PDF itself
+$('ref').addEventListener('click',e=>{const t=e.target.closest('[data-ref],[data-print]');if(!t)return;
+  if(t.dataset.print){printRef(t.dataset.print);return;}
+  RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);});
+$('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
+
 Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json')]).then(([sets,les,map,kinds])=>{
   if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;
   const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
@@ -966,6 +1116,8 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   if(S.test&&S.test.list.some(id=>!byId[id]))S.test=null;
   list=studyList();const hs=location.hash;
   if(hs==='#learn')mode='learn';
+  else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
+  else if(hs.startsWith('#print=')){mode='ref';const w=hs.slice(7);const go=()=>printRef(w);REFS===null&&w!=='airspace'&&w!=='legend'?getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];go();}):setTimeout(go,0);}
   else if(hs.startsWith('#join=')){mode='learn';LV={v:'join'};LV.joinCode=hs.slice(6,12).toUpperCase();}
   else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
   renderAll();
