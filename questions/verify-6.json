@@ -1,0 +1,709 @@
+[
+  {
+    "id": "WXS-601",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.3.1.2 (ASOS reporting note), 18.1.2, 24.4.3.8.2"
+  },
+  {
+    "id": "WXS-602",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.9"
+  },
+  {
+    "id": "WXS-603",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.5, 24.4.3.5.1"
+  },
+  {
+    "id": "WXS-604",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.5.3, 24.4.3.13.7"
+  },
+  {
+    "id": "WXS-605",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.9 (Table 24-5)"
+  },
+  {
+    "id": "WXS-606",
+    "verdict": "fixed",
+    "issue": "Duplicate: tested the same fact the same way as WXS-001 (ceiling = lowest BKN/OVC layer).",
+    "suggested": "Rewritten to test the adjacent summation rule: FEW012 SCT030 BKN050 from 2/8 + 1/8 + 2/8 (the handbook's Figure 24-4 case).",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.9, Table 24-4, Figure 24-4"
+  },
+  {
+    "id": "WXS-607",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.10"
+  },
+  {
+    "id": "WXS-608",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.11, 24.4.3.13.22"
+  },
+  {
+    "id": "WXS-609",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.1, 24.4.2"
+  },
+  {
+    "id": "WXS-610",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.8.2"
+  },
+  {
+    "id": "WXS-611",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.13.10"
+  },
+  {
+    "id": "WXS-612",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.13.4"
+  },
+  {
+    "id": "WXS-613",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.13.5"
+  },
+  {
+    "id": "WXS-614",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.13.21; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Aviation Routine Weather Report: PRESFR)"
+  },
+  {
+    "id": "WXS-615",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.8.3, 24.4.3.8.5"
+  },
+  {
+    "id": "WXS-616",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.13.17"
+  },
+  {
+    "id": "WXS-617",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.4.3.3"
+  },
+  {
+    "id": "WXS-618",
+    "verdict": "fixed",
+    "issue": "Wrong AIM paragraph: the dBZ-to-intensity table is in AIM 7-1-11 (Weather Radar Services), not 7-1-26.",
+    "suggested": "Ref changed to AIM 7-1-11.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.6.1.4 Table 24-8; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-11"
+  },
+  {
+    "id": "WXS-619",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.3, 27.4.2.4"
+  },
+  {
+    "id": "WXS-620",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.10.1"
+  },
+  {
+    "id": "WXS-621",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.10.2"
+  },
+  {
+    "id": "WXS-622",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.10.3"
+  },
+  {
+    "id": "WXS-623",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-29 (BECMG group); AIM 7-1-28"
+  },
+  {
+    "id": "WXS-624",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.9.1, 27.4.2.7"
+  },
+  {
+    "id": "WXS-625",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.9.4"
+  },
+  {
+    "id": "WXS-626",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.8, 27.4.2.9.3"
+  },
+  {
+    "id": "WXS-627",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4, 27.4.2.8"
+  },
+  {
+    "id": "WXS-628",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.1, 27.4.2.4"
+  },
+  {
+    "id": "WXS-629",
+    "verdict": "fixed",
+    "issue": "Key said shallow fog 'does not restrict visibility' at 6 ft; the definition is visibility of 5/8 SM or more at 6 ft, which can still be restricted.",
+    "suggested": "Key reworded to 'visibility of 5/8 mile or more 6 feet up'.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.7.3 Table 27-4; 18.1.1"
+  },
+  {
+    "id": "WXS-630",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.4.2.5"
+  },
+  {
+    "id": "WXS-631",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2.1.1.1"
+  },
+  {
+    "id": "WXS-632",
+    "verdict": "fixed",
+    "issue": "Duplicate: '9900 = light and variable, under 5 kt' is already tested by WXS-004.",
+    "suggested": "Rewritten to test the adjacent fact that FB levels through 12,000 ft are true altitudes (MSL), not AGL; launch site 3,000 MSL + 3,000 AGL = the 6,000-ft level.",
+    "source": "FAA-H-8083-25C Ch. 13 (Winds and Temperature Aloft Forecast (FB)): 'Altitudes through 12,000 feet are classified as true altitudes'; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (FD Report) same; FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.3.1.1 (winds aloft heights MSL)"
+  },
+  {
+    "id": "WXS-633",
+    "verdict": "fixed",
+    "issue": "Near-duplicate of WXS-005 (same 230-degree 100+ kt case, decoded); key itself was correct.",
+    "suggested": "Changed to 260 degrees at 115 kt, -47 C: 761547 (26+50, 115-100, sign omitted above 24,000).",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2.1.1.1"
+  },
+  {
+    "id": "WXS-634",
+    "verdict": "fixed",
+    "issue": "'Never forecast at 3,000 ft' has no verbatim FAA sentence in the current handbook; AWH supports it via the sign rule (6,000-24,000 ft) and Table 27-1 ('Not forecast' at 3,000).",
+    "suggested": "Key softened to 'not forecast for the 3,000-foot level'; explanation cites the table; refs added.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2.1.1, 27.2.1.1.1, Table 27-1; FAA-H-8083-25C Ch. 13"
+  },
+  {
+    "id": "WXS-635",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2.1.1"
+  },
+  {
+    "id": "WXS-636",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2.1.1.2 (Table 27-2)"
+  },
+  {
+    "id": "WXS-637",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.2"
+  },
+  {
+    "id": "WXS-638",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.3.1.1, 26.3.1.3; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-639",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.3.1.1; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-640",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.3.3 (Table 26-4); AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-641",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.2.4.1.1; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-642",
+    "verdict": "fixed",
+    "issue": "Explanation stated the 6-hour volcanic ash/tropical cyclone exception without scope; AWH puts it under SIGMETs outside the CONUS (AIM 7-1-6 states it generally). Key (4 hours) correct.",
+    "suggested": "Explanation qualified; ref 26.2.5.2 added.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.2.4.1.2, 26.2.5.2; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-643",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.2.4.2.3"
+  },
+  {
+    "id": "WXS-644",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.2.4.2; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-6"
+  },
+  {
+    "id": "WXS-645",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 26.4, 26.4.1, 26.4.2"
+  },
+  {
+    "id": "WXS-646",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.5.1, 24.5.1.2.1"
+  },
+  {
+    "id": "WXS-647",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.5.1, 24.5.1.4, 24.5.1.6"
+  },
+  {
+    "id": "WXS-648",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.5.1, 24.5.1.10; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-18"
+  },
+  {
+    "id": "WXS-649",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.2.2, 24.6.1.6; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-26, 7-1-27"
+  },
+  {
+    "id": "WXS-650",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.6.1.5.2, 24.6.1.5.3, 24.6.1.5.4"
+  },
+  {
+    "id": "WXS-651",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 24.7.2, 24.7.2.1, 24.7.2.4"
+  },
+  {
+    "id": "WXS-652",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 25.2.3.4.5"
+  },
+  {
+    "id": "WXS-653",
+    "verdict": "fixed",
+    "issue": "Isobar-spacing-to-wind-speed fact is stated in AWH 10.3.1, not in 25.2.3.",
+    "suggested": "Ref 10.3.1 added.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.3.1 ('Closely spaced contours/isobars indicate strong winds'), 25.2.3"
+  },
+  {
+    "id": "WXS-654",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 25.2.3, 27.10"
+  },
+  {
+    "id": "WXS-655",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.3.1.2, 3.3.1.3; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-5"
+  },
+  {
+    "id": "WXS-656",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.3.1.1; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-5"
+  },
+  {
+    "id": "WXS-657",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.3.1.1; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-5"
+  },
+  {
+    "id": "WXS-658",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.3.1, 3.3.3, 3.3.3.1"
+  },
+  {
+    "id": "WXS-659",
+    "verdict": "fixed",
+    "issue": "Distractor 'Convective SIGMET outlook for the western region' was implausible.",
+    "suggested": "Replaced with the Low-Level SIGWX prog chart (hazards to FL240, national snapshot); explanation and ref updated.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 28.2, 27.9.1; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Internet Sources: HEMS)"
+  },
+  {
+    "id": "WXS-660",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.22, 27.22.1"
+  },
+  {
+    "id": "WXT-601",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 12.2, 5.8; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Atmospheric Stability & Instability)"
+  },
+  {
+    "id": "WXT-602",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Temperature/Dew Point Relationship)"
+  },
+  {
+    "id": "WXT-603",
+    "verdict": "fixed",
+    "issue": "Same three-label choice set as WXT-004 and WXT-604; tested the label for the band between moist and dry, close to WXT-004's pattern.",
+    "suggested": "Rewritten to test parcel behavior: an unsaturated parcel lifted a little in a conditionally unstable layer sinks back (stable until saturated and past the LFC).",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.3.2, 13.3.4 ('initially stable'), 13.3.5 Figure 13-5; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Types of Stability)"
+  },
+  {
+    "id": "WXT-604",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.3.3; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Types of Stability)"
+  },
+  {
+    "id": "WXT-605",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.5.1, 27.22.1"
+  },
+  {
+    "id": "WXT-606",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.4.3"
+  },
+  {
+    "id": "WXT-607",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.4.2; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Effects of Stable & Unstable Air)"
+  },
+  {
+    "id": "WXT-608",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Convective Currents; Turbulence: Thermal)"
+  },
+  {
+    "id": "WXT-609",
+    "verdict": "fixed",
+    "issue": "CHECK: AWH gives only an example soaring forecast and never defines trigger temperature.",
+    "suggested": "Resolved: NWS Wilmington OH soaring forecast defines it as 'Temperature needed for lift to 3000 ft agl (Trigger Temp)'; NWS WR Technical Attachments 88-23/92-09 describe it as the surface temperature producing dry convection to a set height. Definition added, CHECK removed, confidence high.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 27.21, 27.21.1; https://www.weather.gov/iln/soaring; https://www.weather.gov/media/wrh/online_publications/TAs/ta8823.pdf"
+  },
+  {
+    "id": "WXT-610",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Turbulence: Thermal); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.4.1"
+  },
+  {
+    "id": "WXT-611",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.1"
+  },
+  {
+    "id": "WXT-612",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.1; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Fog Formation)"
+  },
+  {
+    "id": "WXT-613",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.2"
+  },
+  {
+    "id": "WXT-614",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.3"
+  },
+  {
+    "id": "WXT-615",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.5, 18.1.1.1.1; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Some Fog Types & Characteristics)"
+  },
+  {
+    "id": "WXT-616",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.4; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Some Fog Types & Characteristics)"
+  },
+  {
+    "id": "WXT-617",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Fog Formation)"
+  },
+  {
+    "id": "WXT-618",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 18.1.1.1.1.1; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Valley Fog)"
+  },
+  {
+    "id": "WXT-619",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Temperature Variation with Altitude); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 19.2.3.1"
+  },
+  {
+    "id": "WXT-620",
+    "verdict": "fixed",
+    "issue": "CHECK: no FAA sentence says stronger winds aloft 'mix down' in so many words.",
+    "suggested": "Resolved by two FAA statements: BFH says low-level inversions dissipate as the air mixes with insolation, and BFH (Wind Shear) describes calm cold surface air under warmer air moving over it unaffected. Explanation rebuilt on those; CHECK removed. The step from them to 'surface wind picks up' is an inference, though standard.",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Temperature Variation with Altitude; Wind Shear); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.4.3, 19.2.3.1"
+  },
+  {
+    "id": "WXT-621",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Low Level Wind Shear)"
+  },
+  {
+    "id": "WXT-622",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Warm Front); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 11.3.1"
+  },
+  {
+    "id": "WXT-623",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Stationary Front); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 11.3.3"
+  },
+  {
+    "id": "WXT-624",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Occluded Front); FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 11.3.4"
+  },
+  {
+    "id": "WXT-625",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Fast-Moving Cold Front; Frontal Thunderstorms)"
+  },
+  {
+    "id": "WXT-626",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Surface Fronts)"
+  },
+  {
+    "id": "WXT-627",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.5; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Wind Patterns)"
+  },
+  {
+    "id": "WXT-628",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.4, 10.5; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Wind Patterns; Surface Friction)"
+  },
+  {
+    "id": "WXT-629",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.3.2; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Coriolis Force)"
+  },
+  {
+    "id": "WXT-630",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.6.1, 10.6.1.1"
+  },
+  {
+    "id": "WXT-631",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.6.2; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Convective Currents)"
+  },
+  {
+    "id": "WXT-632",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 10.6.4, 10.6.6; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Anabatic Winds; Katabatic Winds)"
+  },
+  {
+    "id": "WXT-633",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Mountain Wave; Rotors)"
+  },
+  {
+    "id": "WXT-634",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Obstructions & Wind)"
+  },
+  {
+    "id": "WXT-635",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Obstructions & Wind)"
+  },
+  {
+    "id": "WXT-636",
+    "verdict": "fixed",
+    "issue": "Key 'strong updraft throughout the cell' conflicts with the 2026 AWH, which describes the updraft as a bubble concentrated near the top of the cloud.",
+    "suggested": "Key reworded to 'A strong updraft, with no rain at the ground.'",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 22.3; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Stages in Thunderstorm Development)"
+  },
+  {
+    "id": "WXT-637",
+    "verdict": "fixed",
+    "issue": "AIM 7-1-27 does not support the 30-mile figure; 7-1-26 (hazards extend beyond the visible storm) is the closer paragraph. The 30-mile figure is BFH's.",
+    "suggested": "AIM ref changed to 7-1-26.",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Thunderstorms): 'sometimes as much as 30 miles or more'; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-26"
+  },
+  {
+    "id": "WXT-638",
+    "verdict": "fixed",
+    "issue": "Explanation said 'more than one can occur in the same system', which neither source states that way (AIM: microbursts are sometimes concentrated into a line).",
+    "suggested": "Sentence removed; sea-breeze distractor now addressed.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 22.7.3; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-24"
+  },
+  {
+    "id": "WXT-639",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Minimum Factors)"
+  },
+  {
+    "id": "WXT-640",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 13.6.4; FAA-H-8083-11B Ch. 4 (faa.gov PDF text) (Air Mass Thunderstorms)"
+  },
+  {
+    "id": "AIR-319",
+    "verdict": "fixed",
+    "issue": "Key still correct (no PIREP among the choices), but the explanation said wind is 'true in other products', which is wrong for PIREPs: the 2026 AWH (Table 3-5; 24.5.1.9) and AIM 7-1-18 give PIREP wind direction relative to magnetic north.",
+    "suggested": "Explanation now lists METAR, TAF and winds aloft as true and notes PIREP winds are magnetic; refs 24.5.1.9 and AIM 7-1-18 added. Fixed in questions/pilot-3.json.",
+    "source": "FAA-H-8083-28B (signed 2026-04-02, faa.gov PDF text) 3.4.2.2 Table 3-5, 24.5.1.9; AIM Ch. 7 Sec. 1 (faa.gov aim_html, fetched 2026-10-20) 7-1-18 (PIREP example: 'wind 290 degrees magnetic'; /WV 'Direction in degrees magnetic north')"
+  }
+]

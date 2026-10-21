@@ -352,13 +352,13 @@
    "The ATIS or ASOS voice broadcast at the airport."
   ],
   "answer": 2,
-  "explanation": "The Aviation Weather Handbook: wind direction is magnetic in ATIS and in ASOS/AWOS radio (voice) broadcasts, and true in other products, including METARs, TAFs and winds aloft. Where variation is 12° E, an ATIS wind of 260° matches a METAR wind of about 270° true. AIM 4-2-10 likewise says directions spoken by ATC are magnetic unless 'true' is added.",
-  "ref": "FAA-H-8083-28B 3.4.2.2 (Products with Wind Information); AIM 4-2-10",
+  "explanation": "The Aviation Weather Handbook: wind direction is magnetic in ATIS and in ASOS/AWOS radio (voice) broadcasts, and true in METARs, TAFs and winds aloft forecasts. (PIREP winds are also given relative to magnetic north.) Where variation is 12° E, an ATIS wind of 260° matches a METAR wind of about 270° true. AIM 4-2-10 likewise says directions spoken by ATC are magnetic unless 'true' is added.",
+  "ref": "FAA-H-8083-28B 3.4.2.2 (Table 3-5), 24.5.1.9; AIM 4-2-10, 7-1-18",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": "confirmed"
+  "checked": "fixed"
  },
  {
   "id": "AIR-320",

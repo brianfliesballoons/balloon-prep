@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "WXS-601",
+    "area": "WXS",
+    "topic": "METAR: mist or fog",
+    "stem": "METAR KXYZ 211155Z AUTO 00000KT 3SM BR CLR 06/05 A3021 RMK AO2\nAn hour later the same moisture lowers the visibility to 1/2 mile. How will the obscuration be coded then?",
+    "choices": [
+      "BR, because mist and fog use the same code at any visibility below 7 miles.",
+      "VCFG, because fog is always reported as being near the station.",
+      "FG, because fog is coded when the visibility is less than 5/8 statute mile."
+    ],
+    "answer": 2,
+    "explanation": "Mist (BR) is coded for visibilities from 5/8 mile up to less than 7 miles; once visibility drops below 5/8 mile, the obscuration is coded FG. Mist and fog do not share one code, and VCFG means fog 5 to 10 miles from the station, not fog at the station.",
+    "ref": "FAA-H-8083-28B 24.3.1.2 (ASOS reporting note), 18.1.2, 24.4.3.8.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-602",
+    "area": "WXS",
+    "topic": "METAR: indefinite ceiling (VV)",
+    "stem": "METAR KXYZ 220456Z AUTO 00000KT 1/4SM FG VV002 04/04 A3008 RMK AO2\nWhat is the ceiling?",
+    "choices": [
+      "No ceiling, because no broken or overcast layer is reported.",
+      "200 feet AGL, the vertical visibility into the fog.",
+      "200 feet MSL, the reported top of the fog layer."
+    ],
+    "answer": 1,
+    "explanation": "When the sky is totally hidden by a surface-based obscuration, the vertical visibility (VV) is the ceiling, and it is given in hundreds of feet above the ground. VV002 is an indefinite ceiling of 200 feet AGL; it is not a cloud-top report, and METAR heights are AGL, not MSL.",
+    "ref": "FAA-H-8083-28B 24.4.3.9",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-603",
+    "area": "WXS",
+    "topic": "METAR: wind gusts",
+    "stem": "METAR KXYZ 221853Z 27015G26KT 10SM SCT050 28/09 A2994\nWhat does 27015G26KT report?",
+    "choices": [
+      "Wind blowing toward 270° at 15 knots, with gusts 26 knots stronger.",
+      "Wind from 270° true at 15 knots, with peak gusts to 26 knots.",
+      "Wind from 270° magnetic, varying between 15 and 26 knots."
+    ],
+    "answer": 1,
+    "explanation": "The wind group gives the direction the wind blows from, in degrees true, then the average speed, then G and the peak gust speed. The gust value is the maximum speed, not an amount added to the average, and METAR directions are true, not magnetic.",
+    "ref": "FAA-H-8083-28B 24.4.3.5, 24.4.3.5.1",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-604",
+    "area": "WXS",
+    "topic": "METAR: variable wind direction",
+    "stem": "METAR KXYZ 231955Z 21012KT 180V250 10SM FEW060 31/12 A2990\nWhat does 180V250 mean?",
+    "choices": [
+      "A wind shift from 180° to 250° is forecast to happen within the next hour.",
+      "The direction varied between 180° and 250° over the two-minute period.",
+      "The prevailing visibility varied between 1.8 and 2.5 statute miles."
+    ],
+    "answer": 1,
+    "explanation": "When the wind is over 6 knots and its direction varies by 60° or more, the extremes are reported clockwise after the wind group, separated by V. METARs are observations, so this is not a forecast shift, and variable visibility is reported in the remarks (VIS 1/2V2), not in this position.",
+    "ref": "FAA-H-8083-28B 24.4.3.5.3, 24.4.3.13.7",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-605",
+    "area": "WXS",
+    "topic": "METAR: reportable cloud heights",
+    "stem": "Which sky condition group could appear in a U.S. METAR?",
+    "choices": [
+      "BKN065",
+      "BKN063",
+      "BKN125"
+    ],
+    "answer": 0,
+    "explanation": "Cloud heights are reported to the nearest 100 feet up to 5,000 feet, the nearest 500 feet from 5,001 to 10,000 feet, and the nearest 1,000 feet above 10,000 feet. 6,500 feet fits the 500-foot step; 6,300 feet and 12,500 feet are not reportable values in their ranges.",
+    "ref": "FAA-H-8083-28B 24.4.3.9 (Table 24-5)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-606",
+    "area": "WXS",
+    "topic": "METAR: layer summation",
+    "stem": "An observer sees clouds at 1,200 feet covering 2/8 of the sky, a layer at 3,000 feet covering another 1/8, and a layer at 5,000 feet covering another 2/8. How is the sky condition coded?",
+    "choices": [
+      "FEW012 FEW030 FEW050",
+      "FEW012 SCT030 BKN050",
+      "BKN012 BKN030 BKN050"
+    ],
+    "answer": 1,
+    "explanation": "Each layer is coded with the total sky it and all the layers below it cover, because the observer must assume a higher layer also lies above the lower ones: 2/8 (FEW), 3/8 (SCT), then 5/8 (BKN), which makes 5,000 feet the ceiling. Coding each layer by its own share alone gives FEW at every level, and the full 5/8 is not applied to the lower layers.",
+    "ref": "FAA-H-8083-28B 24.4.3.9 (Table 24-4, Figure 24-4)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-607",
+    "area": "WXS",
+    "topic": "METAR: temperature–dew point spread",
+    "stem": "METAR KXYZ 240555Z AUTO 00000KT 10SM CLR 03/M01 A3015 RMK AO2\nWhat is the temperature–dew point spread?",
+    "choices": [
+      "2°C",
+      "3°C",
+      "4°C"
+    ],
+    "answer": 2,
+    "explanation": "M means minus, so the temperature is 3°C and the dew point is -1°C, a spread of 4°C. Reading M01 as +1°C gives 2°C, and 3°C is just the temperature, not the spread.",
+    "ref": "FAA-H-8083-28B 24.4.3.10",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-608",
+    "area": "WXS",
+    "topic": "METAR: altimeter setting",
+    "stem": "METAR KXYZ 241256Z 16006KT 10SM SKC 14/08 A2987 RMK SLP112\nWhat altimeter setting should the pilot use?",
+    "choices": [
+      "29.11 inches of mercury, from the SLP112 remark.",
+      "30.11 inches of mercury, from the SLP112 remark.",
+      "29.87 inches of mercury, from the A2987 group."
+    ],
+    "answer": 2,
+    "explanation": "The altimeter group starts with A and gives inches of mercury with the decimal point left out, so A2987 is 29.87. SLP112 is sea level pressure in millibars (1011.2 mb), used by forecasters, not an altimeter setting in inches.",
+    "ref": "FAA-H-8083-28B 24.4.3.11, 24.4.3.13.22",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-609",
+    "area": "WXS",
+    "topic": "SPECI reports",
+    "stem": "What is a SPECI?",
+    "choices": [
+      "An unscheduled report taken between hourly reports when set criteria are met.",
+      "A routine observation that every station transmits near the top of each hour.",
+      "A corrected forecast issued when a terminal forecast becomes unrepresentative."
+    ],
+    "answer": 0,
+    "explanation": "A SPECI is an unscheduled report taken when special criteria, such as a wind shift or a drop in visibility, are met between the hourly METARs, and it holds all the METAR elements. The routine hourly report is the METAR, and a changed forecast is a TAF AMD, not a SPECI.",
+    "ref": "FAA-H-8083-28B 24.4.1, 24.4.2",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-610",
+    "area": "WXS",
+    "topic": "METAR: vicinity showers (VCSH)",
+    "stem": "METAR KXYZ 251753Z 19009KT 10SM VCSH SCT045CB 27/16 A2998\nWhat does VCSH tell the pilot?",
+    "choices": [
+      "Showers are occurring 5 to 10 statute miles from the station.",
+      "Light showers are falling at the station itself.",
+      "Showers are more than 10 statute miles away, too far to matter."
+    ],
+    "answer": 0,
+    "explanation": "VC means in the vicinity, between 5 and 10 statute miles from the point of observation, and no intensity is coded with it. Weather at the station is coded without VC, and weather beyond 10 miles is not coded in the body at all but may appear in remarks as DSNT.",
+    "ref": "FAA-H-8083-28B 24.4.3.8.2",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-611",
+    "area": "WXS",
+    "topic": "METAR: automated lightning remarks",
+    "stem": "METAR KXYZ 252355Z AUTO 22008KT 10SM SCT070 29/14 A2993 RMK AO2 LTG DSNT W\nWhat does LTG DSNT W mean at this automated station?",
+    "choices": [
+      "Lightning was detected 5 to 10 NM west, in the station's vicinity.",
+      "A thunderstorm is within 5 NM of the airport, to the west of it.",
+      "Lightning was detected more than 10 but less than 30 NM west."
+    ],
+    "answer": 2,
+    "explanation": "Automated systems report lightning within 5 NM as TS in the body and lightning 5 to 10 NM away as VCTS in the body. Only lightning beyond 10 NM but less than 30 NM appears as a remark, LTG DSNT plus the direction. A storm 20 miles away can still send outflow winds to a launch site.",
+    "ref": "FAA-H-8083-28B 24.4.3.13.10",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-612",
+    "area": "WXS",
+    "topic": "METAR: peak wind remark",
+    "stem": "A METAR ends with RMK AO2 PK WND 28045/15. What does the remark report?",
+    "choices": [
+      "A peak wind of 45 knots from 280° at 15 minutes past the hour.",
+      "A peak wind of 28 knots from 045° at 1500 UTC.",
+      "A forecast peak gust of 45 knots during the next 15 minutes."
+    ],
+    "answer": 0,
+    "explanation": "PK WND gives the direction (three digits), the peak speed since the last METAR, then a slash and the time of occurrence, here in minutes past the hour. Direction comes before speed, and a METAR remark reports what happened, not a forecast.",
+    "ref": "FAA-H-8083-28B 24.4.3.13.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-613",
+    "area": "WXS",
+    "topic": "METAR: wind shift and frontal passage",
+    "stem": "A METAR ends with RMK AO2 WSHFT 30 FROPA. What does the remark report?",
+    "choices": [
+      "A frontal passage is forecast in about 30 minutes, with a wind shift.",
+      "A wind shift began at 30 past the hour, likely due to a front passing.",
+      "The wind direction shifted 30 degrees as a front passed the station."
+    ],
+    "answer": 1,
+    "explanation": "WSHFT is followed by the time the wind shift began, and FROPA is added when the shift is believed to be from a frontal passage. The number is a time, not a number of degrees, and the remark describes an observed event, not a forecast.",
+    "ref": "FAA-H-8083-28B 24.4.3.13.5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-614",
+    "area": "WXS",
+    "topic": "METAR: pressure falling rapidly",
+    "stem": "A METAR includes the remark PRESFR. What does it tell a pilot?",
+    "choices": [
+      "Pressure has fallen 0.06 inch since the previous six-hourly report.",
+      "Pressure is forecast to begin falling rapidly within the next hour.",
+      "Pressure is falling at a rate of at least 0.06 inch per hour."
+    ],
+    "answer": 2,
+    "explanation": "PRESFR (pressure falling rapidly) is reported when the pressure is falling at 0.06 inch per hour or more and the change totals at least 0.02 inch at observation time. It is an observed rate, not a six-hour total or a forecast, and it often comes with an approaching front or storm.",
+    "ref": "FAA-H-8083-28B 24.4.3.13.21; FAA-H-8083-11B Ch. 4 (Aviation Routine Weather Report: PRESFR)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-615",
+    "area": "WXS",
+    "topic": "METAR: patches of fog",
+    "stem": "METAR KXYZ 261356Z 00000KT 10SM BCFG SKC 07/07 A3011\nWhy is fog in the report when the visibility is 10 miles?",
+    "choices": [
+      "The fog is between 5 and 10 miles away, so it does not lower the visibility.",
+      "Patches of fog can be reported even with visibility of 7 miles or more.",
+      "Fog is reported any time the temperature and the dew point are exactly equal."
+    ],
+    "answer": 1,
+    "explanation": "An obscuration is normally coded only when visibility is below 7 miles, but shallow fog (MIFG), partial fog (PRFG) and patches of fog (BCFG) are exceptions. Fog 5 to 10 miles away would be VCFG, and an equal temperature and dew point alone does not put fog in the report.",
+    "ref": "FAA-H-8083-28B 24.4.3.8.3, 24.4.3.8.5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-616",
+    "area": "WXS",
+    "topic": "METAR: smoke layer remark",
+    "stem": "METAR KXYZ 260853Z 32005KT 4SM FU BKN020 18/06 A3002 RMK FU BKN020\nWhat does the remark FU BKN020 tell the pilot?",
+    "choices": [
+      "Smoke is forecast to thicken to a broken layer at 2,000 feet.",
+      "The broken layer at 2,000 feet AGL is made of smoke, not cloud.",
+      "Smoke fills the air from the surface to 2,000 feet MSL."
+    ],
+    "answer": 1,
+    "explanation": "An obscuration remark names the phenomenon, then its sky cover and height, so FU BKN020 is a broken smoke layer at 2,000 feet above the surface. Remarks in an observation do not forecast, and METAR heights are AGL; a surface-based layer would show a height of 000.",
+    "ref": "FAA-H-8083-28B 24.4.3.13.17",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-617",
+    "area": "WXS",
+    "topic": "METAR: time of observation",
+    "stem": "METAR KXYZ 251755Z 24006KT 10SM CLR 30/08 A2995 RMK AO2\nThe station uses Pacific Daylight Time (UTC−7). When was the observation taken, local time?",
+    "choices": [
+      "9:55 a.m. PDT on the 25th.",
+      "10:55 a.m. PDT on the 25th.",
+      "12:55 a.m. PDT on the 26th."
+    ],
+    "answer": 1,
+    "explanation": "251755Z is the 25th day of the month at 1755 UTC. Subtracting 7 hours gives 1055 local time. Subtracting 8 hours would use Pacific Standard Time, and adding 7 hours instead of subtracting gives the wrong day.",
+    "ref": "FAA-H-8083-28B 24.4.3.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-618",
+    "area": "WXS",
+    "topic": "METAR: radar echo intensity",
+    "stem": "Flight Service describes a shower 15 miles west of the launch site as 'heavy precipitation.' On the WSR-88D scale, about what reflectivity does that term cover?",
+    "choices": [
+      "Over 40 to 50 dBZ.",
+      "From 26 to 40 dBZ.",
+      "Less than 26 dBZ."
+    ],
+    "answer": 0,
+    "explanation": "The FAA ties radar terms to reflectivity: less than 26 dBZ is light, 26–40 dBZ is moderate, more than 40–50 dBZ is heavy, and 50+ dBZ is extreme. Radar shows precipitation, not turbulence or outflow winds, so the shower can be hazardous well beyond its echo.",
+    "ref": "FAA-H-8083-28B 24.6.1.4 (Table 24-8); AIM 7-1-11",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-619",
+    "area": "WXS",
+    "topic": "TAF: valid period",
+    "stem": "TAF KXYZ 270530Z 2706/2806 18005KT P6SM SKC\nWhat is the valid period of this TAF?",
+    "choices": [
+      "From 0530Z on the 27th for 30 hours.",
+      "From 0600Z on the 27th until 0600Z the same day.",
+      "From the 27th at 0600Z to the 28th at 0600Z."
+    ],
+    "answer": 2,
+    "explanation": "The first group after the station (270530Z) is when the forecast was prepared. The valid period 2706/2806 runs from the 27th at 0600Z to the 28th at 0600Z, a 24-hour forecast. The issue time is not the start of the valid period.",
+    "ref": "FAA-H-8083-28B 27.4.2.3, 27.4.2.4",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-620",
+    "area": "WXS",
+    "topic": "TAF: FM groups",
+    "stem": "A TAF reads:\nTAF KXYZ 271130Z 2712/2812 VRB03KT P6SM SKC\n     FM271600 25012KT P6SM SCT050\nWhich conditions from the first line still apply after 1600Z?",
+    "choices": [
+      "Any element the FM group leaves out carries forward from the first line.",
+      "Only the wind changes at 1600Z; the sky stays clear until the next FM group.",
+      "None; an FM group restates every element, so it replaces the earlier period."
+    ],
+    "answer": 2,
+    "explanation": "An FM group is self-contained: everything before it is superseded, and all elements are repeated even if they do not change (significant weather is omitted only when none is expected). Carrying unlisted elements forward is how a TEMPO group works, not an FM group, and here the sky changes to SCT050.",
+    "ref": "FAA-H-8083-28B 27.4.2.10.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-621",
+    "area": "WXS",
+    "topic": "TAF: TEMPO groups",
+    "stem": "TAF KXYZ 271130Z 2712/2812 VRB04KT P6SM SKC\n     TEMPO 2712/2715 2SM BR\nHow should a pilot read the TEMPO group for a 1300Z launch?",
+    "choices": [
+      "There is a 30 percent chance of mist lowering visibility to 2 SM before 1500Z.",
+      "Visibility will lower steadily to 2 SM by 1500Z and then stay at 2 SM.",
+      "Mist to 2 SM at times from 1200Z to 1500Z, each spell lasting an hour or less."
+    ],
+    "answer": 2,
+    "explanation": "TEMPO covers temporary changes with a better than 50 percent chance, each lasting an hour or less and in total less than half the period. A 30 percent chance would be a PROB30 group, and a lasting change would be a new FM group.",
+    "ref": "FAA-H-8083-28B 27.4.2.10.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-622",
+    "area": "WXS",
+    "topic": "TAF: PROB30",
+    "stem": "What does a PROB30 group in an NWS TAF forecast?",
+    "choices": [
+      "Conditions that will exist for about 30 percent of the whole TAF period.",
+      "Temporary conditions that each last up to 30 minutes within the period.",
+      "A 30 percent chance of a thunderstorm or precipitation in that time."
+    ],
+    "answer": 2,
+    "explanation": "NWS forecasters use PROB30 only for a low-probability (30 percent) thunderstorm or precipitation event and its related wind, visibility and sky. It is not a share of the TAF period, and the hour-or-less temporary changes belong in TEMPO.",
+    "ref": "FAA-H-8083-28B 27.4.2.10.3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-623",
+    "area": "WXS",
+    "topic": "TAF: BECMG (military and international)",
+    "stem": "A pilot reads a military airfield's TAF that includes BECMG 1013/1015 BKN020. What does BECMG mean?",
+    "choices": [
+      "A sudden, complete change in conditions at exactly 1300Z on the 10th.",
+      "A gradual change at some time between 1300Z and 1500Z on the 10th.",
+      "Temporary conditions with a 40 percent chance from 1300Z to 1500Z."
+    ],
+    "answer": 1,
+    "explanation": "BECMG (becoming) shows a gradual change expected sometime within the period, usually about two hours, and only the changing elements are listed. A sudden change at a set time is an FM group, and a probability is a PROB group. NWS TAFs do not use BECMG.",
+    "ref": "AIM 7-1-29 (BECMG group); AIM 7-1-28",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-624",
+    "area": "WXS",
+    "topic": "TAF: sky cover contractions",
+    "stem": "Which contraction does a TAF use to forecast a sky with no clouds?",
+    "choices": [
+      "SKC",
+      "CLR",
+      "NSW"
+    ],
+    "answer": 0,
+    "explanation": "TAFs use SKC for zero oktas of cloud. CLR is a METAR term from automated stations meaning no clouds detected at or below 12,000 feet, and NSW means no significant weather and is used only in a TEMPO group.",
+    "ref": "FAA-H-8083-28B 27.4.2.9.1, 27.4.2.7",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-625",
+    "area": "WXS",
+    "topic": "TAF: low-level wind shear group",
+    "stem": "A TAF period ends with WS015/24040KT. What does this group forecast?",
+    "choices": [
+      "Shear from the surface to 1,500 ft AGL; wind at 1,500 ft from 240° at 40 kt.",
+      "A change of 40 knots in wind speed between the surface and 1,500 feet MSL.",
+      "Surface winds from 240° gusting to 40 knots, with shear below 1,500 feet."
+    ],
+    "answer": 0,
+    "explanation": "WS is followed by the top of the shear layer in hundreds of feet AGL, then the forecast wind at that height. The 40 knots is the wind at 1,500 feet, not the amount of shear, and the surface wind is given in its own group. For a balloon, that means a large wind change during the first 1,500 feet of climb.",
+    "ref": "FAA-H-8083-28B 27.4.2.9.4",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-626",
+    "area": "WXS",
+    "topic": "TAF: vicinity thunderstorms",
+    "stem": "A TAF reads FM272000 VRB05KT P6SM VCTS BKN050CB. What does VCTS forecast?",
+    "choices": [
+      "Thunderstorms 5 to 10 statute miles from the center of the airport.",
+      "Thunderstorms at the airport, with variable winds near the storms.",
+      "A 30 percent chance of thunderstorms within 10 miles of the airport."
+    ],
+    "answer": 0,
+    "explanation": "In a TAF, VC means a doughnut-shaped area 5 to 10 SM from the center of the runway complex, and a VC forecast is a prevailing condition (at least a 50 percent chance). Storms at the airport would be coded TS without VC, and a 30 percent chance would be a PROB30 group. CB is added to the cloud group whenever thunderstorms appear, even in the vicinity.",
+    "ref": "FAA-H-8083-28B 27.4.2.8, 27.4.2.9.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-627",
+    "area": "WXS",
+    "topic": "TAF: area covered",
+    "stem": "A balloon launch site is 15 miles from the nearest airport with a TAF. Which statement is true?",
+    "choices": [
+      "The TAF covers a 25-nautical-mile radius, so it applies directly to the site.",
+      "The TAF covers out to 10 statute miles, so it applies to sites near that ring.",
+      "It covers only 5 SM around the runway complex, so the site may differ."
+    ],
+    "answer": 2,
+    "explanation": "A TAF is a forecast for the area within 5 statute miles of the center of the airport's runway complex. A site 15 miles away is outside it, so the pilot should also use area products such as the GFA and local observations. The 5-to-10-mile ring is only where vicinity (VC) weather is described.",
+    "ref": "FAA-H-8083-28B 27.4, 27.4.2.8",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-628",
+    "area": "WXS",
+    "topic": "TAF: amended forecasts",
+    "stem": "At 1240Z a TAF AMD is issued with a valid period that begins at 1300Z. When should a pilot start using it?",
+    "choices": [
+      "At 1300Z, when the valid period of the amendment begins.",
+      "At once, since it supersedes and cancels the earlier TAF.",
+      "Only after the next routine TAF has confirmed the change."
+    ],
+    "answer": 1,
+    "explanation": "An amended TAF is issued when the forecaster judges the old one unrepresentative, and it replaces the earlier TAF as soon as it is issued. Pilots should not wait for the start of its valid period, and no later routine TAF is needed to confirm it.",
+    "ref": "FAA-H-8083-28B 27.4.2.1, 27.4.2.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-629",
+    "area": "WXS",
+    "topic": "TAF: shallow fog (MIFG)",
+    "stem": "A TAF for a dawn launch includes MIFG. What does it forecast?",
+    "choices": [
+      "Shallow fog, with visibility of 5/8 mile or more 6 feet up.",
+      "Patches of fog covering part of the airport, the rest staying clear.",
+      "Freezing fog, which forms at temperatures at or below 0°C."
+    ],
+    "answer": 0,
+    "explanation": "MI means shallow: visibility at 6 feet AGL is 5/8 mile or more, while the apparent visibility inside the fog layer is less. Fog patches are BCFG (and partial fog PRFG), and freezing fog is FZFG. Even shallow fog can hide fences and wires at the edge of a field.",
+    "ref": "FAA-H-8083-28B 27.4.2.7.3 (Table 27-4)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-630",
+    "area": "WXS",
+    "topic": "TAF: variable wind with convection",
+    "stem": "A TAF period reads VRB15G30KT 3SM TSRA BKN030CB. Why is the direction VRB when the speed is 15 knots?",
+    "choices": [
+      "VRB can show a direction made variable by convective activity.",
+      "VRB is used whenever the forecast gusts exceed the mean wind by 10 knots.",
+      "VRB means the wind direction sensor is out of service at this airport."
+    ],
+    "answer": 0,
+    "explanation": "In a TAF, VRB is used for very light winds (1–6 knots) or when convective activity makes the direction variable, which is why a higher speed and gusts can appear with VRB here. Gusts alone do not make the direction variable, and a TAF is a forecast, not a sensor reading.",
+    "ref": "FAA-H-8083-28B 27.4.2.5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-631",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): decoding",
+    "stem": "FT  3000    6000    9000\nXYZ 2614 2725+09 2834+03\nWhat wind and temperature are forecast at 6,000 feet?",
+    "choices": [
+      "270° true at 25 knots, +9°C.",
+      "270° magnetic at 25 knots, +9°C.",
+      "272° true at 5 knots, +9°C."
+    ],
+    "answer": 0,
+    "explanation": "Each group is DDff+TT: direction in tens of degrees true, speed in knots, then temperature. 2725+09 is 270° at 25 knots and +9°C. FB directions are true, not magnetic, and the direction uses only the first two digits.",
+    "ref": "FAA-H-8083-28B 27.2.1.1.1",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-632",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): altitude reference",
+    "stem": "FT  3000    6000    9000\nXYZ 2208 2415+11 2620+05\nA launch site near XYZ is at 3,000 feet MSL. The pilot plans to fly about 3,000 feet above the ground. Which forecast fits that altitude?",
+    "choices": [
+      "The 3,000-foot forecast, since FB levels are heights above ground.",
+      "The 6,000-foot forecast, since FB levels through 12,000 are MSL.",
+      "Neither until corrected, since FB levels are all pressure altitudes."
+    ],
+    "answer": 1,
+    "explanation": "FB levels through 12,000 feet are true altitudes (MSL), so 3,000 feet above a 3,000-foot site is the 6,000-foot level. Reading the levels as heights above the ground puts the balloon 3,000 feet too low, and only the levels at and above 18,000 feet are pressure altitudes.",
+    "ref": "FAA-H-8083-25C Ch. 13 (Winds and Temperature Aloft Forecast (FB)); FAA-H-8083-11B Ch. 4 (Wind and Temperature Aloft Forecast (FD Report)); FAA-H-8083-28B 3.3.1.1 (winds aloft heights MSL)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-633",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): encoding 100+ knots",
+    "stem": "How would an FB forecast of 260° at 115 knots and −47°C be coded at 34,000 feet?",
+    "choices": [
+      "261547",
+      "761547",
+      "7615-47"
+    ],
+    "answer": 1,
+    "explanation": "For speeds of 100 to 199 knots, 50 is added to the direction digits (26 + 50 = 76) and 100 is subtracted from the speed (15). Above 24,000 feet the minus sign is left out because temperatures there are always negative. 261547 would decode as 260° at 15 knots.",
+    "ref": "FAA-H-8083-28B 27.2.1.1.1",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-634",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): no temperature at 3,000 feet",
+    "stem": "FT  3000    6000\nXYZ 2208 2415+11\nWhy is there no temperature in the 3,000-foot forecast?",
+    "choices": [
+      "The temperature at 3,000 feet is the same as the surface temperature.",
+      "Temperatures are not forecast for the 3,000-foot level.",
+      "Temperatures are given only for levels above 6,000 feet MSL."
+    ],
+    "answer": 1,
+    "explanation": "The FB gives signed temperatures only from 6,000 feet up (the handbook's decoding table shows 3,000 feet as 'not forecast'), and it also omits temperature at any level within 2,500 feet of the station's elevation. The 6,000-foot level shows +11°C, so temperatures are not limited to levels above 6,000 feet, and the surface temperature is not implied.",
+    "ref": "FAA-H-8083-28B 27.2.1.1, 27.2.1.1.1, 27.2.1.1.2 (Table 27-1)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-635",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): station elevation rules",
+    "stem": "An FB station is at 4,100 feet MSL. What is the most likely form of its 6,000-foot entry?",
+    "choices": [
+      "2516 (a wind with no temperature)",
+      "2516+08 (a wind and a temperature)",
+      "Left blank (no wind or temperature)"
+    ],
+    "answer": 0,
+    "explanation": "Winds are not forecast within 1,500 feet of the station's elevation, and temperatures are not forecast within 2,500 feet. 6,000 feet is 1,900 feet above this station, so a wind is given but no temperature.",
+    "ref": "FAA-H-8083-28B 27.2.1.1",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-636",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): which forecast period",
+    "stem": "An FB set is based on 0000Z data. Which forecast should be used for a 1330Z launch?",
+    "choices": [
+      "The 12-hour forecast valid at 1200Z, for use from 0900Z to 1800Z.",
+      "The 6-hour forecast valid at 0600Z, since it is the newest.",
+      "The 24-hour forecast valid at 0000Z, for use from 1800Z to 0600Z."
+    ],
+    "answer": 0,
+    "explanation": "Each FB forecast carries a 'for use' window. From the 0000Z run, the 6-hour forecast is for use 0200–0900Z, the 12-hour 0900–1800Z, and the 24-hour 1800–0600Z. A 1330Z launch falls in the 12-hour window.",
+    "ref": "FAA-H-8083-28B 27.2.1.1.2 (Table 27-2)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-637",
+    "area": "WXS",
+    "topic": "Winds aloft (FB): limitations",
+    "stem": "Why might a balloon pilot plan with hourly model winds as well as the FB forecast?",
+    "choices": [
+      "The FB gives directions relative to magnetic north, which must be converted.",
+      "The FB does not forecast any winds for levels below 12,000 feet MSL.",
+      "It updates only four times a day, for broad periods, at widely spaced points."
+    ],
+    "answer": 2,
+    "explanation": "The handbook notes that FB winds are updated only four times daily, give one value for each of three broad time periods, and come from points about 100 to 150 miles apart, while models such as the Rapid Refresh update hourly on a fine grid. FB directions are true, and FB levels start at 3,000 feet.",
+    "ref": "FAA-H-8083-28B 27.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-638",
+    "area": "WXS",
+    "topic": "AIRMET Sierra",
+    "stem": "Which product would warn of ceilings below 1,000 feet and visibility below 3 miles in mist over a wide area?",
+    "choices": [
+      "AIRMET Tango",
+      "AIRMET Sierra",
+      "AIRMET Zulu"
+    ],
+    "answer": 1,
+    "explanation": "AIRMET Sierra covers IFR conditions (ceiling below 1,000 feet and/or visibility below 3 miles) and extensive mountain obscuration. Tango covers moderate turbulence, strong surface winds and low-level wind shear, and Zulu covers moderate icing and freezing levels.",
+    "ref": "FAA-H-8083-28B 26.3.1.1, 26.3.1.3; AIM 7-1-6",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-639",
+    "area": "WXS",
+    "topic": "AIRMETs: reading the graphic time steps",
+    "stem": "The 00-hour graphical AIRMET shows no turbulence over the flight area, and the 03-hour forecast shows moderate turbulence there. With no start time given, when should the pilot assume the turbulence begins?",
+    "choices": [
+      "Exactly at the 03-hour time.",
+      "Halfway between the two forecast times.",
+      "Right after the 00-hour time."
+    ],
+    "answer": 2,
+    "explanation": "AIRMETs over the CONUS are snapshots no more than 3 hours apart. The FAA tells users to assume the hazard starts immediately after the earlier snapshot and exists between snapshots unless a start or end time is defined, so waiting for the 03-hour time or the midpoint is not safe.",
+    "ref": "FAA-H-8083-28B 26.3.1.1; AIM 7-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-640",
+    "area": "WXS",
+    "topic": "AIRMETs: issuance",
+    "stem": "How often are AIRMETs for the contiguous United States routinely issued?",
+    "choices": [
+      "Every 6 hours, with unscheduled updates when needed.",
+      "Every hour, at 55 minutes past the hour.",
+      "Only when hazards develop; there is no set schedule."
+    ],
+    "answer": 0,
+    "explanation": "CONUS AIRMETs are scheduled every 6 hours (0245, 0845, 1445 and 2045 UTC) and are updated or amended as needed. The hourly H+55 schedule belongs to Convective SIGMETs, and non-convective SIGMETs are the unscheduled product.",
+    "ref": "FAA-H-8083-28B 26.3.3 (Table 26-4); AIM 7-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-641",
+    "area": "WXS",
+    "topic": "SIGMETs: criteria",
+    "stem": "Which condition would lead to a non-convective SIGMET in the contiguous United States?",
+    "choices": [
+      "Sustained surface winds of 35 knots over a wide area.",
+      "Severe turbulence not associated with thunderstorms.",
+      "Widespread ceilings below 1,000 feet in fog."
+    ],
+    "answer": 1,
+    "explanation": "Non-convective SIGMETs cover severe or greater turbulence, severe icing, widespread dust storms or sandstorms, and volcanic ash. Strong sustained surface winds are an AIRMET Tango item, and IFR ceilings are AIRMET Sierra.",
+    "ref": "FAA-H-8083-28B 26.2.4.1.1; AIM 7-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-642",
+    "area": "WXS",
+    "topic": "SIGMETs: valid period",
+    "stem": "A SIGMET for severe icing over the contiguous United States can be valid for up to",
+    "choices": [
+      "2 hours.",
+      "4 hours.",
+      "12 hours."
+    ],
+    "answer": 1,
+    "explanation": "A non-convective SIGMET is valid for up to 4 hours and is reissued as long as the conditions continue. Two hours is the valid time of a Convective SIGMET or a CWA, and 12 hours is how far the graphical AIRMET forecasts extend. Volcanic ash and tropical cyclone SIGMETs are the exception, at up to 6 hours (the AWH lists that exception for SIGMETs outside the CONUS).",
+    "ref": "FAA-H-8083-28B 26.2.4.1.2, 26.2.5.2; AIM 7-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-643",
+    "area": "WXS",
+    "topic": "Convective SIGMETs: valid time",
+    "stem": "A Convective SIGMET is issued at 1855Z. Unless it is superseded, it is valid until",
+    "choices": [
+      "1955Z.",
+      "2255Z.",
+      "2055Z."
+    ],
+    "answer": 2,
+    "explanation": "Convective SIGMETs are issued hourly at 55 minutes past the hour and are valid for 2 hours or until superseded by the next hourly issuance. 1955Z is only the next scheduled issuance, and 4 hours is the valid time of a non-convective SIGMET.",
+    "ref": "FAA-H-8083-28B 26.2.4.2.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-644",
+    "area": "WXS",
+    "topic": "Convective SIGMETs: implied hazards",
+    "stem": "Even when the text does not mention them, what does every Convective SIGMET imply?",
+    "choices": [
+      "Severe turbulence, severe icing and low-level wind shear.",
+      "Tornadoes, plus hail of at least 3/4 inch reaching the surface.",
+      "Surface wind gusts of at least 50 knots across the area."
+    ],
+    "answer": 0,
+    "explanation": "Any Convective SIGMET implies severe or greater turbulence, severe icing and low-level wind shear. Tornadoes, large hail and 50-knot gusts are criteria that can trigger a Convective SIGMET, but they are not implied by every one.",
+    "ref": "FAA-H-8083-28B 26.2.4.2; AIM 7-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-645",
+    "area": "WXS",
+    "topic": "Center Weather Advisories",
+    "stem": "Who issues a Center Weather Advisory (CWA), and for how long is it valid?",
+    "choices": [
+      "The CWSU at an ARTCC; valid for up to 2 hours.",
+      "The Aviation Weather Center; valid for 4 hours.",
+      "Flight Service; valid until it is cancelled."
+    ],
+    "answer": 0,
+    "explanation": "CWAs come from the NWS Center Weather Service Unit at each ARTCC and are valid for up to 2 hours. They are issued when conditions meet or approach advisory criteria and no AWC advisory covers them, or to refine one that does. The AWC issues AIRMETs and SIGMETs, and Flight Service relays advisories rather than writing them.",
+    "ref": "FAA-H-8083-28B 26.4, 26.4.1, 26.4.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-646",
+    "area": "WXS",
+    "topic": "PIREPs: location (/OV)",
+    "stem": "A PIREP includes /OV XYZ180015. What does it mean?",
+    "choices": [
+      "On the 180° radial from XYZ, 15 nautical miles out.",
+      "On the 180° radial from XYZ, 15 statute miles out.",
+      "Over XYZ at 1,800 feet, 15 minutes before the report."
+    ],
+    "answer": 0,
+    "explanation": "/OV gives the location where the weather occurred, using a NAVAID or airport, three digits for the radial and three for the distance in nautical miles. In PIREPs only visibility is in statute miles, and altitude and time have their own /FL and /TM fields.",
+    "ref": "FAA-H-8083-28B 24.5.1, 24.5.1.2.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-647",
+    "area": "WXS",
+    "topic": "PIREPs: altitude reference",
+    "stem": "A PIREP reads ... /FL035 /SK BKN030-TOP045 ... How are these heights referenced?",
+    "choices": [
+      "To mean sea level, unlike METAR cloud heights (AGL).",
+      "To ground level, the same as METAR cloud heights.",
+      "To the standard pressure setting of 29.92, as flight levels."
+    ],
+    "answer": 0,
+    "explanation": "All PIREP altitudes are MSL unless noted, so the pilot was at 3,500 feet MSL with a broken layer based at 3,000 and topped at 4,500 feet MSL. METAR and TAF cloud heights are AGL, and the /FL label in a PIREP does not mean a flight level below 18,000 feet.",
+    "ref": "FAA-H-8083-28B 24.5.1, 24.5.1.4, 24.5.1.6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-648",
+    "area": "WXS",
+    "topic": "PIREPs: reporting good conditions",
+    "stem": "A turbulence AIRMET covers the area, but a balloon pilot finds smooth air. Is a PIREP worth giving?",
+    "choices": [
+      "No; PIREPs are only for hazardous weather that other pilots should avoid.",
+      "No; a PIREP cannot conflict with an AIRMET until the AIRMET expires.",
+      "Yes; good-weather reports help forecasters check their forecasts."
+    ],
+    "answer": 2,
+    "explanation": "Pilots can report any observation, good or bad, and reporting forecast weather that was not found helps the NWS verify forecasts (turbulence forecast but not found is coded NEG). Nothing limits PIREPs to hazards or bars a report that disagrees with an advisory.",
+    "ref": "FAA-H-8083-28B 24.5.1, 24.5.1.10; AIM 7-1-18",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-649",
+    "area": "WXS",
+    "topic": "Radar: data-link age",
+    "stem": "A phone app's radar mosaic shows a shower 12 miles west of the launch site. What limitation applies?",
+    "choices": [
+      "It shows gust fronts and turbulence around the shower in real time.",
+      "It shows the rain's position now, so its edge is a safe boundary.",
+      "It shows where rain was, and may be 15–20 minutes older than shown."
+    ],
+    "answer": 2,
+    "explanation": "Data-linked mosaic radar shows where precipitation was, and it may be 15 to 20 minutes older than the age shown. Radar shows precipitation, not turbulence or outflow winds, so it is for broad strategic avoidance, never for picking a path close to a storm.",
+    "ref": "FAA-H-8083-28B 3.2.2, 24.6.1.6; AIM 7-1-26, 7-1-27",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-650",
+    "area": "WXS",
+    "topic": "Radar: composite reflectivity",
+    "stem": "What does a composite reflectivity radar image show?",
+    "choices": [
+      "Echoes from the lowest scan only, about 0.5° above the horizon.",
+      "The strongest echo at any height in the column above each point.",
+      "The estimated height of the tops of the precipitation echoes."
+    ],
+    "answer": 1,
+    "explanation": "Composite reflectivity takes the highest value from all the radar's elevation scans over each point. Base reflectivity uses only the lowest (0.5°) scan, and the echo tops product estimates precipitation tops using the 18 dBZ echo.",
+    "ref": "FAA-H-8083-28B 24.6.1.5.2, 24.6.1.5.3, 24.6.1.5.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-651",
+    "area": "WXS",
+    "topic": "Satellite: seeing fog before sunrise",
+    "stem": "At 5 a.m., an hour before sunrise, which satellite product can best show fog and low stratus?",
+    "choices": [
+      "GeoColor, which at night shows fog and low stratus in blue.",
+      "Visible imagery, which shows low clouds as bright white.",
+      "Water vapor imagery, which shows moisture near the ground."
+    ],
+    "answer": 0,
+    "explanation": "Visible imagery uses reflected sunlight and is useful only in daylight. GeoColor switches to an infrared product at night, showing liquid-water clouds such as fog and stratus in blue. Water vapor imagery shows moisture in the middle and upper troposphere, not near the ground.",
+    "ref": "FAA-H-8083-28B 24.7.2, 24.7.2.1, 24.7.2.4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-652",
+    "area": "WXS",
+    "topic": "Surface analysis: station model wind",
+    "stem": "On a surface analysis station plot, the wind stem points from the northwest and has two full barbs and one half barb. What is the wind?",
+    "choices": [
+      "Toward the northwest at 25 knots.",
+      "From the northwest at 15 knots.",
+      "From the northwest at 25 knots."
+    ],
+    "answer": 2,
+    "explanation": "The stem points in the direction the wind blows from, a full barb is 10 knots and a half barb is 5 knots, so this is 25 knots from the northwest. Counting a full barb as 5 knots gives 15 knots, and reading the stem as the downwind direction reverses the wind.",
+    "ref": "FAA-H-8083-28B 25.2.3.4.5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-653",
+    "area": "WXS",
+    "topic": "Surface analysis: isobar spacing",
+    "stem": "On the morning surface analysis chart, isobars are packed closely together over the planned flight area. What should the pilot expect?",
+    "choices": [
+      "Light winds, since tight isobars mark a high-pressure center.",
+      "A strong pressure gradient and strong winds.",
+      "Fog, since tight isobars show air that is close to saturation."
+    ],
+    "answer": 1,
+    "explanation": "Isobars are lines of equal pressure; the closer together they are, the steeper the pressure gradient and the stronger the wind. Centers of high pressure usually have widely spaced isobars and light winds, and isobars say nothing directly about moisture.",
+    "ref": "FAA-H-8083-28B 10.3.1, 25.2.3; FAA-H-8083-11B Ch. 4 (Pressure Gradient)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-654",
+    "area": "WXS",
+    "topic": "Surface prog charts",
+    "stem": "How does a Short-Range Surface Prognostic (prog) chart differ from a surface analysis chart?",
+    "choices": [
+      "It shows the observed positions of fronts at the time of the last observations.",
+      "It forecasts fronts, pressure systems and precipitation for a future valid time.",
+      "It shows forecast winds and temperatures aloft at standard levels."
+    ],
+    "answer": 1,
+    "explanation": "The WPC's prog charts are forecast snapshots of pressure systems, fronts and precipitation at set future valid times. The surface analysis chart is the one built from observations, and winds and temperatures aloft come from FB and upper-air products.",
+    "ref": "FAA-H-8083-28B 25.2.3, 27.10",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-655",
+    "area": "WXS",
+    "topic": "Briefings: abbreviated",
+    "stem": "A pilot got a standard briefing at 0430. The launch slips to 0700, and the pilot wants an update. Which briefing should be requested?",
+    "choices": [
+      "A second standard briefing, because any delay makes the first one invalid.",
+      "An outlook briefing, because the departure time has changed.",
+      "An abbreviated briefing, giving the time and source of the earlier briefing."
+    ],
+    "answer": 2,
+    "explanation": "An abbreviated briefing updates a previous briefing or supplies a few specific items; the specialist asks for the time and source of the earlier briefing so nothing is left out. A full standard briefing is not required, and an outlook briefing is for departures 6 or more hours away.",
+    "ref": "FAA-H-8083-28B 3.3.1.2, 3.3.1.3; AIM 7-1-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-656",
+    "area": "WXS",
+    "topic": "Briefings: standard briefing contents",
+    "stem": "At 0300 a pilot gets a standard briefing for a 0630 launch. Which element will be left out unless the pilot asks for it?",
+    "choices": [
+      "Adverse conditions.",
+      "Current conditions.",
+      "Winds aloft."
+    ],
+    "answer": 1,
+    "explanation": "In a standard briefing, current conditions are not included when the departure is more than 2 hours away unless the pilot asks. Adverse conditions and winds aloft are always part of a standard briefing when they apply to the flight.",
+    "ref": "FAA-H-8083-28B 3.3.1.1; AIM 7-1-5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-657",
+    "area": "WXS",
+    "topic": "Briefings: VFR flight not recommended",
+    "stem": "During a phone briefing, the specialist says 'VFR flight not recommended.' What does that mean for the pilot?",
+    "choices": [
+      "The flight is now prohibited unless ATC grants the pilot a waiver.",
+      "It is advisory; the pilot makes the final go or no-go decision.",
+      "The pilot must file an IFR flight plan before launching."
+    ],
+    "answer": 1,
+    "explanation": "VNR is the briefer's judgment that VFR flight is doubtful in the reported or forecast conditions. It is advisory only, and the decision belongs to the pilot, weighed against experience, the aircraft and the conditions. It creates no prohibition or IFR requirement, but it is a strong reason to stay on the ground.",
+    "ref": "FAA-H-8083-28B 3.3.1.1; AIM 7-1-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-658",
+    "area": "WXS",
+    "topic": "Briefings: online self-briefing",
+    "stem": "Can a pilot get a preflight weather briefing that meets the regulations without talking to a Flight Service specialist?",
+    "choices": [
+      "No; only a recorded telephone briefing from Flight Service counts.",
+      "Only if the flight will take place entirely in Class G airspace.",
+      "Yes; online sources such as 1800wxbrief.com can provide one."
+    ],
+    "answer": 2,
+    "explanation": "The handbook states that pilots may receive a regulatory-compliant briefing through online weather resources without contacting Flight Service, and Flight Service's website offers online briefings that are logged. Pilots who do call are encouraged to self-brief first. Airspace class does not change this.",
+    "ref": "FAA-H-8083-28B 3.3.1, 3.3.3, 3.3.3.1",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXS-659",
+    "area": "WXS",
+    "topic": "GFA Low Altitude mode",
+    "stem": "Which part of the Aviation Weather Center's tools focuses on altitudes up to 5,000 ft AGL, with roads and heliports shown?",
+    "choices": [
+      "The GFA Low Altitude (GFA-LA) mode, once the HEMS tool.",
+      "The Low-Level Significant Weather (SIGWX) prog chart.",
+      "The FB winds and temperatures aloft forecast table."
+    ],
+    "answer": 0,
+    "explanation": "In late 2023 the HEMS tool was moved into the Graphical Forecasts for Aviation as GFA-LA, which focuses on altitudes up to 5,000 feet AGL with overlays such as roads, NAVAIDs, airports and heliports. That suits low, short balloon flights far from a reporting station. The Low-Level SIGWX chart is a national 12- and 24-hour snapshot of hazards up to FL240, and the FB table is a list of point forecasts, not a map tool.",
+    "ref": "FAA-H-8083-28B 28.2, 27.9.1; FAA-H-8083-11B Ch. 4 (Internet Sources: HEMS)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXS-660",
+    "area": "WXS",
+    "topic": "NWS balloon forecasts",
+    "stem": "What does the Aviation Weather Handbook say about NWS balloon forecasts?",
+    "choices": [
+      "Every office issues one each morning in a single national format.",
+      "The Aviation Weather Center issues them and updates them hourly.",
+      "Select offices issue them, mostly automated, and content varies."
+    ],
+    "answer": 2,
+    "explanation": "Balloon forecasts are issued by select NWS Weather Forecast Offices, are mostly automated from radiosonde or model soundings, and vary in content to fit the local ballooning community. The handbook's example notes it is not routinely updated outside its scheduled issuance, so pilots should ask their local WFO what it offers.",
+    "ref": "FAA-H-8083-28B 27.22, 27.22.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-601",
+    "area": "WXT",
+    "topic": "Dry adiabatic lapse rate",
+    "stem": "A parcel of unsaturated air is lifted 2,000 feet. About how much does its temperature drop?",
+    "choices": [
+      "4°C",
+      "1°C",
+      "6°C"
+    ],
+    "answer": 2,
+    "explanation": "Rising unsaturated air cools at the dry adiabatic rate of about 3°C per 1,000 feet, so 2,000 feet cools it about 6°C. 4°C uses the standard-atmosphere rate of about 2°C per 1,000 feet, which is an average, not a parcel rate, and 1°C is the dew point's drop of about 0.5°C per 1,000 feet.",
+    "ref": "FAA-H-8083-28B 12.2, 5.8; FAA-H-8083-11B Ch. 4 (Atmospheric Stability & Instability)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-602",
+    "area": "WXT",
+    "topic": "Estimating cloud base",
+    "stem": "The surface temperature is 78°F and the dew point is 56°F. About how high is the base of any cumulus that forms?",
+    "choices": [
+      "About 5,000 feet AGL.",
+      "About 4,100 feet AGL.",
+      "About 5,000 feet MSL."
+    ],
+    "answer": 0,
+    "explanation": "Temperature and dew point converge about 4.4°F per 1,000 feet in rising air, so a 22°F spread gives 22 ÷ 4.4 = 5, or about 5,000 feet above the ground. Dividing by the 5.4°F dry lapse rate alone gives about 4,100 feet, and the estimate is a height above the station, not MSL.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Temperature/Dew Point Relationship)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-603",
+    "area": "WXT",
+    "topic": "Conditional instability: an unsaturated parcel",
+    "stem": "A layer's actual lapse rate lies between the moist and dry adiabatic rates. An unsaturated parcel is nudged up a short way and stays unsaturated. What does it do?",
+    "choices": [
+      "It keeps rising on its own, because the layer is unstable.",
+      "It stays at its new level, neither rising nor sinking.",
+      "It sinks back, because it is now colder than the air around it."
+    ],
+    "answer": 2,
+    "explanation": "An unsaturated parcel cools at the dry adiabatic rate, faster than this layer's lapse rate, so after a small lift it is colder and denser than its surroundings and sinks back; the layer is conditionally unstable, stable for unsaturated air. It rises on its own only if lifted past saturation to its level of free convection, and it would stay put only if the lapse rate equaled its own (neutral stability).",
+    "ref": "FAA-H-8083-28B 13.3.2, 13.3.4, 13.3.5 (Figure 13-5); FAA-H-8083-11B Ch. 4 (Types of Stability)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-604",
+    "area": "WXT",
+    "topic": "Absolute instability near the ground",
+    "stem": "Over a sun-baked parking lot at midday, temperature falls faster than 3°C per 1,000 feet in the lowest few hundred feet. That layer is",
+    "choices": [
+      "conditionally unstable.",
+      "absolutely stable.",
+      "absolutely unstable."
+    ],
+    "answer": 2,
+    "explanation": "A lapse rate greater than the dry adiabatic rate is called superadiabatic, which is absolute instability: any parcel nudged upward keeps rising. Conditional instability needs a lapse rate between the moist and dry rates, and absolute stability needs one smaller than the moist rate. This is why balloons meet strong thermals over hot pavement.",
+    "ref": "FAA-H-8083-28B 13.3.3; FAA-H-8083-11B Ch. 4 (Types of Stability)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-605",
+    "area": "WXT",
+    "topic": "Lifted index in a balloon forecast",
+    "stem": "A balloon forecast lists a surface lifted index of +3 at 7 a.m. and −1 at 10 a.m. What does this suggest?",
+    "choices": [
+      "Stable early, turning unstable by mid-morning; plan to land early.",
+      "Stable air all morning, since a lower number means more stable air.",
+      "Unstable air early, becoming stable as the morning goes on."
+    ],
+    "answer": 0,
+    "explanation": "A positive lifted index means a stable column and a negative one means an unstable column, so the forecast shows the air becoming unstable as the sun heats the ground. Lower values mean less stability, not more. The handbook's own balloon forecast example uses these same lifted index entries.",
+    "ref": "FAA-H-8083-28B 13.5.1, 27.22.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-606",
+    "area": "WXT",
+    "topic": "Day-night changes in stability",
+    "stem": "Which set of conditions gives the largest day-to-night swing in low-level stability?",
+    "choices": [
+      "Over water, with cloudy skies, moist air and strong wind.",
+      "Over land, with clear skies, dry air and light wind.",
+      "Over land, with overcast skies, moist air and strong wind."
+    ],
+    "answer": 1,
+    "explanation": "Daytime heating lowers stability and nighttime cooling raises it, and the swing is largest over land with a clear sky, dry air and light wind. Water, cloud cover, moist air and strong wind all reduce the daily temperature range, so they reduce the stability swing too.",
+    "ref": "FAA-H-8083-28B 13.4.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-607",
+    "area": "WXT",
+    "topic": "Subsidence",
+    "stem": "In a large high-pressure system, air slowly sinks over the region for several days. What does this tend to do?",
+    "choices": [
+      "Cool the air as it sinks, forming low clouds and steady light drizzle.",
+      "Warm it by compression, adding stability and an inversion over haze.",
+      "Destabilize the air and build thunderstorms each afternoon."
+    ],
+    "answer": 1,
+    "explanation": "Sinking air is compressed and warms, the upper part more than the lower, which reduces the lapse rate and increases stability. The result is often an inversion that acts as a lid over smoke and haze for days. Sinking air does not cool or destabilize; rising air does.",
+    "ref": "FAA-H-8083-28B 13.4.2; FAA-H-8083-11B Ch. 4 (Effects of Stable & Unstable Air)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-608",
+    "area": "WXT",
+    "topic": "Surface type and convection on approach",
+    "stem": "On a warm late-morning approach, the balloon's path crosses a plowed field and then a pond before the landing spot. What should the pilot anticipate?",
+    "choices": [
+      "Rising air over the plowed field and sinking air over the pond.",
+      "Sinking air over the plowed field and rising air over the pond.",
+      "No change, since convection only matters well above the ground."
+    ],
+    "answer": 0,
+    "explanation": "Barren ground such as plowed fields heats quickly and sends up rising air, while water and thick vegetation stay cooler and tend to produce sinking air. The Balloon Flying Handbook warns that this can make a pilot overshoot over bare ground or land short over water or trees.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Convective Currents; Turbulence: Thermal)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-609",
+    "area": "WXT",
+    "topic": "Trigger temperature",
+    "stem": "A soaring forecast lists a trigger temperature of 27°C, reached at 11 a.m. Why does a balloon pilot care?",
+    "choices": [
+      "Thermals are expected to start then, so plan to land before it.",
+      "Morning fog is expected to burn off once the surface reaches it.",
+      "A surface inversion is expected to form once the surface reaches it."
+    ],
+    "answer": 0,
+    "explanation": "The soaring forecast's thermal values apply once the trigger temperature is reached, the surface temperature needed for heating to drive thermals to a useful height (one NWS office defines it as the temperature needed for lift to 3,000 feet AGL). A balloon flight should be on the ground before then. The trigger is about convection, not fog, and heating breaks up an inversion rather than forming one.",
+    "ref": "FAA-H-8083-28B 27.21, 27.21.1; NWS Wilmington OH soaring forecast (weather.gov/iln/soaring)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-610",
+    "area": "WXT",
+    "topic": "Cold air over warm ground",
+    "stem": "The morning after a cold front, cold air is flowing over ground that the sun is quickly warming. What is likely low down?",
+    "choices": [
+      "A stronger surface inversion, as the cold air settles over the ground.",
+      "Thermal turbulence, as heating from below makes the low layer unstable.",
+      "Widespread advection fog, as the cold air cools to its dew point."
+    ],
+    "answer": 1,
+    "explanation": "Heating from below happens when cold air moves over a warmer surface or the ground is strongly heated by the sun, and it builds convective currents. Warming the bottom of a column lowers its stability, so an inversion is not strengthened. Advection fog needs warm, moist air over a colder surface, the reverse of this case.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Turbulence: Thermal); FAA-H-8083-28B 13.4.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-611",
+    "area": "WXT",
+    "topic": "Ground fog after sunrise",
+    "stem": "Shallow ground fog covers the launch field at sunrise under a clear sky. What is typical?",
+    "choices": [
+      "It usually lasts all day until a front passes.",
+      "It usually burns off fairly quickly after sunrise.",
+      "It usually thickens through the day as the ground warms."
+    ],
+    "answer": 1,
+    "explanation": "Ground fog is a shallow form of radiation fog and usually burns off rather rapidly after sunrise; deeper radiation fog generally clears before noon unless clouds move in over it. Warming the ground lowers the relative humidity, so the fog does not keep thickening through the day.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.1",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-612",
+    "area": "WXT",
+    "topic": "Wind and radiation fog",
+    "stem": "On a clear night, how does a light wind of about 3 to 5 knots affect radiation fog?",
+    "choices": [
+      "It stops radiation fog from forming anywhere near the field.",
+      "It turns the radiation fog into advection fog over the whole field.",
+      "It spreads the cooling through a deeper layer and deepens the fog."
+    ],
+    "answer": 2,
+    "explanation": "Radiation fog is shallow when the wind is calm. Winds up to about 5 knots mix the air slightly and spread the cooling through a deeper layer, deepening the fog, while stronger winds disperse it or lift it into stratus. A light breeze does not change how the fog formed.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.1; FAA-H-8083-11B Ch. 4 (Fog Formation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-613",
+    "area": "WXT",
+    "topic": "Advection fog timing",
+    "stem": "A coastal launch site is clear at dawn. A fog bank sits offshore, and a light onshore breeze is blowing. Which statement is true?",
+    "choices": [
+      "Advection fog can move inland quickly at any time of day.",
+      "Fog forms only at night, so the rest of the morning is safe.",
+      "Offshore fog burns off before it reaches land on a sunny day."
+    ],
+    "answer": 0,
+    "explanation": "Advection fog forms when moist air moves over a colder surface, and it can move in rapidly regardless of the time of day or night. On the West Coast it often forms over cold water and is carried inland by the wind. It is more extensive and persistent than radiation fog and does not need nighttime cooling.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-614",
+    "area": "WXT",
+    "topic": "Upslope fog",
+    "stem": "On an overcast morning, moist, stable air flows westward across the Great Plains and up the rising ground toward the Rockies, cooling to its dew point. What fog results?",
+    "choices": [
+      "Upslope fog",
+      "Radiation fog",
+      "Steam fog"
+    ],
+    "answer": 0,
+    "explanation": "Upslope fog forms when moist, stable air is cooled adiabatically as it moves up sloping terrain, and unlike radiation fog it can form under cloudy skies. It is common on the eastern slopes of the Rockies. Steam fog needs cold air moving over warmer water.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-615",
+    "area": "WXT",
+    "topic": "Steam fog",
+    "stem": "On a cold fall morning, wisps of fog rise from a river under the balloon's path. What type of fog is this, and what might it bring?",
+    "choices": [
+      "Advection fog, with very smooth, stable air over the water.",
+      "Radiation fog, which forms over water before it forms over land.",
+      "Steam fog, with some convective turbulence low over the water."
+    ],
+    "answer": 2,
+    "explanation": "Steam fog forms when very cold air moves over warmer water; the rising streamers mark a shallow unstable layer, so convective turbulence can be expected in it. Advection fog is warm air over a colder surface, and radiation fog forms over land because water cools little at night.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.5, 18.1.1.1.1; FAA-H-8083-11B Ch. 4 (Some Fog Types & Characteristics)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-616",
+    "area": "WXT",
+    "topic": "Frontal fog",
+    "stem": "Rain falling from warm air above a front evaporates into the cold air below and saturates it. What is true of the fog that forms?",
+    "choices": [
+      "It is frontal fog; it can be widespread and last a long time.",
+      "It is radiation fog, which clears soon after the sun comes up.",
+      "It is steam fog, which stays shallow, patchy and short-lived."
+    ],
+    "answer": 0,
+    "explanation": "Fog formed when precipitation saturates the cold air under a front is frontal, or precipitation-induced, fog. It is most common with warm fronts and can be dense, cover large areas and last a long time. Radiation fog comes from nighttime cooling of the ground, and steam fog from cold air over warm water.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.4; FAA-H-8083-11B Ch. 4 (Some Fog Types & Characteristics)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-617",
+    "area": "WXT",
+    "topic": "Temperature–dew point spread and fog",
+    "stem": "Fog seldom forms when the temperature–dew point spread is greater than about",
+    "choices": [
+      "5°C (9°F).",
+      "2°C (4°F).",
+      "10°C (18°F)."
+    ],
+    "answer": 1,
+    "explanation": "Fog forms when the temperature and dew point become nearly equal, and the Aviation Weather Handbook notes it seldom forms with a spread greater than 2°C (4°F). The Balloon Flying Handbook gives a similar figure of 2.2°C. Spreads of 5°C or 10°C are far too wide for fog unless the air keeps cooling.",
+    "ref": "FAA-H-8083-28B 18.1.1; FAA-H-8083-11B Ch. 4 (Fog Formation)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-618",
+    "area": "WXT",
+    "topic": "Valley fog",
+    "stem": "Fog formed by cold air draining into a valley overnight is usually densest",
+    "choices": [
+      "around sunrise.",
+      "around midnight.",
+      "in the early afternoon."
+    ],
+    "answer": 0,
+    "explanation": "Overnight, cooler air sinks from the slopes and fills the valley from the bottom (cold air drainage), bringing the air to its dew point. The fog is usually densest around sunrise, when surface temperatures are often lowest, and it is most common in autumn and spring. Higher ground may stay clear.",
+    "ref": "FAA-H-8083-28B 18.1.1.1.1.1; FAA-H-8083-11B Ch. 4 (Valley Fog)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-619",
+    "area": "WXT",
+    "topic": "Inversions aloft",
+    "stem": "Which process produces a temperature inversion aloft rather than at the surface?",
+    "choices": [
+      "Clear-sky radiational cooling of the ground on a calm night.",
+      "Warm air moving in over a layer of colder air near the ground.",
+      "Strong daytime heating of dry, barren ground."
+    ],
+    "answer": 1,
+    "explanation": "A current of warm air overrunning cold air near the surface makes an inversion aloft. Radiational cooling on a clear, calm night makes a surface-based inversion, and strong daytime heating makes the low layer unstable, the opposite of an inversion.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude); FAA-H-8083-28B 19.2.3.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-620",
+    "area": "WXT",
+    "topic": "Inversions breaking up",
+    "stem": "After a calm dawn with a strong surface inversion and brisk winds above it, why does the surface wind often pick up by mid-morning?",
+    "choices": [
+      "Heating mixes out the inversion, so faster wind aloft reaches the ground.",
+      "Cooling of the ground after sunrise makes the pressure gradient steeper.",
+      "The inversion strengthens and pushes the winds above it down to the ground."
+    ],
+    "answer": 0,
+    "explanation": "Low-level inversions generally dissipate through the day as the sun heats the ground and the air mixes. Under the inversion the cold surface air is calm while warmer air moves over it largely unaffected, so once heating mixes the cold layer away, the faster air above is no longer cut off from the surface and the surface wind rises. The ground warms, not cools, after sunrise, and a stronger inversion would keep the surface air calm.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude; Wind Shear); FAA-H-8083-28B 13.4.3, 19.2.3.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-621",
+    "area": "WXT",
+    "topic": "Causes of low-level wind shear",
+    "stem": "According to the Balloon Flying Handbook, low-level wind shear is commonly associated with which conditions?",
+    "choices": [
+      "Clear, calm high pressure with light winds at every level aloft.",
+      "Fronts, thunderstorms, and inversions under strong winds aloft.",
+      "Light, steady winds from the same direction at every altitude."
+    ],
+    "answer": 1,
+    "explanation": "The handbook ties low-level wind shear to passing frontal systems, thunderstorms, and temperature inversions with strong upper-level winds of more than 25 knots. Light, uniform winds at all levels are the absence of shear, which is why they make for easy balloon flying.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Low Level Wind Shear)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-622",
+    "area": "WXT",
+    "topic": "Warm front approach",
+    "stem": "A warm front is approaching the area. Which sequence is typical in the day before it arrives?",
+    "choices": [
+      "Cirrus, then lower layer cloud, falling pressure, maybe drizzle or fog.",
+      "Towering cumulus, an abrupt wind shift, and then quickly rising pressure.",
+      "Clearing skies, rising pressure and a sharp drop in the dew point."
+    ],
+    "answer": 0,
+    "explanation": "Ahead of a warm front, warm moist air slides up over the cold air, giving cirriform and then stratiform cloud, light to moderate precipitation, poor visibility and fog, while the pressure keeps falling. Towering cumulus and a sharp wind shift belong to a cold front, and clearing with rising pressure comes after a front passes.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Warm Front); FAA-H-8083-28B 11.3.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-623",
+    "area": "WXT",
+    "topic": "Stationary fronts",
+    "stem": "A front's surface position has not moved in a day, but moist, stable air is being lifted along it. What weather is likely?",
+    "choices": [
+      "Clear skies, because air cannot rise along a front that is not moving.",
+      "A fast-moving squall line along the frontal boundary.",
+      "Stratiform cloud with intermittent drizzle near the front."
+    ],
+    "answer": 2,
+    "explanation": "A stationary front is neither advancing nor retreating at the surface, but air can still rise along it. Stable, saturated air gives stratiform cloud and possibly drizzle, while conditionally unstable air would give cumuliform cloud and possible thunderstorms. Fast squall lines go with fast-moving cold fronts.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Stationary Front); FAA-H-8083-28B 11.3.3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-624",
+    "area": "WXT",
+    "topic": "Occluded fronts",
+    "stem": "How does an occluded front form?",
+    "choices": [
+      "A warm front catches up with a slower cold front.",
+      "A cold front stalls and stops moving along the surface.",
+      "A faster cold front catches up with a slower warm front."
+    ],
+    "answer": 2,
+    "explanation": "An occlusion forms when a fast-moving cold front overtakes a slow-moving warm front, so warm-front weather is followed quickly by cold-front weather. Warm fronts move more slowly than cold fronts, and a front that stops moving is a stationary front.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Occluded Front); FAA-H-8083-28B 11.3.4",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-625",
+    "area": "WXT",
+    "topic": "Squall lines",
+    "stem": "Where is a squall line most often found?",
+    "choices": [
+      "Along or ahead of a fast-moving cold front.",
+      "Behind a slow-moving warm front.",
+      "Near the center of a large high-pressure system."
+    ],
+    "answer": 0,
+    "explanation": "A continuous line of thunderstorms, or squall line, may form along or ahead of a fast-moving cold front, especially when the warm air ahead is unstable; prefrontal storms can occur many miles ahead of the front. High-pressure centers have sinking, stable air, and warm fronts usually bring stratiform weather.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Fast-Moving Cold Front; Frontal Thunderstorms)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-626",
+    "area": "WXT",
+    "topic": "Flying before a frontal passage",
+    "stem": "According to the Balloon Flying Handbook, many balloon pilots will not fly within what period before the passage of a significant front?",
+    "choices": [
+      "2 to 3 hours.",
+      "18 to 24 hours.",
+      "48 to 72 hours."
+    ],
+    "answer": 1,
+    "explanation": "The handbook notes that many balloon pilots have a rule against flying within 18 to 24 hours before a frontal passage, especially if the front has significant strength, because fronts bring wind shifts, precipitation and sharp temperature changes. Flight Service can often advise when a front will pass a reporting station.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Surface Fronts)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-627",
+    "area": "WXT",
+    "topic": "Wind around a low",
+    "stem": "In the Northern Hemisphere, how do surface winds blow around a low-pressure center?",
+    "choices": [
+      "Clockwise and outward from the center.",
+      "Counterclockwise and inward toward the center.",
+      "Counterclockwise and outward from the center."
+    ],
+    "answer": 1,
+    "explanation": "Friction turns the surface wind across the isobars toward lower pressure, so in the Northern Hemisphere the wind spirals counterclockwise and inward into a low, and clockwise and outward from a high. Outward flow belongs to a high, and clockwise rotation in the Northern Hemisphere also belongs to a high.",
+    "ref": "FAA-H-8083-28B 10.5; FAA-H-8083-11B Ch. 4 (Wind Patterns)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-628",
+    "area": "WXT",
+    "topic": "Wind direction from the pressure pattern",
+    "stem": "In the Northern Hemisphere, a low-pressure center lies due north of the launch site and a high lies due south. Above the friction layer, the wind is most likely from the",
+    "choices": [
+      "west.",
+      "east.",
+      "south."
+    ],
+    "answer": 0,
+    "explanation": "Above the friction layer the wind blows parallel to the isobars, with low pressure on the left when you face downwind in the Northern Hemisphere. With the low to the north, the wind must blow toward the east, so it comes from the west. A south wind would blow straight across the isobars from high to low, which happens only partly, near the surface.",
+    "ref": "FAA-H-8083-28B 10.4, 10.5; FAA-H-8083-11B Ch. 4 (Wind Patterns; Surface Friction)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-629",
+    "area": "WXT",
+    "topic": "Coriolis force",
+    "stem": "Where is the Coriolis force greatest?",
+    "choices": [
+      "At the equator.",
+      "Near 30° latitude.",
+      "At the poles."
+    ],
+    "answer": 2,
+    "explanation": "Coriolis force is zero at the equator and greatest at the poles, and it also grows with wind speed. It deflects moving air to the right in the Northern Hemisphere, which is why winds aloft blow along the isobars instead of straight from high to low pressure.",
+    "ref": "FAA-H-8083-28B 10.3.2; FAA-H-8083-11B Ch. 4 (Coriolis Force)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-630",
+    "area": "WXT",
+    "topic": "Sea breeze front",
+    "stem": "Near the coast in late morning, a line of cumulus forms inland and the surface wind suddenly shifts to onshore. What has arrived?",
+    "choices": [
+      "A land breeze, the cool flow from the land toward the sea.",
+      "A warm front, the leading edge of a warmer air mass moving in.",
+      "A sea breeze front, the edge of cool, moist air from the sea."
+    ],
+    "answer": 2,
+    "explanation": "A sea breeze front marks the leading edge of cool, moist marine air pushing inland as the land heats, and it often brings a wind shift and a line of enhanced cumulus. A land breeze blows from land to sea at night or early morning, and a warm front is a large-scale air mass boundary, not a daily coastal effect.",
+    "ref": "FAA-H-8083-28B 10.6.1, 10.6.1.1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-631",
+    "area": "WXT",
+    "topic": "Land breeze",
+    "stem": "At a coastal launch site at dawn, a light surface wind is blowing from the land out toward the sea. What is it, and how does it compare with the afternoon breeze?",
+    "choices": [
+      "A sea breeze, usually stronger at dawn than in the afternoon.",
+      "A land breeze, usually weaker than the daytime sea breeze.",
+      "A land breeze, usually stronger than the daytime sea breeze."
+    ],
+    "answer": 1,
+    "explanation": "At night the land cools faster than the water, so higher pressure over the land drives a land breeze toward the sea, usually at night and in the early morning. The land breeze is usually weaker than the sea breeze, which blows from sea to land during the day.",
+    "ref": "FAA-H-8083-28B 10.6.2; FAA-H-8083-11B Ch. 4 (Convective Currents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-632",
+    "area": "WXT",
+    "topic": "Valley breeze",
+    "stem": "By late morning in a mountain valley on a sunny day, how does the local wind usually change?",
+    "choices": [
+      "It turns to blow up the valley and up the slopes.",
+      "It strengthens as a downslope flow into the valley.",
+      "It dies away and stays calm until sunset."
+    ],
+    "answer": 0,
+    "explanation": "Sunlit slopes heat the air in contact with them, lowering pressure over the slopes, so the daytime valley (anabatic) breeze blows up the valley and slopes. The downslope mountain (katabatic) breeze is the nighttime flow, which ends as the slopes warm.",
+    "ref": "FAA-H-8083-28B 10.6.4, 10.6.6; FAA-H-8083-11B Ch. 4 (Anabatic Winds; Katabatic Winds)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-633",
+    "area": "WXT",
+    "topic": "Lenticular clouds",
+    "stem": "Smooth, lens-shaped clouds sit motionless downwind of a mountain ridge. What do they indicate?",
+    "choices": [
+      "Stable, smooth air that is ideal for a flight over the ridge.",
+      "An approaching warm front, likely about a day away.",
+      "A mountain wave, with strong downdrafts and rotor turbulence."
+    ],
+    "answer": 2,
+    "explanation": "Lenticular clouds form in mountain waves; they stay in place, forming on the windward side and dissipating on the lee side. Mountain waves can hold sustained downdrafts and updrafts over 3,000 feet per minute, with rotors and severe turbulence in the lower levels. They are not a sign of smooth air or of a warm front.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Mountain Wave; Rotors)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-634",
+    "area": "WXT",
+    "topic": "Lee-side downdrafts",
+    "stem": "A balloon drifts toward a ridge in a moderate wind. Where should the pilot expect the strongest downward flow?",
+    "choices": [
+      "On the windward (upwind) side of the ridge.",
+      "On the lee (downwind) side of the ridge.",
+      "Only directly above the crest."
+    ],
+    "answer": 1,
+    "explanation": "Wind flows fairly smoothly up the windward side, and its rising currents help carry an aircraft over the crest. On the lee side the air follows the terrain down and becomes turbulent, tending to push an aircraft toward the slope, and the stronger the wind the worse it gets.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Obstructions & Wind)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-635",
+    "area": "WXT",
+    "topic": "Turbulence downwind of obstructions",
+    "stem": "The surface wind is 9 knots, and a 60-foot row of trees lies just upwind of the landing field. About how far downwind of the trees may the airflow be disturbed?",
+    "choices": [
+      "About 60 feet.",
+      "About 6,000 feet.",
+      "About 600 feet."
+    ],
+    "answer": 2,
+    "explanation": "The Balloon Flying Handbook says disrupted airflow often extends horizontally as much as ten times the height of the object when winds are 8 to 10 knots, so a 60-foot tree line can disturb the air about 600 feet downwind. A landing just past the trees may see the balloon 'drop in'.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Obstructions & Wind)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-636",
+    "area": "WXT",
+    "topic": "Thunderstorm cumulus stage",
+    "stem": "What marks the first (towering cumulus) stage of a thunderstorm cell?",
+    "choices": [
+      "Downdrafts and heavy rain reaching the ground.",
+      "An anvil top as the cell weakens.",
+      "A strong updraft, with no rain at the ground."
+    ],
+    "answer": 2,
+    "explanation": "The towering cumulus stage is defined by a strong updraft, which can exceed 3,000 feet per minute. The cell becomes mature when precipitation reaches the surface and downdrafts form beside the updrafts, and the dissipating stage is dominated by downdrafts, leaving an anvil.",
+    "ref": "FAA-H-8083-28B 22.3; FAA-H-8083-11B Ch. 4 (Stages in Thunderstorm Development)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-637",
+    "area": "WXT",
+    "topic": "How far thunderstorm hazards reach",
+    "stem": "According to the Balloon Flying Handbook, how far from a thunderstorm's core can its hazards, such as strong gusty winds, extend?",
+    "choices": [
+      "Usually about 5 miles at most.",
+      "As much as 30 miles or more.",
+      "Only under the anvil."
+    ],
+    "answer": 1,
+    "explanation": "The handbook warns that thunderstorm hazards may extend well away from the central core, sometimes as much as 30 miles or more. The first gust of the outflow can exceed 75 knots and shift up to 180° from the prevailing wind, so a storm that looks far away can still reach a launch or landing site.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Thunderstorms; Stages in Thunderstorm Development); AIM 7-1-26",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-638",
+    "area": "WXT",
+    "topic": "Microbursts",
+    "stem": "Under a high-based shower with virga, the pilot sees a ring of blowing dust spreading outward on the ground. What is it most likely?",
+    "choices": [
+      "A dust devil, a sign of a small thermal starting up.",
+      "A microburst: an intense downdraft spreading outward.",
+      "A sea breeze front moving inland from the coast."
+    ],
+    "answer": 1,
+    "explanation": "Virga at the cloud base and a ring of blowing dust are sometimes the only visible clues to a dry microburst. A typical microburst is less than 2.5 miles across and lasts about 5 to 15 minutes, with downdrafts up to 6,000 feet per minute. A dust devil is a small rotating column, not a spreading ring, and a sea breeze front is a coastal boundary, not an outflow under a shower.",
+    "ref": "FAA-H-8083-28B 22.7.3; AIM 7-1-24",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "WXT-639",
+    "area": "WXT",
+    "topic": "Thunderstorm ingredients",
+    "stem": "Which three things are needed for a thunderstorm to form?",
+    "choices": [
+      "Stable air, high moisture, and a strong surface inversion.",
+      "Dry unstable air, strong winds aloft, and clear skies.",
+      "Conditionally unstable air, high moisture, and lift."
+    ],
+    "answer": 2,
+    "explanation": "The Balloon Flying Handbook lists the minimum factors as conditionally unstable air with relatively high moisture and some type of lifting, such as heating, terrain, fronts or convergence. Stable air resists the vertical growth a cumulonimbus needs, and dry air can rise without forming clouds at all.",
+    "ref": "FAA-H-8083-11B Ch. 4 (Minimum Factors)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "WXT-640",
+    "area": "WXT",
+    "topic": "Air mass thunderstorms",
+    "stem": "When do scattered afternoon 'popcorn' thunderstorms over land usually dissipate?",
+    "choices": [
+      "Just before sunrise.",
+      "Around noon, as heating builds.",
+      "Near or just after sunset."
+    ],
+    "answer": 2,
+    "explanation": "Popcorn convection forms in response to daytime heating, usually in the afternoon, and these air mass storms almost always dissipate near or just after sunset as the land loses its heat. An evening flight still needs a check that the storms and their outflow have truly ended.",
+    "ref": "FAA-H-8083-28B 13.6.4; FAA-H-8083-11B Ch. 4 (Air Mass Thunderstorms)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  }
+]
