@@ -1,0 +1,702 @@
+[
+  {
+    "id": "THY-501",
+    "verdict": "fixed",
+    "issue": "Duplicate of THY-001 (lift = displaced outside air weighs more). Rewritten to the adjacent fact the BFH states: the buoyant force comes from the outside air's pressure difference between bottom and top.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 2 Why Do Balloons Fly? (pressure difference top/bottom) https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-502",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 2 Why Do Balloons Fly?: in-flight weight includes envelope air, components, equipment, pilot, passengers. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-503",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 2: 77,000 cu ft holds over 3,000 lb of air; weight and momentum make rapid changes difficult. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-504",
+    "verdict": "fixed",
+    "issue": "Ref: the 20-lb-per-1,000-cu-ft average is in BFH Ch. 3 (Performance Planning) only, not Ch. 2. Ref trimmed.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 3 Performance Planning (Maximum Allowable Gross Weight paragraph) https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-505",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: 20 lb per 1,000 cu ft; arithmetic 1,500/20 = 75,000; 1,500/76.5 = 19,600; 1,500 x 20 = 30,000. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-506",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 20% longer than the others. Key shortened, one distractor lengthened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-507",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 2: some fabrics become increasingly porous with age. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-508",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Straight & Level Flight: level flight when lift exactly matches weight. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-509",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 23% longer. Distractors lengthened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-510",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 24% longer. All choices trimmed; explanation keeps 'left alone it tends to fall'.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-511",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Straight & Level Flight: flying light, vent use, overcontrolling. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-512",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Ascents & Descents and Contour Flying: 6 to 15 seconds. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-513",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 26% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-514",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Ascents: estimate momentum and coast up to the desired altitude. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-515",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 6 Diminished Capacity: heat must be replaced and more added to stop downward momentum. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-516",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 38% longer and the only one saying 'standard'. Choices balanced.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-517",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Ascents: 15-20 s at 5,000 ft vs 30-40 s at sea level for 500 fpm. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-518",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Straight & Level: heavier load, higher ambient temperature or sun shorten the interval; Ch. 3 Cold Weather Flying: less fuel. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-519",
+    "verdict": "fixed",
+    "issue": "Physics and numbers verified exactly (76.5 x 519/672 = 59.1; lift 17.4; Fahrenheit-ratio mistake gives 55.2). CHECK reworded, kept for Brian's ruling.",
+    "suggested": "applied in file",
+    "source": "AWH 8.3.2 gas law; BFH Ch. 11 Lift at Sea Level (2.702 lb/m3 = 76.5 lb/1,000 cu ft); own arithmetic https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  {
+    "id": "THY-520",
+    "verdict": "fixed",
+    "issue": "Physics and key verified (17.4 -> 11.8 lb per 1,000 cu ft, 32% loss). The 69% distractor (41 deg / 59 deg) matched no real mistake; replaced with 27%, the result of scaling lift by the inside-outside temperature difference alone (112 vs 153 deg) and forgetting the hotter outside air is also thinner. Choices reordered ascending. CHECK kept for Brian's ruling.",
+    "suggested": "applied in file",
+    "source": "AWH 8.3.2; own arithmetic https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  {
+    "id": "THY-521",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AWH 8.3.2: rho = MP/RT with T the absolute temperature; AWH 5.5.2 Kelvin scale. https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  {
+    "id": "THY-522",
+    "verdict": "fixed",
+    "issue": "Physics and numbers verified (519 x 76.5/56.5 = 702.7 R = 242.7 F; Rankine-not-converted 703; Kelvin offset on F gives 177). CHECK reworded, kept for Brian's ruling.",
+    "suggested": "applied in file",
+    "source": "AWH 8.3.2; BFH Ch. 3 (250°F maximum continuous); own arithmetic https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  {
+    "id": "THY-523",
+    "verdict": "fixed",
+    "issue": "Same fact tested the same way as THY-003 (lift falls with altitude because air thins). Rewritten to the adjacent AWH fact: pressure dominates density vertically, temperature horizontally. Map line moved thy-lift -> thy-da (it now tests density factors).",
+    "suggested": "applied in file",
+    "source": "AWH FAA-H-8083-28 8.3.3 and 8.3.4 https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  {
+    "id": "THY-524",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3 Performance Planning and Fig. 3-13 (gross lift falls with altitude at a fixed envelope temperature). https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-525",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK 25C Ch. 4 Effect of Temperature on Density; BFH Ch. 3 Performance Planning. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "THY-526",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 13% longer. Trimmed.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-527",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: 1,400 lb at sea level, 1,150 lb or less at 4,000 ft; 1,350 - 1,150 = 200. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-528",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK 25C Ch. 4 Effect of Humidity on Density; AWH 8.3.5 (moist air less dense). https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "THY-529",
+    "verdict": "fixed",
+    "issue": "Explanation's 'plan to start down early' has no source; removed. Physics checked against BFH Ch. 2 (heat differential) and Ch. 4 (inversion). Key shortened (was the longest choice by 26%). Adjacent to THY-017 (the mirror case, climbing into warm air); kept as a different situation.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 2 (heat differential), Ch. 4 Temperature Variation with Altitude https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-530",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 6 Uncommanded (False) Lift: two lift forces at neutral buoyancy on the ground. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-531",
+    "verdict": "fixed",
+    "issue": "Near-duplicate of THY-011 (airflow lift is lost as the balloon accelerates to wind speed). Rewritten to the adjacent BFH fact: the recommended action at lift-off.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 6 False Lift, final paragraphs ('maintain a positive rate of climb until the false lift dissipates') https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-532",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 6 False Lift: descending through a low-level jet; 'false heavy' label is an incorrect perception. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-533",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 18% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-534",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 18% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-535",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 6 Diminished Capacity: 30 mph into 15 mph gives an effective 15 mph across the surface. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-536",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 6 Diminished Capacity: same two-second burn adds a much larger share of lifting heat to a light balloon. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-537",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 18% longer. Distractors lengthened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-538",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 27% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-539",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 24% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-540",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 26% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-541",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 7 Descents: skip one burn, then return to the level-flight regimen. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-542",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3 quoting AIM: density altitude is not to be used as a height reference. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-543",
+    "verdict": "fixed",
+    "issue": "Explanation mislabeled the choices ('the second mix' meant choice 0). Rewritten to name each wrong choice correctly.",
+    "suggested": "applied in file",
+    "source": "PHAK 25C Ch. 4 Density Altitude https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "THY-544",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK 25C Ch. 4 and Ch. 11: set 29.92 and read indicated altitude. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "THY-545",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "PHAK 25C Fig. 11-3 table: 30.20 = -257, 29.70 = +205, change 462 ft; Ch. 4 density directly proportional to pressure. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "THY-546",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 31% longer. Key shortened.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 3; 14 CFR 31.14(c) https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-547",
+    "verdict": "fixed",
+    "issue": "Explanation said 'the third choice reverses the two terms'; it is the second choice. Fixed.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 3 Performance Planning https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-548",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 31.14(b) verbatim: highest weight at which compliance with each applicable requirement of this part is shown. https://www.ecfr.gov/current/title-14/section-31.14"
+  },
+  {
+    "id": "THY-549",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 31.17(a)-(b): at least 300 ft in the first minute, at maximum weight +5 percent. https://www.ecfr.gov/current/title-14/section-31.17"
+  },
+  {
+    "id": "THY-550",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 24% longer (it is regulation wording). Distractors lengthened to match.",
+    "suggested": "applied in file",
+    "source": "14 CFR 61.125(b)(6)-(8) https://www.ecfr.gov/current/title-14/section-61.125"
+  },
+  {
+    "id": "THY-551",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 1,700-640-189-185-25 = 661; 661/170 = 3.89 -> 3; 850/170 = 5 without fuel. BFH Ch. 3 useful load definition. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-552",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 90 lb /4.2 = 21.4 -> 21; without equipment 26.2; without pilot 66.7. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-553",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 1,520-650-168-175 = 527; 807 from 1,800; 695 without fuel. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-554",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 1,080-168-22 = 890; 912; 1,058. BFH Ch. 3 useful load vs payload. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-555",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 140 - 40 = 100. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-556",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 63 + 32 = 95; 15 + 32 = 47. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-557",
+    "verdict": "fixed",
+    "issue": "Explanation for the 1,480 distractor was illogical ('fuel part of the empty weight'). Rewritten.",
+    "suggested": "applied in file",
+    "source": "Arithmetic; BFH Ch. 3 https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-558",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 4 x 32 = 128; 4 x 182 = 728. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-559",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3 example: 1,050 lb standard, 755 lb at '20° above standard'. The handbook gives no unit; the question quotes it without one and the arithmetic (1,010 - 755 = 255) does not depend on it. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-560",
+    "verdict": "fixed",
+    "issue": "Figure and key confirmed against BFH Fig. 3-13 (60°F, 190°F, 1,500 ft -> 1,120 lb; scale top 1,435). Key trimmed so it is not the longest.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 3 Fig. 3-13 sample calculation https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-561",
+    "verdict": "fixed",
+    "issue": "Giveaway: key was 23% longer. Distractors lengthened.",
+    "suggested": "applied in file",
+    "source": "BFH chapter cited in ref; length rebalance only https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-562",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: home-area listing acceptable as long as available and consulted when appropriate. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-563",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic and BFH Ch. 3 performance planning (plan for expected temperatures). https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-564",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: lifting capacity falls with altitude; plan for the highest altitude. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-565",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3 Performance Planning (Fig. 3-13 envelope-temperature lines); 14 CFR 91.9(a). https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-566",
+    "verdict": "fixed",
+    "issue": "Explanation overstated the BFH ('most vulnerable to diminished capacity'); BFH says shear is very dangerous to the low-level flight of a fully loaded balloon. Reworded.",
+    "suggested": "applied in file",
+    "source": "BFH Ch. 6 Diminished Capacity https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-567",
+    "verdict": "fixed",
+    "issue": "No public FAA text says exceeding the maximum envelope temperature 'weakens' fabric or makes it 'fail'. Reworded the key to what the BFH does say: heat degrades fabric coatings and treatments and shortens fabric life (Ch. 3, said of a wet envelope heated to flight temperatures); the limit itself is a manufacturer limitation (Glossary: Limitations, Overtemp). CHECK removed, confidence raised.",
+    "suggested": "applied in file",
+    "source": "BFH Glossary (Limitations; Overtemp), BFH Ch. 3 Weather bullet on wet envelopes; 14 CFR 91.9, 31.81; FAA web search found no FAA text tying overtemp to fabric failure https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-568",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: useful load = pilot, passengers, equipment, fuel. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-569",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic: 1,430-700-189-180-21 = 340 -> 2; 1,900 gives 810 -> 4; without fuel 529 -> 3. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "THY-570",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "BFH Ch. 3: performance chart is in the flight manual for the particular balloon. https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  {
+    "id": "DAC-501",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-502",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-503",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-504",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-505",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-506",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-507",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-508",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-509",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-510",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-511",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-512",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-513",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-514",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-515",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-516",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-517",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-518",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-519",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-520",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-521",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-522",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-523",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-524",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-525",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-526",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-527",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-528",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-529",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  },
+  {
+    "id": "DAC-530",
+    "verdict": "fixed",
+    "issue": "Key confirmed (exact elevation 2,955 ft, rounds to 3,000). Explanation's 'the 2,424-foot pressure altitude line' and '2,424 + 531 = 3,000' tightened to the exact figures.",
+    "suggested": "applied in file",
+    "source": "Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+  }
+]

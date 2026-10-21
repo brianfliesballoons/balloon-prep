@@ -1,0 +1,1980 @@
+[
+  {
+    "id": "THY-501",
+    "area": "THY",
+    "topic": "Buoyancy: where the force comes from",
+    "stem": "According to the Balloon Flying Handbook, the buoyant force on a balloon envelope comes from",
+    "choices": [
+      "the burner flame driving heated air up against the crown.",
+      "the outside air pressing harder on the bottom than on the top.",
+      "hot air inside pressing outward harder than the outside air."
+    ],
+    "answer": 1,
+    "explanation": "The handbook defines buoyancy as the upward force from the surrounding fluid, due to its pressure difference between the top and bottom of the object; that net force equals the weight of the air displaced. The flame only heats the air and gives no useful thrust. The heated air is lighter than the outside air, not held at a higher pressure; the mouth is open to the outside.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-502",
+    "area": "THY",
+    "topic": "Weight in flight",
+    "stem": "The Balloon Flying Handbook says a balloon's weight in flight is more than the figure in the flight manual. What does it include?",
+    "choices": [
+      "Only the flight manual empty weight plus the people aboard",
+      "The components, equipment, pilot, passengers and the air inside the envelope",
+      "Everything aboard except the envelope air, which weighs nothing once heated"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says in-flight weight includes the weight of the air within the inflated envelope as well as the components, equipment, pilot and passengers. Counting only the empty weight and people leaves out fuel, gear and the air mass. Heated air is lighter than outside air, but it still has weight, which is why the balloon is slow to respond.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-503",
+    "area": "THY",
+    "topic": "Air mass and response",
+    "stem": "The average 77,000-cubic-foot balloon holds more than 3,000 pounds of air. What does the Balloon Flying Handbook say this means for the pilot?",
+    "choices": [
+      "Its weight and momentum make rapid changes difficult.",
+      "Most burner heat goes into the fabric rather than the air.",
+      "A burn takes effect almost at once, since the air is already hot."
+    ],
+    "answer": 0,
+    "explanation": "The handbook points to the air mass (over 3,000 pounds in a 77,000-cubic-foot envelope) and the balloon's sheer momentum as the reason a pilot cannot make rapid changes. A burn does not act at once; the balloon takes several seconds to respond. The burner heats the air, which is what makes lift; the fabric only contains it.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-504",
+    "area": "THY",
+    "topic": "Lift per 1,000 cubic feet",
+    "stem": "The Balloon Flying Handbook gives an average of 20 pounds of lift for every 1,000 cubic feet of heated air. Using that average, about how much will a 90,000-cubic-foot envelope lift?",
+    "choices": [
+      "1,800 pounds",
+      "6,885 pounds",
+      "18,000 pounds"
+    ],
+    "answer": 0,
+    "explanation": "90,000 ÷ 1,000 = 90, and 90 × 20 = 1,800 pounds. 6,885 pounds is 90 × 76.5, the weight of the outside air the envelope displaces, not the lift it gives. 18,000 pounds comes from dividing by 100 instead of 1,000.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-11B Ch. 11 (Lift at Sea Level: weight of air)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-505",
+    "area": "THY",
+    "topic": "Envelope size for a load",
+    "stem": "A pilot needs about 1,500 pounds of gross lift. Using the Balloon Flying Handbook average of 20 pounds of lift per 1,000 cubic feet of heated air, what is the smallest envelope that would provide it?",
+    "choices": [
+      "19,600 cubic feet",
+      "30,000 cubic feet",
+      "75,000 cubic feet"
+    ],
+    "answer": 2,
+    "explanation": "1,500 ÷ 20 = 75 thousands of cubic feet, or 75,000 cubic feet. 30,000 comes from multiplying 1,500 by 20 instead of dividing. 19,600 comes from dividing by 76.5, the weight of 1,000 cubic feet of outside air, which is not the lift that air gives when heated.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-506",
+    "area": "THY",
+    "topic": "Heat differential and climb",
+    "stem": "According to the Balloon Flying Handbook, what makes a hot air balloon rise faster?",
+    "choices": [
+      "A larger envelope, whatever the temperature of the air inside it",
+      "A longer pause since the last burn, letting the heat settle",
+      "A greater difference between envelope and outside air temperature"
+    ],
+    "answer": 2,
+    "explanation": "The handbook states that the greater the heat differential between the air inside the envelope and the ambient air, the faster the balloon rises. A bigger envelope holds more air, but without enough heat it will not rise at all. Time since the last burn works the other way: the envelope cools and the balloon tends to descend.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-507",
+    "area": "THY",
+    "topic": "Heat loss: aging fabric",
+    "stem": "With the same load and weather, a pilot finds an older envelope needs noticeably more frequent burns to hold level than it did when new. What is the most likely reason?",
+    "choices": [
+      "Older fabric stretches, so the envelope holds more air that must be heated.",
+      "Fabric often becomes more porous with age, so hot air leaks out faster.",
+      "Older load tapes sag, so the crown sits lower and catches less heat."
+    ],
+    "answer": 1,
+    "explanation": "The handbook says hot air is always lost through the fabric, seams and deflation port, and that some fabrics become more porous with age, which means more fuel to hold altitude. Envelope volume is set by the gores and load tapes; a small stretch would not explain a steady rise in fuel use. Sagging tapes are an airworthiness problem, but the crown does not gain heat by sitting higher or lower.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-508",
+    "area": "THY",
+    "topic": "Equilibrium",
+    "stem": "A balloon is in equilibrium in level flight. Which statement is true?",
+    "choices": [
+      "Its burner can stay off with no change in altitude.",
+      "Its total lift exactly matches its total weight.",
+      "Its envelope air is the same temperature as the outside air."
+    ],
+    "answer": 1,
+    "explanation": "Level flight happens when lift exactly matches weight, so the balloon neither climbs nor descends. The envelope must be far hotter than the outside air to make that lift. The envelope air is always cooling, so burns are still needed to stay at equilibrium.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-509",
+    "area": "THY",
+    "topic": "Level flight as shallow waves",
+    "stem": "A pilot holds altitude with evenly spaced standard burns. Why does the Balloon Flying Handbook say the flight path is a series of very shallow waves?",
+    "choices": [
+      "Small thermals rising off the ground lift the balloon between burns.",
+      "The envelope swells with each burn and then shrinks between burns.",
+      "Each burn starts a slight climb, then the cooling air starts a slight sink."
+    ],
+    "answer": 2,
+    "explanation": "There is no practical way to hold envelope temperature constant: each burn makes the balloon tend to climb, and the always-cooling air makes it tend to descend, so well-timed burns trace shallow sine waves. The envelope's volume stays essentially fixed; lift changes with temperature, not size. Thermals are a separate weather hazard, not the cause of the normal wave.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-510",
+    "area": "THY",
+    "topic": "Flying heavy",
+    "stem": "In discussing level flight, what does the Balloon Flying Handbook mean by 'flying heavy'?",
+    "choices": [
+      "The balloon carries more than the day's load chart allows.",
+      "The pilot holds the envelope near its maximum temperature.",
+      "The flight path stays mostly below the target altitude."
+    ],
+    "answer": 2,
+    "explanation": "Flying heavy describes a level-flight wave that sits mostly on the low side of the desired altitude; left alone the balloon tends to fall, and the handbook warns it can be hazardous when contour flying. It is a burn-timing pattern, not an overload. Flying near the temperature limit is a loading issue, also not what the term means.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-511",
+    "area": "THY",
+    "topic": "Flying light and the vent",
+    "stem": "A student's altitude keeps drifting above the target, so the student keeps pulling the vent to come back down. What is this pattern called, and what is the concern?",
+    "choices": [
+      "False lift; it ends once the balloon matches wind speed.",
+      "Flying heavy; it can lead to contact with obstacles.",
+      "Flying light; it can turn into constant overcontrolling."
+    ],
+    "answer": 2,
+    "explanation": "A wave mostly on the high side of the desired altitude is flying light, which the handbook says is common in new pilots; using the vent to correct it can become a constant overcontrolling exercise. Flying heavy is the opposite, a wave mostly below the target. False lift comes from wind over the top of a balloon on the ground, not from burn timing.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-512",
+    "area": "THY",
+    "topic": "Response lag",
+    "stem": "After a burn, about how long can it take before the balloon itself responds?",
+    "choices": [
+      "1 to 2 seconds",
+      "6 to 15 seconds",
+      "30 to 45 seconds"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says the air inside the envelope keeps moving as it equalizes, and a pilot input can take 6 to 15 seconds to show as a reaction. 1 to 2 seconds is far too quick for an air mass of several thousand pounds. 30 to 45 seconds is closer to the interval between level-flight burns than to the response time.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents); FAA-H-8083-11B Ch. 7 (Contour Flying Techniques)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-513",
+    "area": "THY",
+    "topic": "Stacked small burns",
+    "stem": "Contour flying low over a field, a pilot makes a quick series of short burns because the balloon does not seem to respond to the first one. What is the hazard?",
+    "choices": [
+      "Short burns cool the envelope air, so the balloon will begin to descend.",
+      "Short burns do not ignite fully, so most of the propane escapes unburned.",
+      "Heat piles up before the burns take effect, so the balloon climbs too much."
+    ],
+    "answer": 2,
+    "explanation": "The handbook warns that a series of small burns can add heat before the effect of the last burn has been judged, since the balloon responds 6 to 15 seconds after the burner is used. Any burn adds heat; none of them cools the envelope. Short burns do lose track of how much heat was added, but the propane still burns.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Contour Flying Techniques)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-514",
+    "area": "THY",
+    "topic": "Momentum in a climb",
+    "stem": "A balloon is climbing at 400 feet per minute toward 1,500 feet MSL. The pilot keeps burning to hold that rate until the altimeter reads 1,500 feet, then stops. What should the pilot expect?",
+    "choices": [
+      "The balloon stops at 1,500 feet, since no more heat is added.",
+      "The balloon coasts above 1,500 feet before it slows and levels.",
+      "The balloon starts down at once, since the envelope begins to cool."
+    ],
+    "answer": 1,
+    "explanation": "Leveling off means estimating the momentum and coasting up to the target, so the climb must be slowed before arriving; the last burns also take seconds to act. A climbing balloon does not stop the instant heat stops. It will not reverse at once either, because it still carries extra heat and upward momentum.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents) (Ascents)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-515",
+    "area": "THY",
+    "topic": "Stopping a descent",
+    "stem": "A balloon is descending at 400 feet per minute and the pilot wants to level off. Compared with the heat needed for level flight at that altitude, what is needed?",
+    "choices": [
+      "Less heat, because the denser air lower down will stop the descent by itself",
+      "Exactly the level-flight heat; the balloon stops once it reaches that temperature",
+      "More heat at first to stop the downward momentum, then the normal level-flight rhythm"
+    ],
+    "answer": 2,
+    "explanation": "The handbook notes that the pilot must not only restore neutral buoyancy but add more heat to stop the downward momentum. Bringing the envelope only to equilibrium temperature leaves the balloon still moving down. Denser air lower down helps a little, but it will not reliably stop a 400-foot-per-minute descent.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity); FAA-H-8083-11B Ch. 7 (Ascents & Descents)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-516",
+    "area": "THY",
+    "topic": "Level flight burn rhythm",
+    "stem": "What starting premise does the Balloon Flying Handbook give an inexperienced pilot for holding an average balloon in level flight?",
+    "choices": [
+      "One 10-second burn about every 2 to 3 minutes",
+      "One 1-second burn about every 5 to 8 seconds",
+      "One 4-second burn about every 25 to 40 seconds"
+    ],
+    "answer": 2,
+    "explanation": "The handbook defines the standard burn as four seconds and suggests one about every 25 to 40 seconds as the starting rhythm for level flight. Long burns with long gaps make large swings in altitude. Very short, frequent burns lose track of the heat added, and four 1-second burns make less heat than one 4-second burn.",
+    "ref": "FAA-H-8083-11B Ch. 7 (The Standard Burn)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-517",
+    "area": "THY",
+    "topic": "Burn interval at altitude",
+    "stem": "In an average 77,000-cubic-foot balloon, a pilot holds a 500-foot-per-minute climb near sea level with a standard burn about every 35 seconds. According to the Balloon Flying Handbook, about how often may the same climb need a burn at 5,000 feet?",
+    "choices": [
+      "Every 15 to 20 seconds",
+      "Every 30 to 40 seconds",
+      "Every 45 to 60 seconds"
+    ],
+    "answer": 0,
+    "explanation": "The handbook gives a burn every 15 to 20 seconds at 5,000 feet against every 30 to 40 seconds at sea level for the same 500-foot-per-minute climb: the higher the altitude, the shorter the interval. 30 to 40 seconds is the sea-level figure. 45 to 60 seconds assumes the colder air aloft helps, but the thinner air means less lift for each burn.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents) (Ascents)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-518",
+    "area": "THY",
+    "topic": "What shortens the burn interval",
+    "stem": "Which pair of changes would both shorten the interval between burns needed to hold level flight?",
+    "choices": [
+      "A heavier load and colder outside air",
+      "A heavier load and warmer outside air",
+      "A lighter load and warmer outside air"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says a heavier basket load or higher ambient temperature calls for more fuel, by shortening the interval between burns. A lighter load lengthens the interval, so that pair works against itself. Colder outside air means a bigger temperature difference and less fuel, so that pair is mixed too.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Straight & Level Flight); FAA-H-8083-11B Ch. 3 (Cold Weather Flying)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-519",
+    "area": "THY",
+    "topic": "Lift from temperature difference",
+    "stem": "Outside air at 59°F weighs about 76.5 pounds per 1,000 cubic feet. At the same pressure, air density varies inversely with absolute temperature (°F + 460). If the envelope air is heated to 212°F, about how much does each 1,000 cubic feet lift?",
+    "choices": [
+      "59.1 pounds",
+      "55.2 pounds",
+      "17.4 pounds"
+    ],
+    "answer": 2,
+    "explanation": "The heated air weighs 76.5 × 519 ÷ 672 = 59.1 pounds, so each 1,000 cubic feet lifts 76.5 − 59.1 = 17.4 pounds. 59.1 pounds is the weight of the hot air itself, not the difference. 55.2 pounds comes from using the Fahrenheit numbers (59 ÷ 212) instead of absolute temperatures. CHECK: physics and numbers verified in round 2 (76.5 lb matches BFH Ch. 11's 2.702 lb per cubic meter; the gas law is AWH 8.3.2); Brian to rule whether absolute-temperature lift arithmetic belongs in the bank, since no FAA handbook works a hot air example.",
+    "ref": "FAA-H-8083-28 Ch. 8 (8.3 Density; 8.3.2 Changes in Density); FAA-H-8083-11B Ch. 11 (Lift at Sea Level: weight of air); FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "medium",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-520",
+    "area": "THY",
+    "topic": "Lift lost on a hot day",
+    "stem": "An envelope is held at 212°F. Outside air at 59°F weighs 76.5 pounds per 1,000 cubic feet, and density varies inversely with absolute temperature (°F + 460). Compared with a 59°F morning, about what share of the lift is lost on a 100°F afternoon at the same pressure?",
+    "choices": [
+      "About 7 percent",
+      "About 27 percent",
+      "About 32 percent"
+    ],
+    "answer": 2,
+    "explanation": "At 59°F each 1,000 cubic feet lifts 76.5 − 59.1 = 17.4 pounds. At 100°F the outside air weighs 76.5 × 519 ÷ 560 = 70.9 pounds, so the lift is 70.9 − 59.1 = 11.8 pounds, a loss of about 32 percent. 7 percent is only the drop in outside air weight; the lift is a small difference between two weights, so it falls much faster. 27 percent scales the lift by the temperature difference alone (112° instead of 153°), forgetting that the hotter outside air is also thinner. CHECK: physics and numbers verified in round 2; Brian to rule whether absolute-temperature lift arithmetic belongs in the bank (no FAA handbook works a hot air example).",
+    "ref": "FAA-H-8083-28 Ch. 8 (8.3 Density; 8.3.2 Changes in Density); FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?); FAA-H-8083-11B Ch. 3 (Cold Weather Flying)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "medium",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-521",
+    "area": "THY",
+    "topic": "Why absolute temperature",
+    "stem": "When comparing the weight of air at two temperatures, why must the temperatures be on an absolute scale, such as Rankine (°F + 460) or Kelvin (°C + 273)?",
+    "choices": [
+      "Fahrenheit and Celsius thermometers are not accurate at envelope temperatures above 200°F.",
+      "Gas density is inversely proportional to absolute temperature, not to Fahrenheit or Celsius degrees.",
+      "Absolute scales include the moisture in the air, which Fahrenheit and Celsius leave out."
+    ],
+    "answer": 1,
+    "explanation": "In the gas law the Aviation Weather Handbook gives (density = MP ÷ RT), T is the absolute temperature, so ratios must use an absolute scale. A good thermometer reads Fahrenheit accurately at 250°F; the problem is the scale's zero point, not accuracy. Humidity is a separate effect on density and has nothing to do with the temperature scale.",
+    "ref": "FAA-H-8083-28 Ch. 8 (8.3 Density; 8.3.2 Changes in Density)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-522",
+    "area": "THY",
+    "topic": "Envelope temperature for average lift",
+    "stem": "Outside air at 59°F weighs 76.5 pounds per 1,000 cubic feet, and density varies inversely with absolute temperature (°F + 460). About what envelope temperature gives the Balloon Flying Handbook's average lift of 20 pounds per 1,000 cubic feet?",
+    "choices": [
+      "About 177°F",
+      "About 243°F",
+      "About 703°F"
+    ],
+    "answer": 1,
+    "explanation": "The heated air must weigh 76.5 − 20 = 56.5 pounds, so absolute envelope temperature = 519 × 76.5 ÷ 56.5 = 703°R, or 243°F, close to the 250°F maximum continuous temperature of most balloons. 703°F forgets to subtract 460 to convert back from Rankine. 177°F adds 273 (the Kelvin offset) to a Fahrenheit temperature. CHECK: physics and numbers verified in round 2; Brian to rule whether absolute-temperature lift arithmetic belongs in the bank (same as THY-519).",
+    "ref": "FAA-H-8083-28 Ch. 8 (8.3 Density; 8.3.2 Changes in Density); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "medium",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-523",
+    "area": "THY",
+    "topic": "Density: vertical versus horizontal",
+    "stem": "The Aviation Weather Handbook says one factor has the greatest effect on air density in the vertical direction and another in the horizontal direction. Which pairing does it give?",
+    "choices": [
+      "Vertically, temperature; horizontally, pressure",
+      "Vertically, pressure; horizontally, temperature",
+      "Vertically, humidity; horizontally, pressure"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says pressure has the greatest effect on density vertically, because pressure falls quickly with height, and temperature has the greatest effect horizontally, as between New York and Miami. That vertical pressure effect is why a balloon loses lift as it climbs even though the air aloft is colder. The first choice reverses the two, and humidity is a smaller effect in either direction.",
+    "ref": "FAA-H-8083-28 Ch. 8 (8.3.3 Density's Effects on Pressure; 8.3.4 Temperature's Effects on Density); FAA-H-8083-25C Ch. 4 (Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-524",
+    "area": "THY",
+    "topic": "Load and ceiling",
+    "stem": "On the same morning a balloon flies once with two passengers and once with four. Each time the pilot climbs until the envelope reaches its maximum continuous temperature. Which flight reaches the higher altitude?",
+    "choices": [
+      "The two-passenger flight, since a lighter load needs less heat at any altitude",
+      "The four-passenger flight, since the extra weight gives it more momentum",
+      "Both reach the same altitude, since the temperature limit alone sets the ceiling"
+    ],
+    "answer": 0,
+    "explanation": "A lighter balloon needs a lower envelope temperature at every altitude, so it can climb higher before reaching the limit. Extra weight raises the temperature needed and lowers the ceiling; momentum does not add lift. The temperature limit sets the ceiling only together with the load and the day's air.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning) (Fig. 3-13)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-525",
+    "area": "THY",
+    "topic": "Warm day and ceiling",
+    "stem": "A balloon has the same load and the same maximum envelope temperature on two days. Day 1 is a standard day; on Day 2 the air at every altitude is 20°F warmer than standard. On Day 2 the highest altitude the balloon can reach is",
+    "choices": [
+      "higher, because the warmer air helps heat the envelope.",
+      "lower, because the warmer air is less dense at every level.",
+      "the same, because pressure, not temperature, sets the ceiling."
+    ],
+    "answer": 1,
+    "explanation": "Warmer air is less dense, so the same envelope temperature gives less lift at every level and the limit is reached lower down. Warm outside air does not add lift; it shrinks the temperature difference that makes lift. Pressure matters, but temperature also changes density, which is the point of density altitude.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-526",
+    "area": "THY",
+    "topic": "Performance chart: maximum altitude",
+    "stem": "In the Balloon Flying Handbook's performance chart example, which envelope temperature line is used to find the maximum altitude the balloon can reach for a given gross lift?",
+    "choices": [
+      "The 250°F line, the maximum continuous temperature for most balloons",
+      "The 190°F line, the envelope temperature the pilot planned for launch",
+      "The 212°F line, the temperature at which water boils at sea level"
+    ],
+    "answer": 0,
+    "explanation": "The example extends the ambient-temperature line to the 250°F diagonal, which the handbook calls the maximum continuous operating temperature for most balloons, and reads the altitude where it meets the gross lift line (10,000 feet in the example). The 190°F line was the pilot's own planning limit for the first part of the example. 212°F has no special meaning for envelope limits.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning) (Fig. 3-13)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-527",
+    "area": "THY",
+    "topic": "Lifting capacity at a high site",
+    "stem": "The Balloon Flying Handbook notes that a balloon able to lift 1,400 pounds at sea level may lift only 1,150 pounds or less at 4,000 feet. A pilot used to flying such a balloon near sea level at a 1,350-pound gross weight travels to a 4,000-foot site. Based on that example, what is the problem?",
+    "choices": [
+      "The load is 50 pounds too heavy, the margin below the sea level figure.",
+      "The load may be at least 200 pounds more than the balloon can lift there.",
+      "None, as long as the 1,400-pound sea level figure is not exceeded."
+    ],
+    "answer": 1,
+    "explanation": "At 4,000 feet the example balloon lifts 1,150 pounds or less, and 1,350 − 1,150 = 200 pounds too much. The sea level figure does not apply at a higher site, because capacity falls with altitude. 50 pounds is the margin under the sea level figure (1,400 − 1,350), which is the wrong comparison.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-528",
+    "area": "THY",
+    "topic": "Humidity and density",
+    "stem": "Two mornings have the same temperature and pressure, but one is very humid and the other dry. How does the humid air affect the balloon?",
+    "choices": [
+      "Humid air is slightly less dense, so density altitude is higher and lift a little lower.",
+      "Humid air is denser because water is heavier than air, so lift is a little higher.",
+      "Humidity has no effect on density; only pressure and temperature matter."
+    ],
+    "answer": 0,
+    "explanation": "Water vapor is lighter than air, so moist air is less dense than dry air; that raises density altitude and lowers performance. Liquid water is heavy, but water vapor mixed into the air is lighter than the air it replaces. The effect can be small, but the Pilot's Handbook says humidity can become an important factor.",
+    "ref": "FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-529",
+    "area": "THY",
+    "topic": "Descending below an inversion",
+    "stem": "A balloon flying level in warm air above a strong surface inversion starts a slow descent into the much colder air below, keeping the same burn rhythm. What should the pilot expect on entering the cold layer?",
+    "choices": [
+      "The descent slows or stops, since the colder air gives more lift.",
+      "The descent speeds up, since the cold, heavy air presses down on the envelope.",
+      "Nothing changes, since the envelope temperature itself has not changed."
+    ],
+    "answer": 0,
+    "explanation": "Colder outside air widens the inside-outside temperature difference, so the same envelope temperature gives more lift and can slow or stall a descent. Dense cold air pushes the balloon up, not down. Lift depends on the outside air as well as the envelope, so the change in outside temperature matters.",
+    "ref": "FAA-H-8083-11B Ch. 2 (Physics: Why Do Balloons Fly?); FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude: inversions)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-530",
+    "area": "THY",
+    "topic": "Two sources of lift on the ground",
+    "stem": "A balloon stands at neutral buoyancy on the ground in a light breeze. According to the Balloon Flying Handbook, which two sources of lift are combining to hold it there?",
+    "choices": [
+      "Buoyancy from the heated air, and warm air rising off the sunlit ground",
+      "Buoyancy from the heated air, and low pressure from wind flowing over the top",
+      "Buoyancy from the heated air, and upward thrust from the burner flame"
+    ],
+    "answer": 1,
+    "explanation": "The handbook says a balloon at neutral buoyancy on the ground has two lift forces: heated-air buoyancy and the low pressure made by air flowing over the top. The flame heats the air but gives no useful thrust. Rising warm air is a thermal effect later in the day, not the second lift component the handbook describes.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-531",
+    "area": "THY",
+    "topic": "False lift at lift-off",
+    "stem": "Just after lift-off in a breeze, a pilot suspects part of the balloon's lift is coming from wind over the top. What does the Balloon Flying Handbook say to do?",
+    "choices": [
+      "Maintain a positive rate of climb until the false lift dissipates.",
+      "Vent briefly so the balloon settles back onto the launch field.",
+      "Hold the burner off until the balloon has matched the wind speed."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says the first action is to keep flying the balloon and, at lift-off, to maintain a positive rate of climb until the false lift dissipates, because that airflow lift is lost as the balloon accelerates to the wind. Venting removes heat just as the airflow lift is about to vanish, which invites a sink back into the ground. Holding the burner off has the same effect, since heat is what must replace the lost airflow lift.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift) (False Lift; closing paragraphs)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-532",
+    "area": "THY",
+    "topic": "Descending through a low-level jet",
+    "stem": "Descending, a balloon's top passes briefly through the bottom of a faster low-level wind layer. The descent slows for a moment, then speeds up as the top drops back out of the fast air. The Balloon Flying Handbook explains this as",
+    "choices": [
+      "false heavy, caused by fast air flowing under the lower half of the envelope.",
+      "a thermal, since the descent slowed for a moment without added heat.",
+      "losing the airflow lift over the top, which some pilots wrongly call false heavy."
+    ],
+    "answer": 2,
+    "explanation": "With the top in faster air, airflow over it adds lift; when the top leaves that layer the extra lift disappears and the descent speeds up, and the handbook calls the false heavy label an incorrect perception. True false heavy happens when the lower half enters faster air and lift there points down. A thermal lifts the whole air mass and is not tied to crossing a wind layer.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift) (False Lift; False Heavy)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-533",
+    "area": "THY",
+    "topic": "False heavy and load",
+    "stem": "Why does the Balloon Flying Handbook say false heavy is more severe on a fully loaded balloon than on a lightly loaded one?",
+    "choices": [
+      "Taut fabric below the equator lets a low pressure area form there.",
+      "A heavier basket swings more and pulls the envelope down with it.",
+      "A heavier balloon descends faster and so meets the shear sooner."
+    ],
+    "answer": 0,
+    "explanation": "The handbook explains it by skin tension: a lightly loaded balloon has slack fabric low on the envelope, while a heavily loaded one has taut fabric where a low-pressure area can develop. Descent rate affects when the shear is met, not how strong the downward lift is. Basket swing is not the mechanism described.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift) (False Heavy)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-534",
+    "area": "THY",
+    "topic": "Wind across the mouth",
+    "stem": "Right after inflation, the balloon stands on the ground while fast-moving air blows across its mouth. What effect does the Balloon Flying Handbook describe?",
+    "choices": [
+      "A low pressure, like a venturi, that pulls hot air out of the envelope",
+      "Extra lift, as the moving air is forced up into the envelope mouth",
+      "Higher envelope pressure that pushes the deflation port open"
+    ],
+    "answer": 0,
+    "explanation": "Fast air across the mouth creates a dynamic low pressure, like a venturi, that draws static air out of the envelope; the handbook says it has the least impact of the airflow effects but matters while standing after inflation. Air is pulled out, not forced in. The effect lowers pressure, so it does not push the top open.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Uncommanded (False) Lift) (False Heavy)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-535",
+    "area": "THY",
+    "topic": "Shear and relative wind",
+    "stem": "A balloon descends abruptly from a layer moving at 30 mph into a surface layer moving at 15 mph, both in the same direction. About what wind does the envelope suddenly feel across its surface?",
+    "choices": [
+      "About 0 mph",
+      "About 15 mph",
+      "About 45 mph"
+    ],
+    "answer": 1,
+    "explanation": "The balloon was moving with the 30 mph air, so slower 15 mph air passes it at 30 − 15 = 15 mph; the handbook says this strips the boundary layer, raises heat loss and can dish the envelope. 45 mph adds the speeds as if the layers moved in opposite directions. 0 mph assumes that air moving the same way has no effect, but the speeds differ.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-536",
+    "area": "THY",
+    "topic": "Responsiveness and load",
+    "stem": "Why does a normal two-second burn change a lightly loaded balloon's flight path more than a heavily loaded one's?",
+    "choices": [
+      "It adds a larger share of the total lifting heat that the light balloon needs.",
+      "A lighter basket lets the flame reach higher into the envelope.",
+      "A light balloon holds less air, so the heat spreads through it faster."
+    ],
+    "answer": 0,
+    "explanation": "The handbook says the same burn adds only a small percentage of the heat a heavily loaded balloon needs, but a much larger percentage for a light one, which is a simple way to see responsiveness. Flame height depends on the burner, not the load. Envelope volume is the same whatever the load.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-537",
+    "area": "THY",
+    "topic": "Signs of shear",
+    "stem": "Which of these does the Balloon Flying Handbook list as a sign of wind shear to watch for?",
+    "choices": [
+      "A pilot light flame that turns yellow, soft and wavering",
+      "A sudden rise in the reading on the envelope temperature gauge",
+      "Movement of the crown line, handling lines, skirt or basket"
+    ],
+    "answer": 2,
+    "explanation": "The handbook lists movement of crown lines, handling lines, throat ropes, the skirt or even the basket as signs of shear. A shear tends to cost heat, so a rising temperature reading is not the sign. A yellow pilot light points to a fuel or burner issue, not shear.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-538",
+    "area": "THY",
+    "topic": "Shear on final approach",
+    "stem": "Lowering into a much slower surface wind on final approach, why can a balloon seem fine at first and then drop hard?",
+    "choices": [
+      "The slower air is warmer, so lift is lost only after a long delay.",
+      "The basket lags behind the envelope, so the drop comes after the swing.",
+      "Brief false lift hides the heat being lost until the balloon slows."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says that as the balloon enters slower air and distorts, false lift exists for a moment and masks the heat loss; when the balloon slows and leaves the faster air, the false lift and dishing disappear and it can descend out of control. The surface layer need not be warmer. Basket swing is not the cause described.",
+    "ref": "FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-539",
+    "area": "THY",
+    "topic": "Wind direction change on descent",
+    "stem": "Planning a landing descent, a pilot expects the wind to turn about 45° to the left at 400 feet AGL. What does the Balloon Flying Handbook advise watching closely during that turn?",
+    "choices": [
+      "The descent rate, since the turn's cooling costs some lift",
+      "The fuel gauges, since burner output drops when the wind shifts",
+      "The envelope temperature limit, since the turn heats the crown"
+    ],
+    "answer": 0,
+    "explanation": "In the handbook's approach example the balloon loses some lift from the cooling effect of the wind direction change, so the descent rate should be closely monitored during the turn. A wind shift does not change burner output. The turn cools the envelope rather than heating it.",
+    "ref": "FAA-H-8083-11B Ch. 8 (The Approach)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-540",
+    "area": "THY",
+    "topic": "How the vent works",
+    "stem": "How does opening the vent make a balloon descend?",
+    "choices": [
+      "Outside air pressure pushes down through the opening onto the crown.",
+      "The envelope partly collapses and so displaces less air at the same heat.",
+      "Hot air leaves at the top and cooler air enters at the mouth."
+    ],
+    "answer": 2,
+    "explanation": "The vent releases hot air from the envelope and draws cooler air in at the mouth, which lowers the overall temperature and lift. Outside air does not press down through the opening; the hot air is escaping upward. The envelope keeps its shape in normal venting, so its volume does not change.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents) (Descents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-541",
+    "area": "THY",
+    "topic": "Starting a gentle descent",
+    "stem": "A pilot flying level with a steady rhythm of standard burns wants a gentle, constant-rate descent. What technique does the Balloon Flying Handbook describe?",
+    "choices": [
+      "Skip one burn, then return to the level-flight rhythm to hold the descent.",
+      "Open the vent briefly after every burn until the balloon starts down.",
+      "Stop burning entirely until the balloon reaches the target altitude."
+    ],
+    "answer": 0,
+    "explanation": "To start a descent from level flight the handbook says to skip one burn, then return to the level-flight routine to hold a constant rate. Stopping all burns lets the balloon keep cooling and the descent keep speeding up. The vent should be used sparingly, not instead of patience, unless a rapid change is needed.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Ascents & Descents) (Descents)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-542",
+    "area": "THY",
+    "topic": "Density altitude is not a height",
+    "stem": "At a launch site at 4,000 feet MSL the pilot computes a density altitude of 7,500 feet. What does that 7,500-foot figure mean?",
+    "choices": [
+      "The balloon must not climb more than 7,500 feet above the launch site.",
+      "The balloon will perform as it would at 7,500 feet in the standard atmosphere.",
+      "The altimeter will read 7,500 feet at the launch site when set to 29.92."
+    ],
+    "answer": 1,
+    "explanation": "Density altitude measures air density for judging performance; the handbook quotes the AIM that it is not to be used as a height reference. It sets no altitude limit. An altimeter set to 29.92 shows pressure altitude, which does not include the temperature correction.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-543",
+    "area": "THY",
+    "topic": "Conditions for high density altitude",
+    "stem": "Which set of conditions produces the highest density altitude?",
+    "choices": [
+      "Low elevation, low pressure, high temperature and low humidity",
+      "High elevation, high pressure, low temperature and low humidity",
+      "High elevation, low pressure, high temperature and high humidity"
+    ],
+    "answer": 2,
+    "explanation": "The Pilot's Handbook lists high elevation, low atmospheric pressure, high temperature and high humidity as the conditions that make a high density altitude. The second choice has high pressure, low temperature and dry air, all of which make the air denser. The first choice has the right pressure and temperature, but its low elevation and dry air both pull it back toward denser air.",
+    "ref": "FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-544",
+    "area": "THY",
+    "topic": "Reading pressure altitude",
+    "stem": "Standing in the basket, how can a pilot read pressure altitude directly from the altimeter?",
+    "choices": [
+      "Set the altimeter to zero at the field and add the field elevation.",
+      "Set the barometric scale to 29.92 and read the indicated altitude.",
+      "Set the current altimeter setting and read the indicated altitude."
+    ],
+    "answer": 1,
+    "explanation": "With 29.92 in the window the altimeter shows height above the standard datum plane, which is pressure altitude. With the local setting it shows indicated altitude, close to true elevation at the field. Zeroing it at the field gives height above the field, not pressure altitude.",
+    "ref": "FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-545",
+    "area": "THY",
+    "topic": "Falling pressure and density",
+    "stem": "Overnight, a low pressure system moves in and the altimeter setting drops from 30.20 to 29.70. The launch temperature is the same as yesterday. Compared with yesterday, the air at the launch site is",
+    "choices": [
+      "the same density, since the temperature has not changed.",
+      "less dense, so the balloon has a little less lift.",
+      "denser, so the balloon has a little more lift."
+    ],
+    "answer": 1,
+    "explanation": "Density varies directly with pressure, so lower pressure means thinner air; the pressure altitude rises by about 460 feet (from −257 to +205 on the conversion table). Higher pressure, not lower, would make the air denser. Temperature is only one of the factors; pressure changes density on its own.",
+    "ref": "FAA-H-8083-25C Ch. 4 (Pressure Altitude; Density Altitude; Effect of Pressure, Temperature and Humidity on Density); FAA-H-8083-25C Ch. 11 (Fig. 11-3, altimeter conversion)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-546",
+    "area": "THY",
+    "topic": "Where to find maximum gross weight",
+    "stem": "Where does the Balloon Flying Handbook say a balloon's maximum allowable gross weight can be found?",
+    "choices": [
+      "In the Type Certificate Data Sheet and the balloon's flight manual",
+      "On the pilot's certificate, as a limitation for that balloon size",
+      "In 14 CFR part 31, which lists maximum weights by envelope size"
+    ],
+    "answer": 0,
+    "explanation": "The handbook says the figure is set in the design criteria, addressed in the Type Certificate Data Sheet, and found on the weight and balance page of that balloon's flight manual. Part 31 tells manufacturers how to establish weight limits but lists no weights. Pilot certificates carry no gross weight limits.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); 14 CFR 31.14(c)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-547",
+    "area": "THY",
+    "topic": "Useful load versus payload",
+    "stem": "How does the Balloon Flying Handbook distinguish useful load from payload?",
+    "choices": [
+      "Useful load includes fuel and equipment; payload is only occupants, cargo and baggage.",
+      "Payload includes the fuel; useful load is only the people aboard the balloon.",
+      "They are the same thing: everything aboard the balloon except the envelope."
+    ],
+    "answer": 0,
+    "explanation": "Useful load is the pilot, passengers, equipment and fuel (maximum gross weight minus basic empty weight); payload in aviation is the weight of occupants, cargo and baggage, and the handbook notes the two are often confused. The second choice reverses the two terms. They are not the same, because fuel and equipment count only in useful load.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-548",
+    "area": "THY",
+    "topic": "How maximum weight is set",
+    "stem": "Under 14 CFR 31.14, a balloon's maximum weight is the highest weight at which",
+    "choices": [
+      "compliance with each applicable requirement of part 31 is shown.",
+      "the envelope can lift the load at 250°F on a standard day.",
+      "the pilot's own performance chart shows a lift margin."
+    ],
+    "answer": 0,
+    "explanation": "Section 31.14 sets maximum weight as the highest weight at which compliance with each applicable requirement is shown, no more than the design maximum for structural loads or the highest weight meeting the flight requirements. It is not simply what the envelope can lift at a given temperature, which is why a cold day does not raise it. A pilot's chart work cannot change a certificated limit.",
+    "ref": "14 CFR 31.14(b); 14 CFR 91.9(a)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-549",
+    "area": "THY",
+    "topic": "Certification climb requirement",
+    "stem": "Under 14 CFR 31.17, at its maximum weight a balloon must be able to climb at least how far in the first minute after takeoff?",
+    "choices": [
+      "100 feet",
+      "300 feet",
+      "500 feet"
+    ],
+    "answer": 1,
+    "explanation": "Section 31.17 requires a climb of at least 300 feet in the first minute after takeoff at a steady rate, shown at maximum weight (with a +5 percent tolerance) at each altitude and temperature for which approval is sought. 100 feet is too low. 500 feet per minute is a fast climb the handbook mentions for maneuvering, not the certification standard.",
+    "ref": "14 CFR 31.17",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-550",
+    "area": "THY",
+    "topic": "Knowledge areas for loading",
+    "stem": "14 CFR 61.125(b) lists three commercial knowledge areas that cover loading and performance. Which set is it?",
+    "choices": [
+      "Weight and balance computations, use of performance charts, and effects of exceeding performance limits",
+      "Weight and balance computations, propane system repair, and envelope fabric porosity testing",
+      "Use of performance charts, load tape inspection, and burner output and fuel pressure testing"
+    ],
+    "answer": 0,
+    "explanation": "Paragraphs (b)(6), (7) and (8) of 61.125 are weight and balance computations, use of performance charts, and the significance and effects of exceeding aircraft performance limitations. Propane repairs, fabric testing, load tape inspection and burner testing are maintenance subjects, not part of that list.",
+    "ref": "14 CFR 61.125(b)(6)-(8)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-551",
+    "area": "THY",
+    "topic": "Load calculation: passengers",
+    "stem": "A balloon's maximum gross weight is 1,700 pounds, and today's load chart allows that full amount. Its empty weight (envelope, basket, burner, empty tanks) is 640 pounds. It carries three 15-gallon tanks, full. The pilot weighs 185 pounds, and extra equipment not in the empty weight weighs 25 pounds. Propane weighs about 4.2 pounds per gallon. How many 170-pound passengers can be carried?",
+    "choices": [
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "Fuel weighs 45 × 4.2 = 189 pounds. 1,700 − 640 − 189 − 185 − 25 = 661 pounds, and 661 ÷ 170 = 3.89, so 3 passengers; a fraction of a passenger cannot be rounded up. 4 rounds 3.89 up, which puts the balloon over its limit. 5 leaves out the 189 pounds of fuel (850 ÷ 170 = 5).",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-552",
+    "area": "THY",
+    "topic": "Load calculation: fuel",
+    "stem": "A balloon's maximum gross weight is 1,400 pounds and its empty weight is 620 pounds. The pilot weighs 190 pounds, three passengers weigh 480 pounds together, and extra equipment weighs 20 pounds. Propane weighs about 4.2 pounds per gallon. What is the most propane, in whole gallons, that can be carried without exceeding maximum gross weight?",
+    "choices": [
+      "66 gallons",
+      "26 gallons",
+      "21 gallons"
+    ],
+    "answer": 2,
+    "explanation": "1,400 − 620 − 190 − 480 − 20 = 90 pounds for fuel, and 90 ÷ 4.2 = 21.4, so 21 gallons. 26 gallons leaves out the 20 pounds of equipment. 66 gallons leaves out the pilot. With so little fuel allowed, the better plan is likely one fewer passenger.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-553",
+    "area": "THY",
+    "topic": "Load chart below maximum gross",
+    "stem": "A balloon's maximum gross weight is 1,800 pounds. For today's expected temperature, pressure altitude and envelope temperature limit, its load chart shows a gross lift of 1,520 pounds. Empty weight is 650 pounds, it carries two full 20-gallon tanks, and the pilot weighs 175 pounds. Propane weighs about 4.2 pounds per gallon. How much weight is left for passengers?",
+    "choices": [
+      "527 pounds",
+      "695 pounds",
+      "807 pounds"
+    ],
+    "answer": 0,
+    "explanation": "The smaller limit wins, so start from the chart's 1,520 pounds. Fuel is 40 × 4.2 = 168 pounds, and 1,520 − 650 − 168 − 175 = 527 pounds. 807 pounds starts from the 1,800-pound maximum, which today's air cannot lift. 695 pounds forgets the fuel.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); 14 CFR 91.9(a)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-554",
+    "area": "THY",
+    "topic": "Payload available",
+    "stem": "A balloon's useful load is 1,080 pounds. It will carry 40 gallons of propane and 22 pounds of equipment. Propane weighs about 4.2 pounds per gallon. How much is left for payload (the occupants, pilot included, and their baggage)?",
+    "choices": [
+      "1,058 pounds",
+      "912 pounds",
+      "890 pounds"
+    ],
+    "answer": 2,
+    "explanation": "Fuel is 40 × 4.2 = 168 pounds, so 1,080 − 168 − 22 = 890 pounds of payload. 912 pounds forgets the equipment. 1,058 pounds forgets the fuel, treating useful load and payload as the same thing.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-555",
+    "area": "THY",
+    "topic": "Forgetting the pilot",
+    "stem": "A pilot works out a load that comes to 40 pounds under the balloon's maximum gross weight, then realizes she left her own 140 pounds out of the sum. By how much is the balloon actually over its maximum gross weight?",
+    "choices": [
+      "40 pounds",
+      "100 pounds",
+      "140 pounds"
+    ],
+    "answer": 1,
+    "explanation": "Adding the missing 140 pounds to a figure that was 40 pounds under gives 140 − 40 = 100 pounds over. 140 pounds ignores the 40-pound margin the sum already had. 40 pounds repeats the old margin as if it were the overage.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-556",
+    "area": "THY",
+    "topic": "Leaving a tank behind",
+    "stem": "To make room for another passenger, a pilot considers leaving one full 15-gallon tank on the ground. The tank weighs 32 pounds empty. Propane weighs about 4.2 pounds per gallon. How much weight does that save?",
+    "choices": [
+      "47 pounds",
+      "63 pounds",
+      "95 pounds"
+    ],
+    "answer": 2,
+    "explanation": "The fuel is 15 × 4.2 = 63 pounds, plus the 32-pound tank, for 95 pounds. 63 pounds counts only the propane. 47 pounds adds 15 gallons as if they were 15 pounds. The pilot must still meet the fuel plan with the tanks that remain.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-11B Ch. 6 (Performance Planning/Fuel Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-557",
+    "area": "THY",
+    "topic": "Weight change in flight",
+    "stem": "A balloon takes off at a gross weight of 1,480 pounds and burns 26 gallons of propane during the flight. Propane weighs about 4.2 pounds per gallon. About what is its gross weight at landing?",
+    "choices": [
+      "1,371 pounds",
+      "1,454 pounds",
+      "1,480 pounds"
+    ],
+    "answer": 0,
+    "explanation": "26 × 4.2 = 109.2 pounds of fuel burned, so 1,480 − 109.2 ≈ 1,371 pounds; the lighter balloon needs a slightly lower envelope temperature to hold level near landing. 1,454 pounds subtracts the gallons as if they were pounds. 1,480 pounds ignores that burned propane leaves the balloon as exhaust, so the gross weight falls during the flight.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-558",
+    "area": "THY",
+    "topic": "Guessing passenger weights",
+    "stem": "A pilot plans four passengers at a guessed 150 pounds each, which puts the balloon exactly at the day's load limit. The passengers actually average 182 pounds. How far over the limit is the balloon?",
+    "choices": [
+      "32 pounds",
+      "128 pounds",
+      "728 pounds"
+    ],
+    "answer": 1,
+    "explanation": "Each passenger is 182 − 150 = 32 pounds heavier than planned, and 4 × 32 = 128 pounds over. 32 pounds is the error for one person only. 728 pounds is the passengers' actual total weight, not the overage. Ask for real weights rather than guessing.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-559",
+    "area": "THY",
+    "topic": "Warmer than standard: useful load",
+    "stem": "The Balloon Flying Handbook's example balloon has a useful load of 1,050 pounds at 5,000 feet pressure altitude on a standard day, falling to 755 pounds when the temperature is 20° above standard. A pilot planned exactly 1,010 pounds of useful load from the standard-day figure, and the day turns out 20° above standard. How much must come off the planned load?",
+    "choices": [
+      "255 pounds",
+      "295 pounds",
+      "335 pounds"
+    ],
+    "answer": 0,
+    "explanation": "The planned 1,010 pounds must come down to 755 pounds: 1,010 − 755 = 255 pounds. 295 pounds is the whole drop in useful load (1,050 − 755) and ignores the 40-pound margin the plan already had. 335 pounds adds that margin instead of subtracting it.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-560",
+    "area": "THY",
+    "topic": "Using the performance chart result",
+    "stem": "In the Balloon Flying Handbook's performance chart example (60°F outside, 190°F envelope limit, 1,500 feet pressure altitude), the expected gross lift is 1,120 pounds. With the same limits, a pilot's planned gross weight that day is 1,250 pounds. What is correct?",
+    "choices": [
+      "The plan is fine, since 1,250 pounds is under the 1,435-pound top of the chart.",
+      "The plan is 130 pounds too heavy for those limits; the load or limits must change.",
+      "The plan is fine, since gross lift leaves out the envelope, basket and burner."
+    ],
+    "answer": 1,
+    "explanation": "1,250 − 1,120 = 130 pounds more than the balloon is expected to lift under those limits, so the load must drop, or the planned envelope temperature or altitude limits must change while staying inside the flight manual. The top of the chart's scale is not today's lift. Gross lift is the lift for the whole balloon, so the empty weight is included in what it must carry.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning) (Fig. 3-13)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-561",
+    "area": "THY",
+    "topic": "Performance chart factors",
+    "stem": "The Balloon Flying Handbook says that if three of the four factors on a balloon performance chart are known, the fourth can be found. Which four factors are they?",
+    "choices": [
+      "Ambient temperature, envelope temperature, pressure altitude and gross lift",
+      "Ambient temperature, wind speed, fuel quantity on board and gross lift",
+      "Envelope volume, burner BTU output, density altitude and payload"
+    ],
+    "answer": 0,
+    "explanation": "The chart is entered at ambient temperature, traced to envelope temperature, then to pressure altitude, and read as gross lift; any three give the fourth. Wind and fuel quantity are not chart inputs. Envelope volume and burner output are built into the chart for that balloon, and the chart reads gross lift, not payload.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning) (Fig. 3-13)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-562",
+    "area": "THY",
+    "topic": "Home-area performance card",
+    "stem": "Instead of working the performance chart before every flight, a pilot keeps a card listing weights, temperatures and altitudes for typical home-area conditions. What does the Balloon Flying Handbook say about this?",
+    "choices": [
+      "It is not allowed; the chart must be worked from the flight manual before each flight.",
+      "It replaces the flight manual, which then need not be carried in the balloon.",
+      "It is acceptable, as long as the information is available and consulted when appropriate."
+    ],
+    "answer": 2,
+    "explanation": "The handbook says the chart need not be worked at the start of every flight, and a listing for the home area is acceptable as long as it is available and consulted when appropriate. Nothing requires reworking the chart each time. A card never replaces the flight manual's limits or procedures.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-563",
+    "area": "THY",
+    "topic": "Plan for the warmest temperature",
+    "stem": "At the planned 2,000 feet pressure altitude and the balloon's envelope temperature limit, its load chart gives a gross lift of 1,640 pounds at 40°F, 1,510 pounds at 60°F and 1,380 pounds at 80°F. Launch will be at 40°F, and the temperature is forecast to reach 60°F before landing. What is the highest gross weight the pilot should plan?",
+    "choices": [
+      "1,640 pounds",
+      "1,575 pounds",
+      "1,510 pounds"
+    ],
+    "answer": 2,
+    "explanation": "Plan for the warmest air expected during the flight, since lift falls as the day warms: 1,510 pounds at 60°F. 1,640 pounds is good only at launch and leaves the balloon heavy later in the flight. 1,575 pounds averages the two, which still exceeds what the balloon can lift by landing time.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-564",
+    "area": "THY",
+    "topic": "Plan for the highest altitude",
+    "stem": "At 50°F and the balloon's envelope temperature limit, its load chart gives a gross lift of 1,560 pounds at 1,000 feet, 1,450 pounds at 3,000 feet and 1,340 pounds at 5,000 feet pressure altitude. The balloon will launch at 1,000 feet, and the pilot plans to climb to 5,000 feet to reach a faster wind. What is the highest gross weight the pilot should plan?",
+    "choices": [
+      "1,340 pounds",
+      "1,450 pounds",
+      "1,560 pounds"
+    ],
+    "answer": 0,
+    "explanation": "Lifting capacity falls with altitude, so plan for the highest altitude in the flight: 1,340 pounds at 5,000 feet. 1,560 pounds works only near the launch altitude. 1,450 pounds is the 3,000-foot value and would leave the balloon unable to hold 5,000 feet within its limit.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-565",
+    "area": "THY",
+    "topic": "Temperature limit and load",
+    "stem": "Why does the envelope's maximum temperature limit also limit how much a balloon can carry?",
+    "choices": [
+      "The limit applies only on the ground, before the full load is in the basket.",
+      "The limit applies to the burner, which loses output when the basket is heavily loaded.",
+      "A heavier load needs a hotter envelope, and the limit caps that temperature and so the lift."
+    ],
+    "answer": 2,
+    "explanation": "Lift comes from the temperature difference, so more weight needs more heat; once the envelope reaches its limit, no more lift is available. The burner's output does not depend on the basket load. The limit is a flight manual operating limitation that applies throughout the flight.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); 14 CFR 91.9(a)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-566",
+    "area": "THY",
+    "topic": "Flying at the limit",
+    "stem": "On a hot afternoon, a heavily loaded balloon needs an envelope temperature just under its limit simply to hold level. What is the main problem?",
+    "choices": [
+      "The balloon will be slow to descend, so the landing will be long.",
+      "The tanks will lose pressure, since propane pressure falls in heat.",
+      "There is almost no heat in reserve to climb or to stop a descent."
+    ],
+    "answer": 2,
+    "explanation": "With the envelope near its limit just for level flight, the pilot cannot add heat to climb over an obstacle, stop a descent or answer a shear without exceeding the limit; the handbook warns that shear is very dangerous to the low-level flight of a fully loaded balloon. A hot, heavy balloon descends readily once heat is held back. Propane pressure rises with temperature, not falls.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); FAA-H-8083-11B Ch. 6 (Diminished Capacity)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-567",
+    "area": "THY",
+    "topic": "Exceeding the envelope temperature",
+    "stem": "What is the main hazard of flying a balloon above its maximum envelope temperature?",
+    "choices": [
+      "The burner flame becomes unstable once the envelope passes that limit.",
+      "Heat can degrade the fabric's coatings and shorten the envelope's life.",
+      "The temperature gauge stops reading accurately above that temperature."
+    ],
+    "answer": 1,
+    "explanation": "The maximum envelope temperature is a limitation the manufacturer places on the balloon (the handbook calls heating past it an overtemp), and 91.9 requires staying within it. The handbook warns that heat can degrade fabric coatings and treatments and decrease the life of the fabric; it says this of a wet envelope heated to flight temperatures, its most direct statement on heat and fabric. Burner flame stability and gauge accuracy are not why the limit exists.",
+    "ref": "FAA-H-8083-11B Glossary (Limitations; Overtemp); FAA-H-8083-11B Ch. 3 (Weather: flying in precipitation); 14 CFR 91.9(a); 14 CFR 31.81(a)(1)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "THY-568",
+    "area": "THY",
+    "topic": "What counts against useful load",
+    "stem": "A pilot is working out the useful load for the day. Which items must come out of it?",
+    "choices": [
+      "The pilot, passengers, fuel, and any equipment not in the basic empty weight",
+      "The passengers and fuel only, since the pilot is counted in the empty weight",
+      "Only the passengers and their bags, since the pilot and fuel are in the empty weight"
+    ],
+    "answer": 0,
+    "explanation": "Useful load is the potential weight of the pilot, passengers, equipment and fuel, found by subtracting the basic empty weight from the maximum gross weight. The basic empty weight in the flight manual does not include the pilot or the fuel. Leaving either out makes the balloon heavier than the pilot thinks.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-569",
+    "area": "THY",
+    "topic": "Hot day: passengers from the chart",
+    "stem": "A balloon's maximum gross weight is 1,900 pounds, but on this hot day its load chart allows a gross lift of only 1,430 pounds. Empty weight is 700 pounds, it carries three full 15-gallon tanks, the pilot weighs 180 pounds, and equipment adds 21 pounds. Propane weighs about 4.2 pounds per gallon. How many 165-pound passengers can it carry?",
+    "choices": [
+      "4",
+      "3",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "Fuel is 45 × 4.2 = 189 pounds. From the chart's 1,430: 1,430 − 700 − 189 − 180 − 21 = 340 pounds, and 340 ÷ 165 = 2.06, so 2. 4 uses the 1,900-pound maximum, which today's air cannot lift. 3 leaves out the fuel.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "THY-570",
+    "area": "THY",
+    "topic": "Using the right chart",
+    "stem": "A pilot borrows a larger envelope from the same manufacturer for a passenger flight. Which performance chart should be used for load planning?",
+    "choices": [
+      "The chart for the pilot's own smaller balloon, since it is more conservative",
+      "Any chart from that manufacturer, since all its charts use the same data",
+      "The chart in the flight manual for that specific balloon"
+    ],
+    "answer": 2,
+    "explanation": "The handbook says the performance chart is in the flight manual for the particular balloon, and 91.9 requires operating within that balloon's limits. A smaller balloon's chart is not conservative for a different envelope; the numbers simply do not apply. Charts differ by envelope size and model, so one chart cannot serve them all.",
+    "ref": "FAA-H-8083-11B Ch. 3 (Performance Planning); 14 CFR 91.9(a)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-501",
+    "area": "DAC",
+    "topic": "Density altitude, summer lowland",
+    "stem": "(Refer to the density altitude chart.) A balloon launches from a river valley on a summer morning. The field elevation is 1,200 feet MSL, the altimeter setting is 29.80, and the outside air temperature is 34°C (93°F). What is the approximate density altitude?",
+    "choices": [
+      "1,300 feet",
+      "3,900 feet",
+      "5,400 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 1,200 + 112 = 1,312 feet, where standard temperature is 15 − 1.98 × 1.31 ≈ 12.4°C. 34°C is 21.6° warmer than standard, adding 120 × 21.6 ≈ 2,592 feet, for a density altitude of about 3,900 feet. 1,300 feet is the pressure altitude alone, with no temperature correction. 5,400 feet multiplies the full 34°C by 120 instead of the difference from standard.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 1200,
+    "alt": 29.8,
+    "oat": 34,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-502",
+    "area": "DAC",
+    "topic": "Density altitude, high pressure",
+    "stem": "(Refer to the density altitude chart.) A ridge of high pressure sits over the launch area. The field elevation is 3,500 feet MSL, the altimeter setting is 30.10, and the outside air temperature is 28°C (82°F). What is the approximate density altitude?",
+    "choices": [
+      "3,300 feet",
+      "5,700 feet",
+      "6,700 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 3,500 − 165 = 3,335 feet, where standard temperature is 15 − 1.98 × 3.33 ≈ 8.4°C. 28°C is 19.6° warmer than standard, adding 120 × 19.6 ≈ 2,352 feet, for a density altitude of about 5,700 feet. 6,700 feet multiplies the full 28°C by 120 instead of the difference from standard. 3,300 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 3500,
+    "alt": 30.1,
+    "oat": 28,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-503",
+    "area": "DAC",
+    "topic": "Density altitude, mile-high site",
+    "stem": "(Refer to the density altitude chart.) A festival launch field sits on a high desert mesa. The field elevation is 5,350 feet MSL, the altimeter setting is 30.00, and the outside air temperature is 30°C (86°F). What is the approximate density altitude?",
+    "choices": [
+      "5,300 feet",
+      "7,100 feet",
+      "8,300 feet"
+    ],
+    "answer": 2,
+    "explanation": "Pressure altitude is 5,350 − 73 = 5,277 feet, where standard temperature is 15 − 1.98 × 5.28 ≈ 4.6°C. 30°C is 25.4° warmer than standard, adding 120 × 25.4 ≈ 3,054 feet, for a density altitude of about 8,300 feet. 5,300 feet is the pressure altitude alone, with no temperature correction. 7,100 feet uses 15°C as standard instead of the standard temperature at that altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 5350,
+    "alt": 30.0,
+    "oat": 30,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-504",
+    "area": "DAC",
+    "topic": "Density altitude, cold lowland",
+    "stem": "(Refer to the density altitude chart.) A winter flight launches from a field near the coast. The field elevation is 1,650 feet MSL, the altimeter setting is 30.20, and the outside air temperature is 2°C (36°F). What is the approximate density altitude?",
+    "choices": [
+      "200 feet",
+      "1,400 feet",
+      "2,600 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is 1,650 − 257 = 1,393 feet, where standard temperature is 15 − 1.98 × 1.39 ≈ 12.2°C. 2°C is 10.2° colder than standard, subtracting 120 × 10.2 ≈ 1,229 feet, for a density altitude of about 200 feet. 2,600 feet adds the temperature correction even though the air is colder than standard, when it should be subtracted. 1,400 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 1650,
+    "alt": 30.2,
+    "oat": 2,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-505",
+    "area": "DAC",
+    "topic": "Density altitude, mountain valley",
+    "stem": "(Refer to the density altitude chart.) A mountain valley launch is planned for a mild morning. The field elevation is 6,200 feet MSL, the altimeter setting is 29.60, and the outside air temperature is 18°C (64°F). What is the approximate density altitude?",
+    "choices": [
+      "6,500 feet",
+      "6,900 feet",
+      "8,400 feet"
+    ],
+    "answer": 2,
+    "explanation": "Pressure altitude is 6,200 + 298 = 6,498 feet, where standard temperature is 15 − 1.98 × 6.50 ≈ 2.1°C. 18°C is 15.9° warmer than standard, adding 120 × 15.9 ≈ 1,904 feet, for a density altitude of about 8,400 feet. 6,900 feet uses 15°C as standard instead of the standard temperature at that altitude. 6,500 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 6200,
+    "alt": 29.6,
+    "oat": 18,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-506",
+    "area": "DAC",
+    "topic": "Density altitude, standard pressure",
+    "stem": "(Refer to the density altitude chart.) The altimeter setting is exactly standard on a hot day. The field elevation is 2,000 feet MSL, the altimeter setting is 29.92, and the outside air temperature is 35°C (95°F). What is the approximate density altitude?",
+    "choices": [
+      "2,000 feet",
+      "4,900 feet",
+      "6,200 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 2,000 + 0 = 2,000 feet, where standard temperature is 15 − 1.98 × 2.00 ≈ 11.0°C. 35°C is 24.0° warmer than standard, adding 120 × 24.0 ≈ 2,875 feet, for a density altitude of about 4,900 feet. 6,200 feet multiplies the full 35°C by 120 instead of the difference from standard. 2,000 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 2000,
+    "alt": 29.92,
+    "oat": 35,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-507",
+    "area": "DAC",
+    "topic": "Density altitude, very high site",
+    "stem": "(Refer to the density altitude chart.) A pilot plans a flight from a high mountain park. The field elevation is 8,100 feet MSL, the altimeter setting is 30.00, and the outside air temperature is 20°C (68°F). What is the approximate density altitude?",
+    "choices": [
+      "10,500 feet",
+      "8,600 feet",
+      "8,000 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is 8,100 − 73 = 8,027 feet, where standard temperature is 15 − 1.98 × 8.03 ≈ −0.9°C. 20°C is 20.9° warmer than standard, adding 120 × 20.9 ≈ 2,507 feet, for a density altitude of about 10,500 feet. 8,000 feet is the pressure altitude alone, with no temperature correction. 8,600 feet uses 15°C as standard instead of the standard temperature at that altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 8100,
+    "alt": 30.0,
+    "oat": 20,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-508",
+    "area": "DAC",
+    "topic": "Density altitude, cold high site",
+    "stem": "(Refer to the density altitude chart.) A cold, clear morning follows a strong cold front. The field elevation is 4,400 feet MSL, the altimeter setting is 30.40, and the outside air temperature is −8°C (18°F). What is the approximate density altitude?",
+    "choices": [
+      "2,100 feet",
+      "3,200 feet",
+      "5,800 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is 4,400 − 440 = 3,960 feet, where standard temperature is 15 − 1.98 × 3.96 ≈ 7.2°C. −8°C is 15.2° colder than standard, subtracting 120 × 15.2 ≈ 1,819 feet, for a density altitude of about 2,100 feet. 5,800 feet adds the temperature correction even though the air is colder than standard, when it should be subtracted. 3,200 feet applies the altimeter correction with the wrong sign (4,400 + 440).",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 4400,
+    "alt": 30.4,
+    "oat": -8,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-509",
+    "area": "DAC",
+    "topic": "Density altitude, low pressure heat",
+    "stem": "(Refer to the density altitude chart.) A desert basin launch site sits near sea level. The field elevation is 300 feet MSL, the altimeter setting is 29.40, and the outside air temperature is 38°C (100°F). What is the approximate density altitude?",
+    "choices": [
+      "800 feet",
+      "3,700 feet",
+      "5,300 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 300 + 485 = 785 feet, where standard temperature is 15 − 1.98 × 0.79 ≈ 13.4°C. 38°C is 24.6° warmer than standard, adding 120 × 24.6 ≈ 2,947 feet, for a density altitude of about 3,700 feet. 800 feet is the pressure altitude alone, with no temperature correction. 5,300 feet multiplies the full 38°C by 120 instead of the difference from standard.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 300,
+    "alt": 29.4,
+    "oat": 38,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-510",
+    "area": "DAC",
+    "topic": "Density altitude, falling barometer",
+    "stem": "(Refer to the density altitude chart.) A storm system is approaching a mountain launch site. The field elevation is 7,000 feet MSL, the altimeter setting is 29.30, and the outside air temperature is 10°C (50°F). What is the approximate density altitude?",
+    "choices": [
+      "7,600 feet",
+      "8,100 feet",
+      "8,800 feet"
+    ],
+    "answer": 2,
+    "explanation": "Pressure altitude is 7,000 + 579 = 7,579 feet, where standard temperature is 15 − 1.98 × 7.58 ≈ 0.0°C. 10°C is 10.0° warmer than standard, adding 120 × 10.0 ≈ 1,201 feet, for a density altitude of about 8,800 feet. 8,100 feet skips the altimeter correction and starts from field elevation. 7,600 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 7000,
+    "alt": 29.3,
+    "oat": 10,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-511",
+    "area": "DAC",
+    "topic": "Density altitude, bitter cold",
+    "stem": "(Refer to the density altitude chart.) An arctic high brings a bitter cold morning. The field elevation is 3,800 feet MSL, the altimeter setting is 30.60, and the outside air temperature is −12°C (10°F). What is the approximate density altitude?",
+    "choices": [
+      "700 feet",
+      "3,200 feet",
+      "5,700 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is 3,800 − 622 = 3,178 feet, where standard temperature is 15 − 1.98 × 3.18 ≈ 8.7°C. −12°C is 20.7° colder than standard, subtracting 120 × 20.7 ≈ 2,485 feet, for a density altitude of about 700 feet. 5,700 feet adds the temperature correction even though the air is colder than standard, when it should be subtracted. 3,200 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 3800,
+    "alt": 30.6,
+    "oat": -12,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-512",
+    "area": "DAC",
+    "topic": "Density altitude, high plateau",
+    "stem": "(Refer to the density altitude chart.) A record attempt launches from a high plateau. The field elevation is 9,000 feet MSL, the altimeter setting is 29.80, and the outside air temperature is 15°C (59°F). What is the approximate density altitude?",
+    "choices": [
+      "9,100 feet",
+      "10,900 feet",
+      "11,300 feet"
+    ],
+    "answer": 2,
+    "explanation": "Pressure altitude is 9,000 + 112 = 9,112 feet, where standard temperature is 15 − 1.98 × 9.11 ≈ −3.0°C. 15°C is 18.0° warmer than standard, adding 120 × 18.0 ≈ 2,165 feet, for a density altitude of about 11,300 feet. 9,100 feet is the pressure altitude alone, with no temperature correction. 10,900 feet multiplies the full 15°C by 120 instead of the difference from standard.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 9000,
+    "alt": 29.8,
+    "oat": 15,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-513",
+    "area": "DAC",
+    "topic": "Density altitude, deep low",
+    "stem": "(Refer to the density altitude chart.) A deep low pressure area lies just west of the launch site. The field elevation is 3,000 feet MSL, the altimeter setting is 28.90, and the outside air temperature is 22°C (72°F). What is the approximate density altitude?",
+    "choices": [
+      "3,400 feet",
+      "4,000 feet",
+      "5,700 feet"
+    ],
+    "answer": 2,
+    "explanation": "Pressure altitude is 3,000 + 957 = 3,957 feet, where standard temperature is 15 − 1.98 × 3.96 ≈ 7.2°C. 22°C is 14.8° warmer than standard, adding 120 × 14.8 ≈ 1,780 feet, for a density altitude of about 5,700 feet. 3,400 feet applies the altimeter correction with the wrong sign (3,000 − 957). 4,000 feet is the pressure altitude alone, with no temperature correction.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 3000,
+    "alt": 28.9,
+    "oat": 22,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-514",
+    "area": "DAC",
+    "topic": "Pressure altitude, high setting",
+    "stem": "(Refer to the density altitude chart.) A pilot wants the pressure altitude for the load chart. The field elevation is 2,750 feet MSL, the altimeter setting is 30.30, and the outside air temperature is 20°C (68°F). What is the approximate pressure altitude?",
+    "choices": [
+      "2,400 feet",
+      "3,100 feet",
+      "3,600 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is field elevation plus the conversion factor for 30.30: 2,750 − 348 = 2,402, about 2,400 feet; temperature plays no part. 3,100 feet applies the factor with the wrong sign. 3,600 feet is the density altitude, which adds the temperature correction the question did not ask for.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 2750,
+    "alt": 30.3,
+    "oat": 20,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-515",
+    "area": "DAC",
+    "topic": "Pressure altitude, low setting",
+    "stem": "(Refer to the density altitude chart.) The flight manual chart is entered with pressure altitude. The field elevation is 5,100 feet MSL, the altimeter setting is 29.20, and the outside air temperature is 16°C (61°F). What is the approximate pressure altitude?",
+    "choices": [
+      "4,400 feet",
+      "5,800 feet",
+      "7,300 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is field elevation plus the conversion factor for 29.20: 5,100 + 673 = 5,773, about 5,800 feet; temperature plays no part. 4,400 feet applies the factor with the wrong sign. 7,300 feet is the density altitude, which adds the temperature correction the question did not ask for.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 5100,
+    "alt": 29.2,
+    "oat": 16,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-516",
+    "area": "DAC",
+    "topic": "Pressure altitude, near sea level",
+    "stem": "(Refer to the density altitude chart.) A very strong high sits over a low coastal valley. The field elevation is 900 feet MSL, the altimeter setting is 30.80, and the outside air temperature is 22°C (72°F). What is the approximate pressure altitude?",
+    "choices": [
+      "100 feet",
+      "1,000 feet",
+      "1,700 feet"
+    ],
+    "answer": 0,
+    "explanation": "Pressure altitude is field elevation plus the conversion factor for 30.80: 900 − 803 = 97, about 100 feet; temperature plays no part. 1,700 feet applies the factor with the wrong sign. 1,000 feet is the density altitude, which adds the temperature correction the question did not ask for.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 900,
+    "alt": 30.8,
+    "oat": 22,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-517",
+    "area": "DAC",
+    "topic": "Pressure altitude, storm low",
+    "stem": "(Refer to the density altitude chart.) A strong storm is passing a mountain town. The field elevation is 6,800 feet MSL, the altimeter setting is 28.70, and the outside air temperature is 9°C (48°F). What is the approximate pressure altitude?",
+    "choices": [
+      "5,700 feet",
+      "7,900 feet",
+      "9,100 feet"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is field elevation plus the conversion factor for 28.70: 6,800 + 1,148 = 7,948, about 7,900 feet; temperature plays no part. 5,700 feet applies the factor with the wrong sign. 9,100 feet is the density altitude, which adds the temperature correction the question did not ask for.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 6800,
+    "alt": 28.7,
+    "oat": 9,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-518",
+    "area": "DAC",
+    "topic": "Density altitude change, morning warming",
+    "stem": "(Refer to the density altitude chart.) A pilot is deciding whether to fly at dawn or wait for late-arriving passengers. The field elevation is 1,500 feet MSL. The altimeter setting stays at 30.00. The temperature is 10°C (50°F) at 7 AM and 27°C (81°F) at 10 AM. About how much does the density altitude rise between 7 AM and 10 AM?",
+    "choices": [
+      "3,700 feet",
+      "3,200 feet",
+      "2,000 feet"
+    ],
+    "answer": 2,
+    "explanation": "At 7 AM: pressure altitude 1,427 feet, density altitude about 1,166 feet. At 10 AM: pressure altitude 1,427 feet, density altitude about 3,206 feet. The difference is 3,206 − 1,166, a rise of about 2,000 feet. 3,700 feet multiplies the change in °F (31°) by 120 instead of the change in °C (17°). 3,200 feet is the 10 AM density altitude itself, not the change.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 1500,
+    "alt": 30.0,
+    "oat": 10,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-519",
+    "area": "DAC",
+    "topic": "Density altitude change, falling pressure",
+    "stem": "(Refer to the density altitude chart.) A front is approaching while the sun warms the launch field. The field elevation is 4,000 feet MSL. The altimeter setting is 30.10 at 7 AM and 29.90 at 10 AM. The temperature is 8°C (46°F) at 7 AM and 24°C (75°F) at 10 AM. About how much does the density altitude rise between 7 AM and 10 AM?",
+    "choices": [
+      "1,700 feet",
+      "2,100 feet",
+      "3,500 feet"
+    ],
+    "answer": 1,
+    "explanation": "At 7 AM: pressure altitude 3,835 feet, density altitude about 3,906 feet. At 10 AM: pressure altitude 4,020 feet, density altitude about 6,055 feet. The difference is 6,055 − 3,906, a rise of about 2,100 feet. 1,700 feet applies the altimeter corrections with the wrong sign. 3,500 feet multiplies the change in °F (29°) by 120 instead of the change in °C (16°).",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 4000,
+    "alt": 30.1,
+    "oat": 8,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-520",
+    "area": "DAC",
+    "topic": "Density altitude change, cold start",
+    "stem": "(Refer to the density altitude chart.) A winter morning warms quickly under clear skies. The field elevation is 2,600 feet MSL. The altimeter setting stays at 30.30. The temperature is −4°C (25°F) at 7 AM and 12°C (54°F) at 10 AM. About how much does the density altitude rise between 7 AM and 10 AM?",
+    "choices": [
+      "1,900 feet",
+      "2,400 feet",
+      "3,500 feet"
+    ],
+    "answer": 0,
+    "explanation": "At 7 AM: pressure altitude 2,252 feet, density altitude about 507 feet. At 10 AM: pressure altitude 2,252 feet, density altitude about 2,427 feet. The difference is 2,427 − 507, a rise of about 1,900 feet. 3,500 feet multiplies the change in °F (29°) by 120 instead of the change in °C (16°). 2,400 feet is the 10 AM density altitude itself, not the change.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 2600,
+    "alt": 30.3,
+    "oat": -4,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-521",
+    "area": "DAC",
+    "topic": "Density altitude change, rising pressure",
+    "stem": "(Refer to the density altitude chart.) Pressure is rising behind a front as the day heats up. The field elevation is 2,900 feet MSL. The altimeter setting is 29.60 at 7 AM and 29.80 at 10 AM. The temperature is 15°C (59°F) at 7 AM and 31°C (88°F) at 10 AM. About how much does the density altitude rise between 7 AM and 10 AM?",
+    "choices": [
+      "3,500 feet",
+      "2,200 feet",
+      "1,700 feet"
+    ],
+    "answer": 2,
+    "explanation": "At 7 AM: pressure altitude 3,198 feet, density altitude about 3,958 feet. At 10 AM: pressure altitude 3,012 feet, density altitude about 5,648 feet. The difference is 5,648 − 3,958, a rise of about 1,700 feet. 2,200 feet applies the altimeter corrections with the wrong sign. 3,500 feet multiplies the change in °F (29°) by 120 instead of the change in °C (16°).",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 2900,
+    "alt": 29.6,
+    "oat": 15,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-522",
+    "area": "DAC",
+    "topic": "Density altitude change, evening cooling",
+    "stem": "(Refer to the density altitude chart.) An evening flight is delayed while the air cools. The field elevation is 3,300 feet MSL. The altimeter setting is 29.90 at 5 PM and 30.00 at 7 PM. The temperature is 33°C (91°F) at 5 PM and 19°C (66°F) at 7 PM. About how much does the density altitude fall between 5 PM and 7 PM?",
+    "choices": [
+      "1,800 feet",
+      "3,000 feet",
+      "4,500 feet"
+    ],
+    "answer": 0,
+    "explanation": "At 5 PM: pressure altitude 3,320 feet, density altitude about 6,269 feet. At 7 PM: pressure altitude 3,227 feet, density altitude about 4,474 feet. The difference is 4,474 − 6,269, a drop of about 1,800 feet. 3,000 feet multiplies the change in °F (25°) by 120 instead of the change in °C (14°). 4,500 feet is the 7 PM density altitude itself, not the change.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 3300,
+    "alt": 29.9,
+    "oat": 33,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-523",
+    "area": "DAC",
+    "topic": "Comparing sites: highest density altitude",
+    "stem": "(Refer to the density altitude chart.) A pilot is choosing among three launch sites the same morning. Site A: 5,000 feet MSL, altimeter 30.20, 4°C; Site B: 3,800 feet MSL, altimeter 29.70, 30°C; Site C: 6,100 feet MSL, altimeter 30.40, 2°C. Which site has the highest density altitude?",
+    "choices": [
+      "Site A",
+      "Site B",
+      "Site C"
+    ],
+    "answer": 1,
+    "explanation": "Site A: pressure altitude 4,743 feet, density altitude about 4,500 feet. Site B: pressure altitude 4,005 feet, density altitude about 6,800 feet. Site C: pressure altitude 5,660 feet, density altitude about 5,400 feet. So Site B is highest. Site C has the highest elevation, but elevation alone does not decide density altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 5000,
+    "alt": 30.2,
+    "oat": 4,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-524",
+    "area": "DAC",
+    "topic": "Comparing sites: lowest density altitude",
+    "stem": "(Refer to the density altitude chart.) A ride company can launch from any of three fields. Site A: 1,200 feet MSL, altimeter 29.80, 36°C; Site B: 2,600 feet MSL, altimeter 30.30, 14°C; Site C: 400 feet MSL, altimeter 29.90, 40°C. Which site has the lowest density altitude?",
+    "choices": [
+      "Site A",
+      "Site B",
+      "Site C"
+    ],
+    "answer": 1,
+    "explanation": "Site A: pressure altitude 1,312 feet, density altitude about 4,100 feet. Site B: pressure altitude 2,252 feet, density altitude about 2,700 feet. Site C: pressure altitude 420 feet, density altitude about 3,500 feet. So Site B is lowest. Site C has the lowest elevation, but its warmer air outweighs that.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 1200,
+    "alt": 29.8,
+    "oat": 36,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-525",
+    "area": "DAC",
+    "topic": "Comparing sites: elevation versus heat",
+    "stem": "(Refer to the density altitude chart.) A touring pilot compares three festival sites. Site A: 7,200 feet MSL, altimeter 30.10, −5°C; Site B: 6,000 feet MSL, altimeter 30.00, 14°C; Site C: 4,500 feet MSL, altimeter 29.60, 32°C. Which site has the highest density altitude?",
+    "choices": [
+      "Site A",
+      "Site B",
+      "Site C"
+    ],
+    "answer": 2,
+    "explanation": "Site A: pressure altitude 7,035 feet, density altitude about 6,300 feet. Site B: pressure altitude 5,927 feet, density altitude about 7,200 feet. Site C: pressure altitude 4,798 feet, density altitude about 8,000 feet. So Site C is highest. Site A has the highest elevation, but elevation alone does not decide density altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 7200,
+    "alt": 30.1,
+    "oat": -5,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-526",
+    "area": "DAC",
+    "topic": "Comparing sites: pressure differences",
+    "stem": "(Refer to the density altitude chart.) Three nearby fields report different weather. Site A: 3,000 feet MSL, altimeter 29.00, 20°C; Site B: 3,000 feet MSL, altimeter 30.40, 26°C; Site C: 3,600 feet MSL, altimeter 30.00, 8°C. Which site has the highest density altitude?",
+    "choices": [
+      "Site A",
+      "Site B",
+      "Site C"
+    ],
+    "answer": 0,
+    "explanation": "Site A: pressure altitude 3,863 feet, density altitude about 5,400 feet. Site B: pressure altitude 2,560 feet, density altitude about 4,500 feet. Site C: pressure altitude 3,527 feet, density altitude about 3,500 feet. So Site A is highest. Site C has the highest elevation, but elevation alone does not decide density altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "elev": 3000,
+    "alt": 29.0,
+    "oat": 20,
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-527",
+    "area": "DAC",
+    "topic": "Reverse: temperature for a density altitude",
+    "stem": "(Refer to the density altitude chart.) A pilot has decided not to fly when the density altitude is above 8,000 feet. The field elevation is 5,000 feet MSL and the altimeter setting is 29.92. At about what outside air temperature will the density altitude reach 8,000 feet?",
+    "choices": [
+      "25°C",
+      "30°C",
+      "40°C"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 5,000 feet, where standard temperature is about 5.1°C. Reaching 8,000 feet needs (8,000 − 5,000) ÷ 120 ≈ 25.0° above standard, so about 5.1 + 25.0 ≈ 30°C. 25°C is only the difference from standard, not the temperature. 40°C adds the difference to the sea level standard of 15°C instead of the standard temperature at that altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-528",
+    "area": "DAC",
+    "topic": "Reverse: temperature limit for a load",
+    "stem": "(Refer to the density altitude chart.) The day's planned load works only up to a density altitude of 6,000 feet. The field elevation is 2,500 feet MSL and the altimeter setting is 29.70. At about what outside air temperature will the density altitude reach 6,000 feet?",
+    "choices": [
+      "27°C",
+      "37°C",
+      "42°C"
+    ],
+    "answer": 1,
+    "explanation": "Pressure altitude is 2,705 feet, where standard temperature is about 9.6°C. Reaching 6,000 feet needs (6,000 − 2,705) ÷ 120 ≈ 27.5° above standard, so about 9.6 + 27.5 ≈ 37°C. 27°C is only the difference from standard, not the temperature. 42°C adds the difference to the sea level standard of 15°C instead of the standard temperature at that altitude.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-529",
+    "area": "DAC",
+    "topic": "Reverse: standard temperature at the site",
+    "stem": "(Refer to the density altitude chart.) A student asks when the chart's temperature correction becomes zero. The field elevation is 3,200 feet MSL and the altimeter setting is 30.10. At about what outside air temperature will the density altitude equal the pressure altitude?",
+    "choices": [
+      "4°C",
+      "9°C",
+      "15°C"
+    ],
+    "answer": 1,
+    "explanation": "Density altitude equals pressure altitude when the temperature is standard. Pressure altitude is 3,035 feet, and standard temperature there is 15 − 1.98 × 3.04 ≈ 9.0°C, about 9°C. 15°C is standard only at sea level. 4°C uses the 3.5° per 1,000 feet Fahrenheit lapse rate on a Celsius temperature.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "DAC-530",
+    "area": "DAC",
+    "topic": "Reverse: field elevation from density altitude",
+    "stem": "(Refer to the density altitude chart.) A pilot remembers the conditions of a past flight but not where it launched. The outside air temperature is 30°C (86°F), the altimeter setting is 30.50, and the density altitude is 4,800 feet. About what is the field elevation?",
+    "choices": [
+      "1,900 feet",
+      "2,400 feet",
+      "3,000 feet"
+    ],
+    "answer": 2,
+    "explanation": "With 30°C and a density altitude of 4,800 feet, the pressure altitude works out to about 2,424 feet (check: standard there is 10.2°C, and 2,424 + 120 × 19.8 ≈ 4,800). Field elevation = pressure altitude − factor = 2,424 + 531 = 2,955, about 3,000 feet. 2,400 feet stops at pressure altitude. 1,900 feet applies the factor with the wrong sign.",
+    "ref": "FAA-H-8083-25C Ch. 11 (Pressure Altitude; Density Altitude; Density Altitude Charts, Fig. 11-22); FAA-H-8083-11B Ch. 3 (Performance Planning)",
+    "figure": "density-altitude",
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  }
+]
