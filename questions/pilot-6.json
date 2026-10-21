@@ -1292,25 +1292,6 @@
     "checked": "confirmed"
   },
   {
-    "id": "WXT-609",
-    "area": "WXT",
-    "topic": "Trigger temperature",
-    "stem": "A soaring forecast lists a trigger temperature of 27°C, reached at 11 a.m. Why does a balloon pilot care?",
-    "choices": [
-      "Thermals are expected to start then, so plan to land before it.",
-      "Morning fog is expected to burn off once the surface reaches it.",
-      "A surface inversion is expected to form once the surface reaches it."
-    ],
-    "answer": 0,
-    "explanation": "The soaring forecast's thermal values apply once the trigger temperature is reached, the surface temperature needed for heating to drive thermals to a useful height (one NWS office defines it as the temperature needed for lift to 3,000 feet AGL). A balloon flight should be on the ground before then. The trigger is about convection, not fog, and heating breaks up an inversion rather than forming one.",
-    "ref": "FAA-H-8083-28B 27.21, 27.21.1; NWS Wilmington OH soaring forecast (weather.gov/iln/soaring)",
-    "figure": null,
-    "difficulty": 2,
-    "status": "draft",
-    "confidence": "high",
-    "checked": "fixed"
-  },
-  {
     "id": "WXT-610",
     "area": "WXT",
     "topic": "Cold air over warm ground",
@@ -1511,7 +1492,7 @@
       "The inversion strengthens and pushes the winds above it down to the ground."
     ],
     "answer": 0,
-    "explanation": "Low-level inversions generally dissipate through the day as the sun heats the ground and the air mixes. Under the inversion the cold surface air is calm while warmer air moves over it largely unaffected, so once heating mixes the cold layer away, the faster air above is no longer cut off from the surface and the surface wind rises. The ground warms, not cools, after sunrise, and a stronger inversion would keep the surface air calm.",
+    "explanation": "Low-level inversions generally dissipate through the day as the sun heats the ground and the air mixes. The inversion keeps the faster wind above it at bay: the cold surface air stays calm while warmer air moves over it. Once heating mixes the cold layer away, that faster wind reaches the ground. The ground warms, not cools, after sunrise, and a stronger inversion would keep the surface air calm. Instructor's note (Brian Lynch): not a rule of thumb, but a trend to watch for every morning.",
     "ref": "FAA-H-8083-11B Ch. 4 (Temperature Variation with Altitude; Wind Shear); FAA-H-8083-28B 13.4.3, 19.2.3.1",
     "figure": null,
     "difficulty": 2,
@@ -1625,7 +1606,7 @@
       "48 to 72 hours."
     ],
     "answer": 1,
-    "explanation": "The handbook notes that many balloon pilots have a rule against flying within 18 to 24 hours before a frontal passage, especially if the front has significant strength, because fronts bring wind shifts, precipitation and sharp temperature changes. Flight Service can often advise when a front will pass a reporting station.",
+    "explanation": "The handbook notes that many balloon pilots have a rule against flying within 18 to 24 hours before a frontal passage, especially if the front has significant strength, because fronts bring wind shifts, precipitation and sharp temperature changes. Flight Service can often advise when a front will pass a reporting station. Instructor's note (Brian Lynch): it's pilot discretion, but for good reason.",
     "ref": "FAA-H-8083-11B Ch. 4 (Surface Fronts)",
     "figure": null,
     "difficulty": 1,

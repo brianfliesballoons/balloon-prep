@@ -196,7 +196,8 @@
      "14 CFR 61.60",
      "14 CFR 61.51(a)",
      "14 CFR 61.23(a)(2)(iii)"
-    ]
+    ],
+    "pilotNote": "There's no balloon CFI like there is for fixed wing. When I sign off a student, I write my name, my commercial LTA pilot certificate number, my signature, the date and notes on the lesson."
    }
   },
   "reg-medical": {
@@ -437,7 +438,8 @@
      "14 CFR 61.57(b)(1)",
      "14 CFR 91.107(a)(1)-(3)",
      "14 CFR 91.147(a)-(b)"
-    ]
+    ],
+    "pilotNote": "The lower balloon has the right-of-way. It isn't a written rule, but it's as serious as any legal rule, because the balloon below can't see you. Don't abuse it either: before a steep climb, check with your crew or other pilots that it's clear above you, unless you're absolutely sure."
    }
   },
   "reg-ntsb": {
@@ -1056,7 +1058,8 @@
      "FAA-H-8083-11B Ch. 2 (Why Do Balloons Fly?: warmer outside air gives less lift)",
      "FAA-H-8083-11B Ch. 4 (Fog: spread over 2.2 °C rare, under 1.1 °C most frequent)",
      "FAA-H-8083-28B 18.1.1.1.2 (advection fog deepens with wind up to about 15 kt)"
-    ]
+    ],
+    "pilotNote": "Watch for the morning wind to come down. The inversion keeps the faster wind above at bay, and as the sun mixes it out, that wind reaches the ground. I wouldn't call it a rule of thumb, but it's a trend to watch for every morning."
    }
   },
   "wx-fronts": {
@@ -1613,7 +1616,8 @@
      "FAA-H-8083-11B Ch. 7 (Descents and Use of Instruments: variometer)",
      "FAA-H-8083-11B Glossary (Limitations; Overtemp; Temperature recorder)",
      "Temperature flag inspection: manufacturer documents (as for THY-009), not an FAA handbook"
-    ]
+    ],
+    "pilotNote": "Most envelopes today are limited to 250°F. Older polyester envelopes, like Firefly's, were rated 300°F, and Kubicek's is 275°F. Your flight manual's number is the one that counts. Running hot slowly weakens the fabric and shortens its life. What isn't apparent right away becomes weak fabric long term."
    }
   },
   "ops-launch": {

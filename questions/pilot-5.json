@@ -1257,14 +1257,14 @@
     "id": "THY-567",
     "area": "THY",
     "topic": "Exceeding the envelope temperature",
-    "stem": "What is the main hazard of flying a balloon above its maximum envelope temperature?",
+    "stem": "What does flying above the maximum envelope temperature do to the envelope?",
     "choices": [
-      "The burner flame becomes unstable once the envelope passes that limit.",
-      "Heat can degrade the fabric's coatings and shorten the envelope's life.",
-      "The temperature gauge stops reading accurately above that temperature."
+      "It slowly weakens the fabric and shortens the envelope's life.",
+      "It scorches the fabric right away, so the damage is easy to spot.",
+      "Nothing lasting, as long as the burn that caused it was a short one."
     ],
-    "answer": 1,
-    "explanation": "The maximum envelope temperature is a limitation the manufacturer places on the balloon (the handbook calls heating past it an overtemp), and 91.9 requires staying within it. The handbook warns that heat can degrade fabric coatings and treatments and decrease the life of the fabric; it says this of a wet envelope heated to flight temperatures, its most direct statement on heat and fabric. Burner flame stability and gauge accuracy are not why the limit exists.",
+    "answer": 0,
+    "explanation": "The maximum envelope temperature is a manufacturer's limitation in the flight manual (the handbook calls going past it an overtemp), and 91.9 requires staying within it; the handbook gives 250°F as the maximum continuous temperature for most balloons and warns that heat degrades fabric coatings and shortens fabric life. The damage builds up without showing, so neither visible scorching nor a short burn is a safe test. Instructor's note (Brian Lynch): most envelopes are limited to 250°F; older polyester envelopes such as Firefly's were 300°F, and Kubicek's is 275°F. Running hot slowly weakens the fabric: what isn't apparent right away becomes weak fabric long term.",
     "ref": "FAA-H-8083-11B Glossary (Limitations; Overtemp); FAA-H-8083-11B Ch. 3 (Weather: flying in precipitation); 14 CFR 91.9(a); 14 CFR 31.81(a)(1)",
     "figure": null,
     "difficulty": 2,
