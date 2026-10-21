@@ -36,6 +36,7 @@ body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;p
 header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between;position:sticky;top:0;z-index:30;background:var(--bg);margin:-14px -16px 0;padding:10px 16px 8px;border-bottom:1px solid var(--line)}
 /* the app name tucks away on phones once you scroll; tabs and back buttons stay pinned */
 @media (max-width:640px){html.compact header .brand{display:none}}
+a.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 .rtop{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);padding:6px 0;margin:-6px 0}
 .learn>.back{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);align-self:stretch;width:auto}
 .brand{display:flex;align-items:center;gap:10px}
@@ -340,6 +341,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
   #refPrint .memo .big{font-size:1.7rem}
   #refPrint .entry{padding:6px}
   #refPrint .rbody p{margin:3px 0}
+  #refPrint .legimg{max-height:4.9in;width:auto;max-width:100%;margin:0 auto}
   #refPrint .rbody table{font-size:10.5px;margin:3px 0}
   #refPrint .rbody th,#refPrint .rbody td{padding:2px 5px}
   #refPrint .rbody thead th{font-size:11px}
@@ -1090,7 +1092,7 @@ const SYM=[['<path d="M32 4 L24 30 M32 4 L40 30 M26 24 L38 24" stroke="currentCo
   ['<rect x="2" y="2" width="60" height="16" fill="url(#rbv)"/>','20','<b>Class E from 1,200 ft AGL or higher</b>, next to Class G: blue shading.'],
   [null,null,'<span style="font-family:var(--f-num);font-size:1.4rem;color:#1d5ed4">○ <span style="color:#8a2b5c">○</span></span>','<b>Airport colors:</b> blue airports have a control tower; magenta ones do not.']];
 function card5(){const defs='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="rmv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a2b5c" stop-opacity=".9"/><stop offset="1" stop-color="#8a2b5c" stop-opacity="0"/></linearGradient><linearGradient id="rbv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d5ed4" stop-opacity=".9"/><stop offset="1" stop-color="#1d5ed4" stop-opacity="0"/></linearGradient></defs></svg>';
-  return `${defs}<h3>The legend on your test</h3><p>This is the legend page in the FAA testing supplement for the commercial test. Tap it to open it full size and zoom.</p>
+  return `${defs}<h3>The legend on your test</h3><p>This is the legend page in the FAA testing supplement for the commercial test.<span class="scr"> Tap it to open it full size and zoom.</span></p>
 <a href="refs/img/sectional-legend-8080-1E.png" target="_blank" rel="noopener"><img class="legimg" src="refs/img/sectional-legend-8080-1E.png" alt="Sectional Aeronautical Chart legend from the FAA commercial testing supplement: airports, airport data, airspace, topographic information, radio aids, communication boxes, obstructions and miscellaneous symbols."></a>
 <div class="rcap">FAA-CT-8080-1E, Legend 1 (2018).</div>
 <div class="call"><b>Changed since 2018:</b> the Airport/Facility Directory is now the Chart Supplement, and a real chart's isogonic lines follow the current five-year magnetic variation model. The test still uses this page.</div>
@@ -1104,11 +1106,11 @@ function renderRef(){const el=$('ref');if(!refPre)refPre=REFIMG.map(u=>{const i=
   if(REFS===null){REFS=[];getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];if(mode==='ref')renderRef();});}
   const cards=allCards();
   if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};}else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
-    else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><button class="btn" data-print="${c.id}">Print this card</button></div>
+    else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><a class="btn" href="refs/pdf/${c.id}.pdf" target="_blank" rel="noopener">Print this card</a></div>
 <div><div class="eyebrow">Card ${c.n}</div><h2>${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
 <p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);return;}}
   el.innerHTML=`<div><h2>Quick reference</h2><p class="mut" style="margin:4px 0 0">Pocket cards built from FAA sources. Read them here, or print them for your oral and your flight bag.</p></div>
-<div class="rcard" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>Print the whole set</b><div class="mut sm">${cards.length} cards, one per Letter page</div></div><button class="btn primary" data-print="all">Print all</button></div>
+<div class="rcard" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>Print the whole set</b><div class="mut sm">${cards.length} cards, one per Letter page. Opens a PDF: use Share, then Print.</div></div><a class="btn primary" href="refs/pdf/all.pdf" target="_blank" rel="noopener">Print all</a></div>
 ${RGROUPS.filter(([g])=>cards.some(c=>c.group===g)).map(([g,name])=>`<section class="rgrp"><h3>${name}</h3>${cards.filter(c=>c.group===g).map(c=>`<button class="rrow" data-ref="${c.id}"><span class="rn">${c.n}</span><span style="flex:1"><b>${esc(c.title)}</b><small>${esc(c.sub)}</small></span><span aria-hidden="true">›</span></button>`).join('')}</section>`).join('')}
 <p class="rfoot" style="text-align:center">${EDITION} · every card names its FAA source · study aid, not for navigation</p>`;}
 function printRef(which){const cards=allCards().filter(c=>which==='all'||c.id===which);
