@@ -417,6 +417,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
       <div class="row-btns">
         <button class="btn" id="prev">Previous</button>
         <button class="btn primary" id="next">Next</button>
+        <button class="btn primary" id="dueBack" hidden>Back to Learn</button>
         <button class="btn" id="finish" hidden>Finish test</button>
       </div>
       <p class="small" id="foot"></p>
@@ -560,11 +561,15 @@ function renderQ(){
   $('timer').hidden=mode!=='test';
   renderGrader(q);
   const done=list.filter(id=>picked(id)!==undefined).length;
-  if(mode==='study'){const right=list.filter(id=>S.study[id]===byId[id].answer).length;$('foot').textContent=done?`${right} of ${done} right in this set.`:'Pick an answer to see the explanation.';}
-  const rd=$('redo');rd.hidden=!(mode==='study'&&!GRADE&&done);if(rd.dataset.armed!=='1')rd.textContent=`Clear my ${done} answer${done===1?'':'s'} in this set and try again`;
-  else if(mode==='due'){const left=dueIds().length;$('foot').textContent=left?`Review: ${left} still due today.`:'Review done for today. Nice work.';}
+  let dueEnd=false;
+  if(GRADE&&mode==='study')$('foot').textContent='Grader mode: the answer and explanation are always shown.';
+  else if(mode==='study'){const right=list.filter(id=>S.study[id]===byId[id].answer).length;$('foot').textContent=done?`${right} of ${done} right in this set.`:'Pick an answer to see the explanation.';}
+  else if(mode==='due'){const left=dueIds().length;dueEnd=!left||(pos>=list.length-1&&picked(q.id)!==undefined);
+    $('foot').textContent=!left?'Review done for today. Nice work.':dueEnd?`Review done for now. ${left} you skipped ${left===1?'is':'are'} still due today.`:`Review ${pos+1} of ${list.length} · ${left} still due today.`;}
   else if(mode==='test')$('foot').textContent=`${done} of ${list.length} answered · ${list.filter(id=>S.flags[id]).length} flagged`;
   else $('foot').textContent='Reviewing your test. Answers are locked.';
+  $('dueBack').hidden=!dueEnd;$('next').hidden=dueEnd;
+  const rd=$('redo');rd.hidden=!(mode==='study'&&!GRADE&&done);if(rd.dataset.armed!=='1')rd.textContent=`Clear my ${done} answer${done===1?'':'s'} in this set and try again`;
   renderNav();
   if(fig){marksKey=q.id;readoutIdle();req();}
 }
@@ -609,9 +614,9 @@ function renderAll(){
 function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=ids.filter(id=>T.answers[id]===byId[id]?.answer).length,pct=Math.round(right/ids.length*100),pass=pct>=70;
   const by={};ids.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
   const secs=Math.floor(((T.end||Date.now())-T.start)/1000);
-  el.innerHTML=`<h2>Practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':'Below the 70% passing score'} · ${Math.floor(secs/60)} min</p>
+  el.innerHTML=`<h2>Practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':'Below the 70% passing score'} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}</p>
    <table class="areas"><thead><tr><th>Area</th><th></th><th>Score</th></tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td></tr>`;}).join('')}</tbody></table>
-   <div class="row-btns"><button class="btn primary" id="rMiss">Review missed (${ids.length-right})</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>`;
+   <div class="row-btns"><button class="btn primary" id="rMiss"${ids.length-right?'':' disabled'}>${ids.length-right?`Review missed (${ids.length-right})`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>`;
   $('rPlan').onclick=()=>goLearn('plan');
   $('rMiss').onclick=()=>{list=ids.filter(id=>T.answers[id]!==byId[id]?.answer);pos=0;mode='review';renderAll();};
   $('rAll').onclick=()=>{list=ids.slice();pos=0;mode='review';renderAll();};
@@ -625,7 +630,7 @@ $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;render
 $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
   if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
   $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();S.test.list.forEach(id=>{if(S.test.answers[id]!==byId[id]?.answer)sched(id,false);});save();mode='results';renderAll();window.scrollTo(0,0);};
-$('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);
+$('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));};
 // Start one study set over: clears only this set's study answers; flags, tests and the review queue stay.
