@@ -33,7 +33,11 @@
 html,body{background:var(--bg);margin:0}
 body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:14px 32px}
 .wrap{max-width:1180px;margin-inline:auto;display:flex;flex-direction:column;gap:14px}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between;position:sticky;top:0;z-index:30;background:var(--bg);margin:-14px -16px 0;padding:10px 16px 8px;border-bottom:1px solid var(--line)}
+/* the app name tucks away on phones once you scroll; tabs and back buttons stay pinned */
+@media (max-width:640px){html.compact header .brand{display:none}}
+.rtop{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);padding:6px 0;margin:-6px 0}
+.learn>.back{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);align-self:stretch;width:auto}
 .brand{display:flex;align-items:center;gap:10px}
 .brand svg{width:30px;height:30px;flex:none}
 h1{font-family:var(--f-display);font-weight:700;font-size:1.65rem;letter-spacing:.01em;margin:0;line-height:1.1}
@@ -1095,7 +1099,8 @@ const BUILT=[{n:1,id:'airspace',group:'rules',title:'Airspace at a glance',sub:'
   {n:5,id:'legend',group:'charts',title:'Sectional chart legend',sub:'The legend on your test, plus the symbols balloon pilots read',html:card5,sources:['FAA-CT-8080-1E Legend 1','FAA Aeronautical Chart Users’ Guide (Jul 2026)']}];
 const allCards=()=>[...BUILT,...(REFS||[])].sort((a,b)=>a.n-b.n);
 const cardHTML=c=>typeof c.html==='function'?c.html():c.html;
-function renderRef(){const el=$('ref');
+const REFIMG=['refs/img/sectional-legend-8080-1E.png','refs/img/phak-fig15-1-airspace-profile.png'];let refPre=null;
+function renderRef(){const el=$('ref');if(!refPre)refPre=REFIMG.map(u=>{const i=new Image();i.src=u;return i;});
   if(REFS===null){REFS=[];getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];if(mode==='ref')renderRef();});}
   const cards=allCards();
   if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};}else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
@@ -1110,11 +1115,15 @@ function printRef(which){const cards=allCards().filter(c=>which==='all'||c.id===
   $('refPrint').innerHTML=cards.map(c=>`<section class="rpage"><div class="phead"><div><div style="font:600 10px var(--f-display);letter-spacing:.08em;text-transform:uppercase">Balloon Written Prep · Card ${c.n}</div><h2>${esc(c.title)}</h2></div><div style="font:10px var(--f-num);text-align:right">${EDITION}</div></div>
 <div class="rbody">${cardHTML(c)}</div><div class="pfoot"><span>Sources: ${esc(c.sources.join(', '))}. Original card, not an FAA document. Study aid, not for navigation.</span><span style="white-space:nowrap">brianfliesballoons.github.io/balloon-prep</span></div></section>`).join('');
   document.documentElement.classList.add('printing');const done=()=>{document.documentElement.classList.remove('printing');removeEventListener('afterprint',done);};addEventListener('afterprint',done);
-  const imgs=[...$('refPrint').querySelectorAll('img')];Promise.all(imgs.map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r;}))).then(()=>{if(!/HeadlessChrome/.test(navigator.userAgent))print();});}  // headless Chrome renders the PDF itself
+  // iOS Safari only opens the print sheet when print() runs inside the tap itself, so call it now (the images are preloaded by renderRef)
+  if(!/HeadlessChrome/.test(navigator.userAgent))print();}  // headless Chrome renders the PDF itself
 $('ref').addEventListener('click',e=>{const t=e.target.closest('[data-ref],[data-print]');if(!t)return;
   if(t.dataset.print){printRef(t.dataset.print);return;}
   RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);});
 $('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
+// sticky header: publish its height for the pinned back bars, and compact it on phones after scrolling (with a gap so it doesn't flicker)
+{const hd=document.querySelector('header'),setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');new ResizeObserver(setH).observe(hd);setH();
+ addEventListener('scroll',()=>{const c=document.documentElement.classList,y=scrollY;if(y>90&&!c.contains('compact'))c.add('compact');else if(y<20&&c.contains('compact'))c.remove('compact');},{passive:true});}
 
 Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json')]).then(([sets,les,map,kinds])=>{
   if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;
