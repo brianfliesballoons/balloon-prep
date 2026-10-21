@@ -76,25 +76,6 @@
   "checked": "confirmed"
  },
  {
-  "id": "REG-405",
-  "area": "REG",
-  "topic": "NTSB: collision in flight",
-  "stem": "During a mass ascension, a climbing balloon's envelope bumps the basket of a balloon above it. Both land normally with no injuries and no substantial damage. Under 49 CFR 830.5, what is required?",
-  "choices": [
-   "Notification only to the event director, who passes it on to the FAA within 10 days.",
-   "No notification, because neither balloon was substantially damaged and no one was injured.",
-   "Immediate notification, because a collision in flight is a listed serious incident."
-  ],
-  "answer": 2,
-  "explanation": "830.5(a)(5) lists aircraft collision in flight as an incident requiring immediate notification by the most expeditious means available, whether or not there was damage or injury. Lack of injury or substantial damage only means it is not an accident. Part 830 places the duty on the operator, and the notice goes to the NTSB, not to an event official. CHECK: 830.5(a)(5) sets no damage threshold, and no NTSB guidance specific to brief balloon-to-balloon contact was found (eCFR, Federal Register and web searches, 2026-10-20); Brian to confirm the keyed answer matches how such contacts are treated in practice.",
-  "ref": "49 CFR 830.5(a)(5); 49 CFR 830.2 (Incident)",
-  "figure": null,
-  "difficulty": 3,
-  "status": "draft",
-  "confidence": "check",
-  "checked": "fixed"
- },
- {
   "id": "REG-406",
   "area": "REG",
   "topic": "NTSB: in-flight fire",
