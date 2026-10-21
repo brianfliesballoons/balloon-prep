@@ -1,0 +1,2794 @@
+{
+ "REG-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-013": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-014": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-015": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-016": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-017": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-018": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-019": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-020": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-021": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-022": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-013": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-014": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-015": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-016": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-017": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-018": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-013": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-014": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-015": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-013": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-014": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-015": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-301": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-302": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-303": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-304": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-305": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-306": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-307": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-308": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-309": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-310": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-311": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-312": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-313": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-314": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-315": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-316": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-317": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-318": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-319": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-320": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-321": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-322": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-323": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-324": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-325": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-326": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-327": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-328": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-329": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-330": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-331": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-332": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-333": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-334": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-335": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-336": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-337": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-338": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-339": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-340": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-341": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-342": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-343": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-344": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-345": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-346": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-347": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-348": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-349": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-350": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-351": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-352": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-353": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-354": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-355": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-356": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-357": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-358": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-359": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-360": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-301": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-302": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-303": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-304": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-305": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-306": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-307": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-308": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-309": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-310": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-311": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-312": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-313": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-314": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-315": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-316": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-317": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-318": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-319": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-320": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-321": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-322": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-323": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-324": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-325": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-326": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-327": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-328": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-329": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-330": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-331": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-332": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-333": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-334": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-335": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-336": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-337": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-338": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-339": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-340": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-401": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-402": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-403": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-404": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-406": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-407": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-408": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-409": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-410": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-411": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-412": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-413": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-414": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-415": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-416": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-417": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-418": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-419": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-420": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-421": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-422": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-423": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-424": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-425": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-426": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-427": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-428": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-429": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-430": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-431": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-432": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-433": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-434": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-435": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-436": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-437": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-438": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-439": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-440": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-441": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-442": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-443": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-444": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-445": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-446": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-447": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-448": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-449": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-450": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-401": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-402": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-403": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-404": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-405": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-406": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-407": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-408": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-409": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-410": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-411": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-412": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-413": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-414": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-415": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-416": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-417": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-418": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-419": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-420": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-421": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-422": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-423": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-424": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-425": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-426": {
+  "kind": "field",
+  "why": "How instructors teach crossing obstacles: technique, not a stated rule"
+ },
+ "OPS-427": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-428": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-429": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-430": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-431": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-432": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-433": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-434": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-435": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-436": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-437": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-438": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-439": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-440": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-441": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-442": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-443": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-444": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-445": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-446": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-447": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-448": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-449": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-450": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-501": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-502": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-503": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-504": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-505": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-506": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-507": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-508": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-509": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-510": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-511": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-512": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-513": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-514": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-515": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-516": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-517": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-518": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-519": {
+  "kind": "bonus",
+  "why": "Absolute-temperature lift arithmetic; no handbook works it"
+ },
+ "THY-520": {
+  "kind": "bonus",
+  "why": "Hot-day lift loss from the gas law"
+ },
+ "THY-521": {
+  "kind": "bonus",
+  "why": "Why gas-law comparisons need an absolute scale"
+ },
+ "THY-522": {
+  "kind": "bonus",
+  "why": "Envelope temperature from the density ratio"
+ },
+ "THY-523": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-524": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-525": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-526": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-527": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-528": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-529": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-530": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-531": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-532": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-533": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-534": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-535": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-536": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-537": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-538": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-539": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-540": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-541": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-542": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-543": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-544": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-545": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-546": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-547": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-548": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-549": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-550": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-551": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-552": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-553": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-554": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-555": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-556": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-557": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-558": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-559": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-560": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-561": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-562": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-563": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-564": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-565": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-566": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-567": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-568": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-569": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-570": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-501": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-502": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-503": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-504": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-505": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-506": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-507": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-508": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-509": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-510": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-511": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-512": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-513": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-514": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-515": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-516": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-517": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-518": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-519": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-520": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-521": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-522": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-523": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-524": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-525": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-526": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-527": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-528": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-529": {
+  "kind": "test",
+  "why": ""
+ },
+ "DAC-530": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-601": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-602": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-603": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-604": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-605": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-606": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-607": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-608": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-609": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-610": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-611": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-612": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-613": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-614": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-615": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-616": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-617": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-618": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-619": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-620": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-621": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-622": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-623": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-624": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-625": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-626": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-627": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-628": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-629": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-630": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-631": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-632": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-633": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-634": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-635": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-636": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-637": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-638": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-639": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-640": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-641": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-642": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-643": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-644": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-645": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-646": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-647": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-648": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-649": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-650": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-651": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-652": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-653": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-654": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-655": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-656": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-657": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-658": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-659": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXS-660": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-601": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-602": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-603": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-604": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-605": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-606": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-607": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-608": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-610": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-611": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-612": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-613": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-614": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-615": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-616": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-617": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-618": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-619": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-620": {
+  "kind": "field",
+  "why": "Morning wind trend to watch, per Brian"
+ },
+ "WXT-621": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-622": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-623": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-624": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-625": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-626": {
+  "kind": "field",
+  "why": "Pilot discretion before a front, for good reason"
+ },
+ "WXT-627": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-628": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-629": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-630": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-631": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-632": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-633": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-634": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-635": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-636": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-637": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-638": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-639": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-640": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-701": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-702": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-703": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-704": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-705": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-706": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-707": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-708": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-709": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-710": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-711": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-712": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-713": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-714": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-715": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-716": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-717": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-718": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-719": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-720": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-721": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-722": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-723": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-724": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-725": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-726": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-727": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-728": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-729": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-730": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-731": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-732": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-733": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-734": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-735": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-736": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-737": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-738": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-739": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-740": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-741": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-742": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-743": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-744": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-745": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-746": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-747": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-748": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-749": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-750": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-701": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-702": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-703": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-704": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-705": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-706": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-707": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-708": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-709": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-710": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-711": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-712": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-713": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-714": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-715": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-716": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-717": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-718": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-719": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-720": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-721": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-722": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-723": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-724": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-725": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-701": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-702": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-703": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-704": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-705": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-706": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-707": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-708": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-709": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-710": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-711": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-712": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-713": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-714": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-715": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-716": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-717": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-718": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-719": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-720": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-721": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-722": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-723": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-724": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-725": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-801": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-802": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-803": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-804": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-805": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-806": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-807": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-808": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-809": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-810": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-811": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-812": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-813": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-814": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-815": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-816": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-817": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-818": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-819": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-820": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-821": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-822": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-823": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-824": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-825": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-826": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-827": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-828": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-829": {
+  "kind": "test",
+  "why": ""
+ },
+ "ADM-830": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-801": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-802": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-803": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-804": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-805": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-806": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-807": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-808": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-809": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-810": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-811": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-812": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-813": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-814": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-815": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-816": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-817": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-818": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-819": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-820": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-821": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-822": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-823": {
+  "kind": "field",
+  "why": "Lower balloon right-of-way: unwritten custom, taken as seriously as law"
+ },
+ "OPS-824": {
+  "kind": "test",
+  "why": ""
+ },
+ "OPS-825": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-801": {
+  "kind": "bonus",
+  "why": "Derives the 4.4°F cloud-base constant"
+ },
+ "WXT-802": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-803": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-804": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-805": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-806": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-807": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-808": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-809": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-810": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-811": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-812": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-813": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-814": {
+  "kind": "test",
+  "why": ""
+ },
+ "WXT-815": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-801": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-802": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-803": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-804": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-805": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-806": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-807": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-808": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-809": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-810": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-811": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-812": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-813": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-814": {
+  "kind": "test",
+  "why": ""
+ },
+ "AIR-815": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-801": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-802": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-803": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-804": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-805": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-806": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-807": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-808": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-809": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-810": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-811": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-812": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-813": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-814": {
+  "kind": "test",
+  "why": ""
+ },
+ "THY-815": {
+  "kind": "test",
+  "why": ""
+ }
+}

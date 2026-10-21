@@ -53,6 +53,7 @@ body.nofig .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 .qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .navbtn{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
 .navbtn svg{width:14px;height:14px}
+.kind{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);letter-spacing:.02em;text-transform:none;font-size:.8rem;vertical-align:1px}
 .meta{font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 .flagbtn{display:flex;align-items:center;gap:5px;font-family:var(--f-display);font-weight:600;font-size:.9rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
 .flagbtn svg{width:14px;height:14px}
@@ -407,8 +408,8 @@ const cur=()=>byId[list[pos]];
 const cleanExp=t=>GRADE?t:String(t||'').replace(/\s*CHECK:.*$/s,'');
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function buildTest(){const pool={};BANK.forEach(q=>(pool[q.area]=pool[q.area]||[]).push(q.id));Object.values(pool).forEach(shuffle);
-  if(BANK.length<=100)return shuffle(BANK.map(q=>q.id));
+function buildTest(){const pool={},TB=BANK.filter(q=>kindOf(q.id)==='test');TB.forEach(q=>(pool[q.area]=pool[q.area]||[]).push(q.id));Object.values(pool).forEach(shuffle);
+  if(TB.length<=100)return shuffle(TB.map(q=>q.id));
   const pick=[];Object.entries(BLUEPRINT).forEach(([a,n])=>{pick.push(...(pool[a]||[]).splice(0,n));});
   const rest=shuffle(Object.values(pool).flat());while(pick.length<100&&rest.length)pick.push(rest.pop());return shuffle(pick);}
 
@@ -416,8 +417,9 @@ function studyList(){let qs=BANK;
   if(filter==='FLAG')qs=qs.filter(q=>S.flags[q.id]);
   else if(filter==='MISS')qs=qs.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer);
   else if(filter==='NEW')qs=qs.filter(q=>S.study[q.id]===undefined);
-  else if(filter==='UNGRADED')qs=qs.filter(q=>!S.grade[q.id]);
+  else if(filter==='UNGRADED')qs=qs.filter(q=>!(S.grade[q.id]&&S.grade[q.id].v));
   else if(filter.startsWith('T:'))qs=qs.filter(q=>MAP[q.id]===filter.slice(2));
+  else if(filter.startsWith('K:'))qs=qs.filter(q=>kindOf(q.id)===filter.slice(2));
   else if(filter!=='ALL')qs=qs.filter(q=>q.area===filter);
   return qs.map(q=>q.id);}
 
@@ -428,15 +430,15 @@ function revealed(id){if(GRADE)return true;if(mode==='due')return dueAns[id]!==u
 // ---------- rendering ----------
 function renderFilters(){const f=$('filters');f.innerHTML='';if(mode!=='study'){f.hidden=true;return;}f.hidden=false;
   const counts={};BANK.forEach(q=>counts[q.area]=(counts[q.area]||0)+1);
-  const opts=[['ALL','All',BANK.length],...AREAS.filter(([k])=>counts[k]).map(([k,n])=>[k,n,counts[k]]),['NEW','Not tried',BANK.filter(q=>S.study[q.id]===undefined).length],['MISS','Missed',BANK.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer).length],['FLAG','Flagged',BANK.filter(q=>S.flags[q.id]).length]];
+  const opts=[['ALL','All',BANK.length],...AREAS.filter(([k])=>counts[k]).map(([k,n])=>[k,n,counts[k]]),...Object.entries(KINDS).map(([k,n])=>['K:'+k,n,BANK.filter(q=>kindOf(q.id)===k).length]).filter(o=>o[2]),['NEW','Not tried',BANK.filter(q=>S.study[q.id]===undefined).length],['MISS','Missed',BANK.filter(q=>S.study[q.id]!==undefined&&S.study[q.id]!==q.answer).length],['FLAG','Flagged',BANK.filter(q=>S.flags[q.id]).length]];
   if(filter.startsWith('T:')&&LES.topics[filter.slice(2)])opts.unshift([filter,LES.topics[filter.slice(2)].title,BANK.filter(q=>MAP[q.id]===filter.slice(2)).length]);
-  if(GRADE)opts.push(['UNGRADED','Ungraded',BANK.filter(q=>!S.grade[q.id]).length]);
+  if(GRADE)opts.push(['UNGRADED','Ungraded',BANK.filter(q=>!(S.grade[q.id]&&S.grade[q.id].v)).length]);
   opts.forEach(([k,n,c])=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',String(filter===k));b.innerHTML=`${n}<span>${c}</span>`;b.onclick=()=>{filter=k;list=studyList();pos=0;renderAll();};f.appendChild(b);});
   if(GRADE){const g=Object.values(S.grade);const b=document.createElement('button');b.className='chip';b.textContent=`Copy grading notes (${g.length} graded)`;b.onclick=copyNotes;f.appendChild(b);}
 }
 function renderNav(){const g=$('navgrid');g.innerHTML='';list.forEach((id,i)=>{const q=byId[id],p=picked(id),b=document.createElement('button');
   let c='nq';if(p!==undefined)c+=(revealed(id)&&!GRADE)?(p===q.answer?' ok':' no'):' ans';if(S.flags[id])c+=' fl';if(i===pos)c+=' cur';
-  if(GRADE&&S.grade[id])c+=S.grade[id].v==='ok'?' ok':' no';
+  if(GRADE&&S.grade[id]&&S.grade[id].v)c+=S.grade[id].v==='ok'?' ok':' no';
   b.className=c;b.textContent=i+1;b.title=id;b.onclick=()=>go(i);g.appendChild(b);});}
 
 function renderQ(){
@@ -444,6 +446,7 @@ function renderQ(){
   const fig=q.figure==='density-altitude';document.body.classList.toggle('nofig',!fig);$('bench').hidden=!fig;
   $('qpos').textContent=`${pos+1} of ${list.length}`;
   $('meta').textContent=`${q.id} · ${AREA[q.area]||q.area}${q.topic?' · '+q.topic:''}`;
+  const kd=kindOf(q.id);if(KINDS[kd]){const b=document.createElement('span');b.className='kind';b.textContent=KINDS[kd];b.title=kd==='bonus'?'Deeper understanding; not likely on the test':'Airmanship from real flying; not a regulation';$('meta').appendChild(b);}
   $('qbody').textContent=q.stem;$('qfig').textContent='';
   const g=$('given');if(fig&&q.elev!==undefined){g.hidden=false;g.innerHTML=`<li><span>Field elevation</span><span>${fmt(q.elev)} ft MSL</span></li><li><span>Altimeter setting</span><span>${(+q.alt).toFixed(2)} in Hg</span></li><li><span>Outside air temperature</span><span>${q.oat}°C (${toF(q.oat).toFixed(0)}°F)</span></li>`;}else g.hidden=true;
   $('mini').textContent=fig&&q.elev!==undefined?`${q.id} · elev ${fmt(q.elev)} ft · altimeter ${(+q.alt).toFixed(2)} · OAT ${q.oat}°C (${toF(q.oat).toFixed(0)}°F)`:q.id;
@@ -476,13 +479,14 @@ function renderQ(){
 }
 function renderGrader(q){const el=$('grader');if(!GRADE){el.hidden=true;return;}el.hidden=false;const g=S.grade[q.id]||{};
   const chk=/CHECK:(.*)$/s.exec(q.explanation||'');
-  el.innerHTML=`<div><span class="badge ${q.confidence==='check'?'check':'high'}">${q.confidence==='check'?'Writer unsure':'Writer verified'}</span> <span class="small">difficulty ${q.difficulty||'?'}</span></div>${chk?`<div class="checknote"></div>`:''}<div class="row-btns" style="margin-top:0"><button class="btn gbtn okv" id="gOk" aria-pressed="${g.v==='ok'}">Looks good</button><button class="btn gbtn fixv" id="gFix" aria-pressed="${g.v==='fix'}">Needs a fix</button></div><textarea id="gNote" placeholder="What needs fixing? (saved on this device)"></textarea>`;
+  el.innerHTML=`<div><span class="badge ${q.confidence==='check'?'check':'high'}">${q.confidence==='check'?'Writer unsure':'Writer verified'}</span> <span class="small">difficulty ${q.difficulty||'?'}</span></div>${chk?`<div class="checknote"></div>`:''}<div class="row-btns" style="margin-top:0"><button class="btn gbtn okv" id="gOk" aria-pressed="${g.v==='ok'}">Looks good</button><button class="btn gbtn fixv" id="gFix" aria-pressed="${g.v==='fix'}">Needs a fix</button></div><div class="row-btns" style="margin-top:0">${['test','bonus','field'].map(k=>`<button class="chip" data-kind="${k}" aria-pressed="${(g.kind||kindOf(q.id))===k}">${k==='test'?'Test-style':KINDS[k]}</button>`).join('')}</div>${KIND[q.id]&&KIND[q.id].why?`<div class="small">Why: ${esc(KIND[q.id].why)}</div>`:''}<textarea id="gNote" placeholder="What needs fixing? (saved on this device)"></textarea>`;
   if(chk)el.querySelector('.checknote').textContent='Check: '+chk[1].trim();
   $('gNote').value=g.note||'';
   const set=v=>{S.grade[q.id]={v,note:$('gNote').value};save();renderGrader(q);renderNav();renderFilters();};
   $('gOk').onclick=()=>set('ok');$('gFix').onclick=()=>set('fix');
+  el.querySelectorAll('[data-kind]').forEach(b=>b.onclick=()=>{const x=S.grade[q.id]||{v:'',note:$('gNote').value};x.kind=b.dataset.kind;S.grade[q.id]=x;save();renderGrader(q);renderNav();renderFilters();});
   $('gNote').oninput=()=>{const x=S.grade[q.id]||{v:'fix'};x.note=$('gNote').value;S.grade[q.id]=x;save();};}
-function copyNotes(){const lines=[];BANK.forEach(q=>{const g=S.grade[q.id];if(g)lines.push(`${q.id}: ${g.v==='ok'?'OK':'FIX'}${g.note?' — '+g.note.replace(/\s+/g,' '):''}`);});
+function copyNotes(){const lines=[];BANK.forEach(q=>{const g=S.grade[q.id];if(g)lines.push(`${q.id}: ${g.v==='ok'?'OK':g.v==='fix'?'FIX':'NOTE'}${g.kind&&g.kind!==kindOf(q.id)?' — kind should be '+g.kind:''}${g.note?' — '+g.note.replace(/\s+/g,' '):''}`);});
   const text=lines.join('\n')||'No questions graded yet.';
   const done=()=>{const b=[...document.querySelectorAll('.chip')].pop();if(b){b.textContent='Copied. Paste it to Claude.';}};
   if(navigator.clipboard)navigator.clipboard.writeText(text).then(done,()=>fallbackCopy(text,done));else fallbackCopy(text,done);}
@@ -505,7 +509,7 @@ function renderAll(){
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
   $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||!list.length;
-  if(mode==='teststart'){const n=Math.min(100,BANK.length);$('tsText').textContent=`${n} questions drawn from the ${BANK.length}-question bank, spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
+  if(mode==='teststart'){const nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(100,nt);$('tsText').textContent=`${n} questions drawn from the ${nt} test-style questions in the bank (bonus and field questions stay in Study), spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
@@ -701,7 +705,10 @@ $('wprev').onclick=()=>{if(walk.i>0){walk.i--;showStep();}};
 $('wnext').onclick=()=>{if(walk.i<walk.steps.length-1){walk.i++;showStep();}else endWalk();};
 
 // ---------- learn ----------
-let LES={groups:[],links:{},topics:{}},MAP={},TQ={};
+let LES={groups:[],links:{},topics:{}},MAP={},TQ={},KIND={};
+// Question kind, separate from subject: test-style (default), bonus/conceptual, from the field. Only test-style counts toward practice tests and mastery.
+const KINDS={bonus:'Bonus · conceptual',field:'From the field'};
+const kindOf=id=>(KIND[id]&&KIND[id].kind)||'test';
 let LV={v:'home'};
 const dueAns={};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -725,7 +732,7 @@ function sched(id,ok){const R=S.review,r=R[id],d=dayNum();
 const dueIds=()=>Object.keys(S.review).filter(id=>byId[id]&&S.review[id].due<=dayNum());
 
 function lastAns(id){if(S.study[id]!==undefined)return S.study[id];if(S.test&&S.test.done&&S.test.answers[id]!==undefined)return S.test.answers[id];}
-function topicStats(t){const ids=TQ[t]||[];let tried=0,right=0;ids.forEach(id=>{const a=lastAns(id);if(a!==undefined){tried++;if(a===byId[id].answer)right++;}});return{n:ids.length,tried,right};}
+function topicStats(t){const ids=(TQ[t]||[]).filter(id=>kindOf(id)==='test');let tried=0,right=0;ids.forEach(id=>{const a=lastAns(id);if(a!==undefined){tried++;if(a===byId[id].answer)right++;}});return{n:ids.length,tried,right};}
 const LEVELS=['Not started','Familiar','Proficient','Mastered'];
 function level(t){const s=topicStats(t),acc=s.tried?s.right/s.tried:0,les=LES.topics[t]?.lesson,done=!!S.lessons[t];
   if(!s.tried&&!done)return 0;
@@ -950,8 +957,8 @@ new ResizeObserver(resize).observe(cv);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(req);
 setTool('move');
 const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
-Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json')]).then(([sets,les,map])=>{
-  if(les&&les.topics)LES=les;if(map)MAP=map;
+Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json')]).then(([sets,les,map,kinds])=>{
+  if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;
   const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
   BANK=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
   BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
