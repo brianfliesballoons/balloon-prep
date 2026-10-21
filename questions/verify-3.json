@@ -1,0 +1,702 @@
+[
+  {
+    "id": "AIR-301",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.16-17 (Class E SFC magenta dashed; Class D blue dashed; 700-ft magenta vignette); 14 CFR 91.155(c)-(d) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-302",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation attributed a reason ('usually because other controlled airspace begins there') to the Chart Users' Guide, which does not give one. The stem did not describe the boxed ceiling symbol shown in the CUG legend.",
+    "suggested": "Stem now describes the dashed blue box; the unsourced 'usually because' clause removed and AIM 3-2-5's 'charted in MSL' added. (Applied in pilot-3.json.)",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.16 (Class D: ceiling box, minus sign); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-5"
+  },
+  {
+    "id": "AIR-303",
+    "verdict": "fix",
+    "issue": "Key correct. 'On the shaded side of the band' was ambiguous: the whole vignette is shaded, and a student could not tell which side was meant.",
+    "suggested": "Stem asks about the area the vignette encloses. (Applied in pilot-3.json.)",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 (magenta vignette = 700 ft AGL floor); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-5 NOTE, 3-2-6"
+  },
+  {
+    "id": "AIR-304",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 (blue vignette: floors other than 700 ft abutting Class G); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-6; 14 CFR 71.71(a)"
+  },
+  {
+    "id": "AIR-305",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 (Mode C Required Airspace, solid magenta line, 'MODE C & ADS-B OUT 30 NM'); 14 CFR 91.215(b)(2)-(3), 91.225(d)(2), (e) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-4 (outer area 20 NM, not charted)"
+  },
+  {
+    "id": "AIR-306",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.16 (Class B MSL altitudes, solid blue, last two zeros omitted); 14 CFR 91.131(a)(1)"
+  },
+  {
+    "id": "AIR-307",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.16 (Class C altitudes MSL, solid magenta); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-4; FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Class C Airspace, 19470)"
+  },
+  {
+    "id": "AIR-308",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.15 and 20 (towered airports blue, all others magenta; beacon symbol)"
+  },
+  {
+    "id": "AIR-309",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.15 (star = part-time, see tower frequency tabulation; beacon symbol); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Class D reverts to E or G)"
+  },
+  {
+    "id": "AIR-310",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.11 (MSL top elevation, AGL height in parentheses below; guy wires)"
+  },
+  {
+    "id": "AIR-311",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.11-12 (MEF: highest elevation incl. obstacles, allowances, rounded up, last two digits omitted)"
+  },
+  {
+    "id": "AIR-312",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 and p.30 legend images (P/R/W blue hatched border; Alert/MOA magenta hatched border; CFAs not charted); AIM (faa.gov aim_html, fetched 2026-10-20) 3-4-1, 3-4-7"
+  },
+  {
+    "id": "AIR-313",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 3-4-8 (voluntary avoidance; 14 CFR 99.7 prohibition by NOTAM); FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.18 (NSA broken magenta line)"
+  },
+  {
+    "id": "AIR-314",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation said AIM 3-5-3 'makes the pilot responsible for checking them'; the AIM says pilots are responsible for complying with the TFR rules and 'should check appropriate NOTAMs during flight planning'.",
+    "suggested": "Explanation now uses the AIM's wording. (Applied in pilot-3.json.)",
+    "source": "FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.18 (only TFRs relating to national security are charted); AIM (faa.gov aim_html, fetched 2026-10-20) 3-5-3"
+  },
+  {
+    "id": "AIR-315",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (Variation: 'east is least, west is best')"
+  },
+  {
+    "id": "AIR-316",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 8 (Magnetic Compass Induced Errors: Variation, Deviation)"
+  },
+  {
+    "id": "AIR-317",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 8 (variation same on every heading along an isogonic line; swinging the compass minimizes deviation)"
+  },
+  {
+    "id": "AIR-318",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B 3.4.2.2 Table 3-5 (winds aloft referenced to true north); FAA-H-8083-25C Ch. 16 (Variation); arithmetic checked"
+  },
+  {
+    "id": "AIR-319",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-28B 3.4.2.2 Table 3-5 (magnetic in ATIS and ASOS/AWOS voice; otherwise true); AIM (faa.gov aim_html, fetched 2026-10-20) 4-2-10"
+  },
+  {
+    "id": "AIR-320",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic checked (4.5 / 0.5 = 9 kt); FAA-H-8083-25C Ch. 16 (Basic Calculations)"
+  },
+  {
+    "id": "AIR-321",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic checked (7.5 / 6 = 1.25 h = 1 h 15 min); FAA-H-8083-25C Ch. 16"
+  },
+  {
+    "id": "AIR-322",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic checked (12 x 40/60 = 8 NM); FAA-H-8083-25C Ch. 16"
+  },
+  {
+    "id": "AIR-323",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic checked (30/20 = 1.5 h - 0.5 h reserve = 1.0 h x 10 kt = 10 NM); FAA-H-8083-25C Ch. 16"
+  },
+  {
+    "id": "AIR-324",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 9-1-5 (sectional 1 inch = 6.86 NM, 1:500,000; TAC 1 inch = 3.43 NM, 1:250,000); arithmetic checked"
+  },
+  {
+    "id": "AIR-325",
+    "verdict": "fix",
+    "issue": "Key correct (12 minutes of latitude = 12 NM). The writer's doubt stands: no FAA publication found that states the relationship.",
+    "suggested": "Confidence stays 'check'; CHECK sentence rewritten to record what was searched and hand the sourcing call to Brian. (Applied in pilot-3.json.)",
+    "source": "Searched: FAA-H-8083-25C, FAA-H-8083-11B, AIM ch.1 and 9, FAA-H-8083-28B, FAA-H-8083-15B, FAA-H-8083-16B ch.2, Chart Users' Guide; WebSearch faa.gov 2026-10-20 (no hit)"
+  },
+  {
+    "id": "AIR-326",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "Arithmetic checked (2 NM + 5 NM = 7 NM); FAA-H-8083-25C Ch. 16"
+  },
+  {
+    "id": "AIR-327",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 5-1-3 (NOTAM Search or FSS; 91.103 includes NOTAMs)"
+  },
+  {
+    "id": "AIR-328",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 5-1-3 (NOTAM Classification; FDC NOTAMs include TFRs)"
+  },
+  {
+    "id": "AIR-329",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 5-1-3 (cancelled when published or condition returns to normal; up to 7 days before activity)"
+  },
+  {
+    "id": "AIR-330",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation claimed international NOTAMs 'mostly duplicate domestic ones', which no source reviewed states.",
+    "suggested": "Unsourced clause removed. (Applied in pilot-3.json.)",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 5-1-3 (ARTCC NOTAMs; NOTAM Classification)"
+  },
+  {
+    "id": "AIR-331",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-5 NOTE ('other times CLASS E/G' in Chart Supplement); AIM (faa.gov aim_html, fetched 2026-10-20) 9-1-5; FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.15 (tower tabulation for hours)"
+  },
+  {
+    "id": "AIR-332",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-5 (part-time surface area becomes Class G up to but not including overlying controlled airspace); AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-9"
+  },
+  {
+    "id": "AIR-333",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 16 (VOR); AIM (faa.gov aim_html, fetched 2026-10-20) 1-1-3"
+  },
+  {
+    "id": "AIR-334",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 1-1-3 (line-of-sight; range varies with receiver altitude)"
+  },
+  {
+    "id": "AIR-335",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 1-1-17 (VFR handheld units have no RAIM alerting; no database requirement for VFR; do not solely rely on GPS); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 7 (Direction, 'old-school' methods)"
+  },
+  {
+    "id": "AIR-336",
+    "verdict": "fix",
+    "issue": "Key correct. As the writer flagged, no FAA passage says in so many words that a balloon's ground speed equals the wind speed; the explanation asserted it without a source.",
+    "suggested": "Explanation now derives it from the PHAK wind triangle (no wind = track equals heading, GS equals TAS; a balloon's airspeed is essentially zero) plus the BFH ground-track method; PHAK reference added. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 7 (Direction, 19724); FAA-H-8083-25C Ch. 16 (Wind Triangle or Vector Analysis)"
+  },
+  {
+    "id": "AIR-337",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-4 (5 NM core, 10 NM shelf from no lower than 1,200 ft, 4,000 ft above airport, charted MSL; 20 NM outer area); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-5"
+  },
+  {
+    "id": "AIR-338",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation cited 91.130(c)(1) for the call-sign/'standby' rule, which comes from the AIM NOTE; the regulation only requires communications to be established.",
+    "suggested": "Attribution corrected: regulation for the requirement, AIM 3-2-4 for the call-sign test. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.130(c)(1) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-4 NOTE; FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (When Approaching Controlled Airspace)"
+  },
+  {
+    "id": "AIR-339",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation said the BFH describes ATC authorization as 'how record attempts are handled'; the BFH says balloons use Class A only 'on a waiver or ... some special operation, such as a record attempt'.",
+    "suggested": "Explanation now matches the BFH and AIM wording. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.135 (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 3-2-2; FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Class A Airspace)"
+  },
+  {
+    "id": "AIR-340",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 71.71(a) (eCFR current text, fetched 2026-10-20); FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 (Class G up to 14,500 MSL); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Class G: much of the West Class G to 14,500)"
+  },
+  {
+    "id": "AIR-341",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.155(a) table (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-342",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 1.1 (Night); 91.155(a)-(b) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-343",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.155(c), 91.157 (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-344",
+    "verdict": "fix",
+    "issue": "Key correct for a balloon. The key's 'and daylight' is not true of special VFR in general (an instrument-rated pilot in an IFR-equipped aircraft may use it at night), so the stem needed to tie it to the balloon. The explanation said 'at night'; the rule says between sunset and sunrise, and that limit now sits in 91.157(b)(4) after the 2022 amendment.",
+    "suggested": "Stem now asks about special VFR 'for this balloon'; 'at night' changed to 'between sunset and sunrise'; the below-10,000-feet limit added. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.157(a), (b)(1)-(4) (eCFR current text, fetched 2026-10-20; Amdt. 91-366, 87 FR 75846)"
+  },
+  {
+    "id": "AIR-345",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation omitted 91.145(d), the paragraph that actually prohibits entry and names the waiver.",
+    "suggested": "91.145(d) added to the explanation and ref. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.145(a)(8), (d) (eCFR current text, fetched 2026-10-20); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Temporary Flight Restrictions)"
+  },
+  {
+    "id": "AIR-346",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 3-5-2 (not prohibited, extreme vigilance, FSS within 100 NM, >250 kt, three-digit routes have segments above 1,500 ft AGL)"
+  },
+  {
+    "id": "AIR-347",
+    "verdict": "fix",
+    "issue": "Key correct. The writer's doubt about 91.225(e) does not affect the answer: 91.215(b)(4) applies to 'all aircraft', and its only balloon exceptions, (b)(3) and (b)(5), do not reach the airspace above a Class C below 10,000 feet. The Chart Users' Guide states the same (Mode C required within and above Class C up to 10,000 feet), and AIM 4-1-20 lets these aircraft go without either box only outside Class B/C and below their ceilings.",
+    "suggested": "CHECK removed and confidence raised to high; the explanation now rests the answer on the transponder rule, which settles it on its own. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.215(b), (d)(3); 91.225(d), (e), (g) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-20; FAA Aeronautical Chart Users' Guide, effective 9 July 2026 p.17 (Mode C required but not depicted within and above Class C)"
+  },
+  {
+    "id": "AIR-348",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.215(b)(5); 91.225(d)(4), (e) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-349",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.215(c); 91.225(f) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-20 (1200 code; transponder on in uncontrolled airspace if practicable)"
+  },
+  {
+    "id": "AIR-350",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-11 TBL 4-1-11 (123.300/123.500 aviation instruction, glider, hot air balloon, not for advisory service; 122.750 and 123.025 air-to-air); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (idle chatter)"
+  },
+  {
+    "id": "AIR-351",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-2-9 (12,500 = 'one two thousand five hundred')"
+  },
+  {
+    "id": "AIR-352",
+    "verdict": "fix",
+    "issue": "Key correct and close to the BFH transit example. AIM 4-1-9 also asks for the airport name at the end of each self-announce, which the key omits, so 'follows' was arguable.",
+    "suggested": "Stem now asks for the transmission that 'best' follows the guidance. (Applied in pilot-3.json.)",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-9 (self-announce; 'Traffic in the area, please advise'); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (When Transiting a Non-towered Facility)"
+  },
+  {
+    "id": "AIR-353",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-2-12 TBL 4-2-12 (PST +8, subtract 1 for daylight time)"
+  },
+  {
+    "id": "AIR-354",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-9 (MULTICOM 122.9 where no tower, FSS or UNICOM); AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-11 (122.950 UNICOM at airports with tower or FSS)"
+  },
+  {
+    "id": "AIR-355",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 4-1-9 (other than arriving or departing: monitor/communicate within 10 miles); 14 CFR 91.126(d), 91.127(c) (eCFR current text, fetched 2026-10-20); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5"
+  },
+  {
+    "id": "AIR-356",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.125 (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 4-3-13"
+  },
+  {
+    "id": "AIR-357",
+    "verdict": "fix",
+    "issue": "Key correct. The key's 'land elsewhere' was the writer's inference, not the signal's meaning, and the key paraphrased 91.125 loosely.",
+    "suggested": "Key now quotes 91.125 ('give way to other aircraft and continue circling') and adds only 'a balloon should stay clear'; the BFH line is quoted accurately. (Applied in pilot-3.json.)",
+    "source": "14 CFR 91.125, 91.129(d)(2) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 4-3-13; FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 5 (Class D Airspace, 19465)"
+  },
+  {
+    "id": "AIR-358",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6 (eye movements not over 10 degrees, each area at least 1 second)"
+  },
+  {
+    "id": "AIR-359",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-8 (Collision Course Targets); 14 CFR 91.113(b) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "AIR-360",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.113(d), (d)(1), (g) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "ADM-301",
+    "verdict": "fix",
+    "issue": "Key correct. 'Without looking the next field over ... drop straight into it' could be read as dropping into the field with the cattle. The BFH example was described as 'on impulse'; in the handbook the pilot descends to impress spectators (its label is still Impulsivity).",
+    "suggested": "Stem makes clear the pilot drops into the unchecked next field; the BFH example is described without the 'on impulse' paraphrase. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Hazardous Attitudes & Antidotes, Fig. 1-5)"
+  },
+  {
+    "id": "ADM-302",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-5 antidotes); FAA-H-8083-25C Ch. 2"
+  },
+  {
+    "id": "ADM-303",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2 (Operational Pitfalls: peer pressure)"
+  },
+  {
+    "id": "ADM-304",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-5)"
+  },
+  {
+    "id": "ADM-305",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (label the thought as hazardous, then state the antidote; memorize antidotes)"
+  },
+  {
+    "id": "ADM-306",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15: get-there-itis, scud running, duck-under syndrome)"
+  },
+  {
+    "id": "ADM-307",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15: peer pressure, mind set, get-there-itis)"
+  },
+  {
+    "id": "ADM-308",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (four risk elements; operation: why the flight is made, original intent, worth the risks)"
+  },
+  {
+    "id": "ADM-309",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (Perceive, Process, Perform with PAVE, CARE, TEAM); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-7)"
+  },
+  {
+    "id": "ADM-310",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 ('Transfer—can someone be consulted?'); FAA-H-8083-25C Ch. 2 (TEAM: transfer, e.g. consult the chief flight instructor)"
+  },
+  {
+    "id": "ADM-311",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (CARE: 'probably' okay means time for a solid reality check)"
+  },
+  {
+    "id": "ADM-312",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation implied the BFH uses the frosted-fitting example for DECIDE; in 11B it appears in the OODA-loop figure.",
+    "suggested": "Explanation now places the example in the OODA-loop figure. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (The DECIDE Model, Fig. 1-9; The OODA Loop, Fig. 1-10)"
+  },
+  {
+    "id": "ADM-313",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-9 DECIDE: Do, Evaluate, Identify)"
+  },
+  {
+    "id": "ADM-314",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (The OODA Loop, 12761: Orient, tree-line example; Fig. 1-11)"
+  },
+  {
+    "id": "ADM-315",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 2 (Risk Matrix, Fig. 2-5: likelihood and severity)"
+  },
+  {
+    "id": "ADM-316",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Human Resources, 12722-12723: crew see rain on chase vehicles first; 'legally invisible' team)"
+  },
+  {
+    "id": "ADM-317",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.3(a) (eCFR current text, fetched 2026-10-20); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (all final decisions rest with the pilot)"
+  },
+  {
+    "id": "ADM-318",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Positive Transfer of Controls, three-step exchange)"
+  },
+  {
+    "id": "ADM-319",
+    "verdict": "fix",
+    "issue": "Key correct. As the writer feared, 'wired from coffee' gave the Medication distractor a foothold (caffeine is a drug).",
+    "suggested": "Distractor 'Medication.' replaced with 'Alcohol.'; both are letters in every version of the checklist, so the I'M SAFE last-letter difference (BFH 'Eating' vs. AIM/PHAK 'Emotion') still does not matter. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 1 (Fig. 1-6) and Ch. 9 (Fatigue, Fig. 9-3)"
+  },
+  {
+    "id": "ADM-320",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-1 (Emotion: death of a family member; do not fly until satisfactorily recovered)"
+  },
+  {
+    "id": "ADM-321",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Stress: not safe, should not exercise privileges, consult a physician); FAA-H-8083-25C Ch. 2 (IMSAFE: stress not among the regulatory grounding conditions)"
+  },
+  {
+    "id": "ADM-322",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (skill fatigue: timing disruption, disruption of the perceptual field; hypoxia and hyperventilation symptom lists)"
+  },
+  {
+    "id": "ADM-323",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Histotoxic Hypoxia: one ounce = about 2,000 ft; Alcohol: histotoxic hypoxia)"
+  },
+  {
+    "id": "ADM-324",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-2 (night vision deteriorates as low as 5,000 ft; significant effects usually not below 12,000 ft)"
+  },
+  {
+    "id": "ADM-325",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.211(a)(1)-(3) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-2 (oxygen above 10,000 ft day)"
+  },
+  {
+    "id": "ADM-326",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Hyperventilation: symptoms; slow breathing, paper bag, talking aloud); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-3"
+  },
+  {
+    "id": "ADM-327",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (pale, clammy, muscle spasms vs cyanosis and limp muscles); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-2 (tunnel vision above 15,000 ft), 8-1-3"
+  },
+  {
+    "id": "ADM-328",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 17 (CO: about 200 times more easily than oxygen; up to 48 hours to dispose); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-4 (colorless, odorless; headache, drowsiness, dizziness; seek treatment if severe or continuing)"
+  },
+  {
+    "id": "ADM-329",
+    "verdict": "fix",
+    "issue": "Key was defensible chemistry, but no FAA publication found names propane burners as a CO source (BFH 11B all chapters, PHAK 25C and AIM 8-1-4 searched); the explanation and CHECK said so.",
+    "suggested": "Reworded to what the FAA says: CO comes from all internal combustion engines (fan, chase vehicle). Burner claim and CHECK removed; confidence high. New distractor (diesel only) replaces the propane-free one. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-25C Ch. 17 (Carbon Monoxide (CO) Poisoning); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-4; FAA-H-8083-11B (faa.gov chapter PDFs) searched for 'carbon monoxide', 'exhaust', 'fumes' (no burner reference)"
+  },
+  {
+    "id": "ADM-330",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-5 (prevented only by reference to reliable fixed points or instruments); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (balloon pilots rarely affected; inadvertent fog)"
+  },
+  {
+    "id": "ADM-331",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-5 (autokinesis, false horizon); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6 (empty-field myopia)"
+  },
+  {
+    "id": "ADM-332",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Night Vision: burner light destroys night vision for several minutes; close one eye, do not look at the flame); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6"
+  },
+  {
+    "id": "ADM-333",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6 (at least 30 minutes full; 20 minutes moderate under dim red; lost within a few seconds of bright light; close one eye)"
+  },
+  {
+    "id": "ADM-334",
+    "verdict": "fix",
+    "issue": "Key correct. The explanation asserted that 'a red lens does not improve the rods' acuity' without a source.",
+    "suggested": "Replaced with what the handbooks do and do not say. (Applied in pilot-3.json.)",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Night Vision, Fig. 9-8); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6"
+  },
+  {
+    "id": "ADM-335",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-6 (empty-field myopia, 10 to 30 ft focal distance); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (focus on distant light sources, however dim)"
+  },
+  {
+    "id": "ADM-336",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "14 CFR 91.17(b) (eCFR current text, fetched 2026-10-20)"
+  },
+  {
+    "id": "ADM-337",
+    "verdict": "fix",
+    "issue": "Key correct. It was the only hedged choice ('may still be impaired') and noticeably the shortest.",
+    "suggested": "Key restated as the BFH's firm statement (a hangover means still impaired); stem says 'FAA guidance' since the key now draws on the BFH as well as the AIM. (Applied in pilot-3.json.)",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-1 (Alcohol); 14 CFR 91.17(a) (eCFR current text, fetched 2026-10-20); FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 (Alcohol)"
+  },
+  {
+    "id": "ADM-338",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-25C Ch. 17 (wait at least 48 hours after first dose of any new medication); 14 CFR 91.17(a)(3) (eCFR current text, fetched 2026-10-20); AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-1 (Medication)"
+  },
+  {
+    "id": "ADM-339",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "FAA-H-8083-11B (faa.gov chapter PDFs) Ch. 9 and FAA-H-8083-25C Ch. 17 (first noticeable effect of dehydration is fatigue; thirst at a 1.5-quart deficit)"
+  },
+  {
+    "id": "ADM-340",
+    "verdict": "confirmed",
+    "issue": "",
+    "suggested": "",
+    "source": "AIM (faa.gov aim_html, fetched 2026-10-20) 8-1-2 (12 h after non-decompression dive for flight up to 8,000 ft MSL; 24 h after controlled-ascent dive or above 8,000 ft)"
+  }
+]

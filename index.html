@@ -141,6 +141,24 @@ body.max .bench{position:fixed;inset:0;z-index:20;border-radius:0;border:0;overf
 body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 /* learn */
+.chipc{align-self:flex-start;font-family:var(--f-num);font-size:.8rem;background:var(--chip);border-radius:999px;padding:3px 10px}
+.pq{background:var(--chip);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;gap:8px}
+.pq summary{min-height:36px;cursor:pointer;font-weight:700;font-size:.92rem;display:flex;align-items:center}
+.pq>p,.pq .choices,.pq .fb{margin:8px 0 0}
+.pq .choice{cursor:default}
+.pq .btn{margin-top:10px;align-self:flex-start}
+.qmeta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.88rem;color:var(--muted)}
+.qmeta b{color:var(--ink)}
+.qt{font-size:1.12rem}
+.ans{background:var(--good-bg);border-radius:10px;padding:10px 12px}
+.okc{display:flex;align-items:center;gap:4px;font-weight:700;color:var(--good)} .okc svg{width:15px;height:15px}
+.waitc{font-weight:700;color:var(--flag)}
+.myq{border-top:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.seg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.seg2 .mode{min-height:44px}
+.hubq{display:flex;flex-direction:column;gap:14px}
+.tile svg{color:var(--flag)}
+
 .learn{max-width:760px;margin-inline:auto;width:100%;display:flex;flex-direction:column;gap:14px;font-size:1.06rem}
 .learn p{margin:0}
 .lc{display:flex;flex-direction:column;gap:12px;border-radius:14px;padding:18px}
@@ -199,9 +217,10 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .av svg{width:22px;height:22px}
 .cq{display:flex;flex-direction:column;gap:10px}
 .cq .choice{min-height:48px}
-.cq .tag{margin-left:auto;font-style:normal;font-weight:700;font-size:.85rem;white-space:nowrap;display:flex;align-items:center;gap:4px}
-.cq .tag svg{width:15px;height:15px}
-.cq .tag.ok{color:var(--good)} .cq .tag.no{color:var(--bad)}
+.cq .tag,.pq .tag{margin-left:auto;font-style:normal;font-weight:700;font-size:.85rem;white-space:nowrap;display:flex;align-items:center;gap:4px;flex:none}
+.cq .tag svg,.pq .tag svg{width:15px;height:15px;flex:none}
+.cq .tag.ok,.pq .tag.ok{color:var(--good)} .cq .tag.no,.pq .tag.no{color:var(--bad)}
+.pq .choice span{flex:1;min-width:0}
 .lc hr{border:0;border-top:1px dashed var(--line);margin:6px 0;width:100%}
 .given2{font-family:var(--f-num);font-size:.85rem;color:var(--muted)}
 .deep{display:flex;gap:12px;align-items:center;min-height:56px;width:100%;text-align:left;font:inherit;color:var(--ink);background:transparent;border:0;border-top:1px solid var(--line);padding:10px 0 0;text-decoration:none;cursor:pointer}
@@ -358,7 +377,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 <script>
 (function(){
 // ---------- data ----------
-const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-4.json'];
+const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json'];
 const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
 const AREA=Object.fromEntries(AREAS);
 const BLUEPRINT={REG:22,AIR:10,WXS:12,ADM:5,THY:18,WXT:15,OPS:15,DAC:3};
@@ -376,7 +395,7 @@ const GRADE=location.hash==='#grade';
 const KEY='bwp-v1';
 let S={study:{},flags:{},test:null,grade:{}};
 try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw));}catch(e){}
-S.review=S.review||{};S.lessons=S.lessons||{};S.instructor=S.instructor||{};
+S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||null;delete S.instructor;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 // ---------- view state ----------
@@ -511,7 +530,7 @@ $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefin
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));};
-$('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},instructor:S.instructor,exam:S.exam};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
+$('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},hubs:S.hubs,cls:S.cls,exam:S.exam};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
 document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'||$('main').hidden)return;const k=e.key.toLowerCase();
   if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k));}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
   else if(k==='escape'&&document.body.classList.contains('max'))toggleMax(false);});
@@ -738,25 +757,20 @@ function vHome(){const n=nextStep(),due=dueIds().length,fl=BANK.filter(q=>S.flag
     h+=`<section class="card lc"><div class="eyebrow">Your next step</div><h2 class="lt">${esc(T.title)}</h2><p class="mut">${esc(n.why)} ${T.lesson?`One lesson, about ${T.minutes} minutes, with check questions built in.`:`Practice its ${nq(c)}.`}</p><button class="btn primary big" data-go="topic:${n.t}">${T.lesson?'Start lesson':'Open topic'}</button>${p?'<button class="linkb" data-go="plan">See your whole study plan</button>':''}</section>`;}
   h+=`<div class="tiles"><button class="tile" data-go="due" ${due?'':'disabled'}>${ICON.review}<b>${due?due+' to review':'Nothing to review'}</b><span>${due?'Missed questions, back for another try':'Missed questions come back here the next day'}</span></button><button class="tile" data-go="flags" ${fl?'':'disabled'}>${ICON.flag}<b>${fl} flagged</b><span>Questions you marked to come back to</span></button>
   <button class="tile wide" data-go="${p?'plan':'test'}">${ICON.plan}<b>${p?'Your study plan':'Get a study plan'}</b><span>${p?`From your last practice test (${p.pct}%): weakest areas first`:'Take a practice test and your plan is built from the results'}</span></button></div>`;
+  Object.entries(S.hubs).forEach(([c,H])=>{h+=`<button class="tile wide" data-go="hub:${esc(c)}">${ICON.chat}<b>Instructor hub${H.name?': '+esc(H.name):''}</b><span>See and answer your students' questions</span></button>`;});
+  h+=myQsHTML();
   const started=keys.filter(t=>level(t)>0).length;
   h+=`<div class="lhead"><h2>All topics</h2><span class="num">${started} of ${keys.length} started</span></div><div class="legend2">${LEVELS.map((w,i)=>`<span>${pips(i)} ${w}</span>`).join('')}</div>`;
   LES.groups.forEach(g=>{h+=`<section class="card grp"><div class="gh"><h3>${esc(g.name)}</h3><span class="num">${g.topics.filter(t=>level(t)>0).length} of ${g.topics.length}</span></div>${g.topics.filter(t=>LES.topics[t]).map(t=>{const T=LES.topics[t],l=level(t),c=(TQ[t]||[]).length;
     return `<button class="trow2" data-go="topic:${t}" aria-label="${esc(T.title)}, ${LEVELS[l]}">${pips(l)}<span class="tn">${esc(T.title)}</span><span class="ts">${LEVELS[l]}</span><span class="tm">${T.lesson?T.minutes+' min':c?c+' q':'soon'}</span></button>`;}).join('')}</section>`;});
   const nl=keys.filter(t=>LES.topics[t].lesson).length;
-  h+=`<p class="small center">${BANK.length} practice questions checked against FAA sources · ${nl===keys.length?'a lesson for every topic':`${nl} of ${keys.length} lessons written so far`}</p>`;
+  h+=`<p class="small center">${BANK.length} practice questions checked against FAA sources · ${nl===keys.length?'a lesson for every topic':`${nl} of ${keys.length} lessons written so far`}</p><button class="linkb sm" data-go="newclass">Instructors: start a class so students can ask you questions</button>`;
   return h;}
 
 function checkQ(id){const q=byId[id],p=S.study[id],rev=p!==undefined,fig=q.figure==='density-altitude'&&q.elev!==undefined;
   return `<div class="cq"><p>${esc(q.stem)}</p>${fig?`<div class="given2">Field ${fmt(q.elev)} ft · altimeter ${(+q.alt).toFixed(2)} · ${q.oat}°C</div>`:''}<div class="choices">${q.choices.map((c,i)=>`<button class="choice ${rev?(i===q.answer?'right':i===p?'wrong':''):''}" data-ans="${id}:${i}" ${rev?'disabled':''}><b>${L[i]}</b><span>${esc(c)}</span>${rev&&i===q.answer?`<em class="tag ok">${ICON.check}Correct</em>`:rev&&i===p?`<em class="tag no">${ICON.x}Your pick</em>`:''}</button>`).join('')}</div>
   ${rev?`<div class="fb"><div class="verdict ${p===q.answer?'ok':'no'}">${p===q.answer?'Correct.':`Not this time. The answer is ${L[q.answer]}.`}</div><div>${esc(cleanExp(q.explanation))}</div>${q.ref?`<div class="refl">Reference: ${esc(q.ref)}</div>`:''}</div>`:''}
   ${fig?`<button class="btn" data-go="q:${id}">${ICON.chart}Work it on the full-size chart</button>`:''}</div>`;}
-
-function askCard(ctx){const I=S.instructor||{};
-  return `<section class="card lc"><div class="who"><span class="av">${ICON.chat}</span><div><b>Still stuck? Ask your instructor</b><div class="mut sm">${I.contact?esc(I.name||I.contact):'Add your instructor once; it stays on this device'}</div></div></div>
-  ${I.contact?'':`<div class="two"><label class="fld">Instructor's name<input id="iName" value="${esc(I.name||'')}" autocomplete="off"></label><label class="fld">Email or phone<input id="iContact" autocomplete="off"></label></div>`}
-  <label class="fld">What's confusing you?<textarea id="askText" rows="3" placeholder="Ask in your own words"></textarea></label>
-  <button class="btn outline big" data-ask="${esc(ctx)}">Send question</button>
-  <div class="mut sm" id="askMsg">Opens your email or messages app with the question ready to send.${I.contact?' <button class="linkb sm" data-go="iedit">Change instructor</button>':''}</div></section>`;}
 
 function widget(w){
   if(w==='da-slider')return `<div class="wdg"><div class="mut sm">Field 2,600 ft · altimeter 29.70</div><label class="wl" for="wOat"><b>Outside air temperature</b><span class="num big2" id="wOatV"></span></label><input type="range" id="wOat" min="-10" max="40" step="1" value="32">
@@ -787,7 +801,7 @@ function vTopic(t){const T=LES.topics[t],LS=T.lesson,ids=TQ[t]||[],grp=LES.group
   if(checks.length)h+=`<section class="card lc"><div class="eyebrow">${sec('Check yourself')}</div>${checks.map(checkQ).join('<hr>')}</section>`;
   h+=`<section class="card lc"><div class="eyebrow">${sec('Go deeper')}</div><div class="mut sm">Free official sources.</div>${(T.deeper||[]).map(([k,s])=>{const l=LES.links[k];return l?`<a class="deep" href="${esc(l.u)}" target="_blank" rel="noopener"><span class="tagb">${/ecfr/.test(l.u)?'CFR':'FAA'}</span><span><b>${esc(l.t)}</b><br><span class="mut sm">${esc(s)}</span></span>${ICON.ext}</a>`:'';}).join('')}
     ${ids.length?`<button class="deep" data-go="practice:${t}"><span class="tagb">Q</span><span><b>All ${nq(ids.length)} on this topic</b><br><span class="mut sm">Practice in Study mode</span></span>${ICON.next}</button>`:''}</section>`;
-  h+=askCard(T.title)+`<div class="two"><button class="btn big" data-go="home">All topics</button>${nextPlanBtn(t)}</div>`;
+  h+=askCard(t,null)+`<div class="two"><button class="btn big" data-go="home">All topics</button>${nextPlanBtn(t)}</div>`;
   return h;}
 
 function vBasics(t){const T=LES.topics[t],B=(T.lesson&&T.lesson.basics)||[],at=LV.at||0,alt=LV.alt||{};
@@ -795,7 +809,7 @@ function vBasics(t){const T=LES.topics[t],B=(T.lesson&&T.lesson.basics)||[],at=L
   B.forEach((s,i)=>{const open=i===at,done=i<at;
     h+=`<section class="card lc bstep ${i>at?'later':''}"><div class="bh"><span class="numc ${done?'done':''}">${done?ICON.check:i+1}</span><b class="bt">${esc(s.title)}</b></div>${open?`<p>${md(s.body)}</p>${s.pic&&PIC[s.pic]?PIC[s.pic]:''}<div class="two"><button class="btn primary big" data-basic="got">Got it</button><button class="btn big" data-basic="alt:${i}">Say it another way</button></div>${alt[i]?`<div class="altb">${md(s.alt)}</div>`:''}`:''}</section>`;});
   if(at>=B.length)h+=`<button class="btn good big" data-go="topic:${t}">You've got the basics. Back to the lesson</button>`;
-  return h+askCard(T.title);}
+  return h+askCard(t,null);}
 
 function vPlan(){const p=buildPlan();let h=`<button class="back" data-go="home">${ICON.back}Learn</button>`;
   if(!p)return h+`<section class="card lc"><h2 class="lt">Your study plan</h2><p>Take a practice test and your plan is built from the results: weakest areas first, a lesson for each, then questions to drill.</p><button class="btn primary big" data-go="test">Take a practice test</button></section>`;
@@ -810,8 +824,9 @@ function vPlan(){const p=buildPlan();let h=`<button class="back" data-go="home">
   if(p.strong.length)h+=`<details><summary>Your strong areas (${p.strong.length})</summary>${p.strong.map(a=>`<div class="srow"><span class="grow">${esc(a.name)}</span><span class="meter"><i style="width:${a.pct}%"></i></span><span class="num">${a.pct}%</span></div>`).join('')}</details>`;
   return h+'<p class="small center">The plan updates as you go. A topic is ticked once you finish its lesson or reach Proficient.</p>';}
 
-function renderLearn(){const el=$('learn');if(!LES.topics[LV.t]&&LV.v!=='home'&&LV.v!=='plan')LV={v:'home'};
-  el.innerHTML=LV.v==='topic'?vTopic(LV.t):LV.v==='basics'?vBasics(LV.t):LV.v==='plan'?vPlan():vHome();wireWidgets();}
+function renderLearn(){const el=$('learn');if((LV.v==='topic'||LV.v==='basics')&&!LES.topics[LV.t])LV={v:'home'};if(LV.v==='ask'&&!byId[LV.qid])LV={v:'home'};if(LV.v==='hub'&&!S.hubs[LV.code])LV={v:'home'};
+  el.innerHTML=LV.v==='topic'?vTopic(LV.t):LV.v==='basics'?vBasics(LV.t):LV.v==='plan'?vPlan():LV.v==='ask'?vAsk(LV.qid):LV.v==='hub'?vHub(LV.code):LV.v==='newclass'?vNewClass():LV.v==='join'?vJoin():vHome();wireWidgets();afterLearn();}
+function vJoin(){return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Ask your instructor</div><h2 class="lt big">${S.cls?'You are in '+esc(S.cls.name):'Join your class'}</h2></div>${S.cls?`<button class="btn primary big" data-go="home">Go to Learn</button>`:askCard(null,null)}`;}
 function goLearn(g){const [k,a]=g.split(/:(.*)/);
   if(k==='home'||k==='plan'){mode='learn';LV={v:k};}
   else if(k==='topic'){mode='learn';LV={v:'topic',t:a,checks:pickChecks(a)};}
@@ -822,26 +837,105 @@ function goLearn(g){const [k,a]=g.split(/:(.*)/);
   else if(k==='q'){mode='study';filter='T:'+(MAP[a]||'');list=studyList();pos=Math.max(0,list.indexOf(a));}
   else if(k==='test'){if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else mode='teststart';}
   else if(k==='newtest'){mode='teststart';}
-  else if(k==='iedit'){S.instructor={name:S.instructor.name};save();renderLearn();return;}
+  else if(k==='ask'){const from=mode==='learn'?(LV.v==='topic'?'topic:'+LV.t:'home'):'resume:'+mode;mode='learn';LV={v:'ask',qid:a,back:from};}
+  else if(k==='resume'){mode=a;}
+  else if(k==='hub'){mode='learn';LV={v:'hub',code:a,tab:'wait'};}
+  else if(k==='newclass'){mode='learn';LV={v:'newclass'};}
   renderAll();window.scrollTo(0,0);}
-$('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[data-ans],[data-basic],[data-ask]');if(!t)return;
+$('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[data-ans],[data-basic],[data-act]');if(!t)return;
+  if(t.dataset.act){qaAct(t);return;}
   if(t.dataset.go){goLearn(t.dataset.go);return;}
   if(t.dataset.ans){const [id,i]=t.dataset.ans.split(':'),q=byId[id];if(!q||S.study[id]!==undefined)return;S.study[id]=+i;sched(id,+i===q.answer);
     if(LV.v==='topic'&&LES.topics[LV.t]?.lesson&&LV.checks.every(x=>S.study[x]!==undefined))S.lessons[LV.t]=Date.now();save();
     const y=window.scrollY;renderLearn();window.scrollTo(0,y);return;}
   if(t.dataset.basic){const y=window.scrollY;if(t.dataset.basic==='got')LV.at=(LV.at||0)+1;else LV.alt[t.dataset.basic.split(':')[1]]=true;renderLearn();window.scrollTo(0,y);return;}
-  if(t.dataset.ask!==undefined){const I=S.instructor=S.instructor||{};if($('iContact')){I.name=$('iName').value.trim();I.contact=$('iContact').value.trim();}
-    const txt=$('askText').value.trim(),msg=$('askMsg');
-    if(!I.contact){msg.textContent="Add your instructor's email or phone first.";$('iContact')&&$('iContact').focus();return;}
-    if(!txt){msg.textContent="Type your question first.";$('askText').focus();return;}
-    save();const body=`Question about "${t.dataset.ask}" (Balloon Written Prep):\n\n${txt}`,c=I.contact;
-    location.href=c.includes('@')?`mailto:${encodeURIComponent(c)}?subject=${encodeURIComponent('Balloon written test question: '+t.dataset.ask)}&body=${encodeURIComponent(body)}`:`sms:${c.replace(/[^\d+]/g,'')}?&body=${encodeURIComponent(body)}`;}});
+});
 $('learn').addEventListener('change',e=>{if(e.target.id==='examDate'){S.exam=e.target.value;save();const y=window.scrollY;renderLearn();window.scrollTo(0,y);}});
 function qLinks(q,rev){const t=MAP[q.id],T=LES.topics[t];if(!T||GRADE||mode==='test')return '';const wrong=rev&&picked(q.id)!==q.answer;
-  let h=`<div class="qlinks"><button class="btn" data-go="topic:${t}">${ICON.book}Learn this: ${esc(T.title)}</button>${wrong&&T.lesson&&T.lesson.basics?`<button class="btn" data-go="basics:${t}">I don't get this at all</button>`:''}</div>`;
+  let h=`<div class="qlinks"><button class="btn" data-go="topic:${t}">${ICON.book}Learn this: ${esc(T.title)}</button>${wrong&&T.lesson&&T.lesson.basics?`<button class="btn" data-go="basics:${t}">I don't get this at all</button>`:''}<button class="btn" data-go="ask:${q.id}">${ICON.chat}Ask ${S.cls?esc(S.cls.instructor.split(' ')[0]):'your instructor'} about this</button></div>`;
   if(mode==='due'&&rev){const r=S.review[q.id];h+=`<div class="sched">${ICON.review}<span>${!r?'Cleared from your review list.':r.streak===0?'This comes back tomorrow. Get it right on two different days to clear it.':'One more right answer on another day clears it.'}</span></div>`;}
   return h+`<div class="repl"><a href="https://github.com/brianfliesballoons/balloon-prep/issues/new?title=${encodeURIComponent('Problem with '+q.id)}" target="_blank" rel="noopener">Something wrong with this question? Tell us</a></div>`;}
 $('fb').addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)goLearn(t.dataset.go);});
+
+// ---------- ask your instructor (shared, via the balloon-prep-qa Worker) ----------
+const QA='https://balloon-prep-qa.brianfliesballoons.workers.dev/api';
+async function api(path,{method='GET',body,hub,stu}={}){const h={};if(body)h['Content-Type']='application/json';if(hub)h.Authorization='Bearer '+hub;if(stu)h['X-Student']=stu.sid+'.'+stu.key;
+  const r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});let d={};try{d=await r.json();}catch(e){}
+  if(!r.ok)throw new Error(d.error||'Could not reach the class server. Check your connection.');return d;}
+const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.round(s/60)+' min ago':s<86400?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago';};
+const topicName=t=>LES.topics[t]?LES.topics[t].title:'General';
+let MYQ=null,HUBD={},hubTimer=null;
+const appURL=()=>location.origin+location.pathname;
+
+function askCard(t,qid){const C=S.cls;
+  if(!C)return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Still stuck? Ask your instructor</b><div class="mut sm">Join your instructor's class once. Your questions go to their hub, and answers come back here.</div></div></div>
+    <div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
+    <button class="btn primary big" data-act="join">Join class</button><div class="mut sm" id="jMsg">No code yet? Ask your instructor for their invite link.</div></section>`;
+  const q=qid&&byId[qid];
+  return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Ask ${esc(C.instructor)}</b><div class="mut sm">${esc(C.name)} · you're ${esc(C.me)}</div></div></div>
+    <span class="chipc">About: ${esc(topicName(t))}${q?' · '+esc(qid):''}</span>
+    <label class="fld">What's confusing you?<textarea id="askText" rows="3" maxlength="2000" placeholder="Ask in your own words"></textarea></label>
+    <button class="btn primary big" data-act="ask" data-topic="${esc(t||'')}" data-qid="${esc(qid||'')}">Send to ${esc(C.instructor.split(' ')[0])}</button>
+    <div class="mut sm" id="askMsg">${esc(C.instructor.split(' ')[0])} sees it in the instructor hub. The answer shows up under Your questions on the Learn page.</div></section>`;}
+
+function practiceQ(qid,picked,who){const q=byId[qid];if(!q)return qid?`<div class="mut sm">Practice question ${esc(qid)} (not in this version of the bank)</div>`:'';
+  const fig=q.figure==='density-altitude'&&q.elev!==undefined;
+  return `<details class="pq" open><summary>Practice question ${esc(q.id)} · ${esc(AREA[q.area]||q.area)}${picked!=null?` · ${who} picked ${L[picked]}, the answer is ${L[q.answer]}`:''}</summary>
+    <p>${esc(q.stem)}</p>${fig?`<div class="given2">Field ${fmt(q.elev)} ft · altimeter ${(+q.alt).toFixed(2)} · ${q.oat}°C</div>`:''}
+    <div class="choices">${q.choices.map((c,i)=>`<div class="choice ${i===q.answer?'right':i===picked?'wrong':''}"><b>${L[i]}</b><span>${esc(c)}</span>${i===q.answer?`<em class="tag ok">${ICON.check}Answer</em>`:i===picked?`<em class="tag no">${ICON.x}${who} picked</em>`:''}</div>`).join('')}</div>
+    <div class="fb"><div>${esc(cleanExp(q.explanation))}</div>${q.ref?`<div class="refl">Reference: ${esc(q.ref)}</div>`:''}</div>
+    <button class="btn" data-go="q:${esc(q.id)}">Open it in Study${fig?' with the chart':''}</button></details>`;}
+
+function vAsk(qid){const q=byId[qid],t=MAP[qid];return `<button class="back" data-go="${LV.back||'home'}">${ICON.back}Back</button><h2 class="lt big">Ask about this question</h2>${practiceQ(qid,lastAns(qid),'You')}${askCard(t,qid)}`;}
+
+function vNewClass(){return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">For instructors</div><h2 class="lt big">Start a class</h2><p class="mut">Students join with your invite link, ask questions from any lesson or practice question, and you answer them in your hub.</p></div>
+  <section class="card lc"><label class="fld">Your name<input id="ncName" maxlength="60" autocomplete="name"></label><label class="fld">Class name (optional)<input id="ncClass" maxlength="80" placeholder="e.g. Spring commercial students"></label><button class="btn primary big" data-act="newclass">Create my class</button><div class="mut sm" id="ncMsg"></div></section>`;}
+
+function vHub(code){const H=S.hubs[code];
+  return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H?H.name:code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
+  <section class="card lc row"><div class="grow"><b>Invite students</b><div class="mut sm">Class code <span class="num" style="color:var(--ink);letter-spacing:.1em">${esc(code)}</span></div></div><button class="btn outline" data-act="copy" data-text="${esc(appURL()+'#join='+code)}">Copy invite link</button></section>
+  <div class="modes seg2" role="group" aria-label="Questions"><button class="mode" data-act="tab" data-tab="wait" aria-pressed="${LV.tab!=='done'}" id="tWait">Waiting</button><button class="mode" data-act="tab" data-tab="done" aria-pressed="${LV.tab==='done'}" id="tDone">Answered</button></div>
+  <div id="hubBody" class="hubq"></div>
+  <details><summary>Your private hub link</summary><p class="mut sm" style="padding-bottom:12px">This link opens your hub on any device. Anyone who has it can answer as you, so keep it to yourself.</p><button class="btn" data-act="copy" data-text="${esc(appURL()+'#hub='+code+'.'+(H?H.key:''))}" style="margin-bottom:14px">Copy my hub link</button></details>`;}
+function paintHub(code){const d=HUBD[code],el=$('hubBody');if(!el||!d)return;const names=Object.fromEntries(d.students.map(s=>[s.sid,s.name]));
+  const wait=d.questions.filter(q=>!q.answered),done=d.questions.filter(q=>q.answered),show=LV.tab==='done'?done:wait;
+  $('hubSub').textContent=`${d.students.length} student${d.students.length===1?'':'s'} · ${wait.length} waiting`;$('tWait').textContent=`Waiting (${wait.length})`;$('tDone').textContent=`Answered (${done.length})`;
+  const drafts={};el.querySelectorAll('textarea[data-id]').forEach(t=>drafts[t.dataset.id]=t.value);
+  el.innerHTML=show.length?show.map(q=>{const who=esc(names[q.sid]||'A student');
+    return `<section class="card lc"><div class="qmeta"><span><b>${who}</b> · ${ago(q.created)}</span><span>${esc(topicName(q.topic))}</span></div><p class="qt">${esc(q.text)}</p>${practiceQ(q.qid,q.picked,who)}
+    ${q.answered?`<div class="ans"><b>You:</b> ${esc(q.answer)}</div><div class="mut sm">Answered ${ago(q.answered)}</div>`:`<label class="fld">Your answer<textarea rows="3" maxlength="2000" data-id="${esc(q.id)}" placeholder="Answer in your own words">${esc(drafts[q.id]||'')}</textarea></label><button class="btn primary big" data-act="answer" data-id="${esc(q.id)}">Send answer</button><div class="mut sm" id="am-${esc(q.id)}"></div>`}</section>`;}).join('')
+    :`<section class="card lc"><p class="mut">${LV.tab==='done'?'No answered questions yet.':d.students.length?'Nothing waiting. New questions show up here on their own.':'No students yet. Send them your invite link.'}</p></section>`;}
+async function loadHub(code){const H=S.hubs[code];if(!H)return;try{HUBD[code]=await api(`/classes/${code}/hub`,{hub:H.key});if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);}catch(e){const s=$('hubSub');if(s)s.textContent=e.message;}}
+
+function myQsHTML(){if(!S.cls)return '';if(!MYQ)return `<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">Loading…</p></section>`;
+  const qs=MYQ.questions||[],fresh=qs.filter(q=>q.answered&&!q.seen).length;
+  return `<section class="card grp" id="myQs"><div class="gh"><h3>Your questions</h3><span class="sm" style="font-weight:700;color:var(--good)">${fresh?fresh+' new answer'+(fresh===1?'':'s'):''}</span></div>${qs.length?qs.slice(0,8).map(q=>`<article class="myq"><div class="qmeta"><span>${esc(topicName(q.topic))}${q.qid?' · '+esc(q.qid):''} · ${ago(q.created)}</span>${q.answered?`<span class="okc">${ICON.check}${!q.seen?'New answer':'Answered'}</span>`:`<span class="waitc">Waiting for ${esc(S.cls.instructor.split(' ')[0])}</span>`}</div><p>${esc(q.text)}</p>${q.answered?`<div class="ans"><b>${esc(S.cls.instructor.split(' ')[0])}:</b> ${esc(q.answer)}</div>`:''}${q.topic&&LES.topics[q.topic]?`<button class="linkb sm" style="align-self:flex-start;padding-left:0" data-go="${q.qid&&byId[q.qid]?'ask:'+esc(q.qid):'topic:'+esc(q.topic)}">${q.qid&&byId[q.qid]?'See the question':'Open the lesson'}</button>`:''}</article>`).join(''):`<p class="mut sm" style="padding:0 14px 14px">Nothing asked yet. Use “Ask ${esc(S.cls.instructor.split(' ')[0])}” on any lesson or question.</p>`}
+  <div class="mut sm" style="padding:8px 14px 12px">${esc(S.cls.name)} · <button class="linkb sm" data-act="leave">Leave class</button></div></section>`;}
+async function loadMine(){if(!S.cls)return;try{MYQ=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});const el=$('myQs');if(el)el.outerHTML=myQsHTML();
+  (MYQ.questions||[]).filter(q=>q.answered&&!q.seen).forEach(q=>api(`/classes/${S.cls.code}/questions/${q.id}/seen`,{method:'POST',stu:S.cls}).catch(()=>{}));}
+  catch(e){const el=$('myQs');if(el)el.querySelector('p').textContent=e.message;}}
+function afterLearn(){clearInterval(hubTimer);
+  if(LV.v==='hub'){paintHub(LV.code);loadHub(LV.code);hubTimer=setInterval(()=>{if(mode==='learn'&&LV.v==='hub'&&!document.hidden)loadHub(LV.code);},30000);}
+  if(LV.v==='home')loadMine();}
+
+async function qaAct(t){const a=t.dataset.act,btn=t;
+  const busy=f=>async(...x)=>{btn.disabled=true;try{await f(...x);}finally{btn.disabled=false;}};
+  if(a==='join')return busy(async()=>{const code=$('jCode').value.trim().toUpperCase(),name=$('jName').value.trim(),m=$('jMsg');
+    if(code.length!==6){m.textContent='The class code has 6 letters and numbers.';return;}if(!name){m.textContent='Add your name so your instructor knows who is asking.';$('jName').focus();return;}
+    try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code,name:d.class.name,instructor:d.class.instructor,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
+    catch(e){m.textContent=e.message;}})();
+  if(a==='ask')return busy(async()=>{const txt=$('askText').value.trim(),m=$('askMsg');if(!txt){m.textContent='Type your question first.';$('askText').focus();return;}
+    const qid=t.dataset.qid||null,p=qid?lastAns(qid):undefined;
+    try{await api(`/classes/${S.cls.code}/questions`,{method:'POST',stu:S.cls,body:{topic:t.dataset.topic||MAP[qid]||null,qid,picked:p===undefined?null:p,text:txt}});$('askText').value='';m.textContent=`Sent. ${S.cls.instructor.split(' ')[0]}'s answer will show under Your questions on the Learn page.`;MYQ=null;}
+    catch(e){m.textContent=e.message;}})();
+  if(a==='answer')return busy(async()=>{const id=t.dataset.id,ta=document.querySelector(`textarea[data-id="${CSS.escape(id)}"]`),m=$('am-'+id);if(!ta.value.trim()){m.textContent='Type an answer first.';ta.focus();return;}
+    try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=e.message;}})();
+  if(a==='newclass')return busy(async()=>{const nm=$('ncName').value.trim(),m=$('ncMsg');if(!nm){m.textContent='Add your name.';$('ncName').focus();return;}
+    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});S.hubs[d.code]={key:d.adminKey,name:d.name};save();history.replaceState(null,'','#hub='+d.code+'.'+d.adminKey);LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
+    catch(e){m.textContent=e.message;}})();
+  if(a==='tab'){LV.tab=t.dataset.tab;$('tWait').setAttribute('aria-pressed',String(LV.tab!=='done'));$('tDone').setAttribute('aria-pressed',String(LV.tab==='done'));paintHub(LV.code);return;}
+  if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
+  if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}S.cls=null;MYQ=null;save();renderLearn();}}
 
 // ---------- boot ----------
 readColors();
@@ -858,7 +952,11 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
   BANK.forEach(q=>{byId[q.id]=q;const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});
   if(S.test&&S.test.list.some(id=>!byId[id]))S.test=null;
-  list=studyList();if(location.hash==='#learn')mode='learn';renderAll();
+  list=studyList();const hs=location.hash;
+  if(hs==='#learn')mode='learn';
+  else if(hs.startsWith('#join=')){mode='learn';LV={v:'join'};LV.joinCode=hs.slice(6,12).toUpperCase();}
+  else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
+  renderAll();
 });
 })();
 </script>

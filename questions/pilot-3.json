@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "AIR-301",
+    "area": "AIR",
+    "topic": "Sectional: Class E surface area",
+    "stem": "On a sectional chart, a dashed magenta line surrounds a small airport that has no control tower. What does the line depict?",
+    "choices": [
+      "Class E airspace that begins at the surface around the airport.",
+      "Class D airspace that extends from the surface to 2,500 feet AGL.",
+      "Class E airspace that begins 700 feet above the surface."
+    ],
+    "answer": 0,
+    "explanation": "The Chart Users' Guide symbolizes a Class E surface area with a dashed magenta line. Class D is drawn with a dashed blue line and surrounds an airport with an operating tower, and Class E that begins at 700 feet AGL is shown by a shaded magenta vignette, not a dashed line. Inside a Class E surface area, 91.155(c) and (d) add a 1,000-foot ceiling and 3-mile ground visibility minimum for VFR.",
+    "ref": "FAA Chart Users' Guide (VFR Terms and Symbols: Controlled Airspace); 14 CFR 91.155(c)-(d)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-302",
+    "area": "AIR",
+    "topic": "Sectional: Class D ceiling",
+    "stem": "Inside the dashed blue Class D boundary around a towered airport, the ceiling is printed in a small dashed blue box as -30. What does it mean?",
+    "choices": [
+      "Class D extends from the surface up to, but not including, 3,000 feet MSL.",
+      "Class D extends from the surface up to and including 3,000 feet AGL.",
+      "The tower is part-time, and Class D ends at 3,000 feet when it closes."
+    ],
+    "answer": 0,
+    "explanation": "Class D ceilings are charted in hundreds of feet MSL (AIM 3-2-5: surface to 2,500 feet above the airport, charted in MSL), and the Chart Users' Guide says a minus sign in front of the figure means 'from surface to, but not including' that altitude. The figure is MSL, not AGL, and it says nothing about tower hours; part-time status is shown by a chart note and the Chart Supplement.",
+    "ref": "FAA Chart Users' Guide (Controlled Airspace: Class D); AIM 3-2-5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-303",
+    "area": "AIR",
+    "topic": "Sectional: magenta vignette",
+    "stem": "Planning a flight near a nontowered airport, a balloon pilot sees that the area around it is enclosed by a wide, shaded magenta band (a vignette). Inside the area the band encloses, where does controlled airspace begin?",
+    "choices": [
+      "At 1,200 feet above the surface.",
+      "At 700 feet above the surface.",
+      "At the surface."
+    ],
+    "answer": 1,
+    "explanation": "AIM 3-2-6 and the Chart Users' Guide: a magenta vignette marks Class E transition airspace with a floor of 700 feet AGL. A blue vignette is used for a 1,200-foot AGL floor, and Class E that starts at the surface is a dashed magenta line. Below 700 feet in that area the balloon is in Class G, which sets its weather minimums low over the fields.",
+    "ref": "AIM 3-2-6; FAA Chart Users' Guide (Controlled Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-304",
+    "area": "AIR",
+    "topic": "Sectional: blue vignette",
+    "stem": "In the western United States, a sectional shows a wide, shaded blue band running across open country far from any airport. What does the band mark?",
+    "choices": [
+      "The lateral boundary of a Class E surface area around an airport without a control tower.",
+      "The outer edge of the 30 NM Mode C veil around a Class B primary airport in the area.",
+      "The edge of an area where Class E starts at 1,200 feet AGL, beside higher Class G."
+    ],
+    "answer": 2,
+    "explanation": "AIM 3-2-6 says 1,200-foot AGL Class E is shown by a blue vignette, and the Chart Users' Guide adds that the blue vignette marks floors other than 700 feet where they abut uncontrolled (Class G) airspace. Beyond it, Class G may reach up to 14,500 feet MSL. A Class E surface area is a dashed magenta line, and the Mode C veil is a thin solid magenta circle.",
+    "ref": "AIM 3-2-6; FAA Chart Users' Guide (Controlled Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-305",
+    "area": "AIR",
+    "topic": "Sectional: Mode C veil depiction",
+    "stem": "A thin, solid magenta circle labeled MODE C & ADS-B OUT 30 NM surrounds a major airport on the sectional. What does it outline?",
+    "choices": [
+      "The outer area of a Class C airspace, where contact with approach control is voluntary.",
+      "The lateral limits of the Class B airspace itself, where an ATC clearance is required.",
+      "The airspace from the surface to 10,000 feet MSL within 30 NM of a Class B primary airport."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide says Mode C required airspace, surface to 10,000 feet MSL within 30 NM of a Class B primary airport, is drawn with a solid magenta line (14 CFR 91.215(b)(2), 91.225(d)(2)). The Class C outer area is normally 20 NM and is not charted (AIM 3-2-4), and Class B boundaries are solid blue. A balloon with no engine-driven electrical system has an exception inside the veil only while outside Class B and C and below the lower of their ceilings or 10,000 feet MSL.",
+    "ref": "FAA Chart Users' Guide (Other Airspace Areas); 14 CFR 91.215(b)(2)-(3); 14 CFR 91.225(d)(2), (e)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-306",
+    "area": "AIR",
+    "topic": "Sectional: Class B sector altitudes",
+    "stem": "A balloon is drifting at 4,500 feet MSL over terrain at 1,000 feet MSL. The Class B sector overhead is labeled 100 over 40 in solid blue. Which statement is correct?",
+    "choices": [
+      "The balloon is inside Class B airspace and needs an ATC clearance.",
+      "The balloon is below the Class B, because its floor is 4,000 feet AGL.",
+      "The balloon is above the Class B, because the sector tops out at 4,000 feet."
+    ],
+    "answer": 0,
+    "explanation": "Class B sector altitudes are MSL in solid blue with the last two zeros omitted, so 100 over 40 means a 10,000-foot MSL ceiling and a 4,000-foot MSL floor. At 4,500 feet MSL the balloon is inside and 91.131(a)(1) requires a clearance. Reading the floor as AGL (5,000 feet MSL here) or taking the lower figure as the ceiling are the usual misreadings.",
+    "ref": "FAA Chart Users' Guide (Controlled Airspace: Class B); 14 CFR 91.131(a)(1)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-307",
+    "area": "AIR",
+    "topic": "Sectional: under a Class C shelf",
+    "stem": "About 8 NM from a Class C primary airport, the shelf is labeled 48 over 25 in magenta. A balloon drifts beneath it at 2,000 feet MSL. Which statement is correct?",
+    "choices": [
+      "It is below the Class C shelf, so Class C entry rules do not apply.",
+      "It must call approach, because Class C reaches the surface out to 10 NM.",
+      "It must call approach, because it is inside the 20 NM Class C outer area."
+    ],
+    "answer": 0,
+    "explanation": "Class C sector altitudes are MSL in magenta with the last two zeros omitted: here the shelf runs from 2,500 to 4,800 feet MSL, so a balloon at 2,000 feet MSL is under it. Only the 5 NM core reaches the surface, and the outer area (normally 20 NM) is not Class C; participation there is voluntary (AIM 3-2-4). The BFH notes flying under the shelf is legal but advises staying well clear as a courtesy.",
+    "ref": "FAA Chart Users' Guide (Controlled Airspace: Class C); AIM 3-2-4; FAA-H-8083-11B Ch. 5 (Class C Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-308",
+    "area": "AIR",
+    "topic": "Sectional: airport symbol color",
+    "stem": "On a sectional, an airport symbol and its data are printed in magenta rather than blue. What does the color tell a balloon pilot planning to fly nearby?",
+    "choices": [
+      "The airport is private and closed to the public.",
+      "The airport lies inside Class C airspace.",
+      "The airport does not have a control tower."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide prints airports with control towers, and their data, in blue; all other airports are magenta. Private airports carry their own marking (an R in the symbol or 'Pvt'), and Class C is shown by solid magenta boundary lines, not by the airport's color. With no tower, a pilot flying close should self-announce on the CTAF.",
+    "ref": "FAA Chart Users' Guide (Airports)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-309",
+    "area": "AIR",
+    "topic": "Sectional: part-time tower",
+    "stem": "In an airport data block, the tower frequency is followed by a star: CT - 118.7 ★. What does the star mean?",
+    "choices": [
+      "A rotating beacon operates at the airport from dusk to dawn.",
+      "The tower is part-time; its hours are in the Chart Supplement.",
+      "The frequency is used only for recorded ATIS weather broadcasts."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide: a star after the CT frequency indicates part-time operation, with hours in the chart's tower tabulation and the Chart Supplement. A rotating beacon is shown by a star above the airport symbol itself, and ATIS has its own label in the data block. When the tower is closed, the Class D usually becomes Class E or G and the CTAF is used.",
+    "ref": "FAA Chart Users' Guide (Airports: airport data); AIM 3-2-5",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-310",
+    "area": "AIR",
+    "topic": "Sectional: obstruction figures",
+    "stem": "A balloon is contour flying toward a tower charted on the sectional with 1349 above (412). What do the figures mean?",
+    "choices": [
+      "The top is 1,349 feet AGL, and the base is 412 feet MSL.",
+      "The top is 412 feet AGL, and 1,349 feet is the safe altitude.",
+      "The top is 1,349 feet MSL, and the tower is 412 feet tall."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide places the MSL elevation of the obstacle's top above, with its height above ground in parentheses below, so the ground there is about 937 feet MSL. Neither figure is a recommended altitude. Guy wires can extend well out from a tower, so a balloon low in the area needs wide lateral clearance.",
+    "ref": "FAA Chart Users' Guide (Land Features and Obstructions)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-311",
+    "area": "AIR",
+    "topic": "Sectional: Maximum Elevation Figure",
+    "stem": "In the middle of a sectional quadrangle, a large blue 3 is followed by a smaller 5. What does this Maximum Elevation Figure represent?",
+    "choices": [
+      "About 3,500 feet MSL: the highest terrain or obstacle in the quadrangle, rounded up.",
+      "A recommended minimum altitude of 3,500 feet AGL for flight within the quadrangle.",
+      "The highest terrain alone, 350 feet MSL, not counting towers or other obstacles."
+    ],
+    "answer": 0,
+    "explanation": "The Chart Users' Guide: the MEF is the highest elevation in the quadrangle (bounded by the 30-minute ticked lines), including terrain and obstacles, with allowances added and rounded up to the next 100 feet; the last two digits are not shown. It is an MSL figure, it includes man-made obstacles, and it is not a recommended altitude.",
+    "ref": "FAA Chart Users' Guide (Maximum Elevation Figure)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-312",
+    "area": "AIR",
+    "topic": "Sectional: special use airspace colors",
+    "stem": "On a sectional, which special use airspace areas are outlined with a blue hatched border?",
+    "choices": [
+      "Military operations areas and alert areas.",
+      "Alert areas and controlled firing areas.",
+      "Prohibited, restricted, and warning areas."
+    ],
+    "answer": 2,
+    "explanation": "The Chart Users' Guide presents prohibited, restricted and warning areas in blue, and MOAs and alert areas in magenta. Controlled firing areas are not charted at all, because their activity stops when an aircraft approaches (AIM 3-4-7). Entering an active restricted area needs the using or controlling agency's permission under 91.133(a).",
+    "ref": "FAA Chart Users' Guide (Special Use Airspace); AIM 3-4-1, 3-4-7",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-313",
+    "area": "AIR",
+    "topic": "National security areas",
+    "stem": "A planned balloon flight path crosses an area outlined on the sectional with a broken magenta line and labeled as a National Security Area. What applies?",
+    "choices": [
+      "Flight is always prohibited without permission from the using or controlling agency.",
+      "Flight is allowed only with an operating transponder and two-way radio contact.",
+      "Pilots are asked to avoid it voluntarily; NOTAMs can temporarily prohibit flight."
+    ],
+    "answer": 2,
+    "explanation": "AIM 3-4-8: pilots are requested to voluntarily avoid flying through a depicted NSA, and when more security is needed the FAA can temporarily prohibit flight there under 14 CFR 99.7, issued by NOTAM. Permission from the using agency is the rule for prohibited and restricted areas (91.133), and NSAs carry no standing equipment requirement.",
+    "ref": "AIM 3-4-8; FAA Chart Users' Guide (Other Airspace Areas)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-314",
+    "area": "AIR",
+    "topic": "TFRs and the sectional",
+    "stem": "A balloon pilot checks the current sectional and sees no TFR anywhere near the launch field. Why is that not enough?",
+    "choices": [
+      "TFRs are always charted, but only on the VFR Terminal Area Charts for the area.",
+      "Most TFRs exist only as NOTAMs; the chart shows only some security-related ones.",
+      "TFRs never apply to balloons, so only the chart's restricted areas matter here."
+    ],
+    "answer": 1,
+    "explanation": "The Chart Users' Guide says only TFRs relating to national security are charted; the rest exist only as NOTAMs, and AIM 3-5-3 tells pilots to check the appropriate NOTAMs during flight planning. Terminal Area Charts follow the same rule. TFR rules such as 91.137, 91.141 and 91.145 apply to all aircraft, balloons included.",
+    "ref": "FAA Chart Users' Guide (Other Airspace Areas: TFR); AIM 3-5-3; AIM 5-1-3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-315",
+    "area": "AIR",
+    "topic": "Variation: west",
+    "stem": "A balloon pilot measures a true course of 270° from the launch field to a planned landing area. The isogonic line nearby reads 8° W. What is the magnetic course?",
+    "choices": [
+      "262°.",
+      "278°.",
+      "270°, because variation applies only to compass headings."
+    ],
+    "answer": 1,
+    "explanation": "West variation is added to a true direction ('west is best'): 270° + 8° = 278°. Subtracting is correct only for east variation. Variation applies to any direction measured from true north, courses included; it does not depend on heading.",
+    "ref": "FAA-H-8083-25C Ch. 16 (Variation); FAA-H-8083-25C Ch. 8 (Magnetic Compass Induced Errors)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-316",
+    "area": "AIR",
+    "topic": "Compass deviation in the basket",
+    "stem": "A pilot sets a small magnetic compass on top of a steel propane cylinder in the basket, and it now reads several degrees off. Which error is this?",
+    "choices": [
+      "Variation, caused by the position of the magnetic pole.",
+      "Deviation, caused by magnetic fields near the compass.",
+      "Dip error, caused by the compass tilting toward the pole."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK calls the error produced by magnetic fields near the compass (electrical current, magnetized or iron parts) deviation; it depends on heading, not location. Variation is the angle between true and magnetic north and depends only on where the aircraft is. Dip errors come from the vertical pull of the earth's field when the card tilts in turns or speed changes. Keep a sighting compass away from tanks, radios and metal fittings.",
+    "ref": "FAA-H-8083-25C Ch. 8 (Magnetic Compass Induced Errors: Deviation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-317",
+    "area": "AIR",
+    "topic": "Variation versus deviation",
+    "stem": "Which statement correctly describes magnetic variation?",
+    "choices": [
+      "It changes with heading and is listed on a compass correction card.",
+      "It can be removed by having a mechanic swing the compass.",
+      "It changes with location but is the same on every heading."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK: variation is the angular difference between true and magnetic north; it is the same anywhere along an isogonic line and does not change with heading. The heading-dependent error on the compass correction card is deviation, and swinging the compass reduces deviation; nothing can remove variation.",
+    "ref": "FAA-H-8083-25C Ch. 8 (Magnetic Compass Induced Errors)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-318",
+    "area": "AIR",
+    "topic": "Winds aloft to magnetic track",
+    "stem": "The winds aloft forecast for 3,000 feet is 2410. The local variation is 10° E. If the balloon drifts with that wind, about what magnetic track will it fly?",
+    "choices": [
+      "070°.",
+      "230°.",
+      "050°."
+    ],
+    "answer": 2,
+    "explanation": "Winds aloft forecasts give the direction the wind blows from, referenced to true north, so 2410 is from 240° true at 10 knots. The balloon moves downwind toward 060° true, and east variation is subtracted: 060° - 10° = 050° magnetic. 070° adds the variation instead, and 230° applies it to the 'from' direction, forgetting that the balloon travels the other way.",
+    "ref": "FAA-H-8083-28B 3.4.2.2 (Products with Wind Information); FAA-H-8083-25C Ch. 16 (Variation)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-319",
+    "area": "AIR",
+    "topic": "True or magnetic wind",
+    "stem": "Which wind report gives the wind direction relative to magnetic north rather than true north?",
+    "choices": [
+      "The METAR issued for that airport at the same hour.",
+      "The TAF issued for that airport the same morning.",
+      "The ATIS or ASOS voice broadcast at the airport."
+    ],
+    "answer": 2,
+    "explanation": "The Aviation Weather Handbook: wind direction is magnetic in ATIS and in ASOS/AWOS radio (voice) broadcasts, and true in other products, including METARs, TAFs and winds aloft. Where variation is 12° E, an ATIS wind of 260° matches a METAR wind of about 270° true. AIM 4-2-10 likewise says directions spoken by ATC are magnetic unless 'true' is added.",
+    "ref": "FAA-H-8083-28B 3.4.2.2 (Products with Wind Information); AIM 4-2-10",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-320",
+    "area": "AIR",
+    "topic": "Dead reckoning: ground speed",
+    "stem": "A balloon crosses a highway at 0712 and a railroad 4.5 NM farther along its track at 0742. What is its ground speed?",
+    "choices": [
+      "9 knots.",
+      "4.5 knots.",
+      "6.7 knots."
+    ],
+    "answer": 0,
+    "explanation": "The time between checkpoints is 30 minutes, or 0.5 hour. GS = D ÷ T = 4.5 ÷ 0.5 = 9 knots. 4.5 knots treats the 30 minutes as a full hour, and 6.7 comes from dividing the minutes by the distance (30 ÷ 4.5).",
+    "ref": "FAA-H-8083-25C Ch. 16 (Basic Calculations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-321",
+    "area": "AIR",
+    "topic": "Dead reckoning: time en route",
+    "stem": "A balloon is drifting at a steady 6 knots over the ground. A large open field lies 7.5 NM ahead on its track. About how long until the balloon reaches it?",
+    "choices": [
+      "1 hour 25 minutes.",
+      "1 hour 15 minutes.",
+      "48 minutes."
+    ],
+    "answer": 1,
+    "explanation": "T = D ÷ GS = 7.5 ÷ 6 = 1.25 hours, and 0.25 hour × 60 = 15 minutes, so 1 hour 15 minutes. 1 hour 25 minutes misreads the decimal .25 as minutes. 48 minutes comes from dividing speed by distance (6 ÷ 7.5 = 0.8 hour).",
+    "ref": "FAA-H-8083-25C Ch. 16 (Basic Calculations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-322",
+    "area": "AIR",
+    "topic": "Dead reckoning: distance flown",
+    "stem": "A balloon holds an altitude where its GPS shows a ground speed of 12 knots. How far will it travel in 40 minutes?",
+    "choices": [
+      "8 NM.",
+      "4.8 NM.",
+      "3.3 NM."
+    ],
+    "answer": 0,
+    "explanation": "D = GS × T = 12 × (40 ÷ 60) = 12 × 0.667 = 8 NM. 4.8 NM treats 40 minutes as 0.4 hour, and 3.3 NM divides the minutes by the speed (40 ÷ 12).",
+    "ref": "FAA-H-8083-25C Ch. 16 (Basic Calculations)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-323",
+    "area": "AIR",
+    "topic": "Dead reckoning: fuel-limited range",
+    "stem": "A balloon carries 30 gallons of usable propane and is burning about 20 gallons per hour. The pilot plans to land with at least 30 minutes of fuel remaining. At a steady 10 knots, how far downwind can the balloon fly before landing?",
+    "choices": [
+      "15 NM.",
+      "10 NM.",
+      "5 NM."
+    ],
+    "answer": 1,
+    "explanation": "Endurance is 30 ÷ 20 = 1.5 hours. Keeping a 0.5-hour reserve leaves 1.0 hour of flying, and D = GS × T = 10 × 1.0 = 10 NM. 15 NM uses all the fuel with no reserve, and 5 NM uses only the reserve time. Real burn rates change with temperature and load, so the plan needs checking in flight.",
+    "ref": "FAA-H-8083-25C Ch. 16 (Basic Calculations)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-324",
+    "area": "AIR",
+    "topic": "Sectional chart scale",
+    "stem": "On a sectional chart (scale 1:500,000), a pilot measures 1.5 inches from the launch site to a planned landing area. About how far is that?",
+    "choices": [
+      "About 12 NM.",
+      "About 5.1 NM.",
+      "About 10.3 NM."
+    ],
+    "answer": 2,
+    "explanation": "On a sectional 1 inch = 6.86 NM (about 8 statute miles), so 1.5 × 6.86 = 10.3 NM, or about 12 statute miles. 12 NM applies the statute-mile figure as if it were nautical, and 5.1 NM uses the Terminal Area Chart scale of 3.43 NM per inch (1.5 × 3.43).",
+    "ref": "AIM 9-1-5 (Sectional Aeronautical Charts); FAA-H-8083-25C Ch. 16 (Sectional Charts)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-325",
+    "area": "AIR",
+    "topic": "Latitude and distance",
+    "stem": "A balloon drifts due north from 33°30'N to 33°42'N. About how far has it traveled?",
+    "choices": [
+      "7.2 NM.",
+      "12 statute miles.",
+      "12 NM."
+    ],
+    "answer": 2,
+    "explanation": "Each degree of latitude spans about 60 NM, so each minute of latitude is about 1 NM, and 12 minutes is about 12 NM (roughly 13.8 statute miles). 7.2 NM treats the 12 minutes as 0.12 degree. A minute of latitude is a nautical mile, not a statute mile. CHECK: the arithmetic and key are correct, but no FAA source stating that one minute of latitude equals one nautical mile was found (searched 2026-10-20: PHAK 25C full text, BFH 11B all chapters and glossary, AIM ch. 1 and 9, AWH 28B, IFH 8083-15B, IPH 8083-16B ch. 2, Chart Users' Guide, and a faa.gov web search). Brian to decide whether a standard navigation fact without an FAA citation is acceptable.",
+    "ref": "FAA-H-8083-25C Ch. 16 (Latitude and Longitude)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "check",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-326",
+    "area": "AIR",
+    "topic": "Dead reckoning: two wind layers",
+    "stem": "A balloon drifts for 20 minutes at 6 knots, then climbs into a layer moving the same direction at 15 knots and stays there for 20 more minutes. How far has it traveled in all?",
+    "choices": [
+      "10.5 NM.",
+      "7 NM.",
+      "3.5 NM."
+    ],
+    "answer": 1,
+    "explanation": "Work each leg separately: 6 × (20 ÷ 60) = 2 NM, and 15 × (20 ÷ 60) = 5 NM, for 7 NM total. 10.5 NM averages the speeds and multiplies by a full hour, and 3.5 NM multiplies the average speed by only one 20-minute leg.",
+    "ref": "FAA-H-8083-25C Ch. 16 (Basic Calculations)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-327",
+    "area": "AIR",
+    "topic": "Where to get NOTAMs",
+    "stem": "During preflight planning the evening before a flight, where can a balloon pilot get current NOTAMs for the area?",
+    "choices": [
+      "Only from the current sectional chart and its margin notes.",
+      "Online through the FAA's NOTAM Search, or from Flight Service.",
+      "Only from the Chart Supplement, which lists all active NOTAMs."
+    ],
+    "answer": 1,
+    "explanation": "AIM 5-1-3 says pilots can access NOTAMs online through NOTAM Search or from Flight Service, and 91.103 requires the pilot to become familiar with all available information, which includes NOTAMs. Charts and the Chart Supplement are revised on a cycle; NOTAMs carry the temporary changes between editions.",
+    "ref": "AIM 5-1-3; 14 CFR 91.103",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-328",
+    "area": "AIR",
+    "topic": "FDC NOTAMs",
+    "stem": "A temporary flight restriction is set up around a wildfire near the planned flight area. In which NOTAM category is it issued?",
+    "choices": [
+      "A NOTAM (D), like a runway closure.",
+      "An FDC NOTAM, because it is regulatory.",
+      "A Military NOTAM, like a route change."
+    ],
+    "answer": 1,
+    "explanation": "AIM 5-1-3: FDC NOTAMs carry regulatory information, and TFRs are listed among them. NOTAM (D)s cover items like aerodrome conditions, taxiway and runway closures and NAVAID status, and Military NOTAMs concern military or joint-use facilities.",
+    "ref": "AIM 5-1-3 (NOTAM Classification)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-329",
+    "area": "AIR",
+    "topic": "NOTAM lifespan",
+    "stem": "When is a NOTAM canceled?",
+    "choices": [
+      "When the condition returns to normal or the information is published on the chart.",
+      "Automatically at the end of the 56-day charting cycle in which it was issued.",
+      "Automatically 24 hours after it was issued, unless the issuing office renews it."
+    ],
+    "answer": 0,
+    "explanation": "AIM 5-1-3: the NOTAM is canceled when its information is published on the chart or when the temporary condition returns to normal. There is no automatic 56-day or 24-hour expiry; the NOTAM's own effective times govern, and NOTAMs may be issued up to 7 days before the activity starts.",
+    "ref": "AIM 5-1-3 (General)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-330",
+    "area": "AIR",
+    "topic": "ARTCC NOTAMs",
+    "stem": "A pilot checks NOTAMs only for the small airport next to the launch field. According to the AIM, what else should be reviewed?",
+    "choices": [
+      "Nothing else; only the nearest airport's NOTAMs affect a local VFR flight.",
+      "NOTAMs for the ARTCC area, which can include SUA, TFRs, and GPS outages.",
+      "International NOTAMs, which replace domestic ones for short local flights."
+    ],
+    "answer": 1,
+    "explanation": "AIM 5-1-3 tells pilots to also review NOTAMs for the ARTCC area they will fly in, which can cover special use airspace, TFRs, GPS, FDC route changes, wind turbines and UAS activity. A search for the local airport alone can miss all of these. International NOTAMs do not replace domestic ones.",
+    "ref": "AIM 5-1-3 (ARTCC NOTAMs)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-331",
+    "area": "AIR",
+    "topic": "Chart Supplement",
+    "stem": "A balloon pilot wants to know what class of airspace a nearby part-time Class D surface area becomes when its tower closes. Where is that stated?",
+    "choices": [
+      "In the Chart Supplement entry for that airport.",
+      "In the sectional's tower frequency tabulation.",
+      "In the Aeronautical Chart Users' Guide."
+    ],
+    "answer": 0,
+    "explanation": "AIM 3-2-5 says the airport listing in the Chart Supplement states the part-time status, for example 'other times CLASS E' or 'other times CLASS G.' The sectional's tower tabulation gives tower hours and frequencies, and the Chart Users' Guide only explains symbols. AIM 9-1-5 describes the Chart Supplement as the place for data that cannot be shown graphically, such as hours of operation.",
+    "ref": "AIM 3-2-5; AIM 9-1-5 (Chart Supplement U.S.)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-332",
+    "area": "AIR",
+    "topic": "Part-time Class D",
+    "stem": "A balloon launches at 0600, an hour before the tower at an airport 3 miles away opens. The Chart Supplement says 'other times CLASS G.' What applies near that airport before 0700?",
+    "choices": [
+      "Class D rules still apply; the balloon must wait until the tower opens.",
+      "Class E surface area rules, including the 1,000-foot ceiling minimum.",
+      "Class G up to the overlying Class E, with no tower contact required."
+    ],
+    "answer": 2,
+    "explanation": "AIM 3-2-5: when a part-time Class D surface area changes to Class G, it becomes Class G up to, but not including, the overlying controlled airspace (usually Class E at 700 or 1,200 feet AGL), and there is no tower to contact. The Class E surface area rules apply only where the listing says 'other times CLASS E.' Self-announcing on the CTAF is still good practice (AIM 4-1-9).",
+    "ref": "AIM 3-2-5; AIM 4-1-9",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-333",
+    "area": "AIR",
+    "topic": "VOR radial position",
+    "stem": "A balloon pilot's handheld navigation radio shows the balloon on the 090° radial of a nearby VOR. Where is the balloon relative to the station?",
+    "choices": [
+      "West of the station.",
+      "It depends on the balloon's heading.",
+      "East of the station."
+    ],
+    "answer": 2,
+    "explanation": "A radial is a magnetic bearing from the station, so the 090° radial runs east from the VOR. Being on the 270° radial would put the balloon west. VOR position does not depend on heading, which is handy in a balloon that slowly turns. The compass roses printed around VORs on a sectional are oriented to magnetic north.",
+    "ref": "AIM 1-1-3; FAA-H-8083-25C Ch. 16 (VHF Omnidirectional Range); FAA Chart Users' Guide (Radio Aids to Navigation)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-334",
+    "area": "AIR",
+    "topic": "VOR reception at low altitude",
+    "stem": "At 500 feet AGL, a balloon pilot cannot receive a VOR 40 NM away that came in fine from 4,000 feet the day before. What is the most likely reason?",
+    "choices": [
+      "VORs transmit only to aircraft above 1,000 feet AGL by design.",
+      "The balloon is too slow for the receiver to compute a radial.",
+      "VOR signals are line-of-sight, so range shrinks at low altitude."
+    ],
+    "answer": 2,
+    "explanation": "AIM 1-1-3: VORs are subject to line-of-sight restrictions, and their range varies with the altitude of the receiving equipment, so a balloon low over the fields can lose a station it received higher up. There is no minimum-altitude transmission rule, and the receiver measures the radial regardless of speed.",
+    "ref": "AIM 1-1-3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-335",
+    "area": "AIR",
+    "topic": "GPS for VFR navigation",
+    "stem": "A balloon pilot navigates with a handheld GPS moving map. Which statement agrees with the AIM?",
+    "choices": [
+      "Handheld units have no RAIM alerting, so cross-check the position with pilotage.",
+      "Part 91 requires the GPS database to be updated before every VFR flight.",
+      "With a current database, the GPS may be used as the sole means of navigation."
+    ],
+    "answer": 0,
+    "explanation": "AIM 1-1-17: VFR panel-mount and handheld receivers have no RAIM alerting, so pilots should cross-check with other navigation, and should not rely solely on GPS for VFR navigation. There is no requirement to update the database for VFR, though an outdated one should not be trusted near critical airspace. The BFH adds that GPS units break, fall overboard and lose battery power, so pilots should keep the 'old-school' methods.",
+    "ref": "AIM 1-1-17 (VFR Operations); FAA-H-8083-11B Ch. 7 (Direction)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-336",
+    "area": "AIR",
+    "topic": "GPS ground track and the wind",
+    "stem": "Holding a steady altitude, a balloon's GPS (set to true north) shows a ground track of 075° at 11 knots. What does that tell the pilot about the wind at that altitude?",
+    "choices": [
+      "It is from about 255°, at about 11 knots.",
+      "It is from about 075°, at about 11 knots.",
+      "It is from about 255°, at an unknown speed."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK's wind triangle makes ground track and ground speed the sum of the aircraft's motion through the air and the wind. A free balloon has essentially no motion through the air mass, so its track and ground speed at a steady altitude are the wind's; the BFH has the pilot read the ground track at a constant altitude for exactly this reason, since a new altitude may mean a different wind. Winds are named for the direction they blow from, so a track toward 075° means a wind from about 255°, and the 11-knot ground speed is the wind speed.",
+    "ref": "FAA-H-8083-11B Ch. 7 (Direction); FAA-H-8083-25C Ch. 16 (Dead Reckoning: Wind Triangle or Vector Analysis)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-337",
+    "area": "AIR",
+    "topic": "Class C dimensions",
+    "stem": "What are the usual dimensions of Class C airspace?",
+    "choices": [
+      "A 10 NM core from the surface and a 20 NM shelf from 700 feet, up to 4,000 feet above the airport.",
+      "A 5 NM core from the surface and a 10 NM shelf from 1,200 feet, up to 4,000 feet above the airport.",
+      "A 4 NM core from the surface to 2,500 feet above the airport, plus a 10 NM shelf from 1,200 feet."
+    ],
+    "answer": 1,
+    "explanation": "AIM 3-2-4: Class C usually has a 5 NM radius core from the surface to 4,000 feet above the airport and a 10 NM shelf from no lower than 1,200 feet up to 4,000 feet above the airport, charted in MSL. The 20 NM figure is the uncharted outer area, and surface to 2,500 feet above the airport describes typical Class D.",
+    "ref": "AIM 3-2-4; FAA-H-8083-11B Ch. 5 (Class C Airspace)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-338",
+    "area": "AIR",
+    "topic": "Establishing communications",
+    "stem": "Approaching a Class C area, a balloon pilot calls approach control and hears, 'Aircraft calling Springfield Approach, standby.' What may the balloon do?",
+    "choices": [
+      "Enter Class C, because the controller has answered the call.",
+      "Enter Class C after waiting one minute for a further reply.",
+      "Stay outside Class C; communication has not been established."
+    ],
+    "answer": 2,
+    "explanation": "91.130(c)(1) requires two-way radio communications to be established before entering Class C. AIM 3-2-4 explains that if the controller answers without using the aircraft's call sign, communications have not been established and the pilot may not enter; had the controller said the balloon's call sign followed by 'standby,' entry would be allowed. The BFH stresses calling early enough to land outside if entry is refused, since a balloon usually cannot turn around.",
+    "ref": "AIM 3-2-4; 14 CFR 91.130(c)(1); FAA-H-8083-11B Ch. 5 (Radio Procedures)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-339",
+    "area": "AIR",
+    "topic": "Class A airspace",
+    "stem": "A balloon pilot planning a high-altitude flight wants to climb to 19,000 feet MSL under VFR. Which statement is correct?",
+    "choices": [
+      "It is Class A airspace, where flight must be IFR unless ATC authorizes otherwise.",
+      "It is Class E airspace, where 5 miles visibility and 1,000-foot cloud clearance apply.",
+      "It is Class E airspace, where balloons are exempt from ATC clearance requirements."
+    ],
+    "answer": 0,
+    "explanation": "Class A runs from 18,000 feet MSL up to and including FL 600 (AIM 3-2-2), and 91.135 requires IFR and an ATC clearance there unless ATC authorizes a deviation. The BFH notes that balloons do not use Class A unless operating on a waiver or a special operation such as a record attempt. Class E with 5-mile, 1,000/1,000/1-mile minimums applies below 18,000 feet. Oxygen rules under 91.211 also apply long before 19,000 feet.",
+    "ref": "14 CFR 91.135; AIM 3-2-2; FAA-H-8083-11B Ch. 5 (Class A Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-340",
+    "area": "AIR",
+    "topic": "Class E at 14,500 feet",
+    "stem": "Over a remote area of the western United States with no airways or transition areas nearby, where does Class E airspace begin?",
+    "choices": [
+      "At 1,200 feet above the ground everywhere in the United States.",
+      "At 14,500 feet MSL, but not below 1,500 feet above the ground.",
+      "At 18,000 feet MSL; all the airspace below it is Class G."
+    ],
+    "answer": 1,
+    "explanation": "14 CFR 71.71(a): Class E extends upward from 14,500 feet MSL to, but not including, 18,000 feet MSL, excluding airspace less than 1,500 feet above the surface. The 1,200-foot AGL floor exists only where Class E is designated, such as along airways. At 18,000 feet MSL Class A begins. The BFH notes that much of the West is Class G up to 14,500 feet.",
+    "ref": "14 CFR 71.71(a); AIM 3-2-6; FAA-H-8083-11B Ch. 5 (Class G Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-341",
+    "area": "AIR",
+    "topic": "VFR minimums: Class E at or above 10,000 feet",
+    "stem": "On a high-altitude flight, a balloon levels off at 11,000 feet MSL in Class E airspace, well over 1,200 feet above the ground. What flight visibility and cloud clearances must it keep?",
+    "choices": [
+      "5 statute miles; 1,000 feet below, 1,000 feet above, and 1 statute mile horizontal.",
+      "3 statute miles; 500 feet below, 1,000 feet above, and 2,000 feet horizontal.",
+      "3 statute miles; 1,000 feet below, 1,000 feet above, and 1 statute mile horizontal."
+    ],
+    "answer": 0,
+    "explanation": "91.155(a) requires 5 statute miles and 1,000 feet below, 1,000 feet above and 1 statute mile horizontal in Class E at or above 10,000 feet MSL. The 3-mile, 500/1,000/2,000 minimum applies below 10,000 feet MSL, and the third choice mixes the lower visibility with the higher cloud clearances.",
+    "ref": "14 CFR 91.155(a)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-342",
+    "area": "AIR",
+    "topic": "VFR minimums: Class G at night",
+    "stem": "A balloon launches in Class G airspace before morning civil twilight begins and flies below 1,200 feet AGL. What are the minimum flight visibility and cloud clearances?",
+    "choices": [
+      "3 statute miles; 500 feet below, 1,000 feet above, and 2,000 feet horizontal.",
+      "1 statute mile and clear of clouds, the same as in daylight.",
+      "1 statute mile; 500 feet below, 1,000 feet above, and 2,000 feet horizontal."
+    ],
+    "answer": 0,
+    "explanation": "14 CFR 1.1 defines night as the time between the end of evening civil twilight and the beginning of morning civil twilight, so this flight starts at night. 91.155(a) then requires 3 statute miles and 500/1,000/2,000 in Class G at or below 1,200 feet AGL. The 1-mile, clear-of-clouds minimum is for day, and the 91.155(b) relief at night applies only to helicopters and certain airplanes in a traffic pattern, not balloons.",
+    "ref": "14 CFR 91.155(a)-(b); 14 CFR 1.1 (Night)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-343",
+    "area": "AIR",
+    "topic": "Ceiling in a surface area",
+    "stem": "A launch field lies inside the Class E surface area of a nearby airport. The airport reports an overcast ceiling of 800 feet and 5 miles visibility. May the balloon launch under basic VFR?",
+    "choices": [
+      "No; VFR under the ceiling there needs at least 1,000 feet, absent special VFR.",
+      "Yes; Class E below 10,000 feet MSL requires only 3 statute miles of flight visibility.",
+      "Yes; the 1,000-foot ceiling rule applies only to airplanes flying the traffic pattern."
+    ],
+    "answer": 0,
+    "explanation": "91.155(c) bars VFR beneath the ceiling within the lateral boundaries of controlled airspace designated to the surface for an airport when the ceiling is less than 1,000 feet. Visibility alone is not enough, and the rule applies to all aircraft. The only VFR option is a special VFR clearance from ATC under 91.157.",
+    "ref": "14 CFR 91.155(c); 14 CFR 91.157",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-344",
+    "area": "AIR",
+    "topic": "Special VFR",
+    "stem": "A balloon pilot is thinking about requesting special VFR to launch from a field inside an airport's surface area. Which statement about special VFR for this balloon is correct?",
+    "choices": [
+      "It may be used anywhere in Class G airspace whenever visibility drops below 1 mile.",
+      "It requires an ATC clearance, clear of clouds, 1 mile visibility, and daylight.",
+      "It requires no ATC clearance as long as the pilot remains clear of clouds."
+    ],
+    "answer": 1,
+    "explanation": "91.157 allows special VFR only below 10,000 feet MSL within the surface-area airspace of an airport, with an ATC clearance, clear of clouds and at least 1 statute mile flight visibility. Between sunset and sunrise it also needs an instrument-qualified pilot and an aircraft equipped for IFR under 91.205(d), which a balloon is not, so for a balloon it is a daylight tool. It does not apply in Class G, where there is no clearance to grant.",
+    "ref": "14 CFR 91.157(a)-(b)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-345",
+    "area": "AIR",
+    "topic": "Sporting event TFRs",
+    "stem": "A sponsor asks a commercial pilot to fly a banner balloon over a major league ballpark during a World Series game. What applies?",
+    "choices": [
+      "A TFR covers the event; any flight in it needs an FAA waiver arranged well in advance.",
+      "Balloons have the right-of-way over all aircraft, so the restriction does not apply.",
+      "The flight is legal as long as the balloon stays 1,000 feet above the stadium."
+    ],
+    "answer": 0,
+    "explanation": "14 CFR 91.145 lists the World Series among the events for which the FAA may issue a TFR NOTAM, and 91.145(d) bars flight inside it except as the NOTAM allows or under ATC authorization or a Certificate of Waiver or Authorization. The BFH says balloon operations inside such a TFR must be conducted under a waiver, coordinated with the FSDO well in advance. Right-of-way rules do not override airspace restrictions, and the 1,000-foot congested-area minimum of 91.119 is a separate rule that grants no access.",
+    "ref": "14 CFR 91.145(a), (d); FAA-H-8083-11B Ch. 5 (Temporary Flight Restrictions)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-346",
+    "area": "AIR",
+    "topic": "VR military training routes",
+    "stem": "A balloon flight will cross a charted VR route. What does the AIM advise a nonparticipating pilot?",
+    "choices": [
+      "Stay out entirely, because nonparticipating aircraft may not enter a training route.",
+      "Get route status from Flight Service and keep a sharp lookout; it is not prohibited.",
+      "Cross only above 1,500 feet AGL, where VR routes are never flown by the military."
+    ],
+    "answer": 1,
+    "explanation": "AIM 3-5-2: nonparticipating aircraft are not prohibited from MTRs, but extreme vigilance is needed, and pilots should contact a Flight Service station within 100 NM for current route use. VR routes carry high-speed traffic, generally above 250 knots, and routes with three-digit numbers have segments above 1,500 feet AGL.",
+    "ref": "AIM 3-5-2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-347",
+    "area": "AIR",
+    "topic": "Transponder and ADS-B above Class C",
+    "stem": "The forecast track takes a balloon directly over a Class C airport at 6,500 feet MSL, above the 4,800-foot Class C ceiling. The balloon has no engine-driven electrical system, transponder, or ADS-B Out. May it make that flight?",
+    "choices": [
+      "It may proceed, because balloons are exempt from equipment rules everywhere below 10,000 feet.",
+      "It needs ATC authorization; the no-electrical-system exception does not cover that airspace.",
+      "It may proceed, because only the airspace inside the Class C requires the equipment."
+    ],
+    "answer": 1,
+    "explanation": "91.215(b)(4) requires a Mode C transponder for all aircraft in the airspace above the ceiling and within the lateral boundaries of Class B or C, up to 10,000 feet MSL. The balloon exceptions cover only the Mode C veil outside and below Class B and C (91.215(b)(3)) and the airspace at and above 10,000 feet (91.215(b)(5)); the Chart Users' Guide adds that Mode C is required, though not charted, within and above Class C up to 10,000 feet. 91.225(d)(3) sets the same boundary for ADS-B Out, and 91.225(e) names only the (d)(2) and (d)(4) airspace for these aircraft, as AIM 4-1-20 summarizes. So the flight needs an ATC-authorized deviation, requested at least 1 hour ahead (91.215(d)(3), 91.225(g)(2)).",
+    "ref": "14 CFR 91.215(b)(3)-(5), (d)(3); 14 CFR 91.225(d)(3), (e), (g)(2); AIM 4-1-20; FAA Chart Users' Guide (Other Airspace Areas)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-348",
+    "area": "AIR",
+    "topic": "Transponder and ADS-B at 10,000 feet and above",
+    "stem": "A balloon with no engine-driven electrical system flies at 12,000 feet MSL in Class E, more than 2,500 feet above the ground and far from any Class B or C. Is a transponder or ADS-B Out required?",
+    "choices": [
+      "No; balloons are excepted from both rules in that airspace.",
+      "Yes; both are required for all aircraft at or above 10,000 feet.",
+      "ADS-B Out only; the transponder exception alone covers balloons."
+    ],
+    "answer": 0,
+    "explanation": "91.215(b)(5) excepts balloons and aircraft without an engine-driven electrical system from the transponder rule at and above 10,000 feet MSL, and 91.225(e) lets the same aircraft operate without ADS-B Out in the 91.225(d)(4) airspace. At 12,000 feet the pilot must still plan for the supplemental oxygen rules of 91.211.",
+    "ref": "14 CFR 91.215(b)(5); 14 CFR 91.225(d)(4), (e)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-349",
+    "area": "AIR",
+    "topic": "Equipped means operate",
+    "stem": "A balloon pilot carries an approved transponder and ADS-B Out unit that are installed and working. When must they be operated?",
+    "choices": [
+      "ADS-B Out at all times; the transponder in controlled airspace at least.",
+      "Only while the balloon is inside Class B or Class C airspace areas.",
+      "Only when ATC specifically asks the pilot to turn the equipment on in flight."
+    ],
+    "answer": 0,
+    "explanation": "91.225(f) requires installed ADS-B Out to transmit at all times unless the FAA or ATC directs otherwise, and 91.215(c) requires an operable transponder to be operated in all controlled airspace and in the 91.215(b) airspace, replying on the assigned code (1200 for VFR, AIM 4-1-20). The AIM also says it should be on in uncontrolled airspace when practicable.",
+    "ref": "14 CFR 91.215(c); 14 CFR 91.225(f); AIM 4-1-20",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-350",
+    "area": "AIR",
+    "topic": "Balloon radio frequencies",
+    "stem": "Which frequencies does the FCC designate for uses that include hot air balloons, but not for airport advisory service?",
+    "choices": [
+      "122.750 and 123.025 MHz.",
+      "123.300 and 123.500 MHz.",
+      "121.500 and 122.900 MHz."
+    ],
+    "answer": 1,
+    "explanation": "AIM 4-1-11 lists 123.300 and 123.500 for aviation instruction, gliders and hot air balloons, not to be used for advisory service. 122.750 is fixed-wing air-to-air and 123.025 is helicopter air-to-air; 121.500 is the emergency frequency and 122.900 is MULTICOM. The BFH also warns that idle chatter to a chase crew can block another pilot's transmission miles away.",
+    "ref": "AIM 4-1-11; FAA-H-8083-11B Ch. 5 (Radio Communications)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-351",
+    "area": "AIR",
+    "topic": "Radio phraseology: altitudes",
+    "stem": "How should a balloon pilot state an altitude of 12,500 feet MSL on the radio?",
+    "choices": [
+      "'Twelve thousand five hundred.'",
+      "'Flight level one two five.'",
+      "'One two thousand five hundred.'"
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-2-9: below 18,000 feet MSL, state the separate digits of the thousands plus the hundreds, so 12,500 is 'one two thousand five hundred.' Group form ('twelve') is not used for altitudes, and 'flight level' is used only at and above 18,000 feet MSL.",
+    "ref": "AIM 4-2-9",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-352",
+    "area": "AIR",
+    "topic": "Self-announce phraseology",
+    "stem": "A balloon will drift past a nontowered airport. Which transmission best follows AIM and BFH self-announce guidance?",
+    "choices": [
+      "'Traffic in the area, please advise; balloon crossing north of the field at 700 feet, no landing.'",
+      "'Enterprise traffic, balloon 7510 Delta, 700 feet, crossing north of the field eastbound, no landing.'",
+      "'Enterprise UNICOM, radio check, balloon 7510 Delta, any traffic please advise our position.'"
+    ],
+    "answer": 1,
+    "explanation": "A self-announce names the airport's traffic, identifies the aircraft, and gives position, altitude and intentions, as in the BFH example of a balloon transiting a nontowered field. AIM 4-1-9 says 'Traffic in the area, please advise' is not a recognized phrase and should not be used under any condition. A radio check and a request for others to report your position give no one your intentions.",
+    "ref": "AIM 4-1-9 (Self-Announce Position and/or Intentions); FAA-H-8083-11B Ch. 5 (Radio Procedures)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-353",
+    "area": "AIR",
+    "topic": "Coordinated Universal Time",
+    "stem": "A balloon launch is planned for 0630 Pacific Daylight Time. What is that in UTC (Zulu)?",
+    "choices": [
+      "1330Z.",
+      "1430Z.",
+      "2330Z."
+    ],
+    "answer": 0,
+    "explanation": "AIM 4-2-12: add 8 hours to Pacific Standard Time and subtract 1 hour for daylight time, so add 7 to PDT: 0630 + 7 = 1330Z. 1430Z adds the standard-time 8 hours, and 2330Z subtracts instead of adding.",
+    "ref": "AIM 4-2-12",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-354",
+    "area": "AIR",
+    "topic": "MULTICOM",
+    "stem": "A balloon pilot plans to land near a small public airport that has no tower, no Flight Service station, and no UNICOM. Which frequency should be used to self-announce?",
+    "choices": [
+      "122.950 MHz (UNICOM).",
+      "123.300 MHz (balloons).",
+      "122.900 MHz (MULTICOM)."
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-1-9: where there is no tower, FSS or UNICOM, pilots self-announce on MULTICOM 122.9. AIM 4-1-11 assigns 122.950 to UNICOM at airports with a tower or FSS, and 123.300 is not for advisory use. The CTAF for any airport is listed in the Chart Supplement.",
+    "ref": "AIM 4-1-9; AIM 4-1-11",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-355",
+    "area": "AIR",
+    "topic": "When to use the CTAF",
+    "stem": "A balloon will drift past a nontowered airport at about 1,000 feet AGL without landing. According to the AIM, when should the pilot monitor and communicate on the CTAF?",
+    "choices": [
+      "Only within 4 NM and below 2,500 feet AGL.",
+      "Only if the pilot plans to land at the airport.",
+      "While within about 10 miles of the airport."
+    ],
+    "answer": 2,
+    "explanation": "AIM 4-1-9 asks pilots conducting other than arriving or departing operations at altitudes used by airport traffic to monitor and communicate on the CTAF while within 10 miles of the airport. The 4 NM and 2,500-foot figures come from the towered-airport communication rule in 91.126(d) and 91.127(c). The BFH shows a sample transit call for exactly this case.",
+    "ref": "AIM 4-1-9; FAA-H-8083-11B Ch. 5 (When Transiting a Non-towered Facility)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-356",
+    "area": "AIR",
+    "topic": "Light gun: flashing red",
+    "stem": "A balloon's radio has failed as it drifts toward a towered airport, and the tower aims a flashing red light at it. What does the signal mean?",
+    "choices": [
+      "Give way to other aircraft and continue circling.",
+      "Airport unsafe; do not land.",
+      "Return for landing; a steady green will follow."
+    ],
+    "answer": 1,
+    "explanation": "91.125: to an aircraft in flight, flashing red means 'airport unsafe, do not land.' Steady red means give way and continue circling, and flashing green means return for landing, to be followed by a steady green.",
+    "ref": "14 CFR 91.125; AIM 4-3-13",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-357",
+    "area": "AIR",
+    "topic": "Light gun: steady red in flight",
+    "stem": "Nearing the boundary of a towered airport to land, a balloon pilot whose radio has failed sees the tower aim a steady red light at the balloon. What does that signal mean in flight?",
+    "choices": [
+      "Stop immediately; this signal is directed only at aircraft that are on the ground.",
+      "Exercise extreme caution, then continue the approach and land as planned.",
+      "Give way to other aircraft and continue circling; a balloon should stay clear."
+    ],
+    "answer": 2,
+    "explanation": "91.125: steady red to an aircraft in flight means give way to other aircraft and continue circling. A balloon cannot circle, so in practice it should hold off and not land at the airport; the BFH reminds pilots that, absent an emergency, there is no absolute requirement to land at the airport associated with Class D airspace, and 91.129(d)(2) lets a pilot whose radio has failed land there only after receiving a clearance. 'Stop' is the meaning for an aircraft on the ground, and 'exercise extreme caution' is alternating red and green.",
+    "ref": "14 CFR 91.125; 14 CFR 91.129(d)(2); FAA-H-8083-11B Ch. 5 (Class D Airspace)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "AIR-358",
+    "area": "AIR",
+    "topic": "Visual scanning",
+    "stem": "Which scanning technique does the AIM recommend for spotting other aircraft?",
+    "choices": [
+      "One slow, continuous sweep across the whole horizon about every 30 seconds without stopping.",
+      "A steady gaze at the horizon straight ahead, relying on peripheral vision to catch motion.",
+      "Short, regular eye movements of no more than 10°, pausing at least 1 second on each area."
+    ],
+    "answer": 2,
+    "explanation": "AIM 8-1-6: only the small foveal area sees sharply, so scan with short, regularly spaced eye movements that bring successive areas into central vision, each movement no more than 10° and each area observed for at least 1 second. A continuous sweep never lets the eyes focus, and peripheral vision detects detail poorly.",
+    "ref": "AIM 8-1-6 (Scanning for Other Aircraft)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-359",
+    "area": "AIR",
+    "topic": "Collision course cues",
+    "stem": "From the basket, a pilot sees a small airplane that stays in one spot against the background and slowly grows larger. What does this indicate?",
+    "choices": [
+      "It is passing well clear, since it shows no motion across the sky.",
+      "It is probably on a collision course with the balloon.",
+      "It is flying away from the balloon at about the same altitude."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-8: an aircraft that shows no relative motion and stays in one scan quadrant is likely on a collision course, and one that grows larger without moving laterally or vertically calls for evasive action. The balloon has the right-of-way, but 91.113(b) still requires every pilot to see and avoid, so the balloon pilot should act, for example by changing altitude, and keep the airplane in sight.",
+    "ref": "AIM 8-1-8; 14 CFR 91.113(b)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "AIR-360",
+    "area": "AIR",
+    "topic": "Right-of-way between balloons",
+    "stem": "At a rally, two hot air balloons are drifting toward each other at about the same altitude, not head-on. Which one has the right-of-way under Part 91?",
+    "choices": [
+      "The balloon on the other's right.",
+      "Neither; balloons always have the right-of-way.",
+      "The lower balloon, because it cannot see upward."
+    ],
+    "answer": 0,
+    "explanation": "91.113(d): when aircraft of the same category converge at about the same altitude (except head-on), the aircraft to the other's right has the right-of-way. The balloon-first rule in 91.113(d)(1) applies only between different categories. The landing rule in 91.113(g) favors the lower aircraft only when both are approaching to land.",
+    "ref": "14 CFR 91.113(d), (g)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-301",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: impulsivity",
+    "stem": "On final approach, the crew radios that cattle are in the chosen field. Without checking the next field for wires or other hazards, the pilot vents hard to drop straight into it. Which hazardous attitude is this, and what is its antidote?",
+    "choices": [
+      "Impulsivity; 'Not so fast. Think first.'",
+      "Macho; 'Taking chances is foolish.'",
+      "Resignation; 'I'm not helpless. I can make a difference.'"
+    ],
+    "answer": 0,
+    "explanation": "Acting on the first idea without weighing the options is impulsivity, and its antidote is 'Not so fast. Think first.' The BFH's impulsivity example is a pilot who suddenly descends to rooftop level and narrowly misses a power line. Macho is taking risks to impress others, and resignation is believing one's actions make no difference; this pilot is acting too fast, not giving up.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-302",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: invulnerability",
+    "stem": "Reading an accident report about a balloon that hit a power line, a pilot thinks, 'That happens to careless pilots. It won't happen to me.' Which hazardous attitude is this, and what is its antidote?",
+    "choices": [
+      "Anti-authority; 'Follow the rules. They are usually right.'",
+      "Impulsivity; 'Not so fast. Think first.'",
+      "Invulnerability; 'It could happen to me.'"
+    ],
+    "answer": 2,
+    "explanation": "Believing accidents happen only to others is invulnerability, answered by 'It could happen to me.' Anti-authority is resentment of rules and instructions, and impulsivity is acting without thinking; neither describes a belief that one is immune.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-303",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: macho",
+    "stem": "At a balloon rally, a pilot launches into gusty surface winds right after another pilot jokes that 'real pilots' can handle a little breeze. Which hazardous attitude is most evident, and what is its antidote?",
+    "choices": [
+      "Invulnerability; 'It could happen to me.'",
+      "Anti-authority; 'Follow the rules. They are usually right.'",
+      "Macho; 'Taking chances is foolish.'"
+    ],
+    "answer": 2,
+    "explanation": "Taking a risk to prove oneself to others is the macho attitude, and its antidote is 'Taking chances is foolish.' The situation also shows the operational pitfall of peer pressure. Invulnerability is the belief that an accident cannot happen to you, and anti-authority is resentment of rules; the trigger here is the wish to look capable.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2 (Operational Pitfalls)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-304",
+    "area": "ADM",
+    "topic": "Hazardous attitudes: anti-authority",
+    "stem": "A pilot routinely flies 20°F above the envelope's maximum temperature in the flight manual, saying the limit was 'written by lawyers, not pilots.' Which hazardous attitude is this, and what is its antidote?",
+    "choices": [
+      "Resignation; 'I'm not helpless. I can make a difference.'",
+      "Anti-authority; 'Follow the rules. They are usually right.'",
+      "Impulsivity; 'Not so fast. Think first.'"
+    ],
+    "answer": 1,
+    "explanation": "Dismissing a published limit because one resents being told what to do is anti-authority, answered by 'Follow the rules. They are usually right.' Resignation is a sense of helplessness, and impulsivity is a snap decision; this is a deliberate, repeated choice to ignore a limit.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-5); FAA-H-8083-25C Ch. 2",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-305",
+    "area": "ADM",
+    "topic": "Neutralizing a hazardous thought",
+    "stem": "According to the Balloon Flying Handbook, once a pilot recognizes a thought as hazardous, what should the pilot do next?",
+    "choices": [
+      "Label the thought as hazardous, then state the matching antidote.",
+      "Note the thought after landing so an instructor can review it later.",
+      "Ignore it, because attitude matters less than flying skill does."
+    ],
+    "answer": 0,
+    "explanation": "The BFH says recognizing a hazardous thought is the first step; the pilot should then label it as hazardous and state the corresponding antidote, which should be memorized so it comes to mind at once. Waiting until after landing leaves the attitude acting on the flight, and the handbook treats attitudes as central to judgment, not secondary to skill.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Hazardous Attitudes & Antidotes)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-306",
+    "area": "ADM",
+    "topic": "Operational pitfalls: get-there-itis",
+    "stem": "Down to her planned fuel reserve, a pilot flies past several good landing fields to reach the winery where the post-flight celebration is set up. Which operational pitfall is this?",
+    "choices": [
+      "Scud running.",
+      "Duck-under syndrome.",
+      "Get-there-itis."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK defines get-there-itis as a fixation on the original goal or destination combined with a disregard for any alternative, and here it also leads to operating without adequate fuel reserves. Scud running is staying low to keep sight of the ground in poor weather, and duck-under syndrome is descending below minimums to complete an approach.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-307",
+    "area": "ADM",
+    "topic": "Operational pitfalls: peer pressure",
+    "stem": "Everyone else at a fly-in launches as the wind picks up. A pilot with misgivings launches too, reasoning that so many experienced pilots cannot all be wrong. Which operational pitfall is this?",
+    "choices": [
+      "Peer pressure.",
+      "Get-there-itis.",
+      "Mind set."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK describes peer pressure as poor decision-making based on an emotional response to peers rather than an objective look at the situation. Get-there-itis is fixation on reaching a destination, and mind set is an inability to recognize and cope with changes once a plan is formed.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Operational Pitfalls, Fig. 2-15)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-308",
+    "area": "ADM",
+    "topic": "Risk elements: the operation",
+    "stem": "Among the four risk elements in the Balloon Flying Handbook, which one covers the purpose of the flight and whether continuing it is worth the risk?",
+    "choices": [
+      "The environment.",
+      "The pilot.",
+      "The operation."
+    ],
+    "answer": 2,
+    "explanation": "The BFH lists the pilot, the aircraft, the environment and the operation, and says the purpose of each flight is the operation element: why it is being made, how critical the original intent is, and whether continuing is worth the risk. The environment covers weather, terrain and landing areas, and the pilot element covers fitness, currency and experience.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Risk Management, Fig. 1-8)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-309",
+    "area": "ADM",
+    "topic": "3P model: Process",
+    "stem": "In the Perceive, Process, Perform model of risk management, what does the pilot do in the Process step?",
+    "choices": [
+      "Identify the hazards present in the pilot, aircraft, and environment.",
+      "Take action to eliminate the hazards or reduce the risk they pose.",
+      "Evaluate how the identified hazards affect the safety of the flight."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK: Perceive the circumstances (using PAVE to find hazards), Process them by evaluating their impact on flight safety (using CARE), and Perform by carrying out the best course of action (using TEAM). Identifying hazards is the Perceive step, and acting to eliminate or reduce risk is Perform.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Perceive, Process, Perform (3P) Model); FAA-H-8083-11B Ch. 1 (Risk Management)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-310",
+    "area": "ADM",
+    "topic": "TEAM: transfer",
+    "stem": "Unsure whether a forecast wind shift will allow a safe landing, a newly certificated commercial pilot calls a very experienced local pilot for advice before deciding to launch. In the TEAM choice list, this is",
+    "choices": [
+      "Accept.",
+      "Mitigate.",
+      "Transfer."
+    ],
+    "answer": 2,
+    "explanation": "TEAM stands for Transfer, Eliminate, Accept and Mitigate. The BFH frames Transfer as 'can someone be consulted?', and the PHAK as handing the risk decision to someone else, such as a chief instructor. Accept means deciding the benefits outweigh the risk, and Mitigate means taking steps to reduce it.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Risk Management); FAA-H-8083-25C Ch. 2 (TEAM Checklist)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-311",
+    "area": "ADM",
+    "topic": "CARE: reality check",
+    "stem": "Reviewing the hazards before a breezy evening flight, a pilot keeps telling herself it will 'probably be okay.' According to the PHAK, what does that signal?",
+    "choices": [
+      "It is time for a solid reality check.",
+      "The risk has been properly accepted.",
+      "The hazards have been fully identified."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK's rule of thumb for the CARE step (Consequences, Alternatives, Reality, External factors) is that saying it will 'probably' be okay means it is definitely time for a solid reality check. Accepting risk is a deliberate TEAM choice made after evaluation, not wishful thinking, and identifying hazards is the earlier PAVE step.",
+    "ref": "FAA-H-8083-25C Ch. 2 (CARE Checklist)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-312",
+    "area": "ADM",
+    "topic": "DECIDE: detect",
+    "stem": "Twenty minutes into a flight, the pilot notices frost forming on the outside of a fuel fitting leading to the burner. In the DECIDE model, noticing this is which step?",
+    "choices": [
+      "Detect.",
+      "Estimate.",
+      "Evaluate."
+    ],
+    "answer": 0,
+    "explanation": "The DECIDE model begins with Detect, recognizing that a change has occurred. Estimate is judging the need to react to it, and Evaluate is the last step, checking the effect of the action taken. The BFH uses this same frosted-fitting example in its OODA-loop figure, where the pilot shuts off fuel to that side, vents the line and lands as soon as practicable.",
+    "ref": "FAA-H-8083-11B Ch. 1 (The DECIDE Model, Fig. 1-9; The OODA Loop)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-313",
+    "area": "ADM",
+    "topic": "DECIDE: evaluate",
+    "stem": "After shutting off the fuel to a leaking fitting and venting the line, the pilot checks that the frost has stopped spreading and that the other burner still works normally. Which DECIDE step is this?",
+    "choices": [
+      "Do.",
+      "Evaluate.",
+      "Identify."
+    ],
+    "answer": 1,
+    "explanation": "Evaluate, the sixth step, is checking the effect of the action. Do is carrying out the action itself (shutting the valve and venting), and Identify is listing the actions that could control the change before choosing one.",
+    "ref": "FAA-H-8083-11B Ch. 1 (The DECIDE Model, Fig. 1-9)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-314",
+    "area": "ADM",
+    "topic": "OODA loop: orient",
+    "stem": "Contour flying over trees, the balloon passes the edge of the tree line and begins a gradual descent. The pilot notices the change and weighs the options against nearby hazards. In the OODA loop, which node is this?",
+    "choices": [
+      "Orient.",
+      "Observe.",
+      "Act."
+    ],
+    "answer": 0,
+    "explanation": "In the BFH's version of the OODA loop, Observe is continuous monitoring of wind, track and balloon response; Orient focuses attention on a specific discrepancy and considers the options, which is the handbook's own tree-line example; Decide picks the action; and Act is the physical input, such as a burn. Simply watching is Observe, and the burn would come later as Act.",
+    "ref": "FAA-H-8083-11B Ch. 1 (The OODA Loop, Fig. 1-11)",
+    "figure": null,
+    "difficulty": 3,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-315",
+    "area": "ADM",
+    "topic": "Risk matrix",
+    "stem": "A basic risk matrix rates a hazard by combining which two factors?",
+    "choices": [
+      "The pilot's total hours and the hours flown in the last 90 days.",
+      "The forecast surface wind and the reported flight visibility.",
+      "The likelihood of the event and the severity of its outcome."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK describes the risk matrix as assessing the likelihood of an event (probable, occasional, remote, improbable) and its consequence or severity (catastrophic, critical, marginal, negligible). Experience and weather are inputs to judging those two factors, not the axes of the matrix.",
+    "ref": "FAA-H-8083-25C Ch. 2 (Risk Matrix, Fig. 2-5)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-316",
+    "area": "ADM",
+    "topic": "SRM: the chase crew",
+    "stem": "Why does the Balloon Flying Handbook treat the chase crew as part of single-pilot resource management?",
+    "choices": [
+      "The crew shares the legal responsibility for the flight's safety with the pilot in command.",
+      "The crew can often see conditions, such as surface winds or rain, before the pilot can.",
+      "Crew members must hold an FAA certificate before they may help with an inflation or landing."
+    ],
+    "answer": 1,
+    "explanation": "The BFH says crew can access real-time information before the pilot: rain is often visible on the chase vehicles first, and crew can warn of power lines or report changed surface winds. Legally the pilot alone is the final authority (91.3), and crew members need no FAA certificate; the handbook calls them an integral yet 'legally invisible' team.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Single-Pilot Resource Management: Human Resources)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-317",
+    "area": "ADM",
+    "topic": "PIC final authority",
+    "stem": "On approach, the crew chief radios that the pilot should land in a field the pilot judges to be unsafe. Who makes the decision?",
+    "choices": [
+      "The crew chief, who can see the field better from the ground.",
+      "Whoever on the team has the most experience in the local area.",
+      "The pilot in command, who is the final authority on the flight."
+    ],
+    "answer": 2,
+    "explanation": "14 CFR 91.3(a) makes the pilot in command directly responsible for, and the final authority as to, the operation of the aircraft. The BFH stresses using the crew's information, but it says all final decisions and responsibility for safety still rest with the pilot.",
+    "ref": "14 CFR 91.3(a); FAA-H-8083-11B Ch. 1 (Human Resources)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-318",
+    "area": "ADM",
+    "topic": "Positive exchange of controls",
+    "stem": "During a dual training flight, the instructor says, 'You have the flight controls.' What should happen next?",
+    "choices": [
+      "Student: 'Roger.' The instructor lets go once the student starts the next burn.",
+      "Student: 'I have the flight controls.' Instructor: 'You have the flight controls.'",
+      "Student nods; the instructor confirms the handover by watching the next burn."
+    ],
+    "answer": 1,
+    "explanation": "The BFH recommends a three-step exchange: the instructor says 'You have the flight controls,' the student answers 'I have the flight controls,' and the instructor confirms 'You have the flight controls,' with both making a visual check. Informal acknowledgments leave room for doubt about who is flying, which the procedure exists to remove.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Positive Transfer of Controls)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-319",
+    "area": "ADM",
+    "topic": "I'M SAFE: fatigue",
+    "stem": "A pilot drove all night to reach a balloon event and arrives at the launch field at dawn, wired from coffee but short on sleep. Which I'M SAFE item most clearly says not to fly?",
+    "choices": [
+      "Stress.",
+      "Alcohol.",
+      "Fatigue."
+    ],
+    "answer": 2,
+    "explanation": "Lack of sleep is fatigue, and the BFH pictures this exact case, a pilot who drove all night to an event, as one who 'still will not be able to fly.' Coffee may hide the tiredness but does not remove it. Stress and alcohol are separate checklist items and are not the problem described here.",
+    "ref": "FAA-H-8083-11B Ch. 1 (Fig. 1-6) and Ch. 9 (Fatigue, Fig. 9-3)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-320",
+    "area": "ADM",
+    "topic": "Emotion and fitness to fly",
+    "stem": "The night before a paid passenger flight, a pilot learns of a death in the family. According to the AIM, what is the right course?",
+    "choices": [
+      "Do not fly until satisfactorily recovered from the event.",
+      "Fly if at least 8 hours have passed since hearing the news.",
+      "Fly anyway, because staying busy reduces emotional stress."
+    ],
+    "answer": 0,
+    "explanation": "AIM 8-1-1 lists the death of a family member among events that can make a pilot unable to fly safely, and says a pilot who experiences an emotionally upsetting event should not fly until satisfactorily recovered. The 8-hour figure is the alcohol rule, and the AIM warns that anger, depression and anxiety reduce alertness and can lead to risk taking.",
+    "ref": "AIM 8-1-1 (Emotion)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-321",
+    "area": "ADM",
+    "topic": "Chronic stress",
+    "stem": "Months of money and family problems leave a pilot unable to concentrate. According to the Balloon Flying Handbook, what should the pilot do?",
+    "choices": [
+      "Keep flying, since stress is not a grounding condition.",
+      "Stop exercising pilot privileges and consult a physician.",
+      "Fly only short local flights until the pressure eases."
+    ],
+    "answer": 1,
+    "explanation": "The BFH says chronic stress from unrelenting pressures such as financial worries or difficult relationships can make performance fall sharply; pilots at that level are not safe, should not exercise their privileges, and should consult a physician. The PHAK notes stress is not on the regulatory list of grounding conditions, but that is no reason to fly, and a shorter flight does not remove the impairment.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Stress); FAA-H-8083-25C Ch. 2 (IMSAFE)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-322",
+    "area": "ADM",
+    "topic": "Skill fatigue",
+    "stem": "Which effects does the Balloon Flying Handbook describe for skill fatigue, such as after driving all night to an event?",
+    "choices": [
+      "Euphoria and a carefree feeling, followed by blue lips and fingernails.",
+      "Control timing is a little off, and attention narrows to central vision.",
+      "Tingling hands and feet, muscle spasms, and a pale, clammy appearance."
+    ],
+    "answer": 1,
+    "explanation": "The BFH names two effects of skill fatigue: timing disruption, where each part of a task is slightly off and the operation loses its smoothness, and disruption of the perceptual field, where attention fixes on the center of vision and neglects the periphery. Euphoria and cyanosis point to hypoxia, and tingling with muscle spasms and pallor points to hyperventilation.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Fatigue)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-323",
+    "area": "ADM",
+    "topic": "Alcohol and histotoxic hypoxia",
+    "stem": "Why does even a small amount of alcohol make a balloon pilot more vulnerable at altitude?",
+    "choices": [
+      "Alcohol lowers the amount of oxygen in the air the pilot is breathing.",
+      "Alcohol keeps the brain from using oxygen well, a form of histotoxic hypoxia.",
+      "Alcohol slows blood flow to the arms and legs, a form of stagnant hypoxia."
+    ],
+    "answer": 1,
+    "explanation": "The BFH says alcohol interferes with the brain's ability to use oxygen, producing histotoxic hypoxia, and that one ounce of alcohol can equal about 2,000 feet of extra physiological altitude; altitude in turn multiplies alcohol's effects. Alcohol does not change the air, and stagnant hypoxia comes from poor circulation, such as cold or a limb 'going to sleep.'",
+    "ref": "FAA-H-8083-11B Ch. 9 (Histotoxic Hypoxia; Alcohol)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-324",
+    "area": "ADM",
+    "topic": "Hypoxia and night vision",
+    "stem": "According to the AIM, at what cabin pressure altitude can night vision begin to deteriorate?",
+    "choices": [
+      "As low as 5,000 feet.",
+      "Only above 10,000 feet.",
+      "Only above 12,500 feet."
+    ],
+    "answer": 0,
+    "explanation": "AIM 8-1-2: a deterioration in night vision occurs at a cabin pressure altitude as low as 5,000 feet, although other significant hypoxia effects usually do not appear in a healthy pilot below 12,000 feet. That matters for a balloon flying in dim light before sunrise or after sunset from a high launch site. The 10,000 and 12,500-foot figures relate to oxygen recommendations and requirements, not to the onset of night-vision loss.",
+    "ref": "AIM 8-1-2 (Hypoxia); AIM 8-1-6",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-325",
+    "area": "ADM",
+    "topic": "Supplemental oxygen",
+    "stem": "A balloon on an altitude flight spends 45 minutes between 12,500 and 14,000 feet MSL and never goes higher. What does 14 CFR 91.211 require?",
+    "choices": [
+      "The pilot must use oxygen for the time at those altitudes beyond 30 minutes.",
+      "The pilot must use oxygen for the entire 45 minutes at those altitudes.",
+      "Nothing, because oxygen is required only at altitudes above 14,000 feet."
+    ],
+    "answer": 0,
+    "explanation": "91.211(a)(1) requires the required minimum flight crew (in a balloon, the pilot) to be provided with and use supplemental oxygen for the part of the flight above 12,500 feet up to and including 14,000 feet that lasts more than 30 minutes, so here the last 15 minutes. Oxygen for the whole time applies above 14,000 feet (91.211(a)(2)), and above 15,000 feet every occupant must be provided with it (91.211(a)(3)). The AIM recommends oxygen above 10,000 feet in the daytime.",
+    "ref": "14 CFR 91.211(a); AIM 8-1-2",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-326",
+    "area": "ADM",
+    "topic": "Hyperventilation in a passenger",
+    "stem": "On a first flight, a nervous passenger begins breathing rapidly and complains of light-headedness and tingling fingers. What is most likely, and what helps?",
+    "choices": [
+      "Hypoxia; descend at once, since the air at that height lacks oxygen.",
+      "Motion sickness; have the passenger sit down on the basket floor.",
+      "Hyperventilation; have the passenger slow their breathing or talk."
+    ],
+    "answer": 2,
+    "explanation": "Rapid breathing from fright or stress blows off too much carbon dioxide; the BFH lists light-headedness and tingling among the symptoms and says slowing the breathing rate, breathing into a paper bag or talking aloud brings recovery, usually quickly. A normal balloon flight is far too low for altitude hypoxia, and motion sickness causes nausea and sweating rather than tingling from overbreathing.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Hyperventilation); AIM 8-1-3",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-327",
+    "area": "ADM",
+    "topic": "Hyperventilation versus hypoxia",
+    "stem": "Which sign points to hyperventilation rather than hypoxia?",
+    "choices": [
+      "Blue fingernails and lips with limp muscles.",
+      "Tunnel vision at altitudes above 15,000 feet.",
+      "A pale, clammy appearance with muscle spasms."
+    ],
+    "answer": 2,
+    "explanation": "The BFH notes the two share many symptoms, but hyperventilation may produce a pale, clammy appearance and muscle spasms, while hypoxia brings cyanosis (blue nails and lips) and limp muscles. AIM 8-1-2 describes tunnel vision above 15,000 feet as a hypoxia effect. If oxygen is in use when symptoms appear, check the oxygen system first.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Hyperventilation); AIM 8-1-2, 8-1-3",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-328",
+    "area": "ADM",
+    "topic": "Carbon monoxide: recovery time",
+    "stem": "After breathing exhaust from the inflator fan and the chase truck during a long cold-morning inflation, a pilot has a headache and feels drowsy. Which statement about carbon monoxide is correct?",
+    "choices": [
+      "It bonds to hemoglobin far more readily than oxygen; clearing it takes up to 48 hours.",
+      "Its smell always warns a pilot before it does harm, so no odor means there is no risk.",
+      "It leaves the blood within a few minutes once the pilot is aloft in clean, cold air."
+    ],
+    "answer": 0,
+    "explanation": "The PHAK says carbon monoxide attaches to hemoglobin about 200 times more easily than oxygen, causing hypemic hypoxia, and the body needs up to 48 hours to dispose of it. CO is colorless and odorless and can be dangerous even when no exhaust is smelled. Headache, drowsiness and dizziness are classic signs, and medical care is advised if they are severe or persist after landing (AIM 8-1-4).",
+    "ref": "FAA-H-8083-25C Ch. 17 (Carbon Monoxide (CO) Poisoning); AIM 8-1-4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-329",
+    "area": "ADM",
+    "topic": "Carbon monoxide sources during ground operations",
+    "stem": "During a cold-morning inflation, which statement about carbon monoxide sources agrees with FAA guidance?",
+    "choices": [
+      "Only the chase vehicle matters; small inflator fan engines produce too little to be a hazard.",
+      "Every internal combustion engine produces it, including the inflator fan and chase vehicle.",
+      "Only diesel engines produce it, so a gasoline inflator fan and pickup truck are both safe."
+    ],
+    "answer": 1,
+    "explanation": "The PHAK says CO is a colorless and odorless gas produced by all internal combustion engines, so the inflator fan's engine and the chase vehicle are both sources, whatever their fuel. AIM 8-1-4 adds that it is carried in exhaust fumes and, breathed even in minute quantities over time, can significantly reduce the blood's ability to carry oxygen. Crew should keep out of fan and vehicle exhaust, especially in still air or enclosed spaces.",
+    "ref": "FAA-H-8083-25C Ch. 17 (Carbon Monoxide (CO) Poisoning); AIM 8-1-4",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-330",
+    "area": "ADM",
+    "topic": "Spatial disorientation in fog",
+    "stem": "A balloon drifts into an unexpected patch of fog and the ground disappears. What best prevents spatial disorientation?",
+    "choices": [
+      "Use the altimeter, variometer, and any fixed ground references, not body sensations.",
+      "Close the eyes for a moment to reset the inner ear, then trust the feeling of motion.",
+      "Make a long burn to climb out, since the basket's sway shows which way is up."
+    ],
+    "answer": 0,
+    "explanation": "AIM 8-1-5 says spatial disorientation can be prevented only by visual reference to reliable, fixed points on the ground or to flight instruments. The BFH notes balloon pilots rarely meet it because they fly VFR, but names inadvertent fog as the exception, when vestibular and postural senses become unreliable. Body sensations and basket motion are exactly the cues that mislead.",
+    "ref": "AIM 8-1-5; FAA-H-8083-11B Ch. 9 (Spatial Disorientation & Illusions)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-331",
+    "area": "ADM",
+    "topic": "Autokinesis",
+    "stem": "Before dawn, a crew member stares at a single distant light for some time and it seems to drift around. What is this illusion called?",
+    "choices": [
+      "Empty-field myopia.",
+      "Autokinesis.",
+      "False horizon."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-5: in the dark, a static light appears to move about when stared at for many seconds; this is autokinesis. Empty-field myopia is the eyes relaxing to a short focal distance when there is nothing to focus on, and a false horizon comes from sloping clouds or confusing ground-light patterns.",
+    "ref": "AIM 8-1-5",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-332",
+    "area": "ADM",
+    "topic": "Night glow: burner glare",
+    "stem": "During a night glow, the pilot looks up into the flame on every burn and loses sight of the crowd for several seconds afterward. What does the Balloon Flying Handbook suggest?",
+    "choices": [
+      "Wear dark sunglasses through the whole glow to protect the eyes.",
+      "Close one eye during each burn and avoid looking at the flame.",
+      "Look straight at the flame so the eyes adapt to it more quickly."
+    ],
+    "answer": 1,
+    "explanation": "The BFH warns that burner light can immediately destroy night vision during a glow or night tether, leaving the pilot unaware of the people nearby for several minutes, and recommends closing one eye during a burn and not looking at the flame. AIM 8-1-6 gives the same advice for any bright light. Dark glasses would cut night vision further, and staring at the flame makes the loss worse.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Night Vision); AIM 8-1-6",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-333",
+    "area": "ADM",
+    "topic": "Dark adaptation",
+    "stem": "Crew members lay out the envelope before dawn using bright white headlamps. According to the AIM, how long does full dark adaptation take, and how easily is it lost?",
+    "choices": [
+      "About 5 minutes; only light shone directly in the eyes undoes it.",
+      "At least 30 minutes; a few seconds of bright light undoes it.",
+      "About 2 hours; even dim red lighting undoes it completely."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-6: complete dark adaptation needs at least 30 minutes in darkness, a moderate degree takes about 20 minutes under dim red light, and any degree of adaptation is lost within a few seconds of viewing a bright light. Closing one eye when using a light preserves some night vision.",
+    "ref": "AIM 8-1-6 (Vision Under Dim and Bright Illumination)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-334",
+    "area": "ADM",
+    "topic": "Off-center viewing",
+    "stem": "In the dim light just after sunset, how should a pilot look at a faint object, such as an unlit tower near a landing field, to see it best?",
+    "choices": [
+      "About 5° to 10° to one side of the object.",
+      "Directly at the object, using central vision.",
+      "Through a red lens, which sharpens the rods."
+    ],
+    "answer": 0,
+    "explanation": "The BFH explains that the center of the eye is packed with cones that lose sensitivity in dim light, creating a night blind spot, while the rods around it see best in low light, so the pilot should look 5° to 10° off center. Looking straight at a dim object can make it fade. Neither the BFH nor the AIM offers a red lens as a way to see a faint object; the AIM mentions red light only for preserving dark adaptation inside the cockpit.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Night Vision, Fig. 9-8)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-335",
+    "area": "ADM",
+    "topic": "Empty-field myopia",
+    "stem": "Flying above a featureless haze layer, a pilot's eyes relax and focus only a short distance away, so traffic is easy to miss. What is this, and what helps?",
+    "choices": [
+      "Autokinesis; stare at one fixed point until it stops appearing to move.",
+      "Empty-field myopia; deliberately focus on distant objects, even dim ones.",
+      "Spatial disorientation; trust the feeling of the basket's motion instead."
+    ],
+    "answer": 1,
+    "explanation": "AIM 8-1-6 says empty-field myopia occurs above clouds or in haze with nothing to focus on, when the eyes relax to a focal distance of about 10 to 30 feet; effective scanning helps prevent it, and the BFH adds that searching out and focusing on distant objects, however dim, prevents its onset. Autokinesis is a stationary light seeming to move, and body sensations are unreliable cues.",
+    "ref": "AIM 8-1-6; FAA-H-8083-11B Ch. 9 (Empty-Field Myopia)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-336",
+    "area": "ADM",
+    "topic": "Intoxicated passengers",
+    "stem": "A booked passenger arrives at the launch field clearly intoxicated after an all-night party. What does 14 CFR 91.17 say?",
+    "choices": [
+      "The person may fly if a sober adult rides along to look after them.",
+      "Except in an emergency, the pilot may not allow the person to be carried.",
+      "The rule covers only crewmembers, so carrying them is the pilot's choice."
+    ],
+    "answer": 1,
+    "explanation": "91.17(b) says that, except in an emergency, no pilot of a civil aircraft may allow a person who appears to be intoxicated, or who shows by manner or physical signs that they are under the influence of drugs (except a medical patient under proper care), to be carried in that aircraft. There is no escort exception, and the rule reaches passengers, not only crewmembers.",
+    "ref": "14 CFR 91.17(b)",
+    "figure": null,
+    "difficulty": 1,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-337",
+    "area": "ADM",
+    "topic": "Hangover",
+    "stem": "A pilot's last drink was 10 hours before a morning flight, but she still feels groggy and has a headache. Which statement agrees with FAA guidance?",
+    "choices": [
+      "She is fit to fly, because more than 8 hours have passed since her last drink.",
+      "Coffee and a large breakfast will clear the remaining alcohol before launch.",
+      "A hangover means she is still impaired; the AIM suggests 12 to 24 hours."
+    ],
+    "answer": 2,
+    "explanation": "The BFH says a pilot with a hangover is still under the influence of alcohol. AIM 8-1-1 adds that a pilot can still be under the influence 8 hours after drinking and severely impaired for many hours by a hangover, recommends at least 12 to 24 hours between 'bottle and throttle,' and states there is no way to speed the destruction of alcohol. Meeting the 8-hour rule of 91.17(a)(1) does not satisfy 91.17(a)(2).",
+    "ref": "AIM 8-1-1 (Alcohol); 14 CFR 91.17(a)(1)-(2); FAA-H-8083-11B Ch. 9 (Alcohol)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "fixed"
+  },
+  {
+    "id": "ADM-338",
+    "area": "ADM",
+    "topic": "New medication",
+    "stem": "A pilot is prescribed a medication she has never taken, starting the day before a scheduled flight. What does the PHAK recommend?",
+    "choices": [
+      "Wait 8 hours after any dose, the same as the rule for alcohol.",
+      "Fly if the label says the medication does not cause drowsiness.",
+      "Wait 48 hours after the first dose to check for side effects."
+    ],
+    "answer": 2,
+    "explanation": "The PHAK advises waiting at least 48 hours after the first dose of any new medication, over-the-counter or prescribed, to make sure there are no side effects that would make flying unsafe. The 8-hour rule applies only to alcohol, and labels do not settle the question: 91.17(a)(3) bars flying while using any drug that affects the faculties contrary to safety, and the AIM's safest rule is not to fly on any medication unless the FAA approves it.",
+    "ref": "FAA-H-8083-25C Ch. 17 (IMSAFE: Medication); 14 CFR 91.17(a)(3); AIM 8-1-1",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-339",
+    "area": "ADM",
+    "topic": "Dehydration",
+    "stem": "On a hot summer morning, a pilot spends an hour on crew work and inflation, then flies under the burner's radiant heat. What is usually the first noticeable effect of dehydration?",
+    "choices": [
+      "Fatigue.",
+      "Extreme thirst.",
+      "Abdominal cramps."
+    ],
+    "answer": 0,
+    "explanation": "The BFH and PHAK both say the first noticeable effect of dehydration is fatigue. Thirst is a late and unreliable signal: the PHAK says most people become thirsty only at about a 1.5-quart deficit, so pilots should drink at regular intervals whether thirsty or not. Cramps, dizziness and nausea come later if fluid is not replaced, and heatstroke may be recognized only by collapse.",
+    "ref": "FAA-H-8083-11B Ch. 9 (Dehydration & Heatstroke); FAA-H-8083-25C Ch. 17 (Dehydration and Heatstroke)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  },
+  {
+    "id": "ADM-340",
+    "area": "ADM",
+    "topic": "Scuba diving before flight",
+    "stem": "A pilot made a dive that did not require a controlled ascent, surfacing at 0800, and is asked to fly a balloon that afternoon, staying below 5,000 feet MSL. According to the AIM, what is the earliest recommended time to fly?",
+    "choices": [
+      "2000, at least 12 hours after the dive.",
+      "1100, at least 3 hours after the dive.",
+      "0800 the next day, 24 hours after the dive."
+    ],
+    "answer": 0,
+    "explanation": "AIM 8-1-2 recommends waiting at least 12 hours after a non-decompression dive before flying to altitudes up to 8,000 feet MSL, so 0800 + 12 hours = 2000. The 24-hour wait applies after a dive that required a controlled ascent, or before any flight above 8,000 feet. There is no 3-hour figure; excess nitrogen can stay in the tissues for hours and cause the bends at altitude.",
+    "ref": "AIM 8-1-2 (Decompression Sickness After Scuba Diving); FAA-H-8083-11B Ch. 9 (Scuba Diving)",
+    "figure": null,
+    "difficulty": 2,
+    "status": "draft",
+    "confidence": "high",
+    "checked": "confirmed"
+  }
+]
