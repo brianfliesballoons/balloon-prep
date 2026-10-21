@@ -1,0 +1,602 @@
+{
+ "groups": [
+  {
+   "name": "Regulations",
+   "topics": [
+    "reg-cert",
+    "reg-medical",
+    "reg-airworthy",
+    "reg-ops",
+    "reg-ntsb"
+   ]
+  },
+  {
+   "name": "Airspace and navigation",
+   "topics": [
+    "air-classes",
+    "air-charts",
+    "air-nav",
+    "air-notam",
+    "air-radio"
+   ]
+  },
+  {
+   "name": "Weather",
+   "topics": [
+    "wx-stability",
+    "wx-fog",
+    "wx-fronts",
+    "wx-reports",
+    "wx-forecasts"
+   ]
+  },
+  {
+   "name": "Balloon theory and performance",
+   "topics": [
+    "thy-lift",
+    "thy-da",
+    "thy-load",
+    "sys-fuel",
+    "sys-envelope"
+   ]
+  },
+  {
+   "name": "Operations",
+   "topics": [
+    "ops-launch",
+    "ops-landing",
+    "ops-emerg",
+    "ops-night",
+    "ops-water"
+   ]
+  },
+  {
+   "name": "Decision making and you",
+   "topics": [
+    "adm-judgment",
+    "adm-aero"
+   ]
+  }
+ ],
+ "links": {
+  "bfh": {
+   "t": "Balloon Flying Handbook",
+   "u": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/balloon_flying_handbook"
+  },
+  "phak": {
+   "t": "Pilot's Handbook of Aeronautical Knowledge",
+   "u": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  "awh": {
+   "t": "Aviation Weather Handbook",
+   "u": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook"
+  },
+  "aim": {
+   "t": "Aeronautical Information Manual",
+   "u": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/"
+  },
+  "aim3": {
+   "t": "AIM Chapter 3: Airspace",
+   "u": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html"
+  },
+  "aim4": {
+   "t": "AIM Chapter 4: Radio communications",
+   "u": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_2.html"
+  },
+  "aim5": {
+   "t": "AIM Chapter 5: Preflight and NOTAMs",
+   "u": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_1.html"
+  },
+  "aim8": {
+   "t": "AIM Chapter 8: Medical facts for pilots",
+   "u": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap8_section_1.html"
+  },
+  "cug": {
+   "t": "FAA Aeronautical Chart Users' Guide",
+   "u": "https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/aero_guide/"
+  },
+  "p61": {
+   "t": "14 CFR Part 61 (eCFR)",
+   "u": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61"
+  },
+  "p91": {
+   "t": "14 CFR Part 91 (eCFR)",
+   "u": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91"
+  },
+  "s6123": {
+   "t": "14 CFR 61.23, medical certificates (eCFR)",
+   "u": "https://www.ecfr.gov/current/title-14/section-61.23"
+  },
+  "s91209": {
+   "t": "14 CFR 91.209, aircraft lights (eCFR)",
+   "u": "https://www.ecfr.gov/current/title-14/section-91.209"
+  },
+  "p830": {
+   "t": "49 CFR Part 830, NTSB reporting (eCFR)",
+   "u": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VIII/part-830"
+  },
+  "supp": {
+   "t": "FAA airman knowledge testing supplements",
+   "u": "https://www.faa.gov/training_testing/testing/supplements"
+  }
+ },
+ "topics": {
+  "reg-cert": {
+   "title": "Certificates and privileges",
+   "area": "REG",
+   "minutes": 7,
+   "deeper": [
+    [
+     "p61",
+     "Subparts E and F: student, private and commercial pilots"
+    ],
+    [
+     "bfh",
+     "Chapter 1: Introduction to balloon flight training"
+    ]
+   ]
+  },
+  "reg-medical": {
+   "title": "Medical and currency",
+   "area": "REG",
+   "minutes": 6,
+   "deeper": [
+    [
+     "s6123",
+     "Who needs which medical"
+    ],
+    [
+     "p61",
+     "61.56 flight review and 61.57 recent experience"
+    ]
+   ]
+  },
+  "reg-airworthy": {
+   "title": "Airworthiness and documents",
+   "area": "REG",
+   "minutes": 6,
+   "deeper": [
+    [
+     "p91",
+     "91.203 documents, 91.409 inspections, 91.417 records"
+    ],
+    [
+     "bfh",
+     "Chapter 2: Aircraft documents and maintenance"
+    ]
+   ]
+  },
+  "reg-ops": {
+   "title": "Operating rules",
+   "area": "REG",
+   "minutes": 8,
+   "deeper": [
+    [
+     "p91",
+     "Subpart B: flight rules"
+    ],
+    [
+     "s91209",
+     "Lights from sunset to sunrise"
+    ]
+   ]
+  },
+  "reg-ntsb": {
+   "title": "NTSB accident reporting",
+   "area": "REG",
+   "minutes": 5,
+   "deeper": [
+    [
+     "p830",
+     "830.2 definitions, 830.5 immediate notification"
+    ]
+   ]
+  },
+  "air-classes": {
+   "title": "Airspace classes",
+   "area": "AIR",
+   "minutes": 8,
+   "deeper": [
+    [
+     "aim3",
+     "Controlled airspace"
+    ],
+    [
+     "bfh",
+     "Chapter 5: The National Airspace System"
+    ],
+    [
+     "phak",
+     "Chapter 15: Airspace"
+    ]
+   ]
+  },
+  "air-charts": {
+   "title": "Sectional chart symbols",
+   "area": "AIR",
+   "minutes": 7,
+   "deeper": [
+    [
+     "cug",
+     "Every sectional chart symbol, explained"
+    ],
+    [
+     "phak",
+     "Chapter 16: Navigation"
+    ]
+   ]
+  },
+  "air-nav": {
+   "title": "Compass and dead reckoning",
+   "area": "AIR",
+   "minutes": 8,
+   "deeper": [
+    [
+     "phak",
+     "Chapter 16: Navigation"
+    ],
+    [
+     "bfh",
+     "Chapter 3: Preflight planning, navigation"
+    ]
+   ]
+  },
+  "air-notam": {
+   "title": "NOTAMs and the Chart Supplement",
+   "area": "AIR",
+   "minutes": 5,
+   "deeper": [
+    [
+     "aim5",
+     "Preflight: NOTAMs"
+    ],
+    [
+     "phak",
+     "Chapter 16: Navigation"
+    ]
+   ]
+  },
+  "air-radio": {
+   "title": "Radio and collision avoidance",
+   "area": "AIR",
+   "minutes": 6,
+   "deeper": [
+    [
+     "aim4",
+     "Radio communications phraseology"
+    ],
+    [
+     "bfh",
+     "Chapter 7: Use of a VHF radio"
+    ],
+    [
+     "aim8",
+     "Vision and scanning"
+    ]
+   ]
+  },
+  "wx-stability": {
+   "title": "Stability and thermals",
+   "area": "WXT",
+   "minutes": 7,
+   "deeper": [
+    [
+     "awh",
+     "Atmospheric stability"
+    ],
+    [
+     "bfh",
+     "Chapter 4: Weather theory and reports"
+    ]
+   ]
+  },
+  "wx-fog": {
+   "title": "Fog and inversions",
+   "area": "WXT",
+   "minutes": 6,
+   "deeper": [
+    [
+     "awh",
+     "Fog, temperature and inversions"
+    ],
+    [
+     "phak",
+     "Chapter 12: Weather theory"
+    ]
+   ]
+  },
+  "wx-fronts": {
+   "title": "Fronts and wind",
+   "area": "WXT",
+   "minutes": 7,
+   "deeper": [
+    [
+     "awh",
+     "Air masses, fronts and local winds"
+    ],
+    [
+     "phak",
+     "Chapter 12: Weather theory"
+    ]
+   ]
+  },
+  "wx-reports": {
+   "title": "Reports: METAR and TAF",
+   "area": "WXS",
+   "minutes": 8,
+   "deeper": [
+    [
+     "awh",
+     "Reading METARs, TAFs and PIREPs"
+    ],
+    [
+     "phak",
+     "Chapter 13: Aviation weather services"
+    ]
+   ]
+  },
+  "wx-forecasts": {
+   "title": "Forecasts and advisories",
+   "area": "WXS",
+   "minutes": 7,
+   "deeper": [
+    [
+     "awh",
+     "Winds aloft, AIRMETs, SIGMETs and charts"
+    ],
+    [
+     "phak",
+     "Chapter 13: Aviation weather services"
+    ]
+   ]
+  },
+  "thy-lift": {
+   "title": "Buoyancy and lift",
+   "area": "THY",
+   "minutes": 6,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 2: why balloons fly"
+    ]
+   ]
+  },
+  "thy-da": {
+   "title": "Density altitude",
+   "area": "THY",
+   "minutes": 6,
+   "deeper": [
+    [
+     "phak",
+     "Chapter 11: Aircraft performance, density altitude"
+    ],
+    [
+     "bfh",
+     "Chapter 3: Preflight planning, performance"
+    ]
+   ],
+   "lesson": {
+    "idea": "**Warm air at a high field is thin air.** Density altitude is the altitude the air *feels* like to your balloon, and that is what sets your lift.",
+    "widget": "da-slider",
+    "body": [
+     "Your envelope lifts by being lighter than the air it pushes aside. When that outside air is thin, the same envelope temperature lifts less. You need more heat for the same load, which burns more fuel and leaves less room under the envelope's temperature limit. Or you carry less."
+    ],
+    "example": {
+     "setup": "Field elevation 2,600 ft, altimeter 29.70, temperature 32 °C.",
+     "steps": [
+      [
+       "Pressure altitude.",
+       "Add the conversion factor for 29.70 from the table: 2,600 + 205 = 2,805 ft."
+      ],
+      [
+       "Standard temperature there.",
+       "15 °C, minus about 2° per 1,000 ft: 15 − 5.6 ≈ 9 °C."
+      ],
+      [
+       "Correct for heat.",
+       "About 120 ft for every degree above standard: 2,805 + 120 × 23 ≈ 5,500 ft."
+      ]
+     ],
+     "chart": true
+    },
+    "basics": [
+     {
+      "title": "Air has weight",
+      "body": "A box of air one foot on each side weighs a little over an ounce at sea level. Your balloon floats because it pushes aside air that weighs more than the whole balloon does.",
+      "alt": "Think of a beach ball held under water. It shoots up because the water it pushes aside is heavier than the ball. A balloon does the same thing in a sea of air."
+     },
+     {
+      "title": "Thin air pushes up less",
+      "body": "Air gets thinner, or less dense, in two ways: higher up, because there is less air pressing down on it, and on warm days, because warm air spreads out. Thinner air weighs less, so the same envelope lifts less.",
+      "alt": "Same balloon, same heat. On a cool morning the air outside is packed tight and gives you a strong push. On a hot afternoon it is spread out and the push is weaker.",
+      "pic": "density"
+     },
+     {
+      "title": "Pilots use a yardstick",
+      "body": "To compare days, pilots use the standard atmosphere: 15 °C and 29.92 inches of pressure at sea level, getting about 2 °C cooler for every 1,000 feet you climb.",
+      "alt": "It is an imaginary average day. Every real day is measured against it: warmer than standard, or colder."
+     },
+     {
+      "title": "Density altitude puts it together",
+      "body": "Density altitude is the height in that standard atmosphere where the air would be as thin as the air you have right now. A hot day at your field can match air thousands of feet higher, and that means less lift.",
+      "alt": "Ask: if today were a standard day, how high would I have to go to find air this thin? That height is the density altitude."
+     }
+    ]
+   }
+  },
+  "thy-load": {
+   "title": "Load and gross weight",
+   "area": "THY",
+   "minutes": 8,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 3: Preflight planning, load and performance"
+    ]
+   ],
+   "lesson": {
+    "idea": "**Everything aboard counts, fuel included.** Two limits cap your load: the flight manual's maximum gross weight, and what today's air can actually lift. The smaller one wins.",
+    "widget": "load-bar",
+    "body": [
+     "**Gross weight** is the whole balloon as it flies: envelope, basket, burner, tanks, fuel, pilot, passengers and gear.",
+     "**Empty weight** is the balloon with no fuel and no people. **Useful load** is what is left for fuel and people: maximum gross weight minus empty weight.",
+     "Propane weighs about 4.2 pounds per gallon, so full tanks take a real bite out of the useful load. The flight manual's load chart also tells you how much the balloon can lift at a given temperature and elevation. Hot or high days lift less, sometimes well under the certified maximum."
+    ],
+    "example": {
+     "setup": "Maximum gross weight 1,800 lb. Empty weight 640 lb. Two tanks of 20 gallons each.",
+     "steps": [
+      [
+       "Useful load.",
+       "1,800 − 640 = 1,160 lb for fuel and people."
+      ],
+      [
+       "Fuel weight.",
+       "2 × 20 gal × 4.2 lb = 168 lb."
+      ],
+      [
+       "What's left for people.",
+       "1,160 − 168 = 992 lb, if today's load chart allows that much."
+      ]
+     ]
+    },
+    "basics": [
+     {
+      "title": "Everything has weight",
+      "body": "The envelope, the basket, the burner, the tanks, the propane inside them, and every person and bag. Add them all up and you have the gross weight.",
+      "alt": "Picture putting the whole balloon, ready to fly, on one giant scale. That number is the gross weight."
+     },
+     {
+      "title": "The manual sets a ceiling",
+      "body": "Every balloon's flight manual lists a maximum gross weight. You never fly heavier than that, however good the day is.",
+      "alt": "Like the weight limit printed in an elevator. It does not matter how strong the cable feels today."
+     },
+     {
+      "title": "Useful load is what's left",
+      "body": "Take the empty balloon off that ceiling. What remains is the useful load, and it has to cover both fuel and people.",
+      "alt": "Maximum gross 1,600, empty balloon 600: you have 1,000 pounds to share between propane and passengers."
+     },
+     {
+      "title": "Fuel isn't free",
+      "body": "Propane weighs about 4.2 pounds per gallon. Three 15-gallon tanks are almost 190 pounds, about one extra passenger.",
+      "alt": "Every gallon you carry is weight a passenger can't use. Full tanks are part of the load, not a bonus."
+     }
+    ]
+   }
+  },
+  "sys-fuel": {
+   "title": "Propane and the fuel system",
+   "area": "OPS",
+   "minutes": 7,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 2: Heater system and fuel tanks"
+    ]
+   ]
+  },
+  "sys-envelope": {
+   "title": "Envelope and instruments",
+   "area": "OPS",
+   "minutes": 6,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 2: Envelope and instruments"
+    ]
+   ]
+  },
+  "ops-launch": {
+   "title": "Inflation and launch",
+   "area": "OPS",
+   "minutes": 7,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 6: Layout to launch"
+    ]
+   ]
+  },
+  "ops-landing": {
+   "title": "Approach and landing",
+   "area": "OPS",
+   "minutes": 7,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 8: Landing and recovery"
+    ],
+    [
+     "bfh",
+     "Chapter 7: Tethering and mooring"
+    ]
+   ]
+  },
+  "ops-emerg": {
+   "title": "Emergencies",
+   "area": "OPS",
+   "minutes": 8,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 7: In-flight emergencies"
+    ]
+   ]
+  },
+  "ops-night": {
+   "title": "Night and high altitude",
+   "area": "OPS",
+   "minutes": 6,
+   "deeper": [
+    [
+     "s91209",
+     "Lights from sunset to sunrise"
+    ],
+    [
+     "aim8",
+     "Hypoxia and oxygen"
+    ]
+   ]
+  },
+  "ops-water": {
+   "title": "Water landing and survival",
+   "area": "OPS",
+   "minutes": 5,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 8: Water landings"
+    ]
+   ]
+  },
+  "adm-judgment": {
+   "title": "Judgment and hazardous attitudes",
+   "area": "ADM",
+   "minutes": 6,
+   "deeper": [
+    [
+     "phak",
+     "Chapter 2: Aeronautical decision-making"
+    ]
+   ]
+  },
+  "adm-aero": {
+   "title": "Aeromedical",
+   "area": "ADM",
+   "minutes": 7,
+   "deeper": [
+    [
+     "bfh",
+     "Chapter 9: Aeromedical factors"
+    ],
+    [
+     "aim8",
+     "Fitness for flight"
+    ],
+    [
+     "phak",
+     "Chapter 17: Aeromedical factors"
+    ]
+   ]
+  }
+ }
+}
