@@ -1168,7 +1168,7 @@ async function pnSend(sub){const C=S.cls;await api(`/classes/${C.code}/push/subs
 function pnHTML(st,ask){const f=S.cls?esc(S.cls.instructor.split(' ')[0]):'your instructor',m=PN.msg?`<div class="mut sm" role="status">${esc(PN.msg)}</div>`:'';
   if(st==='on')return `<div class="pn-on"><span class="okc">${ICON.bell}Notifications on</span>${ask?'':'<button class="linkb sm" data-act="pnoff">Turn off</button>'}</div><div class="mut sm">This device gets a notification when ${f} answers.</div>${m}`;
   if(st==='off')return `<button class="btn outline" data-act="pnon">${ICON.bell}Notify me when ${f} answers</button>${m}`;
-  if(st==='ios')return `<div class="mut sm"><b>Want a notification when ${f} answers?</b> Add this app to your Home Screen first (Share → Add to Home Screen), open it from there, then turn this on.</div>`;
+  if(st==='ios')return `<div class="mut sm"><b>Want a notification when ${f} answers?</b> Add this app to your Home Screen first (Share → Add to Home Screen). The Home Screen app keeps its own copy, so open it from there, join class <b>${esc(S.cls?S.cls.code:'')}</b> again, then turn this on.</div>`;
   if(ask)return '';
   if(st==='blocked')return `<div class="mut sm"><b>Notifications are blocked</b> for this ${pnIOS?'app. To get them, open Settings → Notifications → Balloon Prep and allow them':'site. To get them, allow notifications for it in your browser’s site settings'}, then come back here.</div>`;
   if(st==='old')return '<div class="mut sm">Notifications need iOS 16.4 or newer. Answers still show up here.</div>';
