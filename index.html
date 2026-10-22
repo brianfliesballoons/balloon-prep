@@ -135,7 +135,7 @@ button:focus-visible,textarea:focus-visible{outline:2px solid var(--user);outlin
 .badge{display:inline-block;font-family:var(--f-display);font-weight:700;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid}
 .badge.check{color:var(--flag);border-color:var(--flag)} .badge.high{color:var(--good);border-color:var(--good)}
 .checknote{font-size:.9rem;color:var(--flag)}
-textarea{font:inherit;font-size:.92rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:8px;width:100%;min-height:64px;resize:vertical}
+textarea{font:inherit;font-size:max(16px,.92rem);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:8px;width:100%;min-height:64px;resize:vertical}
 .gbtn[aria-pressed="true"].okv{background:var(--good);border-color:var(--good);color:var(--surface)}
 .gbtn[aria-pressed="true"].fixv{background:var(--bad);border-color:var(--bad);color:var(--surface)}
 /* results */
@@ -171,12 +171,16 @@ canvas.draw{cursor:crosshair}
 .tbl h3{font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:4px 0 6px}
 .tbl ul{list-style:none;margin:0;padding:0;columns:4 120px;column-gap:10px}
 .tbl li{break-inside:avoid}
-.trow{display:flex;justify-content:space-between;width:100%;font-family:var(--f-num);font-size:.84rem;font-variant-numeric:tabular-nums;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:3px 6px;cursor:pointer}
+.trow{display:flex;justify-content:space-between;align-items:center;min-height:44px;width:100%;font-family:var(--f-num);font-size:.84rem;font-variant-numeric:tabular-nums;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:3px 6px;cursor:pointer}
 .trow:hover{background:var(--chip)}
 .trow.on{background:var(--hl);color:var(--paper)}
 .tbl .th{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);padding:0 6px 4px}
 footer{color:var(--muted);font-size:.85rem;max-width:80ch}
 footer button{font:inherit;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0}
+#wipe{display:flex;align-items:center;min-height:44px;margin-top:20px}
+.srsay{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.fb:focus:not(:focus-visible),#ref h2:focus:not(:focus-visible){outline:none}
+.fb:focus-visible,#ref h2:focus-visible{outline:2px solid var(--user);outline-offset:4px;border-radius:4px}
 body.max{overflow:hidden}
 body.max .bench{position:fixed;inset:0;z-index:40;border-radius:0;border:0;overflow-y:auto;overscroll-behavior:contain;padding:calc(env(safe-area-inset-top,0px) + 10px) calc(env(safe-area-inset-right,0px) + 12px) calc(env(safe-area-inset-bottom,0px) + 12px) calc(env(safe-area-inset-left,0px) + 12px)}
 body.max .bench>*{flex-shrink:0}
@@ -315,7 +319,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .sched{font-size:.92rem;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
 .sched svg{width:18px;height:18px;flex:none;color:var(--flag);margin-top:2px}
 .repl{font-size:.85rem;color:var(--muted)}
-.repl a{color:var(--muted)}
+.repl a{color:var(--muted);display:inline-flex;align-items:center;min-height:44px}
 .done-chip{align-self:flex-start;display:flex;align-items:center;gap:6px;font-weight:700;color:var(--good)}
 .done-chip svg{width:18px;height:18px}
 
@@ -430,7 +434,8 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 
   <div class="bar" id="filters" aria-label="Filter questions"></div>
 
-  <section class="learn" id="learn" hidden aria-live="polite"></section>
+  <section class="learn" id="learn" hidden></section>
+  <p class="srsay" id="srsay" aria-live="polite"></p>
 
   <section class="ref" id="ref" hidden></section>
   <div id="refPrint" aria-hidden="true"></div>
@@ -460,7 +465,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
       <p class="qtext"><span class="qref" id="qfig"></span><span id="qbody"></span></p>
       <ul class="given" id="given" hidden></ul>
       <div class="choices" id="choices"></div>
-      <div class="fb" id="fb" aria-live="polite"></div>
+      <div class="fb" id="fb" tabindex="-1"></div>
       <div class="row-btns" id="howRow" hidden><button class="btn" id="how">Show me on the chart</button></div>
       <div class="grader" id="grader" hidden></div>
       <div class="row-btns">
@@ -626,7 +631,7 @@ function renderQ(){
     if(rev){b.disabled=mode!=='test'||GRADE?true:false;if(i===q.answer)b.classList.add('right');else if(i===p)b.classList.add('wrong');}
     else if(i===p)b.classList.add('picked');
     if(mode==='review'||((mode==='study'||mode==='due')&&rev)||GRADE)b.disabled=true;
-    b.onclick=()=>answer(i);box.appendChild(b);});
+    b.onclick=e=>answer(i,!e.detail);box.appendChild(b);});
   const fb=$('fb');fb.innerHTML='';
   if(rev){const ok=p===q.answer;
     if(!GRADE){const v=document.createElement('div');v.className='verdict '+(p===undefined?'':ok?'ok':'no');v.textContent=p===undefined?`Not answered. The answer is ${L[q.answer]}.`:ok?'Correct.':`Not this time. The answer is ${L[q.answer]}.`;fb.appendChild(v);}
@@ -668,11 +673,17 @@ function copyNotes(){const lines=[];BANK.forEach(q=>{const g=S.grade[q.id];if(g)
   if(navigator.clipboard)navigator.clipboard.writeText(text).then(done,()=>fallbackCopy(text,done));else fallbackCopy(text,done);}
 function fallbackCopy(text,done){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}t.remove();}
 
-function answer(i){const q=cur();if(GRADE||mode==='review')return;
+function answer(i,kb){const q=cur();if(GRADE||mode==='review')return;
   if(mode==='study'){if(S.study[q.id]!==undefined)return;S.study[q.id]=i;sched(q.id,i===q.answer);}
   else if(mode==='due'){if(dueAns[q.id]!==undefined)return;dueAns[q.id]=i;sched(q.id,i===q.answer);}
   else if(mode==='test'){S.test.answers[q.id]=i;}
-  save();renderQ();if(mode==='study')renderFilters();}
+  const had=$('choices').contains(document.activeElement);
+  save();renderQ();if(mode==='study')renderFilters();
+  // the rebuild drops focus to body: keep it on the picked choice in a test, else move it to the verdict
+  if(mode==='test'){if(had)$('choices').children[i]?.focus({preventScroll:true});}else{sayV($('fb').querySelector('.verdict'));focusQuiet($('fb'),kb);}}
+// focus without the page jumping; when the answer came from the keyboard, scroll only if the target is off screen
+function focusQuiet(el,show){if(!el)return;el.focus({preventScroll:true});if(show){const t=el.getBoundingClientRect().top;if(t<60||t>innerHeight-80)scrollBy(0,t-innerHeight*.4);}}
+function sayV(v){const s=$('srsay');s.textContent='';if(v)setTimeout(()=>s.textContent=v.textContent,50);}
 function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)endWalk();pos=i;selPA=null;cross=null;selRow=null;paintRows();renderQ();view={...FULL};req();
   if(mode==='test'){S.test.pos=i;save();}
   if(!$('navPanel').hidden&&window.innerWidth<860)$('navPanel').hidden=true,$('navToggle').setAttribute('aria-expanded','false');
@@ -721,7 +732,7 @@ $('redo').onclick=()=>{const b=$('redo');if(b.dataset.armed!=='1'){b.dataset.arm
   b.dataset.armed='';list.forEach(id=>delete S.study[id]);save();pos=0;renderAll();};  // keep the same list, so a cleared Missed set can be redone
 $('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},hubs:S.hubs,cls:S.cls,exam:S.exam};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
 document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'||$('main').hidden)return;const k=e.key.toLowerCase();
-  if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k));}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
+  if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k),true);}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
   else if(k==='escape'&&document.body.classList.contains('max'))toggleMax(false);});
 
 // ---------- chart (density altitude) ----------
@@ -1040,7 +1051,8 @@ $('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[dat
   if(t.dataset.go){goLearn(t.dataset.go);return;}
   if(t.dataset.ans){const [id,i]=t.dataset.ans.split(':'),q=byId[id];if(!q||S.study[id]!==undefined)return;S.study[id]=+i;sched(id,+i===q.answer);
     if(LV.v==='topic'&&LES.topics[LV.t]?.lesson&&LV.checks.every(x=>S.study[x]!==undefined))S.lessons[LV.t]=Date.now();save();
-    const y=window.scrollY;renderLearn();window.scrollTo(0,y);return;}
+    const y=window.scrollY;renderLearn();window.scrollTo(0,y);
+    const fb=$('learn').querySelector(`[data-ans^="${CSS.escape(id)}:"]`)?.closest('.cq')?.querySelector('.fb');if(fb){fb.tabIndex=-1;sayV(fb.querySelector('.verdict'));focusQuiet(fb,!e.detail);}return;}
   if(t.dataset.basic){const y=window.scrollY;if(t.dataset.basic==='got')LV.at=(LV.at||0)+1;else LV.alt[t.dataset.basic.split(':')[1]]=true;renderLearn();window.scrollTo(0,y);return;}
 });
 $('learn').addEventListener('change',e=>{if(e.target.id==='examDate'){S.exam=e.target.value;save();const y=window.scrollY;renderLearn();window.scrollTo(0,y);}});
@@ -1239,8 +1251,8 @@ function renderRef(){const el=$('ref');if(!refPre)refPre=REFIMG.map(u=>{const i=
   const cards=allCards();
   if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};}else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
     else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><a class="btn" href="refs/pdf/${c.id}.pdf" target="_blank" rel="noopener">Print this card</a></div>
-<div><div class="eyebrow">Card ${c.n}</div><h2>${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
-<p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);return;}}
+<div><div class="eyebrow">Card ${c.n}</div><h2 tabindex="-1">${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
+<p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);el.querySelector('h2').focus({preventScroll:true});return;}}
   el.innerHTML=`<div><h2>Quick reference</h2><p class="mut" style="margin:4px 0 0">Pocket cards built from FAA sources. Read them here, or print them for your oral and your flight bag.</p></div>
 <div class="rcard" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>Print the whole set</b><div class="mut sm">${cards.length} cards, one per Letter page. Opens a PDF: use Share, then Print.</div></div><a class="btn primary" href="refs/pdf/all.pdf" target="_blank" rel="noopener">Print all</a></div>
 ${RGROUPS.filter(([g])=>cards.some(c=>c.group===g)).map(([g,name])=>`<section class="rgrp"><h3>${name}</h3>${cards.filter(c=>c.group===g).map(c=>`<button class="rrow" data-ref="${c.id}"><span class="rn">${c.n}</span><span style="flex:1"><b>${esc(c.title)}</b><small>${esc(c.sub)}</small></span><span aria-hidden="true">›</span></button>`).join('')}</section>`).join('')}
