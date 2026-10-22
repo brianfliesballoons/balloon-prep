@@ -273,6 +273,8 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .trow2{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:6px 14px;font:inherit;color:var(--ink);background:transparent;border:0;border-top:1px solid var(--line);text-align:left;cursor:pointer}
 .trow2 .tn{flex:1;min-width:0}
 .trow2 .ts{font-size:.85rem;color:var(--muted)}
+.trow2 .tdue{font-family:var(--f-num);font-size:.8rem;color:var(--flag-ink);border:1px solid var(--flag-ink);border-radius:999px;padding:1px 8px;white-space:nowrap}
+b.tdue{color:var(--flag-ink)} .tile .rsoon{font-size:.85rem;font-weight:600;color:var(--flag-ink)}
 .trow2 .tm{font-family:var(--f-num);font-size:.8rem;color:var(--muted);min-width:4.6em;text-align:right}
 @media (max-width:420px){.trow2 .ts{display:none}}
 .idea{font-size:1.18rem;line-height:1.45}
@@ -686,7 +688,7 @@ function renderQ(){
   if(GRADE&&mode==='study')$('foot').textContent='Grader mode: the answer and explanation are always shown.';
   else if(mode==='study'){const right=list.filter(id=>S.study[id]===byId[id].answer).length;$('foot').textContent=done?`${right} of ${done} right in this set.`:'Pick an answer to see the explanation.';}
   else if(mode==='due'){const left=dueIds().length;dueEnd=!left||(pos>=list.length-1&&picked(q.id)!==undefined);
-    $('foot').textContent=!left?'Review done for today. Nice work.':dueEnd?`Review done for now. ${left} you skipped ${left===1?'is':'are'} still due today.`:`Review ${pos+1} of ${list.length} · ${left} still due today.`;}
+    $('foot').textContent=!left?`Review done for today. Nice work.${dueSoon()?' Coming up: '+dueSoon()+'.':''}`:dueEnd?`Review done for now. ${left} you skipped ${left===1?'is':'are'} still due today.`:`Review ${pos+1} of ${list.length} · ${left} still due today.`;}
   else if(mode==='test')$('foot').textContent=`${done} of ${list.length} answered · ${list.filter(id=>S.flags[id]).length} flagged`;
   else $('foot').textContent='Reviewing your test. Answers are locked.';
   $('dueBack').hidden=!dueEnd;$('next').hidden=dueEnd;
@@ -817,7 +819,7 @@ $('tsGo').onclick=()=>{if(testHeld())return;S.test={list:buildTest(),answers:{},
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
 $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
   if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
-  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>{if(S.test.answers[id]!==byId[id]?.answer)sched(id,false);});save();mode='results';renderAll();window.scrollTo(0,0);};
+  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>sched(id,S.test.answers[id]===byId[id]?.answer));save();mode='results';renderAll();window.scrollTo(0,0);};
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));navCenter();};
@@ -1008,21 +1010,24 @@ const ICON={back:sv('<path d="M15 18l-6-6 6-6"/>'),next:sv('<path d="M9 18l6-6-6
 const dots=(pts,col)=>pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4" fill="${col}"/>`).join('');
 const PIC={density:`<div class="pic2"><figure><svg viewBox="0 0 120 80" role="img" aria-label="Cool air: dots packed close together">${dots([[10,10],[30,10],[50,10],[70,10],[90,10],[110,10],[20,30],[40,30],[60,30],[80,30],[100,30],[10,50],[30,50],[50,50],[70,50],[90,50],[110,50],[20,70],[40,70],[60,70],[80,70],[100,70]],'var(--pa)')}</svg><figcaption>Cool morning: dense</figcaption></figure><figure><svg viewBox="0 0 120 80" role="img" aria-label="Hot afternoon: dots spread far apart">${dots([[12,12],[58,8],[104,16],[34,40],[82,44],[14,70],[60,72],[106,68]],'var(--isa)')}</svg><figcaption>Hot afternoon: thin</figcaption></figure></div>`};
 
-// spaced review: a miss comes back tomorrow; right on two different days clears it
+// spaced review ladder: a miss comes back tomorrow (step 0); each right answer on a new day moves it up to 3, 7, then 14 days; right at the 14-day check clears it; a miss drops it back to step 0
 const dayNum=()=>Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/864e5);
+const GAPS=[1,3,7,14],rstep=r=>r.step??r.streak??0;/* old entries {due,streak,last}: streak 0/1 = step 0/1 */
 function sched(id,ok){const R=S.review,r=R[id],d=dayNum();
-  if(!ok){R[id]={due:d+1,streak:0,last:d};return;}
-  if(!r)return;
-  if(r.last!==d){r.streak++;r.last=d;}
-  if(r.streak>=2)delete R[id];else r.due=d+3;}
+  if(!ok){R[id]={due:d+1,step:0,last:d};return;}
+  if(!r||r.last===d||d<r.due)return;  // a right answer counts only once the question is due, so a step is a real gap
+  const s=rstep(r)+1;if(s>=GAPS.length)delete R[id];else R[id]={due:d+GAPS[s],step:s,last:d};}
 const dueIds=()=>Object.keys(S.review).filter(id=>byId[id]&&S.review[id].due<=dayNum());
+const dueIn=t=>{const d=dayNum();return (TQ[t]||[]).filter(id=>S.review[id]&&S.review[id].due<=d).length;};
+function dueSoon(){const d=dayNum();let tom=0,wk=0;Object.keys(S.review).forEach(id=>{if(!byId[id])return;const x=S.review[id].due-d;if(x===1)tom++;if(x>0&&x<=7)wk++;});
+  return tom||wk?`${tom} tomorrow · ${wk} this week`:'';}
 
 function lastAns(id){if(S.study[id]!==undefined)return S.study[id];if(S.test&&S.test.done&&S.test.answers[id]!==undefined)return S.test.answers[id];}
 function topicStats(t){const ids=(TQ[t]||[]).filter(id=>kindOf(id)==='test');let tried=0,right=0;ids.forEach(id=>{const a=lastAns(id);if(a!==undefined){tried++;if(a===byId[id].answer)right++;}});return{n:ids.length,tried,right};}
 const LEVELS=['Not started','Familiar','Proficient','Mastered'];
 function level(t){const s=topicStats(t),acc=s.tried?s.right/s.tried:0,les=LES.topics[t]?.lesson,done=!!S.lessons[t];
   if(!s.tried&&!done)return 0;
-  const due=(TQ[t]||[]).some(id=>S.review[id]);
+  const due=(TQ[t]||[]).some(id=>{const r=S.review[id];return r&&(r.due<=dayNum()||rstep(r)<2);});
   if(s.n&&s.tried>=Math.min(5,s.n)&&acc>=.9&&!due&&(!les||done))return 3;
   if(s.n&&s.tried>=Math.min(3,s.n)&&acc>=.7)return 2;
   return 1;}
@@ -1053,14 +1058,14 @@ function pickChecks(t){const ids=TQ[t]||[];
 function vHome(){const n=nextStep(),due=dueIds().length,fl=BANK.filter(q=>S.flags[q.id]).length,p=buildPlan(),keys=Object.keys(LES.topics);let h='';
   if(n){const T=LES.topics[n.t],c=(TQ[n.t]||[]).length;
     h+=`<section class="card lc"><div class="eyebrow">Your next step</div><h2 class="lt">${esc(T.title)}</h2><p class="mut">${esc(n.why)} ${T.lesson?`One lesson, about ${T.minutes} minutes, with check questions built in.`:`Practice its ${nq(c)}.`}</p><button class="btn primary big" data-go="topic:${n.t}">${T.lesson?'Start lesson':'Open topic'}</button>${p?'<button class="linkb" data-go="plan">See your whole study plan</button>':''}</section>`;}
-  h+=`<div class="tiles"><button class="tile" data-go="due" ${due?'':'disabled'}>${ICON.review}<b>${due?due+' to review':'Nothing to review'}</b><span>${due?'Missed questions, back for another try':'Missed questions come back here the next day'}</span></button><button class="tile" data-go="flags" ${fl?'':'disabled'}>${ICON.flag}<b>${fl} flagged</b><span>Questions you marked to come back to</span></button>
+  h+=`<div class="tiles"><button class="tile" data-go="due" ${due?'':'disabled'}>${ICON.review}<b>${due?due+' to review':'Nothing to review'}</b><span>${due?'Missed questions, back for another try':'Missed questions come back here the next day'}</span>${dueSoon()?`<span class="rsoon">${dueSoon()}</span>`:''}</button><button class="tile" data-go="flags" ${fl?'':'disabled'}>${ICON.flag}<b>${fl} flagged</b><span>Questions you marked to come back to</span></button>
   <button class="tile wide" data-go="${p?'plan':'test'}">${ICON.plan}<b>${p?'Your study plan':'Get a study plan'}</b><span>${p?`From your last practice test (${p.pct}%): weakest areas first`:'Take a practice test and your plan is built from the results'}</span></button></div>`;
   Object.entries(S.hubs).forEach(([c,H])=>{h+=`<button class="tile wide" data-go="hub:${esc(c)}">${ICON.chat}<b>Instructor hub${H.name?': '+esc(H.name):''}</b><span>See and answer your students' questions</span></button>`;});
   h+=myQsHTML();
   const started=keys.filter(t=>level(t)>0).length;
   h+=`<div class="lhead"><h2>All topics</h2><span class="num">${started} of ${keys.length} started</span></div><div class="legend2">${LEVELS.map((w,i)=>`<span>${pips(i)} ${w}</span>`).join('')}</div>`;
-  LES.groups.forEach(g=>{h+=`<section class="card grp"><div class="gh"><h3>${esc(g.name)}</h3><span class="num">${g.topics.filter(t=>level(t)>0).length} of ${g.topics.length}</span></div>${g.topics.filter(t=>LES.topics[t]).map(t=>{const T=LES.topics[t],l=level(t),c=(TQ[t]||[]).length;
-    return `<button class="trow2" data-go="topic:${t}" aria-label="${esc(T.title)}, ${LEVELS[l]}">${pips(l)}<span class="tn">${esc(T.title)}</span><span class="ts">${LEVELS[l]}</span><span class="tm">${T.lesson?T.minutes+' min':c?c+' q':'soon'}</span></button>`;}).join('')}</section>`;});
+  LES.groups.forEach(g=>{h+=`<section class="card grp"><div class="gh"><h3>${esc(g.name)}</h3><span class="num">${g.topics.filter(t=>level(t)>0).length} of ${g.topics.length}</span></div>${g.topics.filter(t=>LES.topics[t]).map(t=>{const T=LES.topics[t],l=level(t),c=(TQ[t]||[]).length,dn=dueIn(t);
+    return `<button class="trow2" data-go="topic:${t}" aria-label="${esc(T.title)}, ${LEVELS[l]}${dn?`, ${dn} to review`:''}">${pips(l)}<span class="tn">${esc(T.title)}</span>${dn?`<span class="tdue">${dn} due</span>`:''}<span class="ts">${LEVELS[l]}</span><span class="tm">${T.lesson?T.minutes+' min':c?c+' q':'soon'}</span></button>`;}).join('')}</section>`;});
   const nl=keys.filter(t=>LES.topics[t].lesson).length;
   h+=`<p class="small center">${BANK.length} practice questions checked against FAA sources · ${nl===keys.length?'a lesson for every topic':`${nl} of ${keys.length} lessons written so far`}</p><button class="linkb sm" data-go="newclass">Instructors: start a class so students can ask you questions</button>`;
   return h;}
@@ -1089,7 +1094,7 @@ function nextPlanBtn(t){const p=buildPlan();if(p){const all=p.steps.flatMap(s=>s
   const c=(TQ[t]||[]).length;return c?`<button class="btn primary big" data-go="practice:${t}">Practice all ${c}</button>`:`<button class="btn primary big" data-go="home">All topics</button>`;}
 
 function vTopic(t){const T=LES.topics[t],LS=T.lesson,ids=TQ[t]||[],grp=LES.groups.find(g=>g.topics.includes(t)),checks=LV.checks||[];let n=0;const sec=s=>LS?`${++n} · ${s}`:s;
-  let h=`<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">${esc(grp?grp.name:'')}</div><h2 class="lt big">${esc(T.title)}</h2><div class="mut sm">${LS?'About '+T.minutes+' min · ':''}${nq(ids.length)} · ${LEVELS[level(t)]}</div></div>`;
+  let h=`<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">${esc(grp?grp.name:'')}</div><h2 class="lt big">${esc(T.title)}</h2><div class="mut sm">${LS?'About '+T.minutes+' min · ':''}${nq(ids.length)} · ${LEVELS[level(t)]}${dueIn(t)?` · <b class="tdue">${dueIn(t)} due for review</b>`:''}</div></div>`;
   if(S.lessons[t])h+=`<div class="done-chip">${ICON.check}Lesson done</div>`;
   if(LS){h+=`<section class="card lc"><div class="eyebrow">${sec('The one idea')}</div><p class="idea">${md(LS.idea)}</p>${widget(LS.widget)}${(LS.body||[]).map(p=>`<p>${md(p)}</p>`).join('')}</section>`;
     if(LS.basics)h+=`<button class="dash" data-go="basics:${t}">I don't get this at all · start from the basics</button>`;
@@ -1152,7 +1157,8 @@ $('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[dat
 $('learn').addEventListener('change',e=>{if(e.target.id==='examDate'){S.exam=e.target.value;save();const y=window.scrollY;renderLearn();window.scrollTo(0,y);}});
 function qLinks(q,rev){const t=MAP[q.id],T=LES.topics[t];if(!T||GRADE||mode==='test')return '';const wrong=rev&&picked(q.id)!==q.answer;
   let h=`<div class="qlinks"><button class="btn" data-go="topic:${t}">${ICON.book}Learn this: ${esc(T.title)}</button>${wrong&&T.lesson&&T.lesson.basics?`<button class="btn" data-go="basics:${t}">I don't get this at all</button>`:''}<button class="btn" data-go="ask:${q.id}">${ICON.chat}Ask ${S.cls?esc(S.cls.instructor.split(' ')[0]):'your instructor'} about this</button></div>`;
-  if(mode==='due'&&rev){const r=S.review[q.id];h+=`<div class="sched">${ICON.review}<span>${!r?'Cleared from your review list.':r.streak===0?'This comes back tomorrow. Get it right on two different days to clear it.':'One more right answer on another day clears it.'}</span></div>`;}
+  if(mode==='due'&&rev){const r=S.review[q.id],k=r&&GAPS.length-rstep(r),n=r&&r.due-dayNum(),W=['','One','Two','Three','Four'];
+    h+=`<div class="sched">${ICON.review}<span>${!r?'Cleared from your review list.':(n<=0?'It stays on today\'s list.':n===1?'This comes back tomorrow.':`Next review in ${n} days.`)+' '+(k===1?'Get it right then to clear it.':`${W[k]}${rstep(r)?' more':''} right answers on later days clear it.`)}</span></div>`;}
   return h+`<div class="repl"><a href="https://github.com/brianfliesballoons/balloon-prep/issues/new?title=${encodeURIComponent('Problem with '+q.id)}" target="_blank" rel="noopener">Something wrong with this question? Tell us</a></div>`;}
 $('fb').addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)goLearn(t.dataset.go);});
 
