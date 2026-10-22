@@ -1,3 +1,5 @@
 lessons/drafts/
 CLAUDE.md
 audits/
+worker/.dev.vars
+worker/.wrangler/

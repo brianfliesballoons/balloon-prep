@@ -1,4 +1,4 @@
--- Ask-your-instructor: classes, students, questions. No accounts: keys are random secrets held on each device; only their SHA-256 is stored.
+-- Ask-your-instructor: classes, students, questions, push subscriptions. No accounts: keys are random secrets held on each device; only their SHA-256 is stored.
 CREATE TABLE IF NOT EXISTS classes (
   code TEXT PRIMARY KEY,            -- 6-char join code, e.g. K7Q2PX
   name TEXT NOT NULL,
@@ -28,3 +28,12 @@ CREATE TABLE IF NOT EXISTS questions (
 );
 CREATE INDEX IF NOT EXISTS q_code ON questions(code, created);
 CREATE INDEX IF NOT EXISTS q_sid ON questions(sid, created);
+CREATE TABLE IF NOT EXISTS push_subs (   -- phone notifications when the instructor answers (added 2026-10-21, migrations/2026-10-21-push.sql)
+  endpoint TEXT PRIMARY KEY,        -- the browser's push-service URL (one row per browser)
+  sid TEXT NOT NULL REFERENCES students(sid) ON DELETE CASCADE,
+  code TEXT NOT NULL,
+  p256dh TEXT NOT NULL,             -- the browser's public key, base64url (65 bytes)
+  auth TEXT NOT NULL,               -- the browser's auth secret, base64url (16 bytes)
+  created INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS ps_sid ON push_subs(sid);

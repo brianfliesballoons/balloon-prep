@@ -3,7 +3,7 @@
 // so a new deploy reaches any online student on their next load. Fonts have fixed names and are served cache-first.
 // It never touches cross-origin requests (the instructor Worker included) or anything that is not a GET.
 // Bump VERSION when the PRECACHE list changes; old caches are deleted on activate.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = 'balloon-prep-' + VERSION;
 const PREFIX = 'balloon-prep-';
 const TIMEOUT = 3000;
@@ -86,6 +86,28 @@ function networkFirst(e, req) {
     });
   });
 }
+
+// Phone notifications: the instructor answered (sent by the class Worker, see worker/src/push.js).
+// Every push shows a notification (iPhone revokes the subscription of a page that receives pushes silently),
+// and any open copy of the app is told to reload Your questions.
+self.addEventListener('push', e => {
+  let d = {}; try { d = e.data ? e.data.json() : {}; } catch (x) {}
+  e.waitUntil(Promise.all([
+    self.registration.showNotification(d.title || 'Your instructor answered', { body: d.body || 'Open the app to read the answer.', tag: d.tag || 'answer', icon: ROOT + 'icons/icon-192.png', data: { url: ROOT + '#learn/questions' } }),
+    self.clients.matchAll({ type: 'window' }).then(cs => cs.forEach(c => c.postMessage({ qa: 'answered' })))
+  ]));
+});
+
+// Tapping it opens the app at the Learn page's Your questions: an open copy is focused and moved there, otherwise a new window.
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  const url = (e.notification.data && e.notification.data.url) || ROOT + '#learn/questions';
+  e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(cs => {
+    const c = cs.find(x => x.url.startsWith(ROOT));
+    if (c) { c.postMessage({ qa: 'open' }); return c.focus().catch(() => {}); }
+    return self.clients.openWindow(url);
+  }));
+});
 
 // A card's PDF is not precached (1.8 MB), so one never opened online cannot open offline.
 // Instead of the browser's offline error page, say so plainly in the app's style and link back to the card in the app.
