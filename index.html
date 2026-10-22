@@ -235,6 +235,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .myq{border-top:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
 #myQs{scroll-margin-top:calc(var(--hh,0px) + 8px)}
 .pn{display:flex;flex-direction:column;gap:6px;padding:4px 14px 6px}.pn:empty{display:none}#askCard .pn{padding:0}
+.mvb{border-top:1px solid var(--line);padding:10px 14px 4px;display:flex;flex-direction:column;gap:8px}.learn .mvb.rpt{display:block;padding:0 14px;background:none;border:0;border-top:1px solid var(--line);border-radius:0}.learn .mvb>summary{font-family:inherit;font-size:inherit;font-weight:600}.mvb .btn{margin-top:0}.mvb input{font-family:var(--f-num)}.lc .mvb{padding:12px 0 0}.lc .mvb.top{border-top:0;padding:0}
 .pn .btn{margin-top:0;gap:8px}.pn-on{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.pn-on .linkb{padding:8px 0 8px 8px}
 .seg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .seg2 .mode{min-height:44px}
@@ -1216,10 +1217,11 @@ const VMARK=`<span class="vmark">${ICON.check}Verified instructor</span>`;
 async function joinPreview(){const el=$('jWho'),c=LV.joinCode;if(!el||!c||c.length!==6)return;
   try{const d=await api(`/classes/${c}`);if($('jWho')&&LV.joinCode===c)$('jWho').innerHTML=`${esc(d.name)} · ${esc(d.instructor)}${d.verified?' · '+VMARK:''}`;}catch(e){}}
 
+const joinHTML=()=>`${LV.joinCode?'<div class="sm" id="jWho"></div>':''}<div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
+    <button class="btn primary big" data-act="join">Join class</button><div class="mut sm" id="jMsg">No code yet? Ask your instructor for their invite link.</div>`;
 function askCard(t,qid){const C=S.cls;
   if(!C)return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Still stuck? Ask your instructor</b><div class="mut sm">Join your instructor's class once. Your questions go to their hub, and answers come back here.</div></div></div>
-    ${LV.joinCode?'<div class="sm" id="jWho"></div>':''}<div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
-    <button class="btn primary big" data-act="join">Join class</button><div class="mut sm" id="jMsg">No code yet? Ask your instructor for their invite link.</div></section>`;
+    ${joinHTML()}</section>`;
   const q=qid&&byId[qid];
   return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Ask ${esc(C.instructor)}</b>${C.verified?' '+VMARK:''}<div class="mut sm">${esc(C.name)} · you're ${esc(C.me)}</div></div></div>
     <span class="chipc">About: ${esc(topicName(t))}${q?' · '+esc(qid):''}</span>
@@ -1278,10 +1280,18 @@ async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await
     if(HUBD[code]){s.innerHTML=esc(qaMsg(e))+' <button class="linkb sm" data-act="hubretry">Try again</button>';return;} // keep the questions already shown
     s.textContent='Not loaded';if(b)b.innerHTML=`<section class="card lc"><p class="mut">${esc(qaMsg(e))}</p><button class="btn primary big" data-act="hubretry">Try again</button></section>`;}}
 
-function myQsHTML(){if(!S.cls)return '';if(!MYQ)return `<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">Loading…</p></section>`;
+// sign-in code: the same student on another device or the iPhone Home Screen app (its storage is separate from Safari's). A secret, like a password.
+const MVP='BWP1-',mvCode=C=>MVP+btoa(C.code+'.'+C.sid+'.'+C.key).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+function mvRead(v){v=(v||'').replace(/\s+/g,'');if(v.slice(0,5).toUpperCase()!==MVP)return null;let x;try{x=atob(v.slice(5).replace(/-/g,'+').replace(/_/g,'/'));}catch(e){return null;}
+  const [code,sid,key,...r]=x.split('.');return !r.length&&/^[A-Z0-9]{6}$/.test(code||'')&&/^[\w-]{6,40}$/.test(sid||'')&&/^[\w-]{16,80}$/.test(key||'')?{code,sid,key}:null;}
+function mvHTML(){const b=`<div class="mut sm">Copy this code, open the Home Screen app (or the app on another device) and paste it under Your questions on the Learn page. You stay ${esc(S.cls.me)}, with your questions and answers. Keep this code to yourself: anyone who has it can ask as you.</div><button class="btn outline" data-act="mvcopy">Copy my sign-in code</button><label class="fld" id="mvShowL" hidden>Your sign-in code<input id="mvShow" readonly></label><div class="mut sm" id="mvMsg" role="status"></div>`;
+  return pnIOS&&!pnApp()?`<div class="mvb"><b>Move to the Home Screen app or another device</b>${b}</div>`:`<details class="mvb rpt"><summary>Move to the Home Screen app or another device</summary><div class="rptf">${b}</div></details>`;}
+function joinQsHTML(){const first=pnIOS&&pnApp(),mv=`<div class="mvb${first?' top':''}"><b>Already joined in Safari or on another device?</b><label class="fld">Paste your sign-in code<input id="mvCode" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="BWP1-…" style="font-family:var(--f-num)"></label><button class="btn big" data-act="mvin">Sign in</button><div class="mut sm" id="mvInMsg" role="status">Find it under Your questions where you joined: “Move to the Home Screen app or another device”.</div></div>`; // first in the Home Screen app: moving over from Safari is the likely reason this is empty
+  return `<section class="card lc" id="myQs"><div><h2 class="lt">Your questions</h2><p class="mut sm">Join your instructor's class to ask questions from any lesson or practice question. Answers come back here.</p></div>${first?mv+'<div class="mvb"><b>New here? Join your class</b></div>'+joinHTML():joinHTML()+mv}</section>`;}
+function myQsHTML(){if(!S.cls)return joinQsHTML();if(!MYQ)return `<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">Loading…</p></section>`;
   const qs=MYQ.questions||[],fresh=qs.filter(q=>q.answered&&!q.seen).length;
   return `<section class="card grp" id="myQs"><div class="gh"><h3>Your questions</h3><span class="sm" style="font-weight:700;color:var(--good)">${fresh?fresh+' new answer'+(fresh===1?'':'s'):''}</span></div>${qs.length?qs.slice(0,8).map(q=>`<article class="myq"><div class="qmeta"><span>${esc(topicName(q.topic))}${q.qid?' · '+esc(q.qid):''} · ${ago(q.created)}</span>${q.answered?`<span class="okc">${ICON.check}${!q.seen?'New answer':'Answered'}</span>`:`<span class="waitc">Waiting for ${esc(S.cls.instructor.split(' ')[0])}</span>`}</div><p>${esc(q.text)}</p>${q.answered?`<div class="ans"><b>${esc(S.cls.instructor.split(' ')[0])}:</b> ${esc(q.answer)}</div>`:''}${q.topic&&LES.topics[q.topic]?`<button class="linkb sm" style="align-self:flex-start;padding-left:0" data-go="${q.qid&&byId[q.qid]?'ask:'+esc(q.qid):'topic:'+esc(q.topic)}">${q.qid&&byId[q.qid]?'See the question':'Open the lesson'}</button>`:''}</article>`).join(''):`<p class="mut sm" style="padding:0 14px 14px">Nothing asked yet. Use “Ask ${esc(S.cls.instructor.split(' ')[0])}” on any lesson or question.</p>`}
-  ${pnBox(false)}<div class="mut sm" style="padding:8px 14px 12px">${clsFoot()}</div></section>`;}
+  ${pnBox(false)}${mvHTML()}<div class="mut sm" style="padding:8px 14px 12px">${clsFoot()}</div></section>`;}
 function clsFoot(){return `<div class="clsf"><div>${esc(S.cls.name)}${S.cls.verified?' · '+VMARK:''}</div><div class="acts"><button class="linkb sm" data-act="leave">Leave class</button><button class="linkb sm" data-act="leavedel">Leave this class and delete my questions</button></div><span id="ldMsg" role="status"></span></div>`;}
 async function loadMine(){if(!S.cls)return;try{const d=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});if(!Array.isArray(d.questions))throw qaErr(NETERR);MYQ=d;if(d.class&&!!d.class.verified!==!!S.cls.verified){S.cls.verified=d.class.verified?1:0;save();}const el=$('myQs');if(el){el.outerHTML=myQsHTML();pnPaint();pnToQs();}
   (MYQ.questions||[]).filter(q=>q.answered&&!q.seen).forEach(q=>api(`/classes/${S.cls.code}/questions/${q.id}/seen`,{method:'POST',stu:S.cls}).catch(()=>{}));}
@@ -1320,7 +1330,7 @@ async function pnSend(sub){const C=S.cls;await api(`/classes/${C.code}/push/subs
 function pnHTML(st,ask){const f=S.cls?esc(S.cls.instructor.split(' ')[0]):'your instructor',m=PN.msg?`<div class="mut sm" role="status">${esc(PN.msg)}</div>`:'';
   if(st==='on')return `<div class="pn-on"><span class="okc">${ICON.bell}Notifications on</span>${ask?'':'<button class="linkb sm" data-act="pnoff">Turn off</button>'}</div><div class="mut sm">This device gets a notification when ${f} answers.</div>${m}`;
   if(st==='off')return `<button class="btn outline" data-act="pnon">${ICON.bell}Notify me when ${f} answers</button>${m}`;
-  if(st==='ios')return `<div class="mut sm"><b>Want a notification when ${f} answers?</b> Add this app to your Home Screen first (Share → Add to Home Screen). The Home Screen app keeps its own copy, so open it from there, join class <b>${esc(S.cls?S.cls.code:'')}</b> again, then turn this on.</div>`;
+  if(st==='ios')return `<div class="mut sm"><b>Want a notification when ${f} answers?</b> Add this app to your Home Screen first (Share → Add to Home Screen). The Home Screen app keeps its own copy, so copy your sign-in code ${ask?'from Your questions on the Learn page':'below'}, open the Home Screen app, paste it on the Learn page, then turn this on there.</div>`;
   if(ask)return '';
   if(st==='blocked')return `<div class="mut sm"><b>Notifications are blocked</b> for this ${pnIOS?'app. To get them, open Settings → Notifications → Balloon Prep and allow them':'site. To get them, allow notifications for it in your browser’s site settings'}, then come back here.</div>`;
   if(st==='old')return '<div class="mut sm">Notifications need iOS 16.4 or newer. Answers still show up here.</div>';
@@ -1373,6 +1383,14 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
     return busy(async()=>{const m=$('ldMsg');try{await api(`/classes/${S.cls.code}/students/me`,{method:'DELETE',stu:S.cls});}
       catch(e){if(!(e.qa&&e.message==='Not in this class')){t.dataset.armed='';t.textContent='Leave this class and delete my questions';if(m)m.textContent=' '+qaMsg(e);return;}} // already removed on the server: just forget it here
       pnLeave(S.cls);S.cls=null;MYQ=null;save();renderLearn();})();}
+  if(a==='mvcopy'){const C=S.cls;if(!C)return;const v=mvCode(C),sh=$('mvShow'),m=$('mvMsg');m.textContent='';sh.value=v;$('mvShowL').hidden=false;
+    const ok=()=>{m.textContent='Copied. Now open the Home Screen app (or the other device) and paste it on the Learn page.';},no=()=>{sh.select();m.textContent='Copy the code above (press and hold it, then Copy).';};
+    if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,()=>fallbackCopy(v,ok));else fallbackCopy(v,ok);setTimeout(()=>{if(!m.textContent)no();},800);return;}
+  if(a==='mvin')return busy(async()=>{const m=$('mvInMsg'),c=mvRead($('mvCode').value);
+    if(!c){m.textContent='That doesn’t look like a sign-in code. It starts with BWP1-. Copy it again where you joined.';$('mvCode').focus();return;}
+    try{const d=await api(`/classes/${c.code}/questions/mine`,{stu:c});if(!d.class||typeof d.name!=='string'||!Array.isArray(d.questions))throw qaErr(NETERR);
+      S.cls={code:c.code,name:d.class.name,instructor:d.class.instructor,verified:d.class.verified?1:0,sid:c.sid,key:c.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
+    catch(e){m.textContent=qaMsg(e)===NETERR?NETERR:'That sign-in code isn’t recognised. It stops working if you left the class or your instructor removed you. Ask your instructor for the class code and join again.';}})();
   if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
   if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}pnLeave(S.cls);S.cls=null;MYQ=null;save();renderLearn();}}
 
