@@ -59,6 +59,15 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center;justify-conten
 .rtop{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);padding:6px 0;margin:-6px 0}
 .learn>.back{position:sticky;top:var(--hh,0px);z-index:20;background:var(--bg);align-self:stretch;width:auto}
 .brand{display:flex;align-items:center;gap:10px}
+/* info bubble: round "i" button + its dialog. Scoped names: .infob .infod .infoa .lnk */
+.infob{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--muted);background:var(--surface);color:var(--ink);font:italic 700 15px/1 Georgia,serif;cursor:pointer;padding:0;position:relative}
+.infob::after{content:"";position:absolute;inset:-8px}
+.lnk{background:none;border:0;padding:0;color:var(--ink);text-decoration:underline;font:inherit;cursor:pointer;min-height:44px}
+.infod{max-width:min(34rem,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);padding:18px 18px 14px;line-height:1.45}
+.infod::backdrop{background:rgba(10,20,28,.45)}
+.infod h2{margin:0 0 8px;font-size:1.15rem}.infod h3{margin:14px 0 4px;font-size:1rem}.infod p,.infod ol,.infod ul{margin:4px 0}.infod ol,.infod ul{padding-left:1.3em}.infod li{margin:3px 0}
+.infoa{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:14px}.infoa .btn{min-height:44px}
+@media print{.infob,.infod{display:none!important}}
 .brand svg{width:30px;height:30px;flex:none}
 h1{font-family:var(--f-display);font-weight:700;font-size:1.65rem;letter-spacing:.01em;margin:0;line-height:1.1}
 h2{font-family:var(--f-display);font-weight:700;font-size:1.4rem;margin:0 0 6px;text-wrap:balance}
@@ -485,6 +494,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
     <div class="brand">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C9.4 2 5 7 5 12.6c0 5.2 5 9.3 8 12.4h6c3-3.1 8-7.2 8-12.4C27 7 22.6 2 16 2z" fill="var(--isa)"/><path d="M16 2c-3 0-5 5-5 10.6 0 5 2 9.4 2 12.4h6c0-3 2-7.4 2-12.4C21 7 19 2 16 2z" fill="var(--hl)"/><rect x="12.5" y="26" width="7" height="4.5" rx="1" fill="var(--pa)"/></svg>
       <h1>Balloon Written Prep</h1>
+      <button class="infob" data-info="save" aria-label="How your progress is saved" title="How your progress is saved">i</button>
     </div>
     <div class="modes" role="group" aria-label="Mode">
       <button class="mode" id="mStudy" aria-pressed="true">Study</button>
@@ -586,7 +596,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 
   <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
   <div class="pgx" id="pgx">
-    <p><b>Your progress</b> is saved only in this browser on this device. Export a copy now and then, so you can move it to another phone or get it back if the browser clears it.</p>
+    <p><b>Your progress</b> is saved only in this browser on this device. Export a copy now and then, so you can move it to another phone or get it back if the browser clears it. <button class="lnk" data-info="save">How saving works</button></p>
     <button class="btn" id="pgxExport">Export my progress</button>
     <button class="btn" id="pgxImport">Import progress</button>
     <input type="file" id="pgxFile" accept=".json,application/json" hidden>
@@ -1293,7 +1303,7 @@ async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await
 const MVP='BWP1-',mvCode=C=>MVP+btoa(C.code+'.'+C.sid+'.'+C.key).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
 function mvRead(v){v=(v||'').replace(/\s+/g,'');if(v.slice(0,5).toUpperCase()!==MVP)return null;let x;try{x=atob(v.slice(5).replace(/-/g,'+').replace(/_/g,'/'));}catch(e){return null;}
   const [code,sid,key,...r]=x.split('.');return !r.length&&/^[A-Z0-9]{6}$/.test(code||'')&&/^[\w-]{6,40}$/.test(sid||'')&&/^[\w-]{16,80}$/.test(key||'')?{code,sid,key}:null;}
-function mvHTML(){const b=`<div class="mut sm">Copy this code, open the Home Screen app (or the app on another device) and paste it under Your questions on the Learn page. You stay ${esc(S.cls.me)}, with your questions and answers. Keep this code to yourself: anyone who has it can ask as you.</div><button class="btn outline" data-act="mvcopy">Copy my sign-in code</button><label class="fld" id="mvShowL" hidden>Your sign-in code<input id="mvShow" readonly></label><div class="mut sm" id="mvMsg" role="status"></div>`;
+function mvHTML(){const b=`<div class="mut sm">Copy this code, open the Home Screen app (or the app on another device) and paste it under Your questions on the Learn page. You stay ${esc(S.cls.me)}, with your questions and answers. Keep this code to yourself: anyone who has it can ask as you. It does not carry your study progress. <button class="lnk" data-info="save">How to move that too</button></div><button class="btn outline" data-act="mvcopy">Copy my sign-in code</button><label class="fld" id="mvShowL" hidden>Your sign-in code<input id="mvShow" readonly></label><div class="mut sm" id="mvMsg" role="status"></div>`;
   return pnIOS&&!pnApp()?`<div class="mvb"><b>Move to the Home Screen app or another device</b>${b}</div>`:`<details class="mvb rpt"><summary>Move to the Home Screen app or another device</summary><div class="rptf">${b}</div></details>`;}
 function joinQsHTML(){const first=pnIOS&&pnApp(),mv=`<div class="mvb${first?' top':''}"><b>Already joined in Safari or on another device?</b><label class="fld">Paste your sign-in code<input id="mvCode" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="BWP1-…" style="font-family:var(--f-num)"></label><button class="btn big" data-act="mvin">Sign in</button><div class="mut sm" id="mvInMsg" role="status">Find it under Your questions where you joined: “Move to the Home Screen app or another device”.</div></div>`; // first in the Home Screen app: moving over from Safari is the likely reason this is empty
   return `<section class="card lc" id="myQs"><div><h2 class="lt">Your questions</h2><p class="mut sm">Join your instructor's class to ask questions from any lesson or practice question. Answers come back here.</p></div>${first?mv+'<div class="mvb"><b>New here? Join your class</b></div>'+joinHTML():joinHTML()+mv}</section>`;}
@@ -1413,6 +1423,11 @@ setTool('move');
 const LOADFAIL=new Set();
 const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null).then(x=>{if(x===null){LOADFAIL.add(f);$('ntLoad').hidden=false;}return x;});
 
+// ---------- info bubble: how progress is saved (any [data-info] opens it) ----------
+document.addEventListener('click',e=>{const d=$('saveInfo');
+  if(e.target.closest('[data-info]')){d.showModal();d.scrollTop=0;d.querySelector('[data-info-close]').focus({preventScroll:true});return;}
+  if(e.target.closest('[data-info-close]')||e.target===d){d.close();return;}
+  if(e.target.closest('[data-info-go]')){d.close();$('pgx').scrollIntoView({behavior:'smooth',block:'center'});$('pgxExport').focus({preventScroll:true});}});
 // ---------- saved test vs. the bank, and export / import of progress ----------
 function fixTest(){const T=S.test;if(!T||!Array.isArray(T.list))return;const gone=T.list.filter(id=>!byId[id]);if(!gone.length)return;
   if([...LOADFAIL].some(f=>f.startsWith('questions/'))){HELD.for=S;HELD.test=T;S.test=null;return;}  // a file failed, so the questions are not retired: leave the saved test exactly as it is
@@ -1594,5 +1609,25 @@ function route(hs){
 {const done=()=>{document.documentElement.classList.remove('booting');if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});};BOOT.then(done,e=>{done();throw e;});}
 })();
 </script>
+<dialog class="infod" id="saveInfo" aria-labelledby="saveInfoH">
+  <h2 id="saveInfoH">How your progress is saved</h2>
+  <p>There is no account. Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>.</p>
+  <h3>On an iPhone or iPad, study in the Home Screen app</h3>
+  <ul>
+    <li>In Safari, tap Share, then <b>Add to Home Screen</b>.</li>
+    <li>Safari can clear a site's saved data after a week of using Safari without opening that site. The Home Screen app doesn't have that limit, so your progress is safer there.</li>
+    <li>The Home Screen app keeps its <b>own copy</b>, separate from Safari. Pick one and study there.</li>
+  </ul>
+  <h3>Moving your progress over</h3>
+  <ol>
+    <li>Where you've been studying, tap <b>Export my progress</b> at the bottom of the page and save the file (Files or iCloud Drive).</li>
+    <li>In the Home Screen app or on the other device, tap <b>Import progress</b> and pick that file.</li>
+  </ol>
+  <p>That brings everything, including your class if you joined one.</p>
+  <h3>Your sign-in code</h3>
+  <p>If you joined a class, the sign-in code (Learn → Your questions) moves <b>only your class and your questions</b> to another device. It does not bring your study progress. Use Export and Import for that.</p>
+  <p class="mut sm">Export a copy now and then as a backup. Clearing Safari's history and website data also wipes it.</p>
+  <div class="infoa"><button class="btn" data-info-go="pgx">Go to Export / Import</button><button class="btn primary" data-info-close>Got it</button></div>
+</dialog>
 </body>
 </html>
