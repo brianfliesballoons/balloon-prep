@@ -1,5 +1,7 @@
 lessons/drafts/
 CLAUDE.md
 audits/
+
+# local Worker dev settings (DEV_ORIGINS); never committed
 worker/.dev.vars
 worker/.wrangler/
