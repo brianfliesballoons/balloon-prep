@@ -83,6 +83,13 @@ body.nofig .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 .flagbtn svg{width:14px;height:14px}
 .flagbtn[aria-pressed="true"]{color:var(--flag-ink);border-color:var(--flag-ink)}
 .timer{font-family:var(--f-num);font-size:.85rem;color:var(--muted)}
+/* practice-test clock: time left over a quiet pacing line; banner when time runs out. Scoped names: .tq* */
+#timer{display:flex;flex-direction:column;align-items:center;line-height:1.15;text-align:center;font-variant-numeric:tabular-nums}
+#timer b{font-weight:500;color:var(--ink);white-space:nowrap}
+#timer span{font-family:var(--f-display);font-weight:600;font-size:.78rem;letter-spacing:.02em;white-space:nowrap}
+#timer .tqbeh{color:var(--flag-ink)} #timer.tqlow b{color:var(--flag-ink)}
+.tqup{margin-top:12px;border:1px solid var(--line);border-left:4px solid var(--hl);border-radius:8px;padding:10px 12px;background:var(--paper)}
+.tqup .row-btns{margin-top:8px}
 .navgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:5px;margin-top:12px;max-height:46vh;overflow-y:auto;padding:2px}
 .nq{position:relative;font-family:var(--f-num);font-size:.8rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 0;cursor:pointer}
 .nq.ans{background:var(--chip);border-color:var(--muted)}
@@ -150,6 +157,26 @@ textarea{font:inherit;font-size:max(16px,.92rem);color:var(--ink);background:var
 .areas td:last-child,.areas th:last-child{text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums}
 .meter{height:6px;background:var(--chip);border-radius:3px;overflow:hidden;min-width:60px}
 .meter i{display:block;height:100%;background:var(--good)}
+/* test history on the results screen. Scoped names: .tq* */
+.areas .tqd{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.areas.tqv td:nth-last-child(2),.areas.tqv th:nth-last-child(2){text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.tqh{margin-top:20px;border-top:1px solid var(--line);padding-top:14px}
+.tqh h3{font-family:var(--f-display);font-weight:700;font-size:1.15rem;margin:0}
+.tqtr{max-width:540px;position:relative;display:flex;align-items:flex-end;gap:2px;height:88px;margin:14px 0 0;padding-right:34px;border-bottom:1px solid var(--line)}
+.tqtr i{flex:1 1 0;max-width:26px;min-height:3px;border-radius:4px 4px 0 0;background:var(--bad)}
+.tqtr i.g{background:var(--good)}
+.tqtr s{position:absolute;left:0;right:30px;bottom:70%;height:2px;background:var(--ink)}
+.tqtr b{position:absolute;right:0;bottom:calc(70% - .55em);font-family:var(--f-num);font-weight:500;font-size:.75rem;color:var(--muted)}
+.tqcap{color:var(--muted);font-size:.8rem;margin:4px 0 0}
+.tqlist{list-style:none;margin:12px 0 0;padding:0;max-width:540px}
+.tqlist li{display:grid;grid-template-columns:minmax(4.2em,1fr) 3em minmax(5.4em,1fr) auto;gap:8px;align-items:baseline;padding:6px 2px;border-bottom:1px solid var(--line);font-size:.92rem}
+.tqlist li>:nth-child(2){font-family:var(--f-num);font-variant-numeric:tabular-nums;text-align:right}
+.tqlist li>:last-child{color:var(--muted);text-align:right;font-size:.85rem;white-space:nowrap}
+.tqlist .pass,.tqlist .fail{display:flex;align-items:center;gap:4px;font-weight:700}
+.tqlist svg{width:14px;height:14px;flex:none}
+.tqlist .tqcur{box-shadow:inset 3px 0 0 var(--ink);padding-left:10px}
+.tqlist small{display:block;color:var(--muted);font-weight:400;font-size:.78rem}
+.tqh details summary{cursor:pointer;color:var(--user);padding:10px 2px;min-height:44px;display:flex;align-items:center}
 /* chart workbench */
 .bench{display:flex;flex-direction:column;gap:10px;padding:12px;scroll-margin-top:calc(var(--hh,60px) + 8px)}
 .tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -448,7 +475,9 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   <section class="card results" id="testStart" hidden>
     <h2>Commercial balloon practice test</h2>
     <p id="tsText" style="margin:0 0 6px"></p>
+    <p class="small" id="tsClock"></p>
     <p class="small" id="tsNote">No answers are shown until you finish. Flag anything you want to come back to, and use the question grid to jump around. Your progress is saved on this device.</p>
+    <p class="small" id="tsHist" hidden></p>
     <div class="row-btns"><button class="btn primary" id="tsGo">Start test</button><button class="btn" id="tsResume" hidden>Resume test in progress</button><button class="btn primary" id="tsReload" hidden>Reload</button></div>
   </section>
 
@@ -466,6 +495,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
         <div class="navgrid" id="navgrid"></div>
         <div class="navlegend"><span>■ answered</span><span class="nl-ok">✓ right</span><span class="nl-no">✕ wrong</span><span class="nl-fl">● flagged</span></div>
       </div>
+      <div class="tqup" id="tqup" role="alert" hidden><span id="tqupT"></span><div class="row-btns"><button class="btn primary" id="tqSee">See my results</button><button class="btn" id="tqGo">Keep going untimed</button></div></div>
       <div class="meta" id="meta"></div>
       <p class="qtext"><span class="qref" id="qfig"></span><span id="qbody"></span></p>
       <ul class="given" id="given" hidden></ul>
@@ -709,19 +739,75 @@ function renderAll(){
     $('tsResume').hidden=!(S.test&&!S.test.done);$('tsGo').hidden=$('tsNote').hidden=held;$('tsReload').hidden=!held;}
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
-  clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
+  tRender();
   syncURL();
 }
 function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=ids.filter(id=>T.answers[id]===byId[id]?.answer).length,pct=Math.round(right/ids.length*100),pass=pct>=70;
   const by={};ids.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
-  const secs=Math.floor(((T.end||Date.now())-T.start)/1000);
-  el.innerHTML=`<h2>Practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':'Below the 70% passing score'} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}</p>
-   <table class="areas"><thead><tr><th>Area</th><th></th><th>Score</th></tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td></tr>`;}).join('')}</tbody></table>
-   <div class="row-btns"><button class="btn primary" id="rMiss"${ids.length-right?'':' disabled'}>${ids.length-right?`Review missed (${ids.length-right})`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>`;
+  const H=tHist(),hi=H.findIndex(h=>h.end===T.end),prev=hi>0?H[hi-1]:null;
+  const secs=Math.floor((T.used!=null?T.used:(T.end||Date.now())-T.start)/1000);
+  const pa=(k,p)=>{const x=prev&&prev.ar&&prev.ar[k];if(!x||!x[1])return '<td class="tqd"></td>';const d=p-Math.round(x[0]/x[1]*100);return `<td class="tqd" title="Change since your previous test (${Math.round(x[0]/x[1]*100)}%)">${d>0?'+'+d:d<0?'−'+(-d):'='}</td>`;};
+  let to='';if(T.to){const n=ids.length,tr=ids.filter(id=>T.to.a[id]===byId[id]?.answer).length,ta=ids.filter(id=>T.to.a[id]!==undefined).length,tp=Math.round(tr/n*100);
+    to=`<p class="small">Time ran out with ${ta} of ${n} answered. At that point you had ${tr} right: <b class="${tp>=70?'pass':'fail'}">${tp}%</b>${tp>=70?', a pass':', below 70%'}. The real test would have ended there; the ${pct}% above counts the answers you gave after time too.</p>`;}
+  el.innerHTML=`<h2>Practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':'Below the 70% passing score'} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}${T.used!=null?` of ${Math.round(tLim(T)/6e4)} on the clock`:''}</p>${to}
+   <table class="areas${prev?' tqv':''}"><thead><tr><th>Area</th><th></th><th>Score</th>${prev?'<th class="tqd" title="Change in percent since your previous test">vs last</th>':''}</tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td>${prev?pa(k,p):''}</tr>`;}).join('')}</tbody></table>
+   <div class="row-btns"><button class="btn primary" id="rMiss"${ids.length-right?'':' disabled'}>${ids.length-right?`Review missed (${ids.length-right})`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>${tHistHTML(H,T.end)}`;
   $('rPlan').onclick=()=>goLearn('plan');
   $('rMiss').onclick=()=>{list=ids.filter(id=>T.answers[id]!==byId[id]?.answer);pos=0;mode='review';renderAll();};
   $('rAll').onclick=()=>{list=ids.slice();pos=0;mode='review';renderAll();};
   $('rNew').onclick=()=>{mode='teststart';renderAll();};}
+
+// ---------- practice-test clock and score history ----------
+// The clock counts active time only, while the test view is open and the page is visible (S.test.used, ms; old saved tests start at 0).
+// The limit is 1.8 minutes a question, like the real CBH test (100 questions in 3.0 hours). T.to = the answers at time-out; T.untimed = kept going.
+const TQ_PER=108e3;let tRun=0,tT=null,tN=0;
+const tLim=T=>T.list.length*TQ_PER;
+const tUsed=T=>(T.used||0)+(tRun&&tT===T?Date.now()-tRun:0);
+const tLimTxt=n=>{const m=Math.round(n*1.8);return m%60?`${m} minutes`:`${m/60} hour${m===60?'':'s'}`;};
+const hms=s=>`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+function tFold(){if(tRun&&tT&&tT===S.test){const n=Date.now();tT.used=(tT.used||0)+n-tRun;tRun=n;}else tRun=0;}
+function tSync(){const T=S.test,on=mode==='test'&&!!T&&!T.done&&document.visibilityState!=='hidden';
+  if(on&&!(tRun&&tT===T)){tFold();tRun=Date.now();tT=T;}else if(!on&&tRun){tFold();tRun=0;save();}}
+function tShow(){const T=S.test,el=$('timer');if(mode!=='test'||!T||T.done)return;tSync();const lim=tLim(T);let u=tUsed(T);
+  if(u>=lim&&!T.to){tFold();T.to={a:Object.assign({},T.answers),u:lim};save();}
+  else if(++tN%10===0){tFold();save();}  // keep the saved clock within about 10 s of the truth
+  const n=T.list.length,ans=T.list.filter(id=>T.answers[id]!==undefined).length;let top,sub='',cls='';
+  if(T.to){const ov=Math.floor((u-lim)/6e4);top="Time's up";el.classList.remove('tqlow');sub=T.untimed?(ov>0?`untimed · +${ov} min`:'untimed'):'';}
+  else{const left=Math.ceil((lim-u)/1e3),beh=Math.floor((u-(ans+1)*TQ_PER)/6e4);top=hms(left)+' left';if(beh>=3){sub=`${beh} min behind`;cls='tqbeh';}else sub='on pace';if(left<600)el.classList.add('tqlow');else el.classList.remove('tqlow');}
+  el.title=`${tLimTxt(n)} for ${n} questions, like the real test. The clock runs only while the test is open on screen.`;
+  el.innerHTML=`<b>${top}</b>${sub?`<span class="${cls}">${sub}</span>`:''}`;
+  const up=$('tqup'),show=!!T.to&&!T.untimed;
+  if(show&&up.hidden){const ta=T.list.filter(id=>T.to.a[id]!==undefined).length;$('tqupT').textContent=`Time's up. The real test would end here, with ${ta} of ${n} answered. That score is kept for your results.`;}
+  up.hidden=!show;}
+function tRender(){clearInterval(tick);tSync();if(mode!=='test')$('tqup').hidden=true;if(mode==='teststart')tStart();if(mode==='test'){tShow();tick=setInterval(tShow,1000);}}
+document.addEventListener('visibilitychange',()=>{tSync();if(mode==='test')tShow();});
+addEventListener('pagehide',()=>{if(tRun){tFold();save();}});
+$('tqSee').onclick=()=>{const f=$('finish');f.dataset.armed='1';f.click();};  // the real Finish, without the unanswered prompt
+$('tqGo').onclick=()=>{if(!S.test)return;S.test.untimed=true;save();tShow();};
+// S.hist: one compact entry per finished test, oldest first, capped at 50. A finished test from before history existed is added on first sight.
+function tHist(){if(!Array.isArray(S.hist))S.hist=[];S.hist=S.hist.filter(h=>h&&typeof h==='object'&&isFinite(h.pct)&&isFinite(h.end));const H=S.hist,T=S.test;
+  if(T&&T.done&&T.end&&Array.isArray(T.list)&&!H.some(h=>h.end===T.end)){const ids=T.list.filter(id=>byId[id]);
+    if(ids.length){const ok=(a,id)=>a&&a[id]===byId[id].answer,r=ids.filter(id=>ok(T.answers,id)).length,ar={};
+      ids.forEach(id=>{const x=ar[byId[id].area]=ar[byId[id].area]||[0,0];x[1]++;if(ok(T.answers,id))x[0]++;});
+      const e={end:T.end,n:ids.length,r,pct:Math.round(r/ids.length*100),sec:Math.round((T.used!=null?T.used:T.end-(T.start||T.end))/1e3),ar};
+      if(T.used==null)e.wall=1;if(T.to){e.to=1;e.tor=ids.filter(id=>ok(T.to.a,id)).length;}
+      H.push(e);H.sort((x,y)=>x.end-y.end);if(H.length>50)H.splice(0,H.length-50);save();}}
+  return H;}
+function histAdd(){tFold();tRun=0;tHist();}
+const tDay=t=>new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric',...(new Date(t).getFullYear()!==new Date().getFullYear()?{year:'numeric'}:{})});
+const tDur=s=>s<60?'<1 min':s<3600?Math.round(s/60)+' min':`${Math.floor(s/3600)} h ${String(Math.floor(s/60)%60).padStart(2,'0')} min`;
+function tSum(H){if(!H.length)return '';const n=H.length,avg=Math.round(H.reduce((a,h)=>a+h.pct,0)/n),best=Math.max(...H.map(h=>h.pct));let st=0;for(let i=n-1;i>=0&&H[i].pct>=70;i--)st++;
+  return `${n} test${n===1?'':'s'} so far${n>1?` · average ${avg}% · best ${best}%`:''}${st>1?` · ${st} passes in a row`:''}.`;}
+function tHistHTML(H,cur){if(!H.length)return '';const L=H.slice(-20);
+  const chart=H.length<2?`<p class="small">Your first recorded test. Every test you finish is added here, so you can see your scores change over time.</p>`:
+   `<div class="tqtr" role="img" aria-label="Scores of your last ${L.length} tests, oldest first: ${L.map(h=>h.pct+'%').join(', ')}. The line marks the 70% passing score.">${L.map(h=>`<i class="${h.pct>=70?'g':''}" style="height:${Math.max(3,h.pct)}%" title="${tDay(h.end)}: ${h.pct}%"></i>`).join('')}<s></s><b>70%</b></div><p class="tqcap">Your last ${L.length} tests, oldest to newest. The line is the 70% passing score.</p>`;
+  const row=h=>`<li${h.end===cur?' class="tqcur"':''}><span>${tDay(h.end)}${h.end===cur?'<small>this test</small>':''}${h.to?`<small>time ran out at ${Math.round(h.tor/h.n*100)}%</small>`:''}</span><span>${h.pct}%</span><span class="${h.pct>=70?'pass':'fail'}">${h.pct>=70?ICON.check+'Pass':ICON.x+'Not yet'}</span><span${h.wall?' title="Clock time: this test was taken before the clock counted active time only"':''}>${tDur(h.sec)}</span></li>`;
+  const R=H.slice().reverse();
+  return `<div class="tqh"><h3>Your practice tests</h3><p class="small">${tSum(H)} Scores from this device only; they show your practice, not a prediction of the real test.</p>${chart}<ol class="tqlist">${R.slice(0,8).map(row).join('')}</ol>${R.length>8?`<details><summary>Show all ${R.length}</summary><ol class="tqlist">${R.slice(8).map(row).join('')}</ol></details>`:''}</div>`;}
+function tStart(){const held=testHeld(),nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(100,nt),T=S.test,c=$('tsClock'),h=$('tsHist');c.hidden=held;
+  c.textContent=`You have ${tLimTxt(n)} for ${n} questions, 1.8 minutes each, like the real test. The clock counts only while the test is open on screen: it pauses when you leave the test, close the app or lock your phone.${T&&!T.done&&Array.isArray(T.list)?` Your test in progress has ${T.to?'run out of time':hms(Math.max(0,Math.ceil((tLim(T)-tUsed(T))/1e3)))+' left'}.`:''}`;
+  const H=held?[]:tHist(),l=H[H.length-1];h.hidden=!l;
+  if(l)h.innerHTML=`Last test: <b>${l.pct}%</b> on ${tDay(l.end)} (${l.pct>=70?'pass':'not yet'}). ${tSum(H)}`;}
 
 $('mLearn').onclick=()=>goLearn(LV.v==='home'?'home':LV.v==='plan'?'plan':'home');
 $('mStudy').onclick=()=>{mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=studyAt();renderAll();};
@@ -731,7 +817,7 @@ $('tsGo').onclick=()=>{if(testHeld())return;S.test={list:buildTest(),answers:{},
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
 $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
   if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
-  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();S.test.list.forEach(id=>{if(S.test.answers[id]!==byId[id]?.answer)sched(id,false);});save();mode='results';renderAll();window.scrollTo(0,0);};
+  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>{if(S.test.answers[id]!==byId[id]?.answer)sched(id,false);});save();mode='results';renderAll();window.scrollTo(0,0);};
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));navCenter();};
@@ -1184,6 +1270,7 @@ function readProgress(o){const ob=x=>x&&typeof x==='object'&&!Array.isArray(x),d
   if(!ob(d)||!ob(d.study)||!ob(d.flags))return null;
   if(!Object.values(d.study).every(v=>Number.isInteger(v)))return null;
   if(d.test!=null&&!(ob(d.test)&&Array.isArray(d.test.list)&&ob(d.test.answers)))return null;
+  if(d.hist!=null&&!Array.isArray(d.hist))return null;
   if(['review','lessons','hubs','grade'].some(k=>d[k]!=null&&!ob(d[k])))return null;return d;}
 let IMP=null;
 const pgxIdle=()=>{IMP=null;$('pgxGo').hidden=$('pgxCancel').hidden=true;$('pgxFile').value='';};
@@ -1192,7 +1279,7 @@ $('pgxImport').onclick=()=>{pgxIdle();$('pgxMsg').textContent='';$('pgxFile').cl
 $('pgxFile').onchange=async()=>{const f=$('pgxFile').files[0],msg=$('pgxMsg');if(!f)return;let d=null;
   try{d=readProgress(JSON.parse(await f.text()));}catch(e){}
   if(!d){pgxIdle();msg.textContent='That file is not a Balloon Written Prep progress file, so nothing was changed.';return;}
-  IMP=d;const n=Object.keys(d.study).length,fl=Object.keys(d.flags).length,t=d.test?(d.test.done?', a finished practice test':', a practice test in progress'):'';
+  IMP=d;const n=Object.keys(d.study).length,fl=Object.keys(d.flags).length,t=(d.test?(d.test.done?', a finished practice test':', a practice test in progress'):'')+(d.hist&&d.hist.length?`, ${d.hist.length} past test score${d.hist.length===1?'':'s'}`:'');
   msg.textContent=`This file has ${n} answer${n===1?'':'s'}, ${fl} flag${fl===1?'':'s'}${t}. Using it replaces the progress on this device.`;$('pgxGo').hidden=$('pgxCancel').hidden=false;$('pgxGo').focus();};
 $('pgxCancel').onclick=()=>{pgxIdle();$('pgxMsg').textContent='Nothing was changed.';};
 $('pgxGo').onclick=()=>{if(!IMP)return;S=Object.assign({study:{},flags:{},test:null,grade:{}},IMP);
