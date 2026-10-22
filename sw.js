@@ -59,7 +59,7 @@ async function cacheFirst(req) {
 }
 
 function networkFirst(e, req) {
-  const key = keyOf(req.url);
+  const key = keyOf(req.url), url = new URL(key);
   // A byte-range request (a PDF viewer can send one) cannot be stored; ask for the whole file instead.
   const ranged = req.headers.has('range');
   const net = (req.mode === 'navigate' || ranged ? fetch(key, { cache: 'no-cache', credentials: 'same-origin' }) : fetch(req, { cache: 'no-cache' }))
@@ -82,7 +82,35 @@ function networkFirst(e, req) {
     net.then(r => { clearTimeout(t); finish(r); }, async () => {
       clearTimeout(t);
       const hit = await fallback();
-      if (hit) finish(hit); else if (!done) { done = true; resolve(Response.error()); }
+      if (hit) finish(hit); else if (!done) { done = true; resolve(/\.pdf$/i.test(url.pathname) ? pdfOffline(url) : Response.error()); }
     });
   });
+}
+
+// A card's PDF is not precached (1.8 MB), so one never opened online cannot open offline.
+// Instead of the browser's offline error page, say so plainly in the app's style and link back to the card in the app.
+function pdfOffline(url) {
+  const id = url.pathname.split('/').pop().replace(/\.pdf$/i, '').replace(/[^a-z0-9-]/gi, '');
+  const back = ROOT + (id && id !== 'all' ? '#ref=' + id : '#ref');
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Card needs a connection · Balloon Written Prep</title><meta name="color-scheme" content="light dark">
+<style>
+@font-face{font-family:"Atkinson Hyperlegible";font-weight:400;font-display:swap;src:url(${ROOT}fonts/atkinson-hyperlegible-400.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:700;font-display:swap;src:url(${ROOT}fonts/barlow-semi-condensed-700.woff2) format("woff2")}
+:root{--bg:#e9efec;--surface:#fbfcfa;--ink:#14263a;--muted:#566775;--line:#c6d2cd;--chip:#e3ebe7}
+@media (prefers-color-scheme:dark){:root{--bg:#0e161c;--surface:#15212a;--ink:#e4ecf1;--muted:#94a6b3;--line:#2a3b47;--chip:#1d2c36}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;padding:24px 16px}
+main{max-width:520px;margin:8vh auto 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+h1{font:700 1.4rem/1.15 "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;margin:0 0 8px}
+p{margin:0 0 12px}.mut{color:var(--muted);font-size:.92rem}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:7px;border:1px solid var(--line);background:var(--chip);color:var(--ink);text-decoration:none;font:700 .98rem "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;letter-spacing:.02em}
+a.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+</style></head><body><main>
+<h1>This card needs a connection the first time</h1>
+<p>The printable copy of this card has not been saved on this device yet, and you are offline right now.</p>
+<p class="mut">Open it once while you are online and it will open offline after that. You can still read every card in the app.</p>
+<div class="row"><a class="primary" href="${back}">Read it in the app</a><a href="${url.href}">Try again</a></div>
+</main></body></html>`;
+  return new Response(html, { status: 503, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
 }

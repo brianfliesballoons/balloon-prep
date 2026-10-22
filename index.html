@@ -98,13 +98,16 @@ body.nofig .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 .chip.shufchip{display:inline-flex;align-items:center;gap:5px}
 .chip.shufchip svg{width:14px;height:14px;flex:none}
 .chip.shufchip[aria-pressed="true"]{background:var(--user);border-color:var(--user);color:var(--surface)}
-/* phones (and landscape phones): one sideways-scrolling row of filter chips, and 44 px study controls */
-@media (max-width:640px),(max-height:500px){
+/* phones (and landscape phones), and touch tablets in the one-column layout: one sideways-scrolling row of filter chips,
+   so the 44 px chips do not push the chart off the first screen */
+@media (max-width:640px),(max-height:500px),(pointer:coarse) and (max-width:860px){
   #filters{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:16px;margin-inline:-16px;padding:2px 16px;scrollbar-width:none;overscroll-behavior-x:contain}
   #filters::-webkit-scrollbar{display:none}
-  #filters .chip{flex:none;scroll-snap-align:start;min-height:44px;white-space:nowrap}
-  header .mode,.navbtn,.flagbtn{min-height:44px}
-  .nq{min-height:44px}
+  #filters .chip{flex:none;scroll-snap-align:start;white-space:nowrap}
+}
+/* phones and touch screens of any size (tablets too): every primary control at least 44 px tall; mouse layouts keep their size */
+@media (max-width:640px),(max-height:500px),(pointer:coarse){
+  .btn,.mode,.chip,.navbtn,.flagbtn,.nq{min-height:44px}
 }
 .qtext{margin:10px 0 12px;font-size:1.06rem;white-space:pre-line}
 .qref{font-family:var(--f-display);font-weight:600;color:var(--muted);font-size:.9rem;letter-spacing:.02em}
@@ -375,13 +378,15 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .ntcs{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 16px calc(12px + env(safe-area-inset-bottom));pointer-events:none}
 .ntc{pointer-events:auto;box-sizing:border-box;width:100%;max-width:640px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--hl);border-radius:10px;padding:8px 10px 8px 12px;box-shadow:0 4px 18px rgba(0,0,0,.22);font-size:.92rem;line-height:1.35}
 .ntc[hidden]{display:none}
+/* while a notice shows, the page gets that much more room at the bottom so its last controls can scroll clear of it (--ntch is set by script) */
+body{padding-bottom:calc(32px + var(--ntch,0px))}
 .ntc>span{flex:1 1 220px}
 .ntc .btn,.pgx .btn{min-height:44px}
 .pgx{max-width:80ch;color:var(--muted);font-size:.88rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .pgx>p{margin:0;flex:1 1 100%}
 .pgx b{color:var(--ink)}
 .pgx [hidden]{display:none}
-@media print{.ntcs,.pgx{display:none!important}}
+@media print{.ntcs,.pgx{display:none!important}html{--ntch:0px!important}}
 @media print{
   @page{size:letter;margin:.38in}
   html.printing,html.printing body,html.printing .wrap{background:#fff!important}
@@ -443,8 +448,8 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
   <section class="card results" id="testStart" hidden>
     <h2>Commercial balloon practice test</h2>
     <p id="tsText" style="margin:0 0 6px"></p>
-    <p class="small">No answers are shown until you finish. Flag anything you want to come back to, and use the question grid to jump around. Your progress is saved on this device.</p>
-    <div class="row-btns"><button class="btn primary" id="tsGo">Start test</button><button class="btn" id="tsResume" hidden>Resume test in progress</button></div>
+    <p class="small" id="tsNote">No answers are shown until you finish. Flag anything you want to come back to, and use the question grid to jump around. Your progress is saved on this device.</p>
+    <div class="row-btns"><button class="btn primary" id="tsGo">Start test</button><button class="btn" id="tsResume" hidden>Resume test in progress</button><button class="btn primary" id="tsReload" hidden>Reload</button></div>
   </section>
 
   <section class="card results" id="results" hidden></section>
@@ -561,6 +566,7 @@ S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||nul
 // A saved test whose questions are missing because a question file failed to load is held aside unchanged (HELD), and still saved and exported as it was.
 const HELD={for:null,test:null};
 const saveData=()=>HELD.for===S&&!S.test?Object.assign({},S,{test:HELD.test}):S;
+const testHeld=()=>HELD.for===S&&!S.test&&!!HELD.test;  // while held, the Practice test tab must not start a new test over it
 function save(){try{localStorage.setItem(KEY,JSON.stringify(saveData()));return true;}catch(e){const n=document.getElementById('ntSave');if(n)n.hidden=false;return false;}}
 
 // ---------- view state ----------
@@ -699,7 +705,8 @@ function renderAll(){
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
   $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||!list.length;
-  if(mode==='teststart'){const nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(100,nt);$('tsText').textContent=`${n} questions drawn from the ${nt} test-style questions in the bank (bonus and field questions stay in Study), spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;$('tsResume').hidden=!(S.test&&!S.test.done);}
+  if(mode==='teststart'){const nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(100,nt),held=testHeld();$('tsText').textContent=held?`Your saved practice test ${HELD.test.done?'and its results need':'needs'} the rest of the questions, and some did not load this time. It is kept exactly as you left it. Reload to try again.`:`${n} questions drawn from the ${nt} test-style questions in the bank (bonus and field questions stay in Study), spread across every knowledge area the FAA lists for the commercial balloon test. Like the real test, you need 70% to pass.`;
+    $('tsResume').hidden=!(S.test&&!S.test.done);$('tsGo').hidden=$('tsNote').hidden=held;$('tsReload').hidden=!held;}
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
@@ -719,7 +726,8 @@ function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=i
 $('mLearn').onclick=()=>goLearn(LV.v==='home'?'home':LV.v==='plan'?'plan':'home');
 $('mStudy').onclick=()=>{mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=studyAt();renderAll();};
 $('mTest').onclick=()=>{if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';renderAll();};
-$('tsGo').onclick=()=>{S.test={list:buildTest(),answers:{},start:Date.now(),pos:0,done:false};save();mode='test';list=S.test.list;pos=0;renderAll();};
+$('tsReload').onclick=()=>location.reload();
+$('tsGo').onclick=()=>{if(testHeld())return;S.test={list:buildTest(),answers:{},start:Date.now(),pos:0,done:false};save();mode='test';list=S.test.list;pos=0;renderAll();};
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
 $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
   if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
@@ -1193,6 +1201,7 @@ $('pgxGo').onclick=()=>{if(!IMP)return;S=Object.assign({study:{},flags:{},test:n
   $('pgxMsg').textContent=ok?'Progress imported.':'Progress loaded for now, but it could not be saved on this device.';};
 $('ntcs').addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;if(t.dataset.ntx)$(t.dataset.ntx).hidden=true;else if(t.dataset.ntexport){exportProgress();$('ntSave').hidden=true;}});
 $('ntReload').onclick=()=>location.reload();
+{const n=$('ntcs'),fit=()=>document.documentElement.style.setProperty('--ntch',[...n.children].some(c=>!c.hidden)?n.offsetHeight+'px':'0px');new ResizeObserver(fit).observe(n);fit();}
 
 // ---------- quick reference (cards 1 and 5 are built here; the rest come from refs/cards.json) ----------
 let REFS=null,RV={v:'home'};
@@ -1249,7 +1258,7 @@ const REFIMG=['refs/img/sectional-legend-8080-1E.png','refs/img/phak-fig15-1-air
 function renderRef(){const el=$('ref');if(!refPre)refPre=REFIMG.map(u=>{const i=new Image();i.src=u;return i;});
   if(REFS===null){REFS=[];getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];if(mode==='ref')renderRef();});}
   const cards=allCards();
-  if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};}else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
+  if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};if(location.hash.startsWith('#ref='))history.replaceState({...viewNow(),prev:(history.state||{}).prev},'','#ref');}/* no such card: the Reference home, under its own address */else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
     else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><a class="btn" href="refs/pdf/${c.id}.pdf" target="_blank" rel="noopener">Print this card</a></div>
 <div><div class="eyebrow">Card ${c.n}</div><h2 tabindex="-1">${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
 <p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);el.querySelector('h2').focus({preventScroll:true});return;}}
