@@ -195,14 +195,16 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .pq{background:var(--chip);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;gap:8px}
 .pq summary{min-height:36px;cursor:pointer;font-weight:700;font-size:.92rem;display:flex;align-items:center}
 .pq>p,.pq .choices,.pq .fb{margin:8px 0 0}
-.pq .choice{cursor:default}
+.pq .choice{cursor:default;flex-wrap:wrap;row-gap:4px}
+.pq .choice>span{flex:1 1 0;min-width:0}
+.pq .choice .tag{white-space:normal;max-width:100%;overflow-wrap:anywhere}
 .pq .btn{margin-top:10px;align-self:flex-start}
 .qmeta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.88rem;color:var(--muted)}
 .qmeta b{color:var(--ink)}
 .qt{font-size:1.12rem}
 .ans{background:var(--good-bg);border-radius:10px;padding:10px 12px}
 .okc{display:flex;align-items:center;gap:4px;font-weight:700;color:var(--good)} .okc svg{width:15px;height:15px}
-.waitc{font-weight:700;color:var(--flag)}
+.waitc{font-weight:700;color:var(--flag-ink)}
 .myq{border-top:1px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
 .seg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .seg2 .mode{min-height:44px}
@@ -323,6 +325,27 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .sched svg{width:18px;height:18px;flex:none;color:var(--flag);margin-top:2px}
 .repl{font-size:.85rem;color:var(--muted)}
 .repl a{color:var(--muted);display:inline-flex;align-items:center;min-height:44px}
+.rpt{font-size:.85rem;color:var(--muted)}
+.rpt>summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;text-decoration:underline;list-style:none}
+.rpt>summary::-webkit-details-marker{display:none}
+.rptf{display:flex;flex-direction:column;gap:10px;padding:4px 0 10px;color:var(--ink)}
+.rkinds{display:flex;flex-wrap:wrap;gap:8px}
+.rkc{font-family:var(--f-display);font-weight:600;font-size:.88rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 13px;cursor:pointer;min-height:44px}
+.rkc[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.rptf .btn{align-self:flex-start;min-height:44px}
+.vmark{display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:.85rem;color:var(--good)} .vmark svg{width:15px;height:15px}
+.seg3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))} .seg3 .mode{min-height:44px}
+.stul{display:flex;flex-direction:column}
+.stul .srm{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;border-top:1px solid var(--line);padding:2px 0}
+.stul .srm:first-child{border-top:0}
+.stul .srm>span{flex:1 1 160px;min-width:0}
+.stul .srm .linkb{margin-left:auto;text-align:right;padding-right:0}
+.stul>p{padding-top:8px}
+.rptb{align-self:flex-start;padding-left:0}
+.clsf{display:flex;flex-direction:column;gap:2px}
+.clsf .acts{display:flex;flex-wrap:wrap;column-gap:18px}
+.clsf .acts .linkb{padding-left:0;text-align:left}
+.rptl{font-family:var(--f-num);font-size:.8rem}
 .done-chip{align-self:flex-start;display:flex;align-items:center;gap:6px;font-weight:700;color:var(--good)}
 .done-chip svg{width:18px;height:18px}
 
@@ -1013,7 +1036,7 @@ function vTopic(t){const T=LES.topics[t],LS=T.lesson,ids=TQ[t]||[],grp=LES.group
   if(checks.length)h+=`<section class="card lc"><div class="eyebrow">${sec('Check yourself')}</div>${checks.map(checkQ).join('<hr>')}</section>`;
   h+=`<section class="card lc"><div class="eyebrow">${sec('Go deeper')}</div><div class="mut sm">Free official sources.</div>${(T.deeper||[]).map(([k,s])=>{const l=LES.links[k];return l?`<a class="deep" href="${esc(l.u)}" target="_blank" rel="noopener"><span class="tagb">${/ecfr/.test(l.u)?'CFR':'FAA'}</span><span><b>${esc(l.t)}</b><br><span class="mut sm">${esc(s)}</span></span>${ICON.ext}</a>`:'';}).join('')}
     ${ids.length?`<button class="deep" data-go="practice:${t}"><span class="tagb">Q</span><span><b>All ${nq(ids.length)} on this topic</b><br><span class="mut sm">Practice in Study mode</span></span>${ICON.next}</button>`:''}</section>`;
-  h+=askCard(t,null)+`<div class="two"><button class="btn big" data-go="home">All topics</button>${nextPlanBtn(t)}</div>`;
+  h+=askCard(t,null)+`<div class="two"><button class="btn big" data-go="home">All topics</button>${nextPlanBtn(t)}</div>`+reportHTML('lesson:'+t,'lesson');
   return h;}
 
 function vBasics(t){const T=LES.topics[t],B=(T.lesson&&T.lesson.basics)||[],at=LV.at||0,alt=LV.alt||{};
@@ -1067,7 +1090,19 @@ $('learn').addEventListener('change',e=>{if(e.target.id==='examDate'){S.exam=e.t
 function qLinks(q,rev){const t=MAP[q.id],T=LES.topics[t];if(!T||GRADE||mode==='test')return '';const wrong=rev&&picked(q.id)!==q.answer;
   let h=`<div class="qlinks"><button class="btn" data-go="topic:${t}">${ICON.book}Learn this: ${esc(T.title)}</button>${wrong&&T.lesson&&T.lesson.basics?`<button class="btn" data-go="basics:${t}">I don't get this at all</button>`:''}<button class="btn" data-go="ask:${q.id}">${ICON.chat}Ask ${S.cls?esc(S.cls.instructor.split(' ')[0]):'your instructor'} about this</button></div>`;
   if(mode==='due'&&rev){const r=S.review[q.id];h+=`<div class="sched">${ICON.review}<span>${!r?'Cleared from your review list.':r.streak===0?'This comes back tomorrow. Get it right on two different days to clear it.':'One more right answer on another day clears it.'}</span></div>`;}
-  return h+`<div class="repl"><a href="https://github.com/brianfliesballoons/balloon-prep/issues/new?title=${encodeURIComponent('Problem with '+q.id)}" target="_blank" rel="noopener">Something wrong with this question? Tell us</a></div>`;}
+  return h+reportHTML('q:'+q.id,'question');}
+// "Something wrong?" form: anonymous, goes to the class server's reports table (the app owner reads them in their hub)
+const RKINDS=[['wrong','Wrong answer'],['confusing','Confusing'],['typo','Typo'],['other','Something else']];
+function reportHTML(ref,what){return `<details class="rpt" data-rpt="${esc(ref)}"><summary>Something wrong with this ${what}? Tell us</summary><div class="rptf">
+  <div class="rkinds" role="group" aria-label="What is wrong">${RKINDS.map(([k,l])=>`<button type="button" class="rkc" data-rk="${k}" aria-pressed="false">${k==='wrong'&&what!=='question'?'Wrong fact':l}</button>`).join('')}</div>
+  <label class="fld">What did you notice? (optional)<textarea rows="2" maxlength="1000"></textarea></label>
+  <button type="button" class="btn primary" data-rsend="1">Send</button><div class="mut sm" role="status"></div></div></details>`;}
+document.addEventListener('click',async e=>{const t=e.target.closest('.rpt [data-rk],.rpt [data-rsend]');if(!t)return;const box=t.closest('.rpt'),m=box.querySelector('[role=status]');
+  if(t.dataset.rk){box.querySelectorAll('[data-rk]').forEach(b=>b.setAttribute('aria-pressed',String(b===t)));m.textContent='';return;}
+  const k=box.querySelector('[data-rk][aria-pressed="true"]');if(!k){m.textContent='Pick what is wrong first.';return;}
+  t.disabled=true;m.textContent='Sending…';
+  try{await api('/reports',{method:'POST',body:{ref:box.dataset.rpt,kind:k.dataset.rk,text:box.querySelector('textarea').value.trim()}});box.querySelector('.rptf').innerHTML='<p class="mut sm" role="status">Thanks. Your report was sent, and every report gets read.</p>';}
+  catch(err){m.textContent=qaMsg(err);t.disabled=false;}});
 $('fb').addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)goLearn(t.dataset.go);});
 
 // ---------- ask your instructor (shared, via the balloon-prep-qa Worker) ----------
@@ -1081,13 +1116,16 @@ const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.rou
 const topicName=t=>LES.topics[t]?LES.topics[t].title:'General';
 let MYQ=null,HUBD={},hubTimer=null;
 const appURL=()=>location.origin+location.pathname;
+const VMARK=`<span class="vmark">${ICON.check}Verified instructor</span>`;
+async function joinPreview(){const el=$('jWho'),c=LV.joinCode;if(!el||!c||c.length!==6)return;
+  try{const d=await api(`/classes/${c}`);if($('jWho')&&LV.joinCode===c)$('jWho').innerHTML=`${esc(d.name)} · ${esc(d.instructor)}${d.verified?' · '+VMARK:''}`;}catch(e){}}
 
 function askCard(t,qid){const C=S.cls;
   if(!C)return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Still stuck? Ask your instructor</b><div class="mut sm">Join your instructor's class once. Your questions go to their hub, and answers come back here.</div></div></div>
-    <div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
+    ${LV.joinCode?'<div class="sm" id="jWho"></div>':''}<div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
     <button class="btn primary big" data-act="join">Join class</button><div class="mut sm" id="jMsg">No code yet? Ask your instructor for their invite link.</div></section>`;
   const q=qid&&byId[qid];
-  return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Ask ${esc(C.instructor)}</b><div class="mut sm">${esc(C.name)} · you're ${esc(C.me)}</div></div></div>
+  return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Ask ${esc(C.instructor)}</b>${C.verified?' '+VMARK:''}<div class="mut sm">${esc(C.name)} · you're ${esc(C.me)}</div></div></div>
     <span class="chipc">About: ${esc(topicName(t))}${q?' · '+esc(qid):''}</span>
     <label class="fld">What's confusing you?<textarea id="askText" rows="3" maxlength="2000" placeholder="Ask in your own words"></textarea></label>
     <button class="btn primary big" data-act="ask" data-topic="${esc(t||'')}" data-qid="${esc(qid||'')}">Send to ${esc(C.instructor.split(' ')[0])}</button>
@@ -1109,16 +1147,35 @@ function vNewClass(){return `<button class="back" data-go="home">${ICON.back}Lea
 function vHub(code){const H=S.hubs[code];
   return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H&&H.name||code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
   <section class="card lc row"><div class="grow"><b>Invite students</b><div class="mut sm">Class code <span class="num" style="color:var(--ink);letter-spacing:.1em">${esc(code)}</span></div></div><button class="btn outline" data-act="copy" data-text="${esc(appURL()+'#join='+code)}">Copy invite link</button></section>
-  <div class="modes seg2" role="group" aria-label="Questions"><button class="mode" data-act="tab" data-tab="wait" aria-pressed="${LV.tab!=='done'}" id="tWait">Waiting</button><button class="mode" data-act="tab" data-tab="done" aria-pressed="${LV.tab==='done'}" id="tDone">Answered</button></div>
+  <div class="modes ${HUBD[code]&&HUBD[code].owner?'seg3':'seg2'}" role="group" aria-label="Questions" id="hubTabs">${hubTabs(code)}</div>
   <div id="hubBody" class="hubq"></div>
+  <details id="hubStu"><summary>Students</summary><div class="stul" id="stuList"></div></details>
   <details><summary>Your private hub link</summary><p class="mut sm" style="padding-bottom:12px">This link opens your hub on any device. Anyone who has it can answer as you, so keep it to yourself.</p><button class="btn" data-act="copy" data-text="${esc(appURL()+'#hub='+code+'.'+(H?H.key:''))}" style="margin-bottom:14px">Copy my hub link</button></details>`;}
+function hubTabs(code){const d=HUBD[code],tab=LV.tab||'wait',b=(k,l,id)=>`<button class="mode" data-act="tab" data-tab="${k}" aria-pressed="${tab===k}" id="${id}">${l}</button>`;
+  return b('wait','Waiting','tWait')+b('done','Answered','tDone')+(d&&d.owner?b('rep','Reports','tRep'):'');}
+let REPS=null;const RKN=Object.fromEntries(RKINDS);
+function repLink(ref){const [k,id]=String(ref).split(/:(.*)/);
+  if(k==='q')return byId[id]?`<button class="linkb sm rptb" data-go="q:${esc(id)}">Open ${esc(id)} in Study</button>`:'';
+  if(k==='lesson')return LES.topics[id]?`<button class="linkb sm rptb" data-go="topic:${esc(id)}">Open the lesson: ${esc(LES.topics[id].title)}</button>`:'';
+  if(k==='card')return `<button class="linkb sm rptb" data-act="openref" data-id="${esc(id)}">Open the reference card</button>`;return '';}
+function paintReports(el){if(!REPS){el.innerHTML='<section class="card lc"><p class="mut">Loading reports…</p></section>';return;}
+  if(REPS.err){el.innerHTML=`<section class="card lc"><p class="mut">${esc(REPS.err)}</p><button class="btn primary big" data-act="repretry">Try again</button></section>`;return;}
+  el.innerHTML=REPS.list.length?REPS.list.map(r=>`<section class="card lc"><div class="qmeta"><span><b>${esc(RKN[r.kind]||r.kind)}</b> · ${ago(r.created)}</span><span class="rptl">${esc(r.ref)}</span></div>${r.text?`<p class="qt">${esc(r.text)}</p>`:'<p class="mut sm">No note.</p>'}${repLink(r.ref)}<button class="btn" data-act="repdone" data-id="${esc(r.id)}">Done, remove it</button><div class="mut sm" id="rm-${esc(r.id)}"></div></section>`).join('')
+    :'<section class="card lc"><p class="mut">No problem reports. New ones show up here when you open this tab.</p></section>';}
+async function loadReports(code){try{const d=await api(`/classes/${code}/reports`,{hub:S.hubs[code].key});if(!Array.isArray(d.reports))throw qaErr(NETERR);REPS={list:d.reports};}catch(e){REPS={err:qaMsg(e)};}
+  if(LV.v==='hub'&&LV.code===code&&LV.tab==='rep'){const el=$('hubBody');if(el)paintReports(el);}}
 function paintHub(code){const d=HUBD[code],el=$('hubBody');if(!el||!d)return;const names=Object.fromEntries(d.students.map(s=>[s.sid,s.name]));
   const wait=d.questions.filter(q=>!q.answered),done=d.questions.filter(q=>q.answered),show=LV.tab==='done'?done:wait;
+  const tb=$('hubTabs');if(tb&&!!d.owner!==!!$('tRep')){tb.className='modes '+(d.owner?'seg3':'seg2');tb.innerHTML=hubTabs(code);}
+  if(LV.tab==='rep'&&!d.owner)LV.tab='wait';
   $('hubSub').textContent=`${d.students.length} student${d.students.length===1?'':'s'} · ${wait.length} waiting`;$('tWait').textContent=`Waiting (${wait.length})`;$('tDone').textContent=`Answered (${done.length})`;
-  const drafts={};el.querySelectorAll('textarea[data-id]').forEach(t=>drafts[t.dataset.id]=t.value);
-  el.innerHTML=show.length?show.map(q=>{const who=esc(names[q.sid]||'A student');
+  const sl=$('stuList');if(sl){const sm=$('hubStu').querySelector('summary');sm.textContent=`Students (${d.students.length})`;
+    sl.innerHTML=d.students.length?d.students.map(s=>`<div class="srm"><span>${esc(s.name)} <span class="mut sm">· joined ${ago(s.created)}</span></span><button class="linkb sm" data-act="rmstu" data-sid="${esc(s.sid)}" data-name="${esc(s.name)}">Remove</button></div>`).join('')+'<p class="mut sm">Removing a student deletes their name and every question they asked. Their device can no longer ask.</p>':'<p class="mut sm">No students yet.</p>';}
+  if(LV.tab==='rep'){paintReports(el);return;}
+  const drafts={};el.querySelectorAll('textarea[data-id]').forEach(t=>drafts[t.dataset.id]={v:t.value,dr:t.dataset.dr==='1'});
+  el.innerHTML=show.length?show.map(q=>{const who=esc(names[q.sid]||'A student'),d0=drafts[q.id],useDr=!!q.draft&&(!d0||(!d0.v&&!d0.dr)),val=useDr?q.draft:d0?d0.v:'',dr=useDr||!!(d0&&d0.dr); // a draft fills an untouched box; one the instructor cleared stays cleared
     return `<section class="card lc"><div class="qmeta"><span><b>${who}</b> · ${ago(q.created)}</span><span>${esc(topicName(q.topic))}</span></div><p class="qt">${esc(q.text)}</p>${practiceQ(q.qid,q.picked,who)}
-    ${q.answered?`<div class="ans"><b>You:</b> ${esc(q.answer)}</div><div class="mut sm">Answered ${ago(q.answered)}</div>`:`<label class="fld">Your answer<textarea rows="3" maxlength="2000" data-id="${esc(q.id)}" placeholder="Answer in your own words">${esc(drafts[q.id]||'')}</textarea></label><button class="btn primary big" data-act="answer" data-id="${esc(q.id)}">Send answer</button><div class="mut sm" id="am-${esc(q.id)}"></div>`}</section>`;}).join('')
+    ${q.answered?`<div class="ans"><b>You:</b> ${esc(q.answer)}</div><div class="mut sm">Answered ${ago(q.answered)}</div>`:`<label class="fld">${q.draft?'Draft by Claude: edit, then send':'Your answer'}<textarea rows="${q.draft?5:3}" maxlength="2000" data-id="${esc(q.id)}" data-dr="${dr?1:0}" placeholder="Answer in your own words">${esc(val)}</textarea></label><button class="btn primary big" data-act="answer" data-id="${esc(q.id)}">Send answer</button><div class="mut sm" id="am-${esc(q.id)}"></div>`}</section>`;}).join('')
     :`<section class="card lc"><p class="mut">${LV.tab==='done'?'No answered questions yet.':d.students.length?'Nothing waiting. New questions show up here on their own.':'No students yet. Send them your invite link.'}</p></section>`;}
 async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await api(`/classes/${code}/hub`,{hub:H.key});if(!d.class||!Array.isArray(d.students)||!Array.isArray(d.questions))throw qaErr(NETERR);HUBD[code]=d;if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);}
   catch(e){const s=$('hubSub'),b=$('hubBody');if(!s||LV.v!=='hub'||LV.code!==code)return;
@@ -1128,20 +1185,22 @@ async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await
 function myQsHTML(){if(!S.cls)return '';if(!MYQ)return `<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">Loading…</p></section>`;
   const qs=MYQ.questions||[],fresh=qs.filter(q=>q.answered&&!q.seen).length;
   return `<section class="card grp" id="myQs"><div class="gh"><h3>Your questions</h3><span class="sm" style="font-weight:700;color:var(--good)">${fresh?fresh+' new answer'+(fresh===1?'':'s'):''}</span></div>${qs.length?qs.slice(0,8).map(q=>`<article class="myq"><div class="qmeta"><span>${esc(topicName(q.topic))}${q.qid?' · '+esc(q.qid):''} · ${ago(q.created)}</span>${q.answered?`<span class="okc">${ICON.check}${!q.seen?'New answer':'Answered'}</span>`:`<span class="waitc">Waiting for ${esc(S.cls.instructor.split(' ')[0])}</span>`}</div><p>${esc(q.text)}</p>${q.answered?`<div class="ans"><b>${esc(S.cls.instructor.split(' ')[0])}:</b> ${esc(q.answer)}</div>`:''}${q.topic&&LES.topics[q.topic]?`<button class="linkb sm" style="align-self:flex-start;padding-left:0" data-go="${q.qid&&byId[q.qid]?'ask:'+esc(q.qid):'topic:'+esc(q.topic)}">${q.qid&&byId[q.qid]?'See the question':'Open the lesson'}</button>`:''}</article>`).join(''):`<p class="mut sm" style="padding:0 14px 14px">Nothing asked yet. Use “Ask ${esc(S.cls.instructor.split(' ')[0])}” on any lesson or question.</p>`}
-  <div class="mut sm" style="padding:8px 14px 12px">${esc(S.cls.name)} · <button class="linkb sm" data-act="leave">Leave class</button></div></section>`;}
-async function loadMine(){if(!S.cls)return;try{const d=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});if(!Array.isArray(d.questions))throw qaErr(NETERR);MYQ=d;const el=$('myQs');if(el)el.outerHTML=myQsHTML();
+  <div class="mut sm" style="padding:8px 14px 12px">${clsFoot()}</div></section>`;}
+function clsFoot(){return `<div class="clsf"><div>${esc(S.cls.name)}${S.cls.verified?' · '+VMARK:''}</div><div class="acts"><button class="linkb sm" data-act="leave">Leave class</button><button class="linkb sm" data-act="leavedel">Leave this class and delete my questions</button></div><span id="ldMsg" role="status"></span></div>`;}
+async function loadMine(){if(!S.cls)return;try{const d=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});if(!Array.isArray(d.questions))throw qaErr(NETERR);MYQ=d;if(d.class&&!!d.class.verified!==!!S.cls.verified){S.cls.verified=d.class.verified?1:0;save();}const el=$('myQs');if(el)el.outerHTML=myQsHTML();
   (MYQ.questions||[]).filter(q=>q.answered&&!q.seen).forEach(q=>api(`/classes/${S.cls.code}/questions/${q.id}/seen`,{method:'POST',stu:S.cls}).catch(()=>{}));}
   catch(e){const el=$('myQs');if(!el||MYQ)return; // keep answers already on screen; a later visit retries
-    el.outerHTML=`<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">${e.qa&&e.message!==NETERR?esc(e.message):'Your questions and answers could not load. Check your connection.'}</p><button class="btn" data-act="mineretry">Try again</button><div class="mut sm">${esc(S.cls.name)} · <button class="linkb sm" data-act="leave">Leave class</button></div></section>`;}}
+    el.outerHTML=`<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">${e.qa&&e.message!==NETERR?esc(e.message):'Your questions and answers could not load. Check your connection.'}</p><button class="btn" data-act="mineretry">Try again</button><div class="mut sm">${clsFoot()}</div></section>`;}}
 function afterLearn(){clearInterval(hubTimer);
   if(LV.v==='hub'){paintHub(LV.code);loadHub(LV.code);hubTimer=setInterval(()=>{if(mode==='learn'&&LV.v==='hub'&&!document.hidden)loadHub(LV.code);},30000);}
-  if(LV.v==='home')loadMine();}
+  if(LV.v==='home')loadMine();
+  if(LV.v==='join'&&!S.cls)joinPreview();}
 
 async function qaAct(t){const a=t.dataset.act,btn=t;
   const busy=f=>async(...x)=>{btn.disabled=true;try{await f(...x);}finally{btn.disabled=false;}};
   if(a==='join')return busy(async()=>{const code=$('jCode').value.trim().toUpperCase(),name=$('jName').value.trim(),m=$('jMsg');
     if(code.length!==6){m.textContent='The class code has 6 letters and numbers.';return;}if(!name){m.textContent='Add your name so your instructor knows who is asking.';$('jName').focus();return;}
-    try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code,name:d.class.name,instructor:d.class.instructor,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
+    try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code,name:d.class.name,instructor:d.class.instructor,verified:d.class.verified?1:0,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
     catch(e){m.textContent=qaMsg(e);}})();
   if(a==='ask')return busy(async()=>{const txt=$('askText').value.trim(),m=$('askMsg');if(!txt){m.textContent='Type your question first.';$('askText').focus();return;}
     const qid=t.dataset.qid||null,p=qid?lastAns(qid):undefined;
@@ -1150,11 +1209,20 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
   if(a==='answer')return busy(async()=>{const id=t.dataset.id,ta=document.querySelector(`textarea[data-id="${CSS.escape(id)}"]`),m=$('am-'+id);if(!ta.value.trim()){m.textContent='Type an answer first.';ta.focus();return;}
     try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=qaMsg(e);}})();
   if(a==='newclass')return busy(async()=>{const nm=$('ncName').value.trim(),m=$('ncMsg');if(!nm){m.textContent='Add your name.';$('ncName').focus();return;}
-    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});if(!d.code||!d.adminKey)throw qaErr(NETERR);S.hubs[d.code]={key:d.adminKey,name:d.name};save();LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
+    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim(),own:Object.entries(S.hubs).map(([code,H])=>({code,key:H.key}))}});if(!d.code||!d.adminKey)throw qaErr(NETERR);S.hubs[d.code]={key:d.adminKey,name:d.name};save();LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
     catch(e){m.textContent=qaMsg(e);}})();
   if(a==='hubretry')return busy(async()=>{$('hubSub').textContent='Loading…';await loadHub(LV.code);})();
   if(a==='mineretry')return busy(async()=>{const el=$('myQs');if(el)el.outerHTML=myQsHTML();await loadMine();})();
-  if(a==='tab'){LV.tab=t.dataset.tab;$('tWait').setAttribute('aria-pressed',String(LV.tab!=='done'));$('tDone').setAttribute('aria-pressed',String(LV.tab==='done'));paintHub(LV.code);return;}
+  if(a==='tab'){LV.tab=t.dataset.tab;document.querySelectorAll('#hubTabs .mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===LV.tab)));if(LV.tab==='rep'){REPS=null;loadReports(LV.code);}paintHub(LV.code);return;}
+  if(a==='repretry'){REPS=null;paintHub(LV.code);return loadReports(LV.code);}
+  if(a==='repdone')return busy(async()=>{const id=t.dataset.id;try{await api(`/classes/${LV.code}/reports/${id}`,{method:'DELETE',hub:S.hubs[LV.code].key});if(REPS&&REPS.list)REPS.list=REPS.list.filter(r=>r.id!==id);paintHub(LV.code);}catch(e){const m=$('rm-'+id);if(m)m.textContent=qaMsg(e);}})();
+  if(a==='openref'){mode='ref';RV={v:'card',id:t.dataset.id};renderAll();return;}
+  if(a==='rmstu'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent=`Tap again to remove ${t.dataset.name} and their questions`;return;}
+    return busy(async()=>{try{await api(`/classes/${LV.code}/students/${t.dataset.sid}`,{method:'DELETE',hub:S.hubs[LV.code].key});await loadHub(LV.code);}catch(e){t.dataset.armed='';t.textContent='Remove';const sm=$('hubSub');if(sm)sm.textContent=qaMsg(e);}})();}
+  if(a==='leavedel'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave and delete every question you asked';return;}
+    return busy(async()=>{const m=$('ldMsg');try{await api(`/classes/${S.cls.code}/students/me`,{method:'DELETE',stu:S.cls});}
+      catch(e){if(!(e.qa&&e.message==='Not in this class')){t.dataset.armed='';t.textContent='Leave this class and delete my questions';if(m)m.textContent=' '+qaMsg(e);return;}} // already removed on the server: just forget it here
+      S.cls=null;MYQ=null;save();renderLearn();})();}
   if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
   if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}S.cls=null;MYQ=null;save();renderLearn();}}
 
@@ -1261,7 +1329,7 @@ function renderRef(){const el=$('ref');if(!refPre)refPre=REFIMG.map(u=>{const i=
   if(RV.v==='card'){const c=cards.find(x=>x.id===RV.id);if(!c){if(REFS.length||RV.tried){RV={v:'home'};if(location.hash.startsWith('#ref='))history.replaceState({...viewNow(),prev:(history.state||{}).prev},'','#ref');}/* no such card: the Reference home, under its own address */else{RV.tried=1;el.innerHTML='<p>Loading…</p>';return;}}
     else{el.innerHTML=`<div class="rtop"><button class="linkb" data-ref="home">‹ Quick reference</button><a class="btn" href="refs/pdf/${c.id}.pdf" target="_blank" rel="noopener">Print this card</a></div>
 <div><div class="eyebrow">Card ${c.n}</div><h2 tabindex="-1">${esc(c.title)}</h2></div><article class="rcard rbody">${cardHTML(c)}</article>
-<p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>`;scrollTo(0,0);el.querySelector('h2').focus({preventScroll:true});return;}}
+<p class="rfoot">${EDITION} · Sources: ${esc(c.sources.join(', '))} · Original card, not an FAA document. Study aid, not for navigation.</p>${reportHTML('card:'+c.id,'card')}`;scrollTo(0,0);el.querySelector('h2').focus({preventScroll:true});return;}}
   el.innerHTML=`<div><h2>Quick reference</h2><p class="mut" style="margin:4px 0 0">Pocket cards built from FAA sources. Read them here, or print them for your oral and your flight bag.</p></div>
 <div class="rcard" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:200px"><b>Print the whole set</b><div class="mut sm">${cards.length} cards, one per Letter page. Opens a PDF: use Share, then Print.</div></div><a class="btn primary" href="refs/pdf/all.pdf" target="_blank" rel="noopener">Print all</a></div>
 ${RGROUPS.filter(([g])=>cards.some(c=>c.group===g)).map(([g,name])=>`<section class="rgrp"><h3>${name}</h3>${cards.filter(c=>c.group===g).map(c=>`<button class="rrow" data-ref="${c.id}"><span class="rn">${c.n}</span><span style="flex:1"><b>${esc(c.title)}</b><small>${esc(c.sub)}</small></span><span aria-hidden="true">›</span></button>`).join('')}</section>`).join('')}
