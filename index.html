@@ -659,7 +659,9 @@ function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)
   window.scrollTo({top:Math.min(window.scrollY,$('main').offsetTop-8),behavior:'auto'});}
 
 function renderAll(){
-  const lrn=mode==='learn'||mode==='due';$('mStudy').setAttribute('aria-pressed',String(mode==='study'));$('mTest').setAttribute('aria-pressed',String(mode!=='study'&&mode!=='ref'&&!lrn));$('mRef').setAttribute('aria-pressed',String(mode==='ref'));
+  // the Ask view reached from Study, Test or Review keeps the tab it came from lit (tm = the mode the tab bar reflects)
+  const tm=mode==='learn'&&LV.v==='ask'&&/^resume:/.test(LV.back||'')?LV.back.slice(7):mode;
+  const lrn=tm==='learn'||tm==='due';$('mStudy').setAttribute('aria-pressed',String(tm==='study'));$('mTest').setAttribute('aria-pressed',String(tm!=='study'&&tm!=='ref'&&!lrn));$('mRef').setAttribute('aria-pressed',String(tm==='ref'));
   $('ref').hidden=mode!=='ref';if(mode==='ref')renderRef();$('mLearn').setAttribute('aria-pressed',String(lrn));
   $('learn').hidden=mode!=='learn';if(mode==='learn')renderLearn();
   renderFilters();
@@ -670,6 +672,7 @@ function renderAll(){
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   clearInterval(tick);if(mode==='test'){const t=()=>{const s=Math.floor((Date.now()-S.test.start)/1000);$('timer').textContent=`${Math.floor(s/3600)}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;};t();tick=setInterval(t,1000);}
+  syncURL();
 }
 function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=ids.filter(id=>T.answers[id]===byId[id]?.answer).length,pct=Math.round(right/ids.length*100),pass=pct>=70;
   const by={};ids.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
@@ -1101,7 +1104,7 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
   if(a==='answer')return busy(async()=>{const id=t.dataset.id,ta=document.querySelector(`textarea[data-id="${CSS.escape(id)}"]`),m=$('am-'+id);if(!ta.value.trim()){m.textContent='Type an answer first.';ta.focus();return;}
     try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=e.message;}})();
   if(a==='newclass')return busy(async()=>{const nm=$('ncName').value.trim(),m=$('ncMsg');if(!nm){m.textContent='Add your name.';$('ncName').focus();return;}
-    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});S.hubs[d.code]={key:d.adminKey,name:d.name};save();history.replaceState(null,'','#hub='+d.code+'.'+d.adminKey);LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
+    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});S.hubs[d.code]={key:d.adminKey,name:d.name};save();LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
     catch(e){m.textContent=e.message;}})();
   if(a==='tab'){LV.tab=t.dataset.tab;$('tWait').setAttribute('aria-pressed',String(LV.tab!=='done'));$('tDone').setAttribute('aria-pressed',String(LV.tab==='done'));paintHub(LV.code);return;}
   if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
@@ -1222,8 +1225,45 @@ function printRef(which){const cards=allCards().filter(c=>which==='all'||c.id===
   if(!/HeadlessChrome/.test(navigator.userAgent))print();}  // headless Chrome renders the PDF itself
 $('ref').addEventListener('click',e=>{const t=e.target.closest('[data-ref],[data-print]');if(!t)return;
   if(t.dataset.print){printRef(t.dataset.print);return;}
-  RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);});
+  RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);syncURL();});
 $('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
+// ---------- history: each view has its own hash, so phone Back steps back through the app and views are linkable ----------
+// #study · #test · #test/review · #review · #learn · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
+// Old links still work: #learn, #ref, #ref=<id>, #print=<id|all> (left untouched for tools/build-ref-pdfs.sh), #grade, #join=CODE, #hub=CODE.KEY (the key is saved, then dropped from the address bar).
+// Each history entry also carries the view it shows (mode, filter, position, list), so Back lands on the same question; a question id never goes in the hash.
+let routing=false,snap=null,viaBack=false;
+const normH=h=>h===''?'#study':h;
+function hashFor(){
+  if(mode==='study')return GRADE?'#grade':'#study';
+  if(mode==='due')return '#review';
+  if(mode==='review')return '#test/review';
+  if(mode==='test'||mode==='teststart'||mode==='results')return '#test';
+  if(mode==='ref')return RV.v==='card'?'#ref='+RV.id:'#ref';
+  const v=LV.v;
+  if(v==='topic')return '#learn/'+encodeURIComponent(LV.t);
+  if(v==='basics')return '#learn/'+encodeURIComponent(LV.t)+'/basics';
+  if(v==='plan'||v==='newclass')return '#learn/'+v;
+  if(v==='ask')return '#ask';
+  if(v==='hub')return '#hub='+LV.code;
+  if(v==='join')return LV.joinCode?'#join='+LV.joinCode:'#join';
+  return '#learn';}
+function viewNow(){return {m:mode,f:filter,p:pos,l:mode==='due'||mode==='review'?list.slice():null,lv:LV,rv:RV,h:hashFor()};}
+function restoreView(s){mode=s.m;filter=s.f||'ALL';LV=s.lv||{v:'home'};RV=s.rv||{v:'home'};
+  // Study lands on its own saved position (S.spos is updated on every question; an entry's position is only as fresh as its last renderAll)
+  if(mode==='study'){if(filter==='UNGRADED'&&!GRADE)filter='ALL';list=studyList();if(!list.length){filter='ALL';list=studyList();}pos=studyAt();}
+  else if(mode==='due'||mode==='review'){list=(s.l||(mode==='due'?dueIds():[])).filter(id=>byId[id]);pos=Math.max(0,Math.min(s.p||0,list.length-1));}
+  if(mode==='review'&&!(S.test&&S.test.done)||mode==='test'||mode==='teststart'||mode==='results')route('#test');}
+// the view as it was just before a tap changes it, so the entry being left keeps the right question
+document.addEventListener('click',e=>{snap=viewNow();viaBack=!!e.target.closest('.back,[data-ref="home"]');},true);
+function syncURL(){const st=history.state||{},hs=location.hash;let h=hashFor();
+  if(hs.startsWith('#print='))h=hs;  // the PDF build loads #print=…; leave its URL alone
+  if(routing){history.replaceState({...viewNow(),prev:st.prev},'',hs===''&&h==='#study'?location.pathname+location.search:h);return;}
+  if(normH(h)===normH(hs)){history.replaceState({...viewNow(),prev:st.prev},'');return;}
+  // an in-app Back button that leads to the previous entry goes back instead of piling up entries
+  if(viaBack&&st.prev!==undefined&&normH(st.prev)===normH(h)){viaBack=false;snap=null;history.back();return;}
+  if(snap)history.replaceState({...snap,prev:st.prev},'');
+  history.pushState({...viewNow(),prev:hs},'',h);snap=null;viaBack=false;}
+addEventListener('popstate',e=>{if(!BANK.length)return;const s=e.state;if(s&&s.m)restoreView(s);else route(location.hash);snap=null;routing=true;renderAll();routing=false;});
 // sticky header: publish its height for the pinned back bars, and compact it on phones after scrolling (with a gap so it doesn't flicker)
 {const hd=document.querySelector('header'),setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');new ResizeObserver(setH).observe(hd);setH();
  addEventListener('scroll',()=>{const c=document.documentElement.classList,y=scrollY;if(y>90&&!c.contains('compact'))c.add('compact');else if(y<20&&c.contains('compact'))c.remove('compact');},{passive:true});}
@@ -1235,14 +1275,25 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
   BANK.forEach(q=>{byId[q.id]=q;const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});
   fixTest();
-  studyResume();const hs=location.hash;
-  if(hs==='#learn')mode='learn';
+  studyResume();const hs=location.hash,st=history.state;
+  // a reload keeps the entry's saved view (the hash it was saved with must still match); a fresh link routes by its hash
+  if(st&&st.m&&st.h&&normH(st.h)===normH(hs))restoreView(st);else route(hs);
+  routing=true;renderAll();routing=false;
+});
+function route(hs){
+  if(hs===''||hs==='#study'||hs==='#grade'){if(mode!=='study'){mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=0;}}
+  else if(hs==='#learn')mode='learn';
+  else if(hs==='#learn/plan'||hs==='#learn/newclass'){mode='learn';LV={v:hs.slice(7)};}
+  else if(hs.startsWith('#learn/')){const [t,b]=decodeURIComponent(hs.slice(7)).split('/');mode='learn';LV=b==='basics'?{v:'basics',t,at:0,alt:{}}:{v:'topic',t,checks:pickChecks(t)};}
+  else if(hs==='#ask'||hs==='#join'){mode='learn';LV={v:hs==='#join'?'join':'home'};}
+  else if(hs==='#review'){Object.keys(dueAns).forEach(i=>delete dueAns[i]);mode='due';list=dueIds();pos=0;}
+  else if(hs==='#test'||hs==='#test/review'){if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';}
   else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
   else if(hs.startsWith('#print=')){mode='ref';const w=hs.slice(7);const go=()=>printRef(w);REFS===null&&w!=='airspace'&&w!=='legend'?getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];go();}):setTimeout(go,0);}
   else if(hs.startsWith('#join=')){mode='learn';LV={v:'join'};LV.joinCode=hs.slice(6,12).toUpperCase();}
-  else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
-  renderAll();
-});
+  else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}
+    else if(c&&S.hubs[c.toUpperCase()]){mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
+}
 })();
 </script>
 </body>
