@@ -348,6 +348,17 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 .legimg{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
 .rfoot{font-size:.8rem;color:var(--muted)}
 #refPrint{display:none}
+/* saved-progress notices (fixed, bottom) and the export/import line under the footer. Scoped names: .ntcs .ntc .pgx */
+.ntcs{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 16px calc(12px + env(safe-area-inset-bottom));pointer-events:none}
+.ntc{pointer-events:auto;box-sizing:border-box;width:100%;max-width:640px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--hl);border-radius:10px;padding:8px 10px 8px 12px;box-shadow:0 4px 18px rgba(0,0,0,.22);font-size:.92rem;line-height:1.35}
+.ntc[hidden]{display:none}
+.ntc>span{flex:1 1 220px}
+.ntc .btn,.pgx .btn{min-height:44px}
+.pgx{max-width:80ch;color:var(--muted);font-size:.88rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pgx>p{margin:0;flex:1 1 100%}
+.pgx b{color:var(--ink)}
+.pgx [hidden]{display:none}
+@media print{.ntcs,.pgx{display:none!important}}
 @media print{
   @page{size:letter;margin:.38in}
   html.printing,html.printing body,html.printing .wrap{background:#fff!important}
@@ -484,6 +495,20 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
   </div>
 
   <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is redrawn from the standard-atmosphere rule of thumb (about 120 ft for every °C above standard temperature), so it reads close to FAA Figure 8 but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
+  <div class="pgx" id="pgx">
+    <p><b>Your progress</b> is saved only in this browser on this device. Export a copy now and then, so you can move it to another phone or get it back if the browser clears it.</p>
+    <button class="btn" id="pgxExport">Export my progress</button>
+    <button class="btn" id="pgxImport">Import progress</button>
+    <input type="file" id="pgxFile" accept=".json,application/json" hidden>
+    <button class="btn primary" id="pgxGo" hidden>Replace my progress with this file</button>
+    <button class="btn" id="pgxCancel" hidden>Cancel</button>
+    <p id="pgxMsg" role="status" aria-live="polite"></p>
+  </div>
+  <div class="ntcs" id="ntcs">
+    <div class="ntc" id="ntLoad" role="alert" hidden><span>Some content did not load. Reload to try again.</span><button class="btn primary" id="ntReload">Reload</button><button class="btn" data-ntx="ntLoad">Dismiss</button></div>
+    <div class="ntc" id="ntSave" role="alert" hidden><span>Your progress could not be saved on this device. The browser may be in private mode or out of storage. Export a copy to keep what you have.</span><button class="btn" data-ntexport="1">Export my progress</button><button class="btn" data-ntx="ntSave">Dismiss</button></div>
+    <div class="ntc" id="ntTest" role="status" hidden><span id="ntTestT"></span><button class="btn" data-ntx="ntTest">OK</button></div>
+  </div>
 </div>
 
 <script>
@@ -508,7 +533,10 @@ const KEY='bwp-v1';
 let S={study:{},flags:{},test:null,grade:{}};
 try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw));}catch(e){}
 S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||null;delete S.instructor;
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+// A saved test whose questions are missing because a question file failed to load is held aside unchanged (HELD), and still saved and exported as it was.
+const HELD={for:null,test:null};
+const saveData=()=>HELD.for===S&&!S.test?Object.assign({},S,{test:HELD.test}):S;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(saveData()));return true;}catch(e){const n=document.getElementById('ntSave');if(n)n.hidden=false;return false;}}
 
 // ---------- view state ----------
 let mode='study',filter='ALL',list=[],pos=0,tick=null;
@@ -1086,7 +1114,42 @@ new MutationObserver(()=>{readColors();req();}).observe(document.documentElement
 new ResizeObserver(resize).observe(cv);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(req);
 setTool('move');
-const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+const LOADFAIL=new Set();
+const getJ=f=>fetch(f,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null).then(x=>{if(x===null){LOADFAIL.add(f);$('ntLoad').hidden=false;}return x;});
+
+// ---------- saved test vs. the bank, and export / import of progress ----------
+function fixTest(){const T=S.test;if(!T||!Array.isArray(T.list))return;const gone=T.list.filter(id=>!byId[id]);if(!gone.length)return;
+  if([...LOADFAIL].some(f=>f.startsWith('questions/'))){HELD.for=S;HELD.test=T;S.test=null;return;}  // a file failed, so the questions are not retired: leave the saved test exactly as it is
+  const p=T.pos||0;T.pos=Math.max(0,Math.min(p-T.list.slice(0,p).filter(id=>!byId[id]).length,T.list.length-gone.length-1));
+  T.list=T.list.filter(id=>byId[id]);if(T.answers)gone.forEach(id=>delete T.answers[id]);if(!T.list.length)S.test=null;save();
+  const n=gone.length;$('ntTestT').textContent=`${n} question${n===1?'':'s'} in your saved test ${n===1?'was':'were'} retired from the bank and taken out of it.`;$('ntTest').hidden=false;}
+const PGX_APP='balloon-written-prep';
+function exportProgress(){const d=new Date(),day=new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,10),name=`balloon-prep-progress-${day}.json`;
+  const body=JSON.stringify({app:PGX_APP,key:KEY,exported:d.toISOString(),data:saveData()});const msg=$('pgxMsg');
+  try{if(navigator.canShare&&matchMedia('(pointer: coarse)').matches){const f=new File([body],name,{type:'application/json'});if(navigator.canShare({files:[f]})){navigator.share({files:[f],title:name}).then(()=>{msg.textContent='Progress exported. Keep the file somewhere safe, like Files or iCloud Drive.';},()=>{});return;}}}catch(e){}
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([body],{type:'application/json'}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},60000);
+  msg.textContent=`Progress exported as ${name}. Keep it somewhere safe.`;}
+function readProgress(o){const ob=x=>x&&typeof x==='object'&&!Array.isArray(x),d=ob(o)&&o.app===PGX_APP?o.data:o;
+  if(!ob(d)||!ob(d.study)||!ob(d.flags))return null;
+  if(!Object.values(d.study).every(v=>Number.isInteger(v)))return null;
+  if(d.test!=null&&!(ob(d.test)&&Array.isArray(d.test.list)&&ob(d.test.answers)))return null;
+  if(['review','lessons','hubs','grade'].some(k=>d[k]!=null&&!ob(d[k])))return null;return d;}
+let IMP=null;
+const pgxIdle=()=>{IMP=null;$('pgxGo').hidden=$('pgxCancel').hidden=true;$('pgxFile').value='';};
+$('pgxExport').onclick=exportProgress;
+$('pgxImport').onclick=()=>{pgxIdle();$('pgxMsg').textContent='';$('pgxFile').click();};
+$('pgxFile').onchange=async()=>{const f=$('pgxFile').files[0],msg=$('pgxMsg');if(!f)return;let d=null;
+  try{d=readProgress(JSON.parse(await f.text()));}catch(e){}
+  if(!d){pgxIdle();msg.textContent='That file is not a Balloon Written Prep progress file, so nothing was changed.';return;}
+  IMP=d;const n=Object.keys(d.study).length,fl=Object.keys(d.flags).length,t=d.test?(d.test.done?', a finished practice test':', a practice test in progress'):'';
+  msg.textContent=`This file has ${n} answer${n===1?'':'s'}, ${fl} flag${fl===1?'':'s'}${t}. Using it replaces the progress on this device.`;$('pgxGo').hidden=$('pgxCancel').hidden=false;$('pgxGo').focus();};
+$('pgxCancel').onclick=()=>{pgxIdle();$('pgxMsg').textContent='Nothing was changed.';};
+$('pgxGo').onclick=()=>{if(!IMP)return;S=Object.assign({study:{},flags:{},test:null,grade:{}},IMP);
+  S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||null;delete S.instructor;
+  pgxIdle();fixTest();const ok=save();mode='study';studyResume();renderAll();
+  $('pgxMsg').textContent=ok?'Progress imported.':'Progress loaded for now, but it could not be saved on this device.';};
+$('ntcs').addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;if(t.dataset.ntx)$(t.dataset.ntx).hidden=true;else if(t.dataset.ntexport){exportProgress();$('ntSave').hidden=true;}});
+$('ntReload').onclick=()=>location.reload();
 
 // ---------- quick reference (cards 1 and 5 are built here; the rest come from refs/cards.json) ----------
 let REFS=null,RV={v:'home'};
@@ -1171,7 +1234,7 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   BANK=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
   BANK.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
   BANK.forEach(q=>{byId[q.id]=q;const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});
-  if(S.test&&S.test.list.some(id=>!byId[id]))S.test=null;
+  fixTest();
   studyResume();const hs=location.hash;
   if(hs==='#learn')mode='learn';
   else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
