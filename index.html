@@ -1193,7 +1193,7 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
     catch(e){m.textContent=qaMsg(e);}})();
   if(a==='ask')return busy(async()=>{const txt=$('askText').value.trim(),m=$('askMsg');if(!txt){m.textContent='Type your question first.';$('askText').focus();return;}
     const qid=t.dataset.qid||null,p=qid?lastAns(qid):undefined;
-    try{await api(`/classes/${S.cls.code}/questions`,{method:'POST',stu:S.cls,body:{topic:t.dataset.topic||MAP[qid]||null,qid,picked:p===undefined?null:p,text:txt}});$('askText').value='';m.textContent=`Sent. ${S.cls.instructor.split(' ')[0]}'s answer will show under Your questions on the Learn page.`;MYQ=null;const b=document.querySelector('#askCard [data-pnask]');if(b){b.hidden=false;pnPaint();}}
+    try{await api(`/classes/${S.cls.code}/questions`,{method:'POST',stu:S.cls,body:{topic:t.dataset.topic||MAP[qid]||null,qid,picked:p===undefined?null:p,text:txt}});$('askText').value='';m.textContent=`Sent. ${S.cls.instructor.split(' ')[0]}'s answer will show under Your questions on the Learn page.`;MYQ=null;const b=document.querySelector('#askCard [data-pnask]');if(b){b.hidden=false;PN.msg='';pnPaint();}}
     catch(e){m.textContent=qaMsg(e);}})();
   if(a==='answer')return busy(async()=>{const id=t.dataset.id,ta=document.querySelector(`textarea[data-id="${CSS.escape(id)}"]`),m=$('am-'+id);if(!ta.value.trim()){m.textContent='Type an answer first.';ta.focus();return;}
     try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=qaMsg(e);}})();
