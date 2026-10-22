@@ -125,7 +125,8 @@
   "verdict": "unsourced",
   "old": "The 120 ft per °C step is an approximation.",
   "new": "The 120 ft per °C step is a common rule of thumb, an approximation.",
-  "source": "No FAA source found that states it. Searched FAA-H-8083-25C, FAA-H-8083-28B (incl. Appendix C, which uses a chart only), FAA-H-8083-11B, and FAA-P-8740-02 'Density Altitude' (faasafety.gov copy). P-8740-02's 'Density Altitude Rule-of-Thumb Chart' is in °F and implies roughly 103-115 ft per °C, so 120 slightly overstates it. Kept labelled as a rule of thumb; the card's own AWH comparison (13,000 vs 12,700 ft) shows the size of the error. No citation added."
+  "source": "No FAA source found that states it. Searched FAA-H-8083-25C, FAA-H-8083-28B (incl. Appendix C, which uses a chart only), FAA-H-8083-11B, and FAA-P-8740-02 'Density Altitude' (faasafety.gov copy). P-8740-02's 'Density Altitude Rule-of-Thumb Chart' is in °F and implies roughly 103-115 ft per °C, so 120 slightly overstates it. Kept labelled as a rule of thumb; the card's own AWH comparison (13,000 vs 12,700 ft) shows the size of the error. No citation added.",
+  "resolved": "2026-10-21: removed on Brian's ruling (no FAA source). See refs/verify-cards-2.json, card da."
  },
  {
   "card": "da",
@@ -133,7 +134,8 @@
   "verdict": "confirmed",
   "old": "",
   "new": "",
-  "source": "FAA-H-8083-25C Ch. 4; FAA-H-8083-28B 8.4.1.5; FAA-H-8083-11B Ch. 2 and Ch. 3 (Fig. 3-13)."
+  "source": "FAA-H-8083-25C Ch. 4; FAA-H-8083-28B 8.4.1.5; FAA-H-8083-11B Ch. 2 and Ch. 3 (Fig. 3-13).",
+  "resolved": "2026-10-21: removed on Brian's ruling (no FAA source). See refs/verify-cards-2.json, card da."
  },
  {
   "card": "radio",

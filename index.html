@@ -584,7 +584,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
     </section>
   </div>
 
-  <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is redrawn from the standard-atmosphere rule of thumb (about 120 ft for every °C above standard temperature), so it reads close to FAA Figure 8 but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
+  <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
   <div class="pgx" id="pgx">
     <p><b>Your progress</b> is saved only in this browser on this device. Export a copy now and then, so you can move it to another phone or get it back if the browser clears it.</p>
     <button class="btn" id="pgxExport">Export my progress</button>
@@ -609,10 +609,10 @@ const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weath
 const AREA=Object.fromEntries(AREAS);
 const BLUEPRINT={REG:18,AIR:14,WXS:12,ADM:10,THY:14,WXT:12,OPS:16,DAC:4};  // FAA publishes no CBH weights; spread across the 61.125(b) areas
 const BUILTIN=[
- {id:'DAC-S01',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) You are planning a launch from a field at 4,500 ft MSL. Altimeter 30.10, temperature 30°C (86°F). What is the approximate density altitude?',choices:['4,300 ft','6,100 ft','7,200 ft'],answer:2,explanation:'Pressure altitude is 4,500 − 165 = 4,335 ft. Going up from 30°C to that line and across gives about 7,200 ft. 4,300 ft is only the pressure altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:4500,alt:30.10,oat:30,difficulty:2,confidence:'high'},
- {id:'DAC-S02',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) Morning launch site near Temecula, elevation 1,200 ft MSL, altimeter 29.80, temperature 35°C (95°F). What is the approximate density altitude?',choices:['1,300 ft','4,000 ft','5,200 ft'],answer:1,explanation:'Pressure altitude is 1,200 + 112 = 1,312 ft. At 35°C that line reads about 4,000 ft. 1,300 ft is the pressure altitude, not the density altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:1200,alt:29.80,oat:35,difficulty:2,confidence:'high'},
- {id:'DAC-S03',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A mountain launch site at 6,000 ft MSL, altimeter 29.50, temperature 20°C (68°F). What is the approximate density altitude?',choices:['8,500 ft','6,400 ft','9,800 ft'],answer:0,explanation:'Pressure altitude is 6,000 + 392 = 6,392 ft. At 20°C that line reads about 8,500 ft. 6,400 ft is the pressure altitude.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:6000,alt:29.50,oat:20,difficulty:2,confidence:'high'},
- {id:'DAC-S04',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A cold winter morning at a site 3,000 ft MSL, altimeter 30.40, temperature −5°C (23°F). What is the approximate density altitude?',choices:['3,600 ft','2,560 ft','800 ft'],answer:2,explanation:'Pressure altitude is 3,000 − 440 = 2,560 ft. It is about 15°C colder than standard, so density altitude drops to about 800 ft, well below the field elevation.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:3000,alt:30.40,oat:-5,difficulty:3,confidence:'high'},
+ {id:'DAC-S01',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) You are planning a launch from a field at 4,500 ft MSL. Altimeter 30.10, temperature 30°C (86°F). What is the approximate density altitude?',choices:['4,300 ft','6,100 ft','7,000 ft'],answer:2,explanation:'Pressure altitude is 4,500 − 165 = 4,335 ft. On the chart, go up from 30°C to the 4,335-foot pressure altitude line, then straight across: about 7,000 ft. Standard temperature at 4,335 ft is about 6°C, so the air is about 24° warmer than standard, which is why the density altitude is above the pressure altitude. 4,300 ft is the pressure altitude alone, with no temperature correction. 6,100 ft uses 15°C as standard instead of the standard temperature at that altitude (about 6°C).',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:4500,alt:30.10,oat:30,difficulty:2,confidence:'high'},
+ {id:'DAC-S02',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) Morning launch site near Temecula, elevation 1,200 ft MSL, altimeter 29.80, temperature 35°C (95°F). What is the approximate density altitude?',choices:['1,300 ft','3,900 ft','5,200 ft'],answer:1,explanation:'Pressure altitude is 1,200 + 112 = 1,312 ft. On the chart, go up from 35°C to the 1,312-foot pressure altitude line, then straight across: about 3,900 ft. Standard temperature at 1,312 ft is about 12°C, so the air is about 23° warmer than standard, which is why the density altitude is above the pressure altitude. 1,300 ft is the pressure altitude alone, with no temperature correction. 5,200 ft treats the whole 35°C as the amount above standard, instead of the 23° difference.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:1200,alt:29.80,oat:35,difficulty:2,confidence:'high'},
+ {id:'DAC-S03',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A mountain launch site at 6,000 ft MSL, altimeter 29.50, temperature 20°C (68°F). What is the approximate density altitude?',choices:['8,400 ft','6,400 ft','7,000 ft'],answer:0,explanation:'Pressure altitude is 6,000 + 392 = 6,392 ft. On the chart, go up from 20°C to the 6,392-foot pressure altitude line, then straight across: about 8,400 ft. Standard temperature at 6,392 ft is about 2°C, so the air is about 18° warmer than standard, which is why the density altitude is above the pressure altitude. 6,400 ft is the pressure altitude alone, with no temperature correction. 7,000 ft uses 15°C as standard instead of the standard temperature at that altitude (about 2°C).',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:6000,alt:29.50,oat:20,difficulty:2,confidence:'high'},
+ {id:'DAC-S04',area:'DAC',topic:'Density altitude',stem:'(Refer to the density altitude chart.) A cold winter morning at a site 3,000 ft MSL, altimeter 30.40, temperature −5°C (23°F). What is the approximate density altitude?',choices:['4,400 ft','2,600 ft','700 ft'],answer:2,explanation:'Pressure altitude is 3,000 − 440 = 2,560 ft. On the chart, go up from −5°C to the 2,560-foot pressure altitude line, then straight across: about 700 ft. Standard temperature at 2,560 ft is about 10°C, so the air is about 15° colder than standard, which is why the density altitude is below the pressure altitude. 4,400 ft puts the correction on the wrong side: the air is colder than standard, so density altitude is below pressure altitude, not above it. 2,600 ft is the pressure altitude alone, with no temperature correction.',ref:'FAA-H-8083-25 Ch. 11 (density altitude)',figure:'density-altitude',elev:3000,alt:30.40,oat:-5,difficulty:3,confidence:'high'},
 ];
 let BANK=[];
 const byId={};
@@ -862,8 +862,13 @@ document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||e.targ
 // ---------- chart (density altitude) ----------
 const TABLE=[[28.0,1824],[28.1,1727],[28.2,1630],[28.3,1533],[28.4,1436],[28.5,1340],[28.6,1244],[28.7,1148],[28.8,1053],[28.9,957],[29.0,863],[29.1,768],[29.2,673],[29.3,579],[29.4,485],[29.5,392],[29.6,298],[29.7,205],[29.8,112],[29.9,20],[29.92,0],[30.0,-73],[30.1,-165],[30.2,-257],[30.3,-348],[30.4,-440],[30.5,-531],[30.6,-622],[30.7,-712],[30.8,-803],[30.9,-893],[31.0,-983]];
 const isa=pa=>15-1.98*pa/1000;
-const DA=(pa,t)=>pa+120*(t-isa(pa));
-const paFrom=(d,t)=>(d-120*t+1800)/1.2376;
+// Standard atmosphere (ISA, as in the FAA's own worked examples: PHAK FAA-H-8083-25C p. 8-7, PA 5,048 ft at 30 °C = DA 7,855 ft).
+// Air density from pressure altitude and OAT (ideal gas), then the altitude where standard-atmosphere density is the same.
+const AK=6.8755856e-6,AN=5.2558797;
+const DA=(pa,t)=>(1-Math.pow(Math.pow(1-AK*pa,AN)*288.15/(t+273.15),1/(AN-1)))/AK;
+const paFrom=(d,t)=>(1-Math.pow(Math.pow(1-AK*d,AN-1)*(t+273.15)/288.15,1/AN))/AK;
+const tFor=(pa,d)=>288.15*Math.pow(1-AK*pa,AN)/Math.pow(1-AK*d,AN-1)-273.15;
+const cTxt=t=>String(t).replace('-','−');
 const toF=c=>c*9/5+32;
 const fmt=n=>Math.round(n).toLocaleString('en-US');
 const r10=n=>Math.round(n/10)*10, r100=n=>Math.round(n/100)*100;
@@ -889,11 +894,11 @@ const MONO=s=>`500 ${s}px "IBM Plex Mono",ui-monospace,monospace`;
 function resize(){const r=cv.getBoundingClientRect();dpr=window.devicePixelRatio||1;W=r.width;H=r.height;if(!W)return;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);draw();}
 let pend=false;function req(){if(!pend){pend=true;requestAnimationFrame(()=>{pend=false;draw();});}}
 function seg(x1,y1,x2,y2){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
-function paLine(pa,color,w,dash){const a=view.x0-5,b=view.x1+5;ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);seg(sx(a),sy(DA(pa,a)),sx(b),sy(DA(pa,b)));ctx.setLineDash([]);}
-function lineLabel(text,yAt,frac,color,font){const m=120,b=yAt(0);const xa=Math.max(view.x0,(view.y0-b)/m),xb=Math.min(view.x1,(view.y1-b)/m);
-  if(!(xb>xa))return;const pA=[sx(xa),sy(yAt(xa))],pB=[sx(xb),sy(yAt(xb))];
+function paLine(pa,color,w,dash){const a=view.x0-5,b=view.x1+5,n=24;ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);ctx.beginPath();for(let i=0;i<=n;i++){const x=a+(b-a)*i/n;i?ctx.lineTo(sx(x),sy(DA(pa,x))):ctx.moveTo(sx(x),sy(DA(pa,x)));}ctx.stroke();ctx.setLineDash([]);}
+function lineLabel(text,pa,frac,color,font){const xa=Math.max(view.x0,tFor(pa,view.y0)),xb=Math.min(view.x1,tFor(pa,view.y1));
+  if(!(xb>xa))return;const pA=[sx(xa),sy(DA(pa,xa))],pB=[sx(xb),sy(DA(pa,xb))];
   if(Math.hypot(pB[0]-pA[0],pB[1]-pA[1])<70)return;
-  const px=pA[0]+(pB[0]-pA[0])*frac,py=pA[1]+(pB[1]-pA[1])*frac,ang=Math.atan2(pB[1]-pA[1],pB[0]-pA[0]);
+  const x=xa+(xb-xa)*frac,e=Math.max(.01,(xb-xa)*.02),px=sx(x),py=sy(DA(pa,x)),ang=Math.atan2(sy(DA(pa,x+e))-sy(DA(pa,x-e)),sx(x+e)-sx(x-e));
   ctx.save();ctx.translate(px,py);ctx.rotate(ang);ctx.font=font;ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.lineWidth=4;ctx.strokeStyle=C.paper;ctx.lineJoin='round';ctx.strokeText(text,0,-1);ctx.fillStyle=color;ctx.fillText(text,0,-1);ctx.restore();}
 function pill(text,x,y,fg,bg,align){ctx.font=MONO(10.5);const w=ctx.measureText(text).width+10,h=16;let left=align==='right'?x-w:align==='center'?x-w/2:x;left=Math.max(2,Math.min(W-w-2,left));
@@ -930,7 +935,7 @@ function draw(){
   if(draft){ctx.globalAlpha=.85;drawMark(draft,C.user,pills);ctx.globalAlpha=1;}
   if(cross){ctx.strokeStyle=C.ink;ctx.lineWidth=1;ctx.setLineDash([4,4]);const X=sx(cross.x),Y=sy(cross.y);seg(M.l,Y,M.l+PW,Y);seg(X,M.t,X,M.t+PH);ctx.setLineDash([]);ctx.fillStyle=C.ink;ctx.beginPath();ctx.arc(X,Y,3.5,0,7);ctx.fill();
     pills.push(()=>{pill(fmt(r10(cross.y))+' ft',M.l+2,Y,C.surface,C.ink,'right');pill(tempTxt(cross.x),X,M.t+PH+12,C.surface,C.ink,'center');});}
-  for(let pa=0;pa<=14000;pa+=1000){const on=hlSet.has(pa);lineLabel(pa?fmt(pa):'Sea level',x=>DA(pa,x),.8,on?C.hl:C.pa,on?FONT(700,14):FONT(600,12.5));}
+  for(let pa=0;pa<=14000;pa+=1000){const on=hlSet.has(pa);lineLabel(pa?fmt(pa):'Sea level',pa,.8,on?C.hl:C.pa,on?FONT(700,14):FONT(600,12.5));}
   {const xa=Math.max(view.x0,isa(Math.min(view.y1,15000))),xb=Math.min(view.x1,isa(Math.max(view.y0,0)));
    if(xb>xa){const A=[sx(xb),sy((15-xb)/1.98*1000)],B=[sx(xa),sy((15-xa)/1.98*1000)];if(Math.hypot(B[0]-A[0],B[1]-A[1])>120){const px=A[0]+(B[0]-A[0])*.35,py=A[1]+(B[1]-A[1])*.35;let ang=Math.atan2(B[1]-A[1],B[0]-A[0]);if(Math.abs(ang)>Math.PI/2)ang+=Math.PI;ctx.save();ctx.translate(px,py);ctx.rotate(ang);ctx.font=FONT(600,12.5);ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineWidth=4;ctx.strokeStyle=C.paper;ctx.strokeText('Standard temperature',0,-9);ctx.fillStyle=C.isa;ctx.fillText('Standard temperature',0,-9);ctx.restore();}}}
   ctx.restore();
@@ -1007,11 +1012,15 @@ function fracWord(f){return f<.2?'just above the lower one':f<.42?'about a third
 function buildSteps(q){const t=+q.oat,alt=+q.alt,f=factor(alt),pa=q.elev+f,d=DA(pa,t),lo=Math.floor(pa/1000)*1000,hi=lo+1000,fr=(pa-lo)/1000;
   const where=fr<.04?`right on the ${fmt(lo)} ft line`:`between the ${lo?fmt(lo)+' ft':'sea level'} and ${fmt(hi)} ft lines, ${fracWord(fr)}`;
   const std=isa(pa),diff=t-std,v={k:'v',x:t,y:d},zoom=box(t,d,16,3800),hl=[lo,hi].filter(x=>x<=14000);
-  return[
-   {text:`Find ${alt.toFixed(2)} in the altimeter table below the chart. Its conversion factor is ${f>=0?'+':'−'}${fmt(Math.abs(f))} ft.`,row:rowOf(alt),hl:[],ov:[],view:{...FULL}},
-   {text:`Pressure altitude = field elevation + factor: ${fmt(q.elev)} ${f>=0?'+':'−'} ${fmt(Math.abs(f))} = ${fmt(pa)} ft. On the chart that is ${where}. The dashed line shows exactly where.`,row:rowOf(alt),hl,ov:[{k:'pa',pa}],view:box(t,d,32,8000)},
-   {text:`Start at ${t}°C (${toF(t).toFixed(0)}°F) on the bottom scale and go straight up until you meet the ${fmt(pa)} ft line.`,row:null,hl,ov:[{k:'pa',pa},v],view:zoom},
-   {text:`From that point go straight left to the density altitude scale: about ${fmt(r100(d))} ft, answer ${L[q.answer]}. Check: standard temperature at ${fmt(pa)} ft is about ${std.toFixed(0)}°C, so it is ${Math.abs(diff).toFixed(0)}° ${diff>=0?'warmer':'colder'} than standard. At 120 ft per degree that ${diff>=0?'adds':'takes off'} about ${fmt(r100(Math.abs(diff*120)))} ft.`,row:null,hl,ov:[{k:'pa',pa},v,{k:'h',x:t,y:d}],view:zoom}];}
+  const ask=/approximate pressure altitude\?/.test(q.stem)?'pa':/Which site/.test(q.stem)?'site':/How much does the density altitude|how much does the density altitude/i.test(q.stem)?'change':'da';
+  const s2={text:`Pressure altitude = field elevation + factor: ${fmt(q.elev)} ${f>=0?'+':'−'} ${fmt(Math.abs(f))} = ${fmt(pa)} ft. On the chart that is ${where}. The dashed line shows exactly where.`+(ask==='pa'?` That is the pressure altitude the question asks for: about ${fmt(r100(pa))} ft, answer ${L[q.answer]}. Temperature plays no part in it.`:''),row:rowOf(alt),hl,ov:[{k:'pa',pa}],view:box(t,d,32,8000)};
+  const s1={text:`Find ${alt.toFixed(2)} in the altimeter table below the chart. Its conversion factor is ${f>=0?'+':'−'}${fmt(Math.abs(f))} ft.`,row:rowOf(alt),hl:[],ov:[],view:{...FULL}};
+  if(ask==='pa')return[s1,s2];
+  const check=Math.abs(diff)<.5?`Check: standard temperature at ${fmt(pa)} ft is about ${cTxt(std.toFixed(0))}°C, so the air is at standard and density altitude equals pressure altitude.`:`Check: standard temperature at ${fmt(pa)} ft is about ${cTxt(std.toFixed(0))}°C, so the air is ${Math.abs(diff).toFixed(0)}° ${diff>=0?'warmer':'colder'} than standard. That is why the density altitude is ${diff>=0?'above':'below'} the pressure altitude.`;
+  const end=ask==='site'?` That is Site A. Do the same for Sites B and C, then compare.`:ask==='change'?` That is the density altitude for the first time given. Do the same for the later time, then take the difference.`:`, answer ${L[q.answer]}.`;
+  return[s1,s2,
+   {text:`Start at ${cTxt(t)}°C (${toF(t).toFixed(0)}°F) on the bottom scale and go straight up until you meet the ${fmt(pa)} ft line.`,row:null,hl,ov:[{k:'pa',pa},v],view:zoom},
+   {text:`From that point go straight left to the density altitude scale: about ${fmt(r100(d))} ft${ask==='da'?end:'.'+end} ${check}`,row:null,hl,ov:[{k:'pa',pa},v,{k:'h',x:t,y:d}],view:zoom}];}
 function showStep(){const s=walk.steps[walk.i];$('wstep').textContent=`Step ${walk.i+1} of ${walk.steps.length}`;$('wtext').textContent=s.text;
   $('wprev').disabled=walk.i===0;$('wnext').textContent=walk.i===walk.steps.length-1?'Done':'Next step';selRow=s.row;paintRows();selPA=null;readoutIdle();animateTo(s.view);}
 function startWalk(){walk={steps:buildSteps(cur()),i:0};$('walk').hidden=false;showStep();if(!document.body.classList.contains('max')&&window.innerWidth<860)$('bench').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}

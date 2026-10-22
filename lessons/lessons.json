@@ -1386,11 +1386,11 @@
       ],
       [
        "Standard temperature there.",
-       "15 °C, minus about 2° per 1,000 ft: 15 − 5.6 ≈ 9 °C."
+       "15 °C, minus about 2° per 1,000 ft: 15 − 5.6 ≈ 9 °C. At 32 °C the air is about 23° warmer than standard."
       ],
       [
-       "Correct for heat.",
-       "About 120 ft for every degree above standard: 2,805 + 120 × 23 ≈ 5,500 ft."
+       "Read the chart.",
+       "Go up from 32 °C to the 2,805 ft line, then straight across: about 5,400 ft. The balloon performs as if the field were about 2,800 ft higher. A flight computer (E6B) also works."
       ]
      ],
      "chart": true

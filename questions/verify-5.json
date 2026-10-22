@@ -494,196 +494,224 @@
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 3,800 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-502",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 5,600 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-503",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 8,100 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-504",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 200 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-505",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 8,300 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-506",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 4,700 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-507",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 10,400 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-508",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 2,100 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-509",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 3,600 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-510",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 8,700 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-511",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 600 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-512",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 11,700 feet; choices and explanation rewritten without the rule. Temperature changed 15 → 20 °C so the third choice is not within 400 ft of the key."
   },
   {
     "id": "DAC-513",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 5,700 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-514",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 2,400 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-515",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 5,800 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-516",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 100 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-517",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 7,900 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-518",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 2,000 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-519",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 2,100 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-520",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 2,000 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-521",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 1,600 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-522",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 1,700 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-523",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = Site B; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-524",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = Site B; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-525",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = Site C; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-526",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = Site A; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-527",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 32°C; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-528",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Key recomputed exactly; distractors are stated mistakes (pressure altitude only / full OAT / 15°C standard / wrong altimeter sign / adding on a cold day / °F change / later reading itself). Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 39°C; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-529",
@@ -697,6 +725,7 @@
     "verdict": "fixed",
     "issue": "Key confirmed (exact elevation 2,955 ft, rounds to 3,000). Explanation's 'the 2,424-foot pressure altitude line' and '2,424 + 531 = 3,000' tightened to the exact figures.",
     "suggested": "applied in file",
-    "source": "Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart."
+    "source": "Independent script recompute (round2-brief formula + PHAK Fig. 11-3 factors); every distractor matched to a named mistake; PHAK 25C Ch. 11 Fig. 11-22 density altitude chart.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 3,100 feet; choices and explanation rewritten without the rule."
   }
 ]
