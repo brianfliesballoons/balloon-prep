@@ -340,20 +340,23 @@
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Recomputed with the specified method (PHAK FAA-H-8083-25C Ch. 11 Density Altitude, p. 11-3/11-4 and Density Altitude Charts, p. 11-20): PA = 2,600 + 205 = 2,805 ft; std temp = 15 - 1.98 x 2.805 = 9.4 C; DA = 2,805 + 120 x (32 - 9.4) = 5,512 ft, nearest choice 5,500 (index 1). Distractors check: 2,805 (PA only); 2,805 + 120 x 32 = 6,645."
+    "source": "Recomputed with the specified method (PHAK FAA-H-8083-25C Ch. 11 Density Altitude, p. 11-3/11-4 and Density Altitude Charts, p. 11-20): PA = 2,600 + 205 = 2,805 ft; std temp = 15 - 1.98 x 2.805 = 9.4 C; DA = 2,805 + 120 x (32 - 9.4) = 5,512 ft, nearest choice 5,500 (index 1). Distractors check: 2,805 (PA only); 2,805 + 120 x 32 = 6,645.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays B = 5,400 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-002",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 4,800 - 348 = 4,452 ft; std temp = 15 - 1.98 x 4.452 = 6.2 C; DA = 4,452 + 120 x (-10 - 6.2) = 2,510 ft, nearest choice 2,500 (index 0). Distractors: 4,452 (PA only); 4,452 + 1,942 = 6,394 (sign error)."
+    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 4,800 - 348 = 4,452 ft; std temp = 15 - 1.98 x 4.452 = 6.2 C; DA = 4,452 + 120 x (-10 - 6.2) = 2,510 ft, nearest choice 2,500 (index 0). Distractors: 4,452 (PA only); 4,452 + 1,942 = 6,394 (sign error).",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays A = 2,500 feet; choices and explanation rewritten without the rule."
   },
   {
     "id": "DAC-003",
     "verdict": "confirmed",
     "issue": "",
     "suggested": "",
-    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 7,200 + 392 = 7,592 ft; std temp = 15 - 1.98 x 7.592 = 0.0 C; DA = 7,592 + 120 x 25.0 = 10,596 ft, nearest choice 10,600 (index 2). Distractors: 7,592 (PA only); subtracting the correction gives PA 6,808 and DA about 9,626, i.e. 9,600."
+    "source": "Recomputed (PHAK FAA-H-8083-25C Ch. 11 Density Altitude; Density Altitude Charts): PA = 7,200 + 392 = 7,592 ft; std temp = 15 - 1.98 x 7.592 = 0.0 C; DA = 7,592 + 120 x 25.0 = 10,596 ft, nearest choice 10,600 (index 2). Distractors: 7,592 (PA only); subtracting the correction gives PA 6,808 and DA about 9,626, i.e. 9,600.",
+    "recheck": "2026-10-21: the 120 ft/°C rule was removed on Brian's ruling (no FAA source). Recomputed with standard-atmosphere density altitude (reproduces PHAK 25C p. 8-7's 5,048 ft / 30 °C = 7,855 ft example); key stays C = 10,400 feet; choices and explanation rewritten without the rule."
   }
 ]

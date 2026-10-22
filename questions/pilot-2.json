@@ -918,11 +918,11 @@
   "stem": "(Refer to the density altitude chart.) A launch site is at 2,600 feet MSL. The altimeter setting is 29.70 and the outside air temperature is 32°C (90°F). What is the approximate density altitude?",
   "choices": [
    "2,800 feet",
-   "5,500 feet",
-   "6,600 feet"
+   "5,400 feet",
+   "6,400 feet"
   ],
   "answer": 1,
-  "explanation": "Pressure altitude is 2,600 + 205 = 2,805 feet, where standard temperature is about 9°C; at 32°C the air is about 23° warmer than standard, which adds about 2,700 feet for a density altitude near 5,500 feet. 2,800 feet is only the pressure altitude, and 6,600 feet comes from multiplying the full 32°C by 120 instead of the difference from standard.",
+  "explanation": "Pressure altitude is 2,600 + 205 = 2,805 feet. On the chart, go up from 32°C to the 2,805-foot pressure altitude line, then straight across: about 5,400 feet. Standard temperature at 2,805 feet is about 9°C, so the air is about 23° warmer than standard, which is why the density altitude is above the pressure altitude. 2,800 feet is the pressure altitude alone, with no temperature correction. 6,400 feet treats the whole 32°C as the amount above standard, instead of the 23° difference.",
   "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
   "figure": "density-altitude",
   "difficulty": 2,
@@ -944,7 +944,7 @@
    "6,400 feet"
   ],
   "answer": 0,
-  "explanation": "Pressure altitude is 4,800 − 348 = 4,452 feet, where standard temperature is about 6°C; at −10°C the air is about 16° colder than standard, which subtracts about 1,900 feet, giving about 2,500 feet. 4,500 feet is the pressure altitude, and 6,400 feet adds the temperature correction instead of subtracting it.",
+  "explanation": "Pressure altitude is 4,800 − 348 = 4,452 feet. On the chart, go up from −10°C to the 4,452-foot pressure altitude line, then straight across: about 2,500 feet. Standard temperature at 4,452 feet is about 6°C, so the air is about 16° colder than standard, which is why the density altitude is below the pressure altitude. 4,500 feet is the pressure altitude alone, with no temperature correction. 6,400 feet puts the correction on the wrong side: the air is colder than standard, so density altitude is below pressure altitude, not above it.",
   "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
   "figure": "density-altitude",
   "difficulty": 2,
@@ -962,11 +962,11 @@
   "stem": "(Refer to the density altitude chart.) A mountain launch site is at 7,200 feet MSL. The altimeter setting is 29.50 and the outside air temperature is 25°C (77°F). What is the approximate density altitude?",
   "choices": [
    "7,600 feet",
-   "9,600 feet",
-   "10,600 feet"
+   "9,500 feet",
+   "10,400 feet"
   ],
   "answer": 2,
-  "explanation": "Pressure altitude is 7,200 + 392 = 7,592 feet, where standard temperature is about 0°C; at 25°C the air is about 25° warmer than standard, which adds about 3,000 feet for roughly 10,600 feet. 7,600 feet is the pressure altitude, and 9,600 feet results from subtracting the altimeter correction instead of adding it.",
+  "explanation": "Pressure altitude is 7,200 + 392 = 7,592 feet. On the chart, go up from 25°C to the 7,592-foot pressure altitude line, then straight across: about 10,400 feet. Standard temperature at 7,592 feet is about −0°C, so the air is about 25° warmer than standard, which is why the density altitude is above the pressure altitude. 7,600 feet is the pressure altitude alone, with no temperature correction. 9,500 feet applies the altimeter conversion factor with the wrong sign (7,200 − 392 = 6,808 feet).",
   "ref": "FAA-H-8083-25C Ch. 11 (Density Altitude; Density Altitude Charts); FAA-H-8083-11B Ch. 3 (Performance Planning)",
   "figure": "density-altitude",
   "difficulty": 3,

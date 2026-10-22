@@ -192,10 +192,11 @@
  {
   "card": "pilot",
   "claim": "Instructor's practice line (name, commercial LTA certificate number, signature, date, notes)",
-  "verdict": "question-for-Brian",
+  "verdict": "ruled-added",
   "source": "https://www.ecfr.gov/current/title-14/section-61.51",
-  "quote": "Brian's practice, kept. Open from round 1: should the card tell an LTA instructor what to write in the \"certificate expiration date or recent experience end date\" field, since 61.51(h)(2) asks for it and a commercial certificate has none?",
-  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+  "quote": "Brian's practice, kept. Open from round 1: should the card tell an LTA instructor what to write in the \"certificate expiration date or recent experience end date\" field, since 61.51(h)(2) asks for it and a commercial certificate has none? 61.87(n) (eCFR and Cornell LII, checked): \"A student pilot may not operate an aircraft in solo flight unless that student pilot has received an endorsement in the student's logbook for the specific make and model aircraft to be flown by an authorized instructor who gave the training within the 90 days preceding the date of the flight.\"",
+  "checked": "2026-10-21 (Brian's rulings) against BFH FAA-H-8083-11B p. 6-18 (pdf), eCFR + Cornell LII 14 CFR 61.19/61.51/61.87, PHAK FAA-H-8083-25C, AWH FAA-H-8083-28B, FAA-P-8740-02, FAA-CT-8080-1E and -2H supplements, AIM, AFH FAA-H-8083-3C, PTS FAA-S-8081-18A",
+  "note": "Brian's ruling: certificates don't expire but endorsements do. Card now carries his pilot's note 'certificates don't expire, but endorsements do, so date every one', plus 61.87(n) as the example."
  },
  {
   "card": "pilot",
@@ -386,11 +387,11 @@
  {
   "card": "rules",
   "claim": "By custom: the lower balloon has the right-of-way (Brian's callout)",
-  "verdict": "question-for-Brian",
+  "verdict": "cited",
   "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_6.pdf",
   "quote": "BFH Ch. 6, p. 6-18: \"There is an unwritten rule in ballooning (not regulatory) that the balloon below has the right of way (due to lack of visibility above). Although the balloon below has the right of way, the higher balloon needs time to climb out of the way, if necessary.\" Fig. 6-15 caption: \"The balloon below has the right of way while ascending.\"",
-  "note": "Callout text left as Brian wrote it; the BFH reference was added to the card's source list. Question: cite it in the callout too?",
-  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+  "note": "Brian's ruling: cite it. The callout now quotes BFH p. 6-18 verbatim; quote and page verified in the FAA's bfh_chapter_6.pdf (page footer 6-18; the handbook supersedes FAA-H-8083-11A, so it is 11B).",
+  "checked": "2026-10-21 (Brian's rulings) against BFH FAA-H-8083-11B p. 6-18 (pdf), eCFR + Cornell LII 14 CFR 61.19/61.51/61.87, PHAK FAA-H-8083-25C, AWH FAA-H-8083-28B, FAA-P-8740-02, FAA-CT-8080-1E and -2H supplements, AIM, AFH FAA-H-8083-3C, PTS FAA-S-8081-18A"
  },
  {
   "card": "rules",
@@ -581,11 +582,12 @@
  },
  {
   "card": "da",
-  "claim": "DA ≈ PA + 120 × (OAT − ISA); worked example 3,660 ft; AWH 10,000 ft at 20 °C = 12,700 ft",
-  "verdict": "question-for-Brian",
+  "claim": "Density altitude step; worked example; AWH 10,000 ft at 20 °C = 12,700 ft",
+  "verdict": "removed-unsourced",
   "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
-  "quote": "AWH Ch. 8: \"if temperature at a pressure altitude of 10,000 ft is 20 °C, density altitude is 12,700 ft.\" No FAA source found for the 120 ft/°C factor (open from round 1; arithmetic of the worked example checked: 1,500 + 2,160 = 3,660; 3,660 − 1,400 = 2,260).",
-  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+  "quote": "PHAK 25C p. 8-7: \"consider an airport with a field elevation of 5,048 feet MSL where the standard temperature is 5 °C ... If the temperature changes to 30 °C, the density altitude increases to 7,855 feet.\" (standard-atmosphere math gives 7,859; the 120 rule gives 8,047). AWH 28B p. 8-15: \"use a flight computer to compute density altitude.\"",
+  "checked": "2026-10-21 (Brian's rulings) against BFH FAA-H-8083-11B p. 6-18 (pdf), eCFR + Cornell LII 14 CFR 61.19/61.51/61.87, PHAK FAA-H-8083-25C, AWH FAA-H-8083-28B, FAA-P-8740-02, FAA-CT-8080-1E and -2H supplements, AIM, AFH FAA-H-8083-3C, PTS FAA-S-8081-18A",
+  "note": "Brian's ruling: no FAA source, so the 120 ft/°C rule is gone. Searched PHAK 25C, AWH 28B, BFH 11B, AFH 3C, AIM, FAA-P-8740-02, PTS 8081-18A, commercial supplement FAA-CT-8080-1E (it has no density altitude chart; Figure 8 there is Fuel Consumption) and private supplement FAA-CT-8080-2H Figure 8: none states a per-degree factor. Step 3 now reads the chart or a flight computer; worked example recomputed with the standard atmosphere: PA 1,500 ft at 30 °C is about 3,550 ft (card: about 3,600 ft; FAA Figure 8 reads about 3,550)."
  },
  {
   "card": "da",
@@ -766,9 +768,10 @@
  {
   "card": "rules",
   "claim": "Head-on: the rule tells each pilot to alter course to the right, which a balloon cannot do",
-  "verdict": "question-for-Brian",
+  "verdict": "ruled-added",
   "source": "https://www.ecfr.gov/current/title-14/section-91.113",
   "quote": "Rule added as written. Question: add a pilot's note on what a balloon pilot actually does (a powered aircraft must give way to the balloon anyway when converging)?",
-  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+  "checked": "2026-10-21 (Brian's rulings) against BFH FAA-H-8083-11B p. 6-18 (pdf), eCFR + Cornell LII 14 CFR 61.19/61.51/61.87, PHAK FAA-H-8083-25C, AWH FAA-H-8083-28B, FAA-P-8740-02, FAA-CT-8080-1E and -2H supplements, AIM, AFH FAA-H-8083-3C, PTS FAA-S-8081-18A",
+  "note": "Brian's ruling: added as his pilot's note, labelled as his and not a regulation: 'a balloon can't turn, so in a balloon you climb, descend, or brace.'"
  }
 ]
