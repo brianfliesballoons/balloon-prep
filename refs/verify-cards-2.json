@@ -1,0 +1,774 @@
+[
+ {
+  "card": "airspace",
+  "claim": "Right-of-way line: a balloon has it over all other categories; distress over all",
+  "verdict": "fixed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "(d) Converging. When aircraft of the same category are converging ... If the aircraft are of different categories— (1) A balloon has the right-of-way over any other category of aircraft; (2) A glider has the right-of-way over powered aircraft. ... (g) Landing. Aircraft, while on final approach to land or while landing, have the right-of-way over other aircraft in flight or operating on the surface",
+  "old": "a balloon has it over all other categories of aircraft; an aircraft in distress has it over all.",
+  "new": "converging, a balloon has it over all other categories, gliders too; an aircraft in distress, or on final or landing, has it over a balloon.",
+  "note": "The category rule sits inside (d) Converging, and the line omitted (g). Card source list now cites 14 CFR 91.113 (whole section).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class E floor: surface, 700 or 1,200 AGL",
+  "verdict": "omission-added",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html",
+  "quote": "AIM 3-2-6: \"Except where designated at a lower altitude ... Class E airspace in the United States consists of: The airspace extending upward from 14,500 feet MSL to, but not including, 18,000 feet MSL overlying the 48 contiguous states...\"",
+  "old": "Know your local floor: surface, 700 or 1,200 AGL.",
+  "new": "Know your local floor: surface, 700 or 1,200 AGL; where nothing lower is designated, it begins at 14,500 MSL.",
+  "note": "Screen-only class detail (hidden in print), so page fit unaffected.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "VFR minimums table (A n/a; B 3 SM clear of clouds; C, D, E<10k 3 SM 500/1,000/2,000; E>=10k 5 SM 1,000/1,000/1 SM; G day <=1,200 AGL 1 SM clear; G night <=1,200 AGL 3 SM 152; G day >1,200 AGL <10k 1 SM 152; G night 3 SM 152; G >1,200 AGL >=10k 5 SM 1,000/1,000/1 SM)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.155",
+  "quote": "91.155(a) table, e.g. \"Class G: 1,200 feet or less above the surface ... For aircraft other than helicopters: Day ... 1 statute mile Clear of clouds. Night ... 3 statute miles 500 feet below. 1,000 feet above. 2,000 feet horizontal.\"; \"More than 1,200 feet above the surface and at or above 10,000 feet MSL 5 statute miles 1,000 feet below. 1,000 feet above. 1 statute mile horizontal.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "3·152 memo: 3 SM, 1,000 above, 500 below, 2,000 side for C, D, E below 10,000 MSL and G at night",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.155",
+  "quote": "Same table: Class C/D/E below 10,000 MSL and Class G night rows all read 3 statute miles, 500 below, 1,000 above, 2,000 horizontal (Class G night above 1,200 AGL at or above 10,000 MSL is 5 SM; the memo says \"below 10,000 MSL\" for the controlled classes and G above 10,000 MSL has its own row).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Special VFR: 1 SM, clear of clouds, ATC clearance, surface area below 10,000 MSL, day unless instrument rated and equipped",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.157",
+  "quote": "\"(b) Special VFR operations may only be conducted— (1) With an ATC clearance; (2) Clear of clouds; (3) ... flight visibility is at least 1 statute mile; and (4) ... between sunrise and sunset ... unless— (i) The person ... meets the applicable requirements for instrument flight ... and (ii) The aircraft is equipped as required in § 91.205(d).\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "NO SVFR on a chart bars it for fixed-wing aircraft only",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "FAA Chart Users' Guide (Jul 2026): \"FAR 91 Airports where fixed wing special visual flight rules operations are prohibited (FAR 91) are shown with the type \\\"NO SVFR\\\" above the airport name.\" 14 CFR 91 App. D Sec. 3: \"Locations at which fixed-wing Special VFR operations are prohibited.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Surface area: no VFR under a ceiling below 1,000 ft; 3 SM ground visibility (flight visibility if none reported) to take off, land or enter the pattern",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.155",
+  "quote": "\"(c) ... no person may operate an aircraft beneath the ceiling under VFR within the lateral boundaries of controlled airspace designated to the surface for an airport when the ceiling is less than 1,000 feet. (d) ... (1) Unless ground visibility at that airport is at least 3 statute miles; or (2) If ground visibility is not reported ... flight visibility ... at least 3 statute miles.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class A 18,000 MSL to FL600, IFR only, instrument rating",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html",
+  "quote": "AIM 3-2-2: \"Generally, that airspace from 18,000 feet MSL up to and including FL 600\"; 91.135 (IFR, ATC clearance).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class B usually surface to 10,000 MSL; ATC clearance; private pilot, or student/sport (recreational too) with endorsement; transponder and ADS-B Out inside",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.131",
+  "quote": "91.131(b)(1): \"(i) The pilot in command holds at least a private pilot certificate; (ii) ... recreational pilot certificate and has met ... (iii) ... sport pilot certificate and has met ... (iv) ... a student pilot who has met the requirements of § 61.94 or § 61.95\"; 91.215(b)(1) \"In Class A, Class B, and Class C airspace areas\"; 91.225(d)(1).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class C: surface to 4,000 AGL, 5 NM core, 10 NM shelf from 1,200 AGL; two-way radio contact; contact is established when ATC answers with your call sign",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html",
+  "quote": "AIM 3-2-4: \"usually consists of a 5 NM radius core surface area that extends from the surface up to 4,000 feet above the airport elevation, and a 10 NM radius shelf area that extends no lower than 1,200 feet up to 4,000 feet\"; \"if the controller responds to the initial radio call without using the aircraft identification, radio communications have not been established\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class D: towered airport, surface to about 2,500 AGL, dashed blue; two-way radio contact",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html",
+  "quote": "AIM 3-2-5: \"Generally, Class D airspace extends upward from the surface to 2,500 feet above the airport elevation ... surrounding those airports that have an operational control tower\"; 91.129(c)(1).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Class E transition floors 700 AGL (magenta vignette) and 1,200 AGL (blue vignette)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html",
+  "quote": "AIM 3-2-6: \"Class E transition areas extend upward from either 700 feet AGL (shown as magenta vignette on sectional charts) or 1,200 feet AGL (blue vignette)\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "airspace",
+  "claim": "Balloon transponder/ADS-B: required in B, C and above B/C ceilings to 10,000 MSL; exempt in the Mode C veil outside A/B/C and below the lower of the B/C ceiling or 10,000 MSL, and at or above 10,000 MSL",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.215",
+  "quote": "91.215(b)(3): \"...balloon or glider may conduct operations in the airspace within 30 nautical miles of an airport listed in appendix D, section 1 ... provided such operations are conducted— (i) Outside any Class A, Class B, or Class C airspace area; and (ii) Below the altitude of the ceiling of a Class B or Class C airspace area ... or 10,000 feet MSL, whichever is lower\"; (b)(4) \"All aircraft in all airspace above the ceiling and within the lateral boundaries of a Class B or Class C airspace area ... upward to 10,000 feet MSL\"; (b)(5) \"All aircraft except ... balloon, or glider— (i) ... at and above 10,000 feet MSL, excluding the airspace at and below 2,500 feet above the surface\"; 91.225(e).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Obstruction symbol: above 200 and below 1,000 ft AGL (above 299 ft in urban areas); taller symbol for 1,000 ft AGL or higher",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"Sectional Charts and Terminal Area (TACs) typically show man-made obstacles extending more than 200' Above Ground Level (AGL), or more than 299' AGL in yellow city tint.\" Legend 1: \"1000 ft. and higher AGL\" / \"below 1000 ft. AGL\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "2049 (1149): top in MSL, AGL height in parentheses",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"The elevation of the top of the obstacle above Mean Sea Level (MSL) and the height of the structure (AGL) is also indicated ... The AGL height is in parentheses below the MSL elevation.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Power transmission line symbol vs railroad (cross ticks)",
+  "verdict": "confirmed",
+  "source": "refs/img/sectional-legend-8080-1E.png (FAA-CT-8080-1E Legend 1)",
+  "quote": "Legend 1 Topographic Information: \"Railroad\" (line with cross ticks) and \"Power Transmission Lines\" (line with tower symbols).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Class B solid blue; Class C solid magenta; Class D dashed blue with boxed ceiling in hundreds of feet MSL; Class E surface dashed magenta",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"Class D Airspace is identified with a blue dashed line\"; \"Class E Surface (SFC) Airspace is symbolized with a magenta dashed line\"; Legend 1: \"Ceiling of Class D Airspace in hundreds of feet. (A minus ceiling value indicates surface up to but not including that value.)\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Class E from 700 AGL magenta vignette; 1,200 AGL or higher next to Class G blue vignette",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"Controlled airspace floors of 700' above the ground are defined by a magenta vignette; floors other than 700' that laterally abut uncontrolled airspace (Class G) are defined by a blue vignette\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Airport colors: blue towered, magenta not",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"Airports with Control Towers (CT) and their related data are shown in blue. All other airports and their related data are shown in magenta.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "legend",
+  "claim": "Changed since 2018: A/FD is now the Chart Supplement; real-chart isogonic lines follow the current five-year model",
+  "verdict": "confirmed",
+  "source": "https://aeronav.faa.gov/user_guide/cug-complete_20260709.pdf",
+  "quote": "\"Isogonic lines and values shall be based on the five year epoch magnetic variation model.\" Legend 1 still says \"Airport/Facility Directory\" in one note and shows \"Isogonic Line (2010 VALUE)\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Fly for hire as PIC carrying persons or property (61.133(a)(1))",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.133",
+  "quote": "\"(i) Carrying persons or property for compensation or hire ... and (ii) For compensation or hire\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Teach in balloons with no CFI: training, endorsements for certificate, solo, flight review, recency (61.133(a)(2)(ii); 61.3(d)(3)(i))",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.133",
+  "quote": "61.133(a)(2)(ii)(A)-(D); 61.3(d)(3)(i): \"A flight instructor certificate ... is not necessary ... if the training is given by the holder of a commercial pilot certificate with a lighter-than-air rating ... in a lighter-than-air aircraft\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "61.51(h)(2) entry content; commercial certificate has no expiration date (61.19(c))",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.51",
+  "quote": "\"(i) Be endorsed in a legible manner by the authorized instructor; and (ii) Include a description of the training given, the length of the training lesson, and the authorized instructor's signature, certificate number, and certificate expiration date or recent experience end date, consistent with the requirements of § 61.197.\" 61.19(c)(1): \"A pilot certificate ... is issued without an expiration date.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Instructor's practice line (name, commercial LTA certificate number, signature, date, notes)",
+  "verdict": "question-for-Brian",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.51",
+  "quote": "Brian's practice, kept. Open from round 1: should the card tell an LTA instructor what to write in the \"certificate expiration date or recent experience end date\" field, since 61.51(h)(2) asks for it and a commercial certificate has none?",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Airborne-heater limit and its removal (61.133(b))",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.133",
+  "quote": "\"(2) If a person who applies for a commercial pilot certificate with a balloon rating takes a practical test in a balloon with an airborne heater— (i) The pilot certificate will contain a limitation restricting ... to a balloon with an airborne heater. (ii) ... may be removed when the person obtains the required aeronautical experience in a gas balloon and receives a logbook endorsement\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Medical: 2nd class (or 1st) for hire, 12 calendar months at any age; none for giving flight training (61.23(b)(5)); none for private privileges, student, or balloon checkride (61.23(b)(1),(4),(10))",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.23",
+  "quote": "61.23(a)(2)(iii): \"Except as provided in paragraph (b)(5) of this section, privileges of a commercial pilot certificate with a balloon class rating for compensation or hire\"; (b)(5) \"...if the person is providing flight training in accordance with § 61.133(a)(2)(ii)\"; (d)(2)(i) second class, any age, commercial: \"12th month after the month of the date of examination\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Medical requirement took effect May 22, 2023",
+  "verdict": "confirmed",
+  "source": "https://www.federalregister.gov/d/2022-25288",
+  "quote": "87 FR 71218: \"This rule is effective December 22, 2022, except for the amendments to §§ 61.3(c)(2)(vi), 61.23(a)(2)(i) ... 61.23(d)(2)(i)), which are effective May 22, 2023.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Flight review: since the start of the 24th calendar month; 1 h flight + 1 h ground incl. Part 91; a passed practical test counts",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.56",
+  "quote": "\"(a) ... a minimum of 1 hour of flight training and 1 hour of ground training. The review must include: (1) A review of the current general operating and flight rules of part 91\"; \"(c) ... since the beginning of the 24th calendar month before the month\"; \"(d) ... passed ... (1) A pilot proficiency check or practical test conducted by an examiner\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Passenger currency: 3 takeoffs and 3 landings in 90 days, sole manipulator; night to a full stop 1 h after sunset to 1 h before sunrise",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.57",
+  "quote": "\"(a)(1) ... carrying persons ... unless that person has made at least three takeoffs and three landings within the preceding 90 days ... (i) The person acted as the sole manipulator\"; \"(b)(1) ... three takeoffs and three landings to a full stop during the period beginning 1 hour after sunset and ending 1 hour before sunrise\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Carry and show certificate, photo ID, medical; FAA, NTSB, TSA, law enforcement",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.3",
+  "quote": "61.3(l): \"must present it and their photo identification ... upon a request from: (1) The Administrator; (2) An authorized representative of the National Transportation Safety Board; (3) Any Federal, State, or local law enforcement officer; or (4) An authorized representative of the Transportation Security Administration.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "Change of address within 30 days, in writing",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.60",
+  "quote": "\"...may not, after 30 days from that date, exercise the privileges of the certificate unless the holder has notified in writing the FAA\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "pilot",
+  "claim": "To earn it: 18; private certificate; 35 h incl. 20 h, 10 flights, 2 PIC flights, 10 h/10 flights instruction, two 1-h test-prep flights in 2 calendar months, 2 solo, controlled ascent to 3,000 ft",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.129",
+  "quote": "61.123(a), (h); 61.129(h)(1)-(4)(ii): \"(A) Two training flights of 1 hour each ... within the preceding 2 calendar months from the month of the test; (B) Two solo flights ... (C) One flight involving a controlled ascent to 3,000 feet above the launch site.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Airworthiness certificate displayed at the entrance; registration aboard",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.203",
+  "quote": "\"(b) ... displayed at the cabin or cockpit entrance so that it is legible to passengers or crew.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Registration expires 7 years after the last day of the month issued",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-47.40",
+  "quote": "\"(a) ... expires seven years after the last day of the month in which it is issued.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Operating limitations in the Balloon Flight Manual or a placard visible to the pilot; fly within them",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-31.81",
+  "quote": "31.81(b): \"(1) A Balloon Flight Manual; or (2) A placard on the balloon that is clearly visible to the pilot.\" 91.9(a).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Required instruments: altimeter, rate-of-climb; hot air adds fuel gauge per cell and envelope temperature; captive gas adds compass",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-31.85",
+  "quote": "\"(a) For all balloons: ... (2) An altimeter. (3) A rate of climb indicator. (b) For hot air balloons: (1) A fuel quantity gauge ... (2) An envelope temperature indicator. (c) For captive gas balloons, a compass.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Annual within 12 calendar months; 100-hour for hire / instruction in a balloon you provide; 10 h overrun counts toward next",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.409",
+  "quote": "\"(b) ... no person may operate an aircraft carrying any person (other than a crewmember) for hire, and no person may give flight instruction for hire in an aircraft which that person provides, unless within the preceding 100 hours of time in service the aircraft has received an annual or 100-hour inspection ... may be exceeded by not more than 10 hours while en route to reach a place where the inspection can be done. The excess time ... must be included in computing the next 100 hours\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Owner/operator airworthiness and ADs; records content (91.403, 91.417); PIC decides condition for safe flight (91.7)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.417",
+  "quote": "91.403(a) \"primarily responsible ... including compliance with part 39\"; 91.417(a)(1)(i)-(iii), (a)(2)(i), (iv), (v); 91.7(b).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Preventive maintenance a pilot may do: envelope fabric repairs not needing load tape work, burner nozzle cleaning, interchangeable baskets/burners",
+  "verdict": "fixed",
+  "source": "https://www.ecfr.gov/current/title-14/section-43.3",
+  "quote": "Part 43 App. A(c)(27): \"The interchange of balloon baskets and burners on envelopes when the basket or burner is designated as interchangeable in the balloon type certificate data and the baskets and burners are specifically designed for quick removal and installation.\"",
+  "old": "swapping baskets and burners the type certificate data lists as interchangeable (Part 43 App. A).",
+  "new": "swapping baskets and burners the type certificate data lists as interchangeable and that are designed for quick removal and installation (Part 43 App. A).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "A pilot who does preventive maintenance must record it",
+  "verdict": "omission-added",
+  "source": "https://www.ecfr.gov/current/title-14/section-43.9",
+  "quote": "43.9(a): \"each person who ... performs preventive maintenance ... shall make an entry in the maintenance record ... (1) A description ... of work performed. (2) The date of completion ... (4) ... the signature, certificate number, and kind of certificate held by the person approving the work.\"",
+  "new": "Record it: what was done, the date, and your signature, certificate number and kind of certificate (43.9(a)).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "balloon",
+  "claim": "Airplane rules that do not apply: 91.205 powered only; 91.207 airplanes; 91.151 airplanes and rotorcraft; 91.107 basket balloon excepted",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.107",
+  "quote": "91.205 title \"Powered civil aircraft ...\"; 91.207(a) \"...U.S.-registered civil airplane\"; 91.151(a) airplane, (b) rotorcraft; 91.107(a)(1) \"(except a free balloon that incorporates a basket or gondola...)\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Right-of-way table: balloon over any other category",
+  "verdict": "fixed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "\"(d) Converging. ... If the aircraft are of different categories— (1) A balloon has the right-of-way over any other category of aircraft; (2) A glider has the right-of-way over powered aircraft. (3) An airship has the right-of-way over all other powered aircraft, except for an aircraft towing or refueling other aircraft. (4) An aircraft towing or refueling other aircraft has the right-of-way over all other powered aircraft.\"",
+  "old": "Balloon | Over any other category of aircraft",
+  "new": "Converging, different categories | Balloon over any other category, gliders included. Then: glider over powered aircraft; an aircraft towing or refueling over other powered aircraft; airship over the rest (91.113(d)).",
+  "note": "Answers Brian's question: no current rule gives a glider the right-of-way over a balloon. (d)(2) gives a glider right-of-way over POWERED aircraft only, and (d)(1) puts the balloon over every other category.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Head-on rule missing",
+  "verdict": "omission-added",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "\"(e) Approaching head-on. When aircraft are approaching each other head-on, or nearly so, each pilot of each aircraft shall alter course to the right.\"",
+  "new": "Head-on, or nearly so | Each pilot alters course to the right (91.113(e))",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Overtaking: being overtaken has it",
+  "verdict": "fixed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "\"(f) Overtaking. Each aircraft that is being overtaken has the right-of-way and each pilot of an overtaking aircraft shall alter course to the right to pass well clear.\"",
+  "old": "The one being overtaken has it",
+  "new": "The one being overtaken has it; the overtaking pilot alters course to the right to pass well clear (91.113(f))",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Landing rule missing",
+  "verdict": "omission-added",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "\"(g) Landing. Aircraft, while on final approach to land or while landing, have the right-of-way over other aircraft in flight or operating on the surface ... When two or more aircraft are approaching an airport for the purpose of landing, the aircraft at the lower altitude has the right-of-way, but it shall not take advantage of this rule to cut in front of another which is on final approach to land or to overtake that aircraft.\"",
+  "new": "Landing | An aircraft on final approach or landing has it over aircraft in flight or on the surface. Of two approaching to land, the lower has it, but may not cut in front of or overtake one on final (91.113(g)).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Distress over all; two balloons converging, the one on the right; see and avoid, give way not over/under/ahead unless well clear",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "\"(b) ... vigilance shall be maintained ... so as to see and avoid other aircraft. When a rule of this section gives another aircraft the right-of-way, the pilot shall give way ... and may not pass over, under, or ahead of it unless well clear. (c) In distress. An aircraft in distress has the right-of-way over all other air traffic. (d) ... the aircraft to the other's right has the right-of-way.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "By custom: the lower balloon has the right-of-way (Brian's callout)",
+  "verdict": "question-for-Brian",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_6.pdf",
+  "quote": "BFH Ch. 6, p. 6-18: \"There is an unwritten rule in ballooning (not regulatory) that the balloon below has the right of way (due to lack of visibility above). Although the balloon below has the right of way, the higher balloon needs time to climb out of the way, if necessary.\" Fig. 6-15 caption: \"The balloon below has the right of way while ascending.\"",
+  "note": "Callout text left as Brian wrote it; the BFH reference was added to the card's source list. Question: cite it in the callout too?",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "PIC final authority; emergency deviation; written report on request (91.3)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.3",
+  "quote": "\"(a) ... directly responsible for, and is the final authority as to, the operation of that aircraft. (b) In an in-flight emergency requiring immediate action, the pilot in command may deviate from any rule of this part to the extent required ... (c) ... upon the request of the Administrator, send a written report\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Preflight action stated only for flights not near an airport",
+  "verdict": "fixed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.103",
+  "quote": "\"Each pilot in command shall, before beginning a flight, become familiar with all available information concerning that flight. This information must include— (a) For a flight under IFR or a flight not in the vicinity of an airport, weather reports and forecasts, fuel requirements, alternatives available if the planned flight cannot be completed...\"",
+  "old": "Before a flight not in the vicinity of an airport, know the weather reports and forecasts, fuel requirements, and alternatives if the flight can't be completed (91.103).",
+  "new": "Before every flight, become familiar with all available information; for a flight not in the vicinity of an airport, that includes weather reports and forecasts, fuel requirements, and alternatives if the flight can't be completed (91.103).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Careless/reckless (91.13); dropping objects (91.15)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.15",
+  "quote": "\"No pilot in command ... may allow any object to be dropped ... that creates a hazard to persons or property. However, this section does not prohibit the dropping of any object if reasonable precautions are taken\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Minimum altitudes: anywhere; 1,000 above highest obstacle within 2,000 ft over congested/open-air assembly; 500 ft elsewhere, 500 ft from person/vessel/vehicle/structure over open water or sparse areas; no balloon exception",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.119",
+  "quote": "91.119(a)-(c) as quoted on the card; \"(d) Helicopters, powered parachutes, and weight-shift-control aircraft.\" BFH Ch. 7 \"Minimum Safe Altitude Requirements\" applies 91.119 to balloons.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Alcohol: 8 h, under the influence, 0.04, impairing drugs; no intoxicated passengers except emergency",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.17",
+  "quote": "\"(1) Within 8 hours after the consumption of any alcoholic beverage; (2) While under the influence of alcohol; (3) While using any drug that affects the person's faculties ... (4) While having an alcohol concentration of 0.04 or greater\"; \"(b) Except in an emergency, no pilot ... may allow a person who appears to be intoxicated ... to be carried\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Formation flight only by arrangement, never with passengers for hire (91.111)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.111",
+  "quote": "\"(b) ... except by arrangement with the pilot in command of each aircraft in the formation. (c) No person may operate an aircraft, carrying passengers for hire, in formation flight.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Lighted position lights sunset to sunrise (91.209)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.209",
+  "quote": "\"(a) During the period from sunset to sunrise ... (1) Operate an aircraft unless it has lighted position lights\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "Accident definition (boarding with intention of flight to all disembarked; death, serious injury or substantial damage)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.2",
+  "quote": "\"Aircraft accident means an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, and in which any person suffers death or serious injury, or in which the aircraft receives substantial damage.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "Fatal injury definition missing",
+  "verdict": "omission-added",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.2",
+  "quote": "\"Fatal injury means any injury which results in death within 30 days of the accident.\"",
+  "new": "A fatal injury is one that causes death within 30 days.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "Serious injury list (48 h within 7 days; fractures except simple fingers/toes/nose; hemorrhage, nerve, muscle, tendon; internal organ; 2nd/3rd-degree burns or >5%)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.2",
+  "quote": "\"Serious injury means any injury which: (1) Requires hospitalization for more than 48 hours, commencing within 7 days ... (2) results in a fracture of any bone (except simple fractures of fingers, toes, or nose); (3) causes severe hemorrhages, nerve, muscle, or tendon damage; (4) involves any internal organ; or (5) involves second- or third-degree burns, or any burns affecting more than 5 percent of the body surface.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "Substantial damage; small punctured holes in fabric not substantial",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.2",
+  "quote": "\"...small punctured holes in the skin or fabric ... are not considered \\\"substantial damage\\\"\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "Immediate-notification incident list incl. $25,000 property damage; overdue aircraft; phone 844-373-9922 / 202-314-6290",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.5",
+  "quote": "\"(6) Damage to property, other than the aircraft, estimated to exceed $25,000 ...\"; \"(b) An aircraft is overdue and is believed to have been involved in an accident.\"; footnote: \"call the NTSB Response Operations Center, at 844-373-9922 or 202-314-6290.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "ntsb",
+  "claim": "830.6 notification contents; 830.10 wreckage; 830.15 Form 6120.1/2 within 10 days, 7 days for missing overdue aircraft, incidents only on request, crew statements",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-49/section-830.15",
+  "quote": "\"...file a report on Board Form 6120.1/2 ... within 10 days after an accident, or after 7 days if an overdue aircraft is still missing. A report on an incident ... shall be filed only as requested\"; \"(b) Each crewmember, if physically able ... shall attach a statement\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "METAR group decode (type, station, time, AUTO/COR, calm, true wind, gust, VRB; temp/dew M; altimeter; AO2; SLP163 = 1016.3; T group)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "FAA-H-8083-28B Ch. 24 (METAR): \"SKC or CLR\" sky codes, \"PK WND\", \"WSHFT ... FROPA\", \"PRESRR\", present-weather table. FB section 27.2.1.1.1 also states wind \"with reference to true north\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "BR = mist at 5/8 to under 7 SM; FG below 5/8",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "\"FG is reported when visibility is less than 5/8 SM ... BR or HZ is reported for visibilities from 5/8 SM to less than 7 SM\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "VC = 5-10 SM away",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "24.4.3.8.2: \"Weather phenomena occurring beyond the point of observation (between 5–10 SM) are coded as in the vicinity (VC).\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "Present-weather code list (incl. GS snow pellets, UP unknown, PY spray, PO, SQ, FC, SS, DS)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "The Ch. 24 present-weather table lists MI, PR, BC, DR, BL, SH, TS, FZ; DZ RA SN SG IC PL GR \"GS Snow Pellets\" \"UP Unknown Precipitation\"; BR FG FU VA DU SA HZ PY; PO SQ FC SS DS.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "Sky cover amounts; CLR automated nothing at or below 12,000 ft; ceiling lowest BKN/OVC or VV",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "\"CLR is used by automated stations to indicate no layers are detected at or below 12,000 ft.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "TAF FM, TEMPO (>50%, ≤1 h each, < half the period), PROB30, WS020/27055KT (top of shear layer 2,000 ft AGL, wind there)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "27.4.2.10.2: TEMPO \"Have a high percentage (greater than 50 percent) probability of occurrence; Last for one hour or less in each instance; and In the aggregate, cover less than half of the period\"; FM \"all forecast conditions given before the FM group are superseded\"; 27.4.2.9.4 \"Height of the top of the wind shear layer in hundreds of feet AGL\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "BECMG in military/international TAFs, not NWS",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "27.4.2.10.4 joint-use airport examples use BECMG; \"PROB30 is the only PROB group used in NWS' TAFs\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "FB decode: true direction, 9900 light and variable, +50 for 100-199 kt, no sign above 24,000, none within 1,500/2,500 ft of station",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "\"Wind forecasts are not issued for altitudes within 1,500 ft of a location's elevation. Temperature forecasts are not issued for altitudes within 2,500 ft\"; \"Light and variable wind or wind speeds of less than 5 kt are expressed by 9900\"; \"adding 50 to the first two digits of the wind direction and subtracting 100 from the speed\"; \"Above 24,000 ft, the sign is omitted\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "wx",
+  "claim": "ATIS, ASOS/AWOS voice and PIREP /WV winds magnetic",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html",
+  "quote": "AIM 7-1-10: \"Wind direction is reported relative to magnetic north in ATIS as well as ASOS and AWOS radio (voice) broadcasts.\"; AIM 7-1-18 PIREP table /WV: \"Direction in degrees magnetic north and speed in knots\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "da",
+  "claim": "PA = elevation + (29.92 − altimeter) × 1,000; ISA 15 °C − 2 °C/1,000 ft",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf",
+  "quote": "PHAK Ch. 4: \"standard temperature lapse rate is when the temperature decreases at the rate of approximately 3.5 °F or 2 °C per 1,000 feet\"; pressure altitude by \"Applying a correction factor to the indicated altitude according to the reported altimeter setting\"; Ch. 8: \"1 inch of pressure is equal to approximately 1,000 feet of altitude\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "da",
+  "claim": "DA ≈ PA + 120 × (OAT − ISA); worked example 3,660 ft; AWH 10,000 ft at 20 °C = 12,700 ft",
+  "verdict": "question-for-Brian",
+  "source": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+  "quote": "AWH Ch. 8: \"if temperature at a pressure altitude of 10,000 ft is 20 °C, density altitude is 12,700 ft.\" No FAA source found for the 120 ft/°C factor (open from round 1; arithmetic of the worked example checked: 1,500 + 2,160 = 3,660; 3,660 − 1,400 = 2,260).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "da",
+  "claim": "High elevation, low pressure, high temperature, high humidity = high density altitude",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf",
+  "quote": "\"The conditions that result in a high density altitude are high elevations, low atmospheric pressures, high temperatures, high humidity, or some combination of these factors.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "da",
+  "claim": "1,000 cu ft of heated air lifts about 20 lb; burner performance drops 4% per 1,000 ft; max gross in the flight manual",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_3.pdf",
+  "quote": "BFH Ch. 3: \"An average of 1,000 cubic feet of air, when heated, will lift 20 pounds.\"; \"heater performance is degraded at a rate of 4 percent per 1,000 feet of altitude\"; max allowable gross weight \"can also be found on the weight and balance page of the flight manual\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Tower light signals table (aircraft in flight / on ground) and vehicle signals",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_3.html",
+  "quote": "AIM TBL 4-3-1 and 14 CFR 91.125 table match row for row, e.g. \"Steady red | STOP | STOP | Give way to other aircraft and continue circling\"; vehicles: \"Cleared to cross, proceed or go\", \"STOP\", \"Clear the taxiway/runway\", \"Return to starting point on airport\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Where a balloon needs transponder/ADS-B and radio (A/B/C required; above B/C ceilings required; veil exempt; ≥10,000 MSL exempt; D radio only; deviation request 1 h ahead)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.215",
+  "quote": "91.215(b)(1)-(5) and (d)(3): \"For operation of an aircraft that is not equipped with a transponder, the request must be made at least one hour before the proposed operation.\"; 91.225(d), (e); 91.129(c)(1); 91.130; 91.131.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Class D radio failure VFR: basic VFR, tower in sight, clearance to land",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.129",
+  "quote": "\"(2) If the aircraft radio fails in flight under VFR, the pilot in command may operate that aircraft and land if— (i) Weather conditions are at or above basic VFR weather minimums; (ii) Visual contact with the tower is maintained; and (iii) A clearance to land is received.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Squawk 1200 VFR, 7500 hijack, 7600 lost radio, 7700 emergency",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html",
+  "quote": "AIM 4-1-20: \"adjust transponder/ADS-B to reply on Mode 3/A Code 1200 regardless of altitude\"; AIM 6-4-2 (7600); 6-2-2 (7700); 6-3-4 (7500).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Call-up order; civil type then registration, N dropped; MAYDAY/PAN-PAN ×3; 121.5",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_2.html",
+  "quote": "AIM 4-2-4: \"When the aircraft manufacturer's name or model is stated, the prefix \\\"N\\\" is dropped\"; AIM 6-3-1: \"MAYDAY, preferably repeated three times. The signal PAN-PAN should be used in the same manner\"; \"121.5 MHz is guarded by direction finding stations\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "radio",
+  "claim": "Phonetic alphabet and numbers (Alfa, Juliett, Xray; tree, fow-er, fife, niner)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_2.html",
+  "quote": "AIM 4-2-7 table: Alfa, Juliett, Xray; (TREE) (FOW-ER) (FIFE) (NIN-ER).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "preflight",
+  "claim": "Before you go / launch site / crew briefing / layout-inspection-inflation / pre-launch items track PTS Areas III and V",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf",
+  "quote": "FAA-S-8081-18A V.A \"size and surface condition of site ... accessibility and obstacles ... surface wind and winds aloft ... suitable landing areas\"; V.B \"Designates a crew chief, if appropriate ... Establishes a common means of communication such as hand signals and/or two-way radio ... proposed direction of flight and estimated time aloft\"; V.G \"Brings balloon to equilibrium ... Ensures no conflict with traffic prior to launch.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "preflight",
+  "claim": "Passenger briefing: before inflation and again before landing; rear of basket (front in high wind); face direction of travel; feet and knees together, knees bent; avoid \"brace\"; hold on in two places; stay in",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_8.pdf",
+  "quote": "BFH Ch. 6: \"Prior to inflation, a pilot should give passengers their first briefing ... reinforced prior to landing\"; Ch. 8: \"Stand in the appropriate area ... Face the direction of travel ... Place feet and knees together, with knees bent ... \\\"Hold on tight\\\" in two places ... Stay in the basket\"; \"In a high-wind landing, passengers should stand in the front of the basket\"; \"Avoid using the word brace\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "preflight",
+  "claim": "No seat-belt briefing in a basket balloon; no intoxicated passengers",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.107",
+  "quote": "91.107(a)(1) \"(except a free balloon that incorporates a basket or gondola ...)\"; 91.17(b).",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Fly the balloon first; deviate under 91.3(b); flight manual governs",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_7.pdf",
+  "quote": "BFH Ch. 7: \"In all emergencies, it is imperative that the pilot maintain control of the balloon\"; \"In all cases, the information contained in the manufacturer's flight manual should be followed.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Vent/deflation line lost; pilot light out (dual and single burner); fuel leak and gloved-hand snuff",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_7.pdf",
+  "quote": "\"...they have use only of the burner to affect the descent. The pilot should maintain minimum altitudes and land in the largest area possible ... anticipate rebound and dragging ... deliberately landing the balloon in a less than desirable area in order to avoid potential power line contacts\"; \"relight the pilot light by using both burners at the same time\"; \"cracking the main blast valve very slightly, and then lighting the fuel stream\"; \"wrapping a gloved hand around the fitting and \\\"snuffing\\\" out the flame\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Thermal: keep at least equilibrium temperature, don't vent to descend, usually spits you out higher",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_8.pdf",
+  "quote": "\"The temperature noted at equilibrum should be a minimum temperature to maintain. Additionally, the pilot should not vent in an effort to descend\"; \"the thermal usually \\\"spits\\\" the balloon out at a higher altitude.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "High-wind landing steps; 15 mph covers 220 ft in the 10 s a burn takes",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_8.pdf",
+  "quote": "\"fly at the lowest safe altitude to a large field and check that the deflation line is clear ... brief passengers again, turn off fuel valves, drain fuel lines, and turn off pilot lights\"; \"at a speed of 15 mph, the balloon covers a distance of 220 feet\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Water landing: clear of basket in case it inverts; hold on, it floats; deflated envelope sinks, tanks float",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_8.pdf",
+  "quote": "\"get clear of the basket in case it inverts ... keep a strong grip on the basket because it becomes a flotation device ... expect the envelope to sink ... Fuel tanks float\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Propane facts: −44 °F (butane 32 °F), tank at ambient, heavier than air, ethyl mercaptan, 6,800×, 80% gauge, relief ~375 psi; pressure table",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_2.pdf",
+  "quote": "BFH Fig. 2-11: \"(propane -44 °F, butane 32 °F)\"; \"the propane, in the tank, is the same temperature as the ambient air\"; \"ethyl mercaptan\"; \"a combustible mixture 6,800 times the original liquid propane volume\"; \"80 percent of the total capacity\"; \"normally releases at 375 pounds per square inch\". Appendix A table: 0→25, 20→42, 40→65, 60→93, 80→128, 100→177.",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Cold mornings: nitrogen through a regulator; vapor-feed pilots may not tolerate it; bleed via fixed liquid level gauge if cancelled with >30° rise",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_3.pdf",
+  "quote": "\"If the flight is cancelled after pressurization, and the anticipated rise in temperature is expected to be more than 30°, the pressure will need to be bled off by using the fixed liquid level gauge\"; \"Balloon systems using a vapor feed pilot system may not be able to use nitrogen\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "emerg",
+  "claim": "Refueling safety list and shut-off order",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_8.pdf",
+  "quote": "\"Never conduct refueling procedures from inside the basket ... Disable strikers ... The chase vehicle should be shut off ... wear gloves ... Never refuel inside a closed trailer or inside a van\"; \"Shut off the main tank valve first, then close the \\\"spit valve,\\\" then close the main supply line, and then bleed the lines.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "checkride",
+  "claim": "61.39 prerequisites (knowledge test within 24 calendar months; experience; age; endorsement within 2 calendar months, ready, weak areas; signed application)",
+  "verdict": "confirmed",
+  "source": "https://www.ecfr.gov/current/title-14/section-61.39",
+  "quote": "\"(1) Pass the required knowledge test: (i) Within the 24-calendar-month period preceding the month the applicant completes the practical test\"; \"(6) ... (i) Has received and logged training time within 2 calendar months preceding the month of application ... (ii) Is prepared ... (iii) Has demonstrated satisfactory knowledge of the subject areas in which the applicant was deficient\"; \"(7) Have a completed and signed application form.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "checkride",
+  "claim": "Bring list matches the PTS Applicant's Practical Test Checklist (Balloon); medical \"or statement\" vs 61.23(b)(10)",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf",
+  "quote": "Checklist: \"Airworthiness Certificate ... Registration Certificate ... Operating Limitations ... Logbook Record of Airworthiness Inspections and AD Compliance ... Balloon Flight Manual ... Practical Test Standard ... Current Aeronautical Chart ... Computer and Plotter ... Flight Log ... Current AIM ... Identification - Photo/Signature ID ... Current and Appropriate Medical Certificate or Statement ... FAA Form 8710-1 ... AKTR ... FAA Form 8060-5 ... Approved School Graduation Certificate ... Evaluator's Fee\". 61.23(b)(10): no medical \"When taking a practical test ... conducted in a glider, balloon\".",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "checkride",
+  "claim": "Areas I–XI summaries, incl. Area I = Task F plus one other; Launch over obstacle and high-wind landing evaluated orally if conditions don't allow",
+  "verdict": "confirmed",
+  "source": "https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf",
+  "quote": "\"NOTE: The evaluator will select TASK F and at least one other TASK.\" VII.B: \"If conditions do not allow an additional launch to be performed, the applicant's knowledge of this TASK shall be evaluated orally.\" VII.F: \"If a high-wind condition does not exist, the applicant's knowledge of this TASK shall be evaluated orally.\"",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ },
+ {
+  "card": "rules",
+  "claim": "Head-on: the rule tells each pilot to alter course to the right, which a balloon cannot do",
+  "verdict": "question-for-Brian",
+  "source": "https://www.ecfr.gov/current/title-14/section-91.113",
+  "quote": "Rule added as written. Question: add a pilot's note on what a balloon pilot actually does (a powered aircraft must give way to the balloon anyway when converging)?",
+  "checked": "2026-10-21 against eCFR (up to date as of 2026-10-20), AIM (faa.gov html), BFH FAA-H-8083-11B, AWH FAA-H-8083-28B, PHAK FAA-H-8083-25C, PTS FAA-S-8081-18A, Chart Users' Guide 2026-07-09"
+ }
+]
