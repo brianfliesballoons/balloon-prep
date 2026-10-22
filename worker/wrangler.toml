@@ -8,3 +8,8 @@ workers_dev = true
 binding = "DB"
 database_name = "balloon-prep-qa"
 database_id = "d72612c0-6ca6-48ed-b40b-f84337c3e0ef"   # region WNAM
+
+# Google sign-in: the OAuth client id is public. GOOGLE_SECRET is a Worker secret (wrangler secret put GOOGLE_SECRET).
+# GMAIL_FROM: the app's own Gmail that sends the 6-digit codes; email sign-in stays off until it is set and authorised.
+[vars]
+GOOGLE_ID = "392012817802-jupgjb3l7e2bse5rall7q4sgmhgrjb89.apps.googleusercontent.com"

@@ -1,6 +1,7 @@
 // balloon-prep-qa: students ask their instructor, the instructor answers in a hub. Anyone can report a problem with a question.
 // No accounts. A class has a public join code and a secret hub key; a student has a secret key. Only hashes are stored.
 import { pushKey, subscribe, unsubscribe, notifyAnswer, dropSubs } from './push.js';
+import { authRoute, AUTH_RATE, AUTH_SLOW } from './auth.js';  // optional student accounts: /api/auth/*, /api/me/*
 // Rate limits key on a salted SHA-256 of the caller's IP (the raw IP is never stored; rows older than 2 days are pruned).
 const PROD_ORIGINS = ['https://brianfliesballoons.github.io'];
 const ALPHA = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
@@ -11,6 +12,7 @@ const RATE = {
   class: [[HOUR, 5], [DAY, 20]],
   join: [[HOUR, 60], [DAY, 300]],
   report: [[HOUR, 12], [DAY, 50]],
+  ...AUTH_RATE,
 };
 const JOINS_PER_CLASS_DAY = 150;   // new students one class can take in 24 h
 const REPORTS_MAX = 5000;          // open reports kept before new ones are refused
@@ -20,6 +22,7 @@ const SLOW = {
   class: 'A lot of classes have been started from this network recently. Please try again in an hour.',
   join: 'A lot of students have joined from this network in the last hour. Please wait a few minutes and try again.',
   report: 'Thanks, we have plenty of reports from you for now. Please try again in an hour.',
+  ...AUTH_SLOW,
 };
 
 const rand = n => { const b = crypto.getRandomValues(new Uint8Array(n)); return btoa(String.fromCharCode(...b)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
@@ -32,7 +35,7 @@ const norm = s => String(s ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLo
 const origins = env => PROD_ORIGINS.concat(String(env.DEV_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean));
 function cors(req, env) {
   const o = req.headers.get('Origin'), ok = origins(env);
-  return { 'Access-Control-Allow-Origin': ok.includes(o) ? o : ok[0], 'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type,Authorization,X-Student', 'Vary': 'Origin' };
+  return { 'Access-Control-Allow-Origin': ok.includes(o) ? o : ok[0], 'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type,Authorization,X-Student', 'Vary': 'Origin' };
 }
 
 let SALT = null;
@@ -91,6 +94,7 @@ export default {
     const url = new URL(req.url), p = url.pathname.split('/').filter(Boolean);
     if (p[0] !== 'api') return new Response('Not found', { status: 404 });
     try {
+      if (p[1] === 'auth' || p[1] === 'me') return await authRoute(req, env, p, { json, err, limited, origins, salt });
       // POST /api/reports {ref, kind, text} -> {ok}. Anonymous.
       if (p[1] === 'reports' && p.length === 2 && req.method === 'POST') {
         const b = await body(req), ref = clean(b.ref, 60), kind = clean(b.kind, 20), text = clean(b.text, LIM.report);
