@@ -1052,9 +1052,11 @@ $('fb').addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)
 
 // ---------- ask your instructor (shared, via the balloon-prep-qa Worker) ----------
 const QA='https://balloon-prep-qa.brianfliesballoons.workers.dev/api';
+const NETERR='Could not reach the class server. Check your connection.';
+const qaErr=m=>Object.assign(new Error(m),{qa:true}),qaMsg=e=>e&&e.qa?e.message:NETERR; // only api()'s own messages are shown; anything else (Failed to fetch, a bad reply) reads as NETERR
 async function api(path,{method='GET',body,hub,stu}={}){const h={};if(body)h['Content-Type']='application/json';if(hub)h.Authorization='Bearer '+hub;if(stu)h['X-Student']=stu.sid+'.'+stu.key;
-  const r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});let d={};try{d=await r.json();}catch(e){}
-  if(!r.ok)throw new Error(d.error||'Could not reach the class server. Check your connection.');return d;}
+  let r;try{r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});}catch(e){throw qaErr(NETERR);}let d=null;try{d=await r.json();}catch(e){}
+  if(!r.ok)throw qaErr(d&&typeof d.error==='string'&&d.error?d.error:NETERR);if(!d||typeof d!=='object')throw qaErr(NETERR);return d;}
 const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.round(s/60)+' min ago':s<86400?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago';};
 const topicName=t=>LES.topics[t]?LES.topics[t].title:'General';
 let MYQ=null,HUBD={},hubTimer=null;
@@ -1085,7 +1087,7 @@ function vNewClass(){return `<button class="back" data-go="home">${ICON.back}Lea
   <section class="card lc"><label class="fld">Your name<input id="ncName" maxlength="60" autocomplete="name"></label><label class="fld">Class name (optional)<input id="ncClass" maxlength="80" placeholder="e.g. Spring commercial students"></label><button class="btn primary big" data-act="newclass">Create my class</button><div class="mut sm" id="ncMsg"></div></section>`;}
 
 function vHub(code){const H=S.hubs[code];
-  return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H?H.name:code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
+  return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H&&H.name||code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
   <section class="card lc row"><div class="grow"><b>Invite students</b><div class="mut sm">Class code <span class="num" style="color:var(--ink);letter-spacing:.1em">${esc(code)}</span></div></div><button class="btn outline" data-act="copy" data-text="${esc(appURL()+'#join='+code)}">Copy invite link</button></section>
   <div class="modes seg2" role="group" aria-label="Questions"><button class="mode" data-act="tab" data-tab="wait" aria-pressed="${LV.tab!=='done'}" id="tWait">Waiting</button><button class="mode" data-act="tab" data-tab="done" aria-pressed="${LV.tab==='done'}" id="tDone">Answered</button></div>
   <div id="hubBody" class="hubq"></div>
@@ -1098,15 +1100,19 @@ function paintHub(code){const d=HUBD[code],el=$('hubBody');if(!el||!d)return;con
     return `<section class="card lc"><div class="qmeta"><span><b>${who}</b> · ${ago(q.created)}</span><span>${esc(topicName(q.topic))}</span></div><p class="qt">${esc(q.text)}</p>${practiceQ(q.qid,q.picked,who)}
     ${q.answered?`<div class="ans"><b>You:</b> ${esc(q.answer)}</div><div class="mut sm">Answered ${ago(q.answered)}</div>`:`<label class="fld">Your answer<textarea rows="3" maxlength="2000" data-id="${esc(q.id)}" placeholder="Answer in your own words">${esc(drafts[q.id]||'')}</textarea></label><button class="btn primary big" data-act="answer" data-id="${esc(q.id)}">Send answer</button><div class="mut sm" id="am-${esc(q.id)}"></div>`}</section>`;}).join('')
     :`<section class="card lc"><p class="mut">${LV.tab==='done'?'No answered questions yet.':d.students.length?'Nothing waiting. New questions show up here on their own.':'No students yet. Send them your invite link.'}</p></section>`;}
-async function loadHub(code){const H=S.hubs[code];if(!H)return;try{HUBD[code]=await api(`/classes/${code}/hub`,{hub:H.key});if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);}catch(e){const s=$('hubSub');if(s)s.textContent=e.message;}}
+async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await api(`/classes/${code}/hub`,{hub:H.key});if(!d.class||!Array.isArray(d.students)||!Array.isArray(d.questions))throw qaErr(NETERR);HUBD[code]=d;if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);}
+  catch(e){const s=$('hubSub'),b=$('hubBody');if(!s||LV.v!=='hub'||LV.code!==code)return;
+    if(HUBD[code]){s.innerHTML=esc(qaMsg(e))+' <button class="linkb sm" data-act="hubretry">Try again</button>';return;} // keep the questions already shown
+    s.textContent='Not loaded';if(b)b.innerHTML=`<section class="card lc"><p class="mut">${esc(qaMsg(e))}</p><button class="btn primary big" data-act="hubretry">Try again</button></section>`;}}
 
 function myQsHTML(){if(!S.cls)return '';if(!MYQ)return `<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">Loading…</p></section>`;
   const qs=MYQ.questions||[],fresh=qs.filter(q=>q.answered&&!q.seen).length;
   return `<section class="card grp" id="myQs"><div class="gh"><h3>Your questions</h3><span class="sm" style="font-weight:700;color:var(--good)">${fresh?fresh+' new answer'+(fresh===1?'':'s'):''}</span></div>${qs.length?qs.slice(0,8).map(q=>`<article class="myq"><div class="qmeta"><span>${esc(topicName(q.topic))}${q.qid?' · '+esc(q.qid):''} · ${ago(q.created)}</span>${q.answered?`<span class="okc">${ICON.check}${!q.seen?'New answer':'Answered'}</span>`:`<span class="waitc">Waiting for ${esc(S.cls.instructor.split(' ')[0])}</span>`}</div><p>${esc(q.text)}</p>${q.answered?`<div class="ans"><b>${esc(S.cls.instructor.split(' ')[0])}:</b> ${esc(q.answer)}</div>`:''}${q.topic&&LES.topics[q.topic]?`<button class="linkb sm" style="align-self:flex-start;padding-left:0" data-go="${q.qid&&byId[q.qid]?'ask:'+esc(q.qid):'topic:'+esc(q.topic)}">${q.qid&&byId[q.qid]?'See the question':'Open the lesson'}</button>`:''}</article>`).join(''):`<p class="mut sm" style="padding:0 14px 14px">Nothing asked yet. Use “Ask ${esc(S.cls.instructor.split(' ')[0])}” on any lesson or question.</p>`}
   <div class="mut sm" style="padding:8px 14px 12px">${esc(S.cls.name)} · <button class="linkb sm" data-act="leave">Leave class</button></div></section>`;}
-async function loadMine(){if(!S.cls)return;try{MYQ=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});const el=$('myQs');if(el)el.outerHTML=myQsHTML();
+async function loadMine(){if(!S.cls)return;try{const d=await api(`/classes/${S.cls.code}/questions/mine`,{stu:S.cls});if(!Array.isArray(d.questions))throw qaErr(NETERR);MYQ=d;const el=$('myQs');if(el)el.outerHTML=myQsHTML();
   (MYQ.questions||[]).filter(q=>q.answered&&!q.seen).forEach(q=>api(`/classes/${S.cls.code}/questions/${q.id}/seen`,{method:'POST',stu:S.cls}).catch(()=>{}));}
-  catch(e){const el=$('myQs');if(el)el.querySelector('p').textContent=e.message;}}
+  catch(e){const el=$('myQs');if(!el||MYQ)return; // keep answers already on screen; a later visit retries
+    el.outerHTML=`<section class="card lc" id="myQs"><h2 class="lt">Your questions</h2><p class="mut sm">${e.qa&&e.message!==NETERR?esc(e.message):'Your questions and answers could not load. Check your connection.'}</p><button class="btn" data-act="mineretry">Try again</button><div class="mut sm">${esc(S.cls.name)} · <button class="linkb sm" data-act="leave">Leave class</button></div></section>`;}}
 function afterLearn(){clearInterval(hubTimer);
   if(LV.v==='hub'){paintHub(LV.code);loadHub(LV.code);hubTimer=setInterval(()=>{if(mode==='learn'&&LV.v==='hub'&&!document.hidden)loadHub(LV.code);},30000);}
   if(LV.v==='home')loadMine();}
@@ -1116,16 +1122,18 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
   if(a==='join')return busy(async()=>{const code=$('jCode').value.trim().toUpperCase(),name=$('jName').value.trim(),m=$('jMsg');
     if(code.length!==6){m.textContent='The class code has 6 letters and numbers.';return;}if(!name){m.textContent='Add your name so your instructor knows who is asking.';$('jName').focus();return;}
     try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code,name:d.class.name,instructor:d.class.instructor,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
-    catch(e){m.textContent=e.message;}})();
+    catch(e){m.textContent=qaMsg(e);}})();
   if(a==='ask')return busy(async()=>{const txt=$('askText').value.trim(),m=$('askMsg');if(!txt){m.textContent='Type your question first.';$('askText').focus();return;}
     const qid=t.dataset.qid||null,p=qid?lastAns(qid):undefined;
     try{await api(`/classes/${S.cls.code}/questions`,{method:'POST',stu:S.cls,body:{topic:t.dataset.topic||MAP[qid]||null,qid,picked:p===undefined?null:p,text:txt}});$('askText').value='';m.textContent=`Sent. ${S.cls.instructor.split(' ')[0]}'s answer will show under Your questions on the Learn page.`;MYQ=null;}
-    catch(e){m.textContent=e.message;}})();
+    catch(e){m.textContent=qaMsg(e);}})();
   if(a==='answer')return busy(async()=>{const id=t.dataset.id,ta=document.querySelector(`textarea[data-id="${CSS.escape(id)}"]`),m=$('am-'+id);if(!ta.value.trim()){m.textContent='Type an answer first.';ta.focus();return;}
-    try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=e.message;}})();
+    try{await api(`/classes/${LV.code}/questions/${id}/answer`,{method:'POST',hub:S.hubs[LV.code].key,body:{text:ta.value.trim()}});ta.value='';await loadHub(LV.code);}catch(e){m.textContent=qaMsg(e);}})();
   if(a==='newclass')return busy(async()=>{const nm=$('ncName').value.trim(),m=$('ncMsg');if(!nm){m.textContent='Add your name.';$('ncName').focus();return;}
-    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});S.hubs[d.code]={key:d.adminKey,name:d.name};save();LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
-    catch(e){m.textContent=e.message;}})();
+    try{const d=await api('/classes',{method:'POST',body:{instructor:nm,name:$('ncClass').value.trim()}});if(!d.code||!d.adminKey)throw qaErr(NETERR);S.hubs[d.code]={key:d.adminKey,name:d.name};save();LV={v:'hub',code:d.code,tab:'wait'};renderAll();window.scrollTo(0,0);}
+    catch(e){m.textContent=qaMsg(e);}})();
+  if(a==='hubretry')return busy(async()=>{$('hubSub').textContent='Loading…';await loadHub(LV.code);})();
+  if(a==='mineretry')return busy(async()=>{const el=$('myQs');if(el)el.outerHTML=myQsHTML();await loadMine();})();
   if(a==='tab'){LV.tab=t.dataset.tab;$('tWait').setAttribute('aria-pressed',String(LV.tab!=='done'));$('tDone').setAttribute('aria-pressed',String(LV.tab==='done'));paintHub(LV.code);return;}
   if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
   if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}S.cls=null;MYQ=null;save();renderLearn();}}
