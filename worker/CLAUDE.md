@@ -5,7 +5,9 @@
 ## Active to-do
 
 1. LIVE 2026-10-20. Watch the first real student questions in Brian's hub.
-2. Round 2 (2026-10-21, branch `feat/w-server`): rate limits, same-name check, verified/owner marks, problem reports, answer drafts, student deletion. **Production needs the migration applied BEFORE the deploy** (see "Production: applying a migration"), then `owner=1` (and `verified=1`) set on Brian's class.
+2. **Round 2 LIVE 2026-10-21** (Worker version d3f65969): rate limits, same-name check, verified/owner marks (Brian's class has both), problem reports, answer drafts (filled by the private watchdog `com.bcl.balloon-qa-watch`, see BCL/CODING/balloon-prep-qa-watch/), student deletion, and **phone notifications** when an answer lands (`src/push.js`, Web Push with VAPID; table `push_subs`; secrets `VAPID_PUBLIC`/`VAPID_PRIVATE` set on the Worker, private copy in `~/.config/balloon-prep-qa/vapid.env`; rotating them drops every subscription). Both migrations in `migrations/` are applied to production. Pre-migration backup: `~/.config/balloon-prep-qa/backups/pre-round2-2026-10-21.sql`.
+   - Tooling: `npx wrangler@4` can hang on the npm lookup; the cached binary `~/.npm/_npx/32026684e21afda6/node_modules/.bin/wrangler` works. `--remote` D1 calls failed with code 7403 when `CLOUDFLARE_ACCOUNT_ID` was set in the environment and worked without it (wrangler.toml pins the account).
+   - A real push test needs a normal (not headless) Chrome window; `tools/push-selftest.mjs` checks the encryption offline. iPhone: Home Screen app only, iOS 16.4+, and it has its own storage, so a student moves their class there with the sign-in code (Learn → Your questions).
 
 ## What this is
 
