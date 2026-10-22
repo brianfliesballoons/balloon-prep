@@ -84,7 +84,7 @@ export async function unsubscribe(env, s, b) {
 }
 
 // For the student-deletion path: put this statement in the same batch that deletes the student.
-export const dropSubs = (env, sid) => env.DB.prepare('DELETE FROM push_subs WHERE sid=?').bind(sid);
+export const dropSubs = (env, sid, code) => env.DB.prepare('DELETE FROM push_subs WHERE sid=? AND code=?').bind(sid, code);
 
 // After an answer is saved (run it in ctx.waitUntil): tell every device of the student who asked. Never throws.
 export async function notifyAnswer(env, code, id) {

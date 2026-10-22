@@ -72,7 +72,7 @@ async function student(env, req, code) {
 }
 // a student's questions go first (they reference the student row)
 const dropStudent = (env, code, sid) => env.DB.batch([
-  dropSubs(env, sid),
+  dropSubs(env, sid, code),
   env.DB.prepare('DELETE FROM questions WHERE sid=? AND code=?').bind(sid, code),
   env.DB.prepare('DELETE FROM students WHERE sid=? AND code=?').bind(sid, code),
 ]);
@@ -158,7 +158,7 @@ export default {
         if (p[4] && p.length === 5 && req.method === 'DELETE') {
           if (!await admin(env, req, code)) return err(401, 'Hub key not recognised');
           const r = await dropStudent(env, code, p[4]);
-          return r[1].meta.changes ? json({ ok: true }) : err(404, 'That student is not in this class');
+          return r[r.length - 1].meta.changes ? json({ ok: true }) : err(404, 'That student is not in this class');
         }
       }
 
