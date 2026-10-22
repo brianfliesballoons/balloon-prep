@@ -1,13 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="booting">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Balloon Written Prep</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<meta name="description" content="Free study, practice tests, lessons and quick-reference cards for the FAA commercial balloon written test.">
+<meta name="theme-color" content="#e9efec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e161c" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Balloon Prep">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <style>
+/* Fonts are self-hosted (latin subsets, SIL OFL 1.1, see fonts/OFL.txt) so nothing blocks the first paint and they work offline; swap shows text in the fallback font until they load. */
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-hyperlegible-400.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-700.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/barlow-semi-condensed-500.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-semi-condensed-600.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-semi-condensed-700.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-500.woff2) format("woff2")}
+/* Loading state: until the question bank arrives the card shows only a loading line (html.booting is removed at the end of boot). */
+#loadMsg{display:none}
+html.booting #loadMsg{display:block;margin:28px 0;text-align:center;color:var(--muted)}
+html.booting #main>.card:first-child>:not(#loadMsg),html.booting #bench,html.booting #filters{display:none}
+html.booting .grid{grid-template-columns:minmax(0,760px);justify-content:center}
 /* Layout: one page per question. Question card left, chart workbench right when the question has a figure; a single centered column when it does not. */
 :root{
   --bg:#e9efec; --surface:#fbfcfa; --ink:#14263a; --muted:#566775; --line:#c6d2cd;
@@ -398,6 +417,7 @@ body.max .canvas-wrap{height:calc(100dvh - 190px);min-height:300px}
 
   <div class="grid" id="main">
     <section class="card" aria-label="Question">
+      <p id="loadMsg" role="status">Loading questions…</p>
       <div class="qhead">
         <button class="navbtn" id="navToggle" aria-expanded="false"><span id="qpos">1 of 1</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l5 5 5-5"/></svg></button>
         <span class="timer" id="timer" hidden></span>
@@ -1127,7 +1147,7 @@ $('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
 {const hd=document.querySelector('header'),setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');new ResizeObserver(setH).observe(hd);setH();
  addEventListener('scroll',()=>{const c=document.documentElement.classList,y=scrollY;if(y>90&&!c.contains('compact'))c.add('compact');else if(y<20&&c.contains('compact'))c.remove('compact');},{passive:true});}
 
-Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json')]).then(([sets,les,map,kinds])=>{
+const BOOT=Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json')]).then(([sets,les,map,kinds])=>{
   if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;
   const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
   BANK=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
@@ -1142,6 +1162,8 @@ Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/les
   else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
   renderAll();
 });
+// boot done: drop the loading state, then install the offline copy (after the boot fetches, so a first visit never downloads the bank twice at once)
+{const done=()=>{document.documentElement.classList.remove('booting');if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});};BOOT.then(done,e=>{done();throw e;});}
 })();
 </script>
 </body>
