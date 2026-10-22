@@ -3,7 +3,7 @@
 // so a new deploy reaches any online student on their next load. Fonts have fixed names and are served cache-first.
 // It never touches cross-origin requests (the instructor Worker included) or anything that is not a GET.
 // Bump VERSION when the PRECACHE list changes; old caches are deleted on activate.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'balloon-prep-' + VERSION;
 const PREFIX = 'balloon-prep-';
 const TIMEOUT = 3000;
