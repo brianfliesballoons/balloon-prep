@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy · Balloon Written Prep</title>
+<style>
+@font-face{font-family:"Atkinson Hyperlegible";font-weight:400;font-display:swap;src:url(fonts/atkinson-hyperlegible-400.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-700.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:700;font-display:swap;src:url(fonts/barlow-semi-condensed-700.woff2) format("woff2")}
+:root{--bg:#e9efec;--surface:#fbfcfa;--ink:#14263a;--muted:#566775;--line:#c6d2cd}
+@media (prefers-color-scheme:dark){:root{--bg:#0e161c;--surface:#15212a;--ink:#e4ecf1;--muted:#94a6b3;--line:#2a3b47}}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif}
+main{max-width:40rem;margin:0 auto;padding:28px 16px 48px}
+article{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 20px 8px}
+h1,h2{font-family:"Barlow Semi Condensed",sans-serif;line-height:1.2}h1{font-size:30px;margin:0 0 4px}h2{font-size:21px;margin:26px 0 6px}
+p,ul{margin:8px 0}li{margin:4px 0}.mut{color:var(--muted)}a{color:var(--ink)}
+</style>
+</head>
+<body>
+<main>
+<p><a href="./">← Balloon Written Prep</a></p>
+<article>
+<h1>Privacy</h1>
+<p class="mut">Balloon Written Prep · last updated 22 October 2026</p>
+
+<p>Balloon Written Prep is a free study app for the FAA commercial balloon written test. It is open source, and it has no ads, no trackers and no analytics.</p>
+
+<h2>Without an account</h2>
+<p>Your answers, flags, review schedule and test scores are saved only in your browser on your device. Nothing about your studying is sent anywhere.</p>
+
+<h2>If you sign in</h2>
+<p>Signing in is optional. It saves a copy of your study progress to your account, so it shows up on every device where you sign in. We keep:</p>
+<ul>
+  <li><b>Your study progress</b>: which practice questions you answered and how, your flags, review schedule, practice test scores and test date.</li>
+  <li><b>How you sign in</b>, and nothing more:
+    <ul>
+      <li><b>Face ID (passkey)</b>: the passkey's public key. The private key never leaves your device, and we never see your face or fingerprint.</li>
+      <li><b>Email code</b>: a one-way scrambled form (a salted hash) of your email address, so we can recognise it next time. The address itself is not stored. We use it once, to send the code.</li>
+      <li><b>Google</b>: your Google account number and the scrambled form of your email. We ask Google only for your email address, never your name, contacts, files or anything else.</li>
+    </ul>
+  </li>
+</ul>
+<p>We do not sell, share or use this for anything except keeping your progress in sync. Rate limits use a scrambled form of your network address that cannot be turned back into the address, and those records are deleted after two days.</p>
+
+<h2>Instructors and classes</h2>
+<p>If you join an instructor's class, your instructor sees your name and the questions you send them. <b>Your instructor never sees your study progress</b>, whether or not you sign in.</p>
+
+<h2>Deleting your account</h2>
+<p>In the app, tap your account at the top, then <b>Delete my account and saved progress</b>. That deletes the account and everything saved in it straight away. The progress on your device stays until you reset it there. If your phone still lists a passkey for this app, you can delete it in the Passwords app.</p>
+
+<h2>Where it is kept</h2>
+<p>Accounts and progress are stored on Cloudflare (Workers and D1). Codes are emailed from the app's own Gmail account. Google sign-in follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+<h2>Questions</h2>
+<p>The app's code is public: <a href="https://github.com/brianfliesballoons/balloon-prep">github.com/brianfliesballoons/balloon-prep</a>. You can open an issue there with any privacy question.</p>
+</article>
+</main>
+</body>
+</html>

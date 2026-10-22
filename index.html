@@ -67,7 +67,28 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center;justify-conten
 .infod::backdrop{background:rgba(10,20,28,.45)}
 .infod h2{margin:0 0 8px;font-size:1.15rem}.infod h3{margin:14px 0 4px;font-size:1rem}.infod p,.infod ol,.infod ul{margin:4px 0}.infod ol,.infod ul{padding-left:1.3em}.infod li{margin:3px 0}
 .infoa{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:14px}.infoa .btn{min-height:44px}
-@media print{.infob,.infod{display:none!important}}
+/* account: header button + sign-in sheet. Scoped names: .acctb .acctd .acct* */
+.acctb{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:5px;min-height:36px;font-family:var(--f-display);font-weight:600;font-size:.95rem;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:7px;padding:4px 12px;cursor:pointer;position:relative}
+.acctb::after{content:"";position:absolute;inset:-4px}
+.acctb.on{color:var(--good);border-color:var(--good);background:var(--good-bg)}.acctb svg{width:16px;height:16px}
+.acctd{width:min(30rem,calc(100vw - 32px));box-sizing:border-box}.acctd>*+*{margin-top:12px}.acctd h2{font-size:1.35rem;margin-top:4px}
+.acctd .btn.big{width:100%}.acctd .btn.big svg{width:20px;height:20px;flex:none}.acctd .btn.outline{border-color:var(--ink);color:var(--ink)}
+.acctd .acctn{margin-top:6px}.acctd .fld input{font-size:17px}
+.acctg{background:var(--paper);border:1.5px solid var(--line)}
+.acctor{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.9rem}.acctor::before,.acctor::after{content:"";flex:1;height:1px;background:var(--line)}
+.acctbox{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);display:flex;flex-direction:column;gap:8px}.acctbox p{margin:0}
+.acctwho{font-weight:700;font-size:1.05rem;overflow-wrap:anywhere}
+.acctok{display:flex;align-items:center;gap:8px;background:var(--good-bg);color:var(--good);border-radius:8px;padding:8px 12px;font-weight:700;font-size:.92rem}.acctok svg{width:18px;height:18px;flex:none}
+.acctok.bad{background:var(--bad-bg);color:var(--bad)}
+.acctm{background:var(--chip);border-radius:8px;padding:8px 12px;margin:0}
+.acctcode{font-family:var(--f-num)!important;font-size:28px!important;letter-spacing:.15em;text-align:center}
+.acctrow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px}.acctrow .lnk:disabled{color:var(--muted);text-decoration:none;cursor:default}
+.acctcmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.acctcmp>div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper);font-size:.95rem;line-height:1.5}
+.acctcmp b{display:block;font-family:var(--f-display);text-transform:uppercase;letter-spacing:.04em;font-size:.82rem;color:var(--muted)}
+.acctdel{color:var(--bad)}
+html.signed .pgxin,html:not(.signed) .pgxon{display:none}
+@media (max-width:420px){.acctb{padding:4px 9px}}
+@media print{.infob,.infod,.acctb{display:none!important}}
 .brand svg{width:30px;height:30px;flex:none}
 h1{font-family:var(--f-display);font-weight:700;font-size:1.65rem;letter-spacing:.01em;margin:0;line-height:1.1}
 h2{font-family:var(--f-display);font-weight:700;font-size:1.4rem;margin:0 0 6px;text-wrap:balance}
@@ -495,6 +516,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C9.4 2 5 7 5 12.6c0 5.2 5 9.3 8 12.4h6c3-3.1 8-7.2 8-12.4C27 7 22.6 2 16 2z" fill="var(--isa)"/><path d="M16 2c-3 0-5 5-5 10.6 0 5 2 9.4 2 12.4h6c0-3 2-7.4 2-12.4C21 7 19 2 16 2z" fill="var(--hl)"/><rect x="12.5" y="26" width="7" height="4.5" rx="1" fill="var(--pa)"/></svg>
       <h1>Balloon Written Prep</h1>
       <button class="infob" data-info="save" aria-label="How your progress is saved" title="How your progress is saved">i</button>
+      <button class="acctb" id="acctBtn" aria-haspopup="dialog">Sign in</button>
     </div>
     <div class="modes" role="group" aria-label="Mode">
       <button class="mode" id="mStudy" aria-pressed="true">Study</button>
@@ -596,7 +618,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 
   <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
   <div class="pgx" id="pgx">
-    <p><b>Your progress</b> is saved only in this browser on this device. Export a copy now and then, so you can move it to another phone or get it back if the browser clears it. <button class="lnk" data-info="save">How saving works</button></p>
+    <p><b>Your progress</b> is saved in this browser on this device<span class="pgxon">, and in your account</span>. <span class="pgxin"><button class="lnk" data-acct>Sign in</button> to keep it on every device, or export a copy now and then so you can move it or get it back if the browser clears it.</span><span class="pgxon">You can also export a copy as a file.</span> <button class="lnk" data-info="save">How saving works</button></p>
     <button class="btn" id="pgxExport">Export my progress</button>
     <button class="btn" id="pgxImport">Import progress</button>
     <input type="file" id="pgxFile" accept=".json,application/json" hidden>
@@ -611,6 +633,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   </div>
 </div>
 
+<dialog class="infod acctd" id="acctD" aria-labelledby="acctH"></dialog>
 <script>
 (function(){
 // ---------- data ----------
@@ -637,7 +660,9 @@ S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||nul
 const HELD={for:null,test:null};
 const saveData=()=>HELD.for===S&&!S.test?Object.assign({},S,{test:HELD.test}):S;
 const testHeld=()=>HELD.for===S&&!S.test&&!!HELD.test;  // while held, the Practice test tab must not start a new test over it
-function save(){try{localStorage.setItem(KEY,JSON.stringify(saveData()));return true;}catch(e){const n=document.getElementById('ntSave');if(n)n.hidden=false;return false;}}
+// quiet: write this device's copy only (used when sync itself changes S); otherwise a signed-in account also gets the change
+function save(quiet){if(!quiet&&typeof syncSoon==='function')syncSoon();try{localStorage.setItem(KEY,JSON.stringify(saveData()));return true;}catch(e){const n=document.getElementById('ntSave');if(n)n.hidden=false;return false;}}
+const stamp=id=>{(S.at||(S.at={}))[id]=Date.now();};  // S.at[id]: when a study answer was given
 
 // ---------- view state ----------
 let mode='study',filter='ALL',list=[],pos=0,tick=null;
@@ -750,7 +775,7 @@ function copyNotes(){const lines=[];BANK.forEach(q=>{const g=S.grade[q.id];if(g)
 function fallbackCopy(text,done){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}t.remove();}
 
 function answer(i,kb){const q=cur();if(GRADE||mode==='review')return;
-  if(mode==='study'){if(S.study[q.id]!==undefined)return;S.study[q.id]=i;sched(q.id,i===q.answer);}
+  if(mode==='study'){if(S.study[q.id]!==undefined)return;S.study[q.id]=i;stamp(q.id);sched(q.id,i===q.answer);}
   else if(mode==='due'){if(dueAns[q.id]!==undefined)return;dueAns[q.id]=i;sched(q.id,i===q.answer);}
   else if(mode==='test'){S.test.answers[q.id]=i;}
   const had=$('choices').contains(document.activeElement);
@@ -864,7 +889,7 @@ $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggl
 // Start one study set over: clears only this set's study answers; flags, tests and the review queue stay.
 $('redo').onclick=()=>{const b=$('redo');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to clear them. Flags, tests and your review queue stay.';return;}
   b.dataset.armed='';list.forEach(id=>delete S.study[id]);save();pos=0;renderAll();};  // keep the same list, so a cleared Missed set can be redone
-$('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent='Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},hubs:S.hubs,cls:S.cls,exam:S.exam};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
+$('wipe').onclick=()=>{const b=$('wipe');if(b.dataset.armed!=='1'){b.dataset.armed='1';b.textContent=ACCT?'Tap again to erase answers, flags and tests on this device and in your account':'Tap again to erase answers, flags and tests on this device';return;}S={study:{},flags:{},test:null,grade:S.grade,review:{},lessons:{},hubs:S.hubs,cls:S.cls,exam:S.exam,at:{},push:S.push};save();b.dataset.armed='';b.textContent='Progress reset';mode='study';list=studyList();pos=0;renderAll();};
 document.addEventListener('keydown',e=>{if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'||$('main').hidden)return;const k=e.key.toLowerCase();
   if(k==='a'||k==='b'||k==='c'){answer('abc'.indexOf(k),true);}else if(k==='arrowright')go(pos+1);else if(k==='arrowleft')go(pos-1);else if(k==='f')$('flag').click();
   else if(k==='escape'&&document.body.classList.contains('max'))toggleMax(false);});
@@ -1052,7 +1077,8 @@ const sv=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 const ICON={back:sv('<path d="M15 18l-6-6 6-6"/>'),next:sv('<path d="M9 18l6-6-6-6"/>'),ext:sv('<path d="M7 17L17 7"/><path d="M8 7h9v9"/>'),
   chart:sv('<path d="M3 3v18h18"/><path d="M7 16l4-5 3 3 5-7"/>'),review:sv('<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/>'),
   flag:sv('<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>'),plan:sv('<path d="M9 5h11M9 12h11M9 19h11"/><path d="M4 5l1 1 2-2M4 12l1 1 2-2M4 19l1 1 2-2"/>'),
-  cal:sv('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),check:sv('<path d="M5 12l5 5L20 7"/>'),x:sv('<path d="M6 6l12 12M18 6L6 18"/>'),
+  cal:sv('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),check:sv('<path d="M5 12l5 5L20 7"/>'),key:sv('<circle cx="8" cy="9" r="4"/><path d="M11 12l9 9M17 18l2-2M15 16l2-2"/>'),
+  google:'<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.5 5.8c4.4-4 6.8-10 6.8-17.3z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.5 0 20.1 0 24s1 7.5 2.7 10.7l7.8-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.2 0-11.5-4.1-13.4-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>',x:sv('<path d="M6 6l12 12M18 6L6 18"/>'),
   chat:sv('<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>'),bell:sv('<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>'),book:sv('<path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2z"/><path d="M22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/>')};
 const dots=(pts,col)=>pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4" fill="${col}"/>`).join('');
 const PIC={density:`<div class="pic2"><figure><svg viewBox="0 0 120 80" role="img" aria-label="Cool air: dots packed close together">${dots([[10,10],[30,10],[50,10],[70,10],[90,10],[110,10],[20,30],[40,30],[60,30],[80,30],[100,30],[10,50],[30,50],[50,50],[70,50],[90,50],[110,50],[20,70],[40,70],[60,70],[80,70],[100,70]],'var(--pa)')}</svg><figcaption>Cool morning: dense</figcaption></figure><figure><svg viewBox="0 0 120 80" role="img" aria-label="Hot afternoon: dots spread far apart">${dots([[12,12],[58,8],[104,16],[34,40],[82,44],[14,70],[60,72],[106,68]],'var(--isa)')}</svg><figcaption>Hot afternoon: thin</figcaption></figure></div>`};
@@ -1195,7 +1221,7 @@ function goLearn(g){const [k,a]=g.split(/:(.*)/);
 $('learn').addEventListener('click',e=>{const t=e.target.closest('[data-go],[data-ans],[data-basic],[data-act]');if(!t)return;
   if(t.dataset.act){qaAct(t);return;}
   if(t.dataset.go){goLearn(t.dataset.go);return;}
-  if(t.dataset.ans){const [id,i]=t.dataset.ans.split(':'),q=byId[id];if(!q||S.study[id]!==undefined)return;S.study[id]=+i;sched(id,+i===q.answer);
+  if(t.dataset.ans){const [id,i]=t.dataset.ans.split(':'),q=byId[id];if(!q||S.study[id]!==undefined)return;S.study[id]=+i;stamp(id);sched(id,+i===q.answer);
     if(LV.v==='topic'&&LES.topics[LV.t]?.lesson&&LV.checks.every(x=>S.study[x]!==undefined))S.lessons[LV.t]=Date.now();save();
     const y=window.scrollY;renderLearn();window.scrollTo(0,y);
     const fb=$('learn').querySelector(`[data-ans^="${CSS.escape(id)}:"]`)?.closest('.cq')?.querySelector('.fb');if(fb){fb.tabIndex=-1;sayV(fb.querySelector('.verdict'));focusQuiet(fb,!e.detail);}return;}
@@ -1225,7 +1251,7 @@ $('fb').addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t)
 const QA='https://balloon-prep-qa.brianfliesballoons.workers.dev/api';
 const NETERR='Could not reach the class server. Check your connection.';
 const qaErr=m=>Object.assign(new Error(m),{qa:true}),qaMsg=e=>e&&e.qa?e.message:NETERR; // only api()'s own messages are shown; anything else (Failed to fetch, a bad reply) reads as NETERR
-async function api(path,{method='GET',body,hub,stu}={}){const h={};if(body)h['Content-Type']='application/json';if(hub)h.Authorization='Bearer '+hub;if(stu)h['X-Student']=stu.sid+'.'+stu.key;
+async function api(path,{method='GET',body,hub,stu,tok}={}){const h={};if(body)h['Content-Type']='application/json';if(hub||tok)h.Authorization='Bearer '+(hub||tok);if(stu)h['X-Student']=stu.sid+'.'+stu.key;
   let r;try{r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});}catch(e){throw qaErr(NETERR);}let d=null;try{d=await r.json();}catch(e){}
   if(!r.ok)throw qaErr(d&&typeof d.error==='string'&&d.error?d.error:NETERR);if(!d||typeof d!=='object')throw qaErr(NETERR);return d;}
 const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.round(s/60)+' min ago':s<86400?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago';};
@@ -1428,6 +1454,194 @@ document.addEventListener('click',e=>{const d=$('saveInfo');
   if(e.target.closest('[data-info]')){d.showModal();d.scrollTop=0;d.querySelector('[data-info-close]').focus({preventScroll:true});return;}
   if(e.target.closest('[data-info-close]')||e.target===d){d.close();return;}
   if(e.target.closest('[data-info-go]')){d.close();$('pgx').scrollIntoView({behavior:'smooth',block:'center'});$('pgxExport').focus({preventScroll:true});}});
+// ---------- optional account: progress follows the student (passkey, emailed code, or Google) ----------
+// ACCT (localStorage 'bwp-acct', never exported): {tok, how:'passkey'|'email'|'google', email, ver, base}. base = the progress as the account last had it,
+// so a sync can tell what changed here from what changed elsewhere. Instructor hub keys (hubs) and this device's push subscription (push) never leave the device.
+const ACK='bwp-acct';
+var ACCT=null;try{ACCT=JSON.parse(localStorage.getItem(ACK)||'null');}catch(e){}
+const acctKeep=()=>{try{ACCT?localStorage.setItem(ACK,JSON.stringify(ACCT)):localStorage.removeItem(ACK);}catch(e){}};
+const AV={v:'start',cfg:null,msg:'',busy:false};  // what the account sheet shows
+const SY={timer:null,busy:false,again:false,last:0,err:''};
+const b64u=b=>btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb64u=s=>{s=s.replace(/-/g,'+').replace(/_/g,'/');return Uint8Array.from(atob(s+'='.repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));};
+const sha256hex=async t=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)))].map(x=>x.toString(16).padStart(2,'0')).join('');
+const jeq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+const pkOK=()=>!!(window.PublicKeyCredential&&navigator.credentials&&navigator.credentials.create);
+
+function progLocal(){const d=JSON.parse(JSON.stringify(saveData()));delete d.hubs;delete d.push;return d;}
+const progEmpty=d=>!d||!['study','flags','review','lessons'].some(k=>d[k]&&Object.keys(d[k]).length)&&!(d.hist&&d.hist.length)&&!d.test&&!d.cls;
+function progCount(d){d=d||{};const n=o=>o?Object.keys(o).length:0,t=(d.hist||[]).length+(d.test&&!d.test.done?1:0);
+  return `${n(d.study)} answered<br>${n(d.flags)} flagged<br>${t} practice test${t===1?'':'s'}`;}
+
+// Three-way merge. B = what both started from (null when two separate copies meet for the first time).
+// A side that changed something since B wins it; when both changed the same thing, the newer answer wins, flags and test scores are kept from both.
+function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
+  const pick={study:(id,l,r)=>((L.at||{})[id]||0)>=((R.at||{})[id]||0)?l:r,at:(id,l,r)=>Math.max(l,r),
+    review:(id,l,r)=>(l.last??0)>=(r.last??0)?l:r,lessons:(id,l,r)=>Math.max(l,r),flags:(id,l,r)=>l||r,grade:(id,l)=>l};
+  for(const k of Object.keys(pick)){const b=(B&&B[k])||{},l=L[k]||{},r=R[k]||{},o={};
+    for(const id of new Set([...Object.keys(b),...Object.keys(l),...Object.keys(r)])){const lv=l[id],rv=r[id];let v;
+      if(!B)v=lv===undefined?rv:rv===undefined?lv:pick[k](id,lv,rv);
+      else{const lc=!jeq(lv,b[id]),rc=!jeq(rv,b[id]);v=lc&&rc&&lv!==undefined&&rv!==undefined?pick[k](id,lv,rv):lc?lv:rv;}
+      if(v!==undefined)o[id]=v;}
+    out[k]=o;}
+  const lh=L.hist||[],rh=R.hist||[],bh=B&&B.hist||[];
+  if(B&&jeq(lh,bh))out.hist=rh;else if(B&&jeq(rh,bh))out.hist=lh;
+  else{const m=new Map();[...rh,...lh].forEach(h=>h&&m.set(h.end+':'+h.pct,h));out.hist=[...m.values()].sort((a,b)=>a.end-b.end).slice(-50);}
+  for(const k of ['test','exam','spos','cls']){const lv=L[k],rv=R[k];out[k]=!B?(lv==null?rv:lv):!jeq(lv,B[k])?lv:rv;if(out[k]===undefined)delete out[k];}
+  return out;}
+
+// put progress from the account onto this device (hub keys and push stay as they are)
+function progApply(M){const keep={hubs:S.hubs,push:S.push},was=JSON.stringify(progLocal());
+  S=Object.assign({study:{},flags:{},test:null,grade:{}},JSON.parse(JSON.stringify(M)),keep);
+  S.review=S.review||{};S.lessons=S.lessons||{};S.hubs=S.hubs||{};S.cls=S.cls||null;HELD.for=null;fixTest();save(true);
+  if(JSON.stringify(progLocal())===was)return;
+  if(mode==='study'){const id=list[pos];list=studyList();pos=Math.max(0,list.indexOf(id));}
+  const y=window.scrollY;renderAll();window.scrollTo(0,y);}
+
+function syncSoon(){if(!ACCT)return;clearTimeout(SY.timer);SY.timer=setTimeout(syncNow,3000);}
+// Send this device's changes, or take the account's. A 409 means another device saved first: merge, then send again.
+async function syncNow(){if(!ACCT)return;clearTimeout(SY.timer);SY.timer=null;if(SY.busy){SY.again=true;return;}SY.busy=true;
+  try{let L=progLocal();
+    for(let i=0;i<4&&ACCT;i++){
+      if(ACCT.base&&jeq(L,ACCT.base)){const d=await api('/me/progress',{tok:ACCT.tok});
+        if(d.ver!==ACCT.ver){const M=mergeProg(ACCT.base,L,d.prog||{});ACCT.base=d.prog||{};ACCT.ver=d.ver;acctKeep();progApply(M);L=progLocal();if(!jeq(L,ACCT.base))continue;}
+        break;}
+      const r=await fetch(QA+'/me/progress',{method:'PUT',headers:{'Content-Type':'application/json',Authorization:'Bearer '+ACCT.tok},body:JSON.stringify({prog:L,base:ACCT.ver})});
+      const d=await r.json().catch(()=>null);
+      if(r.ok&&d){ACCT.ver=d.ver;ACCT.base=L;acctKeep();break;}
+      if(r.status===409&&d){const M=mergeProg(ACCT.base,L,d.prog||{});ACCT.base=d.prog||{};ACCT.ver=d.ver;acctKeep();progApply(M);L=progLocal();continue;}
+      if(r.status===401){acctGone('You were signed out. Sign in again to keep saving to your account.');return;}
+      throw qaErr(d&&d.error||NETERR);}
+    SY.last=Date.now();SY.err='';}
+  catch(e){SY.err=qaMsg(e);if(e&&e.qa&&/sign in again/i.test(e.message))acctGone('You were signed out. Sign in again to keep saving to your account.');}
+  finally{SY.busy=false;acctBtn();if($('acctD').open&&AV.v==='acct')acctPaint();if(SY.again){SY.again=false;syncSoon();}}}
+function acctGone(msg){ACCT=null;acctKeep();AV.v='start';AV.msg=msg;acctBtn();}
+
+// first sign-in on this device: if both this device and the account have progress, ask before putting them together
+// (ACCT is set only once that is settled, so nothing syncs in between)
+async function signedIn(d,how,email){const A={tok:d.token,how,email:email||null,ver:0,base:null};AV.busy=true;acctPaint();
+  let r;try{r=await api('/me/progress',{tok:A.tok});}catch(e){AV.busy=false;AV.v='start';AV.msg=qaMsg(e);api('/me/signout',{method:'POST',tok:A.tok}).catch(()=>{});acctPaint();return;}
+  AV.busy=false;const L=progLocal(),R=r.prog;A.ver=r.ver;
+  if(progEmpty(R)){A.base=R||{};ACCT=A;acctKeep();AV.v='acct';AV.msg='Signed in. Your progress is saving to your account.';acctBtn();acctPaint();syncNow();return;}
+  if(progEmpty(L)||jeq(L,R)){A.base=R;ACCT=A;acctKeep();progApply(R);AV.v='acct';AV.msg='Signed in. Your progress is on this device now.';acctBtn();acctPaint();return;}
+  AV.v='merge';AV.P=A;AV.R=R;acctPaint();}
+function mergeCancel(){const A=AV.P;AV.P=AV.R=null;if(A)api('/me/signout',{method:'POST',tok:A.tok}).catch(()=>{});}
+async function signOut(){const t=ACCT&&ACCT.tok;clearTimeout(SY.timer);if(ACCT&&!jeq(progLocal(),ACCT.base))await syncNow();
+  ACCT=null;acctKeep();if(t)api('/me/signout',{method:'POST',tok:t}).catch(()=>{});}
+
+// ----- the sheet -----
+const acctBtn=()=>{document.documentElement.classList.toggle('signed',!!ACCT);const b=$('acctBtn');if(!b)return;b.classList.toggle('on',!!ACCT);
+  b.innerHTML=ACCT?ICON.check+'<span>Synced</span>':'Sign in';b.setAttribute('aria-label',ACCT?'Your account (progress saved to it)':'Sign in to keep your progress on every device');};
+const acctWho=()=>ACCT.email?esc(ACCT.email):ACCT.how==='passkey'?'your passkey (Face ID)':'your Google account';
+async function acctCfg(){if(AV.cfg)return AV.cfg;try{AV.cfg=await api('/auth/config');}catch(e){AV.cfgErr=qaMsg(e);}return AV.cfg;}
+function acctOpen(){const d=$('acctD');AV.msg='';AV.v=ACCT?'acct':AV.v==='code'||AV.v==='gwait'?AV.v:'start';AV.pkNone=false;acctPaint();if(!d.open)d.showModal();d.scrollTop=0;
+  if(!ACCT&&!AV.cfg)acctCfg().then(()=>{if(d.open&&AV.v==='start')acctPaint();});
+  if(ACCT){syncNow();api('/me',{tok:ACCT.tok}).then(m=>{AV.me=m;if(d.open&&AV.v==='acct')acctPaint();}).catch(()=>{});}}
+function acctPaint(){if(AV.v==='acct'&&!ACCT)AV.v='start';const d=$('acctD'),c=AV.cfg,m=AV.msg?`<p class="acctm" role="status">${esc(AV.msg)}</p>`:'',busy=AV.busy?' disabled':'';let h='';
+  if(AV.v==='start'){
+    h=`<h2 id="acctH">Keep your progress on every device</h2><p class="mut">Sign in and your answers, flags, review schedule and test scores follow you: Safari, the Home Screen app, a new phone.</p>${m}`;
+    if(pkOK())h+=`<button class="btn primary big" data-ac="pkget"${busy}>${ICON.key}Sign in with Face ID (passkey)</button><p class="mut sm acctn">No email needed. Your phone keeps the key in iCloud Keychain, so it follows you to a new iPhone.</p>`+
+      (AV.pkNone?`<div class="acctbox"><b>No passkey for this app yet?</b><p class="sm">Make one now. Your phone asks for Face ID, Touch ID or your passcode, and that's it.</p><button class="btn primary big" data-ac="pkmake"${busy}>Make a passkey</button></div>`:'');
+    if(!c&&!AV.cfgErr)h+=`<p class="mut sm">Loading the other ways to sign in…</p>`;
+    if(AV.cfgErr&&!c)h+=`<p class="mut sm">${esc(AV.cfgErr)}</p>`;
+    if(c&&c.email)h+=`<div class="acctor">${pkOK()?'or use your email':'Use your email'}</div><label class="fld">Your email<input type="email" id="acEmail" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" value="${esc(AV.email||'')}"></label><button class="btn outline big" data-ac="emstart"${busy}>Email me a code</button>`;
+    if(c&&c.google)h+=`<div class="acctor">or</div><a class="btn big acctg" id="acG" href="#" target="_blank" rel="noopener" data-ac="gstart">${ICON.google}Continue with Google</a>`;
+    h+=`<p class="mut sm">No password. We keep only your progress and a scrambled form of your email (or your Google account number), never the address itself. Your instructor never sees your study progress. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></p><div class="infoa"><button class="btn" data-ac="close">Not now, keep studying</button></div>`;}
+  else if(AV.v==='code'){
+    h=`<button class="lnk" data-ac="back">← Back</button><h2 id="acctH">Check your email</h2><p>We sent a 6-digit code to <b>${esc(AV.email)}</b>. It works for 10 minutes.</p>${m}
+      <label class="fld">Code<input id="acCode" inputmode="numeric" autocomplete="one-time-code" maxlength="7" class="acctcode"></label><p class="mut sm">On iPhone the code may show above the keyboard. Tap it to fill it in.</p>
+      <button class="btn primary big" data-ac="emverify"${busy}>Sign in</button><div class="acctrow"><button class="lnk" data-ac="emresend" id="acResend"></button><button class="lnk" data-ac="back">Use a different email</button></div>
+      <p class="acctbox sm">Nothing there? Check spam or promotions. The code is in the subject line.</p>`;}
+  else if(AV.v==='gwait'){
+    h=`<button class="lnk" data-ac="back">← Back</button><h2 id="acctH">Finish in the Google window</h2><p>Pick your Google account there. When it says you're signed in, come back here and this finishes by itself.</p>${m}
+      <div class="acctbox"><label class="fld">${AV.needCode?'Type the code the Google page shows':'If it asks, type the code the Google page shows'}<input id="acGCode" inputmode="numeric" autocomplete="off" maxlength="7" class="acctcode"></label><button class="btn primary big" data-ac="gcode"${busy}>Sign in</button></div>`;}
+  else if(AV.v==='merge'){
+    h=`<h2 id="acctH">You have progress in two places</h2><p>Your account and this device both have saved study. Put them together?</p><div class="acctcmp"><div><b>This device</b><div>${progCount(progLocal())}</div></div><div><b>Your account</b><div>${progCount(AV.R)}</div></div></div>
+      <button class="btn primary big" data-ac="mcombine">Combine them (recommended)</button><p class="mut sm">Nothing is lost. Every question you answered in either place is kept, with the most recent answer winning. All flags and test scores are kept.</p>
+      <button class="btn big" data-ac="maccount">Use my account's progress only</button><div class="infoa"><button class="btn" data-ac="mcancel">Cancel, stay signed out</button></div>`;}
+  else if(AV.v==='acct'&&ACCT){const me=AV.me||{},st=SY.busy?'Saving…':SY.err?esc(SY.err):SY.last?'Progress saved · '+ago(SY.last):'Progress saved';
+    h=`<h2 id="acctH">Your account</h2>${m}<div class="acctbox"><div class="mut sm">Signed in with</div><div class="acctwho">${acctWho()}</div><div class="acctok${SY.err?' bad':''}">${SY.err?ICON.x:ICON.check}${st}</div>
+      <p class="sm">Sign in the same way on any phone, tablet or computer, or in the Home Screen app, and pick up right here.</p></div>
+      ${S.cls?`<div class="acctbox"><div class="mut sm">Class</div><div>${esc(S.cls.name)}</div><p class="mut sm">Your class comes with you when you sign in. Your instructor sees your questions, never your study progress.</p></div>`:''}
+      ${pkOK()&&ACCT.how!=='passkey'&&me.passkeys===0?`<div class="acctbox"><b>Sign in faster next time</b><p class="sm">Add Face ID to this account. Next time it's one tap, no email or Google.</p><button class="btn big" data-ac="pkadd"${busy}>${ICON.key}Add Face ID (passkey)</button></div>`:''}
+      <button class="btn big" data-ac="signout"${busy}>Sign out on this device</button><p class="mut sm">Signing out keeps a copy of your progress on this device. Your account keeps it too.</p>
+      <button class="lnk acctdel" data-ac="del">${AV.delArmed?'Tap again to delete your account and the progress saved in it':'Delete my account and saved progress'}</button>
+      <div class="infoa"><button class="btn primary" data-ac="close">Done</button></div>`;}
+  d.innerHTML=h;
+  if(AV.v==='code')resendTick();
+  if(AV.v==='start'&&c&&c.google)gLink();
+  const f=d.querySelector('#acCode,#acGCode');if(f&&!AV.busy)f.focus({preventScroll:true});}
+
+// the Google link: a plain link (so a tap opens it at once) carrying only a hash of the secret the app polls with
+async function gLink(){if(!AV.gh){AV.gh=b64u(crypto.getRandomValues(new Uint8Array(18)));AV.ghh=await sha256hex(AV.gh);}const a=$('acG');if(a)a.href=QA+'/auth/google/go?hh='+AV.ghh;}
+let gTimer=null;
+function gPoll(){clearTimeout(gTimer);if(AV.v!=='gwait'||!AV.gh)return;if(Date.now()-AV.gAt>15*6e4){AV.v='start';AV.gh=null;AV.msg='That Google sign-in timed out. Please try again.';if($('acctD').open)acctPaint();return;}
+  gTimer=setTimeout(async()=>{if(document.visibilityState!=='visible'||AV.busy)return gPoll();
+    try{const r=await api('/auth/google/poll',{method:'POST',body:{h:AV.gh}});
+      if(r.token){const h=AV.gh;AV.gh=null;return signedIn(r,'google',r.email);}
+      if(r.needCode&&!AV.needCode){AV.needCode=true;acctPaint();}}
+    catch(e){if(/timed out/.test(e.message)){AV.v='start';AV.gh=null;AV.msg=e.message;acctPaint();return;}}
+    gPoll();},2000);}
+let rsT=null;
+function resendTick(){clearTimeout(rsT);const b=$('acResend');if(!b)return;const s=Math.ceil((AV.sent+6e4-Date.now())/1000);
+  b.disabled=s>0;b.textContent=s>0?`Send a new code in 0:${String(s).padStart(2,'0')}`:'Send a new code';if(s>0)rsT=setTimeout(resendTick,1000);}
+
+async function emStart(){const email=($('acEmail')?.value||AV.email||'').trim();AV.email=email;
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){AV.msg='Type your email address first.';return acctPaint();}
+  AV.busy=true;AV.msg='';acctPaint();
+  try{await api('/auth/email/start',{method:'POST',body:{email}});AV.v='code';AV.sent=Date.now();AV.msg='';}catch(e){AV.msg=qaMsg(e);}
+  AV.busy=false;acctPaint();}
+async function emVerify(){const code=($('acCode')?.value||'').replace(/\D/g,'');if(code.length!==6){AV.msg='The code has 6 digits.';return acctPaint();}
+  AV.busy=true;AV.msg='';acctPaint();
+  try{const d=await api('/auth/email/verify',{method:'POST',body:{email:AV.email,code}});AV.busy=false;return signedIn(d,'email',AV.email);}catch(e){AV.msg=qaMsg(e);}
+  AV.busy=false;acctPaint();}
+
+// passkeys: 'get' signs in with one already on the device; 'create' makes one (a new account, or added to the signed-in one)
+async function pk(mode){AV.busy=true;AV.msg='';acctPaint();
+  try{const o=await api('/auth/passkey/options',{method:'POST',body:{mode},tok:ACCT&&ACCT.tok});let cred,body;
+    if(mode==='get'){cred=await navigator.credentials.get({publicKey:{challenge:unb64u(o.challenge),userVerification:'required',timeout:120000}});
+      body={id:o.id,rawId:b64u(cred.rawId),clientDataJSON:b64u(cred.response.clientDataJSON),authenticatorData:b64u(cred.response.authenticatorData),signature:b64u(cred.response.signature)};}
+    else{cred=await navigator.credentials.create({publicKey:{challenge:unb64u(o.challenge),rp:{name:'Balloon Written Prep'},user:{id:unb64u(o.user.id),name:'Balloon Written Prep',displayName:'Balloon Written Prep'},
+        pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],authenticatorSelection:{residentKey:'required',requireResidentKey:true,userVerification:'required'},attestation:'none',timeout:120000}});
+      body={id:o.id,clientDataJSON:b64u(cred.response.clientDataJSON),attestationObject:b64u(cred.response.attestationObject)};}
+    const r=await fetch(QA+'/auth/passkey/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const d=await r.json().catch(()=>({}));
+    if(!r.ok){if(d.unknown&&PublicKeyCredential.signalUnknownCredential)PublicKeyCredential.signalUnknownCredential({rpId:location.hostname,credentialId:d.unknown}).catch(()=>{});throw qaErr(d.error||NETERR);}
+    AV.busy=false;AV.pkNone=false;
+    if(mode==='create'&&ACCT){AV.me=Object.assign(AV.me||{},{passkeys:1});AV.msg='Face ID is added. Next time, tap Sign in with Face ID.';return acctPaint();}
+    return signedIn(d,'passkey',null);}
+  catch(e){AV.busy=false;
+    if(e&&e.name==='NotAllowedError'){if(mode==='get'){AV.pkNone=true;AV.msg='';}else AV.msg='Nothing was saved. You can try again any time.';}
+    else if(e&&e.name==='InvalidStateError')AV.msg='This device already has a passkey for this app. Tap Sign in with Face ID.';
+    else AV.msg=e&&e.qa?e.message:'Face ID sign-in did not work here. Try email or Google instead.';
+    acctPaint();}}
+
+$('acctBtn').onclick=acctOpen;
+$('acctD').addEventListener('click',async e=>{const d=$('acctD');if(e.target===d){d.close();return;}const t=e.target.closest('[data-ac]');if(!t||t.disabled)return;const a=t.dataset.ac;
+  if(a==='close'){d.close();return;}
+  if(a==='back'){AV.v='start';AV.msg='';AV.needCode=false;clearTimeout(gTimer);return acctPaint();}
+  if(a==='pkget')return pk('get');
+  if(a==='pkmake'||a==='pkadd')return pk('create');
+  if(a==='emstart'||a==='emresend')return emStart();
+  if(a==='emverify')return emVerify();
+  if(a==='gstart'){if(!AV.ghh){e.preventDefault();return;}AV.v='gwait';AV.gAt=Date.now();AV.needCode=false;AV.msg='';acctPaint();gPoll();return;}  // the link itself opens Google
+  if(a==='gcode'){const code=($('acGCode')?.value||'').replace(/\D/g,'');if(code.length!==6){AV.msg='The code has 6 digits.';return acctPaint();}
+    AV.busy=true;acctPaint();try{const r=await api('/auth/google/poll',{method:'POST',body:{h:AV.gh,code}});AV.busy=false;AV.gh=null;return signedIn(r,'google',r.email);}catch(err){AV.busy=false;AV.msg=qaMsg(err);acctPaint();}return;}
+  if(a==='mcombine'||a==='maccount'){if(!AV.P)return;const M=a==='mcombine'?mergeProg(null,progLocal(),AV.R):AV.R;ACCT=AV.P;ACCT.base=AV.R;acctKeep();progApply(M);AV.P=AV.R=null;acctBtn();AV.v='acct';AV.msg=a==='mcombine'?'Combined. Your account has everything now.':'Done. This device now has your account\'s progress.';acctPaint();syncNow();return;}
+  if(a==='mcancel'){mergeCancel();AV.v='start';AV.msg='You are not signed in. Nothing was changed.';return acctPaint();}
+  if(a==='signout'){AV.busy=true;acctPaint();await signOut();AV.busy=false;AV.v='start';AV.msg='Signed out. Your progress is still on this device.';acctBtn();return acctPaint();}
+  if(a==='del'){if(!AV.delArmed){AV.delArmed=true;return acctPaint();}AV.delArmed=false;AV.busy=true;acctPaint();
+    try{const r=await api('/me',{method:'DELETE',tok:ACCT.tok});
+      if(PublicKeyCredential&&PublicKeyCredential.signalUnknownCredential)(r.passkeys||[]).forEach(id=>PublicKeyCredential.signalUnknownCredential({rpId:location.hostname,credentialId:id}).catch(()=>{}));
+      ACCT=null;acctKeep();AV.v='start';AV.msg='Your account and the progress saved in it are deleted. Your progress is still on this device.'+((r.passkeys||[]).length?' If your phone still lists a passkey for this app, you can delete it in the Passwords app.':'');}
+    catch(err){AV.msg=qaMsg(err);}
+    AV.busy=false;acctBtn();return acctPaint();}});
+$('acctD').addEventListener('keydown',e=>{if(e.key!=='Enter')return;if(e.target.id==='acEmail'){e.preventDefault();emStart();}else if(e.target.id==='acCode'){e.preventDefault();emVerify();}else if(e.target.id==='acGCode'){e.preventDefault();$('acctD').querySelector('[data-ac="gcode"]').click();}});
+$('acctD').addEventListener('input',e=>{if(e.target.id==='acCode'&&e.target.value.replace(/\D/g,'').length===6)emVerify();});
+$('acctD').addEventListener('close',()=>{clearTimeout(rsT);AV.delArmed=false;if(AV.v==='merge'){mergeCancel();AV.v='start';}});
+// coming back to the app: pull what other devices saved, and finish a Google sign-in waiting in the other window
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){if(ACCT)syncNow();if(AV.v==='gwait')gPoll();}else if(ACCT&&SY.timer)syncNow();});
+acctBtn();if(ACCT)syncNow();
+document.addEventListener('click',e=>{if(e.target.closest('[data-acct]')){const d=$('saveInfo');if(d.open)d.close();acctOpen();}});
 // ---------- saved test vs. the bank, and export / import of progress ----------
 function fixTest(){const T=S.test;if(!T||!Array.isArray(T.list))return;const gone=T.list.filter(id=>!byId[id]);if(!gone.length)return;
   if([...LOADFAIL].some(f=>f.startsWith('questions/'))){HELD.for=S;HELD.test=T;S.test=null;return;}  // a file failed, so the questions are not retired: leave the saved test exactly as it is
@@ -1611,21 +1825,23 @@ function route(hs){
 </script>
 <dialog class="infod" id="saveInfo" aria-labelledby="saveInfoH">
   <h2 id="saveInfoH">How your progress is saved</h2>
-  <p>There is no account. Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>.</p>
+  <p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. You don't need an account.</p>
+  <h3>Or sign in, and it follows you</h3>
+  <p>Tap <b>Sign in</b> at the top (Face ID, your email, or Google). Your progress is then also saved to your account, and it shows up on every phone, tablet or computer where you sign in, the Home Screen app included. <button class="lnk" data-acct>Sign in now</button></p>
   <h3>On an iPhone or iPad, study in the Home Screen app</h3>
   <ul>
     <li>In Safari, tap Share, then <b>Add to Home Screen</b>.</li>
     <li>Safari can clear a site's saved data after a week of using Safari without opening that site. The Home Screen app doesn't have that limit, so your progress is safer there.</li>
     <li>The Home Screen app keeps its <b>own copy</b>, separate from Safari. Pick one and study there.</li>
   </ul>
-  <h3>Moving your progress over</h3>
+  <h3>Moving your progress without an account</h3>
   <ol>
     <li>Where you've been studying, tap <b>Export my progress</b> at the bottom of the page and save the file (Files or iCloud Drive).</li>
     <li>In the Home Screen app or on the other device, tap <b>Import progress</b> and pick that file.</li>
   </ol>
   <p>That brings everything, including your class if you joined one.</p>
   <h3>Your sign-in code</h3>
-  <p>If you joined a class, the sign-in code (Learn → Your questions) moves <b>only your class and your questions</b> to another device. It does not bring your study progress. Use Export and Import for that.</p>
+  <p>If you joined a class, the sign-in code (Learn → Your questions) moves <b>only your class and your questions</b> to another device. It does not bring your study progress. Sign in, or use Export and Import, for that.</p>
   <p class="mut sm">Export a copy now and then as a backup. Clearing Safari's history and website data also wipes it.</p>
   <div class="infoa"><button class="btn" data-info-go="pgx">Go to Export / Import</button><button class="btn primary" data-info-close>Got it</button></div>
 </dialog>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Signed in · Balloon Written Prep</title>
+<!-- Google sends the student back here after "Continue with Google". This page hands the one-time code to the Worker,
+     which finishes the sign-in; the app (polling) then picks it up, or the student types the code shown here. -->
+<style>
+@font-face{font-family:"Atkinson Hyperlegible";font-weight:400;font-display:swap;src:url(fonts/atkinson-hyperlegible-400.woff2) format("woff2")}
+@font-face{font-family:"Atkinson Hyperlegible";font-weight:700;font-display:swap;src:url(fonts/atkinson-hyperlegible-700.woff2) format("woff2")}
+@font-face{font-family:"Barlow Semi Condensed";font-weight:700;font-display:swap;src:url(fonts/barlow-semi-condensed-700.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-500.woff2) format("woff2")}
+:root{--bg:#fbfcfa;--ink:#14263a;--muted:#566775;--line:#c6d2cd;--good:#145c38;--good-bg:#e2f3ea;--box:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#15212a;--ink:#e4ecf1;--muted:#94a6b3;--line:#2a3b47;--good:#4cc48b;--good-bg:#16302a;--box:#0e161c}}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 "Atkinson Hyperlegible",system-ui,sans-serif}
+main{max-width:30rem;margin:0 auto;padding:48px 24px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center}
+h1{margin:0;font:700 28px/1.2 "Barlow Semi Condensed",sans-serif}
+p{margin:0}.mut{color:var(--muted);font-size:15px}
+.ok{width:64px;height:64px;border-radius:50%;background:var(--good-bg);display:flex;align-items:center;justify-content:center}
+.box{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--box)}
+.code{font:500 34px "IBM Plex Mono",monospace;letter-spacing:.14em}
+button{font:700 16px "Atkinson Hyperlegible",sans-serif;color:var(--ink);background:none;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:0 16px}
+</style>
+</head>
+<body>
+<main id="m" aria-live="polite"><p class="mut">Finishing your sign-in…</p></main>
+<script>
+const QA='https://balloon-prep-qa.brianfliesballoons.workers.dev/api';
+const m=document.getElementById('m'),q=new URLSearchParams(location.search),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+history.replaceState(null,'',location.pathname);  // the one-time code should not stay in the address bar or history
+const tick='<div class="ok"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--good)"/></svg></div>';
+const closeBtn=window.opener?'<button onclick="window.close()">Close this tab</button>':'<p class="mut">You can close this Safari tab.</p>';
+const fail=msg=>{m.innerHTML=`<h1>That didn't work</h1><p>${esc(msg)}</p><p class="mut">Go back to Balloon Written Prep and tap Continue with Google again.</p>`;};
+if(q.get('error'))fail(q.get('error')==='access_denied'?'You chose not to sign in with Google. Nothing was changed.':'Google did not finish the sign-in.');
+else if(!q.get('code')||!q.get('state'))fail('This page only works straight after signing in with Google.');
+else fetch(QA+'/auth/google/finish',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:q.get('code'),state:q.get('state')})})
+  .then(r=>r.json().then(d=>({ok:r.ok,d})))
+  .then(({ok,d})=>{
+    if(!ok)return fail(d.error||'Something went wrong.');
+    if(d.gmail){m.innerHTML=`${tick}<h1>Email sign-in is on</h1><p>Codes will now be sent from <b>${esc(d.email)}</b>.</p>${closeBtn}`;return;}
+    const c=String(d.code6||'');
+    m.innerHTML=`${tick}<h1>You're signed in with Google</h1>${d.email?`<p class="mut">${esc(d.email)}</p>`:''}<p>Go back to <b>Balloon Prep</b>. It will finish signing you in by itself.</p>
+      <div class="box"><div class="mut">If the app is still waiting, type this code there:</div><div class="code">${esc(c.slice(0,3)+' '+c.slice(3))}</div><div class="mut">Works for 15 minutes.</div></div>${closeBtn}`;})
+  .catch(()=>fail('Could not reach the server. Check your connection, then try again from the app.'));
+</script>
+</body>
+</html>
