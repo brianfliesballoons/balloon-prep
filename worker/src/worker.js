@@ -1,5 +1,6 @@
 // balloon-prep-qa: students ask their instructor, the instructor answers in a hub.
 // No accounts. A class has a public join code and a secret hub key; a student has a secret key. Only hashes are stored.
+import { pushKey, subscribe, unsubscribe, notifyAnswer } from './push.js';
 const ORIGINS = ['https://brianfliesballoons.github.io', 'http://localhost:8765'];
 const ALPHA = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const LIM = { name: 60, cls: 80, text: 2000, perDay: 50, topic: 40, qid: 20 };
@@ -31,7 +32,7 @@ async function student(env, req, code) {
 }
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(req) });
     const url = new URL(req.url), p = url.pathname.split('/').filter(Boolean);
     if (p[0] !== 'api') return new Response('Not found', { status: 404 });
@@ -95,8 +96,15 @@ export default {
           const text = clean((await body(req)).text, LIM.text);
           if (!text) return err(req, 400, 'Type an answer first');
           const r = await env.DB.prepare('UPDATE questions SET answer=?, answered=?, seen=0 WHERE id=? AND code=?').bind(text, Date.now(), p[4], code).run();
+          if (r.meta.changes) ctx.waitUntil(notifyAnswer(env, code, p[4])); // phone notification; never holds up or breaks the answer
           return r.meta.changes ? json(req, { ok: true }) : err(req, 404, 'Question not found');
         }
+      }
+      // push (student): GET -> {key} (null = notifications off), POST subscribe {endpoint, keys}, POST unsubscribe {endpoint?}
+      if (p[3] === 'push') {
+        const s = await student(env, req, code); if (!s) return err(req, 401, 'Not in this class');
+        if (p.length === 4 && req.method === 'GET') return json(req, pushKey(env));
+        if ((p[4] === 'subscribe' || p[4] === 'unsubscribe') && req.method === 'POST') { const r = await (p[4] === 'subscribe' ? subscribe : unsubscribe)(env, s, await body(req)); return r.error ? err(req, 400, r.error) : json(req, r); }
       }
       // GET /api/classes/:code/hub -> everything for the instructor
       if (p[3] === 'hub' && req.method === 'GET') {
