@@ -117,6 +117,7 @@ html.signed .pgxin,html:not(.signed) .pgxon{display:none}
 .hlp details[open]>summary::after{transform:rotate(225deg);margin-top:4px}
 .hlpa{display:flex;flex-direction:column;gap:8px;padding:0 0 14px;font-size:1rem;line-height:1.5}.hlpa ul,.hlpa ol{margin:0;padding-left:1.25em}.hlpa li{margin:4px 0}
 .hlpa .lnk{align-self:flex-start;color:var(--user)}
+.hlpa h3{margin:6px 0 -4px;font-size:1rem;font-weight:700}
 footer .hlpf{display:flex;flex-wrap:wrap;gap:0 20px;margin:0 0 8px}footer .hlpf button,footer .hlpf a{color:var(--ink);min-height:44px;display:inline-flex;align-items:center;font-size:.95rem}
 .tsst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0 12px}
 .tsst>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:.88rem;color:var(--muted)}
@@ -1774,7 +1775,9 @@ async function signOut(){const t=ACCT&&ACCT.tok;clearTimeout(SY.timer);if(ACCT&&
 // ----- the sheet -----
 const acctBtn=()=>{document.documentElement.classList.toggle('signed',!!ACCT);const b=$('acctBtn');if(!b)return;b.classList.toggle('on',!!ACCT);
   b.innerHTML=ACCT?ICON.check+'<span>Synced</span>':'Sign in';b.setAttribute('aria-label',ACCT?'Your account (progress saved to it)':'Sign in to keep your progress on every device');};
-const acctWho=()=>ACCT.email?esc(ACCT.email):ACCT.how==='passkey'?'your passkey (Face ID)':'your Google account';
+// what the passkey prompt is called on this device: Face ID on iPhone/iPad, the screen lock on Android, plain "passkey" elsewhere
+const pnAnd=/Android/.test(navigator.userAgent),BIO=pnIOS?'Face ID':pnAnd?'fingerprint':'passkey',BIOB=BIO==='passkey'?'a passkey':pnAnd?'your fingerprint (passkey)':'Face ID (passkey)',BIOA=BIO==='passkey'?'a passkey':pnAnd?'fingerprint sign-in':'Face ID';
+const acctWho=()=>ACCT.email?esc(ACCT.email):ACCT.how==='passkey'?(BIO==='passkey'?'your passkey':'your passkey ('+BIO+')'):'your Google account';
 async function acctCfg(){if(AV.cfg)return AV.cfg;try{AV.cfg=await api('/auth/config');}catch(e){AV.cfgErr=qaMsg(e);}return AV.cfg;}
 function acctOpen(){const d=$('acctD');AV.msg='';AV.v=ACCT?'acct':AV.v==='code'||AV.v==='gwait'?AV.v:'start';AV.pkNone=false;acctPaint();if(!d.open)d.showModal();d.scrollTop=0;
   if(!ACCT&&!AV.cfg)acctCfg().then(()=>{if(d.open&&AV.v==='start')acctPaint();});
@@ -1782,8 +1785,8 @@ function acctOpen(){const d=$('acctD');AV.msg='';AV.v=ACCT?'acct':AV.v==='code'|
 function acctPaint(){if(AV.v==='acct'&&!ACCT)AV.v='start';const d=$('acctD'),c=AV.cfg,m=AV.msg?`<p class="acctm" role="status">${esc(AV.msg)}</p>`:'',busy=AV.busy?' disabled':'';let h='';
   if(AV.v==='start'){
     h=`<h2 id="acctH">Keep your progress on every device</h2><p class="mut">Sign in and your answers, flags, review schedule and test scores follow you: Safari, the Home Screen app, a new phone.</p>${m}`;
-    if(pkOK())h+=`<button class="btn primary big" data-ac="pkget"${busy}>${ICON.key}Sign in with Face ID (passkey)</button><p class="mut sm acctn">No email needed. Your phone keeps the key in iCloud Keychain, so it follows you to a new iPhone.</p>`+
-      (AV.pkNone?`<div class="acctbox"><b>No passkey for this app yet?</b><p class="sm">Make one now. Your phone asks for Face ID, Touch ID or your passcode, and that's it.</p><button class="btn primary big" data-ac="pkmake"${busy}>Make a passkey</button></div>`:'');
+    if(pkOK())h+=`<button class="btn primary big" data-ac="pkget"${busy}>${ICON.key}Sign in with ${BIOB}</button><p class="mut sm acctn">No email needed. ${pnIOS?'Your phone keeps the key in iCloud Keychain, so it follows you to a new iPhone.':pnAnd?'Your phone keeps the key in Google Password Manager, so it follows you to a new Android phone.':'Your device or password manager keeps the key.'}</p>`+
+      (AV.pkNone?`<div class="acctbox"><b>No passkey for this app yet?</b><p class="sm">Make one now. ${pnIOS?'Your phone asks for Face ID, Touch ID or your passcode':pnAnd?'Your phone asks for your fingerprint, face or screen lock':'Your device asks for its fingerprint, face or PIN'}, and that's it.</p><button class="btn primary big" data-ac="pkmake"${busy}>Make a passkey</button></div>`:'');
     if(!c&&!AV.cfgErr)h+=`<p class="mut sm">Loading the other ways to sign in…</p>`;
     if(AV.cfgErr&&!c)h+=`<p class="mut sm">${esc(AV.cfgErr)}</p>`;
     if(c&&c.email)h+=`<div class="acctor">${pkOK()?'or use your email':'Use your email'}</div><label class="fld">Your email<input type="email" id="acEmail" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" value="${esc(AV.email||'')}"></label><button class="btn outline big" data-ac="emstart"${busy}>Email me a code</button>`;
@@ -1805,7 +1808,7 @@ function acctPaint(){if(AV.v==='acct'&&!ACCT)AV.v='start';const d=$('acctD'),c=A
     h=`<h2 id="acctH">Your account</h2>${m}<div class="acctbox"><div class="mut sm">Signed in with</div><div class="acctwho">${acctWho()}</div><div class="acctok${SY.err?' bad':''}">${SY.err?ICON.x:ICON.check}${st}</div>
       <p class="sm">Sign in the same way on any phone, tablet or computer, or in the Home Screen app, and pick up right here.</p></div>
       ${S.cls?`<div class="acctbox"><div class="mut sm">Class</div><div>${esc(S.cls.name)}</div><p class="mut sm">Your class comes with you when you sign in. Your instructor sees your questions, and a practice test score only when you send it (or turn on Always send). Never your answers or study history.</p></div>`:''}
-      ${pkOK()&&ACCT.how!=='passkey'&&me.passkeys===0?`<div class="acctbox"><b>Sign in faster next time</b><p class="sm">Add Face ID to this account. Next time it's one tap, no email or Google.</p><button class="btn big" data-ac="pkadd"${busy}>${ICON.key}Add Face ID (passkey)</button></div>`:''}
+      ${pkOK()&&ACCT.how!=='passkey'&&me.passkeys===0?`<div class="acctbox"><b>Sign in faster next time</b><p class="sm">Add ${BIOA} to this account. Next time it's one tap, no email or Google.</p><button class="btn big" data-ac="pkadd"${busy}>${ICON.key}Add ${BIOA}${BIO==='passkey'?'':' (passkey)'}</button></div>`:''}
       <button class="btn big" data-ac="signout"${busy}>Sign out on this device</button><p class="mut sm">Signing out keeps a copy of your progress on this device. Your account keeps it too.</p>
       <button class="lnk acctdel" data-ac="del">${AV.delArmed?'Tap again to delete your account and the progress saved in it':'Delete my account and saved progress'}</button>
       <div class="infoa"><button class="btn primary" data-ac="close">Done</button></div>`;}
@@ -1849,12 +1852,12 @@ async function pk(mode){AV.busy=true;AV.msg='';acctPaint();
     const r=await fetch(QA+'/auth/passkey/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const d=await r.json().catch(()=>({}));
     if(!r.ok){if(d.unknown&&PublicKeyCredential.signalUnknownCredential)PublicKeyCredential.signalUnknownCredential({rpId:location.hostname,credentialId:d.unknown}).catch(()=>{});throw qaErr(d.error||NETERR);}
     AV.busy=false;AV.pkNone=false;
-    if(mode==='create'&&ACCT){AV.me=Object.assign(AV.me||{},{passkeys:1});AV.msg='Face ID is added. Next time, tap Sign in with Face ID.';return acctPaint();}
+    if(mode==='create'&&ACCT){AV.me=Object.assign(AV.me||{},{passkeys:1});AV.msg=`${BIO==='passkey'?'Your passkey':BIOA[0].toUpperCase()+BIOA.slice(1)} is added. Next time, tap Sign in with ${BIOB}.`;return acctPaint();}
     return signedIn(d,'passkey',null);}
   catch(e){AV.busy=false;
     if(e&&e.name==='NotAllowedError'){if(mode==='get'){AV.pkNone=true;AV.msg='';}else AV.msg='Nothing was saved. You can try again any time.';}
-    else if(e&&e.name==='InvalidStateError')AV.msg='This device already has a passkey for this app. Tap Sign in with Face ID.';
-    else AV.msg=e&&e.qa?e.message:'Face ID sign-in did not work here. Try email or Google instead.';
+    else if(e&&e.name==='InvalidStateError')AV.msg=`This device already has a passkey for this app. Tap Sign in with ${BIOB}.`;
+    else AV.msg=e&&e.qa?e.message:`${BIO==='passkey'?'Passkey':BIO==='fingerprint'?'Fingerprint':BIO} sign-in did not work here. Try email or Google instead.`;
     acctPaint();}}
 
 $('acctBtn').onclick=acctOpen;
@@ -2030,12 +2033,23 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
     <p>Both pass at ${PASS}%. Most questions are on both tests. Questions that are only on the Commercial test are hidden while you study for Private, and Commercial adds a Teaching section in Learn.</p>
     <p>To switch, tap the test name at the top of the screen. Your answers, flags and review schedule stay, and each test keeps its own scores.</p><button class="lnk" data-help-go="trk">Change my test</button>`],
    ['What is the Teaching section?',`<p>It’s part of the Commercial track. A commercial balloon pilot can give flight and ground training, so the FAA's commercial knowledge areas include training procedures (14 CFR 61.125(b)), and the commercial checkride opens with Fundamentals of Instructing. The Teaching section in Learn has lessons on the learning process and on teaching, its questions are in Study, and about 8 of the 100 on a Commercial practice test come from it.</p>`],
-   ['Should I add it to my Home Screen?',`<p>On an iPhone or iPad, yes. In Safari, tap Share, then <b>Add to Home Screen</b>, and open it from the new icon. On Android, open the browser menu and choose Add to Home screen or Install.</p>
-    <ul><li>It opens like an app, without the browser’s address bar.</li>
-    <li>Safari can clear a site’s saved data after a week of using Safari without opening that site. The Home Screen app doesn’t have that limit, so your progress is safer there.</li>
-    <li>On iPhone it’s the only way to get a notification when your instructor answers (iOS 16.4 or newer).</li>
-    <li>Once it has loaded, you can study without a connection.</li></ul>
-    <p>The Home Screen app keeps its <b>own copy</b> of your progress, separate from Safari. Sign in, or use Export and Import, to bring it over.</p>`],
+   ['How do I set it up on my phone?',`<p>Install it on your Home Screen <b>first</b>, then do everything else from the new icon.</p>
+    <h3>iPhone or iPad</h3>
+    <ol><li>Open this page in <b>Safari</b> (not inside Gmail, Instagram or another app).</li>
+    <li>Tap Share, then <b>Add to Home Screen</b>, then Add.</li>
+    <li>Open Balloon Prep from the new icon, and use the icon from now on. On iPhone, the icon keeps its own copy of your progress, separate from Safari.</li></ol>
+    <h3>Android</h3>
+    <ol><li>Open this page in <b>Chrome</b>.</li>
+    <li>Tap the menu (⋮) at the top right, then <b>Install app</b> or <b>Add to Home screen</b> (the name varies by phone), and confirm.</li>
+    <li>Open Balloon Prep from the new icon.</li></ol>
+    <h3>Then, on any phone</h3>
+    <ol><li>Pick your test: Private or Commercial.</li>
+    <li>If your instructor gave you a class code, tap <b>Learn</b>, scroll to <b>Your questions</b>, type the code and your name, and tap <b>Join class</b>.</li>
+    <li>Optional: tap <b>Sign in</b> at the top (Face ID on iPhone, your fingerprint on Android, or Google) to back up your progress.</li></ol>
+    <p>Joined in the browser before installing? On iPhone, sign in inside the icon, or use the sign-in code under Your questions, to bring your class over.</p>`],
+   ['Should I add it to my Home Screen?',`<p>Yes. It opens like an app, without the browser’s address bar, and once it has loaded you can study without a connection. How to do it on iPhone and Android is in the question above.</p>
+    <ul><li><b>iPhone and iPad:</b> Safari can clear a site’s saved data after a week of using Safari without opening that site. The Home Screen app doesn’t have that limit, so your progress is safer there. It’s also the only way to get a notification when your instructor answers (iOS 16.4 or newer). The Home Screen app keeps its <b>own copy</b> of your progress, separate from Safari: sign in, or use Export and Import, to bring it over.</li>
+    <li><b>Android:</b> the installed app and Chrome share the same progress, so nothing needs moving.</li></ul>`],
    ['How do I take a practice test?',`<p>Tap <b>Practice test</b>, then <b>Start the test</b>. You get ${P.n} questions for Private or ${C.n} for Commercial, drawn from every area (test-style questions only), with the real test’s time.</p>
     <ul><li>No answers are shown until you finish.</li>
     <li>Tap <b>Flag</b> to mark a question to come back to. Tap the question counter at the top (like “12 of ${C.n}”) to see every question and jump around.</li>
@@ -2045,7 +2059,7 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
   ['Your progress',[
    ['Where is my progress saved?',`<p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. If you sign in, they’re also saved to your account.</p>
     <p>Clearing your browser’s history and website data erases the copy on the device, so sign in, or export a copy now and then.</p><button class="lnk" data-info="save">How saving works</button>`],
-   ['Do I need to sign in?',`<p>No. Everything works without an account. Signing in is optional: tap <b>Sign in</b> at the top and use Face ID or your Google account. There’s no password.</p>
+   ['Do I need to sign in?',`<p>No. Everything works without an account. Signing in is optional: tap <b>Sign in</b> at the top and use Face ID (iPhone), your fingerprint (Android) or your Google account. There’s no password.</p>
     <p>Once you’re signed in, your progress is saved to your account and shows up on every phone, tablet or computer where you sign in, the Home Screen app included. The button at the top then says <b>Synced</b>. Tap it to sign out or delete your account. Signing out keeps the copy on this device.</p><button class="lnk" data-acct>Sign in</button>`],
    ['I got a new phone or computer. How do I move my progress?',`<ul><li><b>If you’re signed in:</b> sign in the same way on the new device and your progress appears. If that device already has some progress of its own, the app asks before it combines them.</li>
     <li><b>If you’re not signed in:</b> use Export and Import (next question).</li></ul>`],
@@ -2166,13 +2180,15 @@ function route(hs){
   <h2 id="saveInfoH">How your progress is saved</h2>
   <p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. You don't need an account.</p>
   <h3>Or sign in, and it follows you</h3>
-  <p>Tap <b>Sign in</b> at the top (Face ID, your email, or Google). Your progress is then also saved to your account, and it shows up on every phone, tablet or computer where you sign in, the Home Screen app included. <button class="lnk" data-acct>Sign in now</button></p>
+  <p>Tap <b>Sign in</b> at the top (Face ID, your fingerprint on Android, your email, or Google). Your progress is then also saved to your account, and it shows up on every phone, tablet or computer where you sign in, the Home Screen app included. <button class="lnk" data-acct>Sign in now</button></p>
   <h3>On an iPhone or iPad, study in the Home Screen app</h3>
   <ul>
     <li>In Safari, tap Share, then <b>Add to Home Screen</b>.</li>
     <li>Safari can clear a site's saved data after a week of using Safari without opening that site. The Home Screen app doesn't have that limit, so your progress is safer there.</li>
     <li>The Home Screen app keeps its <b>own copy</b>, separate from Safari. Pick one and study there.</li>
   </ul>
+  <h3>On Android</h3>
+  <p>In Chrome, tap the menu (⋮), then <b>Install app</b> or <b>Add to Home screen</b>. The installed app and Chrome share the same progress.</p>
   <h3>Moving your progress without an account</h3>
   <ol>
     <li>Where you've been studying, tap <b>Export my progress</b> at the bottom of the page and save the file (Files or iCloud Drive).</li>
