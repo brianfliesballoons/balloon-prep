@@ -9,7 +9,9 @@ CREATE TABLE IF NOT EXISTS classes (
   created INTEGER NOT NULL,
   inorm TEXT,                       -- instructor name normalised (lowercase, letters/digits only), for the same-name check
   verified INTEGER NOT NULL DEFAULT 0,  -- 1 = "Verified instructor" mark; set by hand with wrangler only
-  owner INTEGER NOT NULL DEFAULT 0      -- 1 = the app owner's class; its hub shows problem reports; set by hand only
+  owner INTEGER NOT NULL DEFAULT 0,     -- 1 = the app owner's class; its hub shows problem reports; set by hand only
+  score_view TEXT NOT NULL DEFAULT 'all',   -- instructor's choice: 'all' = every score students send · 'weekly' = 7-day summary only (added 2026-10-23)
+  scores_seen INTEGER NOT NULL DEFAULT 0    -- scores sent after this time count as new in the hub
 );
 CREATE INDEX IF NOT EXISTS c_inorm ON classes(inorm);
 CREATE TABLE IF NOT EXISTS students (
@@ -118,3 +120,21 @@ CREATE TABLE IF NOT EXISTS ghand (    -- a Google sign-in on its way back to the
   isnew INTEGER,
   email TEXT                        -- shown once to the app ("Signed in as ..."), deleted with the row
 );
+-- scores to the instructor (added 2026-10-23, migrations/2026-10-23-scores.sql). Only what a student chose to send; never answers or question ids.
+CREATE TABLE IF NOT EXISTS scores (
+  id TEXT PRIMARY KEY,
+  code TEXT NOT NULL REFERENCES classes(code),
+  sid TEXT NOT NULL REFERENCES students(sid),   -- deleted with the student (leave, leave-and-delete, instructor Remove)
+  track TEXT NOT NULL,              -- P = Private (PBH) · C = Commercial (CBH)
+  n INTEGER NOT NULL,               -- questions in the test
+  r INTEGER NOT NULL,               -- right
+  pct INTEGER NOT NULL,             -- round(r/n*100), worked out by the Worker
+  pass INTEGER NOT NULL,            -- pct >= 70
+  sec INTEGER NOT NULL,             -- active test time, seconds
+  areas TEXT NOT NULL,              -- JSON {"REG":[right,total],...}
+  flags TEXT,                       -- JSON {"AIR":2,...}: how many of the test's questions were flagged, per area
+  taken INTEGER NOT NULL,           -- when the test was finished (device clock); one score per student per taken time
+  created INTEGER NOT NULL          -- when it was sent
+);
+CREATE UNIQUE INDEX IF NOT EXISTS sc_once ON scores(sid, taken);
+CREATE INDEX IF NOT EXISTS sc_code ON scores(code, created);
