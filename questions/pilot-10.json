@@ -16,7 +16,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-002",
@@ -35,7 +35,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-003",
@@ -54,7 +54,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-004",
@@ -73,7 +73,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-005",
@@ -92,7 +92,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-006",
@@ -101,7 +101,7 @@
   "stem": "Which way of teaching what to do about power lines on approach does the law of intensity favor?",
   "choices": [
    "Several readings of the handbook section, one a week, so the facts stick.",
-   "A realistic approach to a field near power lines, which the student must manage.",
+   "A realistic approach near power lines that the student must manage.",
    "A list of the rules, taught first, before any other landing topic."
   ],
   "answer": 1,
@@ -111,7 +111,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-007",
@@ -119,18 +119,18 @@
   "topic": "Teachable moments",
   "stem": "On a training flight, the student sees another balloon land short of its field, close to a road. The instructor uses it right then to talk about choosing landing sites. What does the handbook call this kind of opportunity?",
   "choices": [
-   "Incidental learning, which can't be planned for.",
+   "Insight, the grouping of perceptions.",
    "A distraction, best saved for the debrief.",
    "A teachable moment, part of the law of readiness."
   ],
   "answer": 2,
-  "explanation": "FAA-H-8083-9B Ch. 3, under readiness: a teachable moment is a moment of educational opportunity when a person is particularly responsive to being taught, because the learner can clearly see how the information applies in the real world. The handbook's example is deer crossing the runway on final, used to stress readiness for a go-around, and it calls recognizing these moments one of the most important instructor skills. Incidental learning is a different idea: attitudes and other things picked up alongside the subject. Saving it for later wastes the moment.",
+  "explanation": "FAA-H-8083-9B Ch. 3, under readiness: a teachable moment is a moment of educational opportunity when a person is particularly responsive to being taught, because the learner can clearly see how the information applies in the real world. The handbook's example is deer crossing the runway on final, used to stress readiness for a go-around, and it calls recognizing these moments one of the most important instructor skills. Insight is the grouping of perceptions into meaningful wholes, something the learner reaches, not the opportunity the instructor seizes. Saving it for the debrief wastes the moment.",
   "ref": "FAA-H-8083-9B Ch. 3 (Readiness: teachable moments)",
   "figure": null,
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-008",
@@ -149,7 +149,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-009",
@@ -168,7 +168,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-010",
@@ -187,7 +187,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-011",
@@ -206,7 +206,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-012",
@@ -225,7 +225,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-013",
@@ -244,7 +244,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-014",
@@ -263,7 +263,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-015",
@@ -282,7 +282,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-016",
@@ -301,7 +301,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-017",
@@ -320,7 +320,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-018",
@@ -339,7 +339,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-019",
@@ -352,13 +352,13 @@
    "Tell her she has probably reached her limit, and move on to the checkride."
   ],
   "answer": 1,
-  "explanation": "FAA-H-8083-9B Ch. 3: a plateau is normal after an initial period of rapid improvement and does not mean learning has stopped. The instructor should explain that it is normal and temporary, can move the learner to a different place in the curriculum and give the task a break, or can explain the lesson and its purpose better. The handbook warns that over-practice can itself bring on a plateau, so piling on more of the same is the wrong cure, and nothing says a plateau marks a limit.",
+  "explanation": "FAA-H-8083-9B Ch. 3: a plateau is normal after an initial period of rapid improvement, and an apparent lack of progress does not necessarily mean learning has ceased. The instructor should explain that the plateau is normal and temporary, can move the learner to a different place in the curriculum and give the task a break, or can explain the lesson and its purpose better. The handbook warns that over-practice can itself bring on a plateau, so piling on more of the same is the wrong cure. It does list reaching capability limits among the things a plateau may signify, but its advice is to explain and adjust, not to tell the learner she has hit her limit.",
   "ref": "FAA-H-8083-9B Ch. 3 (Learning Plateaus); Ch. 2 (Drops in Motivation)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-020",
@@ -377,7 +377,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-021",
@@ -396,7 +396,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-022",
@@ -415,7 +415,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-023",
@@ -434,7 +434,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-024",
@@ -453,7 +453,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-025",
@@ -472,7 +472,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-026",
@@ -491,7 +491,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-027",
@@ -510,7 +510,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-028",
@@ -529,7 +529,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-029",
@@ -548,7 +548,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-030",
@@ -567,7 +567,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-031",
@@ -586,7 +586,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-032",
@@ -605,7 +605,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-033",
@@ -624,7 +624,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-034",
@@ -643,7 +643,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-035",
@@ -662,7 +662,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-036",
@@ -681,7 +681,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-037",
@@ -700,7 +700,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-038",
@@ -719,7 +719,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-039",
@@ -738,7 +738,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-040",
@@ -757,7 +757,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-041",
@@ -776,7 +776,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-042",
@@ -795,7 +795,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-043",
@@ -814,7 +814,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-044",
@@ -833,7 +833,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-045",
@@ -852,7 +852,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-046",
@@ -871,7 +871,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-047",
@@ -890,7 +890,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-048",
@@ -909,7 +909,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-049",
@@ -928,7 +928,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-050",
@@ -947,7 +947,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-051",
@@ -955,9 +955,9 @@
   "topic": "Demonstration-performance",
   "stem": "In the demonstration-performance method, which two phases take place at the same time?",
   "choices": [
-   "The explanation and the demonstration.",
+   "The explanation and the instructor's demonstration.",
    "Learner performance and instructor supervision.",
-   "The demonstration and the evaluation."
+   "The demonstration and the final evaluation."
   ],
   "answer": 1,
   "explanation": "FAA-H-8083-9B Ch. 5 lists five phases: explanation, demonstration, learner performance, instructor supervision and evaluation, and says learner performance and instructor supervision involve separate actions that happen at the same time; Ch. 9 counts the two as one phase, giving four. Explanation comes before the demonstration, and evaluation is a separate final phase in which the learner works independently.",
@@ -966,7 +966,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-052",
@@ -985,7 +985,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-053",
@@ -1004,7 +1004,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-054",
@@ -1023,7 +1023,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-055",
@@ -1042,7 +1042,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-056",
@@ -1061,7 +1061,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-057",
@@ -1080,7 +1080,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-058",
@@ -1099,7 +1099,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-059",
@@ -1118,7 +1118,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-060",
@@ -1137,7 +1137,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-061",
@@ -1156,7 +1156,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-062",
@@ -1175,7 +1175,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-063",
@@ -1194,7 +1194,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-064",
@@ -1213,7 +1213,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-065",
@@ -1232,7 +1232,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-066",
@@ -1251,7 +1251,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-067",
@@ -1270,7 +1270,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-068",
@@ -1289,7 +1289,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-069",
@@ -1308,7 +1308,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-070",
@@ -1327,7 +1327,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-071",
@@ -1346,7 +1346,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-072",
@@ -1354,7 +1354,7 @@
   "topic": "Performance-based objectives",
   "stem": "What three parts make up a performance-based objective?",
   "choices": [
-   "The attention, motivation and overview elements.",
+   "The attention, motivation and overview elements of a lesson.",
    "The objective, the content and the completion standards.",
    "A description of the behavior, the conditions and the criteria."
   ],
@@ -1365,7 +1365,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-073",
@@ -1384,7 +1384,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-074",
@@ -1403,7 +1403,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-075",
@@ -1422,7 +1422,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-076",
@@ -1441,7 +1441,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-077",
@@ -1460,7 +1460,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-078",
@@ -1470,7 +1470,7 @@
   "choices": [
    "A tap on the shoulder, so that radio calls aren't interrupted.",
    "A three-step spoken exchange, with a visual check of who has control.",
-   "The instructor simply takes over, then explains after landing."
+   "The instructor simply takes over, then explains why after landing."
   ],
   "answer": 1,
   "explanation": "FAA-H-8083-9B Ch. 9: a positive three-step exchange of flight controls is strongly recommended ('You have the flight controls,' 'I have the flight controls,' 'You have the flight controls'), with a visual check that the other person actually has control, so there is never any doubt about who is flying. When taking over, the instructor calmly announces, 'I have the flight controls.' Silent or tap-based handoffs are what the procedure exists to prevent.",
@@ -1479,7 +1479,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-079",
@@ -1498,7 +1498,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-080",
@@ -1517,7 +1517,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-081",
@@ -1536,7 +1536,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-082",
@@ -1555,7 +1555,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-083",
@@ -1574,7 +1574,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-084",
@@ -1593,7 +1593,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-085",
@@ -1612,7 +1612,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-086",
@@ -1625,13 +1625,13 @@
    "90 days."
   ],
   "answer": 0,
-  "explanation": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations): the instructor's signature on FAA Form 8710-1 is valid for 60 days, as is the flight proficiency endorsement in the applicant's logbook (AC 61-65), and the two dates should be the same. Ninety days is the solo endorsement period in 61.87(p). Signing the recommendation imposes a serious responsibility: the applicant should first demonstrate no less than the complete procedure in the PTS.",
-  "ref": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations); 14 CFR 61.87(p)",
+  "explanation": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations): the instructor's signature on FAA Form 8710-1 is valid for 60 days, as is the flight proficiency endorsement in the applicant's logbook (AC 61-65), and the two dates should be the same. Note that 61.39(a)(6)(i) itself now words the training window behind the logbook endorsement as the 2 calendar months preceding the month of application, so check the current AC 61-65 endorsement wording when you sign. Ninety days is the solo endorsement period in 61.87(p). Signing the recommendation imposes a serious responsibility: the applicant should first demonstrate no less than the complete procedure in the PTS.",
+  "ref": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations); 14 CFR 61.39(a)(6); 14 CFR 61.87(p)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-087",
@@ -1644,13 +1644,13 @@
    "At least 10 years."
   ],
   "answer": 1,
-  "explanation": "FAA-H-8083-9B Ch. 7 (Lesson Plans): a training folder for each learner should hold lesson plans, training requirements, instruction received, Part 61 requirements met, solo endorsements and other training information, and these records should be kept for at least 3 years. For holders of a flight instructor certificate, 14 CFR 61.189 sets 3 years by regulation; there is no balloon rating on a flight instructor certificate (61.5(c)), so for a commercial balloon pilot the 3 years is the handbook's guidance. Ten years is not in either source, and records discarded at the checkride lose the student's history.",
+  "explanation": "FAA-H-8083-9B Ch. 7 (Lesson Plans): a training folder for each learner should hold lesson plans, training requirements, instruction received, Part 61 requirements met, solo endorsements and other training information, and these records should be kept for at least 3 years. For holders of a flight instructor certificate, 14 CFR 61.189 sets 3 years by regulation; 61.5(c) lists no balloon category or class rating for a flight instructor certificate, so for a commercial balloon pilot the 3 years is the handbook's guidance. Ten years is not in either source, and records discarded at the checkride lose the student's history.",
   "ref": "FAA-H-8083-9B Ch. 7 (Lesson Plans); 14 CFR 61.189; 14 CFR 61.5(c)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "medium",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "FOI-088",
@@ -1669,7 +1669,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-089",
@@ -1688,7 +1688,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-090",
@@ -1707,7 +1707,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "FOI-091",
@@ -1720,13 +1720,13 @@
    "Balloon practical tests are given by instructors instead of examiners."
   ],
   "answer": 1,
-  "explanation": "14 CFR 61.133(a)(2)(ii) lets a commercial balloon pilot give flight and ground training for a certificate or rating, give certificate and solo endorsements, and give the training and endorsements for a flight review, and 61.3(d)(3)(i) and (i)(3)(ii) say no flight or ground instructor certificate is needed for that training in a lighter-than-air aircraft. That is why 61.125(b)(16) adds training procedures for lighter-than-air ratings, 61.127(b)(8) opens with fundamentals of instructing, and FAA-G-8082-5 tells balloon applicants to review FOI for the knowledge test. No ground instructor certificate is required, and practical tests are given by examiners.",
-  "ref": "14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i), (i)(3)(ii); 14 CFR 61.125(b)(16); 14 CFR 61.127(b)(8); FAA-G-8082-5",
+  "explanation": "14 CFR 61.133(a)(2)(ii) lets a commercial balloon pilot give flight and ground training for a certificate or rating, give certificate and solo endorsements, and give the training and endorsements for a flight review, and 61.3(d)(3)(i) and (i)(3)(ii) say no flight or ground instructor certificate is needed for that training in a lighter-than-air aircraft. That is why 61.125(b)(16) adds training procedures for lighter-than-air ratings, 61.127(b)(8) opens with fundamentals of instructing, and the Balloon Flying Handbook (FAA-H-8083-11B Ch. 10) notes that commercially rated balloon pilots instruct without a CFI rating, unlike pilots of every other aircraft, and calls the Aviation Instructor's Handbook required reading. No ground instructor certificate is required, and practical tests are given by examiners.",
+  "ref": "14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i), (i)(3)(ii); 14 CFR 61.125(b)(16); 14 CFR 61.127(b)(8); FAA-H-8083-11B Ch. 10 (Introduction)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1001",
@@ -1739,13 +1739,13 @@
    "No; logged training must come from an authorized instructor."
   ],
   "answer": 2,
-  "explanation": "14 CFR 61.51(h)(1) lets a person log training time only when it is received from an authorized instructor, and 61.3(d)(2)(iii) says only a flight instructor certificate holder may endorse a logbook to show training given, except under 61.3(d)(3)(i) for the holder of a commercial pilot certificate with a lighter-than-air rating, training in a lighter-than-air aircraft. In balloons the authority to teach comes with the commercial certificate (61.133(a)(2)(ii)); hours and acting as PIC don't create it.",
+  "explanation": "14 CFR 61.51(h)(1) lets a person log training time only when it is received from an authorized instructor, and 61.3(d)(2)(iii) says only a flight instructor certificate holder may endorse a logbook to show training given, with exceptions in 61.3(d)(3) that include, in (d)(3)(i), the holder of a commercial pilot certificate with a lighter-than-air rating, training in a lighter-than-air aircraft. In balloons the authority to teach comes with the commercial certificate (61.133(a)(2)(ii)); hours and acting as PIC don't create it.",
   "ref": "14 CFR 61.51(h); 14 CFR 61.3(d)(2)-(3); 14 CFR 61.133(a)(2)(ii)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1002",
@@ -1758,13 +1758,13 @@
    "No; the student must do a home-study course and self-certify instead."
   ],
   "answer": 1,
-  "explanation": "14 CFR 61.35(a)(1) requires an endorsement from an authorized instructor that the applicant completed the ground training or home study and is prepared for the knowledge test. 61.3(i)(2)(ii) normally limits that endorsement to ground instructors, but 61.3(i)(3)(ii) says a ground instructor certificate isn't necessary when the training is given by a commercial pilot with a lighter-than-air rating within the privileges of the certificate in a lighter-than-air aircraft (and 61.3(d)(3)(i) does the same for the flight instructor requirement). A home-study course still needs the instructor's endorsement; there is no self-certification.",
+  "explanation": "14 CFR 61.35(a)(1) requires an endorsement from an authorized instructor that the applicant completed the ground training or home study and is prepared for the knowledge test. 61.3(i)(2)(ii) normally limits that endorsement to ground instructors (flight instructors are excepted by (i)(3)(i)), but 61.3(i)(3)(ii) says a ground instructor certificate isn't necessary when the training is given by a commercial pilot with a lighter-than-air rating within the privileges of the certificate in a lighter-than-air aircraft (and 61.3(d)(3)(i) does the same for the flight instructor requirement). A home-study course still needs the instructor's endorsement; there is no self-certification.",
   "ref": "14 CFR 61.35(a)(1); 14 CFR 61.3(i)(2)-(3); 14 CFR 61.3(d)(3)(i); 14 CFR 61.133(a)(2)(ii)",
   "figure": null,
   "difficulty": 3,
   "status": "draft",
   "confidence": "medium",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1003",
@@ -1783,7 +1783,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1004",
@@ -1802,7 +1802,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1005",
@@ -1821,7 +1821,7 @@
   "difficulty": 1,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1006",
@@ -1840,7 +1840,7 @@
   "difficulty": 3,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1007",
@@ -1859,7 +1859,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1008",
@@ -1878,7 +1878,7 @@
   "difficulty": 3,
   "status": "draft",
   "confidence": "medium",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1009",
@@ -1887,17 +1887,17 @@
   "stem": "A commercial balloon pilot is giving paid flight training in a balloon. Which documents must she have with her?",
   "choices": [
    "Her pilot certificate, a photo ID and a second-class medical certificate.",
-   "Her pilot certificate and a photo ID; no medical is required for this flight.",
+   "Her pilot certificate and a photo ID; no medical is needed for this.",
    "Her pilot certificate, a photo ID and a flight instructor certificate."
   ],
   "answer": 1,
-  "explanation": "14 CFR 61.3(a)(1) and (a)(2) require the pilot certificate and a photo ID in physical possession or readily accessible. 61.3(c)(2)(vi)(B) and 61.23(b)(5) say no medical certificate is needed for a commercial balloon pilot giving flight training under 61.133(a)(2)(ii); a second-class medical is needed for other balloon flights for compensation or hire (61.23(a)(2)(iii)). There is no balloon flight instructor certificate (61.5(c)), and 61.3(d)(3)(i) says none is needed for this training.",
+  "explanation": "14 CFR 61.3(a)(1) and (a)(2) require the pilot certificate and a photo ID in physical possession or readily accessible. 61.3(c)(2)(vi)(B) and 61.23(b)(5) say no medical certificate is needed for a commercial balloon pilot giving flight training under 61.133(a)(2)(ii); a second-class medical is needed for other balloon flights for compensation or hire (61.23(a)(2)(iii)). 61.5(c) lists no balloon category or class rating for a flight instructor certificate, and 61.3(d)(3)(i) says none is needed for this training.",
   "ref": "14 CFR 61.3(a), (c)(2)(vi)(B), (d)(3)(i); 14 CFR 61.23(a)(2)(iii), (b)(5); 14 CFR 61.5(c)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1010",
@@ -1906,17 +1906,17 @@
   "stem": "A sponsor pays a private balloon pilot $300 to fly its logo balloon over the county fair with no one else aboard. Which statement is correct?",
   "choices": [
    "It is legal, because no passengers or property are carried for hire.",
-   "He needs a commercial certificate; he is acting as pilot in command for hire.",
+   "He needs a commercial certificate, since he is paid to act as PIC.",
    "It is legal, because a private pilot may share the costs of a flight."
   ],
   "answer": 1,
-  "explanation": "14 CFR 61.113(a): a private pilot may not act as pilot in command for compensation or hire, and the paragraph (b) exception covers only flights that are merely incidental to the pilot's business or employment and carry no passengers or property for hire. Here the flying is the service being paid for, not incidental to another job. 61.133(a)(1)(ii) is the commercial privilege to act as pilot in command for compensation or hire, and 61.113(c) cost sharing covers a pro rata share with passengers, not a fee.",
-  "ref": "14 CFR 61.113(a)-(c); 14 CFR 61.133(a)(1)(ii)",
+  "explanation": "14 CFR 61.113(a): a private pilot may not act as pilot in command for compensation or hire, and the paragraph (b) exception covers only flights that are merely incidental to the pilot's business or employment and carry no passengers or property for hire. Here the flying is the service being paid for, not incidental to another job. Acting as pilot in command for compensation or hire is the commercial privilege in 61.133(a)(1)(ii), and a commercial balloon pilot flying for hire (other than giving flight training) also needs at least a second-class medical (61.23(a)(2)(iii)). 61.113(c) cost sharing covers a pro rata share of expenses with passengers, not a fee.",
+  "ref": "14 CFR 61.113(a)-(c); 14 CFR 61.133(a)(1)(ii); 14 CFR 61.23(a)(2)(iii)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "medium",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1011",
@@ -1924,9 +1924,9 @@
   "topic": "The commercial operator test",
   "stem": "When it is unclear whether carrying people by air is 'for compensation or hire,' what test does the definition of commercial operator in 14 CFR 1.1 apply?",
   "choices": [
-   "Whether any money at all changes hands for the flight, whatever the reason it is paid.",
-   "Whether the carriage is merely incidental to another business or is a major enterprise for profit.",
-   "Whether the flight carries more than two passengers who are not crewmembers."
+   "Whether any money changes hands for the flight, whatever the reason it is paid.",
+   "Whether carriage by air is merely incidental to other business or a major enterprise for profit.",
+   "Whether the flight carries more than two passengers who are not crewmembers aboard."
   ],
   "answer": 1,
   "explanation": "14 CFR 1.1 defines a commercial operator as a person who, for compensation or hire, engages in the carriage by aircraft in air commerce of persons or property, and says that where it is doubtful, the test is whether the carriage by air is merely incidental to the person's other business or is, in itself, a major enterprise for profit. The definition sets no passenger count, and it does not turn on money alone.",
@@ -1935,7 +1935,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  },
  {
   "id": "REG-1012",
@@ -1954,7 +1954,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1013",
@@ -1973,7 +1973,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1014",
@@ -1992,7 +1992,7 @@
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "confirmed"
  },
  {
   "id": "REG-1015",
@@ -2001,16 +2001,16 @@
   "stem": "An applicant for a commercial balloon certificate, training in a hot air balloon, will take the practical test in June. Under 61.129(h), which training flights must she have?",
   "choices": [
    "Two 1-hour solo flights in the 60 days before the test.",
-   "Two 1-hour flights with an instructor in April or May.",
+   "Two 1-hour flights with an instructor, none before April 1.",
    "One 2-hour flight with an instructor in May or June."
   ],
   "answer": 1,
-  "explanation": "14 CFR 61.129(h)(4)(ii)(A) requires two training flights of 1 hour each in a balloon with an airborne heater, with an authorized instructor, in preparation for the practical test, within the preceding 2 calendar months from the month of the test, so April and May for a June test. Two solo flights are a separate requirement in (h)(4)(ii)(B), not tied to that window. Two-hour training flights are the gas balloon version in (h)(4)(i)(A).",
+  "explanation": "14 CFR 61.129(h)(4)(ii)(A) requires two training flights of 1 hour each in a balloon with an airborne heater, with an authorized instructor, in preparation for the practical test, within the preceding 2 calendar months from the month of the test, so for a June test the window opens April 1. Two solo flights are a separate requirement in (h)(4)(ii)(B), not tied to that window. Two-hour training flights are the gas balloon version in (h)(4)(i)(A).",
   "ref": "14 CFR 61.129(h)(4)(i)-(ii)",
   "figure": null,
   "difficulty": 2,
   "status": "draft",
   "confidence": "high",
-  "checked": ""
+  "checked": "fixed"
  }
 ]

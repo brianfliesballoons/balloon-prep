@@ -1,0 +1,744 @@
+[
+ {
+  "id": "FOI-001",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (What is Learning?; Blocked Practice) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-002",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Thorndike and the Laws of Learning: Readiness) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-003",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Primacy; Habit Formation) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-004",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Effect) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-005",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Recency) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-006",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice by 7 characters (80 vs 73/66).",
+  "suggested": "Shortened the key to 'A realistic approach near power lines that the student must manage.'",
+  "source": "FAA-H-8083-9B Ch. 3 (Intensity) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-007",
+  "verdict": "fixed",
+  "issue": "Distractor A 'Incidental learning' was arguably defensible: FAA-H-8083-9B Ch. 3 describes incidental learning as including observation of other pilots, which is what the student did; the explanation also misdescribed incidental learning.",
+  "suggested": "Replaced A with 'Insight, the grouping of perceptions.' and rewrote that explanation sentence. Key (teachable moment, under readiness) unchanged.",
+  "source": "FAA-H-8083-9B Ch. 3 (Readiness: teachable moments) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-008",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Factors that Affect Perception: Element of Threat) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-009",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Insight) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-010",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Cognitive Domain: practical learning levels) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-011",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Cognitive Domain: correlation) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-012",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Domains of Learning; Affective Domain) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-013",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Higher Order Thinking Skills; Cognitive Domain) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-014",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Characteristics of Learning) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-015",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Learning Styles; Visual, Auditory, Kinesthetic Learners) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-016",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Stages of Skill Acquisition) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-017",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Cognitive Stage; Associative Stage) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-018",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Knowledge of Results) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-019",
+  "verdict": "fixed",
+  "issue": "Explanation said 'nothing says a plateau marks a limit', but Ch. 3 (Learning Plateaus) says a plateau may signify that the learner has reached capability limits.",
+  "suggested": "Explanation rewritten: the handbook lists capability limits among the possibilities but says lack of progress does not necessarily mean learning has ceased, and its advice is to explain and adjust. Key unchanged.",
+  "source": "FAA-H-8083-9B Ch. 3 (Learning Plateaus); Ch. 2 (Drops in Motivation) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-020",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Types of Practice: Blocked Practice, Random Practice) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-021",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Memory: Short-Term Memory) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-022",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Forgetting: Interference) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-023",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Retention of Learning) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-024",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (How Usage Affects Memory) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-025",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Remembering during Training; Summary of Instructor Actions) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-026",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Errors: Slip, Mistake) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-027",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Errors: Mistake) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-028",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Distractions and Interruptions) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-029",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 3 (Fixation and Inattention) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-030",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Human Needs and Motivation) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-031",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Projection) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-032",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Rationalization) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-033",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Displacement) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-034",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Learner Emotional Reactions: Anxiety) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-035",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Apathy Due to Inadequate Instruction); Ch. 7; Ch. 8 (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-036",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Normal Reactions to Stress; Abnormal Reactions to Stress) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-037",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Flight Instructor Actions Regarding Seriously Abnormal Learners) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-038",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Fatigue) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-039",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 2 (Teaching the Adult Learner) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-040",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 4 (Basic Elements of Communication) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-041",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 4 (Barriers to Effective Communication) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-042",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 4 (Overuse of Abstractions) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-043",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 4 (Symbols: feedback); Ch. 6 (Thoughtful) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-044",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 4 (Questioning); Ch. 6 (Types of Questions to Avoid) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-045",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Process) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-046",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Lesson Introduction) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-047",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Development) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-048",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Advantages and Disadvantages of the Lecture) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-049",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Guided Discussion Method; Planning a Guided Discussion) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-050",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Planning a Guided Discussion: lead-off questions) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-051",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice by 9 characters (47 vs 38/37).",
+  "suggested": "Lengthened A ('The explanation and the instructor's demonstration.') and C ('The demonstration and the final evaluation.').",
+  "source": "FAA-H-8083-9B Ch. 5 (Demonstration-Performance Method); Ch. 9 (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-052",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 9 (The Telling-and-Doing Technique) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-053",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Scenario-Based Training Method) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-054",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Case Study Method) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-055",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Test Preparation Material) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-056",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 5 (Computer-Assisted Learning Method) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-057",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Assessment Terminology; Authentic Assessment) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-058",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Assessment Terminology) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-059",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (General Characteristics of Effective Assessment: Objective) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-060",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (General Characteristics of Effective Assessment: Specific) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-061",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Characteristics of a Good Written Assessment) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-062",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Learner-Centered Assessment) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-063",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Maneuver or Procedure Grades) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-064",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Critiques and Oral Assessments) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-065",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Types of Questions to Avoid) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-066",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Characteristics of Effective Questions) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-067",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 6 (Answering Learner Questions); Ch. 8 (Admit errors) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-068",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 7 (Blocks of Learning) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-069",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 7 (How to Use a Training Syllabus) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-070",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 7 (Lesson Plans) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-071",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 7 (Characteristics of a Well-Planned Lesson) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-072",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice by 7 characters.",
+  "suggested": "Lengthened A to 'The attention, motivation and overview elements of a lesson.'",
+  "source": "FAA-H-8083-9B Ch. 5 (Performance-Based Objectives); Ch. 7 (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-073",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 7 (How to Use a Lesson Plan Properly; How to Use a Training Syllabus) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-074",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 8 (Standards of Performance); Ch. 9; Ch. 5; FAA-S-8081-18A (Foreword) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook, https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf)"
+ },
+ {
+  "id": "FOI-075",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 8 (Helping Learners) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-076",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 8 (Emphasizing the Positive) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-077",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 8 (Safety Practices and Accident Prevention) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-078",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice by 7 characters.",
+  "suggested": "Lengthened C to 'The instructor simply takes over, then explains why after landing.'",
+  "source": "FAA-H-8083-9B Ch. 9 (Positive Exchange of Flight Controls) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-079",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 10 (Notes on Instructional Risk Management in the Flight Deck; Managing Risk while Teaching Takeoffs) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-080",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 9 (Correction of Learner Errors) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-081",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 9 (Visualization) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-082",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 10 (Mitigating Risk) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-083",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 10 (Identifying Risk; Common Flight Instruction Risks) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-084",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 10 (Risk Management Tools) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-085",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-H-8083-9B Ch. 10 (When to Teach Risk Management) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook)"
+ },
+ {
+  "id": "FOI-086",
+  "verdict": "fixed",
+  "issue": "Key (60 days) is exactly what FAA-H-8083-9B Ch. 9 says, but the handbook's statement that the logbook endorsement is also 'valid for 60 days' does not match current 14 CFR 61.39(a)(6)(i), which words the training window as 2 calendar months preceding the month of application. Ref cited 61.87(p) but not 61.39.",
+  "suggested": "Added a sentence pointing to the 61.39(a)(6)(i) wording and AC 61-65; added 61.39(a)(6) to ref. Key unchanged (stem asks what the handbook says).",
+  "source": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations); 14 CFR 61.39(a)(6); 14 CFR 61.87(p) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook, https://www.ecfr.gov/current/title-14/section-61.39, https://www.ecfr.gov/current/title-14/section-61.87)"
+ },
+ {
+  "id": "FOI-087",
+  "verdict": "fixed",
+  "issue": "'There is no balloon rating on a flight instructor certificate' was imprecise: 61.5(c)(5) has a sport pilot rating, and a sport-rated flight instructor can hold balloon privileges.",
+  "suggested": "Reworded to '61.5(c) lists no balloon category or class rating for a flight instructor certificate'. Key (at least 3 years, Ch. 7 Lesson Plans) and the 61.189 applicability reasoning verified: 61.189(c) binds 'each flight instructor', so for a commercial balloon pilot without a CFI the 3 years is handbook guidance.",
+  "source": "FAA-H-8083-9B Ch. 7 (Lesson Plans); 14 CFR 61.189; 14 CFR 61.5(c) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook, https://www.ecfr.gov/current/title-14/section-61.189, https://www.ecfr.gov/current/title-14/section-61.5)"
+ },
+ {
+  "id": "FOI-088",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-S-8081-18A, Area of Operation I (Fundamentals of Instructing) (https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf)"
+ },
+ {
+  "id": "FOI-089",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-S-8081-18A, Area of Operation IV; 14 CFR 61.127(b)(8) (https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf, https://www.ecfr.gov/current/title-14/section-61.127)"
+ },
+ {
+  "id": "FOI-090",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "FAA-S-8081-18A (Use of the PTS) (https://www.faa.gov/training_testing/testing/acs/commercial_lta_pts_18.pdf)"
+ },
+ {
+  "id": "FOI-091",
+  "verdict": "fixed",
+  "issue": "Cited FAA-G-8082-5 for 'tells balloon applicants to review FOI for the knowledge test'; that document could not be located on faa.gov and the claim could not be verified.",
+  "suggested": "Replaced with FAA-H-8083-11B Ch. 10 (Introduction), which says commercially rated balloon pilots instruct without a CFI rating, unlike all other aircraft, and calls the Aviation Instructor's Handbook required reading. Ref updated. Key unchanged.",
+  "source": "14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i), (i)(3)(ii); 14 CFR 61.125(b)(16); 14 CFR 61.127(b)(8); FAA-H-8083-11B Ch. 10 (Introduction) (https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/Balloon_Flying_Handbook_FAA-H-8083-11B/bfh_chapter_10.pdf, https://www.ecfr.gov/current/title-14/section-61.133, https://www.ecfr.gov/current/title-14/section-61.3, https://www.ecfr.gov/current/title-14/section-61.125, https://www.ecfr.gov/current/title-14/section-61.127)"
+ },
+ {
+  "id": "REG-1001",
+  "verdict": "fixed",
+  "issue": "Explanation implied 61.3(d)(3)(i) was the only exception to 61.3(d)(2)(iii); 61.3(d)(3) lists several (ATP under 121/135 programs, Part 142, ground instructors, 61.41).",
+  "suggested": "Reworded to 'with exceptions in 61.3(d)(3) that include, in (d)(3)(i), ...'. Key unchanged.",
+  "source": "14 CFR 61.51(h); 14 CFR 61.3(d)(2)-(3); 14 CFR 61.133(a)(2)(ii) (https://www.ecfr.gov/current/title-14/section-61.51, https://www.ecfr.gov/current/title-14/section-61.3, https://www.ecfr.gov/current/title-14/section-61.133)"
+ },
+ {
+  "id": "REG-1002",
+  "verdict": "fixed",
+  "issue": "Key verified: 61.3(i)(3)(ii) excepts commercial LTA holders from the ground instructor requirement of 61.3(i)(2)(ii) (knowledge-test endorsement), consistent with 61.133(a)(2)(ii)(A)-(B) and FAA-H-8083-11B Ch. 10. Explanation said (i)(2)(ii) 'normally limits that endorsement to ground instructors', omitting that flight instructors are excepted by (i)(3)(i). Residual nuance: the 61.1 definition of 'authorized instructor' (used by 61.35(a)(1)) names ground and flight instructor holders and persons 'authorized by the Administrator ... under part 61'; commercial LTA pilots fit only through that third clause.",
+  "suggested": "Added '(flight instructors are excepted by (i)(3)(i))'. Key unchanged.",
+  "source": "14 CFR 61.35(a)(1); 14 CFR 61.3(i)(2)-(3); 14 CFR 61.3(d)(3)(i); 14 CFR 61.133(a)(2)(ii) (https://www.ecfr.gov/current/title-14/section-61.35, https://www.ecfr.gov/current/title-14/section-61.3, https://www.ecfr.gov/current/title-14/section-61.133)"
+ },
+ {
+  "id": "REG-1003",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.39(a)(6) (https://www.ecfr.gov/current/title-14/section-61.39)"
+ },
+ {
+  "id": "REG-1004",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.39(a)(6)(iii); FAA Learning Statement Reference Guide (introduction) (https://www.ecfr.gov/current/title-14/section-61.39)"
+ },
+ {
+  "id": "REG-1005",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.56(a), (c); 14 CFR 61.133(a)(2)(ii)(D) (https://www.ecfr.gov/current/title-14/section-61.56, https://www.ecfr.gov/current/title-14/section-61.133)"
+ },
+ {
+  "id": "REG-1006",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.56(c)(1); 14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i) (https://www.ecfr.gov/current/title-14/section-61.56, https://www.ecfr.gov/current/title-14/section-61.133, https://www.ecfr.gov/current/title-14/section-61.3)"
+ },
+ {
+  "id": "REG-1007",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.133(a)(2)(ii)(A)-(B); 14 CFR 61.39(a)(6) (https://www.ecfr.gov/current/title-14/section-61.133, https://www.ecfr.gov/current/title-14/section-61.39)"
+ },
+ {
+  "id": "REG-1008",
+  "verdict": "confirmed",
+  "issue": "Flagged medium by the author; verified. 61.87(p)(1)-(3): no instructor may authorize a solo unless that instructor has given the student training in the make and model and determined proficiency; 61.87(n) likewise requires the endorsement from an instructor who gave the training within 90 days. 61.133(a)(2)(ii)(C) gives a commercial balloon pilot the solo-endorsement privilege, but (p) still binds. No change.",
+  "suggested": "",
+  "source": "14 CFR 61.87(p); 14 CFR 61.87(k), (n) (https://www.ecfr.gov/current/title-14/section-61.87)"
+ },
+ {
+  "id": "REG-1009",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice; 'There is no balloon flight instructor certificate' imprecise (sport pilot rating).",
+  "suggested": "Shortened key to 'Her pilot certificate and a photo ID; no medical is needed for this.'; reworded the 61.5(c) sentence. Key verified against 61.3(c)(2)(vi)(B) and 61.23(b)(5).",
+  "source": "14 CFR 61.3(a), (c)(2)(vi)(B), (d)(3)(i); 14 CFR 61.23(a)(2)(iii), (b)(5); 14 CFR 61.5(c) (https://www.ecfr.gov/current/title-14/section-61.3, https://www.ecfr.gov/current/title-14/section-61.23, https://www.ecfr.gov/current/title-14/section-61.5)"
+ },
+ {
+  "id": "REG-1010",
+  "verdict": "fixed",
+  "issue": "Key verified (61.113(a)-(b): the paid flight is not incidental to another business). Key was the longest choice by 8 characters; explanation did not mention that a paid commercial balloon flight also needs a second-class medical.",
+  "suggested": "Key reworded to 'He needs a commercial certificate, since he is paid to act as PIC.'; explanation adds 61.23(a)(2)(iii); ref adds 61.23(a)(2)(iii).",
+  "source": "14 CFR 61.113(a)-(c); 14 CFR 61.133(a)(1)(ii); 14 CFR 61.23(a)(2)(iii) (https://www.ecfr.gov/current/title-14/section-61.113, https://www.ecfr.gov/current/title-14/section-61.133, https://www.ecfr.gov/current/title-14/section-61.23)"
+ },
+ {
+  "id": "REG-1011",
+  "verdict": "fixed",
+  "issue": "Key was the longest choice by 12 characters (98 vs 86/76).",
+  "suggested": "Shortened key and adjusted A and C so the three are 80-93 characters. Key unchanged in meaning; verified against the 14 CFR 1.1 definition of commercial operator.",
+  "source": "14 CFR 1.1 (Commercial operator) (https://www.ecfr.gov/current/title-14/section-1.1)"
+ },
+ {
+  "id": "REG-1012",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 119.1(e)(5); 14 CFR 61.133(a)(1) (https://www.ecfr.gov/current/title-14/section-119.1, https://www.ecfr.gov/current/title-14/section-61.133)"
+ },
+ {
+  "id": "REG-1013",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 136.1(a), (c), (d) (https://www.ecfr.gov/current/title-14/section-136.1)"
+ },
+ {
+  "id": "REG-1014",
+  "verdict": "confirmed",
+  "issue": "",
+  "suggested": "",
+  "source": "14 CFR 61.125(a), (b)(16); 14 CFR 61.127(b)(8) (https://www.ecfr.gov/current/title-14/section-61.125, https://www.ecfr.gov/current/title-14/section-61.127)"
+ },
+ {
+  "id": "REG-1015",
+  "verdict": "fixed",
+  "issue": "Key 'in April or May' asserted that flights earlier in June (the test month) do not count; 61.129(h)(4)(ii)(A) says 'within the preceding 2 calendar months from the month of the test', which fixes the window's start but is not explicit about the test month itself.",
+  "suggested": "Key now 'Two 1-hour flights with an instructor, none before April 1.'; explanation says the window opens April 1. Distractors unchanged.",
+  "source": "14 CFR 61.129(h)(4)(i)-(ii) (https://www.ecfr.gov/current/title-14/section-61.129)"
+ }
+]
