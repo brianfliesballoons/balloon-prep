@@ -3,14 +3,14 @@
 // so a new deploy reaches any online student on their next load. Fonts have fixed names and are served cache-first.
 // It never touches cross-origin requests (the instructor Worker included) or anything that is not a GET.
 // Bump VERSION when the PRECACHE list changes; old caches are deleted on activate.
-const VERSION = 'v3';
+const VERSION = 'v4';
 const CACHE = 'balloon-prep-' + VERSION;
 const PREFIX = 'balloon-prep-';
 const TIMEOUT = 3000;
 const PRECACHE = [
   './', 'manifest.webmanifest',
   'questions/pilot-1.json', 'questions/pilot-2.json', 'questions/pilot-3.json', 'questions/pilot-4.json', 'questions/pilot-5.json',
-  'questions/pilot-6.json', 'questions/pilot-7.json', 'questions/pilot-8.json', 'questions/pilot-9.json', 'questions/kinds.json',
+  'questions/pilot-6.json', 'questions/pilot-7.json', 'questions/pilot-8.json', 'questions/pilot-9.json', 'questions/kinds.json', 'questions/tracks.json',
   'lessons/lessons.json', 'lessons/map.json', 'refs/cards.json',
   'refs/img/sectional-legend-8080-1E.png', 'refs/img/phak-fig15-1-airspace-profile.png',
   'fonts/atkinson-hyperlegible-400.woff2', 'fonts/atkinson-hyperlegible-700.woff2',
