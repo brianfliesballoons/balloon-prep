@@ -2006,6 +2006,7 @@ function newsOpen(since){const d=$('newsD'),auto=since!==undefined,E=auto?NEWS.f
 function newsBoot(){if(location.hash.startsWith('#print=')||!NEWS.length)return;if(!S.newsSeen&&progEmpty(saveData())){S.newsSeen=NEWS[0].v;save(true);}newsMaybe();}
 function newsMaybe(){if(NEWSCHK||!NEWS.length||!BANK.length||location.hash.startsWith('#print='))return;
   if(!S.track||document.querySelector('dialog[open]'))return;
+  if(mode==='results'||(mode==='learn'&&LV.v==='hub'))return;  // never over a results card or the instructor hub; it waits for the next open
   NEWSCHK=true;const top=NEWS[0].v,was=S.newsSeen||'';if(was>=top)return;
   S.newsSeen=top;save();newsOpen(was);}
 document.addEventListener('close',e=>{if(e.target.id!=='newsD')setTimeout(newsMaybe,60);},true);  // close does not bubble: listen in the capture phase
@@ -2028,7 +2029,7 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
     <ul><li><b>Private</b> (FAA test ${P.code}): ${P.n} questions in ${dur(P)}.</li><li><b>Commercial</b> (FAA test ${C.code}): ${C.n} questions in ${dur(C)}.</li></ul>
     <p>Both pass at ${PASS}%. Most questions are on both tests. Questions that are only on the Commercial test are hidden while you study for Private, and Commercial adds a Teaching section in Learn.</p>
     <p>To switch, tap the test name at the top of the screen. Your answers, flags and review schedule stay, and each test keeps its own scores.</p><button class="lnk" data-help-go="trk">Change my test</button>`],
-   ['What is the Teaching section?',`<p>It’s part of the Commercial track. A commercial balloon pilot can give flight and ground training, so the FAA's commercial knowledge areas include training procedures (14 CFR 61.125(b)), and the commercial checkride opens with Fundamentals of Instructing. The Teaching section in Learn has lessons and practice questions on the learning process and on teaching.</p>`],
+   ['What is the Teaching section?',`<p>It’s part of the Commercial track. A commercial balloon pilot can give flight and ground training, so the FAA's commercial knowledge areas include training procedures (14 CFR 61.125(b)), and the commercial checkride opens with Fundamentals of Instructing. The Teaching section in Learn has lessons on the learning process and on teaching, its questions are in Study, and about 8 of the 100 on a Commercial practice test come from it.</p>`],
    ['Should I add it to my Home Screen?',`<p>On an iPhone or iPad, yes. In Safari, tap Share, then <b>Add to Home Screen</b>, and open it from the new icon. On Android, open the browser menu and choose Add to Home screen or Install.</p>
     <ul><li>It opens like an app, without the browser’s address bar.</li>
     <li>Safari can clear a site’s saved data after a week of using Safari without opening that site. The Home Screen app doesn’t have that limit, so your progress is safer there.</li>
@@ -2056,19 +2057,19 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
     <p>Export a copy first if you might want it back.</p>`]]],
   ['Your instructor',[
    ['How do I join my instructor’s class?',`<p>Open the invite link your instructor sent you, type your name, and tap <b>Join class</b>. Or go to <b>Learn</b>, find <b>Your questions</b>, and type the class code and your name there.</p>
-    <p>Your class comes with you when you sign in or use Export and Import. To leave, go to Your questions on the Learn page and tap <b>Leave class</b> (or leave and delete your questions).</p><button class="lnk" data-help-go="learn">Go to Learn</button>`],
+    <p>Your class comes with you when you sign in or use Export and Import. To leave, go to Your questions on the Learn page and tap <b>Leave class</b> (or leave and delete your questions). Leaving deletes any practice-test scores you sent.</p><button class="lnk" data-help-go="learn">Go to Learn</button>`],
    ['How do I ask my instructor a question?',`<p>After you answer a practice question, tap <b>Ask … about this</b> under the explanation. Every lesson also has an ask box at the bottom. Type your question in your own words and send it.</p>
     <p>The answer shows up under <b>Your questions</b> on the Learn page.</p>`],
    ['Can I get a notification when my instructor answers?',`<p>Yes. After you send a question, or under Your questions on the Learn page, tap <b>Notify me when … answers</b> and allow notifications. Each device is set up on its own.</p>
     <p>On an iPhone or iPad this works only in the Home Screen app, on iOS 16.4 or newer. The Home Screen app keeps its own copy, so bring your class into it first: sign in there, or use the sign-in code under Your questions (<b>Move to the Home Screen app or another device</b>).</p>`],
-   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send to my instructor</b> button. It sends that test’s score, time and results by area. Nothing is sent unless you choose to send it.</p>`],
+   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send to my instructor</b> button. It sends that test’s score, time, results by area and how many questions you flagged in each area (never your answers or the questions themselves). Nothing is sent unless you tap it, or tick <b>Always send my practice test scores</b> to send each finished test from then on. Leaving the class deletes the scores you sent.</p>`],
    ['What can my instructor see?',`<p>Only what you send:</p>
     <ul><li>Your name, as you typed it when you joined.</li>
     <li>The questions you ask. When you ask about a practice question, they also see that question and the answer you picked, so they can help.</li>
-    <li>A practice-test score, only if you choose to send it.</li></ul>
-    <p>Nothing else. Your instructor doesn’t see your study answers, flags, review list or any score you didn’t send.</p>`]]],
+    <li>A practice-test score, only if you send it (or turn on Always send): the score, time, results by area and how many questions you flagged in each area.</li></ul>
+    <p>Nothing else. Your instructor doesn’t see your study answers, which questions you flagged, your review list or any score you didn’t send.</p>`]]],
   ['The questions',[
-   ['Where do the questions come from? Are they real FAA test questions?',`<p>No, they aren’t real FAA test questions, and they aren’t copied from other study apps or books. ${ALLQ.length?'All '+ALLQ.length:'They all'} were written for this app from free FAA sources: the Balloon Flying Handbook, the Pilot’s Handbook of Aeronautical Knowledge, the Aeronautical Information Manual and the regulations (such as 14 CFR parts 61 and 91). Each one was then fact-checked against those sources separately, and every explanation names its reference.</p>
+   ['Where do the questions come from? Are they real FAA test questions?',`<p>No, they aren’t real FAA test questions, and they aren’t copied from other study apps or books. ${ALLQ.length?'All '+ALLQ.length:'They all'} were written for this app from free FAA sources: the Balloon Flying Handbook, the Pilot’s Handbook of Aeronautical Knowledge, the Aeronautical Information Manual, the Aviation Instructor’s Handbook and the regulations (such as 14 CFR parts 61 and 91). Each one was then fact-checked against those sources separately, and every explanation names its reference.</p>
     <p>They cover the same knowledge as the real test, so they’re good practice, but they’re not a preview of the exact questions you’ll see.</p>`],
    ['What do “Bonus · conceptual” and “From the field” mean?',`<p>Most questions are <b>test-style</b>, like the real test. Two other kinds are marked:</p>
     <ul><li><b>Bonus · conceptual</b>: deeper physics or math. Good for understanding, unlikely on the test.</li><li><b>From the field</b>: airmanship and custom from real flying, not regulation.</li></ul>
