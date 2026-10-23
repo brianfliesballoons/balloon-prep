@@ -689,16 +689,18 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 <script>
 (function(){
 // ---------- data ----------
-const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json','questions/pilot-8.json','questions/pilot-9.json'];
-const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
+const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json','questions/pilot-8.json','questions/pilot-9.json','questions/pilot-10.json'];
+const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart'],['FOI','Teaching & the learning process']];  // FOI is Commercial-only (tracks.json, lessons.json topic track:'C')
 const AREA=Object.fromEntries(AREAS);
 // Voluntary personal tips to the app's author. Empty = no tip link, line or sheet anywhere.
 const TIP_URL='';
 // Test track (S.track): P = Private (FAA test PBH), C = Commercial (CBH). n questions, per = ms a question (PBH 60 in 2.5 h, CBH 100 in 3.0 h), bp = the area mix.
 // The FAA publishes no per-area weights for either test; the mixes spread across the 61.105(b) / 61.125(b) areas. No track yet = Commercial (what every test was before).
+// Commercial adds FOI (teaching & the learning process: 61.125(b)(16), 61.127(b)(8)(i), FAA-G-8082-5 tells balloon applicants to review it) at 8 of 100,
+// taken roughly in proportion from the other areas (REG 18>16, AIR 14>13, WXS 12>11, ADM 10>9, THY 14>13, WXT 12>11, OPS 16>15; DAC stays 4). Our estimate, not an FAA weight.
 const PASS=70;
 const TRACKS={P:{name:'Private',long:'Private Pilot, Balloon',code:'PBH',n:60,per:150e3,bp:{REG:11,AIR:8,WXS:7,ADM:6,THY:8,WXT:7,OPS:9,DAC:4}},
-  C:{name:'Commercial',long:'Commercial Pilot, Balloon',code:'CBH',n:100,per:108e3,bp:{REG:18,AIR:14,WXS:12,ADM:10,THY:14,WXT:12,OPS:16,DAC:4}}};
+  C:{name:'Commercial',long:'Commercial Pilot, Balloon',code:'CBH',n:100,per:108e3,bp:{REG:16,AIR:13,WXS:11,ADM:9,THY:13,WXT:11,OPS:15,DAC:4,FOI:8}}};
 const trk=()=>S.track==='P'?'P':'C',TRK=()=>TRACKS[trk()];
 const hTr=h=>h&&h.track==='P'?'P':'C';  // a test or history entry without a track was a 100-question Commercial test
 let TRC=new Set();  // questions/tracks.json {"C":[ids]}: Commercial-only questions, hidden while studying for Private
@@ -950,7 +952,10 @@ $('tsGo').onclick=()=>{if(testHeld())return;{const l=buildTest();S.test={list:l,
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
 // ---------- test track: Private / Commercial ----------
 // BANK and TQ hold only the questions shown for the track; byId keeps every question, so saved tests, history and Ask still find theirs.
-function applyTrack(){BANK=ALLQ.filter(q=>vis(q.id));TQ={};BANK.forEach(q=>{const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});}
+// a topic with track:'C' (the Teaching group) is Commercial-only; a group with no topic left on this track is dropped
+function applyTrack(){const tv=t=>trk()==='C'||LESALL.topics[t].track!=='C',tp={};Object.keys(LESALL.topics).forEach(t=>{if(tv(t))tp[t]=LESALL.topics[t];});
+  LES={groups:LESALL.groups.map(g=>({...g,topics:g.topics.filter(t=>tp[t])})).filter(g=>g.topics.length),links:LESALL.links,topics:tp};
+  BANK=ALLQ.filter(q=>vis(q.id));TQ={};BANK.forEach(q=>{const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});}
 const tDurS=ms=>{const m=Math.round(ms/6e4),h=Math.floor(m/60),r=m%60;return h?`${h} h${r?` ${r} min`:''}`:`${m} min`;};
 function trkUI(){const t=TRK(),b=$('trkBtn');b.hidden=!S.track;if(S.track&&$('trkPick').open)$('trkPick').close();$('trkName').textContent=t.name;b.setAttribute('aria-label',`Change test, now ${t.name}`);
   document.querySelectorAll('#trkPick [data-trk]').forEach(o=>{const x=TRACKS[o.dataset.trk];o.querySelector('.trkm').textContent=`FAA test ${x.code} · ${x.n} questions · ${tDurS(x.n*x.per)} · pass at ${PASS}%`;o.setAttribute('aria-current',String(S.track===o.dataset.trk));});
@@ -1155,7 +1160,7 @@ $('wprev').onclick=()=>{if(walk.i>0){walk.i--;showStep();}};
 $('wnext').onclick=()=>{if(walk.i<walk.steps.length-1){walk.i++;showStep();}else endWalk();};
 
 // ---------- learn ----------
-let LES={groups:[],links:{},topics:{}},MAP={},TQ={},KIND={};
+let LES={groups:[],links:{},topics:{}},LESALL=LES,MAP={},TQ={},KIND={};  // LESALL = every topic; LES = the topics shown for the current track (applyTrack)
 // Question kind, separate from subject: test-style (default), bonus/conceptual, from the field. Only test-style counts toward practice tests and mastery.
 const KINDS={bonus:'Bonus · conceptual',field:'From the field'};
 const kindOf=id=>(KIND[id]&&KIND[id].kind)||'test';
@@ -1345,7 +1350,7 @@ async function api(path,{method='GET',body,hub,stu,tok}={}){const h={};if(body)h
   let r;try{r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});}catch(e){throw qaErr(NETERR);}let d=null;try{d=await r.json();}catch(e){}
   if(!r.ok)throw qaErr(d&&typeof d.error==='string'&&d.error?d.error:NETERR);if(!d||typeof d!=='object')throw qaErr(NETERR);return d;}
 const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.round(s/60)+' min ago':s<86400?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago';};
-const topicName=t=>LES.topics[t]?LES.topics[t].title:'General';
+const topicName=t=>LESALL.topics[t]?LESALL.topics[t].title:'General';  // every track: a hub can hold questions on topics hidden from this track
 let MYQ=null,HUBD={},hubTimer=null;
 const appURL=()=>location.origin+location.pathname;
 const VMARK=`<span class="vmark">${ICON.check}Verified instructor</span>`;
@@ -1884,7 +1889,7 @@ addEventListener('popstate',e=>{if(!BANK.length)return;const s=e.state;if(s&&s.m
 
 // tracks.json is optional: a missing or broken file means no Commercial-only questions (a quiet fetch, so it never holds a saved test or shows the load notice)
 const BOOT=Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json'),fetch('questions/tracks.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([sets,les,map,kinds,trks])=>{
-  if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;if(trks&&Array.isArray(trks.C))TRC=new Set(trks.C.filter(x=>typeof x==='string'));
+  if(les&&les.topics)LES=LESALL=les;if(map)MAP=map;if(kinds)KIND=kinds;if(trks&&Array.isArray(trks.C))TRC=new Set(trks.C.filter(x=>typeof x==='string'));
   const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
   ALLQ=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
   ALLQ.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));

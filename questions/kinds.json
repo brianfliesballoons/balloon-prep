@@ -2790,5 +2790,429 @@
  "THY-815": {
   "kind": "test",
   "why": ""
+ },
+ "FOI-001": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-002": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-003": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-004": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-005": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-006": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-007": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-008": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-009": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-010": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-011": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-012": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-013": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-014": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-015": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-016": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-017": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-018": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-019": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-020": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-021": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-022": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-023": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-024": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-025": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-026": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-027": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-028": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-029": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-030": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-031": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-032": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-033": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-034": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-035": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-036": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-037": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-038": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-039": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-040": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-041": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-042": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-043": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-044": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-045": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-046": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-047": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-048": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-049": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-050": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-051": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-052": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-053": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-054": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-055": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-056": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-057": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-058": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-059": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-060": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-061": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-062": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-063": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-064": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-065": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-066": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-067": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-068": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-069": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-070": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-071": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-072": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-073": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-074": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-075": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-076": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-077": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-078": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-079": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-080": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-081": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-082": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-083": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-084": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-085": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-086": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-087": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-088": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-089": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-090": {
+  "kind": "test",
+  "why": ""
+ },
+ "FOI-091": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1001": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1002": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1003": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1004": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1005": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1006": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1007": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1008": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1009": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1010": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1011": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1012": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1013": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1014": {
+  "kind": "test",
+  "why": ""
+ },
+ "REG-1015": {
+  "kind": "test",
+  "why": ""
  }
 }
