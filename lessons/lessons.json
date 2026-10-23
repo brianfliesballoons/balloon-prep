@@ -2255,7 +2255,7 @@
       ],
       [
        "Build understanding.",
-       "Walk the fuel path with her: liquid valve, regulator, pilot. Now the checklist steps have reasons."
+       "Walk the fuel path to the pilot light with her, from the tank valve through the hose to the pilot valve, on your own balloon's system. Now the checklist steps have reasons."
       ],
       [
        "Make it application.",
@@ -2312,9 +2312,9 @@
     "idea": "**Skills grow through practice, in three stages, and memory needs the right kind of practice to keep them.** Errors will happen; teach students to expect, catch and learn from them.",
     "widget": null,
     "body": [
-     "A skill passes through three stages. In the **cognitive** stage the student follows memorized steps and needs all her attention; give her a clear, step-by-step demonstration. In the **associative** stage she connects steps to results and can adjust. In the **automatic response** stage it is smooth and she can talk while doing it. Tell her about errors **as soon after the performance as possible**, and don't let her practice mistakes. A **plateau** after fast progress is normal and temporary; say so, and give the task a break rather than piling on more of the same.",
+     "A skill passes through three stages. In the **cognitive** stage the student follows memorized steps and needs all her attention; give her a clear, step-by-step demonstration. In the **associative** stage she connects steps to results and can adjust. In the **automatic response** stage it is smooth and she can talk while doing it. Tell her how she did, right or wrong, **as soon after the performance as possible**, and don't let her practice mistakes. A **plateau** after fast progress is normal and temporary; say so, and give the task a break rather than piling on more of the same.",
      "How you practice matters. **Blocked** practice (ten of the same in a row) looks good on the day but is learned worse. **Random** practice (mixing tasks) looks worse on the day but is remembered better tomorrow. **Deliberate** practice aims at one goal with specific feedback.",
-     "**Memory**: the sensory register passes important signals on at once; **short-term memory** holds about seven chunks for about 30 seconds; **long-term memory** keeps what was given meaning. Forgetting comes from **retrieval failure**, **fading** with disuse, **interference** from similar learning, and **repression** or suppression. Knowledge used recently but not often is the most fragile, so it needs regular review; **spaced** study beats cramming, and writing your own study questions helps. **Transfer** can be positive (one skill helps another) or negative (it gets in the way).",
+     "**Memory**: the sensory register passes important signals on at once; **short-term memory** holds about seven chunks for about 30 seconds; **long-term memory** keeps what was given meaning. Forgetting comes from **retrieval failure**, **fading** with disuse, **interference** from similar learning, and **repression** or suppression. Knowledge that is new, used recently but not yet often, is especially easy to forget, so it needs regular review; **spaced** study beats cramming, and writing your own study questions helps. **Transfer** can be positive (one skill helps another) or negative (it gets in the way).",
      "There are two kinds of **error**. A **slip** is an error of action: you meant to do one thing and did another, often from habit or hurry. A **mistake** is an error of thought: you planned the wrong thing. Interruptions in the middle of a checklist are a big source of skipped steps. **Fixation** on one task often means that task needs more practice on its own."
     ],
     "example": {
@@ -2457,7 +2457,7 @@
      "A lesson has an **introduction** (attention, motivation, overview), a **development** and a **conclusion**. Develop the points past to present, **simple to complex**, **known to unknown**, or most used to least used. The conclusion retraces the key points and adds nothing new.",
      "The **lecture** covers many ideas quickly and suits groups and background, but it doesn't build motor skills or show you what the student understood; the *teaching lecture*, given extemporaneously from an outline, lets students take part. A **guided discussion** draws out what students already know, so they need some background first; open with how or why questions, and tie each point together with an **interim summary**.",
      "**Demonstration-performance** is the method for skills: explanation, demonstration, learner performance and instructor supervision (at the same time), then evaluation. If your demonstration doesn't match your explanation, say so at once. In the air it becomes **telling-and-doing**: instructor tells and does; student tells, instructor does (so you can check her thinking); student tells and does.",
-     "**Scenario-based training** puts the skills into a real flight story with decisions to make: no single right answer, not a test, no obvious answer, and the student plans and leads it after the first flight or two. An NTSB report with the probable cause removed makes a good **case study**. Instructional aids support the lesson; they don't carry it. Test-prep material and computer study are supplements; they teach at the rote level and can't tell when a student is struggling."
+     "**Scenario-based training** puts the skills into a real flight story with decisions to make: not a test, no single right answer, no obvious answer, and it shouldn't set her up to make errors. The student plans the scenario, with your help at first, and the sooner she takes that planning over, the better. An NTSB report with the probable cause removed makes a good **case study**. Instructional aids support the lesson; they don't carry it. Test-prep material stresses rote learning, the lowest level, so treat it as a supplement to your teaching, never a stand-alone course. A computer course has no way of knowing when a student is having difficulty, so you still watch her progress."
     ],
     "example": {
      "setup": "Teaching a student the approach to landing for the first time.",
@@ -2506,7 +2506,7 @@
      "FAA-H-8083-9B Ch. 5 (Process; Organization of Material)",
      "FAA-H-8083-9B Ch. 5 (Lecture Method; Guided Discussion Method)",
      "FAA-H-8083-9B Ch. 5 (Demonstration-Performance Method); Ch. 9 (The Telling-and-Doing Technique)",
-     "FAA-H-8083-9B Ch. 5 (Problem-Based Learning; Instructional Aids; Test Preparation Material)"
+     "FAA-H-8083-9B Ch. 5 (Problem-Based Learning; E-Learning; Instructional Aids; Test Preparation Material); Ch. 7 (scenario planning by the learner)"
     ]
    }
   },
@@ -2599,7 +2599,7 @@
      "A **course of training** leads to a goal such as a certificate. It is made of **blocks of learning**: measurable units, each an integral part of the whole, built simple to complex. Extra blocks that don't serve the goal are expensive frills.",
      "A **syllabus** is a brief outline of the course, lesson by lesson, with objectives and completion standards. Under Part 61 it is a **flexible guide**: change the order to fit the student's progress, the weather and the balloon, and think about how the blocks relate when you do.",
      "A **lesson plan** must be **written**, clear enough that another instructor could teach from it. A good lesson has **unity**, new **content** tied to the last lesson, reasonable **scope**, **practicality**, **flexibility**, a clear **relation to the course**, and the four teaching steps. In flight you may change it a lot, or drop it for review.",
-     "Write **performance-based objectives** with a description of the behavior, the **conditions** and the **criteria**, in measurable words ('able to...'), not 'knowledge of.' Remember the PTS is a **testing** document, not a teaching one; teach past its minimums."
+     "Write **performance-based objectives** with a description of the behavior, the **conditions** and the **criteria**, in measurable words ('able to...'), not 'knowledge of.' Remember the PTS is a **testing** document, not a teaching one; your lesson standards should build up to meet or exceed it before the checkride."
     ],
     "example": {
      "setup": "Writing the objective for a lesson on approach to landing.",
@@ -2648,7 +2648,7 @@
      "FAA-H-8083-9B Ch. 7 (Course of Training; Blocks of Learning)",
      "FAA-H-8083-9B Ch. 7 (Training Syllabus; Lesson Plans)",
      "FAA-H-8083-9B Ch. 5 (Performance-Based Objectives)",
-     "FAA-H-8083-9B Ch. 8 (Standards of Performance)"
+     "FAA-H-8083-9B Ch. 8 (Standards of Performance); Ch. 9 (lesson completion standards reach or exceed the ACS/PTS)"
     ]
    }
   },
@@ -2660,7 +2660,7 @@
    "deeper": [
     [
      "aih",
-     "Chapter 8: Instructor Responsibilities and Professionalism; Chapter 10: Teaching Practical Risk Management"
+     "Chapter 8: Aviation Instructor Responsibilities and Professionalism; Chapter 10: Teaching Practical Risk Management during Flight Instruction"
     ]
    ],
    "lesson": {
@@ -2668,9 +2668,9 @@
     "widget": null,
     "body": [
      "Help students learn, give adequate instruction fitted to each one, train to **standards**, **emphasize the positive** and **minimize frustration**. Making learning easy is a fallacy; meeting real standards is satisfying. Minimize frustration by motivating, keeping students informed, treating them as individuals, giving credit when due (but not too freely), criticizing constructively, being **consistent** and **admitting your errors**.",
-     "Make the first lessons normal flights; bring in emergencies after the student knows normal operations. Model safety: students imitate your habits when you aren't watching. Use a **positive exchange of flight controls** so there is never doubt who is flying. Teach before the launch, not during it, and when it is safe, let a student go part way into an error and find her way out.",
+     "Make the first lessons normal flights; bring in emergencies after the student knows normal operations. Model safety: students imitate your habits when you aren't watching. Use a **positive exchange of flight controls** so there is never doubt who is flying. Brief the lesson, including how you will hand over the controls, on the ground before launch, and keep talk to essentials during launch and landing (the idea behind the airline 'sterile flight deck' rule). When it is safe, let a student go part way into an error and find her way out.",
      "Teach **risk management** from the very start, ideally on the ground before the first flight, and in every briefing. Use **PAVE** (pilot, aircraft, environment, external pressures; the P covers both of you) to find hazards, and **TEAM** (transfer, eliminate, accept, mitigate) to deal with them. Be careful with numbered risk scores: a low total can hide one extreme risk.",
-     "Supervising a student's solo is your most important responsibility. A practical test recommendation is serious: the applicant should first show you nothing less than the whole PTS, and the handbook says the Form 8710-1 signature is good for 60 days."
+     "Supervising a student's solo is your most important responsibility. A practical test recommendation is serious: the applicant should first show you nothing less than the whole PTS, and the handbook says your signature on the Form 8710-1 is good for 60 days. (The regulation itself, 61.39(a)(6), counts the training window in calendar months; see the balloon lesson.)"
     ],
     "example": {
      "setup": "A student wants to fly a lesson on a morning when the forecast surface wind is rising toward her limit.",
@@ -2706,7 +2706,7 @@
      },
      {
       "title": "Who is flying?",
-      "body": "Always say it out loud and check: 'You have the controls.' 'I have the controls.'",
+      "body": "Use the three-step handover every time: 'You have the controls.' 'I have the controls.' 'You have the controls.' Then look to check she really has them.",
       "alt": "Like passing a baby: no letting go until the other person says 'got it.'"
      },
      {
@@ -2717,9 +2717,9 @@
     ],
     "sources": [
      "FAA-H-8083-9B Ch. 8 (Aviation Instructor Responsibilities; Minimizing Learner Frustration)",
-     "FAA-H-8083-9B Ch. 8 (Safety Practices and Accident Prevention; Professionalism)",
-     "FAA-H-8083-9B Ch. 9 (Positive Exchange of Flight Controls; Correction of Learner Errors; Practical Test Recommendations)",
-     "FAA-H-8083-9B Ch. 10 (Identifying, Assessing and Mitigating Risk; Risk Management Tools)"
+     "FAA-H-8083-9B Ch. 8 (Emphasizing the Positive; Safety Practices and Accident Prevention; Professionalism)",
+     "FAA-H-8083-9B Ch. 9 (Positive Exchange of Flight Controls; Sterile Flight Deck Rule; Correction of Learner Errors; Pilot Supervision; Practical Test Recommendations)",
+     "FAA-H-8083-9B Ch. 10 (When to Teach Risk Management; Identifying Risk; Assessing Risk; Mitigating Risk; Risk Management Tools); Ch. 1 (PAVE)"
     ]
    }
   },
@@ -2739,12 +2739,12 @@
     ]
    ],
    "lesson": {
-    "idea": "**There is no balloon flight instructor certificate: the commercial balloon certificate itself lets you teach.** That is why the commercial test includes fundamentals of instructing.",
+    "idea": "**You don't need a flight instructor certificate to teach in a balloon: the commercial balloon certificate itself lets you teach.** That is why the commercial test includes fundamentals of instructing.",
     "widget": null,
     "body": [
      "Under **61.133(a)(2)(ii)** a commercial balloon pilot may give flight and ground training in a balloon for a certificate or rating, give the endorsement for a pilot certificate with a balloon rating, endorse a logbook for **solo**, and give the training and endorsements for a **flight review** and other operating privileges. **61.3(d)(3)(i)** and **(i)(3)(ii)** say no flight or ground instructor certificate is needed for that training in a lighter-than-air aircraft. The privileges are for **balloons only**: you can't give an airplane pilot her flight review.",
-     "No medical is needed while giving flight training in a balloon (**61.23(b)(5)**); carrying passengers or property for hire still needs a second-class medical. Carry your pilot certificate and a photo ID.",
-     "The paperwork you sign: the **pre-solo** knowledge test and **solo** endorsement (61.87; you must have trained the student yourself, and the endorsement is renewed every 90 days), the **knowledge test** endorsement (61.35), the **practical test** endorsement (61.39(a)(6): training in the 2 calendar months before the month of application, ready for the test, and the knowledge test's weak areas covered), and the **flight review** endorsement (61.56). Logged training needs a description of the lesson, its length, and your signature and certificate number (61.51(h)). The handbook says to keep training records at least 3 years.",
+     "No medical is needed while giving flight training in a balloon (**61.23(b)(5)**); other flying for compensation or hire, such as carrying passengers, needs at least a second-class medical (**61.23(a)(2)(iii)**). Carry your pilot certificate and a photo ID.",
+     "The paperwork you sign: the **pre-solo** knowledge test and **solo** endorsement (61.87; you must have trained the student yourself, and the endorsement is renewed every 90 days), the **knowledge test** endorsement (61.35), the **practical test** endorsement (61.39(a)(6): training in the 2 calendar months before the month of application, ready for the test, and the knowledge test's weak areas covered), and the **flight review** endorsement (61.56). Logged training needs a description of the training, the length of the lesson, and your signature, certificate number and the 'certificate expiration date or recent experience end date' the rule asks for (61.51(h)(2)); a commercial pilot certificate itself has no expiration date (61.19(c)). The handbook says to keep training records at least 3 years.",
      "On the **commercial practical test**, Area I asks about the fundamentals of instructing; the examiner always picks Task F, instructor characteristics and responsibilities, plus at least one other. Area IV asks you to give a **preflight lesson** on a maneuver the examiner chooses, and you may bring your own lesson plans. 'Instructional knowledge' means the what, why and how, taught the way the Aviation Instructor's Handbook describes."
     ],
     "example": {
@@ -2752,7 +2752,7 @@
      "steps": [
       [
        "Training window.",
-       "Her preparation training must be in January or February (the 2 calendar months before March)."
+       "61.39(a)(6) asks for logged training within the 2 calendar months before the month she applies, so plan her test-prep flights for January and February; training from December or earlier is too old."
       ],
       [
        "Knowledge test gaps.",
@@ -2771,7 +2771,7 @@
     "basics": [
      {
       "title": "Your certificate is your teaching license",
-      "body": "In balloons, the commercial certificate lets you teach. There is no separate instructor card.",
+      "body": "In balloons, the commercial certificate lets you teach. You don't need a separate instructor card.",
       "alt": "Like a licensed electrician, whose license alone lets her train apprentices."
      },
      {
@@ -2793,9 +2793,9 @@
     "sources": [
      "14 CFR 61.133(a)(2)(ii)",
      "14 CFR 61.3(a), (d)(3)(i), (i)(3)(ii)",
-     "14 CFR 61.23(a)(2)(iii), (b)(5)",
+     "14 CFR 61.23(a)(2)(iii), (b)(5); 61.19(c)",
      "14 CFR 61.35(a)(1); 61.39(a)(6); 61.56(c)",
-     "14 CFR 61.87(n), (p); 61.51(h)",
+     "14 CFR 61.87(b), (n), (p); 61.51(h)(2)",
      "FAA-H-8083-9B Ch. 7 (Lesson Plans: training records)",
      "FAA-S-8081-18A, Areas I and IV; Use of the PTS"
     ],
