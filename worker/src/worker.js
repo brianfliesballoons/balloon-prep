@@ -180,9 +180,11 @@ export default {
         return err(500, 'Could not make a class code');
       }
       if (p[1] !== 'classes' || !p[2]) return err(404, 'Not found');
-      const code = p[2].toUpperCase();
-      const cls = await env.DB.prepare('SELECT code,name,instructor,verified FROM classes WHERE code=?').bind(code).first();
+      // the class's 6-character code, or its easy word code (alias, set by hand with wrangler only; never 6 characters, so it can't clash)
+      const typed = p[2].toUpperCase().replace(/[^A-Z0-9]/g, '');
+      const cls = await env.DB.prepare('SELECT code,name,instructor,verified FROM classes WHERE code=?1 OR alias=?1').bind(typed).first();
       if (!cls) return err(404, 'No class with that code');
+      const code = cls.code;
 
       // GET /api/classes/:code -> public class info (for the join screen), incl. verified 0/1
       if (p.length === 3 && req.method === 'GET') return json(cls);

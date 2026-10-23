@@ -11,8 +11,10 @@ CREATE TABLE IF NOT EXISTS classes (
   verified INTEGER NOT NULL DEFAULT 0,  -- 1 = "Verified instructor" mark; set by hand with wrangler only
   owner INTEGER NOT NULL DEFAULT 0,     -- 1 = the app owner's class; its hub shows problem reports; set by hand only
   score_view TEXT NOT NULL DEFAULT 'all',   -- instructor's choice: 'all' = every score students send · 'weekly' = 7-day summary only (added 2026-10-23)
-  scores_seen INTEGER NOT NULL DEFAULT 0    -- scores sent after this time count as new in the hub
+  scores_seen INTEGER NOT NULL DEFAULT 0,   -- scores sent after this time count as new in the hub
+  alias TEXT                                 -- easy word code students can type instead (e.g. HOTAIR); never 6 characters; set by hand only (added 2026-10-23)
 );
+CREATE UNIQUE INDEX IF NOT EXISTS c_alias ON classes(alias);
 CREATE INDEX IF NOT EXISTS c_inorm ON classes(inorm);
 CREATE TABLE IF NOT EXISTS students (
   sid TEXT PRIMARY KEY,

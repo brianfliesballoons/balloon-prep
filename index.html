@@ -1440,10 +1440,10 @@ const topicName=t=>LESALL.topics[t]?LESALL.topics[t].title:'General';  // every 
 let MYQ=null,HUBD={},hubTimer=null;
 const appURL=()=>location.origin+location.pathname;
 const VMARK=`<span class="vmark">${ICON.check}Verified instructor</span>`;
-async function joinPreview(){const el=$('jWho'),c=LV.joinCode;if(!el||!c||c.length!==6)return;
+async function joinPreview(){const el=$('jWho'),c=LV.joinCode;if(!el||!c||c.length<4)return;
   try{const d=await api(`/classes/${c}`);if($('jWho')&&LV.joinCode===c)$('jWho').innerHTML=`${esc(d.name)} · ${esc(d.instructor)}${d.verified?' · '+VMARK:''}`;}catch(e){}}
 
-const joinHTML=()=>`${LV.joinCode?'<div class="sm" id="jWho"></div>':''}<div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="6" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
+const joinHTML=()=>`${LV.joinCode?'<div class="sm" id="jWho"></div>':''}<div class="two"><label class="fld">Class code<input id="jCode" value="${esc(LV.joinCode||'')}" autocomplete="off" autocapitalize="characters" maxlength="24" style="font-family:var(--f-num);letter-spacing:.1em"></label><label class="fld">Your name<input id="jName" autocomplete="name" maxlength="60"></label></div>
     <button class="btn primary big" data-act="join">Join class</button><div class="mut sm" id="jMsg">No code yet? Ask your instructor for their invite link.</div>`;
 function askCard(t,qid){const C=S.cls;
   if(!C)return `<section class="card lc" id="askCard"><div class="who"><span class="av">${ICON.chat}</span><div><b>Still stuck? Ask your instructor</b><div class="mut sm">Join your instructor's class once. Your questions go to their hub, and answers come back here.</div></div></div>
@@ -1627,9 +1627,9 @@ if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('messag
 
 async function qaAct(t){const a=t.dataset.act,btn=t;
   const busy=f=>async(...x)=>{btn.disabled=true;try{await f(...x);}finally{btn.disabled=false;}};
-  if(a==='join')return busy(async()=>{const code=$('jCode').value.trim().toUpperCase(),name=$('jName').value.trim(),m=$('jMsg');
-    if(code.length!==6){m.textContent='The class code has 6 letters and numbers.';return;}if(!name){m.textContent='Add your name so your instructor knows who is asking.';$('jName').focus();return;}
-    try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code,name:d.class.name,instructor:d.class.instructor,verified:d.class.verified?1:0,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
+  if(a==='join')return busy(async()=>{const code=$('jCode').value.toUpperCase().replace(/[^A-Z0-9]/g,''),name=$('jName').value.trim(),m=$('jMsg');
+    if(code.length<4){m.textContent='Type the class code your instructor gave you.';return;}if(!name){m.textContent='Add your name so your instructor knows who is asking.';$('jName').focus();return;}
+    try{const d=await api(`/classes/${code}/students`,{method:'POST',body:{name}});S.cls={code:d.class.code,name:d.class.name,instructor:d.class.instructor,verified:d.class.verified?1:0,sid:d.sid,key:d.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
     catch(e){m.textContent=qaMsg(e);}})();
   if(a==='ask')return busy(async()=>{const txt=$('askText').value.trim(),m=$('askMsg');if(!txt){m.textContent='Type your question first.';$('askText').focus();return;}
     const qid=t.dataset.qid||null,p=qid?lastAns(qid):undefined;
@@ -2168,7 +2168,7 @@ function route(hs){
   else if(hs==='#test'||hs==='#test/review'){if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';}
   else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
   else if(hs.startsWith('#print=')){mode='ref';const w=hs.slice(7);const go=()=>printRef(w);REFS===null&&w!=='airspace'&&w!=='legend'?getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];go();}):setTimeout(go,0);}
-  else if(hs.startsWith('#join=')){mode='learn';LV={v:'join'};LV.joinCode=hs.slice(6,12).toUpperCase();}
+  else if(hs.startsWith('#join=')){mode='learn';LV={v:'join'};LV.joinCode=decodeURIComponent(hs.slice(6)).toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,24);}
   else if(hs.startsWith('#hub=')){const [c,k]=hs.slice(5).split('.');if(c&&k){S.hubs[c.toUpperCase()]=S.hubs[c.toUpperCase()]||{key:k,name:''};S.hubs[c.toUpperCase()].key=k;save();mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}
     else if(c&&S.hubs[c.toUpperCase()]){mode='learn';LV={v:'hub',code:c.toUpperCase(),tab:'wait'};}}
 }
