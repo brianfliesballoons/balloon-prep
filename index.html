@@ -107,6 +107,17 @@ html.signed .pgxin,html:not(.signed) .pgxon{display:none}
 @media (max-width:640px){.trks{margin:auto 0 0;width:100%;max-width:100%;border-radius:16px 16px 0 0;border-bottom:0;padding:12px 20px calc(20px + env(safe-area-inset-bottom))}
   .trkgrip{display:block;width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto}}
 .trkd .btn.big{width:100%}.trkd h2:focus{outline:none}
+/* What's new sheet (#newsD, reuses the track sheet's look) and the Help & FAQ view (#help, a .learn section) */
+.nwsd .nwsday{font-size:.9rem;color:var(--muted);margin-top:2px}.nwsd ul{padding-left:1.2em;margin:6px 0 0}.nwsd li{margin:6px 0;font-size:1.02rem}
+.nwsd h3{margin:14px 0 0;font-size:1rem}.nwsd .nwsmore{font-size:.92rem;color:var(--muted)}.nwsd .nwsmore .lnk{color:var(--ink)}
+.hlpg{display:flex;flex-direction:column;gap:8px}.hlpg>h3{margin:10px 0 0;font-family:var(--f-display);font-size:1.25rem}
+.hlp summary{justify-content:space-between;gap:12px;font-size:1.04rem;line-height:1.3;padding:6px 0;list-style:none}
+.hlp summary::-webkit-details-marker{display:none}
+.hlp summary::after{content:"";flex:none;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin:-4px 4px 0 0}
+.hlp details[open]>summary::after{transform:rotate(225deg);margin-top:4px}
+.hlpa{display:flex;flex-direction:column;gap:8px;padding:0 0 14px;font-size:1rem;line-height:1.5}.hlpa ul,.hlpa ol{margin:0;padding-left:1.25em}.hlpa li{margin:4px 0}
+.hlpa .lnk{align-self:flex-start;color:var(--user)}
+footer .hlpf{display:flex;flex-wrap:wrap;gap:0 20px;margin:0 0 8px}footer .hlpf button,footer .hlpf a{color:var(--ink);min-height:44px;display:inline-flex;align-items:center;font-size:.95rem}
 .tsst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0 12px}
 .tsst>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:.88rem;color:var(--muted)}
 .tsst b{display:block;font-family:var(--f-display);font-weight:700;font-size:1.65rem;line-height:1.15;color:var(--ink)}
@@ -561,6 +572,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 
   <section class="ref" id="ref" hidden></section>
   <div id="refPrint" aria-hidden="true"></div>
+  <section class="learn hlp" id="help" aria-labelledby="hlpH" hidden></section>
 
   <section class="card results" id="testStart" hidden>
     <h2 id="tsH">Practice test</h2>
@@ -646,7 +658,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
     </section>
   </div>
 
-  <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
+  <footer><nav class="hlpf" aria-label="Help"><button data-help>Help &amp; FAQ</button><button data-news>What's new</button><a href="privacy.html">Privacy</a></nav>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
   <p class="tipf" id="tipFoot" hidden>Free for every student. Like it? <button class="lnk" data-tip>Leave a tip</button></p>
   <div class="pgx" id="pgx">
     <p><b>Your progress</b> is saved in this browser on this device<span class="pgxon">, and in your account</span>. <span class="pgxin"><button class="lnk" data-acct>Sign in</button> to keep it on every device, or export a copy now and then so you can move it or get it back if the browser clears it.</span><span class="pgxon">You can also export a copy as a file.</span> <button class="lnk" data-info="save">How saving works</button></p>
@@ -681,6 +693,13 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   <p class="mut sm">A practice test you've already started keeps its own length and clock.</p>
   <button class="btn primary big" data-trk-done>Done</button>
 </dialog>
+<dialog class="infod trkd trks nwsd" id="newsD" aria-labelledby="newsH">
+  <i class="trkgrip" aria-hidden="true"></i>
+  <h2 id="newsH" tabindex="-1">What's new</h2>
+  <div id="newsB"></div>
+  <p class="nwsmore">Questions? See <button class="lnk" data-help>Help &amp; FAQ</button></p>
+  <button class="btn primary big" data-news-close>Got it</button>
+</dialog>
 <dialog class="infod tipd" id="tipD" aria-labelledby="tipH">
   <h2 id="tipH">Keep it free</h2>
   <p>Balloon Written Prep is free for every student and always will be. If it helped you, a tip helps keep it going. It's a tip, not a donation, so it isn't tax-deductible.</p>
@@ -692,6 +711,17 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json','questions/pilot-8.json','questions/pilot-9.json'];
 const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
 const AREA=Object.fromEntries(AREAS);
+// What's new, newest first. When you ship a big update students should hear about, add an entry at the TOP:
+//   {v:'YYYY-MM-DD',items:['short plain sentence a student understands', …]}  (2-4 items; small fixes need no entry).
+// Anyone who used the app before (any progress, or S.newsSeen set) sees the newest entry once, on their next visit; a new student never does.
+// S.newsSeen = the newest v seen; it syncs with the account like the rest of S. The footer's What's new link shows the last few entries.
+const NEWS=[
+ {v:'2026-10-23',items:[
+  'Pick the test you’re taking: Private or Commercial. Practice tests now match that test’s number of questions and time. Tap the test name at the top to switch.',
+  'Studying for Commercial? A new Teaching section in Learn has lessons and questions on how people learn and how to teach.',
+  'You can send a practice-test score to your instructor from the results page. Nothing is sent unless you choose to.',
+  'Sign in with Face ID or Google, if you like, and your progress follows you to every device.']},
+];
 // Voluntary personal tips to the app's author. Empty = no tip link, line or sheet anywhere.
 const TIP_URL='';
 // Test track (S.track): P = Private (FAA test PBH), C = Commercial (CBH). n questions, per = ms a question (PBH 60 in 2.5 h, CBH 100 in 3.0 h), bp = the area mix.
@@ -856,13 +886,14 @@ function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)
 function renderAll(){
   // the Ask view reached from Study, Test or Review keeps the tab it came from lit (tm = the mode the tab bar reflects)
   const tm=mode==='learn'&&LV.v==='ask'&&/^resume:/.test(LV.back||'')?LV.back.slice(7):mode;
-  const lrn=tm==='learn'||tm==='due';$('mStudy').setAttribute('aria-pressed',String(tm==='study'));$('mTest').setAttribute('aria-pressed',String(tm!=='study'&&tm!=='ref'&&!lrn));$('mRef').setAttribute('aria-pressed',String(tm==='ref'));
+  const lrn=tm==='learn'||tm==='due';$('mStudy').setAttribute('aria-pressed',String(tm==='study'));$('mTest').setAttribute('aria-pressed',String(tm!=='study'&&tm!=='ref'&&tm!=='help'&&!lrn));$('mRef').setAttribute('aria-pressed',String(tm==='ref'));
   $('ref').hidden=mode!=='ref';if(mode==='ref')renderRef();$('mLearn').setAttribute('aria-pressed',String(lrn));
   $('learn').hidden=mode!=='learn';if(mode==='learn')renderLearn();
+  $('help').hidden=mode!=='help';if(mode==='help')renderHelp();
   renderFilters();
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
-  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||!list.length;
+  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||mode==='help'||!list.length;
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   tRender();
@@ -1577,6 +1608,7 @@ function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
   const lh=L.hist||[],rh=R.hist||[],bh=B&&B.hist||[];
   if(B&&jeq(lh,bh))out.hist=rh;else if(B&&jeq(rh,bh))out.hist=lh;
   else{const m=new Map();[...rh,...lh].forEach(h=>h&&m.set(h.end+':'+h.pct,h));out.hist=[...m.values()].sort((a,b)=>a.end-b.end).slice(-50);}
+  if(L.newsSeen||R.newsSeen)out.newsSeen=[L.newsSeen,R.newsSeen].filter(x=>typeof x==='string').sort().pop();  // What's new seen on any device counts everywhere
   for(const k of ['test','exam','spos','cls','track']){const lv=L[k],rv=R[k];out[k]=!B?(lv==null?rv:lv):!jeq(lv,B[k])?lv:rv;if(out[k]===undefined)delete out[k];}
   return out;}
 
@@ -1841,8 +1873,100 @@ $('ref').addEventListener('click',e=>{const t=e.target.closest('[data-ref],[data
   if(t.dataset.print){printRef(t.dataset.print);return;}
   RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);syncURL();});
 $('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
+// ---------- what's new (NEWS, near the top) ----------
+// Shown once per load at most, only after the first-open test picker is done, never over another dialog and never on #print= routes.
+// A dialog that is open when the check runs defers it: the next dialog close checks again.
+let NEWSCHK=false;
+const newsDay=v=>new Date(v+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+function newsOpen(since){const d=$('newsD'),auto=since!==undefined,E=auto?NEWS.filter(e=>!since||e.v>since).slice(0,2):NEWS.slice(0,3);if(!E.length)return;
+  const ul=e=>`<ul>${e.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+  $('newsB').innerHTML=E.length===1?`<p class="nwsday">${newsDay(E[0].v)}</p>${ul(E[0])}`:E.map(e=>`<h3>${newsDay(e.v)}</h3>${ul(e)}`).join('');
+  if(!d.open)d.showModal();d.scrollTop=0;$('newsH').focus({preventScroll:true});}
+// first visit ever (no progress, nothing seen): mark the newest entry seen without showing it
+function newsBoot(){if(location.hash.startsWith('#print=')||!NEWS.length)return;if(!S.newsSeen&&progEmpty(saveData())){S.newsSeen=NEWS[0].v;save(true);}newsMaybe();}
+function newsMaybe(){if(NEWSCHK||!NEWS.length||!BANK.length||location.hash.startsWith('#print='))return;
+  if(!S.track||document.querySelector('dialog[open]'))return;
+  NEWSCHK=true;const top=NEWS[0].v,was=S.newsSeen||'';if(was>=top)return;
+  S.newsSeen=top;save();newsOpen(was);}
+document.addEventListener('close',e=>{if(e.target.id!=='newsD')setTimeout(newsMaybe,60);},true);  // close does not bubble: listen in the capture phase
+document.addEventListener('click',e=>{if(e.target.closest('[data-news]')){newsOpen();return;}
+  const d=$('newsD');if(e.target.closest('[data-news-close]')||e.target===d)d.close();});
+
+// ---------- Help & FAQ (#help) ----------
+// Answers describe what the app does; when a feature changes, change its answer here too.
+function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ /g,'&nbsp;');
+  return [
+  ['Getting started',[
+   ['What is Balloon Written Prep?',`<p>A free study app for the FAA knowledge test (the “written”) for a balloon pilot certificate, Private or Commercial. The tabs at the top hold four parts:</p>
+    <ul><li><b>Study</b>: every question, one at a time. Pick an answer and you see right away if it’s right, with an explanation and its FAA reference.</li>
+    <li><b>Practice test</b>: a timed test the same size as the real one.</li>
+    <li><b>Learn</b>: a short lesson for each topic, a review list of questions you missed, and a study plan.</li>
+    <li><b>Reference</b>: pocket cards to read or print.</li></ul>
+    <p>Density altitude questions have the chart right beside them, with tools to zoom, draw a line and read it.</p>`],
+   ['Is it free?',`<p>Yes. No ads, no subscription, and you don’t need an account.</p>${TIP_URL?'<p>If it helps you, there’s a link at the bottom of the page to leave a tip. That’s completely optional.</p>':''}`],
+   ['Private or Commercial: which do I pick, and how do I switch?',`<p>Pick the test you’re taking. Practice tests match its size and time:</p>
+    <ul><li><b>Private</b> (FAA test ${P.code}): ${P.n} questions in ${dur(P)}.</li><li><b>Commercial</b> (FAA test ${C.code}): ${C.n} questions in ${dur(C)}.</li></ul>
+    <p>Both pass at ${PASS}%. Most questions are on both tests. Questions that are only on the Commercial test are hidden while you study for Private, and Commercial adds a Teaching section in Learn.</p>
+    <p>To switch, tap the test name at the top of the screen. Your answers, flags and review schedule stay, and each test keeps its own scores.</p><button class="lnk" data-help-go="trk">Change my test</button>`],
+   ['What is the Teaching section?',`<p>It’s part of the Commercial track. A commercial balloon pilot can teach students, so the Commercial test asks about how people learn and how to teach. The Teaching section in Learn has lessons and practice questions on the learning process and on teaching.</p>`],
+   ['Should I add it to my Home Screen?',`<p>On an iPhone or iPad, yes. In Safari, tap Share, then <b>Add to Home Screen</b>, and open it from the new icon. On Android, open the browser menu and choose Add to Home screen or Install.</p>
+    <ul><li>It opens like an app, without the browser’s address bar.</li>
+    <li>Safari can clear a site’s saved data after a week of using Safari without opening that site. The Home Screen app doesn’t have that limit, so your progress is safer there.</li>
+    <li>On iPhone it’s the only way to get a notification when your instructor answers (iOS 16.4 or newer).</li>
+    <li>Once it has loaded, you can study without a connection.</li></ul>
+    <p>The Home Screen app keeps its <b>own copy</b> of your progress, separate from Safari. Sign in, or use Export and Import, to bring it over.</p>`],
+   ['How do I take a practice test?',`<p>Tap <b>Practice test</b>, then <b>Start the test</b>. You get ${P.n} questions for Private or ${C.n} for Commercial, drawn from every area (test-style questions only), with the real test’s time.</p>
+    <ul><li>No answers are shown until you finish.</li>
+    <li>Tap <b>Flag</b> to mark a question to come back to. Tap the question counter at the top (like “12 of ${C.n}”) to see every question and jump around.</li>
+    <li>The clock runs only while the test is on screen. It pauses when you leave the app, and your test is saved as you go.</li>
+    <li>Tap <b>Finish test</b> when you’re done. You see your score by area, can review what you missed, and can build a study plan from it. Every finished test is added to your score history.</li></ul>
+    <button class="lnk" data-help-go="test">Go to Practice test</button>`]]],
+  ['Your progress',[
+   ['Where is my progress saved?',`<p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. If you sign in, they’re also saved to your account.</p>
+    <p>Clearing your browser’s history and website data erases the copy on the device, so sign in, or export a copy now and then.</p><button class="lnk" data-info="save">How saving works</button>`],
+   ['Do I need to sign in?',`<p>No. Everything works without an account. Signing in is optional: tap <b>Sign in</b> at the top and use Face ID or your Google account. There’s no password.</p>
+    <p>Once you’re signed in, your progress is saved to your account and shows up on every phone, tablet or computer where you sign in, the Home Screen app included. The button at the top then says <b>Synced</b>. Tap it to sign out or delete your account. Signing out keeps the copy on this device.</p><button class="lnk" data-acct>Sign in</button>`],
+   ['I got a new phone or computer. How do I move my progress?',`<ul><li><b>If you’re signed in:</b> sign in the same way on the new device and your progress appears. If that device already has some progress of its own, the app asks before it combines them.</li>
+    <li><b>If you’re not signed in:</b> use Export and Import (next question).</li></ul>`],
+   ['How do Export and Import work?',`<ol><li>Where you’ve been studying, tap <b>Export my progress</b> at the bottom of the page and save the file (Files or iCloud Drive is fine).</li>
+    <li>On the other device, or in the Home Screen app, tap <b>Import progress</b> and pick that file.</li></ol>
+    <p>The app tells you what’s in the file and asks before it replaces anything. Importing replaces the progress on that device, and brings your class along if you joined one.</p><button class="lnk" data-info-go="pgx">Go to Export and Import</button>`],
+   ['How do I start over?',`<ul><li><b>One set in Study:</b> once you’ve answered questions in a set, tap <b>Clear my answers in this set</b> under the question. Flags, tests and your review list stay.</li>
+    <li><b>Everything:</b> tap <b>Reset my progress</b> at the very bottom of the page, then tap again to confirm. That erases your answers, flags, practice tests and review schedule on this device, and in your account if you’re signed in. Your test choice and your class stay.</li></ul>
+    <p>Export a copy first if you might want it back.</p>`]]],
+  ['Your instructor',[
+   ['How do I join my instructor’s class?',`<p>Open the invite link your instructor sent you, type your name, and tap <b>Join class</b>. Or go to <b>Learn</b>, find <b>Your questions</b>, and type the class code and your name there.</p>
+    <p>Your class comes with you when you sign in or use Export and Import. To leave, go to Your questions on the Learn page and tap <b>Leave class</b> (or leave and delete your questions).</p><button class="lnk" data-help-go="learn">Go to Learn</button>`],
+   ['How do I ask my instructor a question?',`<p>After you answer a practice question, tap <b>Ask … about this</b> under the explanation. Every lesson also has an ask box at the bottom. Type your question in your own words and send it.</p>
+    <p>The answer shows up under <b>Your questions</b> on the Learn page.</p>`],
+   ['Can I get a notification when my instructor answers?',`<p>Yes. After you send a question, or under Your questions on the Learn page, tap <b>Notify me when … answers</b> and allow notifications. Each device is set up on its own.</p>
+    <p>On an iPhone or iPad this works only in the Home Screen app, on iOS 16.4 or newer. The Home Screen app keeps its own copy, so bring your class into it first: sign in there, or use the sign-in code under Your questions (<b>Move to the Home Screen app or another device</b>).</p>`],
+   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send to my instructor</b> button. It sends that test’s score, time and results by area. Nothing is sent unless you choose to send it.</p>`],
+   ['What can my instructor see?',`<p>Only what you send:</p>
+    <ul><li>Your name, as you typed it when you joined.</li>
+    <li>The questions you ask. When you ask about a practice question, they also see that question and the answer you picked, so they can help.</li>
+    <li>A practice-test score, only if you choose to send it.</li></ul>
+    <p>Nothing else. Your instructor doesn’t see your study answers, flags, review list or any score you didn’t send.</p>`]]],
+  ['The questions',[
+   ['Where do the questions come from? Are they real FAA test questions?',`<p>No, they aren’t real FAA test questions, and they aren’t copied from other study apps or books. ${ALLQ.length?'All '+ALLQ.length:'They all'} were written for this app from free FAA sources: the Balloon Flying Handbook, the Pilot’s Handbook of Aeronautical Knowledge, the Aeronautical Information Manual and the regulations (such as 14 CFR parts 61 and 91). Each one was then fact-checked against those sources separately, and every explanation names its reference.</p>
+    <p>They cover the same knowledge as the real test, so they’re good practice, but they’re not a preview of the exact questions you’ll see.</p>`],
+   ['What do “Bonus · conceptual” and “From the field” mean?',`<p>Most questions are <b>test-style</b>, like the real test. Two other kinds are marked:</p>
+    <ul><li><b>Bonus · conceptual</b>: deeper physics or math. Good for understanding, unlikely on the test.</li><li><b>From the field</b>: airmanship and custom from real flying, not regulation.</li></ul>
+    <p>Only test-style questions go into practice tests and count toward your mastery levels. Study shows all three, and you can filter by kind.</p>`],
+   ['I think a question is wrong. How do I tell you?',`<p>Under any answered question, lesson or reference card, tap <b>Something wrong with this …? Tell us</b>, pick what’s wrong, add a note if you like, and tap Send. Reports don’t carry your name. They go to the app’s author, not to your instructor, and every one gets read.</p>`]]],
+  ['Privacy',[
+   ['What do you keep about me?',`<p>Without an account, your studying stays on your device. Only what you choose to send leaves it: questions to your instructor, a practice-test score you send, and problem reports.</p>
+    <p>If you sign in, we keep your study progress and how you sign in, never your email address itself. There are no ads, trackers or analytics.</p><a class="lnk" href="privacy.html">Read the privacy page</a>`]]]];}
+function renderHelp(){const el=$('help');if(el.dataset.n==='1')return;if(ALLQ.length)el.dataset.n='1';  // built once (after the bank loads), so open answers stay open while the app re-renders
+  el.innerHTML=`<button class="back" data-help-back>${ICON.back}Back</button><div><div class="eyebrow">Balloon Written Prep</div><h2 class="lt big" id="hlpH" tabindex="-1">Help &amp; FAQ</h2><p class="mut" style="margin-top:6px">Short answers to common questions. Tap a question to open it.</p></div>
+${helpQs().map(([g,qs])=>`<section class="hlpg"><h3>${g}</h3>${qs.map(([q,a])=>`<details><summary>${q}</summary><div class="hlpa">${a}</div></details>`).join('')}</section>`).join('')}`;}
+function helpOpen(){mode='help';renderAll();scrollTo(0,0);$('hlpH').focus({preventScroll:true});}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-help]');if(!t)return;const d=t.closest('dialog');if(d&&d.open)d.close();helpOpen();});
+$('help').addEventListener('click',e=>{const t=e.target.closest('[data-help-back],[data-help-go]');if(!t)return;
+  if(t.dataset.helpBack!==undefined){const st=history.state||{};if(st.prev!==undefined&&normH(st.prev)!=='#help')history.back();else $('mStudy').click();return;}  // opened straight from a link: Back goes to Study
+  const g=t.dataset.helpGo;if(g==='trk')$('trkBtn').click();else if(g==='test')$('mTest').click();else if(g==='learn')goLearn('home');});
 // ---------- history: each view has its own hash, so phone Back steps back through the app and views are linkable ----------
-// #study · #test · #test/review · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
+// #help (Help & FAQ) · #study · #test · #test/review · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
 // Old links still work: #learn, #ref, #ref=<id>, #print=<id|all> (left untouched for tools/build-ref-pdfs.sh), #grade, #join=CODE, #hub=CODE.KEY (the key is saved, then dropped from the address bar).
 // Each history entry also carries the view it shows (mode, filter, position, list), so Back lands on the same question; a question id never goes in the hash.
 let routing=false,snap=null,viaBack=false;
@@ -1853,6 +1977,7 @@ function hashFor(){
   if(mode==='review')return '#test/review';
   if(mode==='test'||mode==='teststart'||mode==='results')return '#test';
   if(mode==='ref')return RV.v==='card'?'#ref='+RV.id:'#ref';
+  if(mode==='help')return '#help';
   const v=LV.v;
   if(v==='topic')return '#learn/'+encodeURIComponent(LV.t);
   if(v==='basics')return '#learn/'+encodeURIComponent(LV.t)+'/basics';
@@ -1894,10 +2019,12 @@ const BOOT=Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('
   // a reload keeps the entry's saved view (the hash it was saved with must still match); a fresh link routes by its hash
   if(st&&st.m&&st.h&&normH(st.h)===normH(hs))restoreView(st);else route(hs);
   routing=true;renderAll();routing=false;trkUI();if(!S.track&&!hs.startsWith('#print='))trkAsk();
+  newsBoot();
 });
 function route(hs){
   if(hs===''||hs==='#study'||hs==='#grade'){if(mode!=='study'){mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=0;}}
   else if(hs==='#learn')mode='learn';
+  else if(hs==='#help')mode='help';
   else if(hs==='#learn/plan'||hs==='#learn/newclass'){mode='learn';LV={v:hs.slice(7)};}
   else if(hs==='#learn/questions'){mode='learn';LV={v:'home'};PNGO=true;} // a tapped notification: Learn, scrolled to Your questions
   else if(hs.startsWith('#learn/')){const [t,b]=decodeURIComponent(hs.slice(7)).split('/');mode='learn';LV=b==='basics'?{v:'basics',t,at:0,alt:{}}:{v:'topic',t,checks:pickChecks(t)};}
@@ -1934,6 +2061,7 @@ function route(hs){
   <h3>Your sign-in code</h3>
   <p>If you joined a class, the sign-in code (Learn → Your questions) moves <b>only your class and your questions</b> to another device. It does not bring your study progress. Sign in, or use Export and Import, for that.</p>
   <p class="mut sm">Export a copy now and then as a backup. Clearing Safari's history and website data also wipes it.</p>
+  <p class="mut sm">More answers: <button class="lnk" data-help>Help &amp; FAQ</button></p>
   <div class="infoa"><button class="btn" data-info-go="pgx">Go to Export / Import</button><button class="btn primary" data-info-close>Got it</button></div>
 </dialog>
 </body>
