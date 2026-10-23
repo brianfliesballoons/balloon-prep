@@ -12,16 +12,60 @@ const RATE = {
   class: [[HOUR, 5], [DAY, 20]],
   join: [[HOUR, 60], [DAY, 300]],
   report: [[HOUR, 12], [DAY, 50]],
+  score: [[HOUR, 30], [DAY, 200]],
   ...AUTH_RATE,
 };
 const JOINS_PER_CLASS_DAY = 150;   // new students one class can take in 24 h
 const REPORTS_MAX = 5000;          // open reports kept before new ones are refused
 const KINDS = ['wrong', 'confusing', 'typo', 'other'];
 const REF_RE = /^(q|lesson|card):[A-Za-z0-9_.-]{1,40}$/;
+// Practice-test scores a student chose to send (added 2026-10-23). Only the score, time, per-area results and per-area flag counts: never answers or question ids.
+const SC = {
+  areas: ['REG', 'AIR', 'WXS', 'WXT', 'THY', 'OPS', 'ADM', 'DAC', 'FOI'], tracks: ['P', 'C'], pass: 70,
+  maxN: 200, maxSec: 7 * 864e2, body: 2000,   // questions in one test, active seconds, bytes in one POST
+  perDay: 20, keep: 200, list: 500,           // per student per 24 h, kept per student, rows the hub gets
+  views: ['all', 'weekly'], week: 7 * 864e5,
+};
+// a sent score -> the row to store, or a string saying what is wrong with it
+function scoreIn(b, now) {
+  const int = (v, lo, hi) => Number.isInteger(v) && v >= lo && v <= hi;
+  if (!SC.tracks.includes(b.track)) return 'Unknown test';
+  if (!int(b.n, 1, SC.maxN) || !int(b.right, 0, b.n)) return 'That score does not add up';
+  if (!int(b.sec, 0, SC.maxSec)) return 'That test time does not add up';
+  if (!int(b.taken, now - 366 * DAY, now + DAY)) return 'That test date does not add up';
+  const a = b.areas, f = b.flags == null ? {} : b.flags;
+  if (!a || typeof a !== 'object' || Array.isArray(a) || typeof f !== 'object' || Array.isArray(f)) return 'That score does not add up';
+  const areas = {}, flags = {}; let n = 0, r = 0;
+  for (const [k, v] of Object.entries(a)) {
+    if (!SC.areas.includes(k) || !Array.isArray(v) || v.length !== 2 || !int(v[1], 1, b.n) || !int(v[0], 0, v[1])) return 'That score does not add up';
+    areas[k] = [v[0], v[1]]; n += v[1]; r += v[0];
+  }
+  if (n !== b.n || r !== b.right) return 'That score does not add up';
+  for (const [k, v] of Object.entries(f)) {
+    if (!areas[k] || !int(v, 0, areas[k][1])) return 'That flag count does not add up';
+    if (v) flags[k] = v;
+  }
+  const pct = Math.round(b.right / b.n * 100);
+  return { track: b.track, n: b.n, r: b.right, pct, pass: pct >= SC.pass ? 1 : 0, sec: b.sec, areas: JSON.stringify(areas), flags: JSON.stringify(flags), taken: b.taken };
+}
+const scoreOut = s => ({ id: s.id, sid: s.sid, track: s.track, n: s.n, right: s.r, pct: s.pct, pass: s.pass, sec: s.sec, areas: JSON.parse(s.areas), flags: JSON.parse(s.flags || '{}'), taken: s.taken, created: s.created });
+// weekly summary: per student over the last 7 days, tests sent, average, per-area totals and flag counts added up
+function scoreWeek(rows) {
+  const by = new Map();
+  for (const s of rows.map(scoreOut)) {
+    const w = by.get(s.sid) || { sid: s.sid, tests: 0, sum: 0, pass: 0, tracks: {}, areas: {}, flags: {}, last: 0 };
+    w.tests++; w.sum += s.pct; w.pass += s.pass; w.tracks[s.track] = (w.tracks[s.track] || 0) + 1; w.last = Math.max(w.last, s.created);
+    for (const [k, [r, t]] of Object.entries(s.areas)) { const x = w.areas[k] || (w.areas[k] = [0, 0]); x[0] += r; x[1] += t; }
+    for (const [k, v] of Object.entries(s.flags)) w.flags[k] = (w.flags[k] || 0) + v;
+    by.set(s.sid, w);
+  }
+  return [...by.values()].map(({ sum, ...w }) => ({ ...w, avg: Math.round(sum / w.tests) })).sort((x, y) => y.last - x.last);
+}
 const SLOW = {
   class: 'A lot of classes have been started from this network recently. Please try again in an hour.',
   join: 'A lot of students have joined from this network in the last hour. Please wait a few minutes and try again.',
   report: 'Thanks, we have plenty of reports from you for now. Please try again in an hour.',
+  score: 'A lot of scores have been sent from this network recently. Please try again in an hour.',
   ...AUTH_SLOW,
 };
 
@@ -61,6 +105,8 @@ async function limited(env, req, bucket) {
 }
 
 async function body(req) { try { const b = await req.json(); return b && typeof b === 'object' ? b : {}; } catch { return {}; } }
+// like body(), but null when the request is bigger than max bytes
+async function bodyMax(req, max) { const t = await req.text().catch(() => ''); if (new TextEncoder().encode(t).length > max) return null; try { const b = JSON.parse(t); return b && typeof b === 'object' ? b : {}; } catch { return {}; } }
 async function admin(env, req, code) {
   const k = (req.headers.get('Authorization') || '').replace(/^Bearer\s+/, '');
   if (!k) return null;
@@ -73,9 +119,10 @@ async function student(env, req, code) {
   const s = await env.DB.prepare('SELECT * FROM students WHERE sid=? AND code=?').bind(sid, code).first();
   return s && s.key_hash === await sha(key) ? s : null;
 }
-// a student's questions go first (they reference the student row)
+// a student's questions and scores go first (they reference the student row)
 const dropStudent = (env, code, sid) => env.DB.batch([
   dropSubs(env, sid, code),
+  env.DB.prepare('DELETE FROM scores WHERE sid=? AND code=?').bind(sid, code),
   env.DB.prepare('DELETE FROM questions WHERE sid=? AND code=?').bind(sid, code),
   env.DB.prepare('DELETE FROM students WHERE sid=? AND code=?').bind(sid, code),
 ]);
@@ -215,12 +262,69 @@ export default {
         if (p.length === 4 && req.method === 'GET') return json(pushKey(env));
         if ((p[4] === 'subscribe' || p[4] === 'unsubscribe') && req.method === 'POST') { const r = await (p[4] === 'subscribe' ? subscribe : unsubscribe)(env, s, await body(req)); return r.error ? err(400, r.error) : json(r); }
       }
+      if (p[3] === 'scores') {
+        // POST /api/classes/:code/scores (student) {track, n, right, sec, areas:{AREA:[right,total]}, flags?:{AREA:count}, taken} -> {ok, id, created, dup?}
+        // The same test (same student, same taken time) is stored once; sending it again returns the first copy's time.
+        if (p.length === 4 && req.method === 'POST') {
+          const s = await student(env, req, code); if (!s) return err(401, 'Not in this class');
+          const b = await bodyMax(req, SC.body); if (!b) return err(413, 'That score is too big to send');
+          const now = Date.now(), row = scoreIn(b, now);
+          if (typeof row === 'string') return err(400, row);
+          const had = await env.DB.prepare('SELECT id,created FROM scores WHERE sid=? AND taken=?').bind(s.sid, row.taken).first();
+          if (had) return json({ ok: true, dup: true, id: had.id, created: had.created });
+          const n = await env.DB.prepare('SELECT COUNT(*) n FROM scores WHERE sid=? AND created>?').bind(s.sid, now - DAY).first();
+          if (n.n >= SC.perDay) return err(429, 'That is a lot of scores for one day. Try again tomorrow.');
+          const slow = await limited(env, req, 'score'); if (slow) return err(429, slow);
+          const id = rand(9);
+          await env.DB.batch([
+            env.DB.prepare('INSERT OR IGNORE INTO scores(id,code,sid,track,n,r,pct,pass,sec,areas,flags,taken,created) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)')
+              .bind(id, code, s.sid, row.track, row.n, row.r, row.pct, row.pass, row.sec, row.areas, row.flags, row.taken, now),
+            env.DB.prepare('DELETE FROM scores WHERE sid=? AND id NOT IN (SELECT id FROM scores WHERE sid=? ORDER BY created DESC LIMIT ?)').bind(s.sid, s.sid, SC.keep),
+          ]);
+          const got = await env.DB.prepare('SELECT id,created FROM scores WHERE sid=? AND taken=?').bind(s.sid, row.taken).first();
+          return json({ ok: true, id: got ? got.id : id, created: got ? got.created : now, ...(got && got.id !== id ? { dup: true } : {}) });
+        }
+        // DELETE /api/classes/:code/scores/mine (student) -> every score this student sent is deleted (the app calls it when they leave the class)
+        if (p[4] === 'mine' && p.length === 5 && req.method === 'DELETE') {
+          const s = await student(env, req, code); if (!s) return err(401, 'Not in this class');
+          const r = await env.DB.prepare('DELETE FROM scores WHERE sid=? AND code=?').bind(s.sid, code).run();
+          return json({ ok: true, deleted: r.meta.changes });
+        }
+        const c = await admin(env, req, code); if (!c) return err(401, 'Hub key not recognised');
+        // GET /api/classes/:code/scores (hub) -> {view, seen, scores} with every score, or {view:'weekly', seen, since, weekly} with the 7-day summary only
+        if (p.length === 4 && req.method === 'GET') {
+          const view = c.score_view || 'all', seen = c.scores_seen || 0;
+          if (view === 'weekly') {
+            const since = Date.now() - SC.week;
+            const r = await env.DB.prepare('SELECT * FROM scores WHERE code=? AND created>? ORDER BY created DESC LIMIT 2000').bind(code, since).all();
+            const f = await env.DB.prepare('SELECT COUNT(*) n FROM scores WHERE code=? AND created>?').bind(code, seen).first();
+            return json({ view, seen, since, fresh: f.n, weekly: scoreWeek(r.results) });
+          }
+          const r = await env.DB.prepare('SELECT * FROM scores WHERE code=? ORDER BY created DESC LIMIT ?').bind(code, SC.list).all();
+          return json({ view, seen, scores: r.results.map(scoreOut) });
+        }
+        // POST /api/classes/:code/scores/seen (hub) {t?} -> scores sent up to t (default now) stop counting as new
+        if (p[4] === 'seen' && p.length === 5 && req.method === 'POST') {
+          const now = Date.now(), t = Number((await body(req)).t), upto = Number.isFinite(t) && t > 0 ? Math.min(t, now) : now;
+          await env.DB.prepare('UPDATE classes SET scores_seen=MAX(scores_seen,?) WHERE code=?').bind(Math.floor(upto), code).run();
+          return json({ ok: true });
+        }
+      }
+      // POST /api/classes/:code/settings (hub) {scoreView:'all'|'weekly'} -> how much of the sent scores the instructor sees
+      if (p[3] === 'settings' && p.length === 4 && req.method === 'POST') {
+        if (!await admin(env, req, code)) return err(401, 'Hub key not recognised');
+        const v = (await body(req)).scoreView;
+        if (!SC.views.includes(v)) return err(400, 'Pick Every score or Weekly summary');
+        await env.DB.prepare('UPDATE classes SET score_view=? WHERE code=?').bind(v, code).run();
+        return json({ ok: true, scoreView: v });
+      }
       // GET /api/classes/:code/hub -> everything for the instructor
       if (p[3] === 'hub' && req.method === 'GET') {
         const c = await admin(env, req, code); if (!c) return err(401, 'Hub key not recognised');
         const st = await env.DB.prepare('SELECT sid,name,created FROM students WHERE code=? ORDER BY created').bind(code).all();
         const qs = await env.DB.prepare('SELECT id,sid,topic,qid,picked,text,created,answer,answered,draft FROM questions WHERE code=? ORDER BY created DESC LIMIT 500').bind(code).all();
-        return json({ class: cls, students: st.results, questions: qs.results, owner: c.owner ? 1 : 0 });
+        const sc = await env.DB.prepare('SELECT COUNT(*) n, COALESCE(SUM(created>?),0) f FROM scores WHERE code=?').bind(c.scores_seen || 0, code).first();
+        return json({ class: cls, students: st.results, questions: qs.results, owner: c.owner ? 1 : 0, scores: { total: sc.n, fresh: sc.f, view: c.score_view || 'all' } });
       }
       // GET /api/classes/:code/reports, DELETE /api/classes/:code/reports/:id -> the app owner's problem reports (hub key of an owner class)
       if (p[3] === 'reports') {

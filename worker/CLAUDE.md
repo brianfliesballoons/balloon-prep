@@ -56,8 +56,22 @@ Per IP, keyed on `sha256(salt | CF-Connecting-IP)`. The raw IP is never stored. 
 | Join | 60 per hour, 300 per day (a whole class on one school Wi-Fi fits) | 150 new students per class per 24 h |
 | Report | 12 per hour, 50 per day | 5,000 waiting reports in total |
 | Question | | 50 per student per 24 h (unchanged) |
+| Score | 30 per hour, 200 per day | 20 per student per 24 h; the newest 200 kept per student; a POST over 2,000 bytes gets 413 |
 
 Validation errors (400) are checked first and do not count. A refused same-name class (409) does count, which also slows name probing. Change the numbers in `RATE`, `JOINS_PER_CLASS_DAY` and `REPORTS_MAX` at the top of `worker.js`.
+
+## Scores to the instructor (added 2026-10-23, migration `migrations/2026-10-23-scores.sql`)
+
+A student sends a practice-test score only by tapping **Send to my instructor** on the results page, or by turning on **Always send my practice test scores** for that class. Stored per score (table `scores`): track P/C, n, right, pct and pass (both worked out by the Worker), active seconds, per-area `[right,total]`, per-area flag counts, `taken` (when the test finished) and `created`. Never answers, question ids or question text. One row per student per `taken`: a second send of the same test returns the first copy (`dup:true`). Every score a student sent is deleted when they leave (`DELETE …/scores/mine`, which the app's plain **Leave class** calls), leave-and-delete (`students/me`), or are removed by the instructor.
+
+| Endpoint | Auth | What it does |
+|---|---|---|
+| `POST /api/classes/:code/scores {track, n, right, sec, areas:{AREA:[right,total]}, flags?:{AREA:count}, taken}` | student | → `{ok, id, created, dup?}`. 400 if the numbers do not add up (areas must sum to n and right, flags ≤ the area's questions, known areas only, taken within the last 366 days). Dups are answered before the limits and never count. |
+| `DELETE /api/classes/:code/scores/mine` | student | → `{ok, deleted}`. |
+| `GET /api/classes/:code/scores` | hub | `score_view='all'`: `{view, seen, scores:[{id,sid,track,n,right,pct,pass,sec,areas,flags,taken,created}]}`, newest first, up to 500. `'weekly'`: `{view, seen, since, fresh, weekly:[{sid, tests, avg, pass, tracks, areas, flags, last}]}` over the last 7 days, and no single scores. |
+| `POST /api/classes/:code/scores/seen {t?}` | hub | Scores sent up to `t` (default now) stop counting as new (`classes.scores_seen`). |
+| `POST /api/classes/:code/settings {scoreView:'all'\|'weekly'}` | hub | The instructor's choice of how much they see (`classes.score_view`, default `all`). Never in the public class info. |
+| `GET /api/classes/:code/hub` | hub | Gained `scores: {total, fresh, view}` for the tab's "N new". The app shows the Scores tab only when this field is there, so a new page against the old Worker simply has no tab. |
 
 ## Setting `verified` and `owner` (by hand only)
 

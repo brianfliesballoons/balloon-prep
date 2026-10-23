@@ -107,6 +107,17 @@ html.signed .pgxin,html:not(.signed) .pgxon{display:none}
 @media (max-width:640px){.trks{margin:auto 0 0;width:100%;max-width:100%;border-radius:16px 16px 0 0;border-bottom:0;padding:12px 20px calc(20px + env(safe-area-inset-bottom))}
   .trkgrip{display:block;width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto}}
 .trkd .btn.big{width:100%}.trkd h2:focus{outline:none}
+/* What's new sheet (#newsD, reuses the track sheet's look) and the Help & FAQ view (#help, a .learn section) */
+.nwsd .nwsday{font-size:.9rem;color:var(--muted);margin-top:2px}.nwsd ul{padding-left:1.2em;margin:6px 0 0}.nwsd li{margin:6px 0;font-size:1.02rem}
+.nwsd h3{margin:14px 0 0;font-size:1rem}.nwsd .nwsmore{font-size:.92rem;color:var(--muted)}.nwsd .nwsmore .lnk{color:var(--ink)}
+.hlpg{display:flex;flex-direction:column;gap:8px}.hlpg>h3{margin:10px 0 0;font-family:var(--f-display);font-size:1.25rem}
+.hlp summary{justify-content:space-between;gap:12px;font-size:1.04rem;line-height:1.3;padding:6px 0;list-style:none}
+.hlp summary::-webkit-details-marker{display:none}
+.hlp summary::after{content:"";flex:none;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin:-4px 4px 0 0}
+.hlp details[open]>summary::after{transform:rotate(225deg);margin-top:4px}
+.hlpa{display:flex;flex-direction:column;gap:8px;padding:0 0 14px;font-size:1rem;line-height:1.5}.hlpa ul,.hlpa ol{margin:0;padding-left:1.25em}.hlpa li{margin:4px 0}
+.hlpa .lnk{align-self:flex-start;color:var(--user)}
+footer .hlpf{display:flex;flex-wrap:wrap;gap:0 20px;margin:0 0 8px}footer .hlpf button,footer .hlpf a{color:var(--ink);min-height:44px;display:inline-flex;align-items:center;font-size:.95rem}
 .tsst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0 12px}
 .tsst>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:.88rem;color:var(--muted)}
 .tsst b{display:block;font-family:var(--f-display);font-weight:700;font-size:1.65rem;line-height:1.15;color:var(--ink)}
@@ -425,6 +436,30 @@ b.tdue{color:var(--flag-ink)} .tile .rsoon{font-size:.85rem;font-weight:600;colo
 .rptf .btn{align-self:flex-start;min-height:44px}
 .vmark{display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:.85rem;color:var(--good)} .vmark svg{width:15px;height:15px}
 .seg3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))} .seg3 .mode{min-height:44px}
+.seg4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))} .seg4 .mode{min-height:44px}
+@media (max-width:520px){.seg4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* scores to the instructor: student card on results (.tsc) and the hub's Scores tab (.tsc-*) */
+.tsc{display:flex;flex-direction:column;gap:10px;margin-top:16px;border-radius:12px}
+.tsc p{margin:0;line-height:1.4}
+.tsc-h{margin:0;font-family:var(--f-display);font-size:1.15rem}
+.tsc .btn.big{width:100%}
+.tsc-ok{font-size:1rem}.tsc-ok:focus,.tsc [role=status]:focus{outline:none}
+.tsc-chk{display:flex;align-items:center;gap:10px;min-height:44px;font-size:.95rem;cursor:pointer}
+.tsc-chk input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--ink)}
+.tsc-sh{font-family:var(--f-display);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.tsc-stu{gap:10px}
+.tsc-stu.tsc-new{border:1.5px solid var(--ink)}
+.tsc-nb{color:var(--good)}
+.tsc-top{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:10px;row-gap:2px}
+.tsc-pct{font-family:var(--f-display);font-weight:700;font-size:2.4rem;line-height:1}
+.tsc-ah{font-family:var(--f-display);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.tsc-ag{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;font-size:.93rem}
+.tsc-ag>div{min-width:0}
+.tsc-weak{color:var(--bad);font-weight:700}
+.tsc-dg{margin:0;line-height:1.4;background:var(--chip);border-radius:8px;padding:8px 10px}
+.tsc-old summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:.92rem}
+.tsc-old>div{padding:4px 0;border-top:1px solid var(--line)}
+.tsc-foot{margin:0}
 .stul{display:flex;flex-direction:column}
 .stul .srm{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;border-top:1px solid var(--line);padding:2px 0}
 .stul .srm:first-child{border-top:0}
@@ -561,6 +596,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 
   <section class="ref" id="ref" hidden></section>
   <div id="refPrint" aria-hidden="true"></div>
+  <section class="learn hlp" id="help" aria-labelledby="hlpH" hidden></section>
 
   <section class="card results" id="testStart" hidden>
     <h2 id="tsH">Practice test</h2>
@@ -646,7 +682,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
     </section>
   </div>
 
-  <footer>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
+  <footer><nav class="hlpf" aria-label="Help"><button data-help>Help &amp; FAQ</button><button data-news>What's new</button><a href="privacy.html">Privacy</a></nav>Prototype, October 2026. Questions are original practice questions written from FAA handbooks and regulations, not FAA test questions, and they are still being reviewed. The density altitude chart is computed from the standard atmosphere, the same math behind the FAA's worked examples, so it reads close to the FAA's density altitude chart but is not a copy of it. Keyboard: <span class="kbd">A</span> <span class="kbd">B</span> <span class="kbd">C</span> to answer, <span class="kbd">←</span> <span class="kbd">→</span> to move, <span class="kbd">F</span> to flag. <button id="wipe">Reset my progress</button></footer>
   <p class="tipf" id="tipFoot" hidden>Free for every student. Like it? <button class="lnk" data-tip>Leave a tip</button></p>
   <div class="pgx" id="pgx">
     <p><b>Your progress</b> is saved in this browser on this device<span class="pgxon">, and in your account</span>. <span class="pgxin"><button class="lnk" data-acct>Sign in</button> to keep it on every device, or export a copy now and then so you can move it or get it back if the browser clears it.</span><span class="pgxon">You can also export a copy as a file.</span> <button class="lnk" data-info="save">How saving works</button></p>
@@ -681,6 +717,13 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   <p class="mut sm">A practice test you've already started keeps its own length and clock.</p>
   <button class="btn primary big" data-trk-done>Done</button>
 </dialog>
+<dialog class="infod trkd trks nwsd" id="newsD" aria-labelledby="newsH">
+  <i class="trkgrip" aria-hidden="true"></i>
+  <h2 id="newsH" tabindex="-1">What's new</h2>
+  <div id="newsB"></div>
+  <p class="nwsmore">Questions? See <button class="lnk" data-help>Help &amp; FAQ</button></p>
+  <button class="btn primary big" data-news-close>Got it</button>
+</dialog>
 <dialog class="infod tipd" id="tipD" aria-labelledby="tipH">
   <h2 id="tipH">Keep it free</h2>
   <p>Balloon Written Prep is free for every student and always will be. If it helped you, a tip helps keep it going. It's a tip, not a donation, so it isn't tax-deductible.</p>
@@ -689,16 +732,29 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
 <script>
 (function(){
 // ---------- data ----------
-const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json','questions/pilot-8.json','questions/pilot-9.json'];
-const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart']];
+const FILES=['questions/pilot-1.json','questions/pilot-2.json','questions/pilot-3.json','questions/pilot-4.json','questions/pilot-5.json','questions/pilot-6.json','questions/pilot-7.json','questions/pilot-8.json','questions/pilot-9.json','questions/pilot-10.json'];
+const AREAS=[['REG','Regulations'],['AIR','Airspace & navigation'],['WXS','Weather services'],['WXT','Weather theory'],['THY','Balloon theory & performance'],['OPS','Operations & systems'],['ADM','Decision making & physiology'],['DAC','Density altitude chart'],['FOI','Teaching & the learning process']];  // FOI is Commercial-only (tracks.json, lessons.json topic track:'C')
 const AREA=Object.fromEntries(AREAS);
+// What's new, newest first. When you ship a big update students should hear about, add an entry at the TOP:
+//   {v:'YYYY-MM-DD',items:['short plain sentence a student understands', …]}  (2-4 items; small fixes need no entry).
+// Anyone who used the app before (any progress, or S.newsSeen set) sees the newest entry once, on their next visit; a new student never does.
+// S.newsSeen = the newest v seen; it syncs with the account like the rest of S. The footer's What's new link shows the last few entries.
+const NEWS=[
+ {v:'2026-10-23',items:[
+  'Pick the test you’re taking: Private or Commercial. Practice tests now match that test’s number of questions and time. Tap the test name at the top to switch.',
+  'Studying for Commercial? A new Teaching section in Learn has lessons and questions on how people learn and how to teach.',
+  'You can send a practice-test score to your instructor from the results page. Nothing is sent unless you choose to.',
+  'Sign in with Face ID or Google, if you like, and your progress follows you to every device.']},
+];
 // Voluntary personal tips to the app's author. Empty = no tip link, line or sheet anywhere.
 const TIP_URL='';
 // Test track (S.track): P = Private (FAA test PBH), C = Commercial (CBH). n questions, per = ms a question (PBH 60 in 2.5 h, CBH 100 in 3.0 h), bp = the area mix.
 // The FAA publishes no per-area weights for either test; the mixes spread across the 61.105(b) / 61.125(b) areas. No track yet = Commercial (what every test was before).
+// Commercial adds FOI (teaching & the learning process: 61.125(b)(16), 61.127(b)(8)(i), FAA-G-8082-5 tells balloon applicants to review it) at 8 of 100,
+// taken roughly in proportion from the other areas (REG 18>16, AIR 14>13, WXS 12>11, ADM 10>9, THY 14>13, WXT 12>11, OPS 16>15; DAC stays 4). Our estimate, not an FAA weight.
 const PASS=70;
 const TRACKS={P:{name:'Private',long:'Private Pilot, Balloon',code:'PBH',n:60,per:150e3,bp:{REG:11,AIR:8,WXS:7,ADM:6,THY:8,WXT:7,OPS:9,DAC:4}},
-  C:{name:'Commercial',long:'Commercial Pilot, Balloon',code:'CBH',n:100,per:108e3,bp:{REG:18,AIR:14,WXS:12,ADM:10,THY:14,WXT:12,OPS:16,DAC:4}}};
+  C:{name:'Commercial',long:'Commercial Pilot, Balloon',code:'CBH',n:100,per:108e3,bp:{REG:16,AIR:13,WXS:11,ADM:9,THY:13,WXT:11,OPS:15,DAC:4,FOI:8}}};
 const trk=()=>S.track==='P'?'P':'C',TRK=()=>TRACKS[trk()];
 const hTr=h=>h&&h.track==='P'?'P':'C';  // a test or history entry without a track was a 100-question Commercial test
 let TRC=new Set();  // questions/tracks.json {"C":[ids]}: Commercial-only questions, hidden while studying for Private
@@ -856,13 +912,14 @@ function go(i){if(i<0||i>=list.length)return;$('redo').dataset.armed='';if(walk)
 function renderAll(){
   // the Ask view reached from Study, Test or Review keeps the tab it came from lit (tm = the mode the tab bar reflects)
   const tm=mode==='learn'&&LV.v==='ask'&&/^resume:/.test(LV.back||'')?LV.back.slice(7):mode;
-  const lrn=tm==='learn'||tm==='due';$('mStudy').setAttribute('aria-pressed',String(tm==='study'));$('mTest').setAttribute('aria-pressed',String(tm!=='study'&&tm!=='ref'&&!lrn));$('mRef').setAttribute('aria-pressed',String(tm==='ref'));
+  const lrn=tm==='learn'||tm==='due';$('mStudy').setAttribute('aria-pressed',String(tm==='study'));$('mTest').setAttribute('aria-pressed',String(tm!=='study'&&tm!=='ref'&&tm!=='help'&&!lrn));$('mRef').setAttribute('aria-pressed',String(tm==='ref'));
   $('ref').hidden=mode!=='ref';if(mode==='ref')renderRef();$('mLearn').setAttribute('aria-pressed',String(lrn));
   $('learn').hidden=mode!=='learn';if(mode==='learn')renderLearn();
+  $('help').hidden=mode!=='help';if(mode==='help')renderHelp();
   renderFilters();
   const showStart=mode==='test'&&!S.test?.started;
   $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
-  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||!list.length;
+  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||mode==='help'||!list.length;
   if(mode==='results')renderResults();
   if(!$('main').hidden)renderQ();
   tRender();
@@ -876,12 +933,42 @@ function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=i
   let to='';if(T.to){const n=ids.length,tr=ids.filter(id=>T.to.a[id]===byId[id]?.answer).length,ta=ids.filter(id=>T.to.a[id]!==undefined).length,tp=Math.round(tr/n*100);
     to=`<p class="small">Time ran out with ${ta} of ${n} answered. At that point you had ${tr} right: <b class="${tp>=PASS?'pass':'fail'}">${tp}%</b>${tp>=PASS?', a pass':`, below ${PASS}%`}. The real test would have ended there; the ${pct}% above counts the answers you gave after time too.</p>`;}
   el.innerHTML=`<h2>${TRACKS[tr].name} practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':`Below the ${PASS}% passing score`} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}${T.used!=null?` of ${Math.round(tLim(T)/6e4)} on the clock`:''}</p>${to}
-   <table class="areas${prev?' tqv':''}"><thead><tr><th>Area</th><th></th><th>Score</th>${prev?'<th class="tqd" title="Change in percent since your previous test">vs last</th>':''}</tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td>${prev?pa(k,p):''}</tr>`;}).join('')}</tbody></table>
+   <table class="areas${prev?' tqv':''}"><thead><tr><th>Area</th><th></th><th>Score</th>${prev?'<th class="tqd" title="Change in percent since your previous test">vs last</th>':''}</tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td>${prev?pa(k,p):''}</tr>`;}).join('')}</tbody></table>${S.cls&&T.done&&T.end?`<section class="card tsc" id="tscCard">${scoInner(T)}</section>`:''}
    <div class="row-btns"><button class="btn primary" id="rMiss"${ids.length-right?'':' disabled'}>${ids.length-right?`Review missed (${ids.length-right})`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>${TIP_URL?'<p class="small tipr">This app is free. If it helped, you can leave a tip. <button class="lnk" data-tip>Leave a tip</button></p>':''}${tHistHTML(H,T.end,tr)}`;
   $('rPlan').onclick=()=>goLearn('plan');
   $('rMiss').onclick=()=>{list=ids.filter(id=>T.answers[id]!==byId[id]?.answer);pos=0;mode='review';renderAll();};
   $('rAll').onclick=()=>{list=ids.slice();pos=0;mode='review';renderAll();};
-  $('rNew').onclick=()=>{mode='teststart';renderAll();};}
+  $('rNew').onclick=()=>{mode='teststart';renderAll();};
+  scoBind();if(S.cls&&T.done&&T.end&&T.scAuto&&scoAuto()){const k=scoK(S.cls,T);if(!scoSent()[k]&&!SCO.busy[k]&&!SCO.err[k])scoSend(T);}}  // Always send: retry one that could not go out when the test finished
+
+// ---------- scores to the instructor: only when the student taps, or has Always send on for THIS class ----------
+// S.sendScores = the class code Always send is on for (joining another class starts with it off). S.scSent['<code>:<test end>'] = when it was sent.
+// What goes: track, n, right, active seconds, per-area [right,total], per-area flag counts, and when the test finished. Never answers, question ids or text.
+// The Worker also keeps one copy per test (same student + finish time), so a second send just returns the first one's time.
+const scoK=(C,T)=>C.code+':'+T.end,scoSent=()=>S.scSent&&typeof S.scSent==='object'?S.scSent:(S.scSent={}),scoAuto=()=>!!S.cls&&S.sendScores===S.cls.code;
+const SCO={busy:{},err:{}};
+function scoBody(T){const e=tHist().find(h=>h.end===T.end);if(!e||!e.ar||!e.n)return null;const fl={};
+  T.list.forEach(id=>{const q=byId[id];if(q&&S.flags[id])fl[q.area]=(fl[q.area]||0)+1;});
+  return {track:hTr(e),n:e.n,right:e.r,pct:e.pct,pass:e.pct>=PASS,sec:Math.max(0,Math.min(Math.round(e.sec)||0,604800)),areas:e.ar,flags:fl,taken:T.end};}
+const scoWhen=t=>{const d=new Date(t),n=new Date(),y=new Date(n.getFullYear(),n.getMonth(),n.getDate()-1),tm=d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  return d.toDateString()===n.toDateString()?'today, '+tm:d.toDateString()===y.toDateString()?'yesterday, '+tm:tDay(t)+', '+tm;};
+function scoInner(T){const C=S.cls;if(!C||!T||!T.done||!T.end)return '';const k=scoK(C,T),at=scoSent()[k],auto=scoAuto(),busy=SCO.busy[k],er=SCO.err[k];
+  const what='Only this result goes: the score, time, areas, and how many questions you flagged in each area.';
+  return `<h3 class="tsc-h">${at?'Sent to your instructor':busy&&auto?'Sending to your instructor…':'Send this score to your instructor?'}</h3>
+    <p class="mut sm">${esc(C.name)}. ${at?(auto?'Your finished practice tests go there on their own: the score, time, areas and flag counts, never your answers.':'Only the score, time, areas and flag counts went, never your answers.'):what+' Nothing is sent unless you tap.'}</p>
+    ${at?`<div class="okc tsc-ok" id="tscSt" role="status" tabindex="-1">Sent ✓ · ${esc(scoWhen(at))}</div>`:`<button class="btn primary big" id="tscGo"${busy?' disabled':''}>${busy?'Sending…':er?'Try again':'Send to my instructor'}</button><div class="mut sm" id="tscSt" role="status" tabindex="-1">${er?esc(er):''}</div>`}
+    <label class="tsc-chk"><input type="checkbox" id="tscAlw"${auto?' checked':''}> Always send my practice test scores</label>`;}
+function scoBind(){const g=$('tscGo'),a=$('tscAlw');if(g)g.onclick=()=>scoSend(S.test,true);
+  if(a)a.onchange=()=>{if(!S.cls)return;S.sendScores=a.checked?S.cls.code:null;save();scoPaint();const b=$('tscAlw');if(b)b.focus();};}
+function scoPaint(focus){const el=$('tscCard');if(!el||mode!=='results'||!S.cls)return;el.innerHTML=scoInner(S.test);scoBind();if(focus){const t=$('tscSt');if(t)t.focus({preventScroll:true});}}
+async function scoSend(T,tap){const C=S.cls;if(!C||!T||!T.done||!T.end)return;const k=scoK(C,T);if(scoSent()[k]||SCO.busy[k])return;
+  const b=scoBody(T);if(!b){SCO.err[k]='This test could not be read, so it cannot be sent.';scoPaint(tap);return;}
+  SCO.busy[k]=1;delete SCO.err[k];scoPaint();
+  try{const d=await api(`/classes/${C.code}/scores`,{method:'POST',stu:C,body:b});const s=scoSent();s[k]=typeof d.created==='number'?d.created:Date.now();
+    const ks=Object.keys(s);if(ks.length>100)ks.sort((x,y)=>s[x]-s[y]).slice(0,ks.length-100).forEach(x=>delete s[x]);save();}
+  catch(e){SCO.err[k]=e.qa&&e.message==='Not in this class'?'Your instructor’s class no longer lists you, so this score was not sent. Join the class again from the Learn page.':qaMsg(e);}
+  finally{delete SCO.busy[k];}
+  scoPaint(tap);}
 
 // ---------- practice-test clock and score history ----------
 // The clock counts active time only, while the test view is open and the page is visible (S.test.used, ms; old saved tests start at 0).
@@ -950,7 +1037,10 @@ $('tsGo').onclick=()=>{if(testHeld())return;{const l=buildTest();S.test={list:l,
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
 // ---------- test track: Private / Commercial ----------
 // BANK and TQ hold only the questions shown for the track; byId keeps every question, so saved tests, history and Ask still find theirs.
-function applyTrack(){BANK=ALLQ.filter(q=>vis(q.id));TQ={};BANK.forEach(q=>{const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});}
+// a topic with track:'C' (the Teaching group) is Commercial-only; a group with no topic left on this track is dropped
+function applyTrack(){const tv=t=>trk()==='C'||LESALL.topics[t].track!=='C',tp={};Object.keys(LESALL.topics).forEach(t=>{if(tv(t))tp[t]=LESALL.topics[t];});
+  LES={groups:LESALL.groups.map(g=>({...g,topics:g.topics.filter(t=>tp[t])})).filter(g=>g.topics.length),links:LESALL.links,topics:tp};
+  BANK=ALLQ.filter(q=>vis(q.id));TQ={};BANK.forEach(q=>{const t=MAP[q.id];if(t&&LES.topics[t])(TQ[t]=TQ[t]||[]).push(q.id);});}
 const tDurS=ms=>{const m=Math.round(ms/6e4),h=Math.floor(m/60),r=m%60;return h?`${h} h${r?` ${r} min`:''}`:`${m} min`;};
 function trkUI(){const t=TRK(),b=$('trkBtn');b.hidden=!S.track;if(S.track&&$('trkPick').open)$('trkPick').close();$('trkName').textContent=t.name;b.setAttribute('aria-label',`Change test, now ${t.name}`);
   document.querySelectorAll('#trkPick [data-trk]').forEach(o=>{const x=TRACKS[o.dataset.trk];o.querySelector('.trkm').textContent=`FAA test ${x.code} · ${x.n} questions · ${tDurS(x.n*x.per)} · pass at ${PASS}%`;o.setAttribute('aria-current',String(S.track===o.dataset.trk));});
@@ -972,7 +1062,7 @@ document.addEventListener('click',e=>{const d=$('tipD');if(e.target.closest('[da
   if(d.open&&(e.target.closest('[data-tip-close]')||e.target.closest('#tipGo')||e.target===d))d.close();});
 $('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
   if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
-  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>sched(id,S.test.answers[id]===byId[id]?.answer));save();mode='results';renderAll();window.scrollTo(0,0);};
+  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>sched(id,S.test.answers[id]===byId[id]?.answer));if(scoAuto())S.test.scAuto=1;save();mode='results';renderAll();window.scrollTo(0,0);};
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));navCenter();};
@@ -1155,7 +1245,7 @@ $('wprev').onclick=()=>{if(walk.i>0){walk.i--;showStep();}};
 $('wnext').onclick=()=>{if(walk.i<walk.steps.length-1){walk.i++;showStep();}else endWalk();};
 
 // ---------- learn ----------
-let LES={groups:[],links:{},topics:{}},MAP={},TQ={},KIND={};
+let LES={groups:[],links:{},topics:{}},LESALL=LES,MAP={},TQ={},KIND={};  // LESALL = every topic; LES = the topics shown for the current track (applyTrack)
 // Question kind, separate from subject: test-style (default), bonus/conceptual, from the field. Only test-style counts toward practice tests and mastery.
 const KINDS={bonus:'Bonus · conceptual',field:'From the field'};
 const kindOf=id=>(KIND[id]&&KIND[id].kind)||'test';
@@ -1345,7 +1435,7 @@ async function api(path,{method='GET',body,hub,stu,tok}={}){const h={};if(body)h
   let r;try{r=await fetch(QA+path,{method,headers:h,body:body?JSON.stringify(body):undefined});}catch(e){throw qaErr(NETERR);}let d=null;try{d=await r.json();}catch(e){}
   if(!r.ok)throw qaErr(d&&typeof d.error==='string'&&d.error?d.error:NETERR);if(!d||typeof d!=='object')throw qaErr(NETERR);return d;}
 const ago=t=>{const s=(Date.now()-t)/1000;return s<90?'just now':s<3600?Math.round(s/60)+' min ago':s<86400?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago';};
-const topicName=t=>LES.topics[t]?LES.topics[t].title:'General';
+const topicName=t=>LESALL.topics[t]?LESALL.topics[t].title:'General';  // every track: a hub can hold questions on topics hidden from this track
 let MYQ=null,HUBD={},hubTimer=null;
 const appURL=()=>location.origin+location.pathname;
 const VMARK=`<span class="vmark">${ICON.check}Verified instructor</span>`;
@@ -1380,12 +1470,14 @@ function vNewClass(){return `<button class="back" data-go="home">${ICON.back}Lea
 function vHub(code){const H=S.hubs[code];
   return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H&&H.name||code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
   <section class="card lc row"><div class="grow"><b>Invite students</b><div class="mut sm">Class code <span class="num" style="color:var(--ink);letter-spacing:.1em">${esc(code)}</span></div></div><button class="btn outline" data-act="copy" data-text="${esc(appURL()+'#join='+code)}">Copy invite link</button></section>
-  <div class="modes ${HUBD[code]&&HUBD[code].owner?'seg3':'seg2'}" role="group" aria-label="Questions" id="hubTabs">${hubTabs(code)}</div>
+  <div class="modes ${hubSeg(code)}" role="group" aria-label="Questions" id="hubTabs">${hubTabs(code)}</div>
   <div id="hubBody" class="hubq"></div>
   <details id="hubStu"><summary>Students</summary><div class="stul" id="stuList"></div></details>
   <details><summary>Your private hub link</summary><p class="mut sm" style="padding-bottom:12px">This link opens your hub on any device. Anyone who has it can answer as you, so keep it to yourself.</p><button class="btn" data-act="copy" data-text="${esc(appURL()+'#hub='+code+'.'+(H?H.key:''))}" style="margin-bottom:14px">Copy my hub link</button></details>`;}
 function hubTabs(code){const d=HUBD[code],tab=LV.tab||'wait',b=(k,l,id)=>`<button class="mode" data-act="tab" data-tab="${k}" aria-pressed="${tab===k}" id="${id}">${l}</button>`;
-  return b('wait','Waiting','tWait')+b('done','Answered','tDone')+(d&&d.owner?b('rep','Reports','tRep'):'');}
+  return b('wait','Waiting','tWait')+b('done','Answered','tDone')+(d&&d.scores?b('sc',scoTab(d),'tSc'):'')+(d&&d.owner?b('rep','Reports','tRep'):'');}
+const hubSeg=code=>{const d=HUBD[code],n=2+(d&&d.scores?1:0)+(d&&d.owner?1:0);return 'seg'+n;};
+const scoTab=d=>{const f=d&&d.scores&&d.scores.fresh;return f?`Scores · ${f} new`:'Scores';};
 let REPS=null;const RKN=Object.fromEntries(RKINDS);
 function repLink(ref){const [k,id]=String(ref).split(/:(.*)/);
   if(k==='q')return byId[id]?`<button class="linkb sm rptb" data-go="q:${esc(id)}">Open ${esc(id)} in Study</button>`:'';
@@ -1397,20 +1489,70 @@ function paintReports(el){if(!REPS){el.innerHTML='<section class="card lc"><p cl
     :'<section class="card lc"><p class="mut">No problem reports. New ones show up here when you open this tab.</p></section>';}
 async function loadReports(code){try{const d=await api(`/classes/${code}/reports`,{hub:S.hubs[code].key});if(!Array.isArray(d.reports))throw qaErr(NETERR);REPS={list:d.reports};}catch(e){REPS={err:qaMsg(e)};}
   if(LV.v==='hub'&&LV.code===code&&LV.tab==='rep'){const el=$('hubBody');if(el)paintReports(el);}}
+
+// Scores tab: only scores students chose to send. The instructor picks how much they see (stored on the class by the Worker):
+// 'all' = every score (latest per student with areas weakest first, digest, trend, earlier scores) · 'weekly' = per student over the last 7 days only.
+let SCD=null;  // {code, view, seen, scores | weekly+since, hl: what counted as new when the tab opened, total} or {code, err}
+const scoRows=a=>Object.entries(a||{}).filter(([,x])=>Array.isArray(x)&&x[1]>0).map(([k,[r,t]])=>({k,r,t,p:Math.round(r/t*100)})).sort((x,y)=>x.p-y.p||y.t-x.t);
+const scoTr=t=>TRACKS[t]?TRACKS[t].name:'Commercial';
+// "Weakest: Weather services 3/7. 5 of 9 flagged items are in Airspace & navigation: focus here."
+function scoDigest(areas,flags){const rows=scoRows(areas),weak=rows.filter(x=>x.p<PASS),an=k=>AREA[k]||k;let s='';
+  if(weak.length)s=`Weakest: ${weak.slice(0,2).map(x=>`${an(x.k)} ${x.r}/${x.t}`).join(', ')}.`;else if(rows.length)s=`Every area at ${PASS}% or better.`;
+  const fl=Object.entries(flags||{}).filter(([,n])=>n>0).sort((a,b)=>b[1]-a[1]),fn=fl.reduce((a,[,n])=>a+n,0);
+  if(fn===1)s+=` 1 flagged item, in ${an(fl[0][0])}.`;
+  else if(fn>1){const [k,n]=fl[0];
+    if(n===fn)s+=` All ${fn} flagged items are in ${an(k)}: focus here.`;
+    else if(n>=2&&n/fn>=.4&&n>fl[1][1])s+=` ${n} of ${fn} flagged items are in ${an(k)}: focus here.`;
+    else s+=` ${fn} flagged items, spread across ${fl.length} areas.`;}
+  else if(rows.length)s+=' No flagged items.';
+  return s.trim();}
+const scoAreas=a=>`<div class="tsc-ah">By area, weakest first</div><div class="tsc-ag">${scoRows(a).map(x=>`<div${x.p<PASS?' class="tsc-weak"':''}>${esc(AREA[x.k]||x.k)} ${x.r}/${x.t}</div>`).join('')}</div>`;
+function scoStu(list,name,hl){const s=list[0],fresh=s.created>hl,tr=list.filter(x=>x.track===s.track).slice(0,5).reverse(),old=list.slice(1);
+  return `<section class="card lc tsc-stu${fresh?' tsc-new':''}"><div class="qmeta"><span><b>${esc(name)}</b>${fresh?' · <b class="tsc-nb">New</b>':''}</span><span>${esc(scoWhen(s.taken))}</span></div>
+    <div class="tsc-top"><div class="tsc-pct ${s.pass?'pass':'fail'}">${s.pct}%</div><div>${esc(scoTr(s.track))} · ${s.right}/${s.n} · ${s.pass?'Pass':`Below ${PASS}%`} · ${tDur(s.sec)}</div></div>
+    ${scoAreas(s.areas)}<p class="tsc-dg">${esc(scoDigest(s.areas,s.flags))}</p>
+    ${tr.length>1?`<div class="sm">Trend${old.some(x=>x.track!==s.track)?` (${esc(scoTr(s.track))})`:''}: ${tr.map((x,i)=>i===tr.length-1?`<b>${x.pct}%</b>`:x.pct+'%').join(' · ')}</div>`:''}
+    ${old.length?`<details class="tsc-old"><summary>Earlier scores (${old.length})</summary>${old.slice(0,20).map(x=>`<div class="sm">${esc(scoWhen(x.taken))} · ${esc(scoTr(x.track))} · <b class="${x.pass?'pass':'fail'}">${x.pct}%</b> · ${x.right}/${x.n} · ${tDur(x.sec)}</div>`).join('')}</details>`:''}</section>`;}
+function scoWeek(w,name){const tk=Object.entries(w.tracks||{}).map(([t,n])=>`${n} ${scoTr(t)}`).join(', ');
+  return `<section class="card lc tsc-stu"><div class="qmeta"><span><b>${esc(name)}</b></span><span>last sent ${esc(scoWhen(w.last))}</span></div>
+    <div class="tsc-top"><div class="tsc-pct ${w.avg>=PASS?'pass':'fail'}">${w.avg}%</div><div>average · ${w.tests} test${w.tests===1?'':'s'} sent (${esc(tk)}) · ${w.pass} passed</div></div>
+    <p class="tsc-dg">${esc(scoDigest(w.areas,w.flags))}</p></section>`;}
+function paintScores(el,code){const d=HUBD[code],mine=SCD&&SCD.code===code?SCD:null,v=mine&&mine.view||d&&d.scores&&d.scores.view||'all',b=(k,l)=>`<button class="mode" data-act="scview" data-v="${k}" aria-pressed="${v===k}">${l}</button>`;
+  let h=`<section class="card lc"><div class="tsc-sh">How much you see</div><div class="modes seg2" role="group" aria-label="How much you see">${b('all','Every score')}${b('weekly','Weekly summary only')}</div>
+    <p class="mut sm">${v==='weekly'?'Each student’s last 7 days: tests sent, average and weakest areas. Single scores stay hidden.':'Every score a student sends, with areas weakest first and their recent trend.'} Students decide whether to send.</p><div class="mut sm" id="tscVm" role="status"></div></section>`;
+  if(!mine)h+='<section class="card lc"><p class="mut">Loading scores…</p></section>';
+  else if(mine.err)h+=`<section class="card lc"><p class="mut">${esc(mine.err)}</p><button class="btn primary big" data-act="scretry">Try again</button></section>`;
+  else{const names=Object.fromEntries((d?d.students:[]).map(s=>[s.sid,s.name])),nm=sid=>names[sid]||'A student';
+    if(mine.view==='weekly'){const W=mine.weekly,quiet=(d?d.students.length:0)-W.filter(w=>names[w.sid]).length;
+      h+=W.length?W.map(w=>scoWeek(w,nm(w.sid))).join(''):'<section class="card lc"><p class="mut">No scores sent in the last 7 days.</p></section>';
+      if(W.length&&quiet>0)h+=`<p class="mut sm tsc-foot">${quiet} student${quiet===1?'':'s'} sent nothing in the last 7 days.</p>`;}
+    else{const by=new Map();mine.scores.forEach(x=>{if(!by.has(x.sid))by.set(x.sid,[]);by.get(x.sid).push(x);});
+      h+=by.size?[...by.entries()].map(([sid,l])=>scoStu(l,nm(sid),mine.hl)).join(''):`<section class="card lc"><p class="mut">No scores yet. When a student sends a practice test score, it shows up here.</p></section>`;}}
+  el.innerHTML=h+'<p class="mut sm tsc-foot">You only see scores a student chose to send. Their answers and study history stay with them.</p>';}
+async function loadScores(code){const H=S.hubs[code];if(!H)return;
+  try{const d=await api(`/classes/${code}/scores`,{hub:H.key});if(!['all','weekly'].includes(d.view)||!Array.isArray(d.view==='all'?d.scores:d.weekly))throw qaErr(NETERR);
+    const hd=HUBD[code],keep=SCD&&SCD.code===code&&SCD.hl!=null&&SCD.view===d.view;SCD=Object.assign(d,{code,hl:keep?SCD.hl:d.seen||0,total:hd&&hd.scores?hd.scores.total:null});
+    const fresh=d.view==='all'?d.scores.filter(x=>x.created>(d.seen||0)).length:d.fresh;
+    if(fresh&&LV.v==='hub'&&LV.code===code&&LV.tab==='sc'){const top=d.view==='all'?Math.max(...d.scores.map(x=>x.created)):Date.now();
+      api(`/classes/${code}/scores/seen`,{method:'POST',hub:H.key,body:{t:top}}).catch(()=>{});if(hd&&hd.scores)hd.scores.fresh=0;}}
+  catch(e){SCD={code,err:qaMsg(e)};}
+  if(LV.v==='hub'&&LV.code===code&&LV.tab==='sc')paintHub(code);}
 function paintHub(code){const d=HUBD[code],el=$('hubBody');if(!el||!d)return;const names=Object.fromEntries(d.students.map(s=>[s.sid,s.name]));
   const wait=d.questions.filter(q=>!q.answered),done=d.questions.filter(q=>q.answered),show=LV.tab==='done'?done:wait;
-  const tb=$('hubTabs');if(tb&&!!d.owner!==!!$('tRep')){tb.className='modes '+(d.owner?'seg3':'seg2');tb.innerHTML=hubTabs(code);}
-  if(LV.tab==='rep'&&!d.owner)LV.tab='wait';
+  const tb=$('hubTabs');if(tb&&(!!d.owner!==!!$('tRep')||!!d.scores!==!!$('tSc'))){tb.className='modes '+hubSeg(code);tb.innerHTML=hubTabs(code);}
+  if(LV.tab==='rep'&&!d.owner||LV.tab==='sc'&&!d.scores)LV.tab='wait';if($('tSc'))$('tSc').textContent=scoTab(d);
   $('hubSub').textContent=`${d.students.length} student${d.students.length===1?'':'s'} · ${wait.length} waiting`;$('tWait').textContent=`Waiting (${wait.length})`;$('tDone').textContent=`Answered (${done.length})`;
   const sl=$('stuList');if(sl){const sm=$('hubStu').querySelector('summary');sm.textContent=`Students (${d.students.length})`;
-    sl.innerHTML=d.students.length?d.students.map(s=>`<div class="srm"><span>${esc(s.name)} <span class="mut sm">· joined ${ago(s.created)}</span></span><button class="linkb sm" data-act="rmstu" data-sid="${esc(s.sid)}" data-name="${esc(s.name)}">Remove</button></div>`).join('')+'<p class="mut sm">Removing a student deletes their name and every question they asked. Their device can no longer ask.</p>':'<p class="mut sm">No students yet.</p>';}
+    sl.innerHTML=d.students.length?d.students.map(s=>`<div class="srm"><span>${esc(s.name)} <span class="mut sm">· joined ${ago(s.created)}</span></span><button class="linkb sm" data-act="rmstu" data-sid="${esc(s.sid)}" data-name="${esc(s.name)}">Remove</button></div>`).join('')+'<p class="mut sm">Removing a student deletes their name, every question they asked and every score they sent. Their device can no longer ask.</p>':'<p class="mut sm">No students yet.</p>';}
   if(LV.tab==='rep'){paintReports(el);return;}
+  if(LV.tab==='sc'){paintScores(el,code);return;}
   const drafts={};el.querySelectorAll('textarea[data-id]').forEach(t=>drafts[t.dataset.id]={v:t.value,dr:t.dataset.dr==='1'});
   el.innerHTML=show.length?show.map(q=>{const who=esc(names[q.sid]||'A student'),d0=drafts[q.id],useDr=!!q.draft&&(!d0||(!d0.v&&!d0.dr)),val=useDr?q.draft:d0?d0.v:'',dr=useDr||!!(d0&&d0.dr); // a draft fills an untouched box; one the instructor cleared stays cleared
     return `<section class="card lc"><div class="qmeta"><span><b>${who}</b> · ${ago(q.created)}</span><span>${esc(topicName(q.topic))}</span></div><p class="qt">${esc(q.text)}</p>${practiceQ(q.qid,q.picked,who)}
     ${q.answered?`<div class="ans"><b>You:</b> ${esc(q.answer)}</div><div class="mut sm">Answered ${ago(q.answered)}</div>`:`<label class="fld">${q.draft?'Draft by Claude: edit, then send':'Your answer'}<textarea rows="${q.draft?5:3}" maxlength="2000" data-id="${esc(q.id)}" data-dr="${dr?1:0}" placeholder="Answer in your own words">${esc(val)}</textarea></label><button class="btn primary big" data-act="answer" data-id="${esc(q.id)}">Send answer</button><div class="mut sm" id="am-${esc(q.id)}"></div>`}</section>`;}).join('')
     :`<section class="card lc"><p class="mut">${LV.tab==='done'?'No answered questions yet.':d.students.length?'Nothing waiting. New questions show up here on their own.':'No students yet. Send them your invite link.'}</p></section>`;}
-async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await api(`/classes/${code}/hub`,{hub:H.key});if(!d.class||!Array.isArray(d.students)||!Array.isArray(d.questions))throw qaErr(NETERR);HUBD[code]=d;if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);}
+async function loadHub(code){const H=S.hubs[code];if(!H)return;try{const d=await api(`/classes/${code}/hub`,{hub:H.key});if(!d.class||!Array.isArray(d.students)||!Array.isArray(d.questions))throw qaErr(NETERR);HUBD[code]=d;if(H.name!==HUBD[code].class.name){H.name=HUBD[code].class.name;save();}if(LV.v==='hub'&&LV.code===code)paintHub(code);
+    if(d.scores&&LV.v==='hub'&&LV.code===code&&LV.tab==='sc'&&(d.scores.fresh||!SCD||SCD.code!==code||SCD.total!==d.scores.total||SCD.view!==d.scores.view))loadScores(code);}
   catch(e){const s=$('hubSub'),b=$('hubBody');if(!s||LV.v!=='hub'||LV.code!==code)return;
     if(HUBD[code]){s.innerHTML=esc(qaMsg(e))+' <button class="linkb sm" data-act="hubretry">Try again</button>';return;} // keep the questions already shown
     s.textContent='Not loaded';if(b)b.innerHTML=`<section class="card lc"><p class="mut">${esc(qaMsg(e))}</p><button class="btn primary big" data-act="hubretry">Try again</button></section>`;}}
@@ -1508,16 +1650,21 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
     S.push=null;save();PN.msg='Notifications are off for this device.';await pnPaint();})();
   if(a==='hubretry')return busy(async()=>{$('hubSub').textContent='Loading…';await loadHub(LV.code);})();
   if(a==='mineretry')return busy(async()=>{const el=$('myQs');if(el)el.outerHTML=myQsHTML();await loadMine();})();
-  if(a==='tab'){LV.tab=t.dataset.tab;document.querySelectorAll('#hubTabs .mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===LV.tab)));if(LV.tab==='rep'){REPS=null;loadReports(LV.code);}paintHub(LV.code);return;}
+  if(a==='tab'){LV.tab=t.dataset.tab;document.querySelectorAll('#hubTabs .mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===LV.tab)));if(LV.tab==='rep'){REPS=null;loadReports(LV.code);}if(LV.tab==='sc'){SCD=null;loadScores(LV.code);}paintHub(LV.code);return;}
   if(a==='repretry'){REPS=null;paintHub(LV.code);return loadReports(LV.code);}
+  if(a==='scretry'){SCD=null;paintHub(LV.code);return loadScores(LV.code);}
+  if(a==='scview'){const v=t.dataset.v,code=LV.code,d=HUBD[code];if(!d||!d.scores||d.scores.view===v&&SCD&&SCD.view===v)return;
+    return busy(async()=>{try{await api(`/classes/${code}/settings`,{method:'POST',hub:S.hubs[code].key,body:{scoreView:v}});d.scores.view=v;SCD=null;paintHub(code);await loadScores(code);
+      const f=document.querySelector(`#hubBody [data-act="scview"][data-v="${v}"]`);if(f)f.focus();}
+      catch(e){const m=$('tscVm');if(m)m.textContent=qaMsg(e);}})();}
   if(a==='repdone')return busy(async()=>{const id=t.dataset.id;try{await api(`/classes/${LV.code}/reports/${id}`,{method:'DELETE',hub:S.hubs[LV.code].key});if(REPS&&REPS.list)REPS.list=REPS.list.filter(r=>r.id!==id);paintHub(LV.code);}catch(e){const m=$('rm-'+id);if(m)m.textContent=qaMsg(e);}})();
   if(a==='openref'){mode='ref';RV={v:'card',id:t.dataset.id};renderAll();return;}
   if(a==='rmstu'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent=`Tap again to remove ${t.dataset.name} and their questions`;return;}
-    return busy(async()=>{try{await api(`/classes/${LV.code}/students/${t.dataset.sid}`,{method:'DELETE',hub:S.hubs[LV.code].key});await loadHub(LV.code);}catch(e){t.dataset.armed='';t.textContent='Remove';const sm=$('hubSub');if(sm)sm.textContent=qaMsg(e);}})();}
+    return busy(async()=>{try{await api(`/classes/${LV.code}/students/${t.dataset.sid}`,{method:'DELETE',hub:S.hubs[LV.code].key});await loadHub(LV.code);if(LV.tab==='sc')loadScores(LV.code);}catch(e){t.dataset.armed='';t.textContent='Remove';const sm=$('hubSub');if(sm)sm.textContent=qaMsg(e);}})();}
   if(a==='leavedel'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave and delete every question you asked';return;}
     return busy(async()=>{const m=$('ldMsg');try{await api(`/classes/${S.cls.code}/students/me`,{method:'DELETE',stu:S.cls});}
       catch(e){if(!(e.qa&&e.message==='Not in this class')){t.dataset.armed='';t.textContent='Leave this class and delete my questions';if(m)m.textContent=' '+qaMsg(e);return;}} // already removed on the server: just forget it here
-      pnLeave(S.cls);S.cls=null;MYQ=null;save();renderLearn();})();}
+      pnLeave(S.cls);S.cls=null;S.sendScores=null;MYQ=null;save();renderLearn();})();}
   if(a==='mvcopy'){const C=S.cls;if(!C)return;const v=mvCode(C),sh=$('mvShow'),m=$('mvMsg');m.textContent='';sh.value=v;$('mvShowL').hidden=false;
     const ok=()=>{m.textContent='Copied. Now open the Home Screen app (or the other device) and paste it on the Learn page.';},no=()=>{sh.select();m.textContent='Copy the code above (press and hold it, then Copy).';};
     if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,()=>fallbackCopy(v,ok));else fallbackCopy(v,ok);setTimeout(()=>{if(!m.textContent)no();},800);return;}
@@ -1527,7 +1674,11 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
       S.cls={code:c.code,name:d.class.name,instructor:d.class.instructor,verified:d.class.verified?1:0,sid:c.sid,key:c.key,me:d.name};save();MYQ=null;const y=window.scrollY;renderLearn();window.scrollTo(0,y);}
     catch(e){m.textContent=qaMsg(e)===NETERR?NETERR:'That sign-in code isn’t recognised. It stops working if you left the class or your instructor removed you. Ask your instructor for the class code and join again.';}})();
   if(a==='copy'){const txt=t.dataset.text,old=t.textContent,ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent=old,1500);};if(navigator.clipboard)navigator.clipboard.writeText(txt).then(ok,()=>fallbackCopy(txt,ok));else fallbackCopy(txt,ok);return;}
-  if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}pnLeave(S.cls);S.cls=null;MYQ=null;save();renderLearn();}}
+  if(a==='leave'){if(t.dataset.armed!=='1'){t.dataset.armed='1';t.textContent='Tap again to leave';return;}
+    return busy(async()=>{const C=S.cls,m=$('ldMsg'),sent=Object.keys(scoSent()).some(k=>k.startsWith(C.code+':'));
+      try{await api(`/classes/${C.code}/scores/mine`,{method:'DELETE',stu:C});} // leaving deletes the practice-test scores you sent
+      catch(e){if(sent&&!(e.qa&&e.message==='Not in this class')){t.dataset.armed='';t.textContent='Leave class';if(m)m.textContent=' Could not delete the scores you sent, so you are still in the class. '+qaMsg(e);return;}}
+      pnLeave(C);S.cls=null;S.sendScores=null;MYQ=null;save();renderLearn();})();}}
 
 // ---------- boot ----------
 readColors();
@@ -1567,7 +1718,7 @@ function progCount(d){d=d||{};const n=o=>o?Object.keys(o).length:0,t=(d.hist||[]
 // A side that changed something since B wins it; when both changed the same thing, the newer answer wins, flags and test scores are kept from both.
 function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
   const pick={study:(id,l,r)=>((L.at||{})[id]||0)>=((R.at||{})[id]||0)?l:r,at:(id,l,r)=>Math.max(l,r),
-    review:(id,l,r)=>(l.last??0)>=(r.last??0)?l:r,lessons:(id,l,r)=>Math.max(l,r),flags:(id,l,r)=>l||r,grade:(id,l)=>l};
+    review:(id,l,r)=>(l.last??0)>=(r.last??0)?l:r,lessons:(id,l,r)=>Math.max(l,r),flags:(id,l,r)=>l||r,grade:(id,l)=>l,scSent:(id,l,r)=>Math.min(l,r)};
   for(const k of Object.keys(pick)){const b=(B&&B[k])||{},l=L[k]||{},r=R[k]||{},o={};
     for(const id of new Set([...Object.keys(b),...Object.keys(l),...Object.keys(r)])){const lv=l[id],rv=r[id];let v;
       if(!B)v=lv===undefined?rv:rv===undefined?lv:pick[k](id,lv,rv);
@@ -1577,7 +1728,8 @@ function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
   const lh=L.hist||[],rh=R.hist||[],bh=B&&B.hist||[];
   if(B&&jeq(lh,bh))out.hist=rh;else if(B&&jeq(rh,bh))out.hist=lh;
   else{const m=new Map();[...rh,...lh].forEach(h=>h&&m.set(h.end+':'+h.pct,h));out.hist=[...m.values()].sort((a,b)=>a.end-b.end).slice(-50);}
-  for(const k of ['test','exam','spos','cls','track']){const lv=L[k],rv=R[k];out[k]=!B?(lv==null?rv:lv):!jeq(lv,B[k])?lv:rv;if(out[k]===undefined)delete out[k];}
+  if(L.newsSeen||R.newsSeen)out.newsSeen=[L.newsSeen,R.newsSeen].filter(x=>typeof x==='string').sort().pop();  // What's new seen on any device counts everywhere
+  for(const k of ['test','exam','spos','cls','track','sendScores']){const lv=L[k],rv=R[k];out[k]=!B?(lv==null?rv:lv):!jeq(lv,B[k])?lv:rv;if(out[k]===undefined)delete out[k];}
   return out;}
 
 // put progress from the account onto this device (hub keys and push stay as they are)
@@ -1636,7 +1788,7 @@ function acctPaint(){if(AV.v==='acct'&&!ACCT)AV.v='start';const d=$('acctD'),c=A
     if(AV.cfgErr&&!c)h+=`<p class="mut sm">${esc(AV.cfgErr)}</p>`;
     if(c&&c.email)h+=`<div class="acctor">${pkOK()?'or use your email':'Use your email'}</div><label class="fld">Your email<input type="email" id="acEmail" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" value="${esc(AV.email||'')}"></label><button class="btn outline big" data-ac="emstart"${busy}>Email me a code</button>`;
     if(c&&c.google)h+=`<div class="acctor">or</div><a class="btn big acctg" id="acG" href="#" target="_blank" rel="noopener" data-ac="gstart">${ICON.google}Continue with Google</a>`;
-    h+=`<p class="mut sm">No password. We keep only your progress and a scrambled form of your email (or your Google account number), never the address itself. Your instructor never sees your study progress. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></p><div class="infoa"><button class="btn" data-ac="close">Not now, keep studying</button></div>`;}
+    h+=`<p class="mut sm">No password. We keep only your progress and a scrambled form of your email (or your Google account number), never the address itself. Your instructor sees a practice test score only if you send it. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></p><div class="infoa"><button class="btn" data-ac="close">Not now, keep studying</button></div>`;}
   else if(AV.v==='code'){
     h=`<button class="lnk" data-ac="back">← Back</button><h2 id="acctH">Check your email</h2><p>We sent a 6-digit code to <b>${esc(AV.email)}</b>. It works for 10 minutes.</p>${m}
       <label class="fld">Code<input id="acCode" inputmode="numeric" autocomplete="one-time-code" maxlength="7" class="acctcode"></label><p class="mut sm">On iPhone the code may show above the keyboard. Tap it to fill it in.</p>
@@ -1652,7 +1804,7 @@ function acctPaint(){if(AV.v==='acct'&&!ACCT)AV.v='start';const d=$('acctD'),c=A
   else if(AV.v==='acct'&&ACCT){const me=AV.me||{},st=SY.busy?'Saving…':SY.err?esc(SY.err):SY.last?'Progress saved · '+ago(SY.last):'Progress saved';
     h=`<h2 id="acctH">Your account</h2>${m}<div class="acctbox"><div class="mut sm">Signed in with</div><div class="acctwho">${acctWho()}</div><div class="acctok${SY.err?' bad':''}">${SY.err?ICON.x:ICON.check}${st}</div>
       <p class="sm">Sign in the same way on any phone, tablet or computer, or in the Home Screen app, and pick up right here.</p></div>
-      ${S.cls?`<div class="acctbox"><div class="mut sm">Class</div><div>${esc(S.cls.name)}</div><p class="mut sm">Your class comes with you when you sign in. Your instructor sees your questions, never your study progress.</p></div>`:''}
+      ${S.cls?`<div class="acctbox"><div class="mut sm">Class</div><div>${esc(S.cls.name)}</div><p class="mut sm">Your class comes with you when you sign in. Your instructor sees your questions, and a practice test score only when you send it (or turn on Always send). Never your answers or study history.</p></div>`:''}
       ${pkOK()&&ACCT.how!=='passkey'&&me.passkeys===0?`<div class="acctbox"><b>Sign in faster next time</b><p class="sm">Add Face ID to this account. Next time it's one tap, no email or Google.</p><button class="btn big" data-ac="pkadd"${busy}>${ICON.key}Add Face ID (passkey)</button></div>`:''}
       <button class="btn big" data-ac="signout"${busy}>Sign out on this device</button><p class="mut sm">Signing out keeps a copy of your progress on this device. Your account keeps it too.</p>
       <button class="lnk acctdel" data-ac="del">${AV.delArmed?'Tap again to delete your account and the progress saved in it':'Delete my account and saved progress'}</button>
@@ -1841,8 +1993,101 @@ $('ref').addEventListener('click',e=>{const t=e.target.closest('[data-ref],[data
   if(t.dataset.print){printRef(t.dataset.print);return;}
   RV=t.dataset.ref==='home'?{v:'home'}:{v:'card',id:t.dataset.ref};renderRef();if(RV.v==='home')scrollTo(0,0);syncURL();});
 $('mRef').onclick=()=>{mode='ref';RV={v:'home'};renderAll();};
+// ---------- what's new (NEWS, near the top) ----------
+// Shown once per load at most, only after the first-open test picker is done, never over another dialog and never on #print= routes.
+// A dialog that is open when the check runs defers it: the next dialog close checks again.
+let NEWSCHK=false;
+const newsDay=v=>new Date(v+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+function newsOpen(since){const d=$('newsD'),auto=since!==undefined,E=auto?NEWS.filter(e=>!since||e.v>since).slice(0,2):NEWS.slice(0,3);if(!E.length)return;
+  const ul=e=>`<ul>${e.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+  $('newsB').innerHTML=E.length===1?`<p class="nwsday">${newsDay(E[0].v)}</p>${ul(E[0])}`:E.map(e=>`<h3>${newsDay(e.v)}</h3>${ul(e)}`).join('');
+  if(!d.open)d.showModal();d.scrollTop=0;$('newsH').focus({preventScroll:true});}
+// first visit ever (no progress, nothing seen): mark the newest entry seen without showing it
+function newsBoot(){if(location.hash.startsWith('#print=')||!NEWS.length)return;if(!S.newsSeen&&progEmpty(saveData())){S.newsSeen=NEWS[0].v;save(true);}newsMaybe();}
+function newsMaybe(){if(NEWSCHK||!NEWS.length||!BANK.length||location.hash.startsWith('#print='))return;
+  if(!S.track||document.querySelector('dialog[open]'))return;
+  if(mode==='results'||(mode==='learn'&&LV.v==='hub'))return;  // never over a results card or the instructor hub; it waits for the next open
+  NEWSCHK=true;const top=NEWS[0].v,was=S.newsSeen||'';if(was>=top)return;
+  S.newsSeen=top;save();newsOpen(was);}
+document.addEventListener('close',e=>{if(e.target.id!=='newsD')setTimeout(newsMaybe,60);},true);  // close does not bubble: listen in the capture phase
+document.addEventListener('click',e=>{if(e.target.closest('[data-news]')){newsOpen();return;}
+  const d=$('newsD');if(e.target.closest('[data-news-close]')||e.target===d)d.close();});
+
+// ---------- Help & FAQ (#help) ----------
+// Answers describe what the app does; when a feature changes, change its answer here too.
+function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ /g,'&nbsp;');
+  return [
+  ['Getting started',[
+   ['What is Balloon Written Prep?',`<p>A free study app for the FAA knowledge test (the “written”) for a balloon pilot certificate, Private or Commercial. The tabs at the top hold four parts:</p>
+    <ul><li><b>Study</b>: every question, one at a time. Pick an answer and you see right away if it’s right, with an explanation and its FAA reference.</li>
+    <li><b>Practice test</b>: a timed test the same size as the real one.</li>
+    <li><b>Learn</b>: a short lesson for each topic, a review list of questions you missed, and a study plan.</li>
+    <li><b>Reference</b>: pocket cards to read or print.</li></ul>
+    <p>Density altitude questions have the chart right beside them, with tools to zoom, draw a line and read it.</p>`],
+   ['Is it free?',`<p>Yes. No ads, no subscription, and you don’t need an account.</p>${TIP_URL?'<p>If it helps you, there’s a link at the bottom of the page to leave a tip. That’s completely optional.</p>':''}`],
+   ['Private or Commercial: which do I pick, and how do I switch?',`<p>Pick the test you’re taking. Practice tests match its size and time:</p>
+    <ul><li><b>Private</b> (FAA test ${P.code}): ${P.n} questions in ${dur(P)}.</li><li><b>Commercial</b> (FAA test ${C.code}): ${C.n} questions in ${dur(C)}.</li></ul>
+    <p>Both pass at ${PASS}%. Most questions are on both tests. Questions that are only on the Commercial test are hidden while you study for Private, and Commercial adds a Teaching section in Learn.</p>
+    <p>To switch, tap the test name at the top of the screen. Your answers, flags and review schedule stay, and each test keeps its own scores.</p><button class="lnk" data-help-go="trk">Change my test</button>`],
+   ['What is the Teaching section?',`<p>It’s part of the Commercial track. A commercial balloon pilot can give flight and ground training, so the FAA's commercial knowledge areas include training procedures (14 CFR 61.125(b)), and the commercial checkride opens with Fundamentals of Instructing. The Teaching section in Learn has lessons on the learning process and on teaching, its questions are in Study, and about 8 of the 100 on a Commercial practice test come from it.</p>`],
+   ['Should I add it to my Home Screen?',`<p>On an iPhone or iPad, yes. In Safari, tap Share, then <b>Add to Home Screen</b>, and open it from the new icon. On Android, open the browser menu and choose Add to Home screen or Install.</p>
+    <ul><li>It opens like an app, without the browser’s address bar.</li>
+    <li>Safari can clear a site’s saved data after a week of using Safari without opening that site. The Home Screen app doesn’t have that limit, so your progress is safer there.</li>
+    <li>On iPhone it’s the only way to get a notification when your instructor answers (iOS 16.4 or newer).</li>
+    <li>Once it has loaded, you can study without a connection.</li></ul>
+    <p>The Home Screen app keeps its <b>own copy</b> of your progress, separate from Safari. Sign in, or use Export and Import, to bring it over.</p>`],
+   ['How do I take a practice test?',`<p>Tap <b>Practice test</b>, then <b>Start the test</b>. You get ${P.n} questions for Private or ${C.n} for Commercial, drawn from every area (test-style questions only), with the real test’s time.</p>
+    <ul><li>No answers are shown until you finish.</li>
+    <li>Tap <b>Flag</b> to mark a question to come back to. Tap the question counter at the top (like “12 of ${C.n}”) to see every question and jump around.</li>
+    <li>The clock runs only while the test is on screen. It pauses when you leave the app, and your test is saved as you go.</li>
+    <li>Tap <b>Finish test</b> when you’re done. You see your score by area, can review what you missed, and can build a study plan from it. Every finished test is added to your score history.</li></ul>
+    <button class="lnk" data-help-go="test">Go to Practice test</button>`]]],
+  ['Your progress',[
+   ['Where is my progress saved?',`<p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. If you sign in, they’re also saved to your account.</p>
+    <p>Clearing your browser’s history and website data erases the copy on the device, so sign in, or export a copy now and then.</p><button class="lnk" data-info="save">How saving works</button>`],
+   ['Do I need to sign in?',`<p>No. Everything works without an account. Signing in is optional: tap <b>Sign in</b> at the top and use Face ID or your Google account. There’s no password.</p>
+    <p>Once you’re signed in, your progress is saved to your account and shows up on every phone, tablet or computer where you sign in, the Home Screen app included. The button at the top then says <b>Synced</b>. Tap it to sign out or delete your account. Signing out keeps the copy on this device.</p><button class="lnk" data-acct>Sign in</button>`],
+   ['I got a new phone or computer. How do I move my progress?',`<ul><li><b>If you’re signed in:</b> sign in the same way on the new device and your progress appears. If that device already has some progress of its own, the app asks before it combines them.</li>
+    <li><b>If you’re not signed in:</b> use Export and Import (next question).</li></ul>`],
+   ['How do Export and Import work?',`<ol><li>Where you’ve been studying, tap <b>Export my progress</b> at the bottom of the page and save the file (Files or iCloud Drive is fine).</li>
+    <li>On the other device, or in the Home Screen app, tap <b>Import progress</b> and pick that file.</li></ol>
+    <p>The app tells you what’s in the file and asks before it replaces anything. Importing replaces the progress on that device, and brings your class along if you joined one.</p><button class="lnk" data-info-go="pgx">Go to Export and Import</button>`],
+   ['How do I start over?',`<ul><li><b>One set in Study:</b> once you’ve answered questions in a set, tap <b>Clear my answers in this set</b> under the question. Flags, tests and your review list stay.</li>
+    <li><b>Everything:</b> tap <b>Reset my progress</b> at the very bottom of the page, then tap again to confirm. That erases your answers, flags, practice tests and review schedule on this device, and in your account if you’re signed in. Your test choice and your class stay.</li></ul>
+    <p>Export a copy first if you might want it back.</p>`]]],
+  ['Your instructor',[
+   ['How do I join my instructor’s class?',`<p>Open the invite link your instructor sent you, type your name, and tap <b>Join class</b>. Or go to <b>Learn</b>, find <b>Your questions</b>, and type the class code and your name there.</p>
+    <p>Your class comes with you when you sign in or use Export and Import. To leave, go to Your questions on the Learn page and tap <b>Leave class</b> (or leave and delete your questions). Leaving deletes any practice-test scores you sent.</p><button class="lnk" data-help-go="learn">Go to Learn</button>`],
+   ['How do I ask my instructor a question?',`<p>After you answer a practice question, tap <b>Ask … about this</b> under the explanation. Every lesson also has an ask box at the bottom. Type your question in your own words and send it.</p>
+    <p>The answer shows up under <b>Your questions</b> on the Learn page.</p>`],
+   ['Can I get a notification when my instructor answers?',`<p>Yes. After you send a question, or under Your questions on the Learn page, tap <b>Notify me when … answers</b> and allow notifications. Each device is set up on its own.</p>
+    <p>On an iPhone or iPad this works only in the Home Screen app, on iOS 16.4 or newer. The Home Screen app keeps its own copy, so bring your class into it first: sign in there, or use the sign-in code under Your questions (<b>Move to the Home Screen app or another device</b>).</p>`],
+   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send to my instructor</b> button. It sends that test’s score, time, results by area and how many questions you flagged in each area (never your answers or the questions themselves). Nothing is sent unless you tap it, or tick <b>Always send my practice test scores</b> to send each finished test from then on. Leaving the class deletes the scores you sent.</p>`],
+   ['What can my instructor see?',`<p>Only what you send:</p>
+    <ul><li>Your name, as you typed it when you joined.</li>
+    <li>The questions you ask. When you ask about a practice question, they also see that question and the answer you picked, so they can help.</li>
+    <li>A practice-test score, only if you send it (or turn on Always send): the score, time, results by area and how many questions you flagged in each area.</li></ul>
+    <p>Nothing else. Your instructor doesn’t see your study answers, which questions you flagged, your review list or any score you didn’t send.</p>`]]],
+  ['The questions',[
+   ['Where do the questions come from? Are they real FAA test questions?',`<p>No, they aren’t real FAA test questions, and they aren’t copied from other study apps or books. ${ALLQ.length?'All '+ALLQ.length:'They all'} were written for this app from free FAA sources: the Balloon Flying Handbook, the Pilot’s Handbook of Aeronautical Knowledge, the Aeronautical Information Manual, the Aviation Instructor’s Handbook and the regulations (such as 14 CFR parts 61 and 91). Each one was then fact-checked against those sources separately, and every explanation names its reference.</p>
+    <p>They cover the same knowledge as the real test, so they’re good practice, but they’re not a preview of the exact questions you’ll see.</p>`],
+   ['What do “Bonus · conceptual” and “From the field” mean?',`<p>Most questions are <b>test-style</b>, like the real test. Two other kinds are marked:</p>
+    <ul><li><b>Bonus · conceptual</b>: deeper physics or math. Good for understanding, unlikely on the test.</li><li><b>From the field</b>: airmanship and custom from real flying, not regulation.</li></ul>
+    <p>Only test-style questions go into practice tests and count toward your mastery levels. Study shows all three, and you can filter by kind.</p>`],
+   ['I think a question is wrong. How do I tell you?',`<p>Under any answered question, lesson or reference card, tap <b>Something wrong with this …? Tell us</b>, pick what’s wrong, add a note if you like, and tap Send. Reports don’t carry your name. They go to the app’s author, not to your instructor, and every one gets read.</p>`]]],
+  ['Privacy',[
+   ['What do you keep about me?',`<p>Without an account, your studying stays on your device. Only what you choose to send leaves it: questions to your instructor, a practice-test score you send, and problem reports.</p>
+    <p>If you sign in, we keep your study progress and how you sign in, never your email address itself. There are no ads, trackers or analytics.</p><a class="lnk" href="privacy.html">Read the privacy page</a>`]]]];}
+function renderHelp(){const el=$('help');if(el.dataset.n==='1')return;if(ALLQ.length)el.dataset.n='1';  // built once (after the bank loads), so open answers stay open while the app re-renders
+  el.innerHTML=`<button class="back" data-help-back>${ICON.back}Back</button><div><div class="eyebrow">Balloon Written Prep</div><h2 class="lt big" id="hlpH" tabindex="-1">Help &amp; FAQ</h2><p class="mut" style="margin-top:6px">Short answers to common questions. Tap a question to open it.</p></div>
+${helpQs().map(([g,qs])=>`<section class="hlpg"><h3>${g}</h3>${qs.map(([q,a])=>`<details><summary>${q}</summary><div class="hlpa">${a}</div></details>`).join('')}</section>`).join('')}`;}
+function helpOpen(){mode='help';renderAll();scrollTo(0,0);$('hlpH').focus({preventScroll:true});}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-help]');if(!t)return;const d=t.closest('dialog');if(d&&d.open)d.close();helpOpen();});
+$('help').addEventListener('click',e=>{const t=e.target.closest('[data-help-back],[data-help-go]');if(!t)return;
+  if(t.dataset.helpBack!==undefined){const st=history.state||{};if(st.prev!==undefined&&normH(st.prev)!=='#help')history.back();else $('mStudy').click();return;}  // opened straight from a link: Back goes to Study
+  const g=t.dataset.helpGo;if(g==='trk')$('trkBtn').click();else if(g==='test')$('mTest').click();else if(g==='learn')goLearn('home');});
 // ---------- history: each view has its own hash, so phone Back steps back through the app and views are linkable ----------
-// #study · #test · #test/review · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
+// #help (Help & FAQ) · #study · #test · #test/review · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
 // Old links still work: #learn, #ref, #ref=<id>, #print=<id|all> (left untouched for tools/build-ref-pdfs.sh), #grade, #join=CODE, #hub=CODE.KEY (the key is saved, then dropped from the address bar).
 // Each history entry also carries the view it shows (mode, filter, position, list), so Back lands on the same question; a question id never goes in the hash.
 let routing=false,snap=null,viaBack=false;
@@ -1853,6 +2098,7 @@ function hashFor(){
   if(mode==='review')return '#test/review';
   if(mode==='test'||mode==='teststart'||mode==='results')return '#test';
   if(mode==='ref')return RV.v==='card'?'#ref='+RV.id:'#ref';
+  if(mode==='help')return '#help';
   const v=LV.v;
   if(v==='topic')return '#learn/'+encodeURIComponent(LV.t);
   if(v==='basics')return '#learn/'+encodeURIComponent(LV.t)+'/basics';
@@ -1884,7 +2130,7 @@ addEventListener('popstate',e=>{if(!BANK.length)return;const s=e.state;if(s&&s.m
 
 // tracks.json is optional: a missing or broken file means no Commercial-only questions (a quiet fetch, so it never holds a saved test or shows the load notice)
 const BOOT=Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('lessons/lessons.json'),getJ('lessons/map.json'),getJ('questions/kinds.json'),fetch('questions/tracks.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([sets,les,map,kinds,trks])=>{
-  if(les&&les.topics)LES=les;if(map)MAP=map;if(kinds)KIND=kinds;if(trks&&Array.isArray(trks.C))TRC=new Set(trks.C.filter(x=>typeof x==='string'));
+  if(les&&les.topics)LES=LESALL=les;if(map)MAP=map;if(kinds)KIND=kinds;if(trks&&Array.isArray(trks.C))TRC=new Set(trks.C.filter(x=>typeof x==='string'));
   const order=Object.fromEntries(AREAS.map(([k],i)=>[k,i]));
   ALLQ=[...sets.flat(),...BUILTIN].filter(q=>q&&q.id&&Array.isArray(q.choices)&&q.choices.length===3);
   ALLQ.sort((a,b)=>(order[a.area]??99)-(order[b.area]??99)||a.id.localeCompare(b.id));
@@ -1894,10 +2140,12 @@ const BOOT=Promise.all([Promise.all(FILES.map(f=>getJ(f).then(x=>x||[]))),getJ('
   // a reload keeps the entry's saved view (the hash it was saved with must still match); a fresh link routes by its hash
   if(st&&st.m&&st.h&&normH(st.h)===normH(hs))restoreView(st);else route(hs);
   routing=true;renderAll();routing=false;trkUI();if(!S.track&&!hs.startsWith('#print='))trkAsk();
+  newsBoot();
 });
 function route(hs){
   if(hs===''||hs==='#study'||hs==='#grade'){if(mode!=='study'){mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=0;}}
   else if(hs==='#learn')mode='learn';
+  else if(hs==='#help')mode='help';
   else if(hs==='#learn/plan'||hs==='#learn/newclass'){mode='learn';LV={v:hs.slice(7)};}
   else if(hs==='#learn/questions'){mode='learn';LV={v:'home'};PNGO=true;} // a tapped notification: Learn, scrolled to Your questions
   else if(hs.startsWith('#learn/')){const [t,b]=decodeURIComponent(hs.slice(7)).split('/');mode='learn';LV=b==='basics'?{v:'basics',t,at:0,alt:{}}:{v:'topic',t,checks:pickChecks(t)};}
@@ -1934,6 +2182,7 @@ function route(hs){
   <h3>Your sign-in code</h3>
   <p>If you joined a class, the sign-in code (Learn → Your questions) moves <b>only your class and your questions</b> to another device. It does not bring your study progress. Sign in, or use Export and Import, for that.</p>
   <p class="mut sm">Export a copy now and then as a backup. Clearing Safari's history and website data also wipes it.</p>
+  <p class="mut sm">More answers: <button class="lnk" data-help>Help &amp; FAQ</button></p>
   <div class="infoa"><button class="btn" data-info-go="pgx">Go to Export / Import</button><button class="btn primary" data-info-close>Got it</button></div>
 </dialog>
 </body>

@@ -1,0 +1,2016 @@
+[
+ {
+  "id": "FOI-001",
+  "area": "FOI",
+  "topic": "What learning is",
+  "stem": "The Aviation Instructor's Handbook gives several definitions of learning. Which idea runs through all of them?",
+  "choices": [
+   "The storing of facts the instructor presents, shown by recall.",
+   "A short-term rise in performance from repeating the same drill.",
+   "A change in the learner's behavior that results from experience."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3 defines learning as a change in the behavior of the learner as a result of experience; the behavior can be physical and overt, or intellectual or attitudinal, and other definitions call the change relatively permanent. Recalling facts is only the rote level, so storing facts is too narrow. A short-term rise from repeating the same drill is what the handbook says blocked practice produces, and it can fool both student and instructor into thinking a skill is learned.",
+  "ref": "FAA-H-8083-9B Ch. 3 (What is Learning?; Blocked Practice)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-002",
+  "area": "FOI",
+  "topic": "Laws of learning: readiness",
+  "stem": "A student skims the load chart lessons until the day she wants to fly a heavier friend; then she studies them hard. Which law of learning does this show?",
+  "choices": [
+   "Readiness.",
+   "Recency.",
+   "Intensity."
+  ],
+  "answer": 0,
+  "explanation": "Readiness: learners acquire new knowledge best when they see a clear reason for it, and tend to set aside things for which they see no immediate need (FAA-H-8083-9B Ch. 3, the trim example). The instructor keeps students ready by stating clear objectives and relating each new topic to them. Recency says the most recently learned is best remembered, and intensity says vivid, dramatic experiences teach more than routine ones; neither explains why her interest switched on.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Thorndike and the Laws of Learning: Readiness)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-003",
+  "area": "FOI",
+  "topic": "Laws of learning: primacy",
+  "stem": "Why does the handbook insist that a student handle the burner correctly from the very first lesson, rather than being corrected later?",
+  "choices": [
+   "What is learned first makes a strong, almost unshakable impression.",
+   "Skills learned first are the first ones forgotten without review.",
+   "The first lesson is when a student is least able to learn anything."
+  ],
+  "answer": 0,
+  "explanation": "The law of primacy: what is learned first often creates a strong, almost unshakable impression, so undoing and correcting it is harder than doing it right the first time, like the concrete foundation in FAA-H-8083-9B Ch. 3. The habit formation section repeats it: insist on correct technique from the outset. Early skills are not the first forgotten; forgetting comes from disuse and interference. Nothing in the handbook makes a first lesson a bad time to learn; it should be positive and lay the foundation for what follows.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Primacy; Habit Formation)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-004",
+  "area": "FOI",
+  "topic": "Laws of learning: effect",
+  "stem": "An instructor has a student try a high-wind landing on her very first flight. She feels inferior and frustrated. Which law of learning predicts that this weakens what she learns?",
+  "choices": [
+   "Exercise.",
+   "Readiness.",
+   "Effect."
+  ],
+  "answer": 2,
+  "explanation": "The law of effect: behaviors that lead to satisfying outcomes tend to be repeated, and those that lead to undesired outcomes are less likely to recur. The handbook's own example is teaching landings on the first flight, which leaves the learner feeling inferior and frustrated and weakens the intended connection, so the instructor should create situations that promote success. Exercise is about practice strengthening connections and disuse weakening them. Readiness is about the learner's needs and reason to learn being in place before the lesson.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Effect)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-005",
+  "area": "FOI",
+  "topic": "Laws of learning: recency",
+  "stem": "At the end of every ground lesson, an instructor restates the three most important points. Which law of learning is this summary built on?",
+  "choices": [
+   "Primacy.",
+   "Effect.",
+   "Recency."
+  ],
+  "answer": 2,
+  "explanation": "Recency: things most recently learned are best remembered, so instructors plan a summary that repeats, restates or reemphasizes the key points at the end of a ground lesson or postflight critique (FAA-H-8083-9B Ch. 3). Primacy is about the first exposure to a subject, not the end of a lesson. Effect is about satisfying or unpleasant outcomes, not timing.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Recency)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-006",
+  "area": "FOI",
+  "topic": "Laws of learning: intensity",
+  "stem": "Which way of teaching what to do about power lines on approach does the law of intensity favor?",
+  "choices": [
+   "Several readings of the handbook section, one a week, so the facts stick.",
+   "A realistic approach near power lines that the student must manage.",
+   "A list of the rules, taught first, before any other landing topic."
+  ],
+  "answer": 1,
+  "explanation": "Intensity: immediate, exciting or dramatic learning connected to a real situation teaches more than a routine or boring experience, and realistic scenarios make the most vivid impression (FAA-H-8083-9B Ch. 3). Readings spaced over weeks rely on exercise and spaced study, not intensity. Teaching a topic before everything else is primacy.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Intensity)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-007",
+  "area": "FOI",
+  "topic": "Teachable moments",
+  "stem": "On a training flight, the student sees another balloon land short of its field, close to a road. The instructor uses it right then to talk about choosing landing sites. What does the handbook call this kind of opportunity?",
+  "choices": [
+   "Insight, the grouping of perceptions.",
+   "A distraction, best saved for the debrief.",
+   "A teachable moment, part of the law of readiness."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3, under readiness: a teachable moment is a moment of educational opportunity when a person is particularly responsive to being taught, because the learner can clearly see how the information applies in the real world. The handbook's example is deer crossing the runway on final, used to stress readiness for a go-around, and it calls recognizing these moments one of the most important instructor skills. Insight is the grouping of perceptions into meaningful wholes, something the learner reaches, not the opportunity the instructor seizes. Saving it for the debrief wastes the moment.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Readiness: teachable moments)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-008",
+  "area": "FOI",
+  "topic": "Perception: element of threat",
+  "stem": "An instructor warns a nervous student that one more hard landing will mean a bad report. On the next approach she stares at the variometer and misses the wires ahead. What explains this?",
+  "choices": [
+   "Threat sharpens attention, so she should see more, not less.",
+   "Her goals and values made the wires seem less important.",
+   "Fear narrows the perceptual field to the thing causing the fear."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3: the element of threat does not promote learning; fear narrows the perceptual field, and a threatened learner limits attention to the threatening object or condition, like Beverly fixed on the altimeter in steep turns. The handbook adds that frightening a learner with threats of unsatisfactory reports may seem logical but is not effective psychologically. Goals and values color how experiences are interpreted, but they don't explain a sudden narrowing of attention under threat.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Factors that Affect Perception: Element of Threat)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-009",
+  "area": "FOI",
+  "topic": "Insight",
+  "stem": "A student finally sees how burner time, envelope temperature and rate of climb all affect one another, so a change in one tells her what the others will do. What does the handbook call this grouping of perceptions into a meaningful whole?",
+  "choices": [
+   "Transfer.",
+   "Insight.",
+   "Rote learning."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: insight is the grouping of perceptions into meaningful wholes, understanding how each factor affects all the others (the handbook's example ties rpm, power, airspeed and attitude together). Creating insight is one of the instructor's major responsibilities. Transfer is applying learning from one context to another. Rote is repeating something without understanding it, the opposite of what she has reached.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Insight)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-010",
+  "area": "FOI",
+  "topic": "Levels of learning: rote",
+  "stem": "A student recites every step of the high-wind landing procedure word for word but can't say why any step matters. At what level of learning is she?",
+  "choices": [
+   "Application.",
+   "Correlation.",
+   "Rote."
+  ],
+  "answer": 2,
+  "explanation": "The four practical levels in FAA-H-8083-9B Ch. 3 are rote, understanding, application and correlation. Rote is the ability to repeat what was taught without understanding or being able to apply it, as when Beverly repeats the turn procedure. Application means she can perform it consistently, and correlation means she can relate it to other blocks of learning; she has reached neither.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Cognitive Domain: practical learning levels)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-011",
+  "area": "FOI",
+  "topic": "Levels of learning: correlation",
+  "stem": "Which level of learning does the handbook say should be the objective of aviation instruction?",
+  "choices": [
+   "Understanding.",
+   "Correlation.",
+   "Application."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: correlation, where the learner can associate what was taught with other segments or blocks of learning, past or future, should be the objective of aviation instruction. Understanding is basic but may not let the student do the task. Application is a major level, and one at which the instructor is too often willing to stop; stopping there and moving on is what the handbook calls piecemeal instruction, which is usually inefficient.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Cognitive Domain: correlation)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-012",
+  "area": "FOI",
+  "topic": "Domains of learning",
+  "stem": "A student's willingness to cancel a flight when the winds are marginal belongs to which domain of learning?",
+  "choices": [
+   "Cognitive, because it involves knowing the wind limits.",
+   "Affective, because it involves attitudes and values.",
+   "Psychomotor, because it ends in a decision to act."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: Bloom's three domains are cognitive (thinking), affective (feeling) and psychomotor (doing). The affective domain covers feelings, values, motivation and attitudes, including the handbook's question, 'Does the learner display a positive attitude towards safety and risk mitigation?' Knowing the limits is cognitive, but the willingness to act on them is an attitude. The psychomotor domain is physical skill and coordination, not decisions.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Domains of Learning; Affective Domain)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-013",
+  "area": "FOI",
+  "topic": "Higher order thinking skills",
+  "stem": "Which levels of Bloom's cognitive domain make up the higher order thinking skills (HOTS)?",
+  "choices": [
+   "Knowledge, comprehension and application.",
+   "Analysis, synthesis and evaluation.",
+   "Comprehension, application and analysis."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: the taxonomy runs knowledge, comprehension, application, analysis, synthesis and evaluation, and HOTS are the last three, which aviation calls aeronautical decision-making. Knowledge, comprehension and application are generally gained from ground school, reading and briefings. The middle set straddles both groups. The handbook says the HOTS levels are best reached through scenario-based training.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Higher Order Thinking Skills; Cognitive Domain)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-014",
+  "area": "FOI",
+  "topic": "Characteristics of learning",
+  "stem": "'Learners do not soak up knowledge like a sponge absorbs water.' Which characteristic of learning does the handbook explain with this line?",
+  "choices": [
+   "Learning is purposeful and goal driven.",
+   "Learning is an active process.",
+   "Learning is multifaceted."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3 lists four characteristics: learning is purposeful, a result of experience, multifaceted, and an active process. The sponge line explains the active process: an instructor can't assume students remember something because they were present, or can apply it because they can quote it; they need to react and respond. Purposeful means each learner's own goals shape what is learned. Multifaceted means verbal, conceptual, emotional and other kinds of learning happen at once.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Characteristics of Learning)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-015",
+  "area": "FOI",
+  "topic": "Learning styles",
+  "stem": "What does the handbook recommend an instructor do about learning styles?",
+  "choices": [
+   "Test each student's style and teach only to it.",
+   "Teach visually, since most people are visual learners.",
+   "Address a variety of learning styles in every lesson."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3: everyone has a mixture of strengths and preferences, not one style to the exclusion of others, and learners use visual, auditory and kinesthetic channels depending on the task; 'the key to meeting individual needs is to ensure a variety of learning styles are addressed in every lesson.' The handbook notes that most people are statistically visual learners, but not as a reason to drop the other channels, and it says the scientific value of learning styles is disputed, so it never says to teach to one style only.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Learning Styles; Visual, Auditory, Kinesthetic Learners)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-016",
+  "area": "FOI",
+  "topic": "Stages of skill acquisition",
+  "stem": "A student now holds level flight with small, occasional burner adjustments while chatting with the instructor about the chase. Which stage of skill acquisition has she reached?",
+  "choices": [
+   "Cognitive.",
+   "Associative.",
+   "Automatic response."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3: skills pass through cognitive, associative and automatic response stages. In the automatic response stage performance is rapid and smooth, needs much less deliberate attention, allows conversation or other tasks, and adjustments are few and small. In the cognitive stage the skill takes all the learner's attention and distractions make it fall apart. In the associative stage the learner can assess and adjust but still needs deliberate attention.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Stages of Skill Acquisition)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-017",
+  "area": "FOI",
+  "topic": "Cognitive stage: what helps",
+  "stem": "What does the handbook say is the best way to prepare a student who is just beginning to learn a new skill?",
+  "choices": [
+   "A long, detailed explanation of every exception.",
+   "A clear, step-by-step example to follow.",
+   "Practice with distractions, to build attention skills."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Cognitive Stage): the best way to prepare the learner is a clear, step-by-step example, usually the instructor's demonstration, so the learner has a model to follow. The handbook warns that a long, detailed explanation is confusing before the learner begins performing; specific comments become useful once the skill is partly mastered. In this stage distractions make performance deteriorate or stop, so they come much later.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Cognitive Stage; Associative Stage)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-018",
+  "area": "FOI",
+  "topic": "Knowledge of results",
+  "stem": "When should a student be told about an error in a skill she is practicing?",
+  "choices": [
+   "As soon after the performance as possible.",
+   "At the end of the training stage, all at once.",
+   "Only after she has found the error herself."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Knowledge of Results): learners should be told as soon after the performance as possible and should not be allowed to practice mistakes, because unlearning a mistake is harder than learning correctly in the first place. It is as important to know when they are right as when they are wrong. Waiting for the end of a stage lets the error become habit. Some errors are easy to discover alone, but in complex skills a learner may know something is wrong without knowing how to fix it.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Knowledge of Results)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-019",
+  "area": "FOI",
+  "topic": "Learning plateaus",
+  "stem": "After weeks of fast progress, a student's approaches stop improving and she gets discouraged. What does the handbook recommend?",
+  "choices": [
+   "Add more approach practice on every flight until the plateau finally breaks.",
+   "Explain that plateaus are normal and temporary, and give the task a break.",
+   "Tell her she has probably reached her limit, and move on to the checkride."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: a plateau is normal after an initial period of rapid improvement, and an apparent lack of progress does not necessarily mean learning has ceased. The instructor should explain that the plateau is normal and temporary, can move the learner to a different place in the curriculum and give the task a break, or can explain the lesson and its purpose better. The handbook warns that over-practice can itself bring on a plateau, so piling on more of the same is the wrong cure. It does list reaching capability limits among the things a plateau may signify, but its advice is to explain and adjust, not to tell the learner she has hit her limit.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Learning Plateaus); Ch. 2 (Drops in Motivation)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-020",
+  "area": "FOI",
+  "topic": "Blocked and random practice",
+  "stem": "An instructor has a student fly ten approaches in a row to the same field. Compared with mixing approaches in among other tasks, what does the research in the handbook predict?",
+  "choices": [
+   "Poorer performance during practice, but better long-term learning.",
+   "Better performance during practice, but poorer long-term learning.",
+   "The same results, as long as the total practice time is equal."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3: blocked practice, the same drill over and over, gives better short-term performance but poorer long-term learning, and can fool both learner and instructor into thinking the skill is learned. Random practice mixes the skills, scores worse during the session but better on a test the next day, because the learner must retrieve steps from long-term memory and sees the similarities and differences. Equal total time does not make the two equal.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Types of Practice: Blocked Practice, Random Practice)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-021",
+  "area": "FOI",
+  "topic": "Short-term memory",
+  "stem": "About how long does information stay in short-term memory, and about how many chunks can it hold?",
+  "choices": [
+   "About 30 seconds and about seven chunks.",
+   "About 5 seconds and about three chunks.",
+   "About 5 minutes and about twelve chunks."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3: short-term memory stores information for roughly 30 seconds and usually holds about seven bits or chunks, like a seven-digit phone number. Properly coding the information takes 5 to 10 seconds, and an interrupted coding is easily lost, but that is the coding time, not the storage time. Rehearsal and chunking help, and meaningful coding is what moves information on to long-term memory.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Memory: Short-Term Memory)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-022",
+  "area": "FOI",
+  "topic": "Forgetting: interference",
+  "stem": "A pilot trained on one burner whose valves work one way, then learned a second burner that works differently, and now confuses the two. Which theory of forgetting fits best?",
+  "choices": [
+   "Fading.",
+   "Repression.",
+   "Interference."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3: interference theory says something is forgotten because another experience overshadowed it or learning of similar things intervened; similar material interferes more than dissimilar material, and material not well learned suffers most. Fading, or decay, blames long disuse. Repression pushes an uncomfortable memory out of reach without the person being aware of it.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Forgetting: Interference)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-023",
+  "area": "FOI",
+  "topic": "Retention: repetition",
+  "stem": "What does the handbook say about repetition and remembering?",
+  "choices": [
+   "Three or four repetitions may give the most effect; beyond that it falls off.",
+   "The more repetitions the better, with no point where the returns fall off.",
+   "Repetition alone guarantees retention, provided it is done every day."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Meaningful Repetition Aids Recall): each repetition gives the learner a chance at a clearer, more accurate perception, but mere repetition does not guarantee retention; practice provides an opportunity for learning but does not cause it. Some research indicates three or four repetitions provide the maximum effect, after which the rate of learning and probability of retention fall off rapidly.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Retention of Learning)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-024",
+  "area": "FOI",
+  "topic": "Frequency and recency of use",
+  "stem": "A student learned the pre-launch checklist last week and has used it twice. How does the handbook describe knowledge like this?",
+  "choices": [
+   "Safe for months, because it was learned so recently.",
+   "Recency without frequency, so it needs regular rehearsal.",
+   "Frequency without recency, so it needs a refresher."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 3 (How Usage Affects Memory): knowledge with recency only, recently used but not used much in the past, has only just been acquired and is particularly vulnerable to being forgotten; remembering it takes a program of regular rehearsal to build up its frequency. Frequency without recency describes old, well-used knowledge that has gone unused lately. Nothing about recent learning makes it safe for months.",
+  "ref": "FAA-H-8083-9B Ch. 3 (How Usage Affects Memory)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-025",
+  "area": "FOI",
+  "topic": "Spaced study and cramming",
+  "stem": "A student plans to cram the night before the knowledge test. What does the handbook tell instructors to explain?",
+  "choices": [
+   "Shorter study sessions at regular intervals far outperform cramming.",
+   "Cramming works well as long as a good night's sleep follows it.",
+   "Cramming is fine for memorizing facts, though not for skills."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Remembering during Training): learners should be made aware that shorter and regularly spaced study sessions produce memory results that far exceed those from cramming, and the chapter's summary of instructor actions includes explaining the benefits of regularly spaced study and the disadvantages of cramming. The handbook makes no exception for sleep or for factual material.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Remembering during Training; Summary of Instructor Actions)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-026",
+  "area": "FOI",
+  "topic": "Errors: slips",
+  "stem": "A pilot means to work one valve but, out of habit from her own balloon, works a different one on a borrowed balloon whose valves are laid out differently. What kind of error is this?",
+  "choices": [
+   "A slip, an error of action.",
+   "A mistake, an error of thought.",
+   "A violation, an error of attitude."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Kinds of Errors): a slip is planning to do one thing but inadvertently doing something else; slips are errors of action, often from confusing similar things or from doing a routine task a slightly different way, like Beverly turning for runway 30 out of habit. A mistake is planning the wrong thing and succeeding, an error of thought. The handbook's two kinds of error are slips and mistakes.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Errors: Slip, Mistake)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-027",
+  "area": "FOI",
+  "topic": "Errors: mistakes",
+  "stem": "A low-time pilot plans a valley landing expecting the wind to stay light, because her picture of the local weather is too simple. The wind picks up and the landing goes badly. What kind of error was it?",
+  "choices": [
+   "A mistake, from a gap in her understanding.",
+   "A slip, caused by the speed-accuracy tradeoff.",
+   "A slip, caused by an interruption mid-task."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3: a mistake is planning to do the wrong thing and doing it successfully; mistakes are errors of thought, often from gaps or misconceptions in understanding, and the handbook's own example is an overly simplistic understanding of weather leading inexperienced learners into unexpected situations. The speed-accuracy tradeoff and interruptions are sources of slips, which are errors of action.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Errors: Mistake)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-028",
+  "area": "FOI",
+  "topic": "Interruptions and checklists",
+  "stem": "Partway through the pre-launch checklist, a passenger asks a question. The pilot answers, then picks up the checklist two items further on. What does the handbook call the event, and what does it say about it?",
+  "choices": [
+   "A distraction, harmless as long as it is brief.",
+   "Fixation, a sign the checklist needs more practice.",
+   "An interruption, a significant source of errors."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 3 (Distractions and Interruptions): an interruption is an unexpected event for which the learner voluntarily suspends one task to complete a different one; interruptions are a significant source of errors, and the classic example is returning to a checklist at a later point and omitting steps. A distraction only momentarily diverts attention. Fixation is becoming absorbed in one task to the exclusion of others.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Distractions and Interruptions)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-029",
+  "area": "FOI",
+  "topic": "Fixation",
+  "stem": "A student stares at the altimeter and loses track of where the balloon is heading. What does the handbook say fixation like this often signals?",
+  "choices": [
+   "The task hasn't been practiced enough on its own.",
+   "The student is bored and needs a harder task.",
+   "The student has reached the habit level of the skill."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 3: fixation is becoming absorbed in one task to the exclusion of other tasks, and it is often a sign the task has not received enough practice in isolation, so it can't yet be done alongside others. Boredom leads to inattention, a different problem in which attention drifts. At the habit level a task takes little attention, the opposite of fixation.",
+  "ref": "FAA-H-8083-9B Ch. 3 (Fixation and Inattention)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-030",
+  "area": "FOI",
+  "topic": "Human needs",
+  "stem": "In Maslow's hierarchy as the handbook presents it, which need becomes active once physiological needs are met?",
+  "choices": [
+   "Security.",
+   "Belonging.",
+   "Esteem."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 2: Maslow's order is physiological, security, belonging, esteem, and self-actualization, with cognitive and aesthetic needs added later. Once the physiological needs are met, the need for security becomes active, and an instructor who stresses flight safety mitigates feelings of insecurity. Belonging and esteem come after security. The handbook also notes later research questioning how strict the order is.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Human Needs and Motivation)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-031",
+  "area": "FOI",
+  "topic": "Defense mechanisms: projection",
+  "stem": "After failing a practical test, a student says, 'I failed because the examiner was unfair.' Which defense mechanism is this?",
+  "choices": [
+   "Projection.",
+   "Rationalization.",
+   "Compensation."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 2: through projection a person relegates the blame for personal shortcomings to others; the handbook's own example is the learner who says he failed because he had a poor examiner. Rationalization is a sincere, plausible excuse for one's own action, such as not having had enough time. Compensation disguises a weakness by emphasizing strength in another area.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Projection)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-032",
+  "area": "FOI",
+  "topic": "Defense mechanisms: rationalization",
+  "stem": "A student does poorly on a quiz and sincerely believes it was because she had too little time to study, though she skipped the review session she was offered. Which defense mechanism fits?",
+  "choices": [
+   "Projection.",
+   "Rationalization.",
+   "Reaction formation."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 2: rationalization is a subconscious way of justifying otherwise unacceptable actions with plausible excuses the person sincerely believes, like the mechanic who blames lack of time and doesn't admit skipping the study group. Projection puts the blame on another person. Reaction formation is faking a belief opposite to the true one because the true belief causes anxiety.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Rationalization)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-033",
+  "area": "FOI",
+  "topic": "Defense mechanisms: displacement",
+  "stem": "Angry about a grade but afraid to show it to her instructor, a student snaps at her ground crew instead. Which defense mechanism is this?",
+  "choices": [
+   "Displacement.",
+   "Fantasy.",
+   "Denial."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 2: displacement is an unconscious shift of emotion from the original object to a more acceptable, less threatening substitute; the handbook's example is a learner angry with the instructor over a grade who directs the anger elsewhere. Fantasy is daydreaming about how things should be instead of acting. Denial is refusing to accept an external reality that is too threatening.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Defense Mechanisms: Displacement)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-034",
+  "area": "FOI",
+  "topic": "Anxiety",
+  "stem": "Which does the handbook call probably the most significant psychological factor affecting flight instruction, and how should it be handled?",
+  "choices": [
+   "Impatience; move the student ahead as fast as possible.",
+   "Apathy; remind the student of the cost of every error.",
+   "Anxiety; treat the student's fears as a normal reaction."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 2: anxiety is probably the most significant psychological factor affecting flight instruction, because flying is potentially threatening to those not used to it and the fear of falling is universal. An effective technique is to treat fears as a normal reaction rather than ignoring them, introduce maneuvers so students know what to expect, and stress the pleasures of flying rather than the unhappy consequences of faulty performance. Impatience and apathy are other learner reactions in the same chapter.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Learner Emotional Reactions: Anxiety)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-035",
+  "area": "FOI",
+  "topic": "Apathy from poor instruction",
+  "stem": "Which instructor behavior does the handbook name as one of the fastest ways to lose a student's confidence and attention?",
+  "choices": [
+   "Admitting a mistake to the student.",
+   "Opening with a short review of the last lesson.",
+   "Seeming to talk down to the student."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 2 (Apathy Due to Inadequate Instruction): creating the impression of talking down to the learner is one of the fastest ways for an instructor to lose learner confidence and attention, and once lost it is difficult to regain. Poor preparation and disorganized lessons also breed apathy. Admitting errors wins respect (Ch. 8), and a short review of earlier lessons is usually part of a well-planned lesson (Ch. 7).",
+  "ref": "FAA-H-8083-9B Ch. 2 (Apathy Due to Inadequate Instruction); Ch. 7; Ch. 8",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-036",
+  "area": "FOI",
+  "topic": "Abnormal reactions to stress",
+  "stem": "Which reaction to stress does the handbook list as a sign of an abnormal reaction that calls for careful evaluation by the instructor?",
+  "choices": [
+   "Rapid, exact actions within her training.",
+   "Heightened awareness of everything around her.",
+   "Inappropriate laughter or singing."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 2 lists abnormal reactions to stress: inappropriate reactions such as extreme over-cooperation, painstaking self-control, inappropriate laughter or singing, and very rapid changes in emotion; marked mood changes from lesson to lesson; and severe anger toward the instructor or others. Responding rapidly and exactly within the limits of one's training and being extremely sensitive to the surroundings are the handbook's description of normal reactions to stress.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Normal Reactions to Stress; Abnormal Reactions to Stress)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-037",
+  "area": "FOI",
+  "topic": "A seriously abnormal student",
+  "stem": "An instructor believes a student may have a disqualifying psychological problem. What does the handbook recommend first?",
+  "choices": [
+   "Endorse the student anyway, and let the examiner make the final decision.",
+   "Have another instructor who doesn't know the student fly an evaluation flight.",
+   "Keep on training, since an instructor isn't qualified to judge this at all."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 2: the instructor should arrange for another instructor, not acquainted with the learner, to conduct an evaluation flight, and the two should then confer. If both believe a serious deficiency may exist, solo endorsements and practical test recommendations should be withheld; the handbook calls that endorsement decision the instructor's primary legal responsibility, so passing the problem to an examiner is wrong. It also says an instructor who believes a learner may have a serious abnormality has a responsibility to stop instructing that learner.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Flight Instructor Actions Regarding Seriously Abnormal Learners)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-038",
+  "area": "FOI",
+  "topic": "Fatigue and lesson length",
+  "stem": "What does the handbook call the primary consideration in setting the length and frequency of flight lessons?",
+  "choices": [
+   "Fatigue.",
+   "Cost.",
+   "The syllabus schedule."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 2: fatigue is the primary consideration in determining the length and frequency of flight instruction periods, and instruction should continue only as long as the learner is alert, receptive and performing at a level consistent with experience. Complex operations tend to bring on fatigue faster than simple ones, regardless of physical effort. Cost and the syllabus matter, but the handbook names fatigue.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Fatigue)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-039",
+  "area": "FOI",
+  "topic": "Adult learners",
+  "stem": "Which statement matches the handbook's description of adult learners?",
+  "choices": [
+   "They learn as a means to an end and want to apply it right away.",
+   "They learn best when the instructor makes every decision for them.",
+   "They prefer to store knowledge now and apply it years later."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 2 (Teaching the Adult Learner): adults seek out learning because they have a use for it, so learning is a means to an end; they are relevancy-oriented, moving from postponed application to immediate application, and they are autonomous and self-directed. Instructors should refrain from spoon-feeding and recognize the adult's need to control pace. Postponed application is exactly what the handbook says adults move away from.",
+  "ref": "FAA-H-8083-9B Ch. 2 (Teaching the Adult Learner)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-040",
+  "area": "FOI",
+  "topic": "Elements of communication",
+  "stem": "The handbook says communication has three elements: source, symbols and receiver. How is its effectiveness measured?",
+  "choices": [
+   "By how close the idea received is to the idea sent.",
+   "By how clearly and confidently the instructor speaks.",
+   "By how much information is sent in the time available."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 4: communication takes place when one person transmits ideas to another, and its effectiveness is measured by the similarity between the idea transmitted and the idea received. Communication succeeds only in relation to the receiver's reaction. Confidence matters for a source, and the amount of information sent is not the measure.",
+  "ref": "FAA-H-8083-9B Ch. 4 (Basic Elements of Communication)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-041",
+  "area": "FOI",
+  "topic": "Barriers: lack of common experience",
+  "stem": "What does the handbook call probably the greatest single barrier to effective communication?",
+  "choices": [
+   "Noise and vibration in the aircraft.",
+   "Overuse of abstract words.",
+   "Lack of common experience."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 4 lists four barriers: lack of common experience, confusion between the symbol and the symbolized object, overuse of abstractions, and external factors. Lack of common experience is probably the greatest single barrier, because words don't carry meaning unless the learner has some experience with what they refer to. Noise is an external, environmental factor, and abstractions are a separate barrier.",
+  "ref": "FAA-H-8083-9B Ch. 4 (Barriers to Effective Communication)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-042",
+  "area": "FOI",
+  "topic": "Barriers: abstractions",
+  "stem": "On approach, the balloon is coming down too fast toward the field, and the instructor tells the student to 'do something about the descent.' What does the handbook suggest instead?",
+  "choices": [
+   "Explain the general principle of energy management first.",
+   "Say nothing, so the student works it out alone.",
+   "Name the specific action, such as a burn to slow the descent."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 4 (Overuse of Abstractions): abstract words don't call up the same specific picture in every mind; the handbook's example is telling a learner to 'take appropriate measures' on a bad approach when 'conduct a go-around' has one clear meaning. Whenever possible, reduce the level of abstraction with concrete, specific terms. A general principle is more abstract still, and silence during a fast descent is not the handbook's advice.",
+  "ref": "FAA-H-8083-9B Ch. 4 (Overuse of Abstractions)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-043",
+  "area": "FOI",
+  "topic": "Negative feedback",
+  "stem": "A student's knots on the crown line aren't good enough. Following the handbook, how should the instructor tell her?",
+  "choices": [
+   "In private, describing the work as not satisfactory.",
+   "In front of the crew, so everyone learns from it.",
+   "As a comment on her carelessness, to stress how serious it is."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 4: to avoid embarrassing a learner, use negative feedback only in private, delivered as a description of actual performance in a nonjudgmental manner. The handbook's example: it is appropriate to tell a maintenance learner that a safety wire installation is not satisfactory, but calling the work careless could harm the learner's feeling of self-worth.",
+  "ref": "FAA-H-8083-9B Ch. 4 (Symbols: feedback); Ch. 6 (Thoughtful)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-044",
+  "area": "FOI",
+  "topic": "Open and closed questions",
+  "stem": "Which question best fits the handbook's advice for checking a student's understanding?",
+  "choices": [
+   "'Do you understand how the pilot light works?'",
+   "'Why does the balloon climb when you heat the air?'",
+   "'Is the parachute valve at the top of the envelope?'"
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 4 and Ch. 6: instructors should ask focused, open-ended questions, which typically begin with why or how and draw full answers; closed-ended questions that can be answered yes or no tend to check only the rote level. 'Do you understand?' is listed among the questions to avoid. The parachute question is a closed fact question.",
+  "ref": "FAA-H-8083-9B Ch. 4 (Questioning); Ch. 6 (Types of Questions to Avoid)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-045",
+  "area": "FOI",
+  "topic": "The teaching process",
+  "stem": "What are the four steps of the teaching process in the handbook?",
+  "choices": [
+   "Explanation, demonstration, performance and evaluation.",
+   "Preparation, presentation, application and assessment.",
+   "Introduction, development, conclusion and review."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 5: the teaching process consists of preparation, presentation, application and assessment, and the overall sequence stays the same whatever delivery method is used. Explanation, demonstration, performance with supervision and evaluation are the phases of the demonstration-performance method. Introduction, development and conclusion are how a single lesson is organized.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Process)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-046",
+  "area": "FOI",
+  "topic": "Lesson introduction",
+  "stem": "What three elements make up a lesson introduction?",
+  "choices": [
+   "Attention, motivation and overview.",
+   "Objective, content and completion standards.",
+   "Review, new material and summary."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 5: the introduction is made up of attention (focus everyone on the subject), motivation (specific reasons the lesson matters, which ensures readiness) and an overview (a road map of what will be covered). Objective, content and completion standards are what every lesson plan contains (Ch. 7). Review, new material and summary are not the handbook's elements of an introduction.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Lesson Introduction)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-047",
+  "area": "FOI",
+  "topic": "Development: known to unknown",
+  "stem": "An instructor teaches with the GPS app the student already uses in her car, then shows how the flight GPS differs. Which pattern of lesson development is this?",
+  "choices": [
+   "Known to unknown.",
+   "Past to present.",
+   "Most frequently used to least used."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 5: the development patterns are past to present, simple to complex, known to unknown, and most frequently used to least used. Starting from something the learner already knows and leading into new ideas is known to unknown, like the handbook's magnetic compass before gyroscopic heading indicators. Past to present is chronological, as in tracing the history of radio navigation. Most frequently used to least used starts with what every user needs.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Development)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-048",
+  "area": "FOI",
+  "topic": "Lecture limits",
+  "stem": "Which is a limitation of the lecture method, according to the handbook?",
+  "choices": [
+   "It can't present very many ideas in a short time.",
+   "It doesn't foster motor skills or measure understanding well.",
+   "It is impractical for teaching large groups of students."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 5: a lecture presents many ideas in a relatively short time and is a convenient way to instruct large groups, so those describe its advantages. Its limits are that it does not foster outcomes like motor skills, which need hands-on practice, and does not give the instructor a precise measure of learner understanding. Adding active participation in the middle of a lecture greatly increases retention.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Advantages and Disadvantages of the Lecture)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-049",
+  "area": "FOI",
+  "topic": "Guided discussion",
+  "stem": "Before a guided discussion can work, what must the students have?",
+  "choices": [
+   "A passed written test on the topic.",
+   "Some background knowledge of the topic.",
+   "Experience flying the maneuver solo."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 5: the goal of a guided discussion is to draw out what learners know, so they need some knowledge of the topic first, from reading before class or a short lecture; unless learners have knowledge to exchange, they can't reach the desired outcomes. Its objective is stated at the understanding level. A passed test or solo experience is not a requirement.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Guided Discussion Method; Planning a Guided Discussion)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-050",
+  "area": "FOI",
+  "topic": "Lead-off questions",
+  "stem": "Which is the better lead-off question for a guided discussion on hot-day performance?",
+  "choices": [
+   "'Why does a balloon lift less on a hot afternoon?'",
+   "'Would a balloon lift less weight at noon or at dawn?'",
+   "'Is lift lower on hot days than on cool ones?'"
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 5: lead-off questions should usually begin with how or why, to start a discussion rather than collect a one-word answer. The handbook contrasts 'Why does an aircraft normally require a longer takeoff run at Denver than at New Orleans?' with 'Would you expect a longer run at Denver or at New Orleans?', which can be answered with one word. The other two choices invite one-word answers.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Planning a Guided Discussion: lead-off questions)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-051",
+  "area": "FOI",
+  "topic": "Demonstration-performance",
+  "stem": "In the demonstration-performance method, which two phases take place at the same time?",
+  "choices": [
+   "The explanation and the instructor's demonstration.",
+   "Learner performance and instructor supervision.",
+   "The demonstration and the final evaluation."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 5 lists five phases: explanation, demonstration, learner performance, instructor supervision and evaluation, and says learner performance and instructor supervision involve separate actions that happen at the same time; Ch. 9 counts the two as one phase, giving four. Explanation comes before the demonstration, and evaluation is a separate final phase in which the learner works independently.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Demonstration-Performance Method); Ch. 9",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-052",
+  "area": "FOI",
+  "topic": "Telling-and-doing",
+  "stem": "In the telling-and-doing technique, what does the step 'student tells, instructor does' accomplish?",
+  "choices": [
+   "It gives the student her first real chance to fly the maneuver herself.",
+   "It replaces the instructor's demonstration for the faster students.",
+   "It lets the instructor check the student's understanding before she flies it."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 9: in student tells, instructor does, the learner talks the instructor through the maneuver. Freed from flying it, she can organize her thoughts and perceptions begin to become insights, and the instructor can evaluate her understanding and correct a misunderstanding before she becomes absorbed in controlling the aircraft. She flies it only in the third step, student tells, student does, and the step follows the instructor's demonstration rather than replacing it.",
+  "ref": "FAA-H-8083-9B Ch. 9 (The Telling-and-Doing Technique)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-053",
+  "area": "FOI",
+  "topic": "Scenario-based training",
+  "stem": "Which is a feature of a good training scenario, according to the handbook?",
+  "choices": [
+   "It has one clear right answer for the student to work out.",
+   "It promotes situational awareness and chances to make decisions.",
+   "It works as a test that the student either passes or fails."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 5: a good scenario is not a test, will not have one right answer, does not offer an obvious answer, should not promote errors, and should promote situational awareness and opportunities for decision-making. A scenario may have several good outcomes and some poor ones; the instructor knows them in advance and lets the learner decide without jeopardizing safety.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Scenario-Based Training Method)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-054",
+  "area": "FOI",
+  "topic": "Case studies from accident reports",
+  "stem": "How does the handbook suggest an instructor use an NTSB accident report as a case study?",
+  "choices": [
+   "Read the probable cause first, then show how the pilot caused it.",
+   "Use only the photos, since the text is too technical for students.",
+   "Remove the probable cause, let students work out why, then compare."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 5 (Case Study Method): NTSB accident descriptions are an excellent source of real-world case studies. By removing the NTSB determination of probable cause, the instructor lets learners analyze the facts and suggest reasons without bias, then shares the NTSB's finding for further discussion of how to avoid that kind of accident. Starting with the answer removes the critical thinking, and the handbook says nothing about using only photos.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Case Study Method)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-055",
+  "area": "FOI",
+  "topic": "Test preparation materials",
+  "stem": "What does the handbook call a major shortcoming of commercial test preparation materials?",
+  "choices": [
+   "Their emphasis is on rote learning, the lowest level.",
+   "They are too hard for most students to pass at first.",
+   "They aren't allowed when preparing for FAA tests."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 5: test prep materials may help applicants pass, but their emphasis is on rote learning, the lowest of all levels of learning, so applicants can pass yet miss knowledge critical to safe flying; inspectors and examiners report applicants who passed the knowledge test easily but showed weak knowledge in oral questioning. Instructors should stress that these materials are a supplement to instructor-led training, not stand-alone tools. Nothing makes them too hard or forbidden.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Test Preparation Material)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-056",
+  "area": "FOI",
+  "topic": "Computer-assisted learning",
+  "stem": "A student studies with a computer program between flights. What does the handbook say remains the instructor's job?",
+  "choices": [
+   "Monitoring her progress, since the computer can't tell when she struggles.",
+   "Nothing more, as long as the program keeps track of her scores.",
+   "Only signing her endorsement once the program shows a passing score."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 5: the computer has no way of knowing when a learner is having difficulty, so monitoring and oversight of learner progress will always be the instructor's responsibility, through close supervision, questions, quizzes or guided discussion. A program's scores are a tool for the instructor, not a substitute, and an endorsement rests on the instructor's own evaluation.",
+  "ref": "FAA-H-8083-9B Ch. 5 (Computer-Assisted Learning Method)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-057",
+  "area": "FOI",
+  "topic": "Traditional and authentic assessment",
+  "stem": "What sets authentic assessment apart from traditional assessment?",
+  "choices": [
+   "The student takes a longer multiple-choice test instead.",
+   "An outside examiner grades the student's written work.",
+   "The student generates a solution to a real-world task."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6: traditional assessment (multiple choice, matching, true/false) has a single correct answer and usually measures the rote and understanding levels. Authentic assessment has the learner perform real-world tasks and generate a solution instead of choosing a response, reaching the application and correlation levels, with performance criteria known in advance. Who does the grading is not the difference.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Assessment Terminology; Authentic Assessment)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-058",
+  "area": "FOI",
+  "topic": "Diagnostic, formative, summative",
+  "stem": "A stage check partway through training measures how well learning has progressed so far. What kind of assessment is it?",
+  "choices": [
+   "Diagnostic.",
+   "Summative.",
+   "Formative."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 6: diagnostic assessments check knowledge or skill before a course of instruction; formative assessments, which are not graded, wrap up a lesson and tell the instructor what to reinforce; summative assessments, used periodically, measure how well learning has progressed to that point, and the handbook names the stage check, chapter quiz and end-of-course test as examples.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Assessment Terminology)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-059",
+  "area": "FOI",
+  "topic": "Effective assessment: objectivity",
+  "stem": "An instructor likes a student so much that she rates his landings better than they were. What does the handbook call this?",
+  "choices": [
+   "Flexibility, fitting her tone to the student.",
+   "Thoughtfulness, protecting his self-esteem.",
+   "Halo error, a lapse in objectivity."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6: sympathy or over-identification with a learner, to the point that it influences objectivity, is known as halo error; an effective assessment must be honest and based on the facts of the performance as they were, not as they could have been. Flexibility means fitting tone, technique and content to the occasion, not changing the facts. Thoughtfulness respects the learner's feelings while staying honest.",
+  "ref": "FAA-H-8083-9B Ch. 6 (General Characteristics of Effective Assessment: Objective)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-060",
+  "area": "FOI",
+  "topic": "Effective assessment: specific",
+  "stem": "'Your second landing wasn't as good as your first.' Which characteristic of an effective assessment does this comment lack?",
+  "choices": [
+   "Specific.",
+   "Acceptable.",
+   "Comprehensive."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 6: comments and recommendations must be specific, saying why the performance fell short and how to improve, so the learner has no doubt what was done well, what poorly, and how to get better; the handbook makes the same point about a second weld. Acceptable is about the learner's confidence in the instructor. Comprehensive is about covering strengths and weaknesses to fit the situation, which need not be long.",
+  "ref": "FAA-H-8083-9B Ch. 6 (General Characteristics of Effective Assessment: Specific)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-061",
+  "area": "FOI",
+  "topic": "Effective tests: validity",
+  "stem": "Which characteristic of a test does the handbook call the most important consideration in test evaluation?",
+  "choices": [
+   "Reliability: it gives the same results each time.",
+   "Usability: it is easy to give and to grade.",
+   "Validity: it measures what it is meant to measure."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6 lists six characteristics of effective tests: reliability, validity, usability, objectivity, comprehensiveness and discrimination. Validity, the extent to which a test measures what it is supposed to measure, is the most important consideration. Reliability (consistent results) and usability (readable print, clear directions, easy grading) matter, but the handbook ranks validity first.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Characteristics of a Good Written Assessment)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-062",
+  "area": "FOI",
+  "topic": "Collaborative assessment",
+  "stem": "In the four-step learner-centered critique, which step asks the student to relate today's lessons to future flights, including what personal minimums to set?",
+  "choices": [
+   "Replay.",
+   "Reflect.",
+   "Redirect."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6: the steps are replay (the learner retells the flight while the instructor listens for inaccuracies), reconstruct (what would, could or should have been done differently), reflect (what was learned, the easiest and hardest parts, how it compared with the standards), and redirect (relating the lessons to other experiences and future flights, including personal minimums to establish).",
+  "ref": "FAA-H-8083-9B Ch. 6 (Learner-Centered Assessment)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-063",
+  "area": "FOI",
+  "topic": "Rubric: perform",
+  "stem": "In the handbook's maneuver rubric, which grade means the student does the task without instructor help and finds and fixes her own errors?",
+  "choices": [
+   "Perform.",
+   "Practice.",
+   "Explain."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 6: the maneuver grades are describe, explain, practice, perform and not observed. Perform means the learner does the activity without instructor assistance, identifies and corrects errors expeditiously, and the outcome is never in doubt. Practice means she can plan and execute the scenario, but coaching corrects her errors. Explain means she understands the concepts but still needs help to execute.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Maneuver or Procedure Grades)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-064",
+  "area": "FOI",
+  "topic": "Critique timing",
+  "stem": "When should a critique be given?",
+  "choices": [
+   "The next day, once the student has rested.",
+   "At the end of the stage, for all lessons together.",
+   "Immediately after the performance."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6: a critique should come immediately after the learner's performance, while the details are easy to recall. An effective critique considers good as well as bad performance, the individual parts and the whole, and avoids embarrassing the learner.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Critiques and Oral Assessments)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-065",
+  "area": "FOI",
+  "topic": "Questions to avoid",
+  "stem": "'In an emergency, should you call your crew or pick a landing field?' Which type of question to avoid is this?",
+  "choices": [
+   "A toss-up question.",
+   "A puzzle question.",
+   "An oversize question."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 6 lists question types to avoid: puzzle (a tangle of conditions), oversize (too broad, like 'What do you do before beginning an engine overhaul?'), toss-up (like 'In an emergency, should you squawk 7700 or pick a landing spot?'), bewilderment, trick and irrelevant questions. This one offers two actions that may both be right, just like the handbook's toss-up example.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Types of Questions to Avoid)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-066",
+  "area": "FOI",
+  "topic": "Effective questions",
+  "stem": "Which is one of the handbook's rules for effective oral questions?",
+  "choices": [
+   "Combine several ideas, so the student must sort them out.",
+   "Close each topic by asking 'Do you have any questions?'",
+   "Center each question on only one idea."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6: effective questions apply to the subject, are brief, clear and definite, are adapted to the learner's stage of training, center on only one idea (who, what, when, where, how or why, not a combination), and present a challenge. Yes/no questions such as 'Do you have any questions?' are among those to avoid.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Characteristics of Effective Questions)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-067",
+  "area": "FOI",
+  "topic": "When you don't know the answer",
+  "stem": "A student asks something the instructor can't answer. What does the handbook recommend?",
+  "choices": [
+   "Give the most likely answer, so the student keeps confidence.",
+   "Tell the student the question won't be on the test.",
+   "Admit it, and promise to find the answer or look it up together."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 6 (Answering Learner Questions): the instructor should freely admit not knowing the answer and promise to get it or, if practicable, help the learner look it up in available references. Ch. 8 adds that learners quickly sense bluffing, which destroys confidence, while admitting errors wins respect. Brushing the question off wastes a chance to teach.",
+  "ref": "FAA-H-8083-9B Ch. 6 (Answering Learner Questions); Ch. 8 (Admit errors)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-068",
+  "area": "FOI",
+  "topic": "Blocks of learning",
+  "stem": "What should a block of learning represent, according to the handbook?",
+  "choices": [
+   "A fixed number of training periods on the schedule.",
+   "A topic taught on its own, apart from the other blocks.",
+   "A unit of learning that can be measured and evaluated."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 7: blocks of learning should be fairly consistent in scope and represent units of learning that can be measured and evaluated, not a sequence of periods of instruction. Each block is an integral part of the whole structure, like the stones of a pyramid, and extraneous blocks are expensive frills that detract from the final objective.",
+  "ref": "FAA-H-8083-9B Ch. 7 (Blocks of Learning)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-069",
+  "area": "FOI",
+  "topic": "Training syllabus",
+  "stem": "In Part 61 training, how does the handbook say a training syllabus should be used?",
+  "choices": [
+   "As a flexible guide, adjusted to fit the student's progress.",
+   "Strictly in its printed order, since any change voids the training.",
+   "Only as a record of what was done, not as a plan for training."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 7: a practical syllabus must be flexible and used primarily as a guide; under Part 61 the order of training can and should be altered to suit the learner's progress and special circumstances like weather, aircraft availability and scheduling. When departing from it, the instructor considers how the blocks relate to each other. A syllabus also serves as a recordkeeping checklist, but it is first a plan.",
+  "ref": "FAA-H-8083-9B Ch. 7 (How to Use a Training Syllabus)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-070",
+  "area": "FOI",
+  "topic": "Lesson plans in writing",
+  "stem": "What does the handbook say about a lesson plan kept only in the instructor's head?",
+  "choices": [
+   "It is not a lesson plan; a lesson plan should be written.",
+   "It is fine for an experienced instructor.",
+   "It is enough as long as the student has the syllabus."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 7: a mental outline of a lesson is not a lesson plan. It should be put in writing, so that another instructor could take it and conduct the same lesson, and so it can be analyzed for adequacy and completeness. Experience and a syllabus don't remove that need.",
+  "ref": "FAA-H-8083-9B Ch. 7 (Lesson Plans)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-071",
+  "area": "FOI",
+  "topic": "Lesson plan: scope",
+  "stem": "Which characteristic of a well-planned lesson warns that too much material causes confusion and too little causes inefficiency?",
+  "choices": [
+   "Unity.",
+   "Scope.",
+   "Practicality."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 7 lists unity, content, scope, practicality, flexibility, relation to the course of training, and instructional steps. Scope: each lesson should be reasonable in scope, since a person can master only a few principles or skills at a time. Unity means one unified segment aimed at limited objectives. Practicality means planning for the conditions and aids actually available.",
+  "ref": "FAA-H-8083-9B Ch. 7 (Characteristics of a Well-Planned Lesson)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-072",
+  "area": "FOI",
+  "topic": "Performance-based objectives",
+  "stem": "What three parts make up a performance-based objective?",
+  "choices": [
+   "The attention, motivation and overview elements of a lesson.",
+   "The objective, the content and the completion standards.",
+   "A description of the behavior, the conditions and the criteria."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 5: a performance-based objective has a description of the skill or behavior, the conditions under which it is to be demonstrated, and the criteria that measure accomplishment. Attention, motivation and overview are the lesson introduction. Objective, content and completion standards are what every lesson plan includes (Ch. 7).",
+  "ref": "FAA-H-8083-9B Ch. 5 (Performance-Based Objectives); Ch. 7",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-073",
+  "area": "FOI",
+  "topic": "Changing the plan in flight",
+  "stem": "Midway through a lesson on high-wind landings, it is clear the student has not mastered normal approaches. What does the handbook allow?",
+  "choices": [
+   "Finishing the plan, since changes confuse students.",
+   "Ending the flight and scheduling a stage check.",
+   "Abandoning the lesson plan in favor of review."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 7: a lesson plan for a flight should fit the particular learner and may have to be modified considerably in flight because of deficiencies in knowledge or poor mastery of essential elements; in some cases the entire plan may have to be abandoned in favor of review. The syllabus section gives a similar case: delay the next block and review one where the learner can succeed and regain confidence.",
+  "ref": "FAA-H-8083-9B Ch. 7 (How to Use a Lesson Plan Properly; How to Use a Training Syllabus)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-074",
+  "area": "FOI",
+  "topic": "The PTS: testing, not teaching",
+  "stem": "How does the handbook describe the practical test standards (PTS) and airman certification standards (ACS) in relation to teaching?",
+  "choices": [
+   "As testing documents, not teaching documents.",
+   "As the complete syllabus an instructor teaches from.",
+   "As optional guidance that an examiner may skip."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 8 and Ch. 9: the ACS/PTS is a testing document, not a teaching document, and Ch. 5 adds that certification standards cover only the most critical tasks, so they do not represent a whole training syllabus. Instructors should not aim at the minimum standards; lesson standards should gradually reach or exceed them. The commercial lighter-than-air PTS itself says adherence is mandatory under 61.43, so it isn't optional for the examiner.",
+  "ref": "FAA-H-8083-9B Ch. 8 (Standards of Performance); Ch. 9; Ch. 5; FAA-S-8081-18A (Foreword)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-075",
+  "area": "FOI",
+  "topic": "Making learning easy",
+  "stem": "What does the handbook say about making lessons easy so students stay motivated?",
+  "choices": [
+   "Leading students to learning by making it easy is a fallacy.",
+   "Easy tasks are the surest way to keep students coming back.",
+   "Standards should start low, then be raised for the test."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 8 (Helping Learners): learning should be enjoyable, but that does not mean sacrificing standards; the idea that people need to be led to learning by making it easy is a fallacy. Learners ultimately devote more effort to activities that bring rewards, and meeting standards holds its own satisfaction; people are proud of achieving difficult goals.",
+  "ref": "FAA-H-8083-9B Ch. 8 (Helping Learners)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-076",
+  "area": "FOI",
+  "topic": "Emphasizing the positive",
+  "stem": "Following the handbook, which first lesson best emphasizes the positive?",
+  "choices": [
+   "A drill on emergency procedures, since they are what save lives.",
+   "A normal flight, with the preflight shown as getting to know the balloon.",
+   "A full briefing on balloon accidents, so the risks are clear from day one."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 8 (Emphasizing the Positive): a first lesson that stresses emergencies and how people lose their lives can make a new learner wonder whether learning to fly is a good idea. The positive approach is a normal flight, with the preflight presented as familiarization. Emergency procedures are not dropped; they come after the learner is acquainted with normal operations, when they are less likely to frighten or inhibit learning.",
+  "ref": "FAA-H-8083-9B Ch. 8 (Emphasizing the Positive)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-077",
+  "area": "FOI",
+  "topic": "Safety by example",
+  "stem": "An instructor tells students to wear gloves during inflation but skips them herself when she's in a hurry. What does the handbook predict?",
+  "choices": [
+   "Students will follow the rule she teaches, not her example.",
+   "Little effect, since gloves are a matter of personal choice.",
+   "Students will copy her habit when she isn't watching."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 8 (Safety Practices and Accident Prevention): learners treat the instructor as a role model whose habits they imitate, consciously or not, and an instructor's advocacy of safety means little without consistent example; the handbook's maintenance learner who sees the instructor skip safety glasses won't use safety equipment when the instructor is away. One of the best things an instructor can do for safety is to emphasize it by example.",
+  "ref": "FAA-H-8083-9B Ch. 8 (Safety Practices and Accident Prevention)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-078",
+  "area": "FOI",
+  "topic": "Positive exchange of flight controls",
+  "stem": "What procedure does the handbook recommend whenever control passes between instructor and student?",
+  "choices": [
+   "A tap on the shoulder, so that radio calls aren't interrupted.",
+   "A three-step spoken exchange, with a visual check of who has control.",
+   "The instructor simply takes over, then explains why after landing."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 9: a positive three-step exchange of flight controls is strongly recommended ('You have the flight controls,' 'I have the flight controls,' 'You have the flight controls'), with a visual check that the other person actually has control, so there is never any doubt about who is flying. When taking over, the instructor calmly announces, 'I have the flight controls.' Silent or tap-based handoffs are what the procedure exists to prevent.",
+  "ref": "FAA-H-8083-9B Ch. 9 (Positive Exchange of Flight Controls)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-079",
+  "area": "FOI",
+  "topic": "Teaching at the wrong time",
+  "stem": "According to the handbook, when should an instructor do most of the teaching about a takeoff, or for a balloon, a launch?",
+  "choices": [
+   "During it, while the student can feel it.",
+   "Before it begins, in the briefing.",
+   "Afterward, in the debrief, and only then."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 10: a takeoff takes only seconds and the learner's attention is almost entirely on controlling the aircraft, so information given then may not be heard or processed; the instructor should do most of the teaching beforehand. The handbook warns against creating a hazard by trying to teach something at an inappropriate time. A debrief reinforces the lesson, but the teaching comes first.",
+  "ref": "FAA-H-8083-9B Ch. 10 (Notes on Instructional Risk Management in the Flight Deck; Managing Risk while Teaching Takeoffs)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-080",
+  "area": "FOI",
+  "topic": "Correcting student errors",
+  "stem": "A student begins to misjudge an approach. Safety permitting, what does the handbook say is often better than taking over at once?",
+  "choices": [
+   "Letting the student go part way into the mistake and find a way out.",
+   "Taking over, demonstrating, then letting the student try again.",
+   "Calling out every correction so the error never develops."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 9 (Correction of Learner Errors): correcting errors does not mean taking over the moment a mistake is made; safety permitting, it is frequently better to let learners progress part of the way into the mistake and find a way out, because it is hard to learn a maneuver properly without the chance to correct an error. The instructor still stays ready to take control, especially on hazardous maneuvers.",
+  "ref": "FAA-H-8083-9B Ch. 9 (Correction of Learner Errors)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-081",
+  "area": "FOI",
+  "topic": "Visualization",
+  "stem": "The handbook describes an instructor adding an undesired landing site for a balloon student to think through. Which technique is this?",
+  "choices": [
+   "Visualization, in scenario-based training.",
+   "Drill and practice, repeated until habit.",
+   "A formative written assessment of the plan."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 9 (Visualization): scenario-based training lends itself to visualization. The learner describes how a flight should go, then the instructor adds unforeseen circumstances, such as undesired landing sites for balloon learner pilots, and the learner visualizes handling them while the instructor asks questions to check the thought process. Drill and practice is repeated performance of a skill. A formative assessment wraps up a lesson.",
+  "ref": "FAA-H-8083-9B Ch. 9 (Visualization)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-082",
+  "area": "FOI",
+  "topic": "Teaching risk management: TEAM",
+  "stem": "In the TEAM model for handling risk, what does the A stand for?",
+  "choices": [
+   "Assess.",
+   "Avoid.",
+   "Accept."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 10: TEAM stands for transfer, eliminate, accept and mitigate. The final step of mitigation is deciding whether to accept the remaining risk, done consciously and on behalf of any passengers. Assess is a step of the identify, assess and mitigate process, and avoiding a risk entirely is what TEAM calls eliminating it, as in cancelling a recreational flight.",
+  "ref": "FAA-H-8083-9B Ch. 10 (Mitigating Risk)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-083",
+  "area": "FOI",
+  "topic": "PAVE in instruction",
+  "stem": "When an instructor runs the PAVE checklist before a training flight, whom does the P cover?",
+  "choices": [
+   "Only the student, who is the main hazard.",
+   "Only the instructor, as pilot in command.",
+   "Both the student and the instructor."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 10: the P applies to both the learner pilot and the instructor pilot, covering qualification, currency and proficiency, and aeromedical factors through IMSAFE. The instructor monitors her own condition and builds the trust that lets students report theirs well before a flight, so it can be rescheduled if needed.",
+  "ref": "FAA-H-8083-9B Ch. 10 (Identifying Risk; Common Flight Instruction Risks)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-084",
+  "area": "FOI",
+  "topic": "Risk assessment tools",
+  "stem": "Why does the handbook say numerical flight risk assessment tools (FRATs) should be used with caution?",
+  "choices": [
+   "They take too long to fill out before a flight.",
+   "A low score can hide a single extreme risk.",
+   "A high score means the flight must always be cancelled."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 10: a low total can still hide hazards that create unacceptable risk, because a risk on that flight isn't on the FRAT's list, or because there is only one risk but it is extreme, like a line of embedded thunderstorms that alone might not push the score to a no-go. A score above the limit calls for mitigating action, not always cancellation. Time is not the concern the handbook raises.",
+  "ref": "FAA-H-8083-9B Ch. 10 (Risk Management Tools)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-085",
+  "area": "FOI",
+  "topic": "When to teach risk management",
+  "stem": "When does the handbook say risk management should start in a student's training?",
+  "choices": [
+   "After the first solo, once the basic flying skills are secure.",
+   "During checkride preparation, when the PTS tasks are reviewed.",
+   "At the very start, with ground training before the first flight."
+  ],
+  "answer": 2,
+  "explanation": "FAA-H-8083-9B Ch. 10: risk management should be taught at the very start of flight training and integrated into actual flights rather than taught as a separate subject, and it is even more effective if the learner receives ground instruction on it before the first flight lesson. It belongs in every preflight and postflight briefing and continues into recurrent training and flight reviews.",
+  "ref": "FAA-H-8083-9B Ch. 10 (When to Teach Risk Management)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-086",
+  "area": "FOI",
+  "topic": "Practical test recommendation",
+  "stem": "According to the handbook, how long is an instructor's practical test recommendation on FAA Form 8710-1 valid?",
+  "choices": [
+   "60 days.",
+   "30 days.",
+   "90 days."
+  ],
+  "answer": 0,
+  "explanation": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations): the instructor's signature on FAA Form 8710-1 is valid for 60 days, as is the flight proficiency endorsement in the applicant's logbook (AC 61-65), and the two dates should be the same. Note that 61.39(a)(6)(i) itself now words the training window behind the logbook endorsement as the 2 calendar months preceding the month of application, so check the current AC 61-65 endorsement wording when you sign. Ninety days is the solo endorsement period in 61.87(p). Signing the recommendation imposes a serious responsibility: the applicant should first demonstrate no less than the complete procedure in the PTS.",
+  "ref": "FAA-H-8083-9B Ch. 9 (Practical Test Recommendations); 14 CFR 61.39(a)(6); 14 CFR 61.87(p)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-087",
+  "area": "FOI",
+  "topic": "Training records",
+  "stem": "According to the Aviation Instructor's Handbook, how long should a student's training records be kept?",
+  "choices": [
+   "Until the student passes the practical test.",
+   "At least 3 years.",
+   "At least 10 years."
+  ],
+  "answer": 1,
+  "explanation": "FAA-H-8083-9B Ch. 7 (Lesson Plans): a training folder for each learner should hold lesson plans, training requirements, instruction received, Part 61 requirements met, solo endorsements and other training information, and these records should be kept for at least 3 years. For holders of a flight instructor certificate, 14 CFR 61.189 sets 3 years by regulation; 61.5(c) lists no balloon category or class rating for a flight instructor certificate, so for a commercial balloon pilot the 3 years is the handbook's guidance. Ten years is not in either source, and records discarded at the checkride lose the student's history.",
+  "ref": "FAA-H-8083-9B Ch. 7 (Lesson Plans); 14 CFR 61.189; 14 CFR 61.5(c)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "medium",
+  "checked": "fixed"
+ },
+ {
+  "id": "FOI-088",
+  "area": "FOI",
+  "topic": "The test's instructing area",
+  "stem": "On the commercial balloon practical test, the Fundamentals of Instructing area has seven tasks. Which one must the examiner always include?",
+  "choices": [
+   "The learning process and the laws of learning.",
+   "Flight instructor characteristics and responsibilities.",
+   "Planning instructional activity, including the syllabus."
+  ],
+  "answer": 1,
+  "explanation": "FAA-S-8081-18A, Area of Operation I: the tasks are A the learning process, B human behavior, C the teaching process, D teaching methods, E critique and evaluation, F flight instructor characteristics and responsibilities, and G planning instructional activity. The note says the evaluator will select Task F and at least one other task. The learning process and planning may be chosen as the other task, but only Task F is required every time.",
+  "ref": "FAA-S-8081-18A, Area of Operation I (Fundamentals of Instructing)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-089",
+  "area": "FOI",
+  "topic": "The preflight lesson on a maneuver",
+  "stem": "What does Area IV of the commercial balloon practical test ask the applicant to do?",
+  "choices": [
+   "Present a preflight lesson on a maneuver the examiner selects.",
+   "Fly a maneuver of the applicant's choice while explaining it aloud.",
+   "Write a complete course syllabus for a private pilot applicant."
+  ],
+  "answer": 0,
+  "explanation": "FAA-S-8081-18A, Area IV (Preflight Lesson on a Maneuver to be Performed in Flight): the evaluator selects at least one maneuver from Areas VII through XI and asks the applicant to present a preflight lesson on it as it would be taught to a learner, using a lesson plan, stating the objective, describing the elements and common errors and how to correct them, and using instructional aids as appropriate. Previously developed lesson plans from the applicant's library may be used. The area comes from the 14 CFR 61.127(b)(8)(iv) list.",
+  "ref": "FAA-S-8081-18A, Area of Operation IV; 14 CFR 61.127(b)(8)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-090",
+  "area": "FOI",
+  "topic": "Instructional knowledge",
+  "stem": "In the commercial balloon PTS, what does 'instructional knowledge' mean in the instructing areas?",
+  "choices": [
+   "The ability to recite the regulation for each task word for word.",
+   "The what, why and how of a topic, taught by the methods in FAA-H-8083-9.",
+   "Having already taught at least one student through a practical test."
+  ],
+  "answer": 1,
+  "explanation": "FAA-S-8081-18A (Use of the PTS): in Areas I, II and IV, 'instructional knowledge' means the what, why and how of a subject, procedure or maneuver, and the applicant's discussions and explanations should follow the teaching procedures and techniques in FAA-H-8083-9, the Aviation Instructor's Handbook. Reciting rules is the rote level, and no prior student is required.",
+  "ref": "FAA-S-8081-18A (Use of the PTS)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "FOI-091",
+  "area": "FOI",
+  "topic": "Why teaching is on the balloon test",
+  "stem": "Why does the commercial balloon rating include fundamentals of instructing when the commercial airplane rating does not?",
+  "choices": [
+   "Commercial balloon pilots must also hold a ground instructor certificate.",
+   "Commercial balloon pilots may teach without a flight instructor certificate.",
+   "Balloon practical tests are given by instructors instead of examiners."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.133(a)(2)(ii) lets a commercial balloon pilot give flight and ground training for a certificate or rating, give certificate and solo endorsements, and give the training and endorsements for a flight review, and 61.3(d)(3)(i) and (i)(3)(ii) say no flight or ground instructor certificate is needed for that training in a lighter-than-air aircraft. That is why 61.125(b)(16) adds training procedures for lighter-than-air ratings, 61.127(b)(8) opens with fundamentals of instructing, and the Balloon Flying Handbook (FAA-H-8083-11B Ch. 10) notes that commercially rated balloon pilots instruct without a CFI rating, unlike pilots of every other aircraft, and calls the Aviation Instructor's Handbook required reading. No ground instructor certificate is required, and practical tests are given by examiners.",
+  "ref": "14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i), (i)(3)(ii); 14 CFR 61.125(b)(16); 14 CFR 61.127(b)(8); FAA-H-8083-11B Ch. 10 (Introduction)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1001",
+  "area": "REG",
+  "topic": "Logging training: who can give it",
+  "stem": "A private balloon pilot gives a friend some 'lessons' in his balloon and signs the friend's logbook to show the training. Can the friend count it as training toward a certificate?",
+  "choices": [
+   "Yes, as long as the private pilot has over 100 hours in balloons.",
+   "Yes, if the private pilot was pilot in command on each flight.",
+   "No; logged training must come from an authorized instructor."
+  ],
+  "answer": 2,
+  "explanation": "14 CFR 61.51(h)(1) lets a person log training time only when it is received from an authorized instructor, and 61.3(d)(2)(iii) says only a flight instructor certificate holder may endorse a logbook to show training given, with exceptions in 61.3(d)(3) that include, in (d)(3)(i), the holder of a commercial pilot certificate with a lighter-than-air rating, training in a lighter-than-air aircraft. In balloons the authority to teach comes with the commercial certificate (61.133(a)(2)(ii)); hours and acting as PIC don't create it.",
+  "ref": "14 CFR 61.51(h); 14 CFR 61.3(d)(2)-(3); 14 CFR 61.133(a)(2)(ii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1002",
+  "area": "REG",
+  "topic": "Knowledge test endorsement",
+  "stem": "A commercial balloon pilot with no ground or flight instructor certificate has given a student the ground training for the private balloon knowledge test. May he give the endorsement the student needs to take the test?",
+  "choices": [
+   "No; only a ground instructor may endorse a student for a knowledge test.",
+   "Yes; his commercial lighter-than-air certificate covers it in balloons.",
+   "No; the student must do a home-study course and self-certify instead."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.35(a)(1) requires an endorsement from an authorized instructor that the applicant completed the ground training or home study and is prepared for the knowledge test. 61.3(i)(2)(ii) normally limits that endorsement to ground instructors (flight instructors are excepted by (i)(3)(i)), but 61.3(i)(3)(ii) says a ground instructor certificate isn't necessary when the training is given by a commercial pilot with a lighter-than-air rating within the privileges of the certificate in a lighter-than-air aircraft (and 61.3(d)(3)(i) does the same for the flight instructor requirement). A home-study course still needs the instructor's endorsement; there is no self-certification.",
+  "ref": "14 CFR 61.35(a)(1); 14 CFR 61.3(i)(2)-(3); 14 CFR 61.3(d)(3)(i); 14 CFR 61.133(a)(2)(ii)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "medium",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1003",
+  "area": "REG",
+  "topic": "Practical test endorsement: timing",
+  "stem": "A student will apply for the private balloon practical test in November 2026. Under 61.39(a)(6), the instructor's endorsement must certify preparation training logged no earlier than",
+  "choices": [
+   "August 1, 2026.",
+   "October 1, 2026.",
+   "September 1, 2026."
+  ],
+  "answer": 2,
+  "explanation": "14 CFR 61.39(a)(6)(i) requires an endorsement from an authorized instructor certifying that the applicant has received and logged training time within 2 calendar months preceding the month of application in preparation for the practical test. For a November application those months are September and October, so the window opens September 1. August 1 would be three months back, and October 1 only one.",
+  "ref": "14 CFR 61.39(a)(6)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1004",
+  "area": "REG",
+  "topic": "Practical test endorsement: knowledge test gaps",
+  "stem": "A student missed several questions on weather in her knowledge test. Before the practical test, what must her instructor's 61.39 endorsement certify about them?",
+  "choices": [
+   "That she has shown satisfactory knowledge of those subject areas.",
+   "That she has retaken the knowledge test and passed the weather section.",
+   "Nothing, since a passing score covers the missed areas."
+  ],
+  "answer": 0,
+  "explanation": "14 CFR 61.39(a)(6)(iii): the endorsement certifies that the applicant has demonstrated satisfactory knowledge of the subject areas in which she was deficient on the airman knowledge test. The FAA's Learning Statement Reference Guide likewise says the instructor provides instruction on each area of deficiency on the test report and endorses it. There is no retest of a section, and a passing score does not waive the requirement.",
+  "ref": "14 CFR 61.39(a)(6)(iii); FAA Learning Statement Reference Guide (introduction)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1005",
+  "area": "REG",
+  "topic": "Flight review: the endorsement",
+  "stem": "A commercial balloon pilot has just given another balloon pilot a satisfactory flight review. Under 61.56(c), what completes it?",
+  "choices": [
+   "Her endorsement in the pilot's logbook.",
+   "Sending the FAA a form reporting the review.",
+   "An entry in her own logbook, since she gave it."
+  ],
+  "answer": 0,
+  "explanation": "14 CFR 61.56(c) requires a flight review given by an authorized instructor and a logbook endorsement from the instructor who gave it, certifying that the person has satisfactorily completed the review. In balloons, 61.133(a)(2)(ii)(D) lets a commercial balloon pilot give that training and endorsement. Nothing is filed with the FAA, and her own records don't take the place of the endorsement in the pilot's logbook.",
+  "ref": "14 CFR 61.56(a), (c); 14 CFR 61.133(a)(2)(ii)(D)",
+  "figure": null,
+  "difficulty": 1,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1006",
+  "area": "REG",
+  "topic": "Flight review for an airplane pilot",
+  "stem": "A private pilot holds only an airplane single-engine land rating. Can a commercial balloon pilot with no flight instructor certificate give her the flight review she needs?",
+  "choices": [
+   "No; she isn't rated in balloons, and he may teach only in balloons.",
+   "Yes, in a balloon, because a flight review in any aircraft satisfies 61.56.",
+   "Yes, in her airplane, because 61.133 lets commercial pilots give flight reviews."
+  ],
+  "answer": 0,
+  "explanation": "14 CFR 61.56(c)(1) requires a flight review given in an aircraft for which that pilot is rated, by an authorized instructor. A commercial balloon pilot's instructing privileges in 61.133(a)(2)(ii) are for a balloon, and the 61.3(d)(3)(i) exception from needing a flight instructor certificate applies only to training in a lighter-than-air aircraft. She isn't rated in balloons, so a balloon review wouldn't count, and he can't instruct in her airplane.",
+  "ref": "14 CFR 61.56(c)(1); 14 CFR 61.133(a)(2)(ii); 14 CFR 61.3(d)(3)(i)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1007",
+  "area": "REG",
+  "topic": "Recommending a commercial applicant",
+  "stem": "May a commercial balloon pilot without a flight instructor certificate endorse an applicant for the commercial balloon practical test?",
+  "choices": [
+   "Yes; 61.133 covers endorsements for any balloon pilot certificate.",
+   "No; she may endorse applicants for private balloon certificates only.",
+   "No; a commercial applicant needs a designated examiner's recommendation."
+  ],
+  "answer": 0,
+  "explanation": "14 CFR 61.133(a)(2)(ii)(A) and (B) let a commercial pilot with a lighter-than-air balloon rating give flight and ground training in a balloon for the issuance of a certificate or rating and give an endorsement for a pilot certificate with a balloon rating; the rule does not limit it to the private level. The examiner gives the practical test but does not recommend the applicant; the instructor does (61.39(a)(6)).",
+  "ref": "14 CFR 61.133(a)(2)(ii)(A)-(B); 14 CFR 61.39(a)(6)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1008",
+  "area": "REG",
+  "topic": "Authorizing a solo",
+  "stem": "A student's own instructor is away, and he asks another commercial balloon pilot, who has never flown with him, to endorse him for solo in his balloon tomorrow. Under 61.87(p), may she?",
+  "choices": [
+   "Yes, if his logbook shows he has finished the 61.87(k) training.",
+   "No; she must first train him herself and find him proficient.",
+   "Yes, as long as his last solo endorsement is under 90 days old."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.87(p): no instructor may authorize a solo unless that instructor has given the student training in the make and model (or a similar one), determined he is proficient in the required maneuvers and procedures and in the make and model, and endorsed his logbook. Another instructor's logged training doesn't meet that, and a current endorsement from his own instructor is a separate question; she can't add her authorization without the training and her own determination.",
+  "ref": "14 CFR 61.87(p); 14 CFR 61.87(k), (n)",
+  "figure": null,
+  "difficulty": 3,
+  "status": "draft",
+  "confidence": "medium",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1009",
+  "area": "REG",
+  "topic": "Documents while teaching",
+  "stem": "A commercial balloon pilot is giving paid flight training in a balloon. Which documents must she have with her?",
+  "choices": [
+   "Her pilot certificate, a photo ID and a second-class medical certificate.",
+   "Her pilot certificate and a photo ID; no medical is needed for this.",
+   "Her pilot certificate, a photo ID and a flight instructor certificate."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.3(a)(1) and (a)(2) require the pilot certificate and a photo ID in physical possession or readily accessible. 61.3(c)(2)(vi)(B) and 61.23(b)(5) say no medical certificate is needed for a commercial balloon pilot giving flight training under 61.133(a)(2)(ii); a second-class medical is needed for other balloon flights for compensation or hire (61.23(a)(2)(iii)). 61.5(c) lists no balloon category or class rating for a flight instructor certificate, and 61.3(d)(3)(i) says none is needed for this training.",
+  "ref": "14 CFR 61.3(a), (c)(2)(vi)(B), (d)(3)(i); 14 CFR 61.23(a)(2)(iii), (b)(5); 14 CFR 61.5(c)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1010",
+  "area": "REG",
+  "topic": "Paid to fly, no passengers",
+  "stem": "A sponsor pays a private balloon pilot $300 to fly its logo balloon over the county fair with no one else aboard. Which statement is correct?",
+  "choices": [
+   "It is legal, because no passengers or property are carried for hire.",
+   "He needs a commercial certificate, since he is paid to act as PIC.",
+   "It is legal, because a private pilot may share the costs of a flight."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.113(a): a private pilot may not act as pilot in command for compensation or hire, and the paragraph (b) exception covers only flights that are merely incidental to the pilot's business or employment and carry no passengers or property for hire. Here the flying is the service being paid for, not incidental to another job. Acting as pilot in command for compensation or hire is the commercial privilege in 61.133(a)(1)(ii), and a commercial balloon pilot flying for hire (other than giving flight training) also needs at least a second-class medical (61.23(a)(2)(iii)). 61.113(c) cost sharing covers a pro rata share of expenses with passengers, not a fee.",
+  "ref": "14 CFR 61.113(a)-(c); 14 CFR 61.133(a)(1)(ii); 14 CFR 61.23(a)(2)(iii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "medium",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1011",
+  "area": "REG",
+  "topic": "The commercial operator test",
+  "stem": "When it is unclear whether carrying people by air is 'for compensation or hire,' what test does the definition of commercial operator in 14 CFR 1.1 apply?",
+  "choices": [
+   "Whether any money changes hands for the flight, whatever the reason it is paid.",
+   "Whether carriage by air is merely incidental to other business or a major enterprise for profit.",
+   "Whether the flight carries more than two passengers who are not crewmembers aboard."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 1.1 defines a commercial operator as a person who, for compensation or hire, engages in the carriage by aircraft in air commerce of persons or property, and says that where it is doubtful, the test is whether the carriage by air is merely incidental to the person's other business or is, in itself, a major enterprise for profit. The definition sets no passenger count, and it does not turn on money alone.",
+  "ref": "14 CFR 1.1 (Commercial operator)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ },
+ {
+  "id": "REG-1012",
+  "area": "REG",
+  "topic": "Balloon rides and Part 119",
+  "stem": "Why doesn't a company selling sightseeing balloon rides need a Part 119 air operator certificate?",
+  "choices": [
+   "Balloon rides are exempt from all of the operating rules in Part 91.",
+   "Part 119 applies only to flights that carry more than nine passengers.",
+   "Part 119 doesn't apply to sightseeing flights in hot air balloons."
+  ],
+  "answer": 2,
+  "explanation": "14 CFR 119.1(e)(5) lists sightseeing flights conducted in hot air balloons or gliders among the operations Part 119 does not apply to, so they are flown under Part 91 by a pilot with a commercial certificate. Part 91 still applies in full. Part 119's applicability is not set by a nine-passenger limit.",
+  "ref": "14 CFR 119.1(e)(5); 14 CFR 61.133(a)(1)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1013",
+  "area": "REG",
+  "topic": "Balloon rides and Part 136",
+  "stem": "Do the commercial air tour safety rules in Part 136, subpart A apply to a balloon ride company?",
+  "choices": [
+   "Yes; every sightseeing flight for hire must follow Part 136.",
+   "No; subpart A does not apply to operations in balloons.",
+   "Only when a sightseeing ride lasts longer than one hour."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 136.1(a) applies subpart A to commercial air tours in an airplane, powered-lift or rotorcraft, and 136.1(c) says it does not apply to operations conducted in balloons, gliders, parachutes, gyroplanes or airships. The definition of a commercial air tour in 136.1(d) also names only airplanes, powered-lifts and rotorcraft, and sets no duration.",
+  "ref": "14 CFR 136.1(a), (c), (d)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1014",
+  "area": "REG",
+  "topic": "Commercial knowledge: teaching",
+  "stem": "Which aeronautical knowledge area does 61.125(b) list for a commercial applicant because lighter-than-air pilots may teach?",
+  "choices": [
+   "Fundamentals of instructing, required for every commercial certificate.",
+   "Use of training devices to log time toward a balloon rating.",
+   "Procedures for flight and ground training for lighter-than-air ratings."
+  ],
+  "answer": 2,
+  "explanation": "14 CFR 61.125(b)(16) is 'Procedures for flight and ground training for lighter-than-air ratings,' and 61.125(a) applies the areas that fit the category and class sought, so it is for lighter-than-air applicants. It matches 61.133(a)(2), which lets commercial LTA pilots give training. Fundamentals of instructing is a commercial balloon area of operation in 61.127(b)(8), not a knowledge area for every commercial certificate, and 61.125 has no training-device area.",
+  "ref": "14 CFR 61.125(a), (b)(16); 14 CFR 61.127(b)(8)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "confirmed"
+ },
+ {
+  "id": "REG-1015",
+  "area": "REG",
+  "topic": "Commercial experience: test-prep flights",
+  "stem": "An applicant for a commercial balloon certificate, training in a hot air balloon, will take the practical test in June. Under 61.129(h), which training flights must she have?",
+  "choices": [
+   "Two 1-hour solo flights in the 60 days before the test.",
+   "Two 1-hour flights with an instructor, none before April 1.",
+   "One 2-hour flight with an instructor in May or June."
+  ],
+  "answer": 1,
+  "explanation": "14 CFR 61.129(h)(4)(ii)(A) requires two training flights of 1 hour each in a balloon with an airborne heater, with an authorized instructor, in preparation for the practical test, within the preceding 2 calendar months from the month of the test, so for a June test the window opens April 1. Two solo flights are a separate requirement in (h)(4)(ii)(B), not tied to that window. Two-hour training flights are the gas balloon version in (h)(4)(i)(A).",
+  "ref": "14 CFR 61.129(h)(4)(i)-(ii)",
+  "figure": null,
+  "difficulty": 2,
+  "status": "draft",
+  "confidence": "high",
+  "checked": "fixed"
+ }
+]
