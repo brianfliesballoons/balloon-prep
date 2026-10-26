@@ -1108,13 +1108,17 @@ $('tqGo').onclick=()=>{if(!S.test)return;S.test.untimed=true;save();tShow();};
 // every one was answered (its numbers are then the same under either rule).
 function tHist(){if(!Array.isArray(S.hist))S.hist=[];S.hist=S.hist.filter(h=>h&&typeof h==='object'&&isFinite(h.pct)&&isFinite(h.end));const H=S.hist,T=S.test;
   if(T&&T.done&&T.end&&Array.isArray(T.list)){const c=tCount(T),ok=id=>T.answers[id]===byId[id].answer,had=H.find(h=>h.end===T.end);
-    if(!had&&c.a.length){const ar={};
+    // a test saved by an older version (no per-question data) is rebuilt from the answers still on this device, so a test stopped early is rescored on what was answered
+    if((!had||!had.m)&&c.a.length){const ar={};
       c.a.forEach(id=>{const x=ar[byId[id].area]=ar[byId[id].area]||[0,0];x[1]++;if(ok(id))x[0]++;});
       const e={end:T.end,track:hTr(T),n:c.a.length,r:c.ok.length,pct:Math.round(c.ok.length/c.a.length*100),sec:Math.round((T.used!=null?T.used:T.end-(T.start||T.end))/1e3),ar,
         of:c.ids.length,sk:c.sk,m:c.miss.map(id=>[id,T.answers[id]]),ok:c.ok.slice()};
       if(T.stop)e.stop=T.stop;if(T.used==null)e.wall=1;if(T.to){const t=tCount(T,T.to.a);e.to=1;e.tor=t.ok.length;e.ton=t.a.length;}
-      H.push(e);H.sort((x,y)=>x.end-y.end);if(H.length>50)H.splice(0,H.length-50);save();}
-    else if(had&&!had.m&&!c.sk&&had.n===c.ids.length&&had.r===c.ok.length){had.of=c.ids.length;had.sk=0;had.m=c.miss.map(id=>[id,T.answers[id]]);had.ok=c.ok.slice();save();}}
+      if(had){Object.keys(had).forEach(k=>{if(!(k in e))delete had[k];});Object.assign(had,e);
+        // the older version also put every unanswered question into the review queue as missed on the day the test ended; take those back out
+        const dEnd=Math.floor((T.end-new Date(T.end).getTimezoneOffset()*60000)/864e5);
+        c.ids.forEach(id=>{const r=S.review[id];if(T.answers[id]===undefined&&r&&(r.step??r.streak??0)===0&&r.last===dEnd)delete S.review[id];});save();}
+      else{H.push(e);H.sort((x,y)=>x.end-y.end);if(H.length>50)H.splice(0,H.length-50);save();}}}
   return H;}
 function histAdd(){tFold();tRun=0;tHist();}
 const tDay=t=>new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric',...(new Date(t).getFullYear()!==new Date().getFullYear()?{year:'numeric'}:{})});
