@@ -122,21 +122,25 @@ CREATE TABLE IF NOT EXISTS ghand (    -- a Google sign-in on its way back to the
   isnew INTEGER,
   email TEXT                        -- shown once to the app ("Signed in as ..."), deleted with the row
 );
--- scores to the instructor (added 2026-10-23, migrations/2026-10-23-scores.sql). Only what a student chose to send; never answers or question ids.
+-- scores to the instructor (added 2026-10-23, migrations/2026-10-23-scores.sql). Only what a student chose to send.
+-- Question ids + the picked answer only when the student ticks "Include the questions I missed" (added 2026-10-26, migrations/2026-10-26-missed.sql); never question text.
 CREATE TABLE IF NOT EXISTS scores (
   id TEXT PRIMARY KEY,
   code TEXT NOT NULL REFERENCES classes(code),
   sid TEXT NOT NULL REFERENCES students(sid),   -- deleted with the student (leave, leave-and-delete, instructor Remove)
   track TEXT NOT NULL,              -- P = Private (PBH) · C = Commercial (CBH)
-  n INTEGER NOT NULL,               -- questions in the test
+  n INTEGER NOT NULL,               -- questions answered (from 2026-10-26; before that, questions in the test)
   r INTEGER NOT NULL,               -- right
-  pct INTEGER NOT NULL,             -- round(r/n*100), worked out by the Worker
+  pct INTEGER NOT NULL,             -- round(r/n*100), worked out by the Worker: scored on what was answered
   pass INTEGER NOT NULL,            -- pct >= 70
   sec INTEGER NOT NULL,             -- active test time, seconds
   areas TEXT NOT NULL,              -- JSON {"REG":[right,total],...}
   flags TEXT,                       -- JSON {"AIR":2,...}: how many of the test's questions were flagged, per area
   taken INTEGER NOT NULL,           -- when the test was finished (device clock); one score per student per taken time
-  created INTEGER NOT NULL          -- when it was sent
+  created INTEGER NOT NULL,         -- when it was sent
+  missed TEXT,                      -- JSON [{"id":"REG-001","pick":1},...]: the missed questions and the answer picked (0-2), only if the student included them; NULL otherwise
+  skipped INTEGER,                  -- questions not answered (stopped early or left blank): never counted as missed; NULL from older apps
+  of_n INTEGER                      -- questions in the test as it started (n + skipped); NULL from older apps
 );
 CREATE UNIQUE INDEX IF NOT EXISTS sc_once ON scores(sid, taken);
 CREATE INDEX IF NOT EXISTS sc_code ON scores(code, created);

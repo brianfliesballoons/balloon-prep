@@ -458,6 +458,38 @@ b.tdue{color:var(--flag-ink)} .tile .rsoon{font-size:.85rem;font-weight:600;colo
 .tsc-ag>div{min-width:0}
 .tsc-weak{color:var(--bad);font-weight:700}
 .tsc-dg{margin:0;line-height:1.4;background:var(--chip);border-radius:8px;padding:8px 10px}
+/* the missed questions a student chose to include with a sent score (hub). Scoped names: .tsc-mq .tsc-pk .tsc-mb */
+.tsc-mq{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.tsc-mq li{border-top:1px solid var(--line);padding:8px 0;display:flex;flex-direction:column;gap:3px;line-height:1.35;font-size:.95rem}
+.tsc-pk{font-size:.88rem;color:var(--bad);font-weight:700}
+.tsc-mb{align-self:flex-start;min-height:44px}
+.tsc-old .tsc-mq{margin:4px 0 8px}
+.tsc .tsc-note{font-size:.88rem;color:var(--muted)}
+/* past tests, one past test, questions I keep missing (#past), results tiles, the stop-test sheet, the hub-link box. Scoped names: .pst* .rtl .stopd .hlk* */
+.rtl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 0;max-width:540px}
+.rtl>div{background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;font-size:.9rem;color:var(--muted)}
+.rtl b{font-family:var(--f-display);font-weight:700;font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.rtl .rtm{border-color:var(--bad)}.rtl .rtm b{color:var(--bad)}
+.rtl .rts{border-style:dashed}.rtl .rts b{color:var(--muted)}
+.pst h2{margin:0}.pst>*+*{margin-top:12px}
+.pst .back{color:var(--user)}
+.pstl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pstr{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:44px}
+button.pstr{cursor:pointer}button.pstr:hover{border-color:var(--ink)}
+.pstr.psto{border-style:dashed;background:transparent}
+.pstr>span:first-child{display:flex;flex-direction:column;gap:3px;min-width:0}
+.pstw{font-weight:700;font-size:1.02rem}
+.pstm{font-size:.9rem;color:var(--muted)}
+.psts{font-size:.9rem;font-weight:700;color:var(--muted)}.psts.on{color:var(--good)}
+.pstp{flex:none;font-family:var(--f-display);font-weight:700;font-size:1.75rem;line-height:1}
+.psttop{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:12px;row-gap:4px}
+.pst .btn.big{width:100%}
+.pstq{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;line-height:1.35}
+.pstq:hover{border-color:var(--ink)}
+.pstq .pstk{font-size:.88rem;font-weight:700;color:var(--muted)}.pstq .pstk.fail{color:var(--bad)}
+.stopd .btn.big{width:100%}.stopd h2:focus{outline:none}
+.stopd .stopq{color:var(--bad);align-self:center;display:block;margin:0 auto;font-family:var(--f-display);font-weight:600;font-size:1rem}
+.hlk .fld{margin-top:4px}.hlkf{display:flex;flex-direction:column;gap:10px;padding:0 0 14px}
 .tsc-old summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:.92rem}
 .tsc-old>div{padding:4px 0;border-top:1px solid var(--line)}
 .tsc-foot{margin:0}
@@ -620,6 +652,7 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   </section>
 
   <section class="card results" id="results" hidden></section>
+  <section class="card results pst" id="past" aria-live="off" hidden></section>
 
   <div class="grid" id="main">
     <section class="card" aria-label="Question">
@@ -646,6 +679,8 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
         <button class="btn primary" id="next">Next</button>
         <button class="btn primary" id="dueBack" hidden>Back to Learn</button>
         <button class="btn" id="finish" hidden>Finish test</button>
+        <button class="btn" id="stopBtn" hidden>Stop test</button>
+        <button class="btn primary" id="revBack" hidden>Back to results</button>
       </div>
       <p class="small" id="foot"></p>
       <button class="linkb" id="redo" hidden>Clear my answers in this set</button>
@@ -734,6 +769,14 @@ body{padding-bottom:calc(32px + var(--ntch,0px))}
   <p class="nwsmore">Questions? See <button class="lnk" data-help>Help &amp; FAQ</button></p>
   <button class="btn primary big" data-news-close>Got it</button>
 </dialog>
+<dialog class="infod trkd trks stopd" id="stopD" aria-labelledby="stopH">
+  <i class="trkgrip" aria-hidden="true"></i>
+  <h2 id="stopH" tabindex="-1">Stop the test now?</h2>
+  <p id="stopTx"></p>
+  <button class="btn primary big" id="stopGo">Stop and score</button>
+  <button class="btn big" id="stopKeep">Keep going</button>
+  <button class="linkb stopq" id="stopQuit">Quit without scoring</button>
+</dialog>
 <dialog class="infod tipd" id="tipD" aria-labelledby="tipH">
   <h2 id="tipH">Keep it free</h2>
   <p>Balloon Written Prep is free for every student and always will be. If it helped you, a tip helps keep it going. It's a tip, not a donation, so it isn't tax-deductible.</p>
@@ -750,6 +793,11 @@ const AREA=Object.fromEntries(AREAS);
 // Anyone who used the app before (any progress, or S.newsSeen set) sees the newest entry once, on their next visit; a new student never does.
 // S.newsSeen = the newest v seen; it syncs with the account like the rest of S. The footer's What's new link shows the last few entries.
 const NEWS=[
+ {v:'2026-10-26',items:[
+  'My past tests: every practice test you finish is kept, and you can open one to go over the questions you missed. Find it on the Practice test page.',
+  'Questions I keep missing gathers the ones you miss again and again, so you can practise just those.',
+  'Short on time? Stop test scores you on what you answered. Questions you didn’t reach are skipped, not missed.',
+  'In a class? Send any past test to your instructor, with the questions you missed if you like.']},
  {v:'2026-10-23',items:[
   'Pick the test you’re taking: Private or Commercial. Practice tests now match that test’s number of questions and time. Tap the test name at the top to switch.',
   'Studying for Commercial? A new Teaching section in Learn has lessons and questions on how people learn and how to teach.',
@@ -794,6 +842,9 @@ const stamp=id=>{(S.at||(S.at={}))[id]=Date.now();};  // S.at[id]: when a study 
 
 // ---------- view state ----------
 let mode='study',filter='ALL',list=[],pos=0,tick=null;
+// past tests (mode 'past'): PV = {v:'list'} · {v:'one', end} · {v:'missed', all?}. RVS = {end} while reviewing a past test's missed questions (mode 'review').
+// mode 'drill' = practising the questions you keep missing: answers live in drillAns for this visit only (like the review queue), and feed the review schedule.
+let PV={v:'list'},RVS=null;const drillAns={};
 const $=id=>document.getElementById(id);
 const L='ABC';
 const cur=()=>byId[list[pos]];
@@ -825,8 +876,9 @@ function studyResume(){const a=SPOS();filter=a.f||'ALL';if(filter==='UNGRADED'&&
 function toggleShuffle(){const a=SPOS(),id=list[pos];a.sh=!a.sh;if(a.sh)a.seed=Math.floor(Math.random()*1e9);list=studyList();pos=Math.max(0,list.indexOf(id));save();renderAll();}
 
 // what the learner picked for a question in the current context
-function picked(id){if(mode==='due')return dueAns[id];if(mode==='study')return S.study[id];if(S.test)return S.test.answers[id];}
-function revealed(id){if(GRADE)return true;if(mode==='due')return dueAns[id]!==undefined;if(mode==='study')return S.study[id]!==undefined;return mode==='review';}
+function picked(id){if(mode==='due')return dueAns[id];if(mode==='drill')return drillAns[id];if(mode==='study')return S.study[id];if(mode==='review'&&RVS){const a=rvsAns();return a?a[id]:undefined;}if(S.test)return S.test.answers[id];}
+function revealed(id){if(GRADE)return true;if(mode==='due')return dueAns[id]!==undefined;if(mode==='drill')return drillAns[id]!==undefined;if(mode==='study')return S.study[id]!==undefined;return mode==='review';}
+const rvsAns=()=>{const e=RVS&&tHist().find(h=>h.end===RVS.end);return e&&e.m?Object.fromEntries(e.m):null;};
 
 // ---------- rendering ----------
 function renderFilters(){const f=$('filters'),sl=f.scrollLeft;f.innerHTML='';if(mode!=='study'){f.hidden=true;return;}f.hidden=false;
@@ -860,7 +912,7 @@ function renderQ(){
   q.choices.forEach((t,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML=`<b>${L[i]}</b><span></span>`;b.lastChild.textContent=t;
     if(rev){b.disabled=mode!=='test'||GRADE?true:false;if(i===q.answer)b.classList.add('right');else if(i===p)b.classList.add('wrong');}
     else if(i===p)b.classList.add('picked');
-    if(mode==='review'||((mode==='study'||mode==='due')&&rev)||GRADE)b.disabled=true;
+    if(mode==='review'||((mode==='study'||mode==='due'||mode==='drill')&&rev)||GRADE)b.disabled=true;
     b.onclick=e=>answer(i,!e.detail);box.appendChild(b);});
   const fb=$('fb');fb.innerHTML='';
   if(rev){const ok=p===q.answer;
@@ -871,8 +923,9 @@ function renderQ(){
   $('howRow').hidden=!(fig&&q.elev!==undefined&&rev);
   $('flag').setAttribute('aria-pressed',String(!!S.flags[q.id]));
   $('prev').disabled=pos===0;$('next').disabled=pos>=list.length-1;
-  $('finish').hidden=mode!=='test';
+  $('finish').hidden=$('stopBtn').hidden=mode!=='test';
   $('timer').hidden=mode!=='test';
+  {const rb=$('revBack');rb.hidden=mode!=='review'&&mode!=='drill';rb.textContent=mode==='drill'?'Back to the list':RVS?'Back to this test':'Back to results';}
   renderGrader(q);
   if(mode==='study'){const a=SPOS();a.at=a.at||{};if(a.f!==filter||a.at[filter]!==q.id){a.f=filter;a.at[filter]=q.id;save();}}
   const done=list.filter(id=>picked(id)!==undefined).length;
@@ -882,6 +935,8 @@ function renderQ(){
   else if(mode==='due'){const left=dueIds().length;dueEnd=!left||(pos>=list.length-1&&picked(q.id)!==undefined);
     $('foot').textContent=!left?`Review done for today. Nice work.${dueSoon()?' Coming up: '+dueSoon()+'.':''}`:dueEnd?`Review done for now. ${left} you skipped ${left===1?'is':'are'} still due today.`:`Review ${pos+1} of ${list.length} · ${left} still due today.`;}
   else if(mode==='test')$('foot').textContent=`${done} of ${list.length} answered · ${list.filter(id=>S.flags[id]).length} flagged`;
+  else if(mode==='drill'){const r=list.filter(id=>drillAns[id]===byId[id].answer).length;$('foot').textContent=done?`${r} of ${done} right · ${list.length-done} to go`:`Questions you keep missing: ${list.length}. Pick an answer to see the explanation.`;}
+  else if(RVS)$('foot').textContent='Reviewing the questions you missed on this test. Answers are locked.';
   else $('foot').textContent='Reviewing your test. Answers are locked.';
   $('dueBack').hidden=!dueEnd;$('next').hidden=dueEnd;
   const rd=$('redo');rd.hidden=!(mode==='study'&&!GRADE&&done);if(rd.dataset.armed!=='1')rd.textContent=`Clear my ${done} answer${done===1?'':'s'} in this set and try again`;
@@ -906,6 +961,7 @@ function fallbackCopy(text,done){const t=document.createElement('textarea');t.va
 function answer(i,kb){const q=cur();if(GRADE||mode==='review')return;
   if(mode==='study'){if(S.study[q.id]!==undefined)return;S.study[q.id]=i;stamp(q.id);sched(q.id,i===q.answer);}
   else if(mode==='due'){if(dueAns[q.id]!==undefined)return;dueAns[q.id]=i;sched(q.id,i===q.answer);}
+  else if(mode==='drill'){if(drillAns[q.id]!==undefined)return;drillAns[q.id]=i;sched(q.id,i===q.answer);}
   else if(mode==='test'){S.test.answers[q.id]=i;}
   const had=$('choices').contains(document.activeElement);
   save();renderQ();if(mode==='study')renderFilters();
@@ -928,54 +984,89 @@ function renderAll(){
   $('help').hidden=mode!=='help';if(mode==='help')renderHelp();
   renderFilters();
   const showStart=mode==='test'&&!S.test?.started;
-  $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';
-  $('main').hidden=mode==='teststart'||mode==='results'||mode==='learn'||mode==='ref'||mode==='help'||!list.length;
-  if(mode==='results')renderResults();
+  $('testStart').hidden=!(mode==='teststart');$('results').hidden=mode!=='results';$('past').hidden=mode!=='past';
+  $('main').hidden=mode==='teststart'||mode==='results'||mode==='past'||mode==='learn'||mode==='ref'||mode==='help'||!list.length;
+  // results and a past test both hold a send card with the same ids: only the one on screen keeps its content
+  if(mode==='results')renderResults();else $('results').innerHTML='';
+  if(mode==='past')renderPast();else $('past').innerHTML='';
   if(!$('main').hidden)renderQ();
   tRender();
   syncURL();
 }
-function renderResults(){const T=S.test,el=$('results');const ids=T.list,right=ids.filter(id=>T.answers[id]===byId[id]?.answer).length,pct=Math.round(right/ids.length*100),pass=pct>=PASS,tr=hTr(T);
-  const by={};ids.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
-  const H=tHist().filter(h=>hTr(h)===tr),hi=H.findIndex(h=>h.end===T.end),prev=hi>0?H[hi-1]:null;
+// a test's questions split by what happened: answered right, answered wrong (missed) and not answered (skipped, never missed)
+function tCount(T,ans){ans=ans||T.answers||{};const ids=(T.list||[]).filter(id=>byId[id]),a=ids.filter(id=>ans[id]!==undefined),ok=a.filter(id=>ans[id]===byId[id].answer);
+  return {ids,a,ok,miss:a.filter(id=>ans[id]!==byId[id].answer),sk:ids.length-a.length};}
+const rTiles=(r,m,k)=>`<div class="rtl"><div><b>${r}</b>right</div><div class="rtm"><b>${m}</b>missed</div><div class="rts"><b>${k}</b>skipped</div></div>`;
+function renderResults(){const T=S.test,el=$('results'),c=tCount(T),ids=c.ids,n=c.a.length,right=c.ok.length,miss=c.miss,sk=c.sk,pct=n?Math.round(right/n*100):0,pass=pct>=PASS,tr=hTr(T);
+  const by={};c.a.forEach(id=>{const q=byId[id];const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});  // areas count answered questions only
+  const H=tHist().filter(h=>hTr(h)===tr),hi=H.findIndex(h=>h.end===T.end),prev=hi>0?H[hi-1]:null,me=hi>=0?H[hi]:null;
   const secs=Math.floor((T.used!=null?T.used:(T.end||Date.now())-T.start)/1000);
   const pa=(k,p)=>{const x=prev&&prev.ar&&prev.ar[k];if(!x||!x[1])return '<td class="tqd"></td>';const d=p-Math.round(x[0]/x[1]*100);return `<td class="tqd" title="Change since your previous test (${Math.round(x[0]/x[1]*100)}%)">${d>0?'+'+d:d<0?'−'+(-d):'='}</td>`;};
-  let to='';if(T.to){const n=ids.length,tr=ids.filter(id=>T.to.a[id]===byId[id]?.answer).length,ta=ids.filter(id=>T.to.a[id]!==undefined).length,tp=Math.round(tr/n*100);
-    to=`<p class="small">Time ran out with ${ta} of ${n} answered. At that point you had ${tr} right: <b class="${tp>=PASS?'pass':'fail'}">${tp}%</b>${tp>=PASS?', a pass':`, below ${PASS}%`}. The real test would have ended there; the ${pct}% above counts the answers you gave after time too.</p>`;}
-  el.innerHTML=`<h2>${TRACKS[tr].name} practice test results</h2><div class="big ${pass?'pass':'fail'}">${pct}%</div><p style="margin:6px 0 0">${right} of ${ids.length} correct · ${pass?'Passing':`Below the ${PASS}% passing score`} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}${T.used!=null?` of ${Math.round(tLim(T)/6e4)} on the clock`:''}</p>${to}
-   <table class="areas${prev?' tqv':''}"><thead><tr><th>Area</th><th></th><th>Score</th>${prev?'<th class="tqd" title="Change in percent since your previous test">vs last</th>':''}</tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td>${prev?pa(k,p):''}</tr>`;}).join('')}</tbody></table>${S.cls&&T.done&&T.end?`<section class="card tsc" id="tscCard">${scoInner(T)}</section>`:''}
-   <div class="row-btns"><button class="btn primary" id="rMiss"${ids.length-right?'':' disabled'}>${ids.length-right?`Review missed (${ids.length-right})`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>${TIP_URL?'<p class="small tipr">This app is free. If it helped, you can leave a tip. <button class="lnk" data-tip>Leave a tip</button></p>':''}${tHistHTML(H,T.end,tr)}`;
+  let to='';if(T.to){const t=tCount(T,T.to.a),ta=t.a.length,tr2=t.ok.length,tp=ta?Math.round(tr2/ta*100):0;
+    to=`<p class="small">Time ran out with ${ta} of ${ids.length} answered. At that point you had ${tr2} right${ta?`: <b class="${tp>=PASS?'pass':'fail'}">${tp}%</b>${tp>=PASS?', a pass':`, below ${PASS}%`}`:''}. The real test would have ended there; the ${pct}% above counts the answers you gave after time too.</p>`;}
+  const how=T.stop?`<p class="small">Stopped at question ${T.stop} of ${ids.length}. Scored on what you answered, not the whole test.</p>`:sk?`<p class="small">${sk} left unanswered. Scored on the ${n} you answered: unanswered questions are skipped, not missed.</p>`:'';
+  el.innerHTML=`<h2>${TRACKS[tr].name} practice test results${T.stop?' · stopped early':''}</h2><div class="big ${pass?'pass':'fail'}">${n?pct+'%':'No score'}</div><p style="margin:6px 0 0">${!n?'Nothing was answered, so there is nothing to score':sk?`${right} right of the ${n} you answered`:`${right} of ${n} correct`}${n?` · ${pass?'Passing':`Below the ${PASS}% passing score`}`:''} · ${secs<60?'under a minute':Math.floor(secs/60)+' min'}${T.used!=null?` of ${Math.round(tLim(T)/6e4)} on the clock`:''}</p>${how}${to}${rTiles(right,miss.length,sk)}
+   <table class="areas${prev?' tqv':''}"><thead><tr><th>Area</th><th></th><th>Score</th>${prev?'<th class="tqd" title="Change in percent since your previous test">vs last</th>':''}</tr></thead><tbody>${AREAS.filter(([k])=>by[k]).map(([k,n])=>{const a=by[k],p=Math.round(a.r/a.n*100);return `<tr><td>${n}</td><td><div class="meter"><i style="width:${p}%"></i></div></td><td>${a.r}/${a.n}</td>${prev?pa(k,p):''}</tr>`;}).join('')}</tbody></table>${S.cls&&T.done&&T.end&&me?`<section class="card tsc" id="tscCard">${scoInner(me,'res')}</section>`:''}
+   <div class="row-btns"><button class="btn primary" id="rMiss"${miss.length?'':' disabled'}>${miss.length?`Review the ${miss.length} missed`:'No missed questions'}</button><button class="btn" id="rAll">Review all</button><button class="btn" id="rNew">New test</button><button class="btn" id="rPlan">Build my study plan</button></div>${sk?'<p class="small">Skipped questions never count as missed: not here, not in “Questions I keep missing”, and not in what your instructor sees.</p>':''}${TIP_URL?'<p class="small tipr">This app is free. If it helped, you can leave a tip. <button class="lnk" data-tip>Leave a tip</button></p>':''}${tHistHTML(H,T.end,tr)}`;
   $('rPlan').onclick=()=>goLearn('plan');
-  $('rMiss').onclick=()=>{list=ids.filter(id=>T.answers[id]!==byId[id]?.answer);pos=0;mode='review';renderAll();};
-  $('rAll').onclick=()=>{list=ids.slice();pos=0;mode='review';renderAll();};
+  $('rMiss').onclick=()=>{RVS=null;list=miss.slice();pos=0;mode='review';renderAll();};
+  $('rAll').onclick=()=>{RVS=null;list=ids.slice();pos=0;mode='review';renderAll();};
   $('rNew').onclick=()=>{mode='teststart';renderAll();};
-  scoBind();if(S.cls&&T.done&&T.end&&T.scAuto&&scoAuto()){const k=scoK(S.cls,T);if(!scoSent()[k]&&!SCO.busy[k]&&!SCO.err[k])scoSend(T);}}  // Always send: retry one that could not go out when the test finished
+  scoBind(me);if(S.cls&&T.done&&T.end&&T.scAuto&&scoAuto()&&me){const k=scoK(S.cls,me);if(!scoSent()[k]&&!SCO.busy[k]&&!SCO.err[k])scoSend(me);}}  // Always send: retry one that could not go out when the test finished
 
 // ---------- scores to the instructor: only when the student taps, or has Always send on for THIS class ----------
 // S.sendScores = the class code Always send is on for (joining another class starts with it off). S.scSent['<code>:<test end>'] = when it was sent.
-// What goes: track, n, right, active seconds, per-area [right,total], per-area flag counts, and when the test finished. Never answers, question ids or text.
-// The Worker also keeps one copy per test (same student + finish time), so a second send just returns the first one's time.
-const scoK=(C,T)=>C.code+':'+T.end,scoSent=()=>S.scSent&&typeof S.scSent==='object'?S.scSent:(S.scSent={}),scoAuto=()=>!!S.cls&&S.sendScores===S.cls.code;
-const SCO={busy:{},err:{}};
-function scoBody(T){const e=tHist().find(h=>h.end===T.end);if(!e||!e.ar||!e.n)return null;const fl={};
-  T.list.forEach(id=>{const q=byId[id];if(q&&S.flags[id])fl[q.area]=(fl[q.area]||0)+1;});
-  return {track:hTr(e),n:e.n,right:e.r,pct:e.pct,pass:e.pct>=PASS,sec:Math.max(0,Math.min(Math.round(e.sec)||0,604800)),areas:e.ar,flags:fl,taken:T.end};}
+// S.scMiss['<code>:<test end>'] = 1 when that copy went with its missed questions. Any past test (an S.hist entry) can be sent, any time.
+// What goes: track, n (questions answered), right, active seconds, per-area [right,answered], per-area flag counts, when the test finished,
+// the test's length (of) and how many were skipped. Question ids + the answer picked (0-2) go ONLY when the student ticks "Include the questions
+// I missed" (never with Always send). Never question text, never the answers to questions they got right.
+// The Worker keeps one copy per test (same student + finish time): a second send returns the first one's time, or adds the missed questions to it.
+const scoK=(C,e)=>C.code+':'+e.end,scoSent=()=>S.scSent&&typeof S.scSent==='object'?S.scSent:(S.scSent={}),scoAuto=()=>!!S.cls&&S.sendScores===S.cls.code;
+const scoMiss=()=>S.scMiss&&typeof S.scMiss==='object'?S.scMiss:(S.scMiss={});
+const SCO={busy:{},err:{},inc:{}};
+// an S.hist entry -> the POST body (null if it can't be read). inc = include the missed questions.
+function scoBody(e,inc){if(!e||!e.ar||!e.n)return null;const T=S.test,fl={};
+  // flags are counted over the questions the area totals count: the answered ones (from the entry), or the whole saved test for an entry from before the update
+  const ids=e.m?[...(e.ok||[]),...e.m.map(x=>x[0])]:T&&T.end===e.end&&Array.isArray(T.list)?T.list:[];
+  ids.forEach(id=>{const q=byId[id],a=q&&e.ar[q.area];if(a&&S.flags[id]&&(fl[q.area]||0)<a[1])fl[q.area]=(fl[q.area]||0)+1;});
+  const b={track:hTr(e),n:e.n,right:e.r,pct:e.pct,pass:e.pct>=PASS,sec:Math.max(0,Math.min(Math.round(e.sec)||0,604800)),areas:e.ar,flags:fl,taken:e.end};
+  if(e.of!=null){b.of=e.of;b.skipped=e.of-e.n;}
+  if(inc&&e.m&&e.m.length)b.missed=e.m.map(([id,pick])=>({id,pick}));
+  return b;}
 const scoWhen=t=>{const d=new Date(t),n=new Date(),y=new Date(n.getFullYear(),n.getMonth(),n.getDate()-1),tm=d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
   return d.toDateString()===n.toDateString()?'today, '+tm:d.toDateString()===y.toDateString()?'yesterday, '+tm:tDay(t)+', '+tm;};
-function scoInner(T){const C=S.cls;if(!C||!T||!T.done||!T.end)return '';const k=scoK(C,T),at=scoSent()[k],auto=scoAuto(),busy=SCO.busy[k],er=SCO.err[k];
-  const what='Only this result goes: the score, time, areas, and how many questions you flagged in each area.';
-  return `<h3 class="tsc-h">${at?'Sent to your instructor':busy&&auto?'Sending to your instructor…':'Send this score to your instructor?'}</h3>
-    <p class="mut sm">${esc(C.name)}. ${at?(auto?'Your finished practice tests go there on their own: the score, time, areas and flag counts, never your answers.':'Only the score, time, areas and flag counts went, never your answers.'):what+' Nothing is sent unless you tap.'}</p>
-    ${at?`<div class="okc tsc-ok" id="tscSt" role="status" tabindex="-1">Sent ✓ · ${esc(scoWhen(at))}</div>`:`<button class="btn primary big" id="tscGo"${busy?' disabled':''}>${busy?'Sending…':er?'Try again':'Send to my instructor'}</button><div class="mut sm" id="tscSt" role="status" tabindex="-1">${er?esc(er):''}</div>`}
-    <label class="tsc-chk"><input type="checkbox" id="tscAlw"${auto?' checked':''}> Always send my practice test scores</label>`;}
-function scoBind(){const g=$('tscGo'),a=$('tscAlw');if(g)g.onclick=()=>scoSend(S.test,true);
+// ctx 'res' = the results page (with Always send), 'past' = a past test's page
+function scoInner(e,ctx){const C=S.cls;if(!C||!e)return '';const k=scoK(C,e),at=scoSent()[k],withM=!!scoMiss()[k],auto=scoAuto(),busy=SCO.busy[k],er=SCO.err[k];
+  const who=esc(C.instructor),first=esc(C.instructor.split(' ')[0]),nm=e.m?e.m.length:0,inc=nm>0&&SCO.inc[k]!==false;
+  const btn=(label)=>`<button class="btn primary big" id="tscGo"${busy?' disabled':''}>${busy?'Sending…':er?'Try again':label}</button><div class="mut sm" id="tscSt" role="status" tabindex="-1">${er?esc(er):''}</div>`;
+  let h;
+  if(at){const more=nm&&!withM;
+    h=`<h3 class="tsc-h">${more&&busy?'Sending your missed questions…':`Sent to ${who}`}</h3>
+    <div class="okc tsc-ok"${more?'':' id="tscSt" role="status" tabindex="-1"'}>Sent ✓ · ${esc(scoWhen(at))}</div>
+    <p class="mut sm">${withM?`With the ${nq(nm)} you missed and the answer you picked, so you can go over them together.`:`The score, time, areas and flag counts went${auto&&ctx==='res'?' on their own (Always send)':''}, not your answers.`}</p>
+    ${more?`<p class="mut sm">Want to go over the ${nm} you missed with ${first}? This adds them, with the answer you picked, to the copy ${first} already has.</p>${btn(`Also send the ${nm} missed`)}`:''}`;}
+  else h=`<h3 class="tsc-h">${busy&&auto&&ctx==='res'?`Sending to ${who}…`:`Send this test to ${who}`}</h3>
+    <p class="mut sm">${inc?`${first} sees the score, time, areas, and <b>the ${nq(nm)} you missed with the answer you picked</b>, so you can go over them together.`:`${first} sees the score, time, areas and how many questions you flagged in each area. Not your answers.`} Nothing is sent unless you tap.</p>
+    ${nm?`<label class="tsc-chk"><input type="checkbox" id="tscInc"${inc?' checked':''}> Include the questions I missed</label>`:''}
+    ${btn(`Send to ${who}`)}<p class="tsc-note">You can send any past test, any time. Sending twice keeps one copy.</p>`;
+  if(ctx==='res')h+=`<label class="tsc-chk"><input type="checkbox" id="tscAlw"${auto?' checked':''}> Always send my practice test scores</label>${auto?'<p class="tsc-note">Always send sends the score, time, areas and flag counts, never your missed questions. You can add those to any test here.</p>':''}`;
+  return h;}
+function scoBind(e){const g=$('tscGo'),a=$('tscAlw'),i=$('tscInc');if(!e)return;const k=S.cls?scoK(S.cls,e):'';
+  if(g)g.onclick=()=>scoSend(e,true,!!scoSent()[k]||!!(e.m&&e.m.length&&SCO.inc[k]!==false));
+  if(i)i.onchange=()=>{SCO.inc[k]=i.checked;scoPaint();const b=$('tscInc');if(b)b.focus();};
   if(a)a.onchange=()=>{if(!S.cls)return;S.sendScores=a.checked?S.cls.code:null;save();scoPaint();const b=$('tscAlw');if(b)b.focus();};}
-function scoPaint(focus){const el=$('tscCard');if(!el||mode!=='results'||!S.cls)return;el.innerHTML=scoInner(S.test);scoBind();if(focus){const t=$('tscSt');if(t)t.focus({preventScroll:true});}}
-async function scoSend(T,tap){const C=S.cls;if(!C||!T||!T.done||!T.end)return;const k=scoK(C,T);if(scoSent()[k]||SCO.busy[k])return;
-  const b=scoBody(T);if(!b){SCO.err[k]='This test could not be read, so it cannot be sent.';scoPaint(tap);return;}
+// the entry whose card is on screen: the results page's test, or the past test being shown
+const scoOn=()=>mode==='results'&&S.test?tHist().find(h=>h.end===S.test.end):mode==='past'&&PV.v==='one'?tHist().find(h=>h.end===PV.end):null;
+function scoPaint(focus){const el=$('tscCard'),e=scoOn();if(!el||!e||!S.cls)return;el.innerHTML=scoInner(e,mode==='results'?'res':'past');scoBind(e);if(focus){const t=$('tscSt');if(t)t.focus({preventScroll:true});}}
+async function scoSend(e,tap,inc){const C=S.cls;if(!C||!e||!e.end)return;const k=scoK(C,e),want=!!(inc&&e.m&&e.m.length);
+  if(scoSent()[k]&&!(want&&!scoMiss()[k])||SCO.busy[k])return;  // already there (a second tap only goes when it adds the missed questions)
+  const b=scoBody(e,want);if(!b){SCO.err[k]='This test could not be read, so it cannot be sent.';scoPaint(tap);return;}
   SCO.busy[k]=1;delete SCO.err[k];scoPaint();
   try{const d=await api(`/classes/${C.code}/scores`,{method:'POST',stu:C,body:b});const s=scoSent();s[k]=typeof d.created==='number'?d.created:Date.now();
-    const ks=Object.keys(s);if(ks.length>100)ks.sort((x,y)=>s[x]-s[y]).slice(0,ks.length-100).forEach(x=>delete s[x]);save();}
+    if(want&&(!d.dup||d.updated||d.withMissed))scoMiss()[k]=1;
+    else if(want&&d.dup&&!d.updated)SCO.err[k]=`${C.instructor.split(' ')[0]} already has this test, so the missed questions were not added.`;
+    const ks=Object.keys(s);if(ks.length>100)ks.sort((x,y)=>s[x]-s[y]).slice(0,ks.length-100).forEach(x=>delete s[x]);
+    Object.keys(scoMiss()).forEach(x=>{if(!s[x])delete scoMiss()[x];});save();}
   catch(e){SCO.err[k]=e.qa&&e.message==='Not in this class'?'Your instructor’s class no longer lists you, so this score was not sent. Join the class again from the Learn page.':qaMsg(e);}
   finally{delete SCO.busy[k];}
   scoPaint(tap);}
@@ -1007,16 +1098,23 @@ function tShow(){const T=S.test,el=$('timer');if(mode!=='test'||!T||T.done)retur
 function tRender(){clearInterval(tick);tSync();if(mode!=='test')$('tqup').hidden=true;if(mode==='teststart')tStart();if(mode==='test'){tShow();tick=setInterval(tShow,1000);}}
 document.addEventListener('visibilitychange',()=>{tSync();if(mode==='test')tShow();});
 addEventListener('pagehide',()=>{if(tRun){tFold();save();}});
-$('tqSee').onclick=()=>{const f=$('finish');f.dataset.armed='1';f.click();};  // the real Finish, without the unanswered prompt
+$('tqSee').onclick=()=>{const T=S.test;if(!T)return;if(tCount(T).a.length)tEnd(false);else stopOpen('finish');};  // the real Finish, without the unanswered prompt (nothing answered: nothing to score)
 $('tqGo').onclick=()=>{if(!S.test)return;S.test.untimed=true;save();tShow();};
 // S.hist: one compact entry per finished test, oldest first, capped at 50. A finished test from before history existed is added on first sight.
+// {end, track, n, r, pct, sec, ar:{AREA:[right,n]}, wall?, to?, tor?, ton?} and, since 2026-10-26 (past tests), the questions themselves:
+// n = questions ANSWERED (unanswered ones are skipped, never missed), of = the test's length, sk = skipped, m = [[id, pick],...] missed with the
+// answer picked (0-2), ok = [ids] answered right (so "Missed 2 of 3 times" knows how often a question was seen), stop = question the test was stopped on.
+// Entries from before keep only the score ("score only"); they are never rewritten, except the latest test's, which gains its questions when
+// every one was answered (its numbers are then the same under either rule).
 function tHist(){if(!Array.isArray(S.hist))S.hist=[];S.hist=S.hist.filter(h=>h&&typeof h==='object'&&isFinite(h.pct)&&isFinite(h.end));const H=S.hist,T=S.test;
-  if(T&&T.done&&T.end&&Array.isArray(T.list)&&!H.some(h=>h.end===T.end)){const ids=T.list.filter(id=>byId[id]);
-    if(ids.length){const ok=(a,id)=>a&&a[id]===byId[id].answer,r=ids.filter(id=>ok(T.answers,id)).length,ar={};
-      ids.forEach(id=>{const x=ar[byId[id].area]=ar[byId[id].area]||[0,0];x[1]++;if(ok(T.answers,id))x[0]++;});
-      const e={end:T.end,track:hTr(T),n:ids.length,r,pct:Math.round(r/ids.length*100),sec:Math.round((T.used!=null?T.used:T.end-(T.start||T.end))/1e3),ar};
-      if(T.used==null)e.wall=1;if(T.to){e.to=1;e.tor=ids.filter(id=>ok(T.to.a,id)).length;}
-      H.push(e);H.sort((x,y)=>x.end-y.end);if(H.length>50)H.splice(0,H.length-50);save();}}
+  if(T&&T.done&&T.end&&Array.isArray(T.list)){const c=tCount(T),ok=id=>T.answers[id]===byId[id].answer,had=H.find(h=>h.end===T.end);
+    if(!had&&c.a.length){const ar={};
+      c.a.forEach(id=>{const x=ar[byId[id].area]=ar[byId[id].area]||[0,0];x[1]++;if(ok(id))x[0]++;});
+      const e={end:T.end,track:hTr(T),n:c.a.length,r:c.ok.length,pct:Math.round(c.ok.length/c.a.length*100),sec:Math.round((T.used!=null?T.used:T.end-(T.start||T.end))/1e3),ar,
+        of:c.ids.length,sk:c.sk,m:c.miss.map(id=>[id,T.answers[id]]),ok:c.ok.slice()};
+      if(T.stop)e.stop=T.stop;if(T.used==null)e.wall=1;if(T.to){const t=tCount(T,T.to.a);e.to=1;e.tor=t.ok.length;e.ton=t.a.length;}
+      H.push(e);H.sort((x,y)=>x.end-y.end);if(H.length>50)H.splice(0,H.length-50);save();}
+    else if(had&&!had.m&&!c.sk&&had.n===c.ids.length&&had.r===c.ok.length){had.of=c.ids.length;had.sk=0;had.m=c.miss.map(id=>[id,T.answers[id]]);had.ok=c.ok.slice();save();}}
   return H;}
 function histAdd(){tFold();tRun=0;tHist();}
 const tDay=t=>new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric',...(new Date(t).getFullYear()!==new Date().getFullYear()?{year:'numeric'}:{})});
@@ -1026,9 +1124,9 @@ function tSum(H){if(!H.length)return '';const n=H.length,avg=Math.round(H.reduce
 function tHistHTML(H,cur,tr){if(!H.length)return '';const L=H.slice(-20);
   const chart=H.length<2?`<p class="small">Your first recorded test. Every test you finish is added here, so you can see your scores change over time.</p>`:
    `<div class="tqtr" role="img" aria-label="Scores of your last ${L.length} tests, oldest first: ${L.map(h=>h.pct+'%').join(', ')}. The line marks the ${PASS}% passing score.">${L.map(h=>`<i class="${h.pct>=PASS?'g':''}" style="height:${Math.max(3,h.pct)}%" title="${tDay(h.end)}: ${h.pct}%"></i>`).join('')}<s></s><b>${PASS}%</b></div><p class="tqcap">Your last ${L.length} tests, oldest to newest. The line is the ${PASS}% passing score.</p>`;
-  const row=h=>`<li${h.end===cur?' class="tqcur"':''}><span>${tDay(h.end)}${h.end===cur?'<small>this test</small>':''}${h.to?`<small>time ran out at ${Math.round(h.tor/h.n*100)}%</small>`:''}</span><span>${h.pct}%</span><span class="${h.pct>=PASS?'pass':'fail'}">${h.pct>=PASS?ICON.check+'Pass':ICON.x+'Not yet'}</span><span${h.wall?' title="Clock time: this test was taken before the clock counted active time only"':''}>${tDur(h.sec)}</span></li>`;
+  const row=h=>`<li${h.end===cur?' class="tqcur"':''}><span>${tDay(h.end)}${h.end===cur?'<small>this test</small>':''}${h.to?`<small>time ran out at ${Math.round(h.tor/(h.ton||h.n)*100)}%</small>`:''}${h.sk?`<small>${h.n} of ${h.of} answered</small>`:''}</span><span>${h.pct}%</span><span class="${h.pct>=PASS?'pass':'fail'}">${h.pct>=PASS?ICON.check+'Pass':ICON.x+'Not yet'}</span><span${h.wall?' title="Clock time: this test was taken before the clock counted active time only"':''}>${tDur(h.sec)}</span></li>`;
   const R=H.slice().reverse();
-  return `<div class="tqh"><h3>Your ${TRACKS[tr].name} practice tests</h3><p class="small">${tSum(H)} ${TRACKS[tr==='P'?'C':'P'].name} scores are kept separately. Scores show your practice, not a prediction of the real test.</p>${chart}<ol class="tqlist">${R.slice(0,8).map(row).join('')}</ol>${R.length>8?`<details><summary>Show all ${R.length}</summary><ol class="tqlist">${R.slice(8).map(row).join('')}</ol></details>`:''}</div>`;}
+  return `<div class="tqh"><h3>Your ${TRACKS[tr].name} practice tests</h3><p class="small">${tSum(H)} ${TRACKS[tr==='P'?'C':'P'].name} scores are kept separately. Scores show your practice, not a prediction of the real test.</p>${chart}<div class="row-btns"><button class="btn" data-past="list">My past tests</button></div><ol class="tqlist">${R.slice(0,8).map(row).join('')}</ol>${R.length>8?`<details><summary>Show all ${R.length}</summary><ol class="tqlist">${R.slice(8).map(row).join('')}</ol></details>`:''}</div>`;}
 function tStart(){const held=testHeld(),t=TRK(),nt=BANK.filter(q=>kindOf(q.id)==='test').length,n=Math.min(t.n,nt),T=S.test,c=$('tsClock'),h=$('tsHist'),live=T&&!T.done&&Array.isArray(T.list);
   $('tsH').textContent=held?'Practice test':`${t.name} practice test`;$('tsStats').hidden=$('tsMix').hidden=held;
   $('tsStats').innerHTML=[[n,'questions'],[tHM(n*t.per),'hours'],[PASS+'%','to pass']].map(([v,l])=>`<div><b>${v}</b>${l}</div>`).join('');
@@ -1037,14 +1135,58 @@ function tStart(){const held=testHeld(),t=TRK(),nt=BANK.filter(q=>kindOf(q.id)==
   c.hidden=held||!live;if(live)c.textContent=`Your ${TRACKS[hTr(T)].name} test in progress (${T.list.length} questions) has ${T.to?'run out of time':hms(Math.max(0,Math.ceil((tLim(T)-tUsed(T))/1e3)))+' left'}. It keeps its own length and clock.`;
   $('tsResume').hidden=!live;$('tsGo').hidden=$('tsNote').hidden=held;$('tsReload').hidden=!held;
   const H=held?[]:tHist(),M=H.filter(x=>hTr(x)===trk());h.hidden=!H.length;
-  if(H.length)h.innerHTML=`<div class="eyebrow">Your ${t.name} scores</div>${M.length?`<p>Last ${M.length===1?'test':Math.min(3,M.length)}: ${M.slice(-3).map(x=>x.pct+'%').join(' · ')}</p><p class="small" style="margin:0">${tSum(M)}</p>`:`<p>No ${t.name} tests yet.</p>`}<p class="small" style="margin:0">${TRACKS[trk()==='P'?'C':'P'].name} scores are kept separately.</p>`;}
+  if(H.length)h.innerHTML=`<div class="eyebrow">Your ${t.name} scores</div>${M.length?`<p>Last ${M.length===1?'test':Math.min(3,M.length)}: ${M.slice(-3).map(x=>x.pct+'%').join(' · ')}</p><p class="small" style="margin:0">${tSum(M)}</p>`:`<p>No ${t.name} tests yet.</p>`}<p class="small" style="margin:0">${TRACKS[trk()==='P'?'C':'P'].name} scores are kept separately.</p><div class="row-btns" style="margin-top:8px"><button class="btn" data-past="list">My past tests (${H.length})</button></div>`;}
 
 $('mLearn').onclick=()=>goLearn(LV.v==='home'?'home':LV.v==='plan'?'plan':'home');
 $('mStudy').onclick=()=>{mode='study';if(filter.startsWith('T:'))filter='ALL';list=studyList();pos=studyAt();renderAll();};
-$('mTest').onclick=()=>{if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';renderAll();};
+const goTest=()=>{RVS=null;if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';};
+$('mTest').onclick=()=>{goTest();renderAll();};
 $('tsReload').onclick=()=>location.reload();
 $('tsGo').onclick=()=>{if(testHeld())return;{const l=buildTest();S.test={list:l,answers:{},start:Date.now(),pos:0,done:false,track:trk(),n:l.length,perMs:TRK().per};}save();mode='test';list=S.test.list;pos=0;renderAll();};
 $('tsResume').onclick=()=>{mode='test';list=S.test.list;pos=S.test.pos||0;renderAll();};
+// ---------- past tests: every finished test, one test's missed questions, and the questions you keep missing (Brian + a student asked, 2026-10-26) ----------
+const pWhen=t=>{const w=scoWhen(t);return w[0].toUpperCase()+w.slice(1);};
+const pDet=e=>!!e&&Array.isArray(e.m);  // the entry kept its questions (tests finished from 2026-10-26 on)
+// every question missed at least once on a test that kept its questions: x = times missed, y = times answered (skipped never counts), last = newest miss
+function pMissAgg(){const H=tHist().filter(pDet),c={},get=id=>c[id]||(c[id]={id,x:0,y:0,last:0});
+  H.forEach(e=>{e.m.forEach(([id])=>{const x=get(id);x.x++;x.y++;x.last=Math.max(x.last,e.end);});(e.ok||[]).forEach(id=>get(id).y++);});
+  return {tests:H.length,list:Object.values(c).filter(x=>x.x&&byId[x.id]).sort((a,b)=>b.x-a.x||b.last-a.last)};}
+function pRow(e,C){const pass=e.pct>=PASS,det=pDet(e),sent=C&&scoSent()[scoK(C,e)];
+  const meta=`${esc(TRACKS[hTr(e)].name)} · ${e.r}/${e.n}${det?` · ${tDur(e.sec)} · ${e.m.length} missed${e.sk?` · ${e.sk} skipped`:''}`:' · score only'}`;
+  const inner=`<span><span class="pstw">${esc(pWhen(e.end))}</span><span class="pstm">${meta}</span>${C?`<span class="psts${sent?' on':''}">${sent?`Sent to ${esc(C.instructor)}`:'Not sent'}</span>`:''}</span><span class="pstp ${pass?'pass':'fail'}">${e.pct}%</span>`;
+  return `<li>${det?`<button class="pstr" data-pv="one:${e.end}">${inner}</button>`:`<div class="pstr psto">${inner}</div>`}</li>`;}
+function renderPast(){const el=$('past'),H=tHist(),C=S.cls;let h='';
+  if(PV.v==='one'){const e=H.find(x=>x.end===PV.end);if(!pDet(e)){PV={v:'list'};return renderPast();}
+    const nm=e.m.length,pass=e.pct>=PASS;
+    h=`<button class="back" data-pv="list">${ICON.back}My past tests</button><h2>${esc(pWhen(e.end))}</h2>
+     <div class="psttop"><span class="big ${pass?'pass':'fail'}">${e.pct}%</span><span>${esc(TRACKS[hTr(e)].name)} · ${e.r}/${e.n}${e.sk?` · ${e.n} of ${e.of} answered`:''} · ${pass?'Pass':'Not yet'} · ${tDur(e.sec)}</span></div>
+     ${e.stop?`<p class="small">Stopped at question ${e.stop} of ${e.of}. Scored on what you answered, not the whole test.</p>`:e.sk?`<p class="small">${e.sk} left unanswered: skipped, not missed. Scored on the ${e.n} answered.</p>`:''}
+     ${rTiles(e.r,nm,e.sk||0)}
+     <button class="btn big" data-pv="rev"${nm?'':' disabled'}>${nm?`Review the ${nm} missed`:'No missed questions'}</button>
+     ${C?`<section class="card tsc" id="tscCard">${scoInner(e,'past')}</section>`:''}`;}
+  else if(PV.v==='missed'){const A=pMissAgg(),M=A.list,all=PV.all||M.length<=30,show=all?M:M.slice(0,25);
+    h=`<button class="back" data-pv="list">${ICON.back}My past tests</button><h2>Questions I keep missing</h2>
+     <p class="small">${A.tests?`Across your ${A.tests===1?'last test':`${A.tests} tests`} that kept their questions · most-missed first · skipped questions not counted`:'Tests you finish from now on keep their questions, so the ones you miss gather here.'}</p>`;
+    if(M.length)h+=`<ol class="pstl">${show.map((x,i)=>{const q=byId[x.id];return `<li><button class="pstq" data-pv="drill:${i}"><span class="pstk${x.x>=2?' fail':''}">Missed ${x.x} of ${x.y} time${x.y===1?'':'s'} · ${esc(AREA[q.area]||q.area)}</span><span>${esc(q.stem)}</span></button></li>`;}).join('')}</ol>
+      ${all?'':`<button class="btn big" data-pv="all">Show all ${M.length}</button>`}<button class="btn primary big" data-pv="drill">Practice these ${M.length}</button>`;
+    else if(A.tests)h+='<p>No missed questions on those tests. Nice work.</p>';}
+  else{const R=H.slice().reverse(),N=pMissAgg().list.length,old=R.some(e=>!pDet(e));
+    h=`<button class="back" data-pv="test">${ICON.back}Practice test</button><h2>My past tests</h2>${['P','C'].map(t=>{const M=H.filter(x=>hTr(x)===t);return M.length?`<p class="small" style="margin:4px 0 0">${TRACKS[t].name}: ${tSum(M)}</p>`:'';}).join('')}`;
+    h+=!R.length?`<p>No finished practice tests yet. Every test you finish shows up here, newest first.</p><button class="btn primary big" data-pv="test">Go to Practice test</button>`:
+      `<button class="btn primary big" data-pv="missed"${N?'':' disabled'}>Questions I keep missing (${N})</button><ol class="pstl">${R.map(e=>pRow(e,C)).join('')}</ol>${old?'<p class="small">Tests from before this update kept only the score, so their missed questions can’t be opened. Every test from now on keeps them.</p>':''}`;}
+  el.innerHTML=h;if(PV.v==='one')scoBind(H.find(x=>x.end===PV.end));}
+$('past').addEventListener('click',e=>{const t=e.target.closest('[data-pv]');if(!t||t.disabled)return;const [k,a]=t.dataset.pv.split(/:(.*)/);
+  if(k==='test')goTest();
+  else if(k==='list'||k==='missed')PV={v:k};
+  else if(k==='one')PV={v:'one',end:+a};
+  else if(k==='all'){PV.all=1;renderAll();return;}
+  else if(k==='rev'){const x=tHist().find(h=>h.end===PV.end);if(!pDet(x))return;RVS={end:x.end};list=x.m.map(m=>m[0]).filter(id=>byId[id]);pos=0;mode='review';}
+  else if(k==='drill'){const L2=pMissAgg().list.map(x=>x.id);if(!L2.length)return;Object.keys(drillAns).forEach(i=>delete drillAns[i]);list=L2;pos=a?Math.max(0,Math.min(+a,L2.length-1)):0;mode='drill';}
+  renderAll();window.scrollTo(0,0);});
+// "My past tests" buttons on the test start screen and the results page
+['testStart','results'].forEach(i=>$(i).addEventListener('click',e=>{if(!e.target.closest('[data-past]'))return;RVS=null;mode='past';PV={v:'list'};renderAll();window.scrollTo(0,0);}));
+// review and practice sets reached from results or a past test step back there (as a Back, so history doesn't pile up)
+$('revBack').onclick=()=>{viaBack=true;if(mode==='drill'){mode='past';PV={v:'missed'};}else if(RVS){mode='past';PV={v:'one',end:RVS.end};RVS=null;}else mode='results';renderAll();window.scrollTo(0,0);};
 // ---------- test track: Private / Commercial ----------
 // BANK and TQ hold only the questions shown for the track; byId keeps every question, so saved tests, history and Ask still find theirs.
 // a topic with track:'C' (the Teaching group) is Commercial-only; a group with no topic left on this track is dropped
@@ -1070,9 +1212,27 @@ $('trkSw').addEventListener('click',e=>{if(e.target.closest('[data-trk-done]')||
 if(TIP_URL){$('tipFoot').hidden=false;$('tipGo').href=TIP_URL;}
 document.addEventListener('click',e=>{const d=$('tipD');if(e.target.closest('[data-tip]')){if(TIP_URL)d.showModal();return;}
   if(d.open&&(e.target.closest('[data-tip-close]')||e.target.closest('#tipGo')||e.target===d))d.close();});
-$('finish').onclick=()=>{const left=list.filter(id=>S.test.answers[id]===undefined).length;
-  if(left&&$('finish').dataset.armed!=='1'){$('finish').dataset.armed='1';$('finish').textContent=`${left} unanswered. Tap again to finish`;return;}
-  $('finish').dataset.armed='';$('finish').textContent='Finish test';S.test.done=true;S.test.end=Date.now();histAdd();S.test.list.forEach(id=>sched(id,S.test.answers[id]===byId[id]?.answer));if(scoAuto())S.test.scAuto=1;save();mode='results';renderAll();window.scrollTo(0,0);};
+// Finish and Stop end a test the same way (tEnd). Unanswered questions are skipped, never missed: the score is right ÷ answered, they never join the
+// review queue, the missed list, the study plan or what an instructor sees. A test with nothing answered can't be scored (Keep going or Quit only).
+function tEnd(stop){const T=S.test;if(!T||T.done)return;if(stop)T.stop=Math.min(T.list.length,(T.pos||0)+1);T.done=true;T.end=Date.now();histAdd();
+  T.list.forEach(id=>{if(T.answers[id]!==undefined&&byId[id])sched(id,T.answers[id]===byId[id].answer);});if(scoAuto())T.scAuto=1;save();mode='results';renderAll();window.scrollTo(0,0);}
+let STOPW='stop';  // 'stop' = the Stop test button, 'finish' = Finish with questions left
+function stopOpen(w){const T=S.test;if(!T||T.done)return;STOPW=w;const c=tCount(T),n=c.ids.length,a=c.a.length,left=n-a,d=$('stopD'),q=$('stopQuit');
+  q.dataset.armed='';q.textContent='Quit without scoring';
+  $('stopH').textContent=!a?'Nothing to score yet':w==='finish'?'Finish the test now?':'Stop the test now?';
+  $('stopTx').innerHTML=!a?`You haven't answered any of the ${n} questions yet, so there's nothing to score. Keep going, or quit and this test won't be kept.`:
+    !left?`You've answered all ${n}. You'll be scored on every one.`:
+    `You've answered <b>${a} of ${n}</b>. You'll be scored on ${a===1?'that one':`those ${a}`}. The ${left} you didn't reach ${left===1?'is':'are'} <b>skipped, not missed</b>, and ${left===1?'it won’t':'they won’t'} show up as questions to go over.`;
+  const g=$('stopGo');g.hidden=!a;g.textContent=!left?`Finish and score the ${n}`:w==='finish'?`Finish and score the ${a}`:`Stop and score the ${a}`;
+  $('stopKeep').className=a?'btn big':'btn primary big';
+  if(!d.open)d.showModal();$('stopH').focus({preventScroll:true});}
+$('finish').onclick=()=>{const T=S.test;if(!T)return;const c=tCount(T);if(c.sk||!c.a.length)return stopOpen('finish');tEnd(false);};
+$('stopBtn').onclick=()=>stopOpen('stop');
+$('stopKeep').onclick=()=>$('stopD').close();
+$('stopGo').onclick=()=>{$('stopD').close();tEnd(STOPW==='stop'&&tCount(S.test).sk>0);};
+$('stopQuit').onclick=()=>{const q=$('stopQuit');if(q.dataset.armed!=='1'){q.dataset.armed='1';q.textContent='Tap again to throw this test away';return;}
+  $('stopD').close();tFold();tRun=0;S.test=null;save();mode='teststart';renderAll();window.scrollTo(0,0);};  // no history entry, nothing scheduled, nothing sent
+$('stopD').addEventListener('click',e=>{if(e.target===$('stopD'))$('stopD').close();});
 $('prev').onclick=()=>go(pos-1);$('next').onclick=()=>go(pos+1);$('dueBack').onclick=()=>goLearn('home');
 $('flag').onclick=()=>{const id=list[pos];if(S.flags[id])delete S.flags[id];else S.flags[id]=true;save();renderQ();if(mode==='study')renderFilters();};
 $('navToggle').onclick=()=>{const p=$('navPanel');p.hidden=!p.hidden;$('navToggle').setAttribute('aria-expanded',String(!p.hidden));navCenter();};
@@ -1297,10 +1457,11 @@ function level(t){const s=topicStats(t),acc=s.tried?s.right/s.tried:0,les=LES.to
 const pips=l=>`<span class="pips" aria-hidden="true">${[1,2,3].map(i=>`<i class="${l>=i?'on':''}"></i>`).join('')}</span>`;
 const nq=n=>`${n} question${n===1?'':'s'}`;
 
+// built from the answered questions only: a skipped question is never a weak spot
 function testAreas(){const T=S.test;if(!T||!T.done)return null;const by={};
-  T.list.forEach(id=>{const q=byId[id];if(!q)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
+  T.list.forEach(id=>{const q=byId[id];if(!q||T.answers[id]===undefined)return;const a=by[q.area]=by[q.area]||{n:0,r:0};a.n++;if(T.answers[id]===q.answer)a.r++;});
   const rows=Object.entries(by).map(([k,a])=>({k,name:AREA[k]||k,n:a.n,r:a.r,pct:Math.round(a.r/a.n*100)})).sort((a,b)=>a.pct-b.pct);
-  const right=rows.reduce((s,a)=>s+a.r,0);return{rows,pct:Math.round(right/T.list.length*100)};}
+  if(!rows.length)return null;const right=rows.reduce((s,a)=>s+a.r,0),n=rows.reduce((s,a)=>s+a.n,0);return{rows,pct:Math.round(right/n*100)};}
 const acc=t=>{const s=topicStats(t);return s.tried?s.right/s.tried:0;};
 function buildPlan(){const ta=testAreas();if(!ta)return null;
   let weak=ta.rows.filter(a=>a.pct<PASS);if(!weak.length)weak=ta.rows.filter(a=>a.pct<90).slice(0,2);weak=weak.slice(0,4);
@@ -1330,8 +1491,13 @@ function vHome(){const n=nextStep(),due=dueIds().length,fl=BANK.filter(q=>S.flag
   LES.groups.forEach(g=>{h+=`<section class="card grp"><div class="gh"><h3>${esc(g.name)}</h3><span class="num">${g.topics.filter(t=>level(t)>0).length} of ${g.topics.length}</span></div>${g.topics.filter(t=>LES.topics[t]).map(t=>{const T=LES.topics[t],l=level(t),c=(TQ[t]||[]).length,dn=dueIn(t);
     return `<button class="trow2" data-go="topic:${t}" aria-label="${esc(T.title)}, ${LEVELS[l]}${dn?`, ${dn} to review`:''}">${pips(l)}<span class="tn">${esc(T.title)}</span>${dn?`<span class="tdue">${dn} due</span>`:''}<span class="ts">${LEVELS[l]}</span><span class="tm">${T.lesson?T.minutes+' min':c?c+' q':'soon'}</span></button>`;}).join('')}</section>`;});
   const nl=keys.filter(t=>LES.topics[t].lesson).length;
-  h+=`<p class="small center">${BANK.length} practice questions checked against FAA sources · ${nl===keys.length?'a lesson for every topic':`${nl} of ${keys.length} lessons written so far`}</p><button class="linkb sm" data-go="newclass">Instructors: start a class so students can ask you questions</button>`;
+  h+=`<p class="small center">${BANK.length} practice questions checked against FAA sources · ${nl===keys.length?'a lesson for every topic':`${nl} of ${keys.length} lessons written so far`}</p><button class="linkb sm" data-go="newclass">Instructors: start a class so students can ask you questions</button>${hubLinkHTML()}`;
   return h;}
+// an instructor's hub link pasted by hand: the iPad/iPhone Home Screen app has its own storage, so a #hub= link opened in Safari never reaches it.
+// Takes the whole link or CODE.KEY, checks it with the class server, then saves it exactly like the #hub= route (S.hubs[CODE]={key,name}).
+function hubRead(v){v=String(v||'').replace(/\s+/g,'');const i=v.indexOf('#hub=');if(i>=0)v=v.slice(i+5);
+  const m=/^([A-Za-z0-9]{4,24})\.([\w-]{16,80})$/.exec(v);return m?{code:m[1].toUpperCase(),key:m[2]}:null;}
+const hubLinkHTML=()=>`<details class="hlk"><summary>Instructors: have a hub link? Paste it here</summary><div class="hlkf"><p class="mut sm" style="margin:0">On an iPad or iPhone, the Home Screen app keeps its own copy, so a hub link opened in Safari doesn’t reach it. Paste the link once and the app remembers your hub.</p><label class="fld">Your hub link<input id="hlkIn" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="https://…#hub=… or CODE.KEY"></label><button class="btn primary big" data-act="hublink">Open my hub</button><div class="mut sm" id="hlkMsg" role="status"></div></div></details>`;
 
 function checkQ(id){const q=byId[id],p=S.study[id],rev=p!==undefined,fig=q.figure==='density-altitude'&&q.elev!==undefined;
   return `<div class="cq"><p>${esc(q.stem)}</p>${fig?`<div class="given2">Field ${fmt(q.elev)} ft · altimeter ${(+q.alt).toFixed(2)} · ${q.oat}°C</div>`:''}<div class="choices">${q.choices.map((c,i)=>`<button class="choice ${rev?(i===q.answer?'right':i===p?'wrong':''):''}" data-ans="${id}:${i}" ${rev?'disabled':''}><b>${L[i]}</b><span>${esc(c)}</span>${rev&&i===q.answer?`<em class="tag ok">${ICON.check}Correct</em>`:rev&&i===p?`<em class="tag no">${ICON.x}Your pick</em>`:''}</button>`).join('')}</div>
@@ -1475,7 +1641,7 @@ function practiceQ(qid,picked,who){const q=byId[qid];if(!q)return qid?`<div clas
 function vAsk(qid){const q=byId[qid],t=MAP[qid];return `<button class="back" data-go="${LV.back||'home'}">${ICON.back}Back</button><h2 class="lt big">Ask about this question</h2>${practiceQ(qid,lastAns(qid),'You')}${askCard(t,qid)}`;}
 
 function vNewClass(){return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">For instructors</div><h2 class="lt big">Start a class</h2><p class="mut">Students join with your invite link, ask questions from any lesson or practice question, and you answer them in your hub.</p></div>
-  <section class="card lc"><label class="fld">Your name<input id="ncName" maxlength="60" autocomplete="name"></label><label class="fld">Class name (optional)<input id="ncClass" maxlength="80" placeholder="e.g. Spring commercial students"></label><button class="btn primary big" data-act="newclass">Create my class</button><div class="mut sm" id="ncMsg"></div></section>`;}
+  <section class="card lc"><label class="fld">Your name<input id="ncName" maxlength="60" autocomplete="name"></label><label class="fld">Class name (optional)<input id="ncClass" maxlength="80" placeholder="e.g. Spring commercial students"></label><button class="btn primary big" data-act="newclass">Create my class</button><div class="mut sm" id="ncMsg"></div></section>${hubLinkHTML()}`;}
 
 function vHub(code){const H=S.hubs[code];
   return `<button class="back" data-go="home">${ICON.back}Learn</button><div><div class="eyebrow">Instructor hub</div><h2 class="lt big">${esc(H&&H.name||code)}</h2><div class="mut sm" id="hubSub">Loading…</div></div>
@@ -1517,12 +1683,20 @@ function scoDigest(areas,flags){const rows=scoRows(areas),weak=rows.filter(x=>x.
   else if(rows.length)s+=' No flagged items.';
   return s.trim();}
 const scoAreas=a=>`<div class="tsc-ah">By area, weakest first</div><div class="tsc-ag">${scoRows(a).map(x=>`<div${x.p<PASS?' class="tsc-weak"':''}>${esc(AREA[x.k]||x.k)} ${x.r}/${x.t}</div>`).join('')}</div>`;
+// a score sent with its missed questions (the student ticked "Include the questions I missed"): question text from this bank, the pick and the answer.
+// SCX = scores whose full list is open, kept across the 30-second repaint; older scores (old apps, or the box unticked) have none and look as before.
+const SCX=new Set();
+const scoCnt=s=>s.of!=null?` · ${s.n-s.right} missed · ${s.skipped!=null?s.skipped:s.of-s.n} skipped`:'';
+function scoMissHTML(x,full){const m=x.missed;if(!Array.isArray(m)||!m.length)return '';const open=full||SCX.has(x.id),M=open?m:m.slice(0,2);
+  return `${full?'':'<div class="tsc-ah">Missed questions</div>'}<ol class="tsc-mq">${M.map(({id,pick})=>{const q=byId[id];
+    return `<li><span>${q?esc(q.stem):`Question ${esc(id)} (not in this version of the question bank)`}</span><span class="tsc-pk">${esc(id)} · Picked: ${L[pick]||'?'}${q?` · Correct: ${L[q.answer]}`:''}</span></li>`;}).join('')}</ol>
+    ${!full&&m.length>2?`<button class="btn tsc-mb" data-act="scmore" data-id="${esc(x.id)}" aria-expanded="${open}">${open?'Show fewer':`Show all ${m.length}`}</button>`:''}`;}
 function scoStu(list,name,hl){const s=list[0],fresh=s.created>hl,tr=list.filter(x=>x.track===s.track).slice(0,5).reverse(),old=list.slice(1);
   return `<section class="card lc tsc-stu${fresh?' tsc-new':''}"><div class="qmeta"><span><b>${esc(name)}</b>${fresh?' · <b class="tsc-nb">New</b>':''}</span><span>${esc(scoWhen(s.taken))}</span></div>
-    <div class="tsc-top"><div class="tsc-pct ${s.pass?'pass':'fail'}">${s.pct}%</div><div>${esc(scoTr(s.track))} · ${s.right}/${s.n} · ${s.pass?'Pass':`Below ${PASS}%`} · ${tDur(s.sec)}</div></div>
-    ${scoAreas(s.areas)}<p class="tsc-dg">${esc(scoDigest(s.areas,s.flags))}</p>
+    <div class="tsc-top"><div class="tsc-pct ${s.pass?'pass':'fail'}">${s.pct}%</div><div>${esc(scoTr(s.track))} · ${s.right}/${s.n}${scoCnt(s)} · ${s.pass?'Pass':`Below ${PASS}%`} · ${tDur(s.sec)}</div></div>
+    ${scoMissHTML(s)}${scoAreas(s.areas)}<p class="tsc-dg">${esc(scoDigest(s.areas,s.flags))}</p>
     ${tr.length>1?`<div class="sm">Trend${old.some(x=>x.track!==s.track)?` (${esc(scoTr(s.track))})`:''}: ${tr.map((x,i)=>i===tr.length-1?`<b>${x.pct}%</b>`:x.pct+'%').join(' · ')}</div>`:''}
-    ${old.length?`<details class="tsc-old"><summary>Earlier scores (${old.length})</summary>${old.slice(0,20).map(x=>`<div class="sm">${esc(scoWhen(x.taken))} · ${esc(scoTr(x.track))} · <b class="${x.pass?'pass':'fail'}">${x.pct}%</b> · ${x.right}/${x.n} · ${tDur(x.sec)}</div>`).join('')}</details>`:''}</section>`;}
+    ${old.length?`<details class="tsc-old" data-k="${esc(s.sid)}"><summary>Earlier scores (${old.length})</summary>${old.slice(0,20).map(x=>`<div class="sm">${esc(scoWhen(x.taken))} · ${esc(scoTr(x.track))} · <b class="${x.pass?'pass':'fail'}">${x.pct}%</b> · ${x.right}/${x.n}${scoCnt(x)} · ${tDur(x.sec)}${x.missed&&x.missed.length?` <button class="linkb sm" data-act="scmore" data-id="${esc(x.id)}" aria-expanded="${SCX.has(x.id)}">${SCX.has(x.id)?'Hide':'Show'} the ${x.missed.length} missed</button>`:''}</div>${x.missed&&SCX.has(x.id)?scoMissHTML(x,true):''}`).join('')}</details>`:''}</section>`;}
 function scoWeek(w,name){const tk=Object.entries(w.tracks||{}).map(([t,n])=>`${n} ${scoTr(t)}`).join(', ');
   return `<section class="card lc tsc-stu"><div class="qmeta"><span><b>${esc(name)}</b></span><span>last sent ${esc(scoWhen(w.last))}</span></div>
     <div class="tsc-top"><div class="tsc-pct ${w.avg>=PASS?'pass':'fail'}">${w.avg}%</div><div>average · ${w.tests} test${w.tests===1?'':'s'} sent (${esc(tk)}) · ${w.pass} passed</div></div>
@@ -1538,7 +1712,9 @@ function paintScores(el,code){const d=HUBD[code],mine=SCD&&SCD.code===code?SCD:n
       if(W.length&&quiet>0)h+=`<p class="mut sm tsc-foot">${quiet} student${quiet===1?'':'s'} sent nothing in the last 7 days.</p>`;}
     else{const by=new Map();mine.scores.forEach(x=>{if(!by.has(x.sid))by.set(x.sid,[]);by.get(x.sid).push(x);});
       h+=by.size?[...by.entries()].map(([sid,l])=>scoStu(l,nm(sid),mine.hl)).join(''):`<section class="card lc"><p class="mut">No scores yet. When a student sends a practice test score, it shows up here.</p></section>`;}}
-  el.innerHTML=h+'<p class="mut sm tsc-foot">You only see scores a student chose to send. Their answers and study history stay with them.</p>';}
+  const op=new Set([...el.querySelectorAll('details[data-k][open]')].map(d=>d.dataset.k));  // earlier-score lists stay open across the repaint
+  el.innerHTML=h+'<p class="mut sm tsc-foot">You only see scores a student chose to send. You see the missed questions only when the student chooses to include them. The rest of their answers and study history stay with them.</p>';
+  el.querySelectorAll('details[data-k]').forEach(d=>{if(op.has(d.dataset.k))d.open=true;});}
 async function loadScores(code){const H=S.hubs[code];if(!H)return;
   try{const d=await api(`/classes/${code}/scores`,{hub:H.key});if(!['all','weekly'].includes(d.view)||!Array.isArray(d.view==='all'?d.scores:d.weekly))throw qaErr(NETERR);
     const hd=HUBD[code],keep=SCD&&SCD.code===code&&SCD.hl!=null&&SCD.view===d.view;SCD=Object.assign(d,{code,hl:keep?SCD.hl:d.seen||0,total:hd&&hd.scores?hd.scores.total:null});
@@ -1663,6 +1839,13 @@ async function qaAct(t){const a=t.dataset.act,btn=t;
   if(a==='tab'){LV.tab=t.dataset.tab;document.querySelectorAll('#hubTabs .mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tab===LV.tab)));if(LV.tab==='rep'){REPS=null;loadReports(LV.code);}if(LV.tab==='sc'){SCD=null;loadScores(LV.code);}paintHub(LV.code);return;}
   if(a==='repretry'){REPS=null;paintHub(LV.code);return loadReports(LV.code);}
   if(a==='scretry'){SCD=null;paintHub(LV.code);return loadScores(LV.code);}
+  if(a==='scmore'){const id=t.dataset.id;if(SCX.has(id))SCX.delete(id);else SCX.add(id);paintHub(LV.code);const b=document.querySelector(`#hubBody [data-act="scmore"][data-id="${CSS.escape(id)}"]`);if(b)b.focus({preventScroll:true});return;}
+  if(a==='hublink')return busy(async()=>{const m=$('hlkMsg'),x=hubRead($('hlkIn').value);
+    if(!x){m.textContent='That doesn’t look like a hub link. It ends in #hub= followed by your class code, a dot and your key.';$('hlkIn').focus();return;}
+    m.textContent='Checking…';
+    try{const d=await api(`/classes/${x.code}/hub`,{hub:x.key});if(!d.class||!Array.isArray(d.students))throw qaErr(NETERR);
+      S.hubs[x.code]={key:x.key,name:d.class.name||''};save();HUBD[x.code]=d;$('hlkIn').value='';LV={v:'hub',code:x.code,tab:'wait'};renderAll();window.scrollTo(0,0);}  // the address bar only ever shows #hub=CODE
+    catch(e){m.textContent=qaMsg(e);}})();
   if(a==='scview'){const v=t.dataset.v,code=LV.code,d=HUBD[code];if(!d||!d.scores||d.scores.view===v&&SCD&&SCD.view===v)return;
     return busy(async()=>{try{await api(`/classes/${code}/settings`,{method:'POST',hub:S.hubs[code].key,body:{scoreView:v}});d.scores.view=v;SCD=null;paintHub(code);await loadScores(code);
       const f=document.querySelector(`#hubBody [data-act="scview"][data-v="${v}"]`);if(f)f.focus();}
@@ -1728,7 +1911,7 @@ function progCount(d){d=d||{};const n=o=>o?Object.keys(o).length:0,t=(d.hist||[]
 // A side that changed something since B wins it; when both changed the same thing, the newer answer wins, flags and test scores are kept from both.
 function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
   const pick={study:(id,l,r)=>((L.at||{})[id]||0)>=((R.at||{})[id]||0)?l:r,at:(id,l,r)=>Math.max(l,r),
-    review:(id,l,r)=>(l.last??0)>=(r.last??0)?l:r,lessons:(id,l,r)=>Math.max(l,r),flags:(id,l,r)=>l||r,grade:(id,l)=>l,scSent:(id,l,r)=>Math.min(l,r)};
+    review:(id,l,r)=>(l.last??0)>=(r.last??0)?l:r,lessons:(id,l,r)=>Math.max(l,r),flags:(id,l,r)=>l||r,grade:(id,l)=>l,scSent:(id,l,r)=>Math.min(l,r),scMiss:(id,l,r)=>l||r};
   for(const k of Object.keys(pick)){const b=(B&&B[k])||{},l=L[k]||{},r=R[k]||{},o={};
     for(const id of new Set([...Object.keys(b),...Object.keys(l),...Object.keys(r)])){const lv=l[id],rv=r[id];let v;
       if(!B)v=lv===undefined?rv:rv===undefined?lv:pick[k](id,lv,rv);
@@ -1737,7 +1920,7 @@ function mergeProg(B,L,R){L=L||{};R=R||{};const out=Object.assign({},R,L);
     out[k]=o;}
   const lh=L.hist||[],rh=R.hist||[],bh=B&&B.hist||[];
   if(B&&jeq(lh,bh))out.hist=rh;else if(B&&jeq(rh,bh))out.hist=lh;
-  else{const m=new Map();[...rh,...lh].forEach(h=>h&&m.set(h.end+':'+h.pct,h));out.hist=[...m.values()].sort((a,b)=>a.end-b.end).slice(-50);}
+  else{const m=new Map();[...rh,...lh].forEach(h=>{if(!h)return;const k=h.end+':'+h.pct,o=m.get(k);m.set(k,o&&o.m&&!h.m?o:h);});/* the copy that kept its questions wins */out.hist=[...m.values()].sort((a,b)=>a.end-b.end).slice(-50);}
   if(L.newsSeen||R.newsSeen)out.newsSeen=[L.newsSeen,R.newsSeen].filter(x=>typeof x==='string').sort().pop();  // What's new seen on any device counts everywhere
   for(const k of ['test','exam','spos','cls','track','sendScores']){const lv=L[k],rv=R[k];out[k]=!B?(lv==null?rv:lv):!jeq(lv,B[k])?lv:rv;if(out[k]===undefined)delete out[k];}
   return out;}
@@ -2026,7 +2209,7 @@ function newsOpen(since){const d=$('newsD'),auto=since!==undefined,E=auto?NEWS.f
 function newsBoot(){if(location.hash.startsWith('#print=')||!NEWS.length)return;if(!S.newsSeen&&progEmpty(saveData())){S.newsSeen=NEWS[0].v;save(true);}newsMaybe();}
 function newsMaybe(){if(NEWSCHK||!NEWS.length||!BANK.length||location.hash.startsWith('#print='))return;
   if(!S.track||document.querySelector('dialog[open]'))return;
-  if(mode==='results'||(mode==='learn'&&LV.v==='hub'))return;  // never over a results card or the instructor hub; it waits for the next open
+  if(mode==='results'||mode==='past'||(mode==='learn'&&LV.v==='hub'))return;  // never over a results card or the instructor hub; it waits for the next open
   NEWSCHK=true;const top=NEWS[0].v,was=S.newsSeen||'';if(was>=top)return;
   S.newsSeen=top;save();newsOpen(was);}
 document.addEventListener('close',e=>{if(e.target.id!=='newsD')setTimeout(newsMaybe,60);},true);  // close does not bubble: listen in the capture phase
@@ -2071,7 +2254,9 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
     <ul><li>No answers are shown until you finish.</li>
     <li>Tap <b>Flag</b> to mark a question to come back to. Tap the question counter at the top (like “12 of ${C.n}”) to see every question and jump around.</li>
     <li>The clock runs only while the test is on screen. It pauses when you leave the app, and your test is saved as you go.</li>
-    <li>Tap <b>Finish test</b> when you’re done. You see your score by area, can review what you missed, and can build a study plan from it. Every finished test is added to your score history.</li></ul>
+    <li>Tap <b>Finish test</b> when you’re done. You see your score by area, can review what you missed, and can build a study plan from it. Every finished test is added to <b>My past tests</b>.</li>
+    <li>Short on time? Tap <b>Stop test</b> to be scored on the questions you answered. The ones you didn’t reach are <b>skipped, not missed</b>: they don’t lower your score and never show up as questions to go over. You can also quit without scoring, and that test isn’t kept.</li></ul>
+    <p>Under <b>My past tests</b> you can open any test to review the questions you missed, and <b>Questions I keep missing</b> gathers the ones you miss again and again so you can practise them. Tests from before 26 October 2026 kept only their score.</p>
     <button class="lnk" data-help-go="test">Go to Practice test</button>`]]],
   ['Your progress',[
    ['Where is my progress saved?',`<p>Your answers, flags, review schedule and test scores are saved <b>in this browser on this device</b>. If you sign in, they’re also saved to your account.</p>
@@ -2093,11 +2278,13 @@ function helpQs(){const P=TRACKS.P,C=TRACKS.C,dur=x=>tDurS(x.n*x.per).replace(/ 
     <p>The answer shows up under <b>Your questions</b> on the Learn page.</p>`],
    ['Can I get a notification when my instructor answers?',`<p>Yes. After you send a question, or under Your questions on the Learn page, tap <b>Notify me when … answers</b> and allow notifications. Each device is set up on its own.</p>
     <p>On an iPhone or iPad this works only in the Home Screen app, on iOS 16.4 or newer. The Home Screen app keeps its own copy, so bring your class into it first: sign in there, or use the sign-in code under Your questions (<b>Move to the Home Screen app or another device</b>).</p>`],
-   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send to my instructor</b> button. It sends that test’s score, time, results by area and how many questions you flagged in each area (never your answers or the questions themselves). Nothing is sent unless you tap it, or tick <b>Always send my practice test scores</b> to send each finished test from then on. Leaving the class deletes the scores you sent.</p>`],
+   ['How do I send a practice-test score to my instructor?',`<p>If you’re in a class, the results page after a practice test has a <b>Send</b> button, and so does every test under <b>My past tests</b>, so you can send one later. It sends that test’s score, time, results by area, how many you skipped and how many questions you flagged in each area.</p>
+    <p>Tick <b>Include the questions I missed</b> and it also sends which questions you missed and the answer you picked for each, so you can go over them together. Leave it unticked and none of your answers go. Nothing is sent unless you tap Send, or tick <b>Always send my practice test scores</b> to send each finished test from then on (Always send never includes the missed questions). Sending the same test twice keeps one copy. Leaving the class deletes the scores you sent.</p>`],
    ['What can my instructor see?',`<p>Only what you send:</p>
     <ul><li>Your name, as you typed it when you joined.</li>
     <li>The questions you ask. When you ask about a practice question, they also see that question and the answer you picked, so they can help.</li>
-    <li>A practice-test score, only if you send it (or turn on Always send): the score, time, results by area and how many questions you flagged in each area.</li></ul>
+    <li>A practice-test score, only if you send it (or turn on Always send): the score, time, results by area, how many you skipped and how many questions you flagged in each area.</li>
+    <li>The questions you missed on that test and the answer you picked, only if you tick <b>Include the questions I missed</b> when you send it.</li></ul>
     <p>Nothing else. Your instructor doesn’t see your study answers, which questions you flagged, your review list or any score you didn’t send.</p>`]]],
   ['The questions',[
    ['Where do the questions come from? Are they real FAA test questions?',`<p>No, they aren’t real FAA test questions, and they aren’t copied from other study apps or books. ${ALLQ.length?'All '+ALLQ.length:'They all'} were written for this app from free FAA sources: the Balloon Flying Handbook, the Pilot’s Handbook of Aeronautical Knowledge, the Aeronautical Information Manual, the Aviation Instructor’s Handbook and the regulations (such as 14 CFR parts 61 and 91). Each one was then fact-checked against those sources separately, and every explanation names its reference.</p>
@@ -2118,7 +2305,8 @@ $('help').addEventListener('click',e=>{const t=e.target.closest('[data-help-back
   if(t.dataset.helpBack!==undefined){const st=history.state||{};if(st.prev!==undefined&&normH(st.prev)!=='#help')history.back();else $('mStudy').click();return;}  // opened straight from a link: Back goes to Study
   const g=t.dataset.helpGo;if(g==='trk')$('trkBtn').click();else if(g==='test')$('mTest').click();else if(g==='learn')goLearn('home');});
 // ---------- history: each view has its own hash, so phone Back steps back through the app and views are linkable ----------
-// #help (Help & FAQ) · #study · #test · #test/review · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
+// #help (Help & FAQ) · #study · #test · #test/review · #test/past (My past tests) · #test/past=<end> (one past test; <end> = when it finished, ms) · #test/past=<end>/review (its missed questions)
+// · #test/missed (Questions I keep missing) · #test/missed/practice (practise them) · #review · #learn · #learn/questions (opened from a notification; becomes #learn) · #learn/plan · #learn/<topic> · #learn/<topic>/basics · #ask · #learn/newclass · #join[=CODE] · #hub=CODE (never the key) · #ref · #ref=<id>
 // Old links still work: #learn, #ref, #ref=<id>, #print=<id|all> (left untouched for tools/build-ref-pdfs.sh), #grade, #join=CODE, #hub=CODE.KEY (the key is saved, then dropped from the address bar).
 // Each history entry also carries the view it shows (mode, filter, position, list), so Back lands on the same question; a question id never goes in the hash.
 let routing=false,snap=null,viaBack=false;
@@ -2126,7 +2314,9 @@ const normH=h=>h===''?'#study':h;
 function hashFor(){
   if(mode==='study')return GRADE?'#grade':'#study';
   if(mode==='due')return '#review';
-  if(mode==='review')return '#test/review';
+  if(mode==='review')return RVS?'#test/past='+RVS.end+'/review':'#test/review';
+  if(mode==='past')return PV.v==='one'?'#test/past='+PV.end:PV.v==='missed'?'#test/missed':'#test/past';
+  if(mode==='drill')return '#test/missed/practice';
   if(mode==='test'||mode==='teststart'||mode==='results')return '#test';
   if(mode==='ref')return RV.v==='card'?'#ref='+RV.id:'#ref';
   if(mode==='help')return '#help';
@@ -2138,12 +2328,14 @@ function hashFor(){
   if(v==='hub')return '#hub='+LV.code;
   if(v==='join')return LV.joinCode?'#join='+LV.joinCode:'#join';
   return '#learn';}
-function viewNow(){return {m:mode,f:filter,p:pos,l:mode==='due'||mode==='review'?list.slice():null,lv:LV,rv:RV,h:hashFor()};}
-function restoreView(s){mode=s.m;filter=s.f||'ALL';LV=s.lv||{v:'home'};RV=s.rv||{v:'home'};
+function viewNow(){return {m:mode,f:filter,p:pos,l:mode==='due'||mode==='review'||mode==='drill'?list.slice():null,lv:LV,rv:RV,pv:PV,rs:RVS,h:hashFor()};}
+function restoreView(s){mode=s.m;filter=s.f||'ALL';LV=s.lv||{v:'home'};RV=s.rv||{v:'home'};PV=s.pv||{v:'list'};RVS=s.rs||null;
   // Study lands on its own saved position (S.spos is updated on every question; an entry's position is only as fresh as its last renderAll)
   if(mode==='study'){if(filter==='UNGRADED'&&!GRADE)filter='ALL';list=studyList();if(!list.length){filter='ALL';list=studyList();}pos=studyAt();}
-  else if(mode==='due'||mode==='review'){list=(s.l||(mode==='due'?dueIds():[])).filter(id=>byId[id]);pos=Math.max(0,Math.min(s.p||0,list.length-1));}
-  if(mode==='review'&&!(S.test&&S.test.done)||mode==='test'||mode==='teststart'||mode==='results')route('#test');}
+  else if(mode==='due'||mode==='review'||mode==='drill'){list=(s.l||(mode==='due'?dueIds():[])).filter(id=>byId[id]);pos=Math.max(0,Math.min(s.p||0,list.length-1));}
+  if(mode==='review'&&RVS&&!rvsAns()||mode==='drill'&&!list.length){RVS=null;mode='past';PV={v:'list'};}
+  if(mode==='past'&&PV.v==='one'&&!tHist().some(h=>h.end===PV.end&&h.m))PV={v:'list'};
+  if(mode==='review'&&!RVS&&!(S.test&&S.test.done)||mode==='test'||mode==='teststart'||mode==='results')route('#test');}
 // the view as it was just before a tap changes it, so the entry being left keeps the right question
 document.addEventListener('click',e=>{snap=viewNow();viaBack=!!e.target.closest('.back,[data-ref="home"]');},true);
 function syncURL(){const st=history.state||{},hs=location.hash;let h=hashFor();
@@ -2182,6 +2374,9 @@ function route(hs){
   else if(hs.startsWith('#learn/')){const [t,b]=decodeURIComponent(hs.slice(7)).split('/');mode='learn';LV=b==='basics'?{v:'basics',t,at:0,alt:{}}:{v:'topic',t,checks:pickChecks(t)};}
   else if(hs==='#ask'||hs==='#join'){mode='learn';LV={v:hs==='#join'?'join':'home'};}
   else if(hs==='#review'){Object.keys(dueAns).forEach(i=>delete dueAns[i]);mode='due';list=dueIds();pos=0;}
+  else if(hs==='#test/past'){mode='past';PV={v:'list'};}
+  else if(hs==='#test/missed'||hs==='#test/missed/practice'){mode='past';PV={v:'missed'};}  // a link can't carry a practice set: it opens the list
+  else if(hs.startsWith('#test/past=')){const end=+hs.slice(11).split('/')[0];mode='past';PV=tHist().some(h=>h.end===end&&h.m)?{v:'one',end}:{v:'list'};}
   else if(hs==='#test'||hs==='#test/review'){if(S.test&&!S.test.done){mode='test';list=S.test.list;pos=S.test.pos||0;}else if(S.test&&S.test.done){mode='results';}else mode='teststart';}
   else if(hs.startsWith('#ref')){mode='ref';const c=hs.split('=')[1];if(c)RV={v:'card',id:c};}
   else if(hs.startsWith('#print=')){mode='ref';const w=hs.slice(7);const go=()=>printRef(w);REFS===null&&w!=='airspace'&&w!=='legend'?getJ('refs/cards.json').then(x=>{REFS=Array.isArray(x)?x:[];go();}):setTimeout(go,0);}

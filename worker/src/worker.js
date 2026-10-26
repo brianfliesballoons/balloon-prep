@@ -19,10 +19,13 @@ const JOINS_PER_CLASS_DAY = 150;   // new students one class can take in 24 h
 const REPORTS_MAX = 5000;          // open reports kept before new ones are refused
 const KINDS = ['wrong', 'confusing', 'typo', 'other'];
 const REF_RE = /^(q|lesson|card):[A-Za-z0-9_.-]{1,40}$/;
-// Practice-test scores a student chose to send (added 2026-10-23). Only the score, time, per-area results and per-area flag counts: never answers or question ids.
+// Practice-test scores a student chose to send (added 2026-10-23): the score, time, per-area results and per-area flag counts.
+// Since 2026-10-26 also how many were skipped (not answered, never counted as missed) out of the test's length, and, only when the
+// student ticks "Include the questions I missed", each missed question's id with the answer they picked (0-2). Never question text.
 const SC = {
   areas: ['REG', 'AIR', 'WXS', 'WXT', 'THY', 'OPS', 'ADM', 'DAC', 'FOI'], tracks: ['P', 'C'], pass: 70,
-  maxN: 200, maxSec: 7 * 864e2, body: 2000,   // questions in one test, active seconds, bytes in one POST
+  maxN: 200, maxSec: 7 * 864e2, body: 12000,  // questions in one test, active seconds, bytes in one POST (200 missed questions fit)
+  maxMiss: 200, qid: /^[A-Z]{2,6}-[A-Z0-9]{1,10}$/,   // missed questions in one score, and the bank's question id pattern (REG-001, REG-1001, DAC-S01)
   perDay: 20, keep: 200, list: 500,           // per student per 24 h, kept per student, rows the hub gets
   views: ['all', 'weekly'], week: 7 * 864e5,
 };
@@ -45,10 +48,30 @@ function scoreIn(b, now) {
     if (!areas[k] || !int(v, 0, areas[k][1])) return 'That flag count does not add up';
     if (v) flags[k] = v;
   }
+  // optional (2026-10-26): of = questions in the test as it started, skipped = of - n (not answered), missed = [{id, pick}] for every wrong answer
+  let of = null, skipped = null, missed = null;
+  if (b.of != null) { if (!int(b.of, b.n, SC.maxN)) return 'That test length does not add up'; of = b.of; }
+  if (b.skipped != null) {
+    if (!int(b.skipped, 0, SC.maxN - b.n) || (of != null && b.skipped !== of - b.n)) return 'That skipped count does not add up';
+    skipped = b.skipped;
+  } else if (of != null) skipped = of - b.n;
+  if (b.missed != null) {
+    const m = b.missed;
+    if (!Array.isArray(m) || m.length > SC.maxMiss) return 'That list of missed questions is too long';
+    if (m.length !== b.n - b.right) return 'That list of missed questions does not add up';
+    const seen = new Set(), out = [];
+    for (const x of m) {
+      if (!x || typeof x !== 'object' || Array.isArray(x) || Object.keys(x).some(k => k !== 'id' && k !== 'pick')) return 'That list of missed questions does not add up';
+      if (typeof x.id !== 'string' || x.id.length > 40 || !SC.qid.test(x.id) || seen.has(x.id) || !int(x.pick, 0, 2)) return 'That list of missed questions does not add up';
+      seen.add(x.id); out.push({ id: x.id, pick: x.pick });
+    }
+    missed = JSON.stringify(out);
+  }
   const pct = Math.round(b.right / b.n * 100);
-  return { track: b.track, n: b.n, r: b.right, pct, pass: pct >= SC.pass ? 1 : 0, sec: b.sec, areas: JSON.stringify(areas), flags: JSON.stringify(flags), taken: b.taken };
+  return { track: b.track, n: b.n, r: b.right, pct, pass: pct >= SC.pass ? 1 : 0, sec: b.sec, areas: JSON.stringify(areas), flags: JSON.stringify(flags), taken: b.taken, missed, skipped, of };
 }
-const scoreOut = s => ({ id: s.id, sid: s.sid, track: s.track, n: s.n, right: s.r, pct: s.pct, pass: s.pass, sec: s.sec, areas: JSON.parse(s.areas), flags: JSON.parse(s.flags || '{}'), taken: s.taken, created: s.created });
+const scoreOut = s => ({ id: s.id, sid: s.sid, track: s.track, n: s.n, right: s.r, pct: s.pct, pass: s.pass, sec: s.sec, areas: JSON.parse(s.areas), flags: JSON.parse(s.flags || '{}'), taken: s.taken, created: s.created,
+  missed: s.missed ? JSON.parse(s.missed) : null, skipped: s.skipped ?? null, of: s.of_n ?? null });
 // weekly summary: per student over the last 7 days, tests sent, average, per-area totals and flag counts added up
 function scoreWeek(rows) {
   const by = new Map();
@@ -266,22 +289,31 @@ export default {
         if ((p[4] === 'subscribe' || p[4] === 'unsubscribe') && req.method === 'POST') { const r = await (p[4] === 'subscribe' ? subscribe : unsubscribe)(env, s, await body(req)); return r.error ? err(400, r.error) : json(r); }
       }
       if (p[3] === 'scores') {
-        // POST /api/classes/:code/scores (student) {track, n, right, sec, areas:{AREA:[right,total]}, flags?:{AREA:count}, taken} -> {ok, id, created, dup?}
-        // The same test (same student, same taken time) is stored once; sending it again returns the first copy's time.
+        // POST /api/classes/:code/scores (student) {track, n, right, sec, areas:{AREA:[right,total]}, flags?:{AREA:count}, taken, of?, skipped?, missed?:[{id,pick}]} -> {ok, id, created, dup?, updated?, withMissed?}
+        // n = questions answered; skipped ones are never missed. The same test (same student, same taken time) is stored once; sending it again
+        // returns the first copy's time. If the first copy went without its missed questions and this one carries them (same n and right),
+        // they are added to that copy (updated:true, and it counts as new again in the hub); a copy that already has them is never changed.
         if (p.length === 4 && req.method === 'POST') {
           const s = await student(env, req, code); if (!s) return err(401, 'Not in this class');
           const b = await bodyMax(req, SC.body); if (!b) return err(413, 'That score is too big to send');
           const now = Date.now(), row = scoreIn(b, now);
           if (typeof row === 'string') return err(400, row);
-          const had = await env.DB.prepare('SELECT id,created FROM scores WHERE sid=? AND taken=?').bind(s.sid, row.taken).first();
-          if (had) return json({ ok: true, dup: true, id: had.id, created: had.created });
+          const had = await env.DB.prepare('SELECT id,created,n,r,missed FROM scores WHERE sid=? AND taken=?').bind(s.sid, row.taken).first();
+          if (had) {
+            if (row.missed && had.missed == null && had.n === row.n && had.r === row.r) {
+              // created moves to now, so the copy counts as new in the hub and comes to the top of that student's scores
+              const r = await env.DB.prepare('UPDATE scores SET missed=?, skipped=COALESCE(skipped,?), of_n=COALESCE(of_n,?), created=? WHERE id=? AND missed IS NULL').bind(row.missed, row.skipped, row.of, now, had.id).run();
+              if (r.meta.changes) return json({ ok: true, dup: true, updated: true, id: had.id, created: now });
+            }
+            return json({ ok: true, dup: true, id: had.id, created: had.created, ...(had.missed != null ? { withMissed: true } : {}) });
+          }
           const n = await env.DB.prepare('SELECT COUNT(*) n FROM scores WHERE sid=? AND created>?').bind(s.sid, now - DAY).first();
           if (n.n >= SC.perDay) return err(429, 'That is a lot of scores for one day. Try again tomorrow.');
           const slow = await limited(env, req, 'score'); if (slow) return err(429, slow);
           const id = rand(9);
           await env.DB.batch([
-            env.DB.prepare('INSERT OR IGNORE INTO scores(id,code,sid,track,n,r,pct,pass,sec,areas,flags,taken,created) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)')
-              .bind(id, code, s.sid, row.track, row.n, row.r, row.pct, row.pass, row.sec, row.areas, row.flags, row.taken, now),
+            env.DB.prepare('INSERT OR IGNORE INTO scores(id,code,sid,track,n,r,pct,pass,sec,areas,flags,taken,created,missed,skipped,of_n) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)')
+              .bind(id, code, s.sid, row.track, row.n, row.r, row.pct, row.pass, row.sec, row.areas, row.flags, row.taken, now, row.missed, row.skipped, row.of),
             env.DB.prepare('DELETE FROM scores WHERE sid=? AND id NOT IN (SELECT id FROM scores WHERE sid=? ORDER BY created DESC LIMIT ?)').bind(s.sid, s.sid, SC.keep),
           ]);
           const got = await env.DB.prepare('SELECT id,created FROM scores WHERE sid=? AND taken=?').bind(s.sid, row.taken).first();
@@ -294,7 +326,7 @@ export default {
           return json({ ok: true, deleted: r.meta.changes });
         }
         const c = await admin(env, req, code); if (!c) return err(401, 'Hub key not recognised');
-        // GET /api/classes/:code/scores (hub) -> {view, seen, scores} with every score, or {view:'weekly', seen, since, weekly} with the 7-day summary only
+        // GET /api/classes/:code/scores (hub) -> {view, seen, scores} with every score (each with missed|null, skipped|null, of|null), or {view:'weekly', seen, since, weekly} with the 7-day summary only
         if (p.length === 4 && req.method === 'GET') {
           const view = c.score_view || 'all', seen = c.scores_seen || 0;
           if (view === 'weekly') {
